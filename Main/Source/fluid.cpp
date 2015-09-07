@@ -598,7 +598,7 @@ void fluid::Redistribute()
   if(!UseImage())
     return;
 
-  truth InitRandMap = truth(MotherItem);
+  truth InitRandMap = MotherItem != nullptr;
   Image.Clear(InitRandMap);
 
   if(GearImage)

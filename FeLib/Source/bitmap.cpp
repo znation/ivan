@@ -881,7 +881,7 @@ void bitmap::DrawLine(int OrigFromX, int OrigFromY, int OrigToX, int OrigToY, co
     const int Y2 = OrigToY + PointY[c];
     const int DeltaX = abs(X2 - X1);
     const int DeltaY = abs(Y2 - Y1);
-    int x, c;
+    int x;
     int XChange, PtrXChange, PtrYChange;
     int DoubleDeltaX, DoubleDeltaY, End;
 
@@ -1057,7 +1057,7 @@ truth bitmap::Fade(long& AlphaSum, packalpha& AlphaAverage, int Amount)
   {
     packalpha* AlphaPtr = &AlphaMap[0][c];
 
-    if(*AlphaPtr)
+    if(*AlphaPtr) {
       if(*AlphaPtr > Amount)
       {
 	*AlphaPtr -= Amount;
@@ -1073,6 +1073,7 @@ truth bitmap::Fade(long& AlphaSum, packalpha& AlphaAverage, int Amount)
 	if(RandMap)
 	  UpdateRandMap(c, false);
       }
+    }
   }
 
   AlphaSum = NewAlphaSum;
@@ -2053,7 +2054,7 @@ void cachedfont::PrintCharacter(const blitdata B) const
     ulong* DestPtr = reinterpret_cast<ulong*>(*DestLine + B.Dest.X);
 
     for(; FontPtr != EndPtr; ++DestPtr, ++MaskPtr, ++FontPtr)
-      *DestPtr = *DestPtr & *MaskPtr | *FontPtr;
+      *DestPtr = (*DestPtr & *MaskPtr) | *FontPtr;
   }
 }
 
