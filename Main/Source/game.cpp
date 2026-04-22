@@ -18,7 +18,8 @@
 #include <vector>
 #include <bitset>
 #include <ctime>
-#include <pcre.h>
+#define PCRE2_CODE_UNIT_WIDTH 8
+#include <pcre2.h>
 
 #if defined(UNIX) || defined(__DJGPP__)
 #include <sys/stat.h>
@@ -718,6 +719,10 @@ truth game::Init(cfestring& loadBaseName)
   if(!loadBaseName.IsEmpty()){
     absLoadNameOk = SaveName(loadBaseName,true); //will prepend the path
   }else{
+    // Create user data directory before StringQuestion which may write history files
+#ifdef UNIX
+    mkdir(GetUserDataDir().CStr(), S_IRWXU|S_IRWXG);
+#endif
     if(ivanconfig::GetDefaultName().IsEmpty())
     {
       PlayerName.Empty();
@@ -1325,7 +1330,7 @@ int game::RotateMapNotes()
 }
 
 std::vector<festring> afsAutoPickupMatch;
-pcre *reAutoPickup=NULL;
+pcre2_code *reAutoPickup=nullptr;
 void game::UpdateAutoPickUpMatching() //simple matching syntax
 {
   afsAutoPickupMatch.clear();
@@ -1340,25 +1345,33 @@ void game::UpdateAutoPickUpMatching() //simple matching syntax
       afsAutoPickupMatch.push_back(festring(match.c_str()));
   }else{
     //TODO test regex about: ignoring broken lanterns and bottles, ignore sticks on fire but pickup scrolls on fire
-  //  static bool bDummyInit = [](){reAutoPickup=NULL;return true;}();
-    const char *errMsg;
-    int iErrOffset;
-    if(reAutoPickup)pcre_free(reAutoPickup);
-    reAutoPickup = pcre_compile(
-      ivanconfig::GetAutoPickUpMatching().CStr(), //pattern
+  //  static bool bDummyInit = [](){reAutoPickup=nullptr;return true;}();
+    int errorcode;
+    PCRE2_SIZE erroffset;
+    if(reAutoPickup)pcre2_code_free(reAutoPickup);
+    reAutoPickup = pcre2_compile(
+      (PCRE2_SPTR)ivanconfig::GetAutoPickUpMatching().CStr(), //pattern
+      PCRE2_ZERO_TERMINATED, //zero terminated
       0, //no options
-      &errMsg,    &iErrOffset,
+      &errorcode,    &erroffset,
       0); // default char tables
     if (!reAutoPickup){
       std::vector<festring> afsFullProblems;
-      afsFullProblems.push_back(festring(errMsg));
-      afsFullProblems.push_back(festring()+"offset:"+iErrOffset);
+      char errorMsg[256];
+      pcre2_get_error_message(errorcode, (PCRE2_UCHAR8*)errorMsg, sizeof(errorMsg));
+      afsFullProblems.push_back(festring(errorMsg));
+      afsFullProblems.push_back(festring()+"offset:"+erroffset);
       bool bDummy = iosystem::AlertConfirmMsg("regex validation failed, if ignored will just not work at all",afsFullProblems,false);
     }
   }
 }
 bool game::IsAutoPickupMatch(cfestring fsName) {
-  return pcre_exec(reAutoPickup, 0, fsName.CStr(), fsName.GetSize(), 0, 0, NULL, 0) >= 0;
+  if (!reAutoPickup) return false;
+  pcre2_match_data* match_data = pcre2_match_data_create_from_pattern(reAutoPickup, nullptr);
+  if (!match_data) return false;
+  int rc = pcre2_match(reAutoPickup, (PCRE2_SPTR)fsName.CStr(), fsName.GetSize(), 0, PCRE2_ANCHORED, match_data, nullptr);
+  pcre2_match_data_free(match_data);
+  return rc >= 0;
 }
 int game::CheckAutoPickup(square* sqr)
 {

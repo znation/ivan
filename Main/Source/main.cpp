@@ -54,7 +54,9 @@
 void CrashHandler(int Signal)
 {
   globalerrorhandler::DumpStackTraceToStdErr(Signal);
-  exit(1);
+  // Re-raise the signal with default handler to generate a core dump
+  signal(Signal, SIG_DFL);
+  raise(Signal);
 }
 #endif
 

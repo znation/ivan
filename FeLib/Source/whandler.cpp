@@ -413,7 +413,7 @@ int globalwindowhandler::GetKey(truth EmptyBuffer)
             truth Draw = false;
 
             for(int c = 0; c < Controls; ++c)
-              if(ControlLoop[c]())
+              if(ControlLoop[c] && ControlLoop[c]())
                 Draw = true;
 
             /******************

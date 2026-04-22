@@ -16,7 +16,8 @@
 
 #include <cstdarg>
 #include <cctype>
-#include <pcre.h>
+#define PCRE2_CODE_UNIT_WIDTH 8
+#include <pcre2.h>
 
 #include <ctype.h>
 
@@ -58,16 +59,16 @@ struct SoundFile
 struct SoundInfo
 {
   std::vector<int> sounds;
-  std::unique_ptr<pcre*> re = std::unique_ptr<pcre*>(new (pcre*)());
-  std::unique_ptr<pcre_extra*> extra = std::unique_ptr<pcre_extra*>(new (pcre_extra*)(NULL));
+  pcre2_code* re = nullptr;
 
   SoundInfo() = default;
   SoundInfo(SoundInfo&) = delete;
-  SoundInfo(SoundInfo&&) = default;
+  SoundInfo(SoundInfo&& other) noexcept : sounds(std::move(other.sounds)), re(other.re) {
+    other.re = nullptr;
+  }
   ~SoundInfo()
   {
-    if(re.get() && *re) free(*re);
-    if(extra.get() && *extra) pcre_free_study(*extra);
+    if(re) pcre2_code_free(re);
   }
 };
 
@@ -88,12 +89,9 @@ festring getstr(FILE *f, truth word)
   }
 }
 
-FILE *debf = NULL;
+FILE *debf = nullptr;
 void soundeffects::initSound()
 {
-  const char *error;
-  int erroffset;
-
   if(SoundState == 0)
   {
     festring fsSndDbgFile = GetUserDataDir() + "SndDebug.txt";
@@ -173,11 +171,17 @@ void soundeffects::initSound()
           }
         }
 
-        // configure the regex
-        *si.re = pcre_compile(Pattern.CStr(), 0, &error, &erroffset, NULL);
-        if(debf && !*si.re) fprintf(debf, "PCRE compilation failed at expression offset %d: %s\n", erroffset, error);
-        if(*si.re) *si.extra = pcre_study(*si.re, 0, &error);
-        if(error) *si.extra = NULL;
+        // configure the regex using PCRE2
+        int errorcode;
+        PCRE2_SIZE erroffset;
+        si.re = pcre2_compile((PCRE2_SPTR)Pattern.CStr(), PCRE2_ZERO_TERMINATED, 0, &errorcode, &erroffset, nullptr);
+        if(debf && !si.re) fprintf(debf, "PCRE2 compilation failed at expression offset %zu: error code %d\n", erroffset, errorcode);
+        if(si.re) {
+          int jit_ret = pcre2_jit_compile(si.re, PCRE2_JIT_COMPLETE);
+          if(jit_ret < 0 && debf) {
+            fprintf(debf, "PCRE2 JIT compilation failed: error code %d\n", jit_ret);
+          }
+        }
 
         // configure the assigned files, now they are separated with ',' and the filename now accepts spaces.
         festring FileName;
@@ -252,19 +256,26 @@ int soundeffects::addFile(festring filename) {
 SoundFile* soundeffects::findMatchingSound(festring Buffer)
 {
   if(Buffer.IsEmpty() || Buffer.CStr()[0]=='"') //skips all chat messages lowering config file regex complexity
-    return NULL;
+    return nullptr;
   
   DBG1(Buffer.CStr());
   for(int i = patterns.size() - 1; i >= 0; i--){
-    if(*patterns[i].re)
-      if(pcre_exec(*patterns[i].re, *patterns[i].extra, Buffer.CStr(), Buffer.GetSize(), 0, 0, NULL, 0) >= 0){
-        SoundFile* p = &files[patterns[i].sounds[rand() % patterns[i].sounds.size()]];
-        DBG1(p->filename.CStr());
-        return p;
+    if(patterns[i].re) {
+      pcre2_match_data* match_data = pcre2_match_data_create_from_pattern(patterns[i].re, nullptr);
+      if(match_data) {
+        int rc = pcre2_match(patterns[i].re, (PCRE2_SPTR)Buffer.CStr(), Buffer.GetSize(), 0, PCRE2_ANCHORED, match_data, nullptr);
+        pcre2_match_data_free(match_data);
+        if(rc >= 0) {
+          SoundFile* p = &files[patterns[i].sounds[rand() % patterns[i].sounds.size()]];
+          DBG1(p->filename.CStr());
+          return p;
+        }
       }
+    }
   }
-  return NULL;
+  return nullptr;
 }
+
 
 void soundeffects::playSound(festring Buffer)
 {

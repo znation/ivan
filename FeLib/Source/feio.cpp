@@ -395,15 +395,17 @@ int iosystem::StringQuestion(festring& Input,
   festring fsHistFile = festring()+GetUserDataDir()+".QuestionHistory_"+fsFixTopicToFileName+".txt";
   DBG1(fsHistFile.CStr());
   FILE *fl = fopen(fsHistFile.CStr(), "a+");
-  rewind(fl);
   festring Line;
   static const int iBuffSz=0xFF;
   char str[iBuffSz];
   std::vector<festring> vHist;
-  while(fgets(str, iBuffSz, fl)){
-    Line=str;
-    Line.Resize(Line.GetSize()-1);
-    vHist.push_back(Line); //removes trailing \n
+  if(fl){
+    rewind(fl);
+    while(fgets(str, iBuffSz, fl)){
+      Line=str;
+      Line.Resize(Line.GetSize()-1);
+      vHist.push_back(Line); //removes trailing \n
+    }
   }
   
   v2 V(RES.X, 10); ///???????????
