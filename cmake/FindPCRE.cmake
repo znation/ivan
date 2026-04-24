@@ -1,37 +1,32 @@
-# Copyright (C) 2007-2009 LuaDist.
-# Created by Peter Kapec <kapecp@gmail.com>
-# Redistribution and use of this file is allowed according to the terms of the MIT license.
-# For details see the COPYRIGHT file distributed with LuaDist.
-#	Note:
-#		Searching headers and libraries is very simple and is NOT as powerful as scripts
-#		distributed with CMake, because LuaDist defines directories to search for.
-#		Everyone is encouraged to contact the author with improvements. Maybe this file
-#		becomes part of CMake distribution sometimes.
-
-# - Find pcre
-# Find the native PCRE headers and libraries.
+# - Find PCRE2 (PCRE is deprecated, PCRE2 is the modern replacement)
+# Find the native PCRE2 headers and libraries.
 #
-# PCRE_INCLUDE_DIRS	- where to find pcre.h, etc.
-# PCRE_LIBRARIES	- List of libraries when using pcre.
-# PCRE_FOUND	- True if pcre found.
+# PCRE_FOUND       - True if PCRE2 found.
+# PCRE_LIBRARIES   - List of libraries when using PCRE2.
+# PCRE_INCLUDE_DIRS - where to find pcre2.h, etc.
 
-# Look for the header file.
-FIND_PATH(PCRE_INCLUDE_DIR NAMES pcre.h)
+include(FindPkgConfig)
+if(PKG_CONFIG_FOUND)
+  pkg_check_modules(PCRE libpcre2-8)
+  if(PCRE_FOUND)
+    set(PCRE_INCLUDE_DIRS ${PCRE_INCLUDE_DIRS} ${PCRE_INCLUDEDIR})
+    # PCRE_LIBRARIES is already set by pkg_check_modules
+  endif()
+endif()
 
-# Look for the library.
-FIND_LIBRARY(PCRE_LIBRARY NAMES pcre)
+if(NOT PCRE_FOUND)
+  # Fallback to manual find_path/find_library for PCRE2
+  find_path(PCRE_INCLUDE_DIR NAMES pcre2.h)
+  find_library(PCRE_LIBRARY NAMES pcre2-8)
+  
+  if(PCRE_INCLUDE_DIR AND PCRE_LIBRARY)
+    set(PCRE_FOUND TRUE)
+    set(PCRE_LIBRARIES ${PCRE_LIBRARY})
+    set(PCRE_INCLUDE_DIRS ${PCRE_INCLUDE_DIR})
+  endif()
+endif()
 
-# Handle the QUIETLY and REQUIRED arguments and set PCRE_FOUND to TRUE if all listed variables are TRUE.
-INCLUDE(FindPackageHandleStandardArgs)
-FIND_PACKAGE_HANDLE_STANDARD_ARGS(PCRE DEFAULT_MSG PCRE_LIBRARY PCRE_INCLUDE_DIR)
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(PCRE DEFAULT_MSG PCRE_LIBRARY PCRE_INCLUDE_DIR)
 
-# Copy the results to the output variables.
-IF(PCRE_FOUND)
-	SET(PCRE_LIBRARIES ${PCRE_LIBRARY})
-	SET(PCRE_INCLUDE_DIRS ${PCRE_INCLUDE_DIR})
-ELSE(PCRE_FOUND)
-	SET(PCRE_LIBRARIES)
-	SET(PCRE_INCLUDE_DIRS)
-ENDIF(PCRE_FOUND)
-
-MARK_AS_ADVANCED(PCRE_INCLUDE_DIRS PCRE_LIBRARIES)
+MARK_AS_ADVANCED(PCRE_INCLUDE_DIR PCRE_LIBRARY)

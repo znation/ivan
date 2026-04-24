@@ -16,7 +16,8 @@
 
 #include <cstdarg>
 #include <cctype>
-#include <pcre.h>
+#define PCRE2_CODE_UNIT_WIDTH 8
+#include <pcre2.h>
 
 #include "iconf.h"
 #include "message.h"
