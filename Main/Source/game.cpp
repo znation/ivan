@@ -1134,6 +1134,30 @@ void game::Run()
       pool::BurnHell();
       IncreaseTick();
       ApplyDivineTick();
+
+      // Phase 2.4: Right stick camera control (optional) - pan camera in wilderness/world map
+      if(IsInWilderness() && WorldMap != nullptr)
+      {
+        v2 CameraDelta = globalwindowhandler::GetCameraDeltaFromGamepad();
+        if(CameraDelta.X != 0 || CameraDelta.Y != 0)
+        {
+          int NewX = Camera.X + CameraDelta.X;
+          int NewY = Camera.Y + CameraDelta.Y;
+          // Clamp to world map bounds
+          int MaxX = WorldMap->GetXSize() - GetScreenXSize();
+          int MaxY = WorldMap->GetYSize() - GetScreenYSize();
+          if(MaxX < 0) MaxX = 0;
+          if(MaxY < 0) MaxY = 0;
+          NewX = std::max(0, std::min(NewX, MaxX));
+          NewY = std::max(0, std::min(NewY, MaxY));
+          if(NewX != Camera.X || NewY != Camera.Y)
+          {
+            Camera.X = NewX;
+            Camera.Y = NewY;
+            GetCurrentArea()->SendNewDrawRequest();
+          }
+        }
+      }
     }
     catch(quitrequest)
     {
@@ -3772,6 +3796,11 @@ int game::DirectionQuestion(cfestring& Topic, truth RequireAnswer, truth AcceptY
     for(int c = 0; c < DIRECTION_COMMAND_KEYS; ++c)
       if(Key == GetMoveCommandKey(c))
         return c;
+
+    // Phase 2: Also check gamepad direction input (left stick + D-pad)
+    int GamepadDir = globalwindowhandler::GetDirectionFromGamepad();
+    if(GamepadDir >= 0 && GamepadDir < YOURSELF)
+      return GamepadDir;
 
     if(Key==keyChoseDefaultDir)
       return defaultDir;

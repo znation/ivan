@@ -3738,6 +3738,23 @@ void character::GetPlayerCommand()
           ValidKeyPressed = true;
         }
 
+      // Phase 2: Also check gamepad input (left analog stick + D-pad) for movement
+      if(!HasActed)
+      {
+        int GamepadDir = globalwindowhandler::GetDirectionFromGamepad();
+        if(GamepadDir >= 0 && GamepadDir <= YOURSELF)
+        {
+          bool bWaitNeutralMove=false;
+          HasActed = TryMove(ApplyStateModification(game::GetMoveVector(GamepadDir)), true, game::PlayerIsRunning(), &bWaitNeutralMove);
+          if(HasActed){
+            game::CheckAddAutoMapNote();
+            game::CheckAutoPickup();
+          }
+          // cant access commandsystem::NOP directly (it's private), but we still mark it as valid input
+          ValidKeyPressed = true;
+        }
+      }
+
       for(c = 1; commandsystem::GetCommand(c); ++c)
         if(Key == commandsystem::GetCommand(c)->GetKey())
         {

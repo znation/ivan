@@ -72,8 +72,10 @@ class globalwindowhandler
 {
  public:
   static bool IsKeyPressed(int iSDLScanCode);
-  // Gamepad support (Phase 1)
+  // Gamepad support (Phase 1 & 2)
   static void ProcessGamepadInput();
+  static int GetDirectionFromGamepad(); // Returns direction index 0-8 (NW=0..SE=7, YOURSELF=8), or -1 if no input
+  static v2 GetCameraDeltaFromGamepad(); // Returns camera pan deltas from right stick, or zero vector
   static bool IsGamepadEnabled() { return GamepadEnabled; }
   static void SetGamepadEnabled(bool Enabled) { GamepadEnabled = Enabled; }
   static void ResetKeyTimeout(){SetKeyTimeout(0,iRestWaitKey);}

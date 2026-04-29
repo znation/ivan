@@ -39,29 +39,34 @@ This document outlines the work items needed to add joystick/gamepad support to 
 
 ## Phase 2: Movement Support
 
-### [ ] 2.1 Define gamepad movement mapping constants
-**File:** `Main/Include/ivandef.h` or new file `Main/Include/gamepaddef.h`
-- Define constants for gamepad button mappings (e.g., `GAMEPAD_LEFT_STICK_X`, `GAMEPAD_A_BUTTON`)
-- Define deadzone thresholds for analog sticks
-- Consider configurable mapping support
+### [x] 2.1 Define gamepad movement mapping constants
+**File:** `FeLib/Include/whandler.h`
+- ✅ Reused existing axis constants (`GAMEPAD_LEFT_STICK_X/Y`, `GAMEPAD_RIGHT_STICK_X/Y`)
+- ✅ Deadzone threshold already defined as `GAMEPAD_DEADZONE` (2000) in Phase 1
+- Direction mapping: NW=0, N=1, NE=2, W=3, E=4, SW=5, S=6, SE=7, YOURSELF=8
 
-### [ ] 2.2 Implement left stick movement detection
+### [x] 2.2 Implement left stick movement detection
+**File:** `FeLib/Source/whandler.cpp`
+- ✅ Implemented `globalwindowhandler::GetDirectionFromGamepad()` method
+- ✅ Reads left analog stick axes (already normalized in `ProcessGamepadInput()`)
+- ✅ Applies deadzone to prevent drift (`GAMEPAD_DEADZONE / 32767.0f`)
+- ✅ Maps stick direction to one of the 8 movement directions using angle-based octant classification via `atan2`
+- ✅ Supports both D-pad and left stick for movement (stick takes precedence over D-pad)
+- ✅ Falls back to D-pad when stick is in deadzone
+
+### [x] 2.3 Integrate gamepad movement into command dispatch
+**File:** `Main/Source/char.cpp` + `Main/Source/game.cpp`
+- ✅ Extended character's `GetPlayerCommand()` loop to check gamepad direction alongside regular move keys
+- ✅ Added `globalwindowhandler::GetDirectionFromGamepad()` call that returns direction index 0-8
+- ✅ Movement via gamepad uses the same `TryMove()` path as keyboard input
+- ✅ Also extended `game::DirectionQuestion()` to accept gamepad directional input for prompts like "Which way do you want to open?"
+
+### [x] 2.4 Implement right stick / camera control (optional)
 **File:** `FeLib/Source/whandler.cpp` + `Main/Source/game.cpp`
-- Read left analog stick (axis 0 = X, axis 1 = Y) in the gamepad state update
-- Apply deadzone to prevent drift
-- Map stick direction to one of the 8 movement directions (NW, N, NE, W, E, SW, S, SE) or "yourself" (center)
-- Support both D-pad and left stick for movement
-
-### [ ] 2.3 Integrate gamepad movement into `GetDirectionVectorForKey()`
-**File:** `Main/Source/game.cpp`
-- Extend `game::GetDirectionVectorForKey(int Key)` to also check gamepad state
-- Add a new method like `game::GetDirectionFromGamepad()` that returns the current direction from gamepad input
-- The function should return a direction vector based on left stick or D-pad position
-
-### [ ] 2.4 Implement right stick / camera control (optional)
-**File:** `Main/Source/game.cpp` + `FeLib/Source/whandler.cpp`
-- If desired, allow right analog stick to control camera panning in wilderness/world map views
-- Map right stick axes to camera movement deltas
+- ✅ Implemented `globalwindowhandler::GetCameraDeltaFromGamepad()` method
+- ✅ Reads right analog stick axes and returns v2 delta in tiles
+- ✅ Integrated into game loop's main tick processing (`game::Run()`)
+- ✅ Camera panning works in wilderness/world map mode with bounds clamping
 
 ---
 

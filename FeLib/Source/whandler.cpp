@@ -14,6 +14,11 @@
 #include <ctime>
 #include <ratio>
 #include <chrono>
+#include <cmath>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 #include "bitmap.h"
 #include "error.h"
@@ -812,6 +817,112 @@ void globalwindowhandler::CloseGamepad(int Index)
     Gamepads[i] = Gamepads[i + 1];
   }
   --NumGamepads;
+}
+
+/**
+ * Phase 2: Get current movement direction from gamepad input (left stick + D-pad).
+ * Returns a direction index: 0=NW, 1=N, 2=NE, 3=W, 4=E, 5=SW, 6=S, 7=SE, 8=YOURSELF.
+ * Returns -1 if no directional input is detected (center stick + no D-pad).
+ *
+ * Priority: left analog stick takes precedence over D-pad when both are active.
+ */
+int globalwindowhandler::GetDirectionFromGamepad()
+{
+  if(!GamepadEnabled || NumGamepads == 0)
+    return -1;
+
+  // Use the first connected gamepad for movement input
+  for(int i = 0; i < NumGamepads; ++i)
+  {
+    gamepadstate& gp = Gamepads[i];
+    if(!gp.Connected || gp.Controller == nullptr)
+      continue;
+
+    // Read left analog stick axes (already normalized to -1.0..1.0 in ProcessGamepadInput)
+    float stickX = gp.AxisValues[GAMEPAD_LEFT_STICK_X];
+    float stickY = gp.AxisValues[GAMEPAD_LEFT_STICK_Y];
+
+    // Apply deadzone to prevent drift
+    const float Deadzone = GAMEPAD_DEADZONE / 32767.0f;
+    bool stickActive = std::abs(stickX) > Deadzone || std::abs(stickY) > Deadzone;
+
+    if(stickActive)
+    {
+      // Map analog stick to one of the 8 directions using angle-based classification.
+      // SDL axes: X positive = right, Y positive = down (screen coordinates).
+      // Directions: NW=0, N=1, NE=2, W=3, E=4, SW=5, S=6, SE=7
+      //
+      // We compute the angle from the stick position and classify into octants.
+      // Angle 0 points up (North), increasing clockwise.
+      float Angle = std::atan2(stickX, -stickY); // atan2(x, -y) gives angle from North, CW positive
+      if(Angle < 0)
+        Angle += 2.0f * static_cast<float>(M_PI);
+
+      // Each octant is PI/4 radians wide. Add half-octient offset for proper centering.
+      int Direction = static_cast<int>(Angle / (static_cast<float>(M_PI) / 4.0f) + 0.5f) % 8;
+      return Direction;
+    }
+
+    // Fall back to D-pad if stick is in deadzone
+    Uint16 dpadUp = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_UP);
+    Uint16 dpadDown = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_DOWN);
+    Uint16 dpadLeft = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_LEFT);
+    Uint16 dpadRight = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_RIGHT);
+
+    if(dpadUp || dpadDown || dpadLeft || dpadRight)
+    {
+      // Combine D-pad directions for diagonals (same logic as keyboard)
+      bool up = !!dpadUp;
+      bool down = !!dpadDown;
+      bool left = !!dpadLeft;
+      bool right = !!dpadRight;
+
+      if(up && !down)   { if(left && !right) return 0; /* NW */
+                         else if(right && !left) return 2; /* NE */
+                         else                    return 1; /* N  */ }
+      if(down && !up)   { if(left && !right) return 5; /* SW */
+                         else if(right && !left) return 7; /* SE */
+                         else                    return 6; /* S  */ }
+      if(left && !right){ return 3; /* W */ }
+      if(right && !left){ return 4; /* E */ }
+    }
+
+    // No directional input from this gamepad, try next one
+  }
+
+  return -1;
+}
+
+/**
+ * Phase 2: Get camera pan deltas from gamepad right analog stick.
+ * Returns a v2 with X/Y movement deltas (in tiles). Deadzone applied to prevent drift.
+ */
+v2 globalwindowhandler::GetCameraDeltaFromGamepad()
+{
+  if(!GamepadEnabled || NumGamepads == 0)
+    return ZERO_V2;
+
+  // Use the first connected gamepad for camera control
+  for(int i = 0; i < NumGamepads; ++i)
+  {
+    gamepadstate& gp = Gamepads[i];
+    if(!gp.Connected || gp.Controller == nullptr)
+      continue;
+
+    float stickX = gp.AxisValues[GAMEPAD_RIGHT_STICK_X];
+    float stickY = gp.AxisValues[GAMEPAD_RIGHT_STICK_Y];
+
+    const float Deadzone = GAMEPAD_DEADZONE / 32767.0f;
+    if(std::abs(stickX) > Deadzone || std::abs(stickY) > Deadzone)
+    {
+      // Return deltas in tiles (1 tile per full stick deflection)
+      return v2(static_cast<int>(stickX), static_cast<int>(stickY));
+    }
+
+    // No right stick input from this gamepad, try next one
+  }
+
+  return ZERO_V2;
 }
 
 /**
