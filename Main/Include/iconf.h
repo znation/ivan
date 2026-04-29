@@ -73,6 +73,7 @@ class ivanconfig
   static truth GetPlaySounds() { return PlaySounds.Value; }
   static truth IsShowTurn() { return ShowTurn.Value; }
   static truth IsAllowMouseOnFelist(){ return AllowMouseOnFelist.Value; }
+  static truth IsUseGamepad() { return UseGamepad.Value; }
   static truth IsStartingOutlinedGfx() { return bStartingOutlinedGfx; }
   static long GetVolume() { return Volume.Value; }
   static long GetSfxVolume() { return SfxVolume.Value; }
@@ -156,6 +157,7 @@ class ivanconfig
   static void AltSilhouetteDisplayer(const cycleoption* O, festring& Entry);
   static void AllowMouseOnFelistChanger(truthoption*, truth);
   static void UseExtraMenuGraphicsChanger(truthoption*, truth);
+  static void UseGamepadChanger(truthoption*, truth);
   static void WorldSizeConfigDisplayer(const cycleoption* O, festring& Entry);
   static void LandTypeConfigDisplayer(const cycleoption* O, festring& Entry);
   static void WorldShapeConfigDisplayer(const cycleoption* O, festring& Entry);
@@ -280,6 +282,7 @@ class ivanconfig
 
   static truthoption AllowMouseOnFelist;
   static truthoption UseExtraMenuGraphics;
+  static truthoption UseGamepad;
 };
 
 inline long ivanconfig::ApplyContrastTo(long L)

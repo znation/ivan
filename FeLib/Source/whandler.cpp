@@ -137,12 +137,21 @@ int globalwindowhandler::ReadKey()
 #ifdef USE_SDL
 
 #include <algorithm>
+#include <cstdio>
+
+// Gamepad state (Phase 1)
+globalwindowhandler::gamepadstate globalwindowhandler::Gamepads[MAX_GAMEPADS];
+int globalwindowhandler::NumGamepads = 0;
+bool globalwindowhandler::GamepadEnabled = true;
 
 std::vector<int> globalwindowhandler::KeyBuffer;
 truth (*globalwindowhandler::QuitMessageHandler)() = 0;
 bool (*globalwindowhandler::FunctionKeyHandler)(SDL_Keycode) = 0;
 bool (*globalwindowhandler::ControlKeyHandler)(SDL_Keycode) = 0;
 
+/**
+ * Phase 1: Initialize SDL_GameController for all connected controllers.
+ */
 void globalwindowhandler::Init()
 {
 #if SDL_MAJOR_VERSION == 1
@@ -151,6 +160,21 @@ void globalwindowhandler::Init()
 #else
   //FIXSDL2 SDL_EnableKeyRepeat(500, 30);
   SDL_ShowWindow(graphics::GetWindow());
+
+  // Initialize gamepad support
+  NumGamepads = 0;
+  GamepadEnabled = true;
+
+  // Try to open any already-connected controllers
+  int numJoysticks = SDL_NumJoysticks();
+  for(int i = 0; i < numJoysticks && NumGamepads < MAX_GAMEPADS; ++i)
+  {
+    if(SDL_IsGameController(i))
+    {
+      OpenGamepad(SDL_JoystickInstanceID(SDL_JoystickOpen(i)));
+      SDL_JoystickClose(SDL_JoystickFromInstanceID(SDL_JoystickInstanceID(SDL_JoystickOpen(i))));
+    }
+  }
 #endif
 }
 
@@ -366,6 +390,9 @@ int globalwindowhandler::GetKey(truth EmptyBuffer)
   int iDelayMS=iDefaultDelayMS;
   for(;;){
     CheckKeyTimeout();
+
+    // Phase 1: Process gamepad input each frame
+    ProcessGamepadInput();
 
     if(!KeyBuffer.empty())
     {
@@ -746,6 +773,136 @@ void globalwindowhandler::AddKeyToBuffer(int KeyPressed)
     KeyBuffer.push_back(KeyPressed);
 }
 
+/**
+ * Phase 1: Open a gamepad controller by its joystick instance ID.
+ */
+void globalwindowhandler::OpenGamepad(SDL_JoystickID JoyId)
+{
+  if(NumGamepads >= MAX_GAMEPADS)
+    return;
+
+  SDL_GameController* Controller = SDL_GameControllerOpen(JoyId);
+  if(Controller == nullptr)
+    return;
+
+  int Index = NumGamepads++;
+  Gamepads[Index].Controller = Controller;
+  Gamepads[Index].Connected = true;
+  Gamepads[Index].PlayerIndex = SDL_GameControllerGetPlayerIndex(Controller);
+}
+
+/**
+ * Phase 1: Close a gamepad controller by index.
+ */
+void globalwindowhandler::CloseGamepad(int Index)
+{
+  if(Index < 0 || Index >= NumGamepads)
+    return;
+
+  if(Gamepads[Index].Controller != nullptr)
+  {
+    SDL_GameControllerClose(Gamepads[Index].Controller);
+    Gamepads[Index].Controller = nullptr;
+  }
+  Gamepads[Index].Connected = false;
+
+  // Shift remaining gamepads down
+  for(int i = Index; i < NumGamepads - 1; ++i)
+  {
+    Gamepads[i] = Gamepads[i + 1];
+  }
+  --NumGamepads;
+}
+
+/**
+ * Phase 1: Process gamepad input and inject into the key buffer.
+ * This maps gamepad buttons to key codes that the existing command system understands.
+ */
+void globalwindowhandler::ProcessGamepadInput()
+{
+  if(!GamepadEnabled || NumGamepads == 0)
+    return;
+
+  for(int i = 0; i < NumGamepads; ++i)
+  {
+    gamepadstate& gp = Gamepads[i];
+    if(!gp.Connected || gp.Controller == nullptr)
+      continue;
+
+    // Update axis values (left stick, right stick, triggers)
+    gp.AxisValues[GAMEPAD_LEFT_STICK_X]   = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_LEFTX)) / 32767.0f;
+    gp.AxisValues[GAMEPAD_LEFT_STICK_Y]   = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_LEFTY)) / 32767.0f;
+    gp.AxisValues[GAMEPAD_RIGHT_STICK_X]  = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_RIGHTX)) / 32767.0f;
+    gp.AxisValues[GAMEPAD_RIGHT_STICK_Y]  = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_RIGHTY)) / 32767.0f;
+    gp.AxisValues[GAMEPAD_LEFT_TRIGGER]   = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_TRIGGERLEFT)) / 32767.0f;
+    gp.AxisValues[GAMEPAD_RIGHT_TRIGGER]  = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_TRIGGERRIGHT)) / 32767.0f;
+
+    // Process D-pad buttons (mapped to directional keys)
+    Uint16 dpadButtons = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_UP);
+    if(dpadButtons && !gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_UP])
+      AddKeyToBuffer(GAMEPAD_DPAD_UP);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_UP] = dpadButtons;
+
+    dpadButtons = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_DOWN);
+    if(dpadButtons && !gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_DOWN])
+      AddKeyToBuffer(GAMEPAD_DPAD_DOWN);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_DOWN] = dpadButtons;
+
+    dpadButtons = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_LEFT);
+    if(dpadButtons && !gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_LEFT])
+      AddKeyToBuffer(GAMEPAD_DPAD_LEFT);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_LEFT] = dpadButtons;
+
+    dpadButtons = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_RIGHT);
+    if(dpadButtons && !gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_RIGHT])
+      AddKeyToBuffer(GAMEPAD_DPAD_RIGHT);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_DPAD_RIGHT] = dpadButtons;
+
+    // Process action buttons (A, B, X, Y) - inject as key events for command dispatch
+    Uint16 aBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_A);
+    if(aBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_A])
+      AddKeyToBuffer(GAMEPAD_A_BUTTON);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_A] = aBtn;
+
+    Uint16 bBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_B);
+    if(bBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_B])
+      AddKeyToBuffer(GAMEPAD_B_BUTTON);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_B] = bBtn;
+
+    Uint16 xBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_X);
+    if(xBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_X])
+      AddKeyToBuffer(GAMEPAD_X_BUTTON);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_X] = xBtn;
+
+    Uint16 yBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_Y);
+    if(yBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_Y])
+      AddKeyToBuffer(GAMEPAD_Y_BUTTON);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_Y] = yBtn;
+
+    // Bumpers (L1/R1)
+    Uint16 lbBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_LEFTSHOULDER);
+    if(lbBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_LEFTSHOULDER])
+      AddKeyToBuffer(GAMEPAD_LEFT_BUMPER);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_LEFTSHOULDER] = lbBtn;
+
+    Uint16 rbBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_RIGHTSHOULDER);
+    if(rbBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_RIGHTSHOULDER])
+      AddKeyToBuffer(GAMEPAD_RIGHT_BUMPER);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_RIGHTSHOULDER] = rbBtn;
+
+    // Start/Back buttons
+    Uint16 startBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_START);
+    if(startBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_START])
+      AddKeyToBuffer(GAMEPAD_START);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_START] = startBtn;
+
+    Uint16 backBtn = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_BACK);
+    if(backBtn && !gp.ButtonState[SDL_CONTROLLER_BUTTON_BACK])
+      AddKeyToBuffer(GAMEPAD_BACK);
+    gp.ButtonState[SDL_CONTROLLER_BUTTON_BACK] = backBtn;
+  }
+}
+
 void globalwindowhandler::ProcessMessage(SDL_Event* Event)
 {
   Uint32 type;
@@ -804,8 +961,33 @@ void globalwindowhandler::ProcessMessage(SDL_Event* Event)
    case SDL_KEYDOWN: DBGLN;
      ProcessKeyDownMessage(Event);
      break;
-  }
 
+#if SDL_MAJOR_VERSION == 2
+   // Phase 1: Handle gamepad connect/disconnect events
+   case SDL_CONTROLLERDEVICEADDED:
+    {
+      SDL_JoystickID JoyId = static_cast<SDL_JoystickID>(Event->cdevice.which);
+      OpenGamepad(JoyId);
+      break;
+    }
+
+   case SDL_CONTROLLERDEVICEREMOVED:
+    {
+      SDL_JoystickID JoyId = static_cast<SDL_JoystickID>(Event->cdevice.which);
+      // Find and close the matching gamepad
+      for(int i = 0; i < NumGamepads; ++i)
+      {
+        if(Gamepads[i].Controller != nullptr &&
+           SDL_JoystickInstanceID(SDL_GameControllerGetJoystick(Gamepads[i].Controller)) == JoyId)
+        {
+          CloseGamepad(i);
+          break;
+        }
+      }
+      break;
+    }
+#endif
+  }
 }
 
 // returns true if shift is being pressed

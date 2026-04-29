@@ -382,6 +382,13 @@ truthoption ivanconfig::UseExtraMenuGraphics("UseExtraMenuGraphics",
                                           &configsystem::NormalTruthChangeInterface,
                                           &UseExtraMenuGraphicsChanger);
 #endif
+truthoption ivanconfig::UseGamepad(       "UseGamepad",
+                                          "Enable gamepad/joystick support",
+                                          "Allow using a gamepad or joystick for movement and commands. Requires restarting the game to take effect.",
+                                          true,
+                                          &configsystem::NormalTruthDisplayer,
+                                          &configsystem::NormalTruthChangeInterface,
+                                          &UseGamepadChanger);
 col24 ivanconfig::ContrastLuminance = NORMAL_LUMINANCE;
 truthoption ivanconfig::PlaySounds(       "PlaySounds",
                                           "Use sound effects",
@@ -1139,6 +1146,12 @@ void ivanconfig::UseExtraMenuGraphicsChanger(truthoption* O, truth What)
   graphics::SetAllowMouseInFullScreen(What);
 }
 
+void ivanconfig::UseGamepadChanger(truthoption* O, truth What)
+{
+  if(O!=NULL)O->Value = What;
+  globalwindowhandler::SetGamepadEnabled(What);
+}
+
 void ivanconfig::FullScreenModeChanger(truthoption*, truth)
 {
   graphics::SwitchMode();
@@ -1301,6 +1314,7 @@ void ivanconfig::Initialize()
   fsCategory="Input and Interface";
   configsystem::AddOption(fsCategory,&DirectionKeyMap);
   configsystem::AddOption(fsCategory,&SetupCustomKeys);
+  configsystem::AddOption(fsCategory,&UseGamepad);
   configsystem::AddOption(fsCategory,&SaveGameSortMode);
   configsystem::AddOption(fsCategory,&ShowTurn);
   configsystem::AddOption(fsCategory,&ShowFullDungeonName);

@@ -15,6 +15,7 @@
 
 #ifdef USE_SDL
 #include <vector>
+#include <array>
 #include "SDL.h"
 #endif
 
@@ -31,16 +32,50 @@
 #define WAIT_FOR_KEY_DOWN globalwindowhandler::WaitForKeyDown
 #define WAIT_FOR_KEY_UP globalwindowhandler::WaitForKeyUp
 
+// Gamepad button constants (mapped to key codes for injection into KeyBuffer)
+#define GAMEPAD_A_BUTTON    0xE101
+#define GAMEPAD_B_BUTTON    0xE102
+#define GAMEPAD_X_BUTTON    0xE103
+#define GAMEPAD_Y_BUTTON    0xE104
+#define GAMEPAD_LEFT_BUMPER 0xE105
+#define GAMEPAD_RIGHT_BUMPER 0xE106
+#define GAMEPAD_BACK        0xE107
+#define GAMEPAD_START       0xE108
+#define GAMEPAD_GUIDE       0xE109
+#define GAMEPAD_LEFT_THUMB  0xE10A
+#define GAMEPAD_RIGHT_THUMB 0xE10B
+// D-pad buttons (mapped to directional keys)
+#define GAMEPAD_DPAD_UP     KEY_UP + 0xE000
+#define GAMEPAD_DPAD_DOWN   KEY_DOWN + 0xE000
+#define GAMEPAD_DPAD_LEFT   KEY_LEFT + 0xE000
+#define GAMEPAD_DPAD_RIGHT  KEY_RIGHT + 0xE000
+// Gamepad axis constants for movement detection
+#define GAMEPAD_LEFT_STICK_X    0
+#define GAMEPAD_LEFT_STICK_Y    1
+#define GAMEPAD_RIGHT_STICK_X   2
+#define GAMEPAD_RIGHT_STICK_Y   3
+#define GAMEPAD_LEFT_TRIGGER    4
+#define GAMEPAD_RIGHT_TRIGGER   5
+// Gamepad deadzone threshold (SDL axis values range from -32768 to 32767)
+#define GAMEPAD_DEADZONE        2000
+
 struct mouseclick{
  int btn=-1;
  v2 pos;
  int wheelY=0;
 };
 
+// Maximum number of gamepads supported simultaneously
+#define MAX_GAMEPADS 4
+
 class globalwindowhandler
 {
  public:
   static bool IsKeyPressed(int iSDLScanCode);
+  // Gamepad support (Phase 1)
+  static void ProcessGamepadInput();
+  static bool IsGamepadEnabled() { return GamepadEnabled; }
+  static void SetGamepadEnabled(bool Enabled) { GamepadEnabled = Enabled; }
   static void ResetKeyTimeout(){SetKeyTimeout(0,iRestWaitKey);}
   static void CheckKeyTimeout();
   static void SuspendKeyTimeout();
@@ -89,6 +124,18 @@ class globalwindowhandler
 
  private:
 #ifdef USE_SDL
+  struct gamepadstate {
+    SDL_GameController* Controller = nullptr;
+    bool Connected = false;
+    std::array<bool, SDL_CONTROLLER_BUTTON_MAX> ButtonState{}; // Track current press state
+    std::array<float, 6> AxisValues{}; // X/Y left stick, X/Y right stick, LT, RT
+    int PlayerIndex = -1;
+  };
+  static gamepadstate Gamepads[MAX_GAMEPADS];
+  static int NumGamepads;
+  static bool GamepadEnabled;
+  static void OpenGamepad(SDL_JoystickID JoyId);
+  static void CloseGamepad(int Index);
   static int ChkCtrlKey(SDL_Event* Event);
   static void ProcessMessage(SDL_Event*);
   static void ProcessKeyDownMessage(SDL_Event* Event);
