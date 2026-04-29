@@ -652,7 +652,11 @@ uint felist::DrawFiltered(bool& bJustExitTheList)
       break;
     }
 
-    if((Flags & SELECTABLE) && (Pressed == UpKey || Pressed == KEY_UP))
+    // Phase 4.3: Gamepad D-pad support for list navigation
+    // Accept both keyboard keys and gamepad D-pad equivalents (KEY_UP/DOWN + 0xE000)
+    if((Flags & SELECTABLE) &&
+       ((Pressed == UpKey || Pressed == KEY_UP || Pressed == GAMEPAD_DPAD_UP) ||
+        (UpKey != KEY_UP && Pressed == UpKey + 0xE000)))
     {DBGLN;
       if(Selected)
       {
@@ -677,7 +681,9 @@ uint felist::DrawFiltered(bool& bJustExitTheList)
       continue;
     }
 
-    if((Flags & SELECTABLE) && (Pressed == DownKey || Pressed == KEY_DOWN))
+    if((Flags & SELECTABLE) &&
+       ((Pressed == DownKey || Pressed == KEY_DOWN || Pressed == GAMEPAD_DPAD_DOWN) ||
+        (DownKey != KEY_DOWN && Pressed == DownKey + 0xE000)))
     {DBGLN;
       if(!LastEntryVisible || Selected != Selectables - 1)
       {
@@ -707,7 +713,9 @@ uint felist::DrawFiltered(bool& bJustExitTheList)
       continue;
     }
 
-    if((Flags & SELECTABLE) && (Pressed == KEY_ENTER || bLeftMouseButtonClick))
+    // Phase 4.3: Gamepad confirm button (A/X) for selection
+    if((Flags & SELECTABLE) &&
+       (Pressed == KEY_ENTER || Pressed == GAMEPAD_A_BUTTON || Pressed == GAMEPAD_X_BUTTON || bLeftMouseButtonClick))
     {
       Return = Selected;
       if(!bLeftMouseButtonClick)
@@ -719,8 +727,9 @@ uint felist::DrawFiltered(bool& bJustExitTheList)
       break;
     }
 
-    if(Pressed == KEY_ESC) // this here grants will be preferred over everything else below
-    {
+    // Phase 4.3: Gamepad back button (B) for ESC/cancel
+    if(Pressed == KEY_ESC || Pressed == GAMEPAD_B_BUTTON)
+    { // this here grants will be preferred over everything else below
       Return = ESCAPED;
       break;
     }

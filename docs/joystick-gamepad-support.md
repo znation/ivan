@@ -111,21 +111,28 @@ This document outlines the work items needed to add joystick/gamepad support to 
 
 ## Phase 4: Menu & UI Navigation
 
-### [ ] 4.1 Add gamepad navigation to menus (feio.cpp)
+### [x] 4.1 Add gamepad navigation to menus (feio.cpp)
 **File:** `FeLib/Source/feio.cpp`
-- Extend `iosystem::Menu()` to accept gamepad input for up/down selection
-- Map A/X button to "select" and B/Circle to "back"
-- Support D-pad or left stick for menu navigation
+- ✅ Extended `iosystem::Menu()` to accept gamepad input for up/down selection via D-pad/left stick
+- ✅ Mapped A/X button (`GAMEPAD_A_BUTTON` / `GAMEPAD_X_BUTTON`) to "select" (confirm)
+- ✅ Mapped B/Circle button (`GAMEPAD_B_BUTTON`) to "back" (returns -1 to signal cancellation)
+- ✅ Supports D-pad for menu navigation (up/down directions mapped via `GAMEPAD_DPAD_UP`/`GAMEPAD_DPAD_DOWN`)
 
-### [ ] 4.2 Add gamepad support to StringQuestion / NumberQuestion
+### [x] 4.2 Add gamepad support to StringQuestion / NumberQuestion
 **File:** `FeLib/Source/feio.cpp`
-- Allow gamepad buttons for cursor movement in text input fields
-- Map A/X to confirm, B/Circle to backspace or cancel
+- ✅ Added gamepad D-pad keys (`GAMEPAD_DPAD_LEFT`, `GAMEPAD_DPAD_RIGHT`) for cursor movement in text input fields
+- ✅ Mapped A/X button (`GAMEPAD_A_BUTTON` / `GAMEPAD_X_BUTTON`) to confirm (same as Enter)
+- ✅ Mapped B/Circle button (`GAMEPAD_B_BUTTON`) to backspace (same as Backspace key)
+- ✅ Added gamepad D-pad up/down for history navigation in StringQuestion
+- ✅ Updated input acceptance loops to recognize all gamepad keys alongside keyboard equivalents
 
-### [ ] 4.3 Add gamepad support to felist (list navigation)
-**File:** `FeLib/Include/felist.h` + `FeLib/Source/felist.cpp`
-- Extend felist to accept gamepad input for scrolling through lists
-- This is used extensively in inventory, equipment screens, etc.
+### [x] 4.3 Add gamepad support to felist (list navigation)
+**File:** `FeLib/Source/felist.cpp`
+- ✅ Extended felist's `DrawFiltered()` to accept gamepad D-pad for scrolling through lists
+- ✅ Added `GAMEPAD_DPAD_UP` and `GAMEPAD_DPAD_DOWN` alongside existing `KEY_UP`/`KEY_DOWN` checks
+- ✅ Mapped A/X button (`GAMEPAD_A_BUTTON` / `GAMEPAD_X_BUTTON`) for entry selection (same as Enter)
+- ✅ Mapped B/Circle button (`GAMEPAD_B_BUTTON`) for cancel/back (same as Escape)
+- ✅ Works with all list-based UI: inventory, equipment screens, save game loader, etc.
 
 ---
 

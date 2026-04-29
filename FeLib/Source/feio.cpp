@@ -309,22 +309,32 @@ int iosystem::Menu(std::vector<bitmap*> vBackGround, v2 Pos,
       k = GET_KEY(false);
     }
 
-    switch(k)
-    {
-     case KEY_UP:
+    // Phase 4.1: Gamepad navigation support for menus
+    // D-pad / left stick movement (mapped to KEY_UP/KEY_DOWN + 0xE000)
+    if(k >= KEY_UP && k <= GAMEPAD_DPAD_DOWN) {
       if(iSelected > 0)
         --iSelected;
       else
         iSelected = (CountChars('\r', sMS)-1);
-      break;
-
-     case KEY_DOWN:
+    }
+    // Gamepad down direction only (filter out LEFT/RIGHT from the DOWN range)
+    else if(k == KEY_DOWN || k == GAMEPAD_DPAD_DOWN) {
       if(iSelected < (CountChars('\r', sMS)-1))
         ++iSelected;
       else
         iSelected = 0;
-      break;
-
+    }
+    // Gamepad confirm buttons (A/X)
+    else if(k == GAMEPAD_A_BUTTON || k == GAMEPAD_X_BUTTON) {
+      bReady = true;
+    }
+    // Gamepad back button (B/Circle)
+    else if(k == GAMEPAD_B_BUTTON) {
+      bMenuIsActive=false;
+      return -1; // Signal cancellation
+    }
+    else switch(k)
+    {
      case 0x00D:
       bReady = true;
       break;
@@ -460,17 +470,25 @@ int iosystem::StringQuestion(festring& Input,
     /* if LastKey is less than 20 it is a control
        character not available in the font */
 
+    // Phase 4.2: Accept gamepad D-pad keys for cursor movement and navigation
     while(!(LastKey >= 0x20 && LastKey < 0x7F)
       && LastKey != KEY_BACK_SPACE
       && LastKey != KEY_DELETE
       && LastKey != KEY_DOWN
+      && LastKey != GAMEPAD_DPAD_DOWN
       && LastKey != KEY_END
       && LastKey != KEY_ENTER
+      && LastKey != GAMEPAD_A_BUTTON
+      && LastKey != GAMEPAD_X_BUTTON
       && LastKey != KEY_ESC
+      && LastKey != GAMEPAD_B_BUTTON
       && LastKey != KEY_HOME 
       && LastKey != KEY_LEFT 
-      && LastKey != KEY_RIGHT
+      && LastKey != GAMEPAD_DPAD_LEFT
+      && LastKey != KEY_RIGHT 
+      && LastKey != GAMEPAD_DPAD_RIGHT
       && LastKey != KEY_UP
+      && LastKey != GAMEPAD_DPAD_UP
     ){
       LastKey = GET_KEY(false);
 
@@ -563,7 +581,24 @@ int iosystem::StringQuestion(festring& Input,
       continue;
     }
     
-    if(LastKey == KEY_DOWN)
+    // Phase 4.2: Gamepad D-pad for cursor movement and history navigation
+    if(LastKey == GAMEPAD_DPAD_UP)
+    {
+      if(vHist.size()){
+        if(iHistIndex == (vHist.size()-1))
+          vHist.push_back(Input);
+
+        --iHistIndex;
+        if(iHistIndex<0)iHistIndex=0;
+        Input=vHist[iHistIndex];
+        if(CursorPos>Input.GetSize())
+          CursorPos=Input.GetSize();
+      }
+
+      continue;
+    }
+
+    if(LastKey == GAMEPAD_DPAD_DOWN)
     {
       if(vHist.size()){
         ++iHistIndex;
@@ -572,6 +607,44 @@ int iosystem::StringQuestion(festring& Input,
         if(CursorPos>Input.GetSize())
           CursorPos=Input.GetSize();
       }
+
+      continue;
+    }
+
+    // Gamepad D-pad left/right for cursor movement
+    if(LastKey == GAMEPAD_DPAD_LEFT)
+    {
+      if(CursorPos > 0)
+        --CursorPos;
+
+      continue;
+    }
+
+    if(LastKey == GAMEPAD_DPAD_RIGHT)
+    {
+      if(CursorPos < static_cast<int>(Input.GetSize()))
+        ++CursorPos;
+
+      continue;
+    }
+
+    // Gamepad confirm buttons (A/X) - same as Enter
+    if(LastKey == GAMEPAD_A_BUTTON || LastKey == GAMEPAD_X_BUTTON)
+    {
+      if(Input.GetSize() >= MinLetters)
+        break;
+      else
+      {
+        TooShort = true;
+        continue;
+      }
+    }
+
+    // Gamepad back button (B) - same as Backspace
+    if(LastKey == GAMEPAD_B_BUTTON)
+    {
+      if(CursorPos > 0)
+        Input.Erase(static_cast<festring::sizetype>(--CursorPos), 1);
 
       continue;
     }
@@ -653,10 +726,16 @@ long iosystem::NumberQuestion(cfestring& Topic, v2 Pos, col16 Color,
                  Color, "%*c", CursorPos + 1, '_');
     graphics::BlitDBToScreen();
 
+    // Phase 4.2: Accept gamepad keys for number input navigation
     while(!isdigit(LastKey) && LastKey != KEY_BACK_SPACE
-          && LastKey != KEY_ENTER && LastKey != KEY_ESC
+          && LastKey != GAMEPAD_B_BUTTON
+          && LastKey != KEY_ENTER
+          && LastKey != GAMEPAD_A_BUTTON
+          && LastKey != GAMEPAD_X_BUTTON
+          && LastKey != KEY_ESC
           && LastKey != KEY_HOME && LastKey != KEY_END
-          && LastKey != KEY_LEFT && LastKey != KEY_RIGHT
+          && LastKey != KEY_LEFT && LastKey != GAMEPAD_DPAD_LEFT
+          && LastKey != KEY_RIGHT && LastKey != GAMEPAD_DPAD_RIGHT
           && (LastKey != '-' || !Input.IsEmpty()))
       LastKey = GET_KEY(false);
 
@@ -703,10 +782,32 @@ long iosystem::NumberQuestion(cfestring& Topic, v2 Pos, col16 Color,
       continue;
     }
 
-    if(LastKey == KEY_RIGHT)
+    // Phase 4.2: Gamepad D-pad for cursor movement in number input
+    if(LastKey == GAMEPAD_DPAD_LEFT)
+    {
+      if(CursorPos > 0)
+        --CursorPos;
+
+      continue;
+    }
+
+    if(LastKey == GAMEPAD_DPAD_RIGHT)
     {
       if(CursorPos < static_cast<int>(Input.GetSize()))
         ++CursorPos;
+
+      continue;
+    }
+
+    // Gamepad confirm buttons (A/X) - same as Enter
+    if(LastKey == GAMEPAD_A_BUTTON || LastKey == GAMEPAD_X_BUTTON)
+      break;
+
+    // Gamepad back button (B) - same as Backspace
+    if(LastKey == GAMEPAD_B_BUTTON)
+    {
+      if(CursorPos > 0)
+        Input.Erase(static_cast<festring::sizetype>(--CursorPos), 1);
 
       continue;
     }
