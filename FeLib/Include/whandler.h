@@ -76,6 +76,7 @@ class globalwindowhandler
   static void ProcessGamepadInput();
   static int GetDirectionFromGamepad(); // Returns direction index 0-8 (NW=0..SE=7, YOURSELF=8), or -1 if no input
   static v2 GetCameraDeltaFromGamepad(); // Returns camera pan deltas from right stick, or zero vector
+  static int GetGamepadButtonKey(); // Returns a command key code if a mapped gamepad button was just pressed, else 0
   static bool IsGamepadEnabled() { return GamepadEnabled; }
   static void SetGamepadEnabled(bool Enabled) { GamepadEnabled = Enabled; }
   static void ResetKeyTimeout(){SetKeyTimeout(0,iRestWaitKey);}

@@ -1014,6 +1014,72 @@ void globalwindowhandler::ProcessGamepadInput()
   }
 }
 
+/**
+ * Phase 3: Gamepad button-to-command mapping.
+ *
+ * Maps SDL_GameControllerButton indices to command key codes.
+ * When a mapped button is newly pressed, GetGamepadButtonKey() returns the
+ * corresponding key code so it can be matched against commands in GetPlayerCommand().
+ *
+ * Default mappings (standard gamepad layout):
+ *   A/X  -> '.' (NOP / wait)
+ *   B    -> 'd' (drop item)
+ *   X/Y  -> ',' (pick up item)
+ *   LB   -> 'i' (inventory)
+ *   RB   -> 'E' (equipment screen)
+ *   Start-> 'S' (save and quit)
+ *   Back -> '?' (show key layout / help)
+ */
+struct gamepadcommandmap {
+  SDL_GameControllerButton Button;
+  int Key;
+};
+
+static const gamepadcommandmap GamepadCommandMap[] = {
+  { SDL_CONTROLLER_BUTTON_A,       '.' },
+  { SDL_CONTROLLER_BUTTON_B,       'd' },
+  { SDL_CONTROLLER_BUTTON_X,       ',' },
+  { SDL_CONTROLLER_BUTTON_Y,       'i' },
+  { SDL_CONTROLLER_BUTTON_LEFTSHOULDER, 'E' },
+  { SDL_CONTROLLER_BUTTON_RIGHTSHOULDER, 'D' },
+  { SDL_CONTROLLER_BUTTON_START,   'S' },
+  { SDL_CONTROLLER_BUTTON_BACK,    '?' },
+};
+static const int GamepadCommandMapSize = sizeof(GamepadCommandMap) / sizeof(GamepadCommandMap[0]);
+
+/**
+ * Phase 3: Check if any gamepad button mapped to a command was just pressed.
+ * Returns the corresponding key code, or 0 if no mapped button was pressed.
+ *
+ * This is called from GetPlayerCommand() after checking keyboard input,
+ * allowing gamepad buttons to trigger commands through the same dispatch path.
+ */
+int globalwindowhandler::GetGamepadButtonKey()
+{
+  if(!GamepadEnabled || NumGamepads == 0)
+    return 0;
+
+  for(int i = 0; i < NumGamepads; ++i)
+  {
+    gamepadstate& gp = Gamepads[i];
+    if(!gp.Connected || gp.Controller == nullptr)
+      continue;
+
+    // Check each mapped button for a newly pressed state
+    for(int m = 0; m < GamepadCommandMapSize; ++m)
+    {
+      SDL_GameControllerButton Btn = GamepadCommandMap[m].Button;
+      int Key = GamepadCommandMap[m].Key;
+
+      Uint16 IsPressed = SDL_GameControllerGetButton(gp.Controller, Btn);
+      if(IsPressed && !gp.ButtonState[Btn])
+        return Key; // Newly pressed - return the mapped command key
+    }
+  }
+
+  return 0; // No mapped button was newly pressed
+}
+
 void globalwindowhandler::ProcessMessage(SDL_Event* Event)
 {
   Uint32 type;

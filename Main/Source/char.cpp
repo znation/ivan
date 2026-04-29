@@ -3755,6 +3755,12 @@ void character::GetPlayerCommand()
         }
       }
 
+      // Phase 3: Check gamepad buttons mapped to action commands.
+      // If a mapped button was just pressed, use its key instead of the keyboard key.
+      int GamepadCmdKey = globalwindowhandler::GetGamepadButtonKey();
+      if(GamepadCmdKey != 0)
+        Key = GamepadCmdKey;
+
       for(c = 1; commandsystem::GetCommand(c); ++c)
         if(Key == commandsystem::GetCommand(c)->GetKey())
         {

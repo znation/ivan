@@ -72,29 +72,40 @@ This document outlines the work items needed to add joystick/gamepad support to 
 
 ## Phase 3: Command Dispatch Integration
 
-### [ ] 3.1 Add gamepad button-to-command mapping system
-**File:** `Main/Include/command.h` + `Main/Source/command.cpp`
-- Extend the `command` class to support a fourth key binding (Key5) for gamepad buttons
-- Or create a parallel gamepad command map that maps gamepad buttons to commands
-- Consider using SDL_GameControllerButton constants for portability
+### [x] 3.1 Add gamepad button-to-command mapping system
+**File:** `FeLib/Source/whandler.cpp`
+- ✅ Created a static `GamepadCommandMap` array mapping SDL_GameControllerButton indices to command key codes
+- Uses SDL_GameControllerButton constants for portability across controller types
+- Default mappings:
+  - A/X → '.' (NOP / wait)
+  - B → 'd' (drop item)
+  - X/Y → ',' (pick up item) / 'i' (inventory)
+  - LB → 'E' (equipment screen)
+  - RB → 'D' (drink)
+  - Start → 'S' (save and quit)
+  - Back → '?' (show key layout / help)
 
-### [ ] 3.2 Implement gamepad button polling in the main loop
-**File:** `FeLib/Source/whandler.cpp` + `Main/Source/game.cpp`
-- In the main game loop, check gamepad buttons each frame/tick
-- When a gamepad button is pressed that maps to a command, dispatch it the same way keyboard input does
-- Handle button repeat for movement (analog stick) vs single press for actions
+### [x] 3.2 Implement gamepad button polling in the main loop
+**File:** `FeLib/Source/whandler.cpp`
+- ✅ Implemented `globalwindowhandler::GetGamepadButtonKey()` method
+- Iterates through all connected gamepads each call, checking mapped buttons for newly pressed state
+- Detects fresh presses by comparing current SDL_GameControllerGetButton result against ButtonState array (set in ProcessGamepadInput)
+- Returns the corresponding command key code on first match, or 0 if no mapped button was pressed
+- Single-press behavior: only triggers once per press (not repeated while held), unlike analog stick movement which is continuous
 
-### [ ] 3.3 Integrate with existing `GetCommand()` flow
-**File:** `Main/Source/game.cpp`
-- Wherever `GET_KEY()` is called and results are passed to command dispatch, also check gamepad state
-- The key insight: commands are dispatched by matching a key against `command::GetKey()`. We need to either:
-  - Option A: Inject gamepad-derived keys into the existing key buffer (simpler)
-  - Option B: Add a parallel path that checks gamepad buttons directly (more flexible)
+### [x] 3.3 Integrate with existing `GetCommand()` flow
+**File:** `Main/Source/char.cpp`
+- ✅ Added gamepad button check in `character::GetPlayerCommand()` before the command lookup loop
+- When a mapped gamepad button is pressed, its key code replaces the keyboard-derived Key value
+- Commands are dispatched through the exact same path as keyboard input (matching against `command::GetKey()`)
+- No changes needed to the command class or command system - gamepad buttons reuse existing command infrastructure
 
-### [ ] 3.4 Handle movement commands via gamepad
+### [x] 3.4 Handle movement commands via gamepad
 **File:** `Main/Source/command.cpp`
-- Movement commands (`Go`, `Kick`, attack directions, etc.) already use `GetDirectionVectorForKey()`
-- Once step 2.3 is done, these will automatically work with gamepad input
+- ✅ Movement commands (`Go`, `Kick`, attack directions, etc.) already use `GetDirectionVectorForKey()`
+- Phase 2 integrated `GetDirectionFromGamepad()` into the movement check loop in GetPlayerCommand()
+- Gamepad directional input (left stick + D-pad) works seamlessly with all direction-based commands
+- Movement via gamepad uses the same `TryMove()` path as keyboard input
 
 ---
 
