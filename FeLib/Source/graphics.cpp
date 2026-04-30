@@ -113,7 +113,7 @@ void graphics::Init()
     AlreadyInstalled = true;
 
 #ifdef USE_SDL
-    if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_NOPARACHUTE))
+    if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_NOPARACHUTE))
       ABORT("Can't initialize SDL.");
 #if SDL_MAJOR_VERSION == 2
   SDL_SetHint(SDL_HINT_RENDER_DRIVER, "opengl");

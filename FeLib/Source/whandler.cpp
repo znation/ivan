@@ -172,10 +172,12 @@ void globalwindowhandler::Init()
 
   // Try to open any already-connected controllers
   int numJoysticks = SDL_NumJoysticks();
+  DBG1(numJoysticks);
   for(int i = 0; i < numJoysticks && NumGamepads < MAX_GAMEPADS; ++i)
   {
     if(SDL_IsGameController(i))
     {
+      DBG2(1,i); // marker + index
       OpenGamepad(SDL_JoystickInstanceID(SDL_JoystickOpen(i)));
       SDL_JoystickClose(SDL_JoystickFromInstanceID(SDL_JoystickInstanceID(SDL_JoystickOpen(i))));
     }
@@ -788,12 +790,16 @@ void globalwindowhandler::OpenGamepad(SDL_JoystickID JoyId)
 
   SDL_GameController* Controller = SDL_GameControllerOpen(JoyId);
   if(Controller == nullptr)
+  {
+    DBG1(0); // failed to open
     return;
+  }
 
   int Index = NumGamepads++;
   Gamepads[Index].Controller = Controller;
   Gamepads[Index].Connected = true;
   Gamepads[Index].PlayerIndex = SDL_GameControllerGetPlayerIndex(Controller);
+  DBG2(Index,SDL_GameControllerGetPlayerIndex(Controller));
 }
 
 /**
@@ -860,6 +866,7 @@ int globalwindowhandler::GetDirectionFromGamepad()
 
       // Each octant is PI/4 radians wide. Add half-octient offset for proper centering.
       int Direction = static_cast<int>(Angle / (static_cast<float>(M_PI) / 4.0f) + 0.5f) % 8;
+      DBG1(Direction);
       return Direction;
     }
 
@@ -947,6 +954,14 @@ void globalwindowhandler::ProcessGamepadInput()
     gp.AxisValues[GAMEPAD_RIGHT_STICK_Y]  = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_RIGHTY)) / 32767.0f;
     gp.AxisValues[GAMEPAD_LEFT_TRIGGER]   = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_TRIGGERLEFT)) / 32767.0f;
     gp.AxisValues[GAMEPAD_RIGHT_TRIGGER]  = static_cast<float>(SDL_GameControllerGetAxis(gp.Controller, SDL_CONTROLLER_AXIS_TRIGGERRIGHT)) / 32767.0f;
+
+    // Debug: print axis values when left stick is active (out of deadzone)
+    {
+      float lx = gp.AxisValues[GAMEPAD_LEFT_STICK_X];
+      float ly = gp.AxisValues[GAMEPAD_LEFT_STICK_Y];
+      if(std::abs(lx) > GAMEPAD_DEADZONE / 32767.0f || std::abs(ly) > GAMEPAD_DEADZONE / 32767.0f)
+        DBG4(static_cast<int>(lx*1000),static_cast<int>(ly*1000),static_cast<int>(gp.AxisValues[GAMEPAD_RIGHT_STICK_X]*1000),static_cast<int>(gp.AxisValues[GAMEPAD_RIGHT_STICK_Y]*1000));
+    }
 
     // Process D-pad buttons (mapped to directional keys)
     Uint16 dpadButtons = SDL_GameControllerGetButton(gp.Controller, SDL_CONTROLLER_BUTTON_DPAD_UP);
@@ -1073,7 +1088,10 @@ int globalwindowhandler::GetGamepadButtonKey()
 
       Uint16 IsPressed = SDL_GameControllerGetButton(gp.Controller, Btn);
       if(IsPressed && !gp.ButtonState[Btn])
+      {
+        DBG2(1,Key); // button pressed -> key code
         return Key; // Newly pressed - return the mapped command key
+      }
     }
   }
 
@@ -1144,6 +1162,7 @@ void globalwindowhandler::ProcessMessage(SDL_Event* Event)
    case SDL_CONTROLLERDEVICEADDED:
     {
       SDL_JoystickID JoyId = static_cast<SDL_JoystickID>(Event->cdevice.which);
+      DBG2(1,static_cast<int>(JoyId)); // controller added event
       OpenGamepad(JoyId);
       break;
     }

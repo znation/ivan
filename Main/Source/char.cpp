@@ -3742,6 +3742,7 @@ void character::GetPlayerCommand()
       if(!HasActed)
       {
         int GamepadDir = globalwindowhandler::GetDirectionFromGamepad();
+        DBG1(GamepadDir); // gamepad direction result
         if(GamepadDir >= 0 && GamepadDir <= YOURSELF)
         {
           bool bWaitNeutralMove=false;
@@ -3758,6 +3759,7 @@ void character::GetPlayerCommand()
       // Phase 3: Check gamepad buttons mapped to action commands.
       // If a mapped button was just pressed, use its key instead of the keyboard key.
       int GamepadCmdKey = globalwindowhandler::GetGamepadButtonKey();
+      DBG1(GamepadCmdKey); // gamepad command key result
       if(GamepadCmdKey != 0)
         Key = GamepadCmdKey;
 
