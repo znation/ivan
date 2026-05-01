@@ -26,7 +26,7 @@ template<typename T>
 inline void print_to_stream(std::ostringstream& oss, T&& val) { oss << std::forward<T>(val); }
 template<typename... Args>
 inline void print_to_stream_all(std::ostringstream& oss, Args&&... args) {
-    (void)std::initializer<int>{(print_to_stream(oss, std::forward<Args>(args)), 0)...};
+    (void)std::initializer_list<int>{(print_to_stream(oss, std::forward<Args>(args)), 0)...};
 }
 } /* namespace detail */
 
