@@ -21,10 +21,19 @@ inline std::string getCurrentStackTrace(std::string, bool, bool) { return ""; }
 
 inline void SigHndlr(int) {}
 
+namespace detail {
+template<typename T>
+inline void print_to_stream(std::ostringstream& oss, T&& val) { oss << std::forward<T>(val); }
+template<typename... Args>
+inline void print_to_stream_all(std::ostringstream& oss, Args&&... args) {
+    (void)std::initializer<int>{(print_to_stream(oss, std::forward<Args>(args)), 0)...};
+}
+} /* namespace detail */
+
 template <typename... Args>
 void PrintDebug(Args&&... args) {
     std::ostringstream oss;
-    (oss << ... << args);
+    detail::print_to_stream_all(oss, std::forward<Args>(args)...);
     std::cerr << "[DBG] " << oss.str() << std::endl;
 }
 
@@ -32,10 +41,8 @@ void PrintDebug(Args&&... args) {
 
 /* ---- Debug macros (used when DBGMSG is defined) ---- */
 
-#define DBGOE(s) \
-    do { std::cerr << "[DBG] ERROR: " << (s) << std::endl; } while(0)
-#define DBGSS(s) \
-    do { std::cerr << "[DBG] " << (s) << std::endl; } while(0)
+#define DBGOE(s) __extension__({ std::cerr << "[DBG] ERROR: " << (s) << std::endl; 0; })
+#define DBGSS(s) __extension__({ std::cerr << "[DBG] " << (s) << std::endl; 0; })
 #define DBG1(a, ...) \
     do { dbgmsg::PrintDebug(a, ##__VA_ARGS__); } while(0)
 #define DBG2(a, ...) \
@@ -58,24 +65,15 @@ void PrintDebug(Args&&... args) {
 #define DBGLN std::cerr << std::endl
 #define DBGTOSTR_(str) #str
 #define DBGTOSTR(str) DBGTOSTR_(str)
-#define DBGB(B) \
-    do { std::cerr << "[DBG] " << (B) << std::endl; } while(0)
-#define DBGSB(B) \
-    do { std::cerr << "[DBG] " << (B) << std::endl; } while(0)
-#define DBGI(I) \
-    do { std::cerr << "[DBG] " << (I) << std::endl; } while(0)
-#define DBGSI(I) \
-    do { std::cerr << "[DBG] " << (I) << std::endl; } while(0)
-#define DBGIF(F) \
-    do { std::cerr << "[DBG] " << (F) << std::endl; } while(0)
-#define DBGSF(F) \
-    do { std::cerr << "[DBG] " << (F) << std::endl; } while(0)
-#define DBGC(C) \
-    do { std::cerr << "[DBG] " << (C) << std::endl; } while(0)
-#define DBGSC(C) \
-    do { std::cerr << "[DBG] " << (C) << std::endl; } while(0)
-#define DBGS(SS) \
-    do { std::cerr << "[DBG] " << (SS) << std::endl; } while(0)
+#define DBGB(B) __extension__({ std::cerr << "[DBG] " << (B) << std::endl; 0; })
+#define DBGSB(B) __extension__({ std::cerr << "[DBG] " << (B) << std::endl; 0; })
+#define DBGI(I) __extension__({ std::cerr << "[DBG] " << (I) << std::endl; 0; })
+#define DBGSI(I) __extension__({ std::cerr << "[DBG] " << (I) << std::endl; 0; })
+#define DBGIF(F) __extension__({ std::cerr << "[DBG] " << (F) << std::endl; 0; })
+#define DBGSF(F) __extension__({ std::cerr << "[DBG] " << (F) << std::endl; 0; })
+#define DBGC(C) __extension__({ std::cerr << "[DBG] " << (C) << std::endl; 0; })
+#define DBGSC(C) __extension__({ std::cerr << "[DBG] " << (C) << std::endl; 0; })
+#define DBGS(SS) __extension__({ std::cerr << "[DBG] " << (SS) << std::endl; 0; })
 #define DBGSTK \
     do { std::cerr << "[DBG] Stack: " << dbgmsg::getCurrentStackTrace(true, 5) << std::endl; } while(0)
 #define DBGBREAKPOINT \

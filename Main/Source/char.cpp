@@ -3249,7 +3249,7 @@ truth character::AutoPlayAINavigateDungeon(bool bPlayerHasLantern)
                       static int iDist;iDist = AutoPlayAIFindWalkDist(lsqr->GetPos()); //(lsqr->GetPos() - GetPos()).GetLengthSquare();
                       if(iDist<iNearestLanterOnFloorDist){
                         iNearestLanterOnFloorDist=iDist;
-                        v2PreferedLanternOnFloorTarget = lsqr->GetPos(); DBG2("PreferLanternAt",DBGAV2(lsqr->GetPos()))
+                        v2PreferedLanternOnFloorTarget = lsqr->GetPos(); DBG2("PreferLanternAt",DBGAV2(lsqr->GetPos()));
                       }
                     }else{
                       iVisitAgainCount--;
@@ -3307,7 +3307,7 @@ truth character::AutoPlayAINavigateDungeon(bool bPlayerHasLantern)
          * check for lanterns on walls of adjacent squares if none found on floors
          */
         itNearestWallLantern->MoveTo(stkNearestDropWallLanternAt); // the AI is prepared to get things from the floor only so "magically" drop it :)
-        v2PreferedTarget = lsqrNearestDropWallLanternAt->GetPos(); DBG2("PreferWallLanternAt",DBGAV2(lsqrNearestDropWallLanternAt->GetPos()))
+        v2PreferedTarget = lsqrNearestDropWallLanternAt->GetPos(); DBG2("PreferWallLanternAt",DBGAV2(lsqrNearestDropWallLanternAt->GetPos()));
       }
 
     }
@@ -3347,7 +3347,7 @@ truth character::AutoPlayAINavigateDungeon(bool bPlayerHasLantern)
             v2NewKGTo = v2TravelingToAnotherDungeon = v2Try; DBGSV2(v2TravelingToAnotherDungeon);
         }
       }else{
-        DBG1("AutoPlayNeedsImprovement:Navigation")
+        DBG1("AutoPlayNeedsImprovement:Navigation");
         ADD_MESSAGE("%s says \"I need more intelligence to move around...\"", CHAR_NAME(DEFINITE)); // improve the dropping AI
         //TODO stop autoplay mode?
       }

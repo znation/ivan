@@ -2218,7 +2218,7 @@ struct srpSplitLump : public recipe{
         return false;
 
       //TODO this should take time as an action
-      character* D = Corpse->GetDeceased(); DBG2(Corpse->GetName(DEFINITE).CStr(),D->GetName(DEFINITE).CStr())
+      character* D = Corpse->GetDeceased(); DBG2(Corpse->GetName(DEFINITE).CStr(),D->GetName(DEFINITE).CStr());
       static const materialdatabase* flesh;flesh = material::GetDataBase(D->GetFleshMaterial());
       ToSplit = craftcore::PrepareRemains(rpd,material::MakeMaterial(flesh->Config,Corpse->GetVolume()));
       if(dynamic_cast<humanoid*>(D)!=NULL){
@@ -2885,7 +2885,7 @@ struct srpFluidsBASE : public recipe{
     for(int i=0;i<vi.size();i++){
       corpse* Corpse = dynamic_cast<corpse*>(vi[i]);
       if(Corpse!=NULL){
-        character* D = Corpse->GetDeceased(); DBG2(Corpse->GetName(DEFINITE).CStr(),D->GetName(DEFINITE).CStr())
+        character* D = Corpse->GetDeceased(); DBG2(Corpse->GetName(DEFINITE).CStr(),D->GetName(DEFINITE).CStr());
         static const materialdatabase* blood;blood = material::GetDataBase(D->GetBloodMaterial());
         static const materialdatabase* flesh;flesh = material::GetDataBase(D->GetFleshMaterial());
 
