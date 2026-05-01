@@ -142,6 +142,7 @@ truth game::CausePanicFlag;
 truth game::Loading = false;
 truth game::JumpToPlayerBe = false;
 truth game::InGetCommand = false;
+truth game::InQuitMessage = false;
 character* game::Petrus = 0;
 time_t game::TimePlayedBeforeLastLoad;
 time_t game::LastLoad;
@@ -4030,6 +4031,11 @@ truth game::HandleQuitMessage()
 {
 #ifdef USE_SDL
 
+  if(InQuitMessage)
+    return true; // prevent re-entrant quit message (recursive SDL_QUIT during menu wait)
+
+  InQuitMessage = true;
+
   if(IsRunning())
   {
     if(IsInGetCommand())
@@ -4045,6 +4051,7 @@ truth game::HandleQuitMessage()
        case 2:
         GetCurrentArea()->SendNewDrawRequest();
         DrawEverything();
+        InQuitMessage = false;
         return false;
        default:
         festring Msg = CONST_S("cowardly quit the game");
@@ -4064,12 +4071,14 @@ truth game::HandleQuitMessage()
       {
         GetCurrentArea()->SendNewDrawRequest();
         DrawEverything();
+        InQuitMessage = false;
         return false;
       }
   }
 
 #endif /* USE_SDL */
 
+  InQuitMessage = false;
   return true;
 }
 

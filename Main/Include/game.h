@@ -570,6 +570,7 @@ class game
   static int AslonaStoryState;
   static int RebelStoryState;
   static truth InGetCommand;
+  static truth InQuitMessage;
   static truth PlayerHurtByExplosion;
   static area* CurrentArea;
   static level* CurrentLevel;
