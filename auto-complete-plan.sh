@@ -3,15 +3,13 @@
 set -euo pipefail
 set -x
 
-PLAN_FILE="HIGH_LEVEL_PLAN.md"
-
 while true; do
     # Invoke pi with the prompt, capture stdout and stderr to a temp file
     OUTPUT_FILE=$(mktemp)
 
-    pi "$PLAN_FILE" \
+    pi --print \
         "Address the next TODO item in HIGH_LEVEL_PLAN.md. Once it's done, write back to HIGH_LEVEL_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
-        --print 2>&1 | tee "$OUTPUT_FILE"
+        2>&1 | tee "$OUTPUT_FILE"
 
     # Check for DONE or MORE in the output
     if grep -q "DONE" "$OUTPUT_FILE"; then
