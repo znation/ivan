@@ -289,15 +289,58 @@ Files requiring story-specific string updates:
 ## 5. TODO List — Remaining Research
 
 ### 5.1 Deep Dive Needed
-- [ ] **Full scan of all `.dat` files** for every string that references the current setting (names, descriptions, adjectives)
-- [ ] **Complete inventory of C++ hardcoded strings** — grep all source files for story-specific text beyond what's been found
-- [ ] **Analyze `item.dat` fully** — identify which items are purely cosmetic vs. gameplay-affecting; catalog banana-related items specifically
-- [ ] **Analyze `char.dat` fully** — identify all creature names, descriptions, and lore references
-- [ ] **Review dungeon `.dat` files** in full — room names, level messages, descriptions for each dungeon
-- [ ] **Check `Script/define.dat`** for any story-relevant defines beyond the enums already cataloged
-- [ ] **Examine `Doc/Lore/HolyStack/`** directory contents (Titues.txt, ValpuriFAQ.txt, README.txt)
-- [ ] **Review MANUAL file** — contains in-game text that may reference setting
-- [ ] **Check NEWS file** — changelog entries with story references
+
+#### 5.1.1 `.dat` File Scans (Script/)
+Each `.dat` file should be scanned individually for every string referencing the current setting (names, descriptions, adjectives, lore terms).
+- [ ] **Scan `Script/define.dat`** — identify story-relevant defines beyond enums already cataloged
+- [ ] **Scan `Script/item.dat`** (~8000 lines) — find all strings referencing Perttuera/Pertturia/Attnam/Tweraif/Aslona, banana/Ommel/Enner references, character names (Decos, Petrus, Elpuri, etc.), god names, artifact names
+- [ ] **Scan `Script/material.dat`** (~6500 lines) — find all material names/descriptions referencing current setting; identify Ommel-derived materials, banana flesh, Valpurium, kobold flesh entries
+- [ ] **Scan `Script/char.dat`** (~10400 lines) — catalog all creature/NPC names, descriptions, and lore references; identify Ommels, Enner Beasts, Dark Frogs, kamikaze dwarves, hedgehogs, and other creatures needing replacement
+- [ ] **Scan `Script/dungeon.dat`** — review team definitions and dungeon includes for story-relevant entries
+- [ ] **Scan `Script/gwterra.dat`** (world terrain types) — find terrain names referencing current setting
+- [ ] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
+- [ ] **Scan `Script/owterra.dat`** (overworld terrain / locations on world map) — find location names and descriptions referencing current setting
+- [ ] **Scan `Script/olterra.dat`** (overworld ground terrain) — find overworld ground names referencing current setting
+
+#### 5.1.2 Dungeon `.dat` File Reviews
+Each dungeon file should be reviewed for room names, level messages, and descriptions.
+- [ ] **Review `Script/dungeons/NewAttnam.dat`** — Freedom Quest starting area; catalog all room names, NPC dialogues, story flags
+- [ ] **Review `Script/dungeons/UnderwaterTunnel.dat`** — Travel route between New Attnam and Attnam; find descriptive text
+- [ ] **Review `Script/dungeons/Attnam.dat`** — Cathedral area; catalog room names, Petrus dialogue references, story flags
+- [ ] **Review `Script/dungeons/XinrochTomb.dat`** — 11-level necromancy dungeon; catalog all level messages, Dark Knight references, artifact locations
+- [ ] **Review `Script/dungeons/AslonaCastle.dat`** — Civil war crown forces area; find room names and story text
+- [ ] **Review `Script/dungeons/RebelCamp.dat`** — Rebel faction base; catalog NPC dialogues and story flags
+- [ ] **Review `Script/dungeons/GoblinFort.dat`** — Goblin dungeon; find creature references and descriptive text
+- [ ] **Review `Script/dungeons/Pyramid.dat`** — Aslona-related dungeon; catalog room names and lore references
+- [ ] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
+- [ ] **Review `Script/dungeons/BlackMarket.dat`** — Hidden shop in leafy forest; catalog room names and item references
+- [ ] **Review `Script/dungeons/FungalCave.dat`** — Fungal growth dungeon; find descriptive text
+- [ ] **Review `Script/dungeons/DarkForest.dat`** — Mysterious dungeon pair component; catalog room names
+- [ ] **Review `Script/dungeons/Irinox.dat`** — Mysterious dungeon pair component; catalog room names and lore
+- [ ] **Review `Script/dungeons/Mondedr.dat` / EmptyArea.dat** — Empty/tundra location; find any descriptive text
+- [ ] **Review `Script/dungeons/GloomyCaves.dat`** — Find all room descriptions and story references
+
+#### 5.1.3 C++ Source File Hardcoded String Inventories
+Each source file should be inventoried for hardcoded story-specific strings (names, dialogue, messages).
+- [ ] **Inventory `Main/Source/human.cpp`** (~100+ references) — catalog all quest dialogues, NPC conversations, story state checks for Freedom/Xinroch/Aslona/Rebel arcs; list every occurrence of Decos, Petrus, Elpuri, Artorius, Huang Ming Pong, Tweraif, Attnam, Aslona, Pertturia
+- [ ] **Inventory `Main/Source/game.cpp`** (~50+ references) — catalog opening sequence text, story state variables (XinrochTombStoryState, FreedomStoryState, AslonaStoryState, RebelStoryState), world map placement logic, banana grower AI references
+- [ ] **Inventory `Main/Source/gods.cpp`** — catalog god prayer effects and lore text referencing Valpurus, Mortifer, Dark Knights
+- [ ] **Inventory `Main/Source/gear.cpp`** — catalog unique artifact implementations (Justifier, Turox, Mjolak, Neerc Se-ulb) with hit effects and descriptive messages
+- [ ] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
+- [ ] **Inventory `Main/Source/char.cpp`** — catalog character death messages referencing story states, Elpuri head checks
+- [ ] **Inventory `Main/Source/lterras.cpp`** — check for terrain-related hardcoded strings with setting references
+- [ ] **Inventory `Main/Source/materia.cpp`** — check for material-related hardcoded strings with setting references
+- [ ] **Inventory `Main/Source/miscitem.cpp`** — check for misc item hardcoded strings with setting references
+- [ ] **Inventory `Main/Source/nonhuman.cpp`** — check for non-humanoid NPC hardcoded strings with setting references
+- [ ] **Inventory `Main/Source/team.cpp`** — catalog team ID definitions and any story-relevant team names/messages
+- [ ] **Inventory `Main/Source/worldmap.cpp`** — catalog world map generation text referencing Attnam, Pertturia, etc.
+
+#### 5.1.4 Documentation & Other Files
+- [ ] **Examine `Doc/Lore/HolyStack/Titues.txt`** — religious text; find all setting references (god names, city names, lore terms)
+- [ ] **Examine `Doc/Lore/HolyStack/ValpuriFAQ.txt`** — FAQ in-character; catalog all setting references
+- [ ] **Examine `Doc/Lore/HolyStack/README.txt`** — documentation for HolyStack directory; find any setting references
+- [ ] **Review `MANUAL` file** (5 story references found) — identify each reference and its context
+- [ ] **Review `NEWS` file** (36 story references found) — catalog changelog entries with story references, assess whether they need updating
 
 ### 5.2 Creative Planning Needed
 - [ ] Define the new fantasy world's geography (continents, kingdoms, forests, mountains)
@@ -313,11 +356,12 @@ Files requiring story-specific string updates:
 - [ ] Plan the banana → ??? replacement (what is the "miracle crop" equivalent?)
 
 ### 5.3 Technical Planning Needed
-- [ ] Design the Python image generation script with Diffusers + Flux2-Klein-9B
-- [ ] Design the text generation pipeline using pi.dev + qwen3.6-35b-a3b
-- [ ] Create a comprehensive name/term translation table (old → new)
-- [ ] Plan batch processing strategy for generating hundreds of assets
-- [ ] Design validation scripts to ensure game balance is preserved after asset replacement
+- [ ] **Design image generation script structure** — plan the Python script architecture: how it will read existing PNG dimensions/purposes, generate prompts, call Flux2-Klein-9B via Diffusers, and save output at required resolutions
+- [ ] **Catalog all graphics assets for generation** — list each PNG file with its exact dimensions, pixel format, and purpose (sprite sheet vs. tile vs. icon) to inform prompt design
+- [ ] **Design text generation pipeline architecture** — plan how pi.dev + qwen3.6-35b-a3b will be called: batch sizes, context windows, prompt templates for different content types (.dat strings, lore docs, C++ dialogue)
+- [ ] **Create name/term translation table template** — design the CSV/JSON structure for mapping old names → new names; include columns for category (god, location, creature, item, material), arc association, and replacement status
+- [ ] **Plan batch processing strategy** — determine ordering of asset generation (e.g., .dat files first since they're text-only, then C++ strings, then images); estimate total API calls needed; plan rate limiting and retry logic
+- [ ] **Design game balance validation approach** — plan how to verify that numerical values in .dat files remain unchanged after rewrite; design a diff-based comparison script for pre/post .dat file stats
 
 ---
 
