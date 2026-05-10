@@ -11,9 +11,7 @@ while true; do
 
     pi "$PLAN_FILE" \
         "Address the next TODO item in HIGH_LEVEL_PLAN.md. Once it's done, write back to HIGH_LEVEL_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
-        --print > "$OUTPUT_FILE" 2>&1
-
-    cat "$OUTPUT_FILE"
+        --print 2>&1 | tee "$OUTPUT_FILE"
 
     # Check for DONE or MORE in the output
     if grep -q "DONE" "$OUTPUT_FILE"; then
