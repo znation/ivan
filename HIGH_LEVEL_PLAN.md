@@ -292,7 +292,23 @@ Files requiring story-specific string updates:
 
 #### 5.1.1 `.dat` File Scans (Script/)
 Each `.dat` file should be scanned individually for every string referencing the current setting (names, descriptions, adjectives, lore terms).
-- [ ] **Scan `Script/define.dat`** — identify story-relevant defines beyond enums already cataloged
+- [x] **Scan `Script/define.dat`** — identify story-relevant defines beyond enums already cataloged
+  - **Effect IDs (creature/item-specific):** `EFFECT_OMMEL_URINE`, `EFFECT_HOLY_BANANA`, `EFFECT_KOBOLD_FLESH`, `EFFECT_OMMEL_CERUMEN/SWEAT/TEARS/SNOT/BONE/BLOOD`
+  - **CEM IDs:** `CEM_FROG_FLESH`, `CEM_OMMEL`, `CEM_HOLY_BANANA`, `CEM_KOBOLD_FLESH`, `CEM_COCA_COLA`, `CEM_LIQUID_HORROR`
+  - **HM IDs:** `HM_FROG_FLESH`, `HM_OMMEL`, `HM_HOLY_BANANA`, `HM_KOBOLD_FLESH`
+  - **Material IDs:** `VALPURIUM` (SOLID_ID+1), `BANANA_PEEL/FLESH/HOLY_BANANA_FLESH` (ORGANIC_ID+3/4/5), `OMMEL_HAIR/CERUMEN/BONE/TOOTH`, `ELF_ALE`
+  - **Liquid IDs:** `DARK_FROG_BLOOD`, `OMMEL_BLOOD/URINE/SWEAT/TEARS/SNOT`
+  - **Flesh IDs:** `ELPURI_FLESH` (FLESH_ID+10), `ENNER_BEAST_FLESH` (+16), `KOBOLD_FLESH` (+22), `HEDGEHOG_FLESH` (+44)
+  - **Armor ID:** `OMMEL_CUIRASS`
+  - **Furniture:** `BANANA_TREE`
+  - **Room type:** `ROOM_BANANA_DROP_AREA`
+  - **Hard-coded teams (18 total):** `ATTNAM_TEAM`, `NEW_ATTNAM_TEAM`, `SUMO_TEAM`, `XINROCH_TOMB_ENTRY/NECRO/KAMIKAZE_DWARF_TEAM`, `ASLONA_TEAM`, `REBEL_TEAM` — all story-arc tied
+  - **Dungeon IDs (15 total):** `ELPURI_CAVE`, `ATTNAM`, `NEW_ATTNAM`, `UNDER_WATER_TUNNEL`, `XINROCH_TOMB`, `BLACK_MARKET`, `ASLONA_CASTLE`, `REBEL_CAMP`, `GOBLIN_FORT`, `FUNGAL_CAVE`, `PYRAMID`, `MONDEDR`, `IRINOX`, `DARK_FOREST`
+  - **Level IDs:** `ENNER_BEAST_LEVEL`, `ZOMBIE_LEVEL`, `IVAN_LEVEL`, `DARK_LEVEL`, `OREE_LAIR`, `FUSANGA_LEVEL`, `KING_LEVEL`
+  - **God IDs (16):** All pantheon gods — VALPURUS through MORTIFER + ATHEIST
+  - **Prisoner/character types:** `IMPRISONED_FARMER` (#2 reserved for ATTNAM), `CULTIST`, `JESTER` (#3 reserved NEW_ATTNAM)
+  - **Dungeon markers:** `SUMO_ARENA_ENTRY/EXIT`, `XINROCH_TOMB_ENTRANCE/EXIT`, `OREE_LAIR_ENTRY/EXIT`
+  - **Faction roles:** `VICE_ROY`, `MASTER_TORTURER`, `HOARD_MASTER`, `REBEL_SOLDIER/LIEUTENANT`, `CASTLE`, `ROYAL`, `REBEL`
 - [ ] **Scan `Script/item.dat`** (~8000 lines) — find all strings referencing Perttuera/Pertturia/Attnam/Tweraif/Aslona, banana/Ommel/Enner references, character names (Decos, Petrus, Elpuri, etc.), god names, artifact names
 - [ ] **Scan `Script/material.dat`** (~6500 lines) — find all material names/descriptions referencing current setting; identify Ommel-derived materials, banana flesh, Valpurium, kobold flesh entries
 - [ ] **Scan `Script/char.dat`** (~10400 lines) — catalog all creature/NPC names, descriptions, and lore references; identify Ommels, Enner Beasts, Dark Frogs, kamikaze dwarves, hedgehogs, and other creatures needing replacement
