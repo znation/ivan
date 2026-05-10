@@ -9,12 +9,12 @@ while true; do
     TEXT_FILE=$(mktemp)
 
     # Run pi in JSON mode, streaming deltas to stdout while saving raw events
-    # stdbuf forces line buffering on all pipeline stages so text appears immediately as deltas arrive
-    stdbuf -oL pi --mode json \
+    # tee the extracted text so it appears on screen in real-time AND goes to the file for DONE/MORE detection
+    pi --mode json \
         "Address the next TODO item in HIGH_LEVEL_PLAN.md. Once it's done, write back to HIGH_LEVEL_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
-        2>&1 | stdbuf -oL tee "$JSON_FILE" \
-        | stdbuf -oL jq -r 'select(.type == "message_update") | .assistantMessageEvent.delta // empty' \
-        > "$TEXT_FILE"
+        2>&1 | tee "$JSON_FILE" \
+        | jq -r 'select(.type == "message_update") | .assistantMessageEvent.delta // empty' \
+        | tee "$TEXT_FILE"
 
     # Check for DONE or MORE in the assembled text response
     if grep -q "DONE" "$TEXT_FILE"; then
