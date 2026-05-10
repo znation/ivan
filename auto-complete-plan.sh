@@ -4,30 +4,34 @@ set -euo pipefail
 set -x
 
 while true; do
-    # Invoke pi with the prompt, capture stdout and stderr to a temp file
-    OUTPUT_FILE=$(mktemp)
+    # Temp files for capturing the full JSON stream and assembled text response
+    JSON_FILE=$(mktemp)
+    TEXT_FILE=$(mktemp)
 
-    pi --print \
+    # Run pi in JSON mode, streaming deltas to stdout while saving raw events
+    pi --mode json \
         "Address the next TODO item in HIGH_LEVEL_PLAN.md. Once it's done, write back to HIGH_LEVEL_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
-        2>&1 | tee "$OUTPUT_FILE"
+        2>&1 | tee "$JSON_FILE" \
+        | jq -r 'select(.type == "message_update") | .assistantMessageEvent.delta // empty' \
+        > "$TEXT_FILE"
 
-    # Check for DONE or MORE in the output
-    if grep -q "DONE" "$OUTPUT_FILE"; then
+    # Check for DONE or MORE in the assembled text response
+    if grep -q "DONE" "$TEXT_FILE"; then
         echo ""
         echo "=== All TODO items complete. ==="
-        rm -f "$OUTPUT_FILE"
+        rm -f "$JSON_FILE" "$TEXT_FILE"
         exit 0
-    elif grep -q "MORE" "$OUTPUT_FILE"; then
+    elif grep -q "MORE" "$TEXT_FILE"; then
         echo ""
         echo "=== More work remaining, continuing... ==="
-        rm -f "$OUTPUT_FILE"
+        rm -f "$JSON_FILE" "$TEXT_FILE"
         continue
     else
         echo ""
         echo "ERROR: Could not find 'DONE' or 'MORE' in pi's output." >&2
-        echo "Full output:" >&2
-        cat "$OUTPUT_FILE" >&2
-        rm -f "$OUTPUT_FILE"
+        echo "Full text response:" >&2
+        cat "$TEXT_FILE" >&2
+        rm -f "$JSON_FILE" "$TEXT_FILE"
         exit 1
     fi
 done
