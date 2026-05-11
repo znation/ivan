@@ -4,35 +4,33 @@ set -euo pipefail
 set -x
 
 while true; do
-    # Temp files for capturing the full JSON stream and assembled text response
+    # Temp file for capturing the raw JSON event stream
     JSON_FILE=$(mktemp)
-    TEXT_FILE=$(mktemp)
 
-    # Run pi in JSON mode, streaming deltas to stdout while saving raw events
-    # tee the extracted text so it appears on screen in real-time AND goes to the file for DONE/MORE detection
+    # Run pi in JSON mode, streaming all events to stdout while saving raw events
+    # Show each event as it arrives so we can see thinking, tool calls, and text deltas
+    echo "=== Starting pi ===" >&2
     pi --mode json \
         "Address the next TODO item in HIGH_LEVEL_PLAN.md. Once it's done, write back to HIGH_LEVEL_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
-        2>&1 | tee "$JSON_FILE" \
-        | jq -r 'select(.type == "message_update") | .assistantMessageEvent.delta // empty' \
-        | tee "$TEXT_FILE"
+        2>&1 | tee "$JSON_FILE"
 
-    # Check for DONE or MORE in the assembled text response
-    if grep -q "DONE" "$TEXT_FILE"; then
+    # Check for DONE or MORE in the raw JSON stream
+    if grep -q '"DONE"' "$JSON_FILE"; then
         echo ""
         echo "=== All TODO items complete. ==="
-        rm -f "$JSON_FILE" "$TEXT_FILE"
+        rm -f "$JSON_FILE"
         exit 0
-    elif grep -q "MORE" "$TEXT_FILE"; then
+    elif grep -q '"MORE"' "$JSON_FILE"; then
         echo ""
         echo "=== More work remaining, continuing... ==="
-        rm -f "$JSON_FILE" "$TEXT_FILE"
+        rm -f "$JSON_FILE"
         continue
     else
         echo ""
         echo "ERROR: Could not find 'DONE' or 'MORE' in pi's output." >&2
-        echo "Full text response:" >&2
-        cat "$TEXT_FILE" >&2
-        rm -f "$JSON_FILE" "$TEXT_FILE"
+        echo "Full JSON response:" >&2
+        cat "$JSON_FILE" >&2
+        rm -f "$JSON_FILE"
         exit 1
     fi
 done
