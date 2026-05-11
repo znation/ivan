@@ -309,7 +309,104 @@ Each `.dat` file should be scanned individually for every string referencing the
   - **Prisoner/character types:** `IMPRISONED_FARMER` (#2 reserved for ATTNAM), `CULTIST`, `JESTER` (#3 reserved NEW_ATTNAM)
   - **Dungeon markers:** `SUMO_ARENA_ENTRY/EXIT`, `XINROCH_TOMB_ENTRANCE/EXIT`, `OREE_LAIR_ENTRY/EXIT`
   - **Faction roles:** `VICE_ROY`, `MASTER_TORTURER`, `HOARD_MASTER`, `REBEL_SOLDIER/LIEUTENANT`, `CASTLE`, `ROYAL`, `REBEL`
-- [ ] **Scan `Script/item.dat`** (~8000 lines) — find all strings referencing Perttuera/Pertturia/Attnam/Tweraif/Aslona, banana/Ommel/Enner references, character names (Decos, Petrus, Elpuri, etc.), god names, artifact names
+- [x] **Scan `Script/item.dat`** (~8000 lines) — find all strings referencing Perttuera/Pertturia/Attnam/Tweraif/Aslona, banana/Ommel/Enner references, character names (Decos, Petrus, Elpuri, etc.), god names, artifact names
+  - **Quest Items (Must Replace):**
+    - `banana` (line 1766) — core joke item; DescriptiveInfo references "bananas again" and "New Attnam"
+    - `holybanana` (line 1800) — full lore about Oily Orpiv, Mellis, banana discovery, subjugation of village
+    - `justifier` (line 1845) — holy sword of Valpurus made of Valpurium; PostFix: "named Valpurus' Justifier"
+    - `neerc se-ulb` (line 1880) — dark artifact; PostFix: "named Neerc Se-ulb"
+    - `leftnutofpetrus` (line 2489) — quest relic of Petrus; DescriptiveInfo: "A relic of the fallen high priest."
+    - `copyofleftnutofpetrus` (line 2569) — joke item; DescriptiveInfo about Petrus losing his nut, Attnamese throne
+    - `headofelpuri` (line 4952) — boss trophy; PostFix: "of Elpuri"; DescriptiveInfo: elegiac death message
+    - `skullofxinroch` (line 6137) — quest item; PostFix: "of Xinroch the skeleton warlord"; extensive tomb lore in DescriptiveInfo
+    - `encryptedscroll` (line 6268) — Freedom Quest key item; DescriptiveInfo references Petrus, Richel Decos, New Attnam, Cathedral of Attnam
+    - `avatarofvalpurus` (line 2926) — quest item made of Valpurium; PostFix: "of Valpurus"
+  - **Unique Armor with Lore (Must Replace):**
+    - `ommel bristler armor` (line 2234) — OMMEL_CUIRASS config; ~250-word DescriptiveInfo about Ommel biology, eight humps, reversed physiology, bristler herds
+  - **Weapons with Lore/PostFixes:**
+    - `lost ruby flaming sword of Xinroch` (line 5913) — PostFix: "of Xinroch"; ~200-word DescriptiveInfo about Xinroch's life, archangels Incendo/Lucis, lost sword myth
+    - `mjolak` (line 5950) — dark hammer; PostFix: "named Mjolak"
+    - `vermis` (line 6008) — spear of Karl/Sophos; DescriptiveInfo about Karl uniting kobold tribes, stepping on land mine
+    - `turox` (line 6032) — holy mace of Legifer/Shining Knights; PostFix: "named Turox"; DescriptiveInfo about siege of Prym, Shining Knights, divine blessing
+    - `shield of Xinroch` (line 3485) — Dark Templar shield; DescriptiveInfo about Lord Xinroch's arcanite shield, Cruentus/Infuscor blessings
+    - `dark knight shield` (line 3705) — ~200-word DescriptiveInfo about Xinroch founding necromancy, Tomb of Xinroch
+  - **Location/Culture-Specific Items:**
+    - `stollen knife of Attnam` (line 518) — PostFix: "of Attnam"; DescriptiveInfo about Atavus day, banana stollen, Cathedral feast
+    - `decosadshirt` (line 6620) — PostFix: "with a Decos Bananas Co. ad"; DescriptiveInfo: "Eat a banana. Be happy."
+    - `war mask of Tlachtlallotlachitl` (line 5785) — goblin empire lore; DescriptiveInfo about Quetzaltia, Scabies mind worms, king Tlachtlallotlachitl
+    - `theosophy book` (line 6940) — DescriptiveInfo: "professor Keathos of the Tweraif University"
+  - **Material Dependencies (Must Replace):**
+    - `VALPURIUM` — used in justifier, avatarofvalpurus, and other items as Main/Secondary material
+    - `BANANA_PEEL / BANANA_FLESH / HOLY_BANANA_FLESH` — used in banana, holybanana, and various food recipes
+    - `OMMEL_HAIR / OMMEL_BONE / OMMEL_TOOTH / OMMEL_CERUMEN / OMMEL_SNOT / OMMEL_BLOOD / OMMEL_URINE / OMMEL_SWEAT / OMMEL_TEARS` — used extensively across armor (ommel bristler, various cloaks/robes), potions, weapons, and material recipes
+    - `OMMEL_CUIRASS` — unique armor config
+  - **Dungeon Access Restrictions referencing story locations:**
+    - Items restricted to: `NEW_ATTNAM`, `ATTNAM`, `UNDER_WATER_TUNNEL`, `ELPURI_CAVE`, `ASLONA_CASTLE`, `BLACK_MARKET`, `FUNGAL_CAVE`, `MONDEDR`, `REBEL_CAMP`
+  - **God Attachments (all 16 gods + ATHEIST referenced):**
+    - VALPURUS: justifier, avatarofvalpurus, leftnutofpetrus, golden eagleshirt
+    - LEGIFER: turox maces, various holy weapons
+    - ATAVUS: stollen knife of Attnam, ommel bristler armor, copyofleftnutofpetrus (cheap config)
+    - DULCIS: various musical instruments and art items
+    - SEGES: food/health items
+    - SOPHOS: vermis spear, various scholarly/magical items
+    - SILVA: nature-themed items
+    - LORICATUS: forge/weapons items including mjolak-related
+    - MELLIS: banana (base), decosadshirt, copyofleftnutofpetrus (expensive config), encryptedscroll, monetary wand
+    - CLEPTIA: thieving/shadow items
+    - NEFAS: banana (AttachedGod), forbidden pleasure items
+    - SCABIES: headofelpuri, disease/mutation items
+    - INFUSCOR: dark magic items including skull of Xinroch, dark knight shield, lost flaming sword, alchemical staff
+    - CRUENTUS: war/blood weapons
+    - MORTIFER: death/apocalypse items including neerc se-ulb
+- [x] **Scan `Script/item.dat`** (~8000 lines) — find all strings referencing Perttuera/Pertturia/Attnam/Tweraif/Aslona, banana/Ommel/Enner references, character names (Decos, Petrus, Elpuri, etc.), god names, artifact names
+  - **Quest Items (Must Replace):**
+    - `banana` (line 1766) — core joke item; DescriptiveInfo references "bananas again" and "New Attnam"
+    - `holybanana` (line 1800) — full lore about Oily Orpiv, Mellis, banana discovery, subjugation of village
+    - `justifier` (line 1845) — holy sword of Valpurus made of Valpurium; PostFix: "named Valpurus' Justifier"
+    - `neerc se-ulb` (line 1880) — dark artifact; PostFix: "named Neerc Se-ulb"
+    - `leftnutofpetrus` (line 2489) — quest relic of Petrus; DescriptiveInfo: "A relic of the fallen high priest."
+    - `copyofleftnutofpetrus` (line 2569) — joke item; DescriptiveInfo about Petrus losing his nut, Attnamese throne
+    - `headofelpuri` (line 4952) — boss trophy; PostFix: "of Elpuri"; DescriptiveInfo: elegiac death message
+    - `skullofxinroch` (line 6137) — quest item; PostFix: "of Xinroch the skeleton warlord"; extensive tomb lore in DescriptiveInfo
+    - `encryptedscroll` (line 6268) — Freedom Quest key item; DescriptiveInfo references Petrus, Richel Decos, New Attnam, Cathedral of Attnam
+    - `avatarofvalpurus` (line 2926) — quest item made of Valpurium; PostFix: "of Valpurus"
+  - **Unique Armor with Lore (Must Replace):**
+    - `ommel bristler armor` (line 2234) — OMMEL_CUIRASS config; ~250-word DescriptiveInfo about Ommel biology, eight humps, reversed physiology, bristler herds
+  - **Weapons with Lore/PostFixes:**
+    - `lost ruby flaming sword of Xinroch` (line 5913) — PostFix: "of Xinroch"; ~200-word DescriptiveInfo about Xinroch's life, archangels Incendo/Lucis, lost sword myth
+    - `mjolak` (line 5950) — dark hammer; PostFix: "named Mjolak"
+    - `vermis` (line 6008) — spear of Karl/Sophos; DescriptiveInfo about Karl uniting kobold tribes, stepping on land mine
+    - `turox` (line 6032) — holy mace of Legifer/Shining Knights; PostFix: "named Turox"; DescriptiveInfo about siege of Prym, Shining Knights, divine blessing
+    - `shield of Xinroch` (line 3485) — Dark Templar shield; DescriptiveInfo about Lord Xinroch's arcanite shield, Cruentus/Infuscor blessings
+    - `dark knight shield` (line 3705) — ~200-word DescriptiveInfo about Xinroch founding necromancy, Tomb of Xinroch
+  - **Location/Culture-Specific Items:**
+    - `stollen knife of Attnam` (line 518) — PostFix: "of Attnam"; DescriptiveInfo about Atavus day, banana stollen, Cathedral feast
+    - `decosadshirt` (line 6620) — PostFix: "with a Decos Bananas Co. ad"; DescriptiveInfo: "Eat a banana. Be happy."
+    - `war mask of Tlachtlallotlachitl` (line 5785) — goblin empire lore; DescriptiveInfo about Quetzaltia, Scabies mind worms, king Tlachtlallotlachitl
+    - `theosophy book` (line 6940) — DescriptiveInfo: "professor Keathos of the Tweraif University"
+  - **Material Dependencies (Must Replace):**
+    - `VALPURIUM` — used in justifier, avatarofvalpurus, and other items as Main/Secondary material
+    - `BANANA_PEEL / BANANA_FLESH / HOLY_BANANA_FLESH` — used in banana, holybanana, and various food recipes
+    - `OMMEL_HAIR / OMMEL_BONE / OMMEL_TOOTH / OMMEL_CERUMEN / OMMEL_SNOT / OMMEL_BLOOD / OMMEL_URINE / OMMEL_SWEAT / OMMEL_TEARS` — used extensively across armor (ommel bristler, various cloaks/robes), potions, weapons, and material recipes
+    - `OMMEL_CUIRASS` — unique armor config
+  - **Dungeon Access Restrictions referencing story locations:**
+    - Items restricted to: `NEW_ATTNAM`, `ATTNAM`, `UNDER_WATER_TUNNEL`, `ELPURI_CAVE`, `ASLONA_CASTLE`, `BLACK_MARKET`, `FUNGAL_CAVE`, `MONDEDR`, `REBEL_CAMP`
+  - **God Attachments (all 16 gods + ATHEIST referenced):**
+    - VALPURUS: justifier, avatarofvalpurus, leftnutofpetrus, golden eagleshirt
+    - LEGIFER: turox maces, various holy weapons
+    - ATAVUS: stollen knife of Attnam, ommel bristler armor, copyofleftnutofpetrus (cheap config)
+    - DULCIS: various musical instruments and art items
+    - SEGES: food/health items
+    - SOPHOS: vermis spear, various scholarly/magical items
+    - SILVA: nature-themed items
+    - LORICATUS: forge/weapons items including mjolak-related
+    - MELLIS: banana (base), decosadshirt, copyofleftnutofpetrus (expensive config), encryptedscroll, monetary wand
+    - CLEPTIA: thieving/shadow items
+    - NEFAS: banana (AttachedGod), forbidden pleasure items
+    - SCABIES: headofelpuri, disease/mutation items
+    - INFUSCOR: dark magic items including skull of Xinroch, dark knight shield, lost flaming sword, alchemical staff
+    - CRUENTUS: war/blood weapons
+    - MORTIFER: death/apocalypse items including neerc se-ulb
 - [ ] **Scan `Script/material.dat`** (~6500 lines) — find all material names/descriptions referencing current setting; identify Ommel-derived materials, banana flesh, Valpurium, kobold flesh entries
 - [ ] **Scan `Script/char.dat`** (~10400 lines) — catalog all creature/NPC names, descriptions, and lore references; identify Ommels, Enner Beasts, Dark Frogs, kamikaze dwarves, hedgehogs, and other creatures needing replacement
 - [ ] **Scan `Script/dungeon.dat`** — review team definitions and dungeon includes for story-relevant entries
