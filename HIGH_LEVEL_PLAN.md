@@ -787,7 +787,26 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
 - [x] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
   - **Note:** No standalone `ElpuriCave.dat` file exists. The ELPURI_CAVE dungeon is defined within `GloomyCaves.dat`. See that file's review for details.
   - Key references in GloomyCaves.dat: shopkeeper(ELPURI_CAVE), elpuri (boss character)
-- [ ] **Review `Script/dungeons/BlackMarket.dat`** — Hidden shop in leafy forest; catalog room names and item references
+- [x] **Review `Script/dungeons/BlackMarket.dat`** — Hidden shop in leafy forest; catalog room names and item references
+  - **Level Structure:** 2 levels (entrance + market)
+  - **Description/ShortDescription:** "black market" / "Black Market"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=42x26, DifficultyBase=200 (+40/level), COBBLE_STONE/DIRT fill, GRAY_FRACTAL background, GUILD_TEAM default, AutoReveal=false (hidden)
+  - **Level 0 — Entrance Hall (36x15):**
+    - BLACK_IRON barwalls; BASALT walls
+    - **Signs:**
+      - "Welcome to the Black Market! We are open 24/7."
+      - "If you need it, we have it. If we don't have it, you didn't need it."
+      - "Don't even think about stealing anything. Thieves will be killed."
+      - "Don't mind the guards, they are here for your protection!"
+    - **Characters:** guard(SHOP) x3, mindworm(BOIL), mysticfrog(DARK), veterankamikazedwarf(MELLIS), darkmage(BATTLE_MAGE), necromancer(MASTER_NECROMANCER), darkknight(ELITE/ELITE_FEMALE), mistress(WHIP_CHAMPION), invisiblestalker(SLAYER) x2, siren(PINK_SIREN/GREEN_SIREN), golem(DARK_GOLD/MITHRIL/SAPPHIRE/GREEN_JADE)
+    - Stairs up (Pos 5,7) and down (Pos 30,7)
+  - **Level 1 — The Market Proper (38x22):**
+    - DivineMaster=MELLIS; Type=ROOM_SHOP
+    - shopkeeper(BLACK_MARKET) {IS_MASTER}
+    - Sells: random items MinPrice=250+, amulets, rings, belts, cloaks, scrolls, tools/wands, food/potions, high-value items (MinPrice=3000)
+  - **Story-relevant hardcoded strings:** "black market", "Black Market", all 4 sign texts
+  - **OTerrainMap references:** BARDOOR (none here)
 - [ ] **Review `Script/dungeons/FungalCave.dat`** — Fungal growth dungeon; find descriptive text
 - [ ] **Review `Script/dungeons/DarkForest.dat`** — Mysterious dungeon pair component; catalog room names
 - [ ] **Review `Script/dungeons/Irinox.dat`** — Mysterious dungeon pair component; catalog room names and lore
