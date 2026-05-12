@@ -685,7 +685,31 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Story-relevant hardcoded strings:** "Tomb of Xinroch", "TX Entry", "the Tomb entrance", "ice cave", "Ice Cave", "unholy tomb", "Unholy Tomb", "deep temple", "Deep Temple", all level messages, gas chamber sign text, experimental result signs
   - **Dark Knight references:** Extensive — darkknight(VETERAN/ELITE/TEMPLAR/MASTER/GRAVE_KEEPER/ROOKIE) across multiple levels; Dark Templar shield lore in item.dat connects to this
   - **OTerrainMap references:** BRICK_PROPAGANDA (none here), INFUSCOR altars, GLOWING_BLOOD fountains, OCTAGONAL_LOCK doors
-- [ ] **Review `Script/dungeons/AslonaCastle.dat`** — Civil war crown forces area; find room names and story text
+- [x] **Review `Script/dungeons/AslonaCastle.dat`** — Civil war crown forces area; find room names and story text
+  - **Level Structure:** 4 levels (castle + dungeon)
+  - **Description/ShortDescription:** "castle dungeon" / "CD"
+  - **Audio:** Empty.mid
+  - **LevelDefault:** Size=42x26, DifficultyBase=70 (+10/level), CALCITE/LIME_STONE fill, BLUE_FRACTAL background
+  - **Level 0 — Castle of Aslona (54x54):**
+    - Description: "Castle of Aslona" / ShortDescription: "Castle"
+    - FillSquare: SEA; TeamDefault: ASLONA_TEAM
+    - **The Castle** (50x50): DivineMaster=SEGES, ROOM_OWNED_AREA
+      - Contains: lordregent {IS_MASTER}, guard(CASTLE/ROYAL), aslonacaptain, smith(ASLONA_CASTLE), tailor(ASLONA_CASTLE), aslonawizard, aslonapriest, dolphin(ADULT_MALE), mysticfrog(LIGHT), femaleslave(JESTER), housewife(ASLONA_CASTLE), kamikazedwarf(SEGES)/veterankamikazedwarf(SEGES)
+      - SAPPHIRE altar(SEGES), throne, pools, fountains
+      - Items: cauldron(CHICKEN_SOUP), AMULET_OF_WARDING, AMULET_OF_SPEED, RING_OF_POLYMORPH_LOCK, RING_OF_BRAVERY, ARMOR_OF_GREAT_HEALTH, rustscythe, HELM_OF_TELEPORTATION, HELM_OF_MANA, BELT_OF_REGENERATION, WAND_OF_ALCHEMY, wondersmellstaff, sharpaxe, chameleonwhip, taiaha; large chests with fiftymillionroubles
+    - Bridge (CYPRESS_WOOD) connecting to mainland
+  - **RandomLevels 1:2 — Throne Room:** PORCELAIN throne, locked HEART_SHAPED_LOCK door
+  - **RandomLevels 1:2 — Wine Cellar:** Shelves with WHITE_WINE/RED_WINE/VALDEMAR/BEER/ELF_ALE/DWARF_BEER/CIDER potions
+  - **Level 2:**
+    - Sign: "Entry forbidden by royal decree."
+    - Sign: "Pity those who lost their way."
+  - **Level 3 — Cistern:**
+    - Description: "cistern" / ShortDescription: "Cistern"
+    - DivineMaster=SEGES; BLACK_IRON walls/OBSIDIAN floors
+    - angel(SEGES) with WAND_OF_MIRRORING/WAND_OF_ALCHEMY/valuable items/key(HEART_SHAPED_LOCK)
+    - Secret doors (BLACK_IRON)
+  - **Story-relevant hardcoded strings:** "castle dungeon", "Castle of Aslona", "Castle", "cistern", "Cistern", "Entry forbidden by royal decree.", "Pity those who lost their way."
+  - **OTerrainMap references:** HEART_SHAPED_LOCK doors, SECRET_DOOR
 - [ ] **Review `Script/dungeons/RebelCamp.dat`** — Rebel faction base; catalog NPC dialogues and story flags
 - [ ] **Review `Script/dungeons/GoblinFort.dat`** — Goblin dungeon; find creature references and descriptive text
 - [ ] **Review `Script/dungeons/Pyramid.dat`** — Aslona-related dungeon; catalog room names and lore references
