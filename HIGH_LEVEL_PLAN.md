@@ -531,7 +531,17 @@ Each `.dat` file should be scanned individually for every string referencing the
     - GUILD_TEAM has KillEvilness=100 (most aggressive non-player team)
     - TERRA_TEAM has KillEvilness=150 (highest in the game, reflecting her role as guardian)
   - **Story Impact:** All teams except PLAYER_TEAM, MONSTER_TEAM, ANGEL_TEAM, GUILD_TEAM, and BETRAYED_TEAM are directly tied to story arcs. The team system is heavily story-driven with cross-references between Aslona/Rebel factions and New Attnam-related teams.
-- [ ] **Scan `Script/gwterra.dat`** (world terrain types) — find terrain names referencing current setting
+- [x] **Scan `Script/gwterra.dat`** (world terrain types) — find terrain names referencing current setting
+  - **Terrain Types Found:**
+    - `ocean` — generic, no story reference
+    - `glacier` — generic, no story reference
+    - `desert` — generic, no story reference
+    - `snow` → NameStem = "tundra" — generic terrain type; Mondedr is described as tundra in the plan but this is a biome descriptor not a location name
+    - `jungle` — generic, no story reference
+    - `leafyforest` → NameStem = "leafy forest" — generic; referenced in Black Market description ("hidden shop in leafy forest")
+    - `evergreenforest` → NameStem = "evergreen forest" — corresponds to **Pertturia** (Evergreen Forest surrounding Attnam); minor setting reference
+    - `steppe` — generic, no story reference
+  - **Assessment:** Very low story impact. All terrain names are standard fantasy biome descriptors. Only `evergreenforest` → "evergreen forest" maps to Pertturia, which is a descriptive name that could be kept as-is or lightly renamed (e.g., "ancient woodland", "sylvan forest"). No hardcoded C++ references found in `wterras.cpp`. **Minimal rewrite needed.**
 - [ ] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
 - [ ] **Scan `Script/owterra.dat`** (overworld terrain / locations on world map) — find location names and descriptions referencing current setting
 - [ ] **Scan `Script/olterra.dat`** (overworld ground terrain) — find overworld ground names referencing current setting
