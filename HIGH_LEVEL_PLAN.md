@@ -846,7 +846,17 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
     - Boulder(1/2) decorations x10 each
     - No special characters or valuable items
     - Simple trap-and-food environment
-- [ ] **Review `Script/dungeons/Irinox.dat`** — Mysterious dungeon pair component; catalog room names and lore
+- [x] **Review `Script/dungeons/Irinox.dat`** — Mysterious dungeon pair component; catalog room names and lore
+  - **Level Structure:** 1 level (outdoor area)
+  - **Description/ShortDescription:** "Irinox" / "Irinox"
+  - **Audio:** Empty.mid
+  - **LevelDefault:** Size=42x26, DifficultyBase=50, GRASS_TERRAIN fill, GREEN_FRACTAL background, AutoReveal=true (visible)
+  - **Level 0 — Irinox:**
+    - Outdoor area; Rooms=0 (no rooms); IsOnGround=true
+    - Beartraps (inactive) x0-3, random food items x1-2
+    - Boulder(1/2) decorations x10 each
+    - No special characters or valuable items
+    - Nearly identical to DarkForest.dat structure
 - [ ] **Review `Script/dungeons/Mondedr.dat` / EmptyArea.dat** — Empty/tundra location; find any descriptive text
 - [ ] **Review `Script/dungeons/GloomyCaves.dat`** — Find all room descriptions and story references
 
