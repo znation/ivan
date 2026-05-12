@@ -867,7 +867,26 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
     - Audio: Empty.mid; Size=42x26, DifficultyBase=50, GRASS_TERRAIN fill, GREEN_FRACTAL background
     - Outdoor area; Rooms=0; Beartraps (inactive) x0-3, food items x1-2, boulders x10 each
   - **Note:** Mondedr.dat and EmptyArea.dat are nearly identical in structure to DarkForest.dat and Irinox.dat — all four are simple outdoor areas with no rooms, no special characters, just traps/food/boulders
-- [ ] **Review `Script/dungeons/GloomyCaves.dat`** — Find all room descriptions and story references
+- [x] **Review `Script/dungeons/GloomyCaves.dat`** — Find all room descriptions and story references
+  - **Level Structure:** 13 levels (0-11 + special levels)
+  - **Description/ShortDescription:** "Gloomy Cave" / "GC"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=64x36, DifficultyBase=50 (+10/level), GROUND/GNEISS fill, GRAY_FRACTAL background
+  - **Level 0 — Entrance:** MORAINE earth; FIR_WOOD walls/doors
+  - **RandomLevel 1:3 — Experimental Mine Field:** STEEL sign: "Experimental dwarven mine field. Thank you for participating in testing!"
+  - **RandomLevel 1:2 — Wolf Room:** LevelMessage: "You hear many wolves howling. You shiver."; wolf x4, werewolfhuman with scrolls
+  - **RandomLevel 1:3 — Shop (ELPURI_CAVE):** shopkeeper(ELPURI_CAVE) {GUILD_TEAM, IS_MASTER}; sells gauntlets/boots/helmets/cloaks/body armor/belts/rings/amulets/weapons/shields/food/potions/wands/tools/scrolls/books; special: locationmap(BLACK_MARKET), wand(WAND_OF_STRIKING)
+  - **RandomLevel 0:11 — I'm Evil, Bwahaha:** VALPURIUM flamingsword (Enchantment=10); LARGE_CHEST with valuable items
+  - **ENNER_BEAST_LEVEL:** LevelMessage: "You hear a wailing scream in the distance. An enner beast must dwell in the level!"; EnterImage: "Enner.png"; Enner Beast Room (10x33) with UNDERGROUND_LAKE walls/floors
+  - **ZOMBIE_LEVEL:** FLINT fill; zombie x30; veterankamikazedwarf
+  - **IVAN_LEVEL:** LevelMessage: "You hear someone singing loudly: \"Uncle Lenin lives in Russia...\""; EnterImage: "IVlad.png"; communist {IS_LEADER}; vladimir {IVAN_TEAM}; URANIUM items
+  - **Level 6 — Frog Room:** COPPER/IRON walls; mysticfrog(DARK), frog(GREATER_DARK)/frog(DARK)
+  - **RandomLevel 10:11 — Dark Mage Room:** ARCANITE floor, OCTIRON walls; darkmage(ELDER/BATTLE_MAGE/APPRENTICE), necromancer(MASTER/APPRENTICE_NECROMANCER); OCTAGONAL_LOCK doors
+  - **Level 9-11 — Quartzite/Amethyst/Arcanite Levels:** Progressively harder; ADAMANT vault (MinPrice=3000)
+  - **OREE_LAIR:** Description: "Oree's lair" / ShortDescription: "Oree Lair"; LevelMessage: "\"Welcome to my lair, mortal! There's no escape now!\""; FillSquare: BLOOD liquidterrain(UNDERGROUND_LAKE); RUBY walls/floors/doors; DivineMaster=CRUENTUS; Boss Room with oree + angel(CRUENTUS)
+  - **DARK_LEVEL (Level 12):** Description: "dark fortress" / ShortDescription: "Dark Fort"; LevelMessage: "You shudder as you sense a being of pure darkness nearby. Your goal is near."; FillSquare: STEEL; DivineMaster=SCABIES; Boss Room with elpuri + portal
+  - **Story-relevant hardcoded strings:** "Gloomy Cave", "dark fortress", "Dark Fort", "Oree's lair", "Oree Lair", all level messages, sign texts, EnterImage references ("Enner.png", "IVlad.png")
+  - **OTerrainMap references:** BARDOOR (none here), OCTAGONAL_LOCK doors
 
 #### 5.1.3 C++ Source File Hardcoded String Inventories
 Each source file should be inventoried for hardcoded story-specific strings (names, dialogue, messages).
