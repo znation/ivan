@@ -548,7 +548,30 @@ Each `.dat` file should be scanned individually for every string referencing the
 
 #### 5.1.2 Dungeon `.dat` File Reviews
 Each dungeon file should be reviewed for room names, level messages, and descriptions.
-- [ ] **Review `Script/dungeons/NewAttnam.dat`** — Freedom Quest starting area; catalog all room names, NPC dialogues, story flags
+- [x] **Review `Script/dungeons/NewAttnam.dat`** — Freedom Quest starting area; catalog all room names, NPC dialogues, story flags
+  - **Level Structure:** 2 levels (village + sumo arena)
+  - **LevelMessage:** "You hear someone shouting: \"Faster! Faster! The Empire wants yer bananas!\""
+  - **Description/ShortDescription:** "New Attnam" / "Sumo Arena"
+  - **TeamDefault:** NEW_ATTNAM_TEAM
+  - **Audio:** Empty.mid (L0), Japan.mid (L1)
+  - **Rooms (8 total on L0, 1 on L1):**
+    1. **Mansion/Banana Drop Area** (Pos 4,4, 17x19) — ROOM_BANANA_DROP_AREA; DivineMaster=SILVA; Contains: imperialist(VICE_ROY), guard(ROOKIE), femaleslave(NEW_ATTNAM); Items in chest: cloak, whip, stone, banana
+    2. **Banana Landing Site** (Pos 44,44, 3x3) — ROOM_BANANA_DROP_AREA; Contains: 10 bananas on landing site terrain
+    3. **Sumo Arena Entry** (Pos 25,35, 4x4) — Contains: sumowrestler [COLONIST_TEAM]; Stairs to Level 1 (SUMO_ARENA_ENTRY)
+    4. **Shop** (Pos 9,33, 7x7) — ROOM_SHOP; DivineMaster=MELLIS; shopkeeper(NEW_ATTNAM); Sells: banana, kiwi, pineapple
+    5. **Temple of Nature** (Pos 25,20, 4x3) — DivineMaster=SILVA; priest(SILVA)
+    6. **Residential Room** (Pos 49,2, 4x4) — Generic room with bed/chair/table
+    7-8. **Scattered NPCs:** bananagrower x5, encourager [COLONIST_TEAM], ostrich x3, elder [TOURIST_GUIDE_TEAM], tourist(HUSBAND/WIFE/CHILD) [TOURIST_TEAM]
+  - **Signs (5 total):**
+    - "The mansion of Viceroy Richel Decos, formerly a temple of nature."
+    - "Zulko's wholesale banana market...Decos Bananas Co...."
+    - "The home of Huang Ming Pong, the guardian of the natives' sacred and mysterious sumo fighting techniques."
+    - "The village's new temple of nature."
+    - "New Attnam's main ostrich landing site. The delicious fruits of Decos Bananas Co...."
+  - **Level 1 (Sumo Arena):** ROOM_SUMO_ARENA, 13x13; DivineMaster=ATHEIST; Glass walls; Stairs back to L0
+  - **Story-relevant hardcoded strings:** Richel Decos, Zulko/Zolku, Huang Ming Pong, Decos Bananas Co., "bananas", "Viceroy", "sumo fighting techniques", "sacred"
+  - **OTerrainMap references:** BRICK_PROPAGANDA, BRICK_PRIMITIVE_PROPAGANDA (propaganda-themed walls), HOLY_TREE, PALM, BANANA_TREE
+  - **Character types needing replacement:** VICE_ROY, femaleslave(NEW_ATTNAM), sumowrestler, shopkeeper(NEW_ATTNAM), priest(SILVA), bananagrower, encourager, ostrich, elder, tourist
 - [ ] **Review `Script/dungeons/UnderwaterTunnel.dat`** — Travel route between New Attnam and Attnam; find descriptive text
 - [ ] **Review `Script/dungeons/Attnam.dat`** — Cathedral area; catalog room names, Petrus dialogue references, story flags
 - [ ] **Review `Script/dungeons/XinrochTomb.dat`** — 11-level necromancy dungeon; catalog all level messages, Dark Knight references, artifact locations
