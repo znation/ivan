@@ -835,7 +835,17 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Vault (RandomLevel 0:4):** BRONZE walls, shelves with carrots/potions, cauldron, BIG_MINE trap
   - **Story-relevant hardcoded strings:** "Fungal Cave", "deep lake", "Deep Lake", "You shudder. The scent of magic and death is in the air.", "I'm so EVIL!!1!", "Monsters to make the player really, really angry:"
   - **OTerrainMap references:** CURTAIN doors
-- [ ] **Review `Script/dungeons/DarkForest.dat`** — Mysterious dungeon pair component; catalog room names
+- [x] **Review `Script/dungeons/DarkForest.dat`** — Mysterious dungeon pair component; catalog room names
+  - **Level Structure:** 1 level (outdoor forest)
+  - **Description/ShortDescription:** "Dark Forest" / "DF"
+  - **Audio:** Empty.mid
+  - **LevelDefault:** Size=42x26, DifficultyBase=50, GRASS_TERRAIN fill, GREEN_FRACTAL background, AutoReveal=true (visible)
+  - **Level 0 — Dark Forest:**
+    - Outdoor forest; Rooms=0 (no rooms); IsOnGround=true
+    - Beartraps (inactive) x0-3, random food items x1-2
+    - Boulder(1/2) decorations x10 each
+    - No special characters or valuable items
+    - Simple trap-and-food environment
 - [ ] **Review `Script/dungeons/Irinox.dat`** — Mysterious dungeon pair component; catalog room names and lore
 - [ ] **Review `Script/dungeons/Mondedr.dat` / EmptyArea.dat** — Empty/tundra location; find any descriptive text
 - [ ] **Review `Script/dungeons/GloomyCaves.dat`** — Find all room descriptions and story references
