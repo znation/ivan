@@ -407,8 +407,37 @@ Each `.dat` file should be scanned individually for every string referencing the
     - INFUSCOR: dark magic items including skull of Xinroch, dark knight shield, lost flaming sword, alchemical staff
     - CRUENTUS: war/blood weapons
     - MORTIFER: death/apocalypse items including neerc se-ulb
-- [ ] **Scan `Script/material.dat`** (~6500 lines) — find all material names/descriptions referencing current setting; identify Ommel-derived materials, banana flesh, Valpurium, kobold flesh entries
+- [x] **Scan `Script/material.dat`** (~6717 lines) — find all material names/descriptions referencing current setting; identify Ommel-derived materials, banana flesh, Valpurium, kobold flesh entries
+  - **Sacred Metal (Must Replace):**
+    - `VALPURIUM` (line 72) — Sacred metal of Valpurus; Color=rgb16(46,224,56); PriceModifier=50000; AttachedGod=VALPURUS; NameStem="valpurium"; Used in justifier, avatarofvalpurus
+  - **Banana Family (Must Replace):**
+    - `BANANA_PEEL` (line 4228) — Yellow peel; Color=rgb16(224,224,0); AttachedGod=SILVA; NaturalForm=bananapeels; HardenedMaterial=LEAF
+    - `BANANA_FLESH` (line 4249) — Yellow fruit flesh; NutritionValue=1000; PriceModifier=3000; AttachedGod=SILVA; Used in banana, holybanana, food recipes
+    - `HOLY_BANANA_FLESH` (line 4265) — Golden sacred fruit; NutritionValue=20000; Effect=EFFECT_HOLY_BANANA; ConsumeEndMessage=CEM_HOLY_BANANA; AttachedGod=SILVA
+    - `BANANA_STOLLEN` (line 4428) — Processed banana bread; Color=rgb16(255,225,53); AttachedGod=ATAVUS; SoftenedMaterial=BANANA_FLESH; Used as HardenedMaterial for wheat flour, flatbread, rye bread
+  - **Ommel-Derived Materials (Must Replace Entirely):**
+    - `OMMEL_HAIR` (line 731) — Red hair/fiber; Color=rgb16(160,0,0); Flexibility=15; AttachedGod=DULCIS; IS_VALUABLE; Used as HardenedMaterial for various materials
+    - `OMMEL_CERUMEN` (line 4495) — Ommel earwax; Color=rgb16(180,150,50); PriceModifier=10000; Effect=EFFECT_OMMEL_CERUMEN; AttachedGod=SOPHOS
+    - `OMMEL_BONE` (line 4569) — White bone; StrengthValue=250; Color=rgb16(244,241,235); Effect=EFFECT_OMMEL_BONE; ConsumeEndMessage=CEM_OMMEL_BONE; AttachedGod=MORTIFER; HardenedMaterial=OMMEL_TOOTH
+    - `OMMEL_TOOTH` (line 4646) — Blue-white tooth; StrengthValue=375; Color=rgb16(200,200,255); IS_SPARKLING; Effect=EFFECT_OMMEL_BONE; ConsumeEndMessage=CEM_OMMEL_BONE; AttachedGod=MORTIFER
+    - `OMMEL_BLOOD` (line 5674) — Red blood; Color=rgb16(160,0,0); NutritionValue=1500; PriceModifier=2500; Effect=EFFECT_OMMEL_BLOOD; ConsumeEndMessage=CEM_OMMEL; HitMessage=HM_OMMEL; AttachedGod=CRUENTUS; IS_BLOOD
+    - `OMMEL_URINE` (line 5696) — Yellow urine; Color=rgb16(160,160,0); NutritionValue=500; PriceModifier=2500; Effect=EFFECT_OMMEL_URINE; AttachedGod=NEFAS
+    - `OMMEL_SWEAT` (line 5715) — Blue sweat; Color=rgb16(144,144,240); NutritionValue=250; PriceModifier=2500; Effect=EFFECT_OMMEL_SWEAT; AttachedGod=SEGES
+    - `OMMEL_TEARS` (line 5731) — Blue tears; Color=rgb16(144,144,240); NutritionValue=250; PriceModifier=2500; Effect=EFFECT_OMMEL_TEARS; AttachedGod=MELLIS
+    - `OMMEL_SNOT` (line 5747) — Yellow-green snot; Color=rgb16(145,145,16); NutritionValue=750; PriceModifier=7500; Effect=EFFECT_OMMEL_SNOT; Stickiness=100; AttachedGod=SEGES
+  - **Monster Flesh (Must Replace):**
+    - `ELPURI_FLESH` (line 6000) — Dark gray flesh; Color=rgb16(60,60,60); Effect=EFFECT_DARKNESS; ConsumeEndMessage=CEM_FROG_FLESH; HitMessage=HM_FROG_FLESH; AttachedGod=MORTIFER
+    - `ENNER_BEAST_FLESH` (line 6049) — Brown beast flesh; Color=rgb16(128,128,128); AttachedGod=DULCIS
+    - `HEDGEHOG_FLESH` (line 6303) — Corrupted sacred animal; AttachedGod=MORTIFER
+  - **Other Setting-Specific Materials:**
+    - `ELF_ALE` (line 5231) — Orange ale; Effect=EFFECT_CONFUSE; ConsumeWisdomLimit=10; PriceModifier=1500; AttachedGod=NEFAS; IS_BEVERAGE
+    - `KOBOLD_FLESH` (line 6100) — NutritionValue=10; ConsumeWisdomLimit=6; Effect=EFFECT_KOBOLD_FLESH; ConsumeEndMessage=CEM_KOBOLD_FLESH; HitMessage=HM_KOBOLD_FLESH; AttachedGod=MORTIFER
+  - **Cross-References:**
+    - `BANANA_STOLLEN` is used as HardenedMaterial for: WHEAT_FLOUR (line 4392), FLAT_BREAD (line 4408), RYE_BREAD (line 4424)
+    - `OMMEL_HAIR` is used as HardenedMaterial for various materials (line 724)
+    - `OMMEL_BONE` is used as HardenedMaterial for various materials (line 2927)
 - [ ] **Scan `Script/char.dat`** (~10400 lines) — catalog all creature/NPC names, descriptions, and lore references; identify Ommels, Enner Beasts, Dark Frogs, kamikaze dwarves, hedgehogs, and other creatures needing replacement
+  - *Note: material.dat scan complete. char.dat will cross-reference these materials for flesh/derivative usage.*
 - [ ] **Scan `Script/dungeon.dat`** — review team definitions and dungeon includes for story-relevant entries
 - [ ] **Scan `Script/gwterra.dat`** (world terrain types) — find terrain names referencing current setting
 - [ ] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
