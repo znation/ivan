@@ -760,7 +760,30 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Spider Room (RandomLevel 1:4):** spider(PHASE) x1-3
   - **Story-relevant hardcoded strings:** "Goblin Fort", "salt cave", "Salt Cave", "goblin hideout", "Hideout", all level messages, "You hear distant purring."
   - **OTerrainMap references:** BARDOOR (COPPER), HEART_SHAPED_LOCK (none here)
-- [ ] **Review `Script/dungeons/Pyramid.dat`** — Aslona-related dungeon; catalog room names and lore references
+- [x] **Review `Script/dungeons/Pyramid.dat`** — Aslona-related dungeon; catalog room names and lore references
+  - **Level Structure:** 5 levels (0-4)
+  - **Description/ShortDescription:** "Pyramid" / "PY"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=64x36, DifficultyBase=120 (+30/level), SAND_TERRAIN/SAND_STONE fill, YELLOW_FRACTAL background, IsCatacomb=true
+  - **Level 0 — Entrance:** Maze room; zombies x5-10, skeletons x5-10, spider(GIANT) x2-4; gastrap traps
+  - **Level 1 — Vertical Shaft (20x100):** veterankamikazedwarf(MORTIFER); mines/gas traps
+  - **Level 2 — Concrete Corridor (100x20):** CONCRETE walls/floors/doors; mines/beartraps/gas traps
+  - **Level 3 — Hardened Concrete Shaft (20x100):** HARDENED_CONCRETE; frog(DARK/GREATER_DARK) maze room
+  - **Level 4 — Ancient Bunker:**
+    - Description: "ancient bunker" / ShortDescription: "Bunker"
+    - FillSquare: SUPER_CONCRETE; Background: GRAY_FRACTAL
+    - LevelMessage: "You feel a sudden pang of pain in the back of your brain."
+    - TODO comment: "/* TODO: boss? */"
+    - **The Nuke Room:** LEAD walls/doors, GLASS interior, PLASTIC_STEEL pedestal with nuke item
+    - **Mind Worm Rooms** (3x): STAINLESS_STEEL barwalls; mindworm(BOIL) each
+    - **Treasure Rooms** (2x): Random items MinPrice=150
+  - **RandomLevels 0:3 — Fountains:** LIQUID_DARKNESS/POISON_LIQUID/SICK_BLOOD fountains
+  - **Quicksand Pool (RandomLevel 1:3):** QUICK_SAND liquidterrain(UNDERGROUND_LAKE)
+  - **Cactus Room (RandomLevel 1:3):** RED_SAND, CACTUS decorations
+  - **Sepulcher (RandomLevel 1:3):** IRON walls; genie with oillamp/valuable items; ARCANITE TWO_HANDED_SCIMITAR
+  - **Minibosses (RandomLevel 1:3):** Necromancer room (APPRENTICE x2, MASTER), Vampire room (vampire x3), Gasghoul room (gasghoul x2-5), Golem room (golem(WRAITH_BONE) x2-5, golem(ACIDOUS_BLOOD))
+  - **Story-relevant hardcoded strings:** "Pyramid", "ancient bunker", "Bunker", "You feel a sudden pang of pain in the back of your brain."
+  - **OTerrainMap references:** BARDOOR (IRON/STEEL/STAINLESS_STEEL)
 - [ ] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
 - [ ] **Review `Script/dungeons/BlackMarket.dat`** — Hidden shop in leafy forest; catalog room names and item references
 - [ ] **Review `Script/dungeons/FungalCave.dat`** — Fungal growth dungeon; find descriptive text
