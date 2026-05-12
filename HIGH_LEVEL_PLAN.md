@@ -807,7 +807,34 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
     - Sells: random items MinPrice=250+, amulets, rings, belts, cloaks, scrolls, tools/wands, food/potions, high-value items (MinPrice=3000)
   - **Story-relevant hardcoded strings:** "black market", "Black Market", all 4 sign texts
   - **OTerrainMap references:** BARDOOR (none here)
-- [ ] **Review `Script/dungeons/FungalCave.dat`** — Fungal growth dungeon; find descriptive text
+- [x] **Review `Script/dungeons/FungalCave.dat`** — Fungal growth dungeon; find descriptive text
+  - **Level Structure:** 5 levels (0-4) + FUSANGA_LEVEL
+  - **Description/ShortDescription:** "Fungal Cave" / "FC"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=32x64, DifficultyBase=70 (+10/level), CLAY/MYCELIUM fill, GREEN_FRACTAL background
+  - **Level 0 — Entrance:** Cave rooms (ROUND_CORNERS), Pool room; mushroom x2-4, magicmushroom x0-3
+  - **Level 1 — Underground Pools:** Multiple pool rooms with UNDERGROUND_LAKE
+  - **Level 2 — More Caves:** Cave room + pool
+  - **FUSANGA_LEVEL (64x64):**
+    - FillSquare: COAL/COAL; Rooms=100; magicmushroom x10
+    - **Fusanga Room** (8x8): Contains fusanga surrounded by mushrooms; stairs down
+  - **Level 4 — Deep Lake:**
+    - Description: "deep lake" / ShortDescription: "Deep Lake"
+    - FillSquare: COAL/COAL; PETRIFIED_WOOD walls
+    - LevelMessage: "You shudder. The scent of magic and death is in the air."
+    - kamikazedwarf(MORTIFER) x1-2
+    - **Weep Obsidian Room:** liquidterrain(UNDERGROUND_LAKE); weepobsidian item; darkmage(BATTLE_MAGE)
+  - **RandomLevel 1:3 — "I'm so EVIL!!1!" Room:**
+    - SUN_CRYSTAL SHARD, DWARF_BIRCH/TEAK decorations
+    - Treasure (random items), magpie x3-6, fruitbat x3-6, nerfbat x1-3, floatingeye
+    - All siren types: LIGHT_ASIAN/DARK_ASIAN/CAUCASIAN/DARK/GREEN/BLUE/RED/PINK/HISPANIC
+    - carnivorousplant(GIANT) with inventory
+    - Comment: "/* Monsters to make the player really, really angry: */"
+  - **RandomLevel 0:2 — Poison Room:** spider(ARANEA/LARGE/GIANT), snake, skunk; ARANEA has inventory
+  - **RandomLevel 2:4 — Mommo Room:** mommo(CONICAL/FLAT/BLOAT); CONICAL has inventory
+  - **Vault (RandomLevel 0:4):** BRONZE walls, shelves with carrots/potions, cauldron, BIG_MINE trap
+  - **Story-relevant hardcoded strings:** "Fungal Cave", "deep lake", "Deep Lake", "You shudder. The scent of magic and death is in the air.", "I'm so EVIL!!1!", "Monsters to make the player really, really angry:"
+  - **OTerrainMap references:** CURTAIN doors
 - [ ] **Review `Script/dungeons/DarkForest.dat`** — Mysterious dungeon pair component; catalog room names
 - [ ] **Review `Script/dungeons/Irinox.dat`** — Mysterious dungeon pair component; catalog room names and lore
 - [ ] **Review `Script/dungeons/Mondedr.dat` / EmptyArea.dat** — Empty/tundra location; find any descriptive text
