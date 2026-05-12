@@ -729,7 +729,37 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Other Rooms:** Cheap beds, tables, chairs, work benches
   - **Story-relevant hardcoded strings:** "Rebel Camp", "You pass the sentries and draw closer to the camp."
   - **Team references:** REBEL_TEAM
-- [ ] **Review `Script/dungeons/GoblinFort.dat`** — Goblin dungeon; find creature references and descriptive text
+- [x] **Review `Script/dungeons/GoblinFort.dat`** — Goblin dungeon; find creature references and descriptive text
+  - **Level Structure:** 6 levels (0-5)
+  - **Description/ShortDescription:** "Goblin Fort" / "GF"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=40x40, DifficultyBase=60 (+15/level), DIRT/SLATE fill, GRAY_FRACTAL background
+  - **Level 0 — Entrance:** Stairs down to Level 4; goblin x2; cave rooms
+  - **Level 1 — Goblin Barracks:** goblin x2-4, goblin(BERSERKER)
+  - **Level 2 — Butcher Level:** goblin(BUTCHER)
+  - **Level 3 — Monk Level:** goblin(MONK) x4-8; mines/beartraps/gas traps
+  - **Level 4 — Salt Cave (Big Level):**
+    - Description: "salt cave" / ShortDescription: "Salt Cave"
+    - Size=100x100, Rooms=50:150, Items=100:250
+    - LevelMessage: "Sounds echo around this huge level."
+    - FillSquare: SALT/ROCK_SALT; LIME_STONE walls/CALCITE floors
+    - Goblins (regular/BERSERKER/BUTCHER/MONK/WARLOCK with wands)
+    - **Invisible Room:** invisiblestalker/invisiblestalker(SLAYER)
+    - **Imp Room:** crimsonimp/mirrorimp
+  - **Level 5 — Goblin Hideout:**
+    - Description: "goblin hideout" / ShortDescription: "Hideout"
+    - Size=36x64; FillSquare: SHALE/SLADE; Background: BLUE_FRACTAL
+    - LevelMessage (duplicated): "You hear the squabbling of many voices." / "You hear the hubbub of many goblinish voices."
+    - **Goblin Prince Room** (9x9): SILVER floor, throne with goblin(PRINCE); goblins with inventory
+    - **Aslona Prince Room:** Prison cells with COPPER barwalls; Contains child(KING) [PRISONER_TEAM], goblin [PRISONER_TEAM], guard(CASTLE) [PRISONER_TEAM] — captured crown prince!
+    - **Resource Room:** Shelves with food/scrolls/books/locationmap(BLACK_MARKET); goblin(WARLOCK) with WAND_OF_FIRE_BALLS/WAND_OF_ACID_RAIN
+  - **RandomLevels 1:2 — Cat Room:** LevelMessage: "You hear distant purring."; largecat/lion with fish/scrolls of enchantment
+  - **RandomLevel 3:4 — Explosive Room:** Mines/gas grenades/backpacks/scrolloffireballs; kamikazedwarf(CLEPTIA)
+  - **Vault (RandomLevel 0:4):** IRON walls, mines/beartraps, UR_STEEL chest with valuable items
+  - **Living Quarters/Forge/Well:** Beds/tables/chests, anvil/forge/work bench, wells
+  - **Spider Room (RandomLevel 1:4):** spider(PHASE) x1-3
+  - **Story-relevant hardcoded strings:** "Goblin Fort", "salt cave", "Salt Cave", "goblin hideout", "Hideout", all level messages, "You hear distant purring."
+  - **OTerrainMap references:** BARDOOR (COPPER), HEART_SHAPED_LOCK (none here)
 - [ ] **Review `Script/dungeons/Pyramid.dat`** — Aslona-related dungeon; catalog room names and lore references
 - [ ] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
 - [ ] **Review `Script/dungeons/BlackMarket.dat`** — Hidden shop in leafy forest; catalog room names and item references
