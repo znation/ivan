@@ -857,17 +857,16 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
     - Boulder(1/2) decorations x10 each
     - No special characters or valuable items
     - Nearly identical to DarkForest.dat structure
-- [x] **Review `Script/dungeons/Mondedr.dat`** — Empty/tundra location; find any descriptive text
-  - **Level Structure:** 1 level (outdoor area)
-  - **Description/ShortDescription:** "Mondedr" / "Mondedr"
-  - **Audio:** Empty.mid
-  - **LevelDefault:** Size=42x26, DifficultyBase=50, GRASS_TERRAIN fill, GREEN_FRACTAL background, AutoReveal=true (visible)
-  - **Level 0 — Mondedr:**
-    - Outdoor area; Rooms=0 (no rooms); IsOnGround=true
-    - Beartraps (inactive) x0-3, random food items x1-2
-    - Boulder(1/2) decorations x10 each
-    - No special characters or valuable items
-    - Nearly identical to DarkForest.dat and Irinox.dat structure
+- [x] **Review `Script/dungeons/Mondedr.dat` / EmptyArea.dat** — Empty/tundra location; find any descriptive text
+  - **Mondedr.dat:**
+    - Dungeon MONDEDR; Levels=1; Description/ShortDescription: "Mondedr" / "Mondedr"
+    - Audio: Empty.mid; Size=42x26, DifficultyBase=50, GRASS_TERRAIN fill, GREEN_FRACTAL background
+    - Outdoor area; Rooms=0; Beartraps (inactive) x0-3, food items x1-2, boulders x10 each
+  - **EmptyArea.dat:**
+    - Dungeon EMPTY_AREA; Levels=1; Description/ShortDescription: "Empty Area" / "EA"
+    - Audio: Empty.mid; Size=42x26, DifficultyBase=50, GRASS_TERRAIN fill, GREEN_FRACTAL background
+    - Outdoor area; Rooms=0; Beartraps (inactive) x0-3, food items x1-2, boulders x10 each
+  - **Note:** Mondedr.dat and EmptyArea.dat are nearly identical in structure to DarkForest.dat and Irinox.dat — all four are simple outdoor areas with no rooms, no special characters, just traps/food/boulders
 - [ ] **Review `Script/dungeons/GloomyCaves.dat`** — Find all room descriptions and story references
 
 #### 5.1.3 C++ Source File Hardcoded String Inventories
