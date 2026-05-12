@@ -634,7 +634,57 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
     - Contains coffins, bones, skulls; necromancer(APPRENTICE_NECROMANCER), zombie(ZOMBIE_OF_KHAZ_ZADM), dog(SKELETON_DOG)
   - **Story-relevant hardcoded strings:** "attnamese catacombs", "Attnam", "cathedral cellar", "Cellar", "lost tomb", "Ia! Ia! Khaz-zadm fhtagn!", "Be responsible, sort your waste.", "Here rests in honored glory an Attnamese soldier known but to Valpurus."
   - **OTerrainMap references:** BRICK_PROPAGANDA (multiple), VALPURIUM altar, BARDOOR, SECRET_DOOR
-- [ ] **Review `Script/dungeons/XinrochTomb.dat`** — 11-level necromancy dungeon; catalog all level messages, Dark Knight references, artifact locations
+- [x] **Review `Script/dungeons/XinrochTomb.dat`** — 11-level necromancy dungeon; catalog all level messages, Dark Knight references, artifact locations
+  - **Level Structure:** 11 levels (0-10)
+  - **Description/ShortDescription:** "Tomb of Xinroch" / "TX"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=64x36, DifficultyBase=70 (+20/level), GRAVEL/BASALT fill
+  - **Level 0 — Tomb Entrance (outside):**
+    - Description: "the Tomb entrance" / ShortDescription: "TX Entry"
+    - FillSquare: SNOW_TERRAIN; TeamDefault: XINROCH_TOMB_ENTRY_TEAM
+    - Contains: guard(TOMB_ENTRY) x2, skeleton x5, farmer(CULTIST)/housewife(CULTIST) x10 each, bones/skulls
+    - **INFUSCOR-owned area** (41x41): BLACK_GRANITE/OBSIDIAN walls; DivineMaster=INFUSCOR; Contains: guard(TOMB_ENTRY_MASTER), mysticfrog(DARK), kamikazedwarf(INFUSCOR)/veterankamikazedwarf(INFUSCOR), darkknight(VETERAN/ELITE); BLACK_GRANITE altar(INFUSCOR), DEAD_TREE, STRANGE_TREE, fountain(GLOWING_BLOOD)
+  - **Level 1 — Paradise Island:** Small island with banana trees; locked chest (high-value items); veterankamikazedwarf(INFUSCOR) x2
+  - **RandomLevels 1:2 — Vampire Room:** vampire/vampirebat; Inventory: scrollofenchantweapon, scrollofenchantarmor
+  - **RandomLevels 2:3 — Zombie Room:** Zombies with various food (nut/can w/ BANANA_FLESH/PINEAPPLE_FLESH/carrot/pineapple); ARMOR_OF_GREAT_HEALTH
+  - **RandomLevels 2:4 — Dwarven Gas Chambers:**
+    - Steel doors, steel sign: "Dwarven gas chambers. Welcome!"
+    - kamikazedwarf(SEGES) [XINROCH_TOMB_KAMIKAZE_DWARF_TEAM]; mines/gas grenades/potions
+  - **RandomLevel 1:4 — Golem Vault:** METEORIC_STEEL walls; golem(OMMEL_BONE); valuable items
+  - **RandomLevels 4:7 — Cauldron Vault:** IRON walls, cauldron, gas traps
+  - **RandomLevel 2:4 — Shop:** shopkeeper(XINROCH_TOMB) [XINROCH_TOMB_ENTRY_TEAM]; sells locationmap(BLACK_MARKET)
+  - **Level 2 — Confluences:** Underground water junctions with fountains; stairs to Ice Level
+  - **Level 3 — Ice Cave:**
+    - Description: "ice cave" / ShortDescription: "Ice Cave"
+    - LevelMessage: "It is deathly cold in here..."
+    - FillSquare: ICE earth; Background: BLUE_FRACTAL
+    - Maze room, ice shards, golems (ICE/SNOW/JOTUN_ICE), polar bears, spiders
+  - **DUAL_ENNER_BEAST_LEVEL — Enner Children Level:**
+    - LevelMessage: "You hear some high, wailing screams in the distance. Enner children must dwell in the level!"
+    - FillSquare: BONE/OBSIDIAN; ennerchild(BOY/GIRL)
+  - **Level 4 — Bone Level:** BONE earth; maze rooms with golem(BONE), scrollofgolemcreation, necromancer(APPRENTICE), darkmage(APPRENTICE)
+  - **Level 6 — Experimental Necro-Chamber:**
+    - STEEL barwalls; DivineMaster=INFUSCOR
+    - Signs: "Mutant bear - Experimental result: Particularly dangerous!", "Skeleton warrior - Experimental result: Typical.", "Enner children - Experimental status: On hiatus; specimens have escaped!", "Cave bear - Experimental status: Next candidate for mutation trials."
+    - Contains: MUTANT_BEAR, skeleton(WARRIOR), cave bear, guard(TOMB_ENTRY) [XINROCH_TOMB_NECRO_TEAM], priest(INFUSCOR) [XINROCH_TOMB_NECRO_TEAM]
+  - **Level 7 — Dark Knight Level:** GNEISS/OBSIDIAN; master necromancer, darkknight(TEMPLAR) x6 with loot chest, vampire x6, werewolfhuman x6
+  - **Level 8 — Tactical Level:** Single large room (38x22); OCTIRON walls/RUBY doors; tactical layout of dark knights (GRAVE_KEEPER/TEMPLAR/ROOKIE/VETERAN), necromancers, darkmages, mysticfrog(DARK)
+  - **Level 9 — Xinroch's Ghost Level:**
+    - Description: "unholy tomb" / ShortDescription: "Unholy Tomb"
+    - FillSquare: COAL earth; IsCatacomb=true
+    - Giant maze room (21x39) with golem(OMMEL_BONE), golem(OMMEL_TOOTH)
+    - Portal(XINROCH_TOMB_ENTRANCE) guarded by xinrochghost
+    - kamikazedwarf(INFUSCOR)/veterankamikazedwarf(INFUSCOR)
+  - **Level 10 — Deep Temple (Ultimate):**
+    - Description: "deep temple" / ShortDescription: "Deep Temple"
+    - LevelMessage: "\"I'm alive. Ha - HA HA HA! I'm ALIVE!\""
+    - FillSquare: WRAITH_BONE/ONYX; Background: RED_FRACTAL
+    - **Temple of Xinroch** (41x41): DivineMaster=INFUSCOR; OCTIRON/RUBY walls, BRIM_STONE altar(INFUSCOR), DEAD_TREE, STRANGE_TREE, fountain(GLOWING_BLOOD)
+    - Contains: darkknight(MASTER/TEMPLAR/VETERAN/ELITE), kamikazedwarf(INFUSCOR)/veterankamikazedwarf(INFUSCOR), angel(INFUSCOR), cultists, necromancer(MASTER), darkmage(BATTLE_MAGE/ELDER)
+    - Portal(XINROCH_TOMB_EXIT) leading to exit
+  - **Story-relevant hardcoded strings:** "Tomb of Xinroch", "TX Entry", "the Tomb entrance", "ice cave", "Ice Cave", "unholy tomb", "Unholy Tomb", "deep temple", "Deep Temple", all level messages, gas chamber sign text, experimental result signs
+  - **Dark Knight references:** Extensive — darkknight(VETERAN/ELITE/TEMPLAR/MASTER/GRAVE_KEEPER/ROOKIE) across multiple levels; Dark Templar shield lore in item.dat connects to this
+  - **OTerrainMap references:** BRICK_PROPAGANDA (none here), INFUSCOR altars, GLOWING_BLOOD fountains, OCTAGONAL_LOCK doors
 - [ ] **Review `Script/dungeons/AslonaCastle.dat`** — Civil war crown forces area; find room names and story text
 - [ ] **Review `Script/dungeons/RebelCamp.dat`** — Rebel faction base; catalog NPC dialogues and story flags
 - [ ] **Review `Script/dungeons/GoblinFort.dat`** — Goblin dungeon; find creature references and descriptive text
