@@ -436,8 +436,69 @@ Each `.dat` file should be scanned individually for every string referencing the
     - `BANANA_STOLLEN` is used as HardenedMaterial for: WHEAT_FLOUR (line 4392), FLAT_BREAD (line 4408), RYE_BREAD (line 4424)
     - `OMMEL_HAIR` is used as HardenedMaterial for various materials (line 724)
     - `OMMEL_BONE` is used as HardenedMaterial for various materials (line 2927)
-- [ ] **Scan `Script/char.dat`** (~10400 lines) — catalog all creature/NPC names, descriptions, and lore references; identify Ommels, Enner Beasts, Dark Frogs, kamikaze dwarves, hedgehogs, and other creatures needing replacement
-  - *Note: material.dat scan complete. char.dat will cross-reference these materials for flesh/derivative usage.*
+- [x] **Scan `Script/char.dat`** (~10400 lines) — catalog all creature/NPC names, descriptions, and lore references; identify Ommels, Enner Beasts, Dark Frogs, kamikaze dwarves, hedgehogs, and other creatures needing replacement
+  - **Top-Level Character Definitions (65+):**
+    - `character` — base defaults with ScienceTalk system (~265 adjectives, ~17 substantives, ~51 prefixes)
+    - `humanoid`, `nonhumanoid`, `playerkind` — base classes
+    - **Story NPCs (Unique):** petrus, oree, elpuri, genetrixvesana, vladimir, lobhse, nihil, terra, harvan, lordregent, aslonawizard (Myrddin Wyllt), aslonacaptain (Lord Mittrars)
+    - **Faction NPCs:** guard (8 configs: ROOKIE/TRAINEE/VETERAN/EUNUCH/PATROL/SHOP/ELITE/MASTER), shopkeeper (6 configs), priest (4 configs), darkknight (7 configs), goblin (5 configs), orc (2 configs)
+    - **Creatures:** ennerbeast, ennerchild, frog (3 configs: DARK_FROG/LIGHT_FROG/GIANT_DARK_FROG), kamikazedwarf, veterankamikazedwarf, hedgehog, billswill, skeleton, zombie variants, ghost variants, imp variants, bat variants, werewolfhuman/werewolfwolf, vampire, kobold (2 configs), feline variants, angel/archangel, golem, carnivorousplant, mammoth, unicorn, genie, lion, buffalo, snake, mushroom variants, darkmage, twoheadedmoose, skunk, invisiblestalker, chameleon, floatingeye, eddy, magpie, dolphin, bear, canine variants, ostrich, sumowrestler, tourist (3 configs), blinkdog, tailor, mysticfrog, mindworm, punisher, child, bum
+  - **Unique Named Characters (Must Replace):**
+    - `petrus` — High Priest of Valpurus; PostFix: "of the Great Frog"; DefaultName: "Petrus"; DeathMessage references "left nut"; wields justifier; ~100+ dialogue lines across all story arcs
+    - `oree` — Blood Daemon King; Alias: "Oree"; DefaultName: "Oree"; AttachedGod: MORTIFER; Dialogue references slaying Elpuri; unique boss NPC
+    - `elpuri` — Master Dark Frog (boss); NameSingular: "Master Dark Frog"; BloodMaterial: DARK_FROG_BLOOD; Unique, non-generatable
+    - `genetrixvesana` — Mother Carnivorous Plant; DefaultName: "Genetrix Vesana"; Crossbreed of carnivorous plant + pineapple tree by Attnamese alchemists; AttachedGod: SCABIES
+    - `vladimir` — Bunny pet; DefaultName: "Vladimir"; Alias: "Vladimir"; Referenced in tourist dialogue as Ivan's pet
+    - `lobhse` — Misbegotten Daughter of Scabies; DefaultName: "Lobh-se"; Dwells in underwater tunnel; invulnerable to all damage due to diseases/poisons accumulated over millennia; unique boss NPC
+    - `nihil` — Fallen Archangel of Mortifer; DefaultName: "Nihil"; PostFix: "of Mortifer"; Unique, generatable with HP/Day requirements; philosophical dialogue about nothingness and absurdity
+    - `terra` — Elder Priestess of Silva; DefaultName: "Terra"; PostFix: "of Silva"; Guards shrine against Lobh-se; references Tweraif invasion; AttachedGod: SILVA
+    - `harvan` — Rebel Leader; DefaultName: "Harvan Black-cloak"; Murdered king Othyr; wields muramasa; AttachedGod: LEGIFER; unique, non-generatable
+    - `lordregent` — His Excellency Efra Peredivall (Percival); PostFix: "of Aslona"; Rules Aslona after king's death; wields masamune; AttachedGod: SEGES; unique, non-generatable
+    - `aslonawizard` — Myrddin Wyllt; Adjective: "royal"; PostFix: "of Aslona"; Born with magic powers; AttachedGod: SOPHOS; unique, non-generatable
+    - `aslonacaptain` — Lord Mittrars (Tristram); NameSingular: "field marshal"; PostFix: "of Aslona"; Royal army commander; unique, non-generatable
+    - `fusanga` — Sieni Fusanga; Adjective: "massive magical"; DefaultName: "Sieni Fusanga"; Massive magical mushroom; AttachedGod: SCABIES; unique, non-generatable
+  - **Named NPCs with Configs (Must Replace):**
+    - `guard.MASTER` — Sir Haedlac Galladon VII (Galahad); Attnamese Cardinal of Peace; head of Bureau of Investigation; references Petrus' beard legend, house of Galladon serving Petrus since Sir Galladon I
+    - `guard.EMISSARY` — Sir Lancelyn (Lancelot) of Aslona; AttachedGod: CRUENTUS; diplomatic envoy to goblin lands and orcish freeholds
+    - `shopkeeper.NEW_ATTNAM` — Zolku; cheapest banana shop owner; references Decos' alchemists, levitating ostriches
+    - `shopkeeper.ATTNAM` — Hulbo; references mutant mushrooms, enner beasts, Elpuri's doings, high priest friendship
+    - `shopkeeper.ELPURI_CAVE` — Merka; guild member; extensive lore about Elpuri hatching in Cathedral of Attnam as Petrus' pet favorite, becoming the Devourer
+    - `shopkeeper.XINROCH_TOMB` — Pate; peddler; references Petrus as "scum", rotten priests
+    - `shopkeeper.BLACK_MARKET` — One-eyed Sam; orc flesh/black blood; unique artifact ring of speed
+    - `shopkeeper.REBEL_CAMP` — Gustaff; quartermaster; references Harvan, rats in camp
+    - `priest.VALPURUS` — Verax; PostFix: "of Valpurus"; Cardinal of Truth; extensive lore about Valpurus as Great Frog carrying world on back, Cathedral with no windows, Justifier, Shirt of Golden Eagle
+    - `priest.SILVA` — Florea; Priestess of Silva; references elven nation Lunethia, giant holy tree, Decos making firewood from altar, Attnamese occupation
+    - `priest.INFUSCOR` — Praecantrix; Priestess of Infuscor; extensive Xinroch/Dark Knights lore; purple tattoos with holy book text
+    - `priest.LEGIFER` — Lady Decora (Decora); Shining Knight of Legifer; references Order founded to fight Dark Knights, defeat at Fortress of Prym, Turox maces blessed by Legifer, sent to Attnam by vision
+    - `farmer.CULTIST` — Extensive Dark Knights history: War in Heavens (Valpurus vs Mortifer), first grand master dark knight + Neerc Se-ulb, second grand master + Mjolak, Xinroch as third grand master, Incendo/Lucis archangels destroyed, Ischaldirh champion of Infuscor, vampire origin from Cruentus+Infuscor blood
+    - `farmer.REBEL_CAMP` — Rebel dialogue about king Othyr's murder, Lord Regent, slavery controversy, necromancer twins
+    - `orc.COSSACK` — Ivan (communist); references Xinroch stories, Attnam invasion, Cathedral Cardinals, kobolds stealing from priests
+  - **Creature Types Needing Replacement:**
+    - `ennerbeast` / `ennerchild` — Horrible forest beasts; Adjective: "enner"; FleshMaterial: ENNER_BEAST_FLESH; References village of Enner in mountain valley far east; scream shatters items/armor
+    - `frog` (DARK_FROG, LIGHT_FROG, GIANT_DARK_FROG configs) — Dark frogs serve Elpuri; BloodMaterials: DARK_FROG_BLOOD / LIGHT_FROG_BLOOD; References Cathedral of Attnam, Valpurus as Great Frog
+    - `kamikazedwarf` / `veterankamikazedwarf` — Kamikaze dwarves in gas chambers (Xinroch Tomb); references invisible kamikaze dwarves, friendly fire
+    - `hedgehog` — Large hedgehog; FleshMaterial: HEDGEHOG_FLESH; Corrupted sacred animals of Dulcis; References spines, being petted
+    - `bananagrower` / `encourager` — Banana plantation workers; AI goes insane if leaves New Attnam; HostileReplies: "Banana POWER!"; references Decos' banana empire
+    - `billswill` — Pure Mass of Bill's Will; floating ethereal entity; References Bill's Psionic Operating System, Recycle Bin, Corporation, 640K RAM joke; AttachedGod: MELLIS
+    - `mommo` — Goblin-related creature (needs further investigation)
+    - `golem` — Artificial constructs from Dwarven Wars era; references masterless golems in ruined Khaz-zadm mines
+    - `mistress` — Unique sadistic NPC; References Mistress Nefas, weekly orgies at Nefas' High Temple, ritual survival night
+  - **Lore Terms Referenced in Dialogue (56+ occurrences):**
+    - **Locations:** Attnam (~30 refs), Cathedral of Valpurus (~8 refs), Citadel of Valpurus (~2 refs), Tomb of Xinroch (~10 refs), Khaz-zadm (~10 refs), Kharaz-arad, Lunethia (elven nation), Bazzaria (merchant land), Tweraif (former civilization), University of Tweraif, Luppliva (village), Mondedr (empty tundra), New Attnam, Underwater Tunnel, Enner (mountain village)
+    - **Factions/Groups:** Justice Legion of Attnam, Dark Knights (~15 refs), Shining Knights (~6 refs), Unholy Order of Infuscor, Dark Knights of Cruentus, Four Cardinals (coward/liar/thief/madman), Khanite orcs, orcish freeholds
+    - **Events:** War in Heavens (~4 refs), Dwarven Wars (~3 refs), Pax Attnamica, Aslona civil war, Attnamese invasion of Tweraif, coup against Priscus
+    - **Artifacts/Weapons:** Justifier (2+ refs), Neerc Se-ulb (2+ refs), Mjolak (2+ refs), Turox maces (~3 refs), Shirt of the Golden Eagle, muramasa, masamune
+    - **Historical Figures:** Priscus (former High Priest, pacifist, murdered), Vol-Khan (orcish leader, united tribes), Sir Galladon I. (first knight of Galladon line), Pervetus (ancient high priest)
+    - **Religious Terms:** Valpurus the Great Frog (~5 refs), Mortifer (Chaos God), Scabies' daughter Lobh-se, Silva's Holy Mango World-tree, Waters of Eternity, Heavens of other gods
+  - **Cross-References to material.dat:**
+    - OMMEL_HAIR used extensively in dark knight/infuscor priest/guard equipment (~20+ references)
+    - ENNER_BEAST_FLESH referenced by ennerbeast/ennerchild
+    - DARK_FROG_BLOOD / LIGHT_FROG_BLOOD referenced by frog configs
+    - HEDGEHOG_FLESH referenced by hedgehog
+    - FROG_FLESH referenced by base frog type
+    - ELPURI_FLESH (from material.dat) — no direct char reference found but implied through Elpuri boss
+    - VALPURIUM used in guard equipment (master's sword/shield, patrol's ring)
+    - BLUE_BLOOD used by elite guards and paladins
 - [ ] **Scan `Script/dungeon.dat`** — review team definitions and dungeon includes for story-relevant entries
 - [ ] **Scan `Script/gwterra.dat`** (world terrain types) — find terrain names referencing current setting
 - [ ] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
