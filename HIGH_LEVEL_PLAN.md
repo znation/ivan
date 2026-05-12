@@ -572,7 +572,37 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Story-relevant hardcoded strings:** Richel Decos, Zulko/Zolku, Huang Ming Pong, Decos Bananas Co., "bananas", "Viceroy", "sumo fighting techniques", "sacred"
   - **OTerrainMap references:** BRICK_PROPAGANDA, BRICK_PRIMITIVE_PROPAGANDA (propaganda-themed walls), HOLY_TREE, PALM, BANANA_TREE
   - **Character types needing replacement:** VICE_ROY, femaleslave(NEW_ATTNAM), sumowrestler, shopkeeper(NEW_ATTNAM), priest(SILVA), bananagrower, encourager, ostrich, elder, tourist
-- [ ] **Review `Script/dungeons/UnderwaterTunnel.dat`** — Travel route between New Attnam and Attnam; find descriptive text
+- [x] **Review `Script/dungeons/UnderwaterTunnel.dat`** — Travel route between New Attnam and Attnam; find descriptive text
+  - **Level Structure:** 5 levels (tunnels + boss rooms)
+  - **Description/ShortDescription:** "Underwater Tunnel" / "UT"
+  - **Audio:** Dungeon.mid, Dungeon2.mid, Dungeon3.mid
+  - **LevelDefault:** Size=80x20, DifficultyBase=5 (+15 per level), MONSTER_TEAM default
+  - **RandomLevels (0:1):** Forge/anvil rooms in random tunnel levels
+  - **RandomLevel (0:2) — Vault:** Contains chest with weapon/shield/armor/wand/ring/potion; guarded by golem(BAMBOO_WOOD)
+  - **Level 0 (Entry):** Spiders, kobolds, zombies, carnivorousplants, hedgehogs; stairs down
+  - **Level 1 (Extended Tunnel):** Size=160x20; more monsters/items; multiple stair exits to different areas
+  - **VESANA_LEVEL — Genetrix Vesana Boss:**
+    - LevelMessage: "This level seems to be somehow alive. You feel you want to leave it as soon as possible."
+    - FillSquare: LIME_STONE earth (living/organic feel)
+    - Room contains: genetrixvesana surrounded by carnivorousplant(GREATER) x5
+    - Stairs up lead to UNDER_WATER_TUNNEL_EXIT (world map exit)
+  - **CRYSTAL_LEVEL — Terra's Shrine:**
+    - Description/ShortDescription: "crystal cave" / "Crystal Cave"
+    - LevelMessage: "The air feels thick and damp, and there are strange crystals sprouting from the ground, emitting soft glows of many colors."
+    - FillSquare: ROCK_CRYSTAL earth; Background: BLUE_FRACTAL
+    - DifficultyBase=100 (harder)
+    - Contains altar(TERRA), HOLY_TREE decoration, terra {Team=TERRA_TEAM}
+    - Crystal golems (BLUE/PURPLE/GREEN); various animals (bears, buffalo, magpie, skunk, largecat, lion)
+  - **SPIDER_LEVEL — Lobh-se's Lair:**
+    - Description/ShortDescription: "spider nest" / "Spider Nest"
+    - LevelMessage: "The air feels stale and sickly, and you hear thousands of tiny scuttling feet."
+    - FillSquare: BASALT earth; Background: implied dark
+    - Large room (59x32) with ADAMANT walls/doors; spider web-like OTerrainMap layout
+    - Contains: lobhse (unique NPC boss); 100 spiders total (LARGE/GIANT/ARANEA)
+    - Rewards: SPIDER_SILK bodyarmor(PLATE_MAIL), taiaha {Enchantment=2}
+  - **Story-relevant hardcoded strings:** "Underwater Tunnel", "UT", "crystal cave", "spider nest", all level messages
+  - **Unique NPCs:** genetrixvesana (boss room), lobhse (spider lair), terra (Crystal Cave shrine)
+  - **Team references:** TERRA_TEAM (Terra's shrine)
 - [ ] **Review `Script/dungeons/Attnam.dat`** — Cathedral area; catalog room names, Petrus dialogue references, story flags
 - [ ] **Review `Script/dungeons/XinrochTomb.dat`** — 11-level necromancy dungeon; catalog all level messages, Dark Knight references, artifact locations
 - [ ] **Review `Script/dungeons/AslonaCastle.dat`** — Civil war crown forces area; find room names and story text
