@@ -603,7 +603,37 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Story-relevant hardcoded strings:** "Underwater Tunnel", "UT", "crystal cave", "spider nest", all level messages
   - **Unique NPCs:** genetrixvesana (boss room), lobhse (spider lair), terra (Crystal Cave shrine)
   - **Team references:** TERRA_TEAM (Terra's shrine)
-- [ ] **Review `Script/dungeons/Attnam.dat`** — Cathedral area; catalog room names, Petrus dialogue references, story flags
+- [x] **Review `Script/dungeons/Attnam.dat`** — Cathedral area; catalog room names, Petrus dialogue references, story flags
+  - **Level Structure:** 5 levels (city + catacombs)
+  - **Description/ShortDescription:** "attnamese catacombs" / "AC"
+  - **Audio:** Cathedral.mid
+  - **LevelDefault:** Size=30x30, IsCatacomb=true, DifficultyBase=0 (+10/level), MONSTER_TEAM default
+  - **Level 0 — Attnam City (61x67):**
+    - FillSquare: SNOW_TERRAIN; TeamDefault: ATTNAM_TEAM; DifficultyBase=150
+    - **Cathedral of Valpurus** (41x42, ROOM_CATHEDRAL): DivineMaster=VALPURUS; Contains petrus {IS_MASTER}, guards (VETERAN/EUNUCH/ELITE/MASTER), priests (VALPURUS/LEGIFER), frogs x8, femaleslave(ATTNAM/JESTER), petrusswife x7, kamikazedwarf(VALPURUS)/veterankamikazedwarf(VALPURUS), imperialist(HOARD_MASTER), golem(GOLD), orc(REPRESENTATIVE), siren(AMBASSADOR_SIREN), guard(EMISSARY); VALPURIUM altar(VALPURUS), throne, pools, fountains; Items: avatarofvalpurus, banana/kiwi/pineapple, legendary weapons chest (flamingsword/darkaxe/thunderhammer/etc.), rings/amulets/helm/bodyarmor/cloak of flying
+    - **Shop** (7x6): ROOM_SHOP, DivineMaster=MELLIS; shopkeeper(ATTNAM); slave; sells banana x100 + armor/weapons/rings/potions/food
+    - **Library** (7x6): ROOM_LIBRARY, DivineMaster=SOPHOS; librarian; book cases with scrolls/books
+    - **Smithy** (7x6): DivineMaster=LORICATUS; smith(ATTNAM); forge/anvil/workbench
+    - **Tailor Shop** (7x6): DivineMaster=LORICATUS; tailor(ATTNAM); workbench/bed
+    - 3 generic residential rooms with beds/chests/chairs/tables
+    - Sign: "Be responsible, sort your waste."
+  - **Level 1 — Cathedral Cellar (42x48):**
+    - Description: "cathedral cellar" / ShortDescription: "Cellar"
+    - Type: ROOM_OWNED_AREA; DivineMaster=VALPURUS
+    - Prison cells with iron barwalls, cardboard prison joke (PAPER_BOARD), iron maidens, torture rack, wooden horse, shackles
+    - Contains: guards (VETERAN/HONOR/TRAINEE), necromancer(IMPRISONED_NECROMANCER) [Team=15], punisher/LAW_STUDENT, mistress, imperialist(MASTER_TORTURER), farmer(IMPRISONED_FARMER)/hunter(IMPRISONED_HUNTER)/femaleslave(IMPRISONED_FEMALE)/zombie(IMPRISONED_ZOMBIE) [all Team=15]
+    - Coffins with skulls/bones
+    - Sign: "Here rests in honored glory an Attnamese soldier known but to Valpurus."
+  - **RandomLevels 2:3 — Beartrap Vault:** METEORIC_STEEL/MITHRIL/OCTIRON/ADAMANT beartraps + rings/scrolls/wands
+  - **RandomLevels 3:4 — Sepulcher:** Chest with tools/wands/armor; guarded by vampire
+  - **Level 2 & 3:** Simple stair levels with skeleton(WARRIOR)
+  - **Level 4 — Lost Tomb:**
+    - Description: "lost tomb" / ShortDescription: "Lost Tomb"
+    - LevelMessage: "You hear rhythmic chanting of some profane ritual: \"Ia! Ia! Khaz-zadm fhtagn!\""
+    - DivineMaster=MORTIFER; DifficultyBase=100
+    - Contains coffins, bones, skulls; necromancer(APPRENTICE_NECROMANCER), zombie(ZOMBIE_OF_KHAZ_ZADM), dog(SKELETON_DOG)
+  - **Story-relevant hardcoded strings:** "attnamese catacombs", "Attnam", "cathedral cellar", "Cellar", "lost tomb", "Ia! Ia! Khaz-zadm fhtagn!", "Be responsible, sort your waste.", "Here rests in honored glory an Attnamese soldier known but to Valpurus."
+  - **OTerrainMap references:** BRICK_PROPAGANDA (multiple), VALPURIUM altar, BARDOOR, SECRET_DOOR
 - [ ] **Review `Script/dungeons/XinrochTomb.dat`** — 11-level necromancy dungeon; catalog all level messages, Dark Knight references, artifact locations
 - [ ] **Review `Script/dungeons/AslonaCastle.dat`** — Civil war crown forces area; find room names and story text
 - [ ] **Review `Script/dungeons/RebelCamp.dat`** — Rebel faction base; catalog NPC dialogues and story flags
