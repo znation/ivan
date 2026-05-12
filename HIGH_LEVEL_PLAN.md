@@ -710,7 +710,25 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
     - Secret doors (BLACK_IRON)
   - **Story-relevant hardcoded strings:** "castle dungeon", "Castle of Aslona", "Castle", "cistern", "Cistern", "Entry forbidden by royal decree.", "Pity those who lost their way."
   - **OTerrainMap references:** HEART_SHAPED_LOCK doors, SECRET_DOOR
-- [ ] **Review `Script/dungeons/RebelCamp.dat`** — Rebel faction base; catalog NPC dialogues and story flags
+- [x] **Review `Script/dungeons/RebelCamp.dat`** — Rebel faction base; catalog NPC dialogues and story flags
+  - **Level Structure:** 1 level (outdoor camp)
+  - **Description/ShortDescription:** "Rebel Camp" / "RC"
+  - **Audio:** Empty.mid
+  - **Level 0 — Rebel Camp (55x55):**
+    - LevelMessage: "You pass the sentries and draw closer to the camp."
+    - FillSquare: GRASS_TERRAIN; TeamDefault: REBEL_TEAM; AutoReveal=false (hidden)
+    - Forest setting: BIRCH/TEAK/DEAD_TREE decorations, boulders, WELL
+    - Locked chests with weapons/potions(DARK_BREAD)
+  - **NPCs:**
+    - guard(REBEL) x3 (one patrol waypoint); cossack(REBEL_SOLDIER) x15; cossack(REBEL_LIEUTENANT) x5
+    - farmer(REBEL_CAMP)/housewife(REBEL_CAMP) x5 each; child(BOY/GIRL) 1-3 each
+    - mysticfrog(LIGHT) 1-2; necromancer(MASTER_NECROMANCER) x2; largerat 1-4
+  - **Leader Room (7x7):** ROOM_OWNED_AREA; Contains harvan {IS_MASTER}, guard(REBEL); ARM_CHAIR, CARPET, DESK, EXPENSIVE_BED, TABLE, BENCH, CHEST_OF_DRAWERS; weapon/shield (enchantment 3)
+  - **Shop (7x7):** ROOM_SHOP; shopkeeper(REBEL_CAMP) {IS_MASTER}; sells armor/rings/amulets/weapons/shields/food/potions/wands/tools/scrolls; special items: BELT_OF_CARRYING, WAND_OF_STRIKING
+  - **Kamikaze Room (6x6):** kamikazedwarf(LEGIFER)/veterankamikazedwarf(LEGIFER)
+  - **Other Rooms:** Cheap beds, tables, chairs, work benches
+  - **Story-relevant hardcoded strings:** "Rebel Camp", "You pass the sentries and draw closer to the camp."
+  - **Team references:** REBEL_TEAM
 - [ ] **Review `Script/dungeons/GoblinFort.dat`** — Goblin dungeon; find creature references and descriptive text
 - [ ] **Review `Script/dungeons/Pyramid.dat`** — Aslona-related dungeon; catalog room names and lore references
 - [ ] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
