@@ -784,7 +784,9 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
   - **Minibosses (RandomLevel 1:3):** Necromancer room (APPRENTICE x2, MASTER), Vampire room (vampire x3), Gasghoul room (gasghoul x2-5), Golem room (golem(WRAITH_BONE) x2-5, golem(ACIDOUS_BLOOD))
   - **Story-relevant hardcoded strings:** "Pyramid", "ancient bunker", "Bunker", "You feel a sudden pang of pain in the back of your brain."
   - **OTerrainMap references:** BARDOOR (IRON/STEEL/STAINLESS_STEEL)
-- [ ] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
+- [x] **Review `Script/dungeons/ElpuriCave.dat` / ELPURI_CAVE** — Elpuri boss area; find all descriptive text and story flags
+  - **Note:** No standalone `ElpuriCave.dat` file exists. The ELPURI_CAVE dungeon is defined within `GloomyCaves.dat`. See that file's review for details.
+  - Key references in GloomyCaves.dat: shopkeeper(ELPURI_CAVE), elpuri (boss character)
 - [ ] **Review `Script/dungeons/BlackMarket.dat`** — Hidden shop in leafy forest; catalog room names and item references
 - [ ] **Review `Script/dungeons/FungalCave.dat`** — Fungal growth dungeon; find descriptive text
 - [ ] **Review `Script/dungeons/DarkForest.dat`** — Mysterious dungeon pair component; catalog room names
