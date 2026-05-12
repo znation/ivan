@@ -499,7 +499,38 @@ Each `.dat` file should be scanned individually for every string referencing the
     - ELPURI_FLESH (from material.dat) — no direct char reference found but implied through Elpuri boss
     - VALPURIUM used in guard equipment (master's sword/shield, patrol's ring)
     - BLUE_BLOOD used by elite guards and paladins
-- [ ] **Scan `Script/dungeon.dat`** — review team definitions and dungeon includes for story-relevant entries
+- [x] **Scan `Script/dungeon.dat`** — review team definitions and dungeon includes for story-relevant entries
+  - **Team Definitions (19 total):**
+    - `PLAYER_TEAM` (0) — Player and pets; generic, no story reference
+    - `MONSTER_TEAM` (1) — Monsters by default hostile; generic
+    - `ATTNAM_TEAM` (2) — Residents of Attnam → **Story-relevant** (Attnam location)
+    - `SUMO_TEAM` (3) — Huang Ming Pong during arena fight → **Story-relevant** (Sumo quest arc)
+    - `ANGEL_TEAM` (4) — Spawned hostile angels; generic
+    - `GUILD_TEAM` (5) — Dungeon shopkeepers; generic
+    - `IVAN_TEAM` (6) — Ivan and Vladimir → **Story-relevant** (protagonist + pet)
+    - `NEW_ATTNAM_TEAM` (7) — Natives and ostriches of New Attnam → **Story-relevant** (New Attnam location)
+    - `COLONIST_TEAM` (8) — Colonists of New Attnam → **Tied to New Attnam arc**
+    - `TOURIST_GUIDE_TEAM` (9) — Dummy team holding village elder tourists follow → tied to New Attnam
+    - `TOURIST_TEAM` (10) — Tourists of New Attnam → **Story-relevant** (New Attnam)
+    - `BETRAYED_TEAM` (11) — Player's angered pets; generic
+    - `XINROCH_TOMB_ENTRY_TEAM` (12) — Tomb entrance team → **Story-relevant** (Xinroch Tomb arc)
+    - `XINROCH_TOMB_NECRO_TEAM` (13) — Necro chamber operators → **Story-relevant** (Xinroch Tomb arc)
+    - `XINROCH_TOMB_KAMIKAZE_DWARF_TEAM` (14) — Gas chamber fanatics → **Story-relevant** (Xinroch Tomb arc)
+    - `PRISONER_TEAM` (15) — Prisoners in Cathedral Cellar → **Story-relevant** (Attnam Cathedral)
+    - `TERRA_TEAM` (16) — Terra in Crystal Cave → **Story-relevant** (Terra character, Aslona arc)
+    - `ASLONA_TEAM` (17) — People loyal to Aslona → **Story-relevant** (Aslona civil war)
+    - `REBEL_TEAM` (18) — The rebels → **Story-relevant** (Rebel faction in Aslona)
+  - **Dungeon Includes:**
+    - `Include "dungeons/"` — includes all dungeon files from the dungeons/ directory
+  - **Team Relations Summary:**
+    - ASLONA_TEAM is hostile to REBEL_TEAM (17 vs 18)
+    - REBEL_TEAM is hostile to ASLONA_TEAM (18 vs 17)
+    - TERRA_TEAM is friendly to NEW_ATTNAM_TEAM (Relation 7) and hostile to MONSTER_TEAM
+    - COLONIST_TEAM, TOURIST_GUIDE_TEAM, TOURIST_TEAM all have FRIEND relations with NEW_ATTNAM_TEAM
+    - PRISONER_TEAM has commented-out FRIEND relations with ASLONA_TEAM and REBEL_TEAM
+    - GUILD_TEAM has KillEvilness=100 (most aggressive non-player team)
+    - TERRA_TEAM has KillEvilness=150 (highest in the game, reflecting her role as guardian)
+  - **Story Impact:** All teams except PLAYER_TEAM, MONSTER_TEAM, ANGEL_TEAM, GUILD_TEAM, and BETRAYED_TEAM are directly tied to story arcs. The team system is heavily story-driven with cross-references between Aslona/Rebel factions and New Attnam-related teams.
 - [ ] **Scan `Script/gwterra.dat`** (world terrain types) — find terrain names referencing current setting
 - [ ] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
 - [ ] **Scan `Script/owterra.dat`** (overworld terrain / locations on world map) — find location names and descriptions referencing current setting
