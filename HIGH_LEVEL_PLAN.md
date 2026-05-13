@@ -996,7 +996,19 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
   - **Banana present** (line 913): `banana::Spawn()` as Christmas present gift
   - **Holy banana** (line 1056): `holybanana::Spawn()` — religious item reference
   - **Assessment:** ⚠️ **HEAVY rewrite needed.** Opening sequence is the player's first impression of the setting. Every mention of bananas, Attnam, Decos, Petrus must be adapted. Story state variable names and structure should be preserved but their narrative context rewritten.
-- [ ] **Inventory `Main/Source/gods.cpp`** — catalog god prayer effects and lore text referencing Valpurus, Mortifer, Dark Knights
+- [x] **Inventory `Main/Source/gods.cpp`** — catalog god prayer effects and lore text
+  - **18 gods defined** (lines 24-127): valpurus, legifer, atavus, dulcis, seges, sophos, silva, loricatus, mellis, cleptia, nefas, scabies, infuscor, cruentus, mortifer — each with GetName(), GetDescription(), alignment, color
+  - **Hardcoded lore text (needs rewrite):**
+    - Valpurus champion gift (line 188): "JOURNEY FORTH WITH THESE ARMAMENTS TO DEFEAT MORTIFER AND ALL THE CHAOS HE HADST SOWN!"
+    - Mortifer champion gift (lines 873-875): Scrambled text — "SlAvE! ThOu HaSt PlAeSeD mE! lIfT tHy ReWaRd, ChAmPiOn!"
+    - Mortifer second blessing (line 882): "I aM PlEaSeD By tHy sQuIrMiNg, WoRm! WaLkEtH WiTh mE ThRoUgH ThE ShAdOwS As oNe oF ThE DeAd!"
+    - Mortifer bad prayer (lines 895-896): "PuNy MoRtAl! ThOu ArT nOt WoRtHy! I sHaLl dEsTrOy ThEe LiKe EvErYoNe ElSe!"
+    - Valpurus bad prayer (line 212): "Valpurus smites you with a small hammer."
+    - Legifer good prayer (line 221): "Inlux! Inlux! Save us!" (Linux anagram)
+    - Infuscor bad prayer (line 1073): "I'm going to enjoy watching you burn, insolent mortal!"
+    - Cruentus recommends Mortifer (line 1456): "Cruentus recommends you to his master, Mortifer."
+  - **Generic templates (auto-adapt via %s):** Most other messages use `%s` placeholder for god name — no rewrite needed since new pantheon names will substitute automatically
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only ~8 hardcoded strings need adaptation; the rest auto-adapt. Valpurus/Mortifer champion gift text must be rewritten for new gods. "Inlux" Linux anagram should be replaced with setting-appropriate pun.
 - [ ] **Inventory `Main/Source/gear.cpp`** — catalog unique artifact implementations (Justifier, Turox, Mjolak, Neerc Se-ulb) with hit effects and descriptive messages
 - [ ] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
 - [ ] **Inventory `Main/Source/char.cpp`** — catalog character death messages referencing story states, Elpuri head checks
