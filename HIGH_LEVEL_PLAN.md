@@ -563,7 +563,19 @@ Each `.dat` file should be scanned individually for every string referencing the
   - **locationA-H:** Mostly "empty area" entries for MONDEDR/IRINOX/DARK_FOREST/EMPTY_AREA dungeons; locationF = "Erno's House"
   - **Note:** 31 additional locations previously existed with various terrain distributions
   - **Assessment:** All names are generic fantasy descriptors — no setting-specific references. These would need to be rewritten for any new setting (e.g., "mighty cathedral reaching the clouds" → setting-appropriate landmark). **Moderate rewrite needed** for world map flavor text.
-- [ ] **Scan `Script/olterra.dat`** (overworld ground terrain) — find overworld ground names referencing current setting
+- [x] **Scan `Script/olterra.dat`** (overworld ground terrain) — find overworld ground names referencing current setting
+  - **Wall types:** BRICK_FINE, BRICK_PROPAGANDA, BRICK_OLD, BRICK_PRIMITIVE, BRICK_PRIMITIVE_PROPAGANDA, STONE_WALL, ICE_WALL, BROKEN_WALL, TENT_WALL
+    - ⚠️ **BRICK_PROPAGANDA / BRICK_PRIMITIVE_PROPAGANDA walls:** PostFix = "and a poster with a picture of high priest Petrus, the ruler of the Attnamese Empire" — **direct setting reference!**
+  - **Decoration types:** PINE, FIR, PALM, HOLY_TREE (AttachedGod=SILVA), CARPET, COUCH, CHAIR, ARM_CHAIR, BENCH, DOUBLE_BED/CHEAP_BED/PLAIN_BED/EXPENSIVE_BED, SNOW_PINE/FIR, ANVIL, SHARD, CACTUS, OAK, BIRCH, TEAK, DWARF_BIRCH, PEDESTAL, FORGE, FURNACE, OVEN, WOODEN_HORSE, TORTURE_RACK, DESK, WORK_BENCH, TAILORING_BENCH, TABLE, WELL, SHACKLES, BANANA_TREE (banana industry reference), DEAD_TREE, STRANGE_TREE
+  - **Door types:** BARDOOR, SECRET_DOOR, CURTAIN; broken variants
+  - **Stairs:** STAIRS_UP/DOWN, SUMO_ARENA_ENTRY/EXIT
+  - **Portal types:** OREE_LAIR_ENTRY/EXIT, DARK_LEVEL, XINROCH_TOMB_ENTRANCE/EXIT (dungeon-specific names); monsterportal (AttachedGod=MORTIFER)
+  - **Altar type:** AttachedGod varies by divine config
+  - **Throne type:** AttachedGod=VALPURUS — god reference
+  - **Containers:** BOOK_CASE/CHEST_OF_DRAWERS/SHELF (AttachedGod=SOPHOS/ATAVUS); coffin (AttachedGod=MORTIFER)
+  - **Other:** ironmaiden, christmastree, barwall (AttachedGod=LEGIFER), sign, earth, boulder variants
+  - **Assessment:** ⚠️ BRICK_PROPAGANDA walls contain direct Petrus/Attnamese Empire references — must be rewritten. BANANA_TREE is a subtle setting reference. Throne type references Valpurus god. Most other names are generic furniture/decoration terms.
+  - **Rewrite needed:** Propaganda wall PostFix text; consider renaming BANANA_TREE if banana industry isn't part of new setting.
 
 #### 5.1.2 Dungeon `.dat` File Reviews
 Each dungeon file should be reviewed for room names, level messages, and descriptions.
