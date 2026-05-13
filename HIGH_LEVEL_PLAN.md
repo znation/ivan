@@ -921,7 +921,57 @@ Each dungeon file should be reviewed for room names, level messages, and descrip
 
 #### 5.1.3 C++ Source File Hardcoded String Inventories
 Each source file should be inventoried for hardcoded story-specific strings (names, dialogue, messages).
-- [ ] **Inventory `Main/Source/human.cpp`** (~100+ references) — catalog all quest dialogues, NPC conversations, story state checks for Freedom/Xinroch/Aslona/Rebel arcs; list every occurrence of Decos, Petrus, Elpuri, Artorius, Huang Ming Pong, Tweraif, Attnam, Aslona, Pertturia
+- [x] **Inventory `Main/Source/human.cpp`** (~100+ references) — catalog all quest dialogues, NPC conversations, story state checks for Freedom/Xinroch/Aslona/Rebel arcs
+  - **priest::BeTalkedTo()** (Petrus dialogue, ~lines 650-840):
+    - Petrus quest chain: encrypted scroll from Richel Decos → Elpuri mission → Shirt of Golden Eagle → freedom
+    - "Saint Petrus the Lion-Hearted", "Valpurus the Creator", "Attnamese Empire"
+    - Story states 0→1 (scroll) →2 (Elpuri quest) → victory conditions
+    - Sir Lancelyn, Sir Galladon references; Attnamese army officer ending
+    - **Rewrite needed:** All Petrus/Valpurus/Attnamese Empire dialogue text
+  - **necromancer::BeTalkedTo()** (XinrochTomb quest, ~lines 5120-5240):
+    - Anmah the necromancer: shadow veil → Xinroch's flaming ruby sword
+    - History of dark knighthood, Xinroch grand master, Templars order
+    - "Cellar" dungeon reference; Attnam city escape
+    - Infuscor god references; undead seal gift
+    - **Rewrite needed:** All necromancer lore text, Xinroch backstory, shadow veil quest dialogue
+  - **tweraifpriest::BeTalkedTo()** (Freedom Quest, ~lines 7100-7200):
+    - Genetrixvesana mission: holy mango tree seedling → Lobh-se spider boss
+    - Lore: Nefas goddess + Scabies goddess → Lobh-se origin; druid binding
+    - "May Silva bless you"; Kaethos reference
+    - **Rewrite needed:** All Freedom Quest lore, goddess backstory, Lobh-se origin story
+  - **bananagrower::RandomizeProfession()** (~lines 3290-3315):
+    - Random professions including "president of Tweraif"
+    - References to Petrus sparing the president's life (line 3292)
+    - **Rewrite needed:** Bananagrower profession names; banana references
+  - **imperialist::BeTalkedTo()** (Decos/Tweraif viceroy, ~lines 5500-5580):
+    - decosadshirt advertising system; hoardmaster bribery quest → become viceroy of Tweraif
+    - "New Attnam", "high priest's war ships", "master torturer" references
+    - **Rewrite needed:** All Decos Bananas Co. dialogue, New Attnam/Tweraif political text
+  - **aslonawizard::BeTalkedTo()** (Pyramid quest, ~lines 7415-7460):
+    - Lord Mittrars: pyramid weapon from Otoul'iv Ik-Omit empire
+    - Thaumic bomb turn-in
+    - **Rewrite needed:** Pyramid lore, ancient empire name, thaumic bomb description
+  - **aslonacaptain::BeTalkedTo()** (Prince rescue, ~lines 7465-7530):
+    - King Othyr murdered; prince Artorius kidnapped by goblins at Castle Noth
+    - Lord Mittrars (Lord Regent's uncle); Harvan rebellion
+    - **Rewrite needed:** All Aslona royal family names, castle names, political backstory
+  - **aslonapriest::BeTalkedTo()** (Weeping obsidian quest, ~lines 7535-7580):
+    - Scabies disease spreading; weeping obsidian shard from fungal cave
+    - "Tear of Silva" artifact lore
+    - **Rewrite needed:** Disease lore, artifact description, fungal cave connection
+  - **harvan::BeTalkedTo()** (Rebel leader, ~lines 7585-7730):
+    - Infiltration mission into Lord Regent's forces; regalia katanas (Asamarum, E-numa sa-am)
+    - Multiple victory paths: nuke/obsidian/katana/prince
+    - **Rewrite needed:** All rebel dialogue, katana names, political conflict text
+  - **lordregent::BeTalkedTo()** (Efra Peredivall, ~lines 7735-7890):
+    - Counter-mission: Masamune katana; prince Artorius coronation regalia
+    - "Sir Lancelyn sent you"; Lord Mittrars, Myrddin the wizard, Senex of Seges
+    - **Rewrite needed:** All royalist dialogue, katana names, political conflict text
+  - **child::BeTalkedTo()** (Prince Artorius rescue, ~lines 7895-7900):
+    - Prince Artorius at KING_LEVEL in Goblin Fort; follows player back to Aslona
+  - **Other references:** Huang (sumo wrestler dialogue line 5476/5478); Sir Lancelyn (Lord Regent's guard)
+  - **Story state variables used:** GetStoryState(), SetStoryState(); GetGloomyCaveStoryState(); GetXinrochTombStoryState(); GetFreedomStoryState(); GetAslonaStoryState(); GetRebelStoryState()
+  - **Assessment:** ⚠️ **HEAVY rewrite needed.** This file contains the core quest dialogue for all four major story arcs (Petrus/Elpuri, XinrochTomb, Freedom/Tweraif, Aslona civil war). Every name, location, god, and political entity must be adapted. The narrative structure (quest chains with multiple endings) should be preserved but all flavor text rewritten.
 - [ ] **Inventory `Main/Source/game.cpp`** (~50+ references) — catalog opening sequence text, story state variables (XinrochTombStoryState, FreedomStoryState, AslonaStoryState, RebelStoryState), world map placement logic, banana grower AI references
 - [ ] **Inventory `Main/Source/gods.cpp`** — catalog god prayer effects and lore text referencing Valpurus, Mortifer, Dark Knights
 - [ ] **Inventory `Main/Source/gear.cpp`** — catalog unique artifact implementations (Justifier, Turox, Mjolak, Neerc Se-ulb) with hit effects and descriptive messages
