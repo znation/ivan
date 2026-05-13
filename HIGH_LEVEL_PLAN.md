@@ -972,7 +972,30 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
   - **Other references:** Huang (sumo wrestler dialogue line 5476/5478); Sir Lancelyn (Lord Regent's guard)
   - **Story state variables used:** GetStoryState(), SetStoryState(); GetGloomyCaveStoryState(); GetXinrochTombStoryState(); GetFreedomStoryState(); GetAslonaStoryState(); GetRebelStoryState()
   - **Assessment:** ⚠️ **HEAVY rewrite needed.** This file contains the core quest dialogue for all four major story arcs (Petrus/Elpuri, XinrochTomb, Freedom/Tweraif, Aslona civil war). Every name, location, god, and political entity must be adapted. The narrative structure (quest chains with multiple endings) should be preserved but all flavor text rewritten.
-- [ ] **Inventory `Main/Source/game.cpp`** (~50+ references) — catalog opening sequence text, story state variables (XinrochTombStoryState, FreedomStoryState, AslonaStoryState, RebelStoryState), world map placement logic, banana grower AI references
+- [x] **Inventory `Main/Source/game.cpp`** (~50+ references) — catalog opening sequence text, story state variables, world map placement logic, banana grower AI
+  - **Opening sequence text** (~lines 790-830):
+    - Full intro narrative: "giant spider resting on your face" → lions/pythons in village → 12-hour banana routine → Richel Decos summons you → letter to Petrus → underwater tunnel journey
+    - "Attnam is a peaceful but bustling world city on a beautiful snowy fell surrounded by frozen lakes glittering in the arctic sun just like the diamonds of the imperial treasury"
+    - **Rewrite needed:** Entire opening sequence — banana colony, Decos mansion, letter delivery premise, Attnam description
+  - **Story state variables** (global declarations):
+    - `int game::StoryState` (0-3): Main story progression
+    - `int game::GloomyCaveStoryState`: Elpuri quest progress
+    - `int game::XinrochTombStoryState`: Necromancer quest progress
+    - `int game::FreedomStoryState`: Tweraif liberation progress
+    - `int game::AslonaStoryState` (line 107): Aslona civil war progress
+    - `int game::RebelStoryState`: Rebel faction progress
+    - All saved/loaded in SaveFile (~lines 3481, 3561)
+  - **Petrus global** (line 146): `character* game::Petrus = 0` — singleton reference to Petrus NPC
+  - **TweraifIsFree()** (~lines 6151-6158): Checks if all COLONIST_TEAM members are dead → Tweraif is "free"
+    - Used by bananagrower, tweraifpriest, imperialist dialogues
+  - **Banana grower AI reset** (~lines 6450-6460): Resets FeedingSumo flag for bananagrowers when returning to village
+  - **Decos ad shirt contract** (~lines 6430-6450):
+    - Huang Ming Pong reference: "defeat even the mighty Huang Ming Pong!"
+    - decosadshirt::Spawn() item creation; company advertising contract dialogue
+    - **Rewrite needed:** Banana colony intro, Decos Bananas Co. branding, Huang Ming Pong name, banana references throughout
+  - **Banana present** (line 913): `banana::Spawn()` as Christmas present gift
+  - **Holy banana** (line 1056): `holybanana::Spawn()` — religious item reference
+  - **Assessment:** ⚠️ **HEAVY rewrite needed.** Opening sequence is the player's first impression of the setting. Every mention of bananas, Attnam, Decos, Petrus must be adapted. Story state variable names and structure should be preserved but their narrative context rewritten.
 - [ ] **Inventory `Main/Source/gods.cpp`** — catalog god prayer effects and lore text referencing Valpurus, Mortifer, Dark Knights
 - [ ] **Inventory `Main/Source/gear.cpp`** — catalog unique artifact implementations (Justifier, Turox, Mjolak, Neerc Se-ulb) with hit effects and descriptive messages
 - [ ] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
