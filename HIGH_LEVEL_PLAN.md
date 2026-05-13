@@ -542,7 +542,11 @@ Each `.dat` file should be scanned individually for every string referencing the
     - `evergreenforest` → NameStem = "evergreen forest" — corresponds to **Pertturia** (Evergreen Forest surrounding Attnam); minor setting reference
     - `steppe` — generic, no story reference
   - **Assessment:** Very low story impact. All terrain names are standard fantasy biome descriptors. Only `evergreenforest` → "evergreen forest" maps to Pertturia, which is a descriptive name that could be kept as-is or lightly renamed (e.g., "ancient woodland", "sylvan forest"). No hardcoded C++ references found in `wterras.cpp`. **Minimal rewrite needed.**
-- [ ] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
+- [x] **Scan `Script/glterra.dat`** (ground terrain types) — find ground terrain names referencing current setting
+  - **solidterrain Configs:** PARQUET, FLOOR, GROUND, GRASS_TERRAIN, LANDING_SITE ("ostrich landing site"), SNOW_TERRAIN, DARK_GRASS_TERRAIN, SAND_TERRAIN
+  - **liquidterrain Configs:** POOL, UNDERGROUND_LAKE, SEA
+  - **Assessment:** No setting-specific hardcoded strings. All terrain names are generic game terms ("floor", "ground", "pool", "lake", "sea"). SitMessages for pools/lakes/seas: "You sit on the [surface] surface. Oddly enough, you sink. You feel stupid." — humorous but not setting-specific.
+  - **Minimal rewrite needed.**
 - [ ] **Scan `Script/owterra.dat`** (overworld terrain / locations on world map) — find location names and descriptions referencing current setting
 - [ ] **Scan `Script/olterra.dat`** (overworld ground terrain) — find overworld ground names referencing current setting
 
