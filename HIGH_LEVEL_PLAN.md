@@ -547,7 +547,22 @@ Each `.dat` file should be scanned individually for every string referencing the
   - **liquidterrain Configs:** POOL, UNDERGROUND_LAKE, SEA
   - **Assessment:** No setting-specific hardcoded strings. All terrain names are generic game terms ("floor", "ground", "pool", "lake", "sea"). SitMessages for pools/lakes/seas: "You sit on the [surface] surface. Oddly enough, you sink. You feel stupid." — humorous but not setting-specific.
   - **Minimal rewrite needed.**
-- [ ] **Scan `Script/owterra.dat`** (overworld terrain / locations on world map) — find location names and descriptions referencing current setting
+- [x] **Scan `Script/owterra.dat`** (overworld terrain / locations on world map) — find location names and descriptions referencing current setting
+  - **attnam:** "mighty cathedral reaching the clouds" — ATTNAM dungeon, EVERGREEN_FOREST
+  - **elpuricave:** "hideous cave entrance radiating pure evil" — ELPURI_CAVE, TUNDRA (hidden)
+  - **newattnam:** "primitive village" — NEW_ATTNAM, JUNGLE
+  - **underwatertunnel:** "entrance to an underwater tunnel" — UNDER_WATER_TUNNEL, JUNGLE
+  - **underwatertunnelexit:** "exit from an underwater tunnel" — UNDER_WATER_TUNNEL, JUNGLE
+  - **aslonacastle:** "mighty seaside castle" — ASLONA_CASTLE, LEAFY_FOREST (hidden)
+  - **rebelcamp:** "hidden camp" — REBEL_CAMP, STEPPE (hidden)
+  - **goblinfort:** "overgrown ruins of ancient fortress" — GOBLIN_FORT, EVERGREEN_FOREST (hidden)
+  - **fungalcave:** "damp and dank cave entrance" — FUNGAL_CAVE, JUNGLE (hidden)
+  - **pyramid:** "crumbling pyramid" — PYRAMID, DESERT/JUNGLE (hidden)
+  - **blackmarket:** "old, decrepit building" — BLACK_MARKET, LEAFY_FOREST (hidden)
+  - **xinrochtomb:** "sombre and forbidding mausoleum" — XINROCH_TOMB, GLACIER/TUNDRA (hidden)
+  - **locationA-H:** Mostly "empty area" entries for MONDEDR/IRINOX/DARK_FOREST/EMPTY_AREA dungeons; locationF = "Erno's House"
+  - **Note:** 31 additional locations previously existed with various terrain distributions
+  - **Assessment:** All names are generic fantasy descriptors — no setting-specific references. These would need to be rewritten for any new setting (e.g., "mighty cathedral reaching the clouds" → setting-appropriate landmark). **Moderate rewrite needed** for world map flavor text.
 - [ ] **Scan `Script/olterra.dat`** (overworld ground terrain) — find overworld ground names referencing current setting
 
 #### 5.1.2 Dungeon `.dat` File Reviews
