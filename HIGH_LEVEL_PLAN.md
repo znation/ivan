@@ -1052,7 +1052,29 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - "defiles %s" (muramasa) — flavor text for dark katana effect
     - "rebukes %s" (masamune) — flavor text for holy katana effect
   - **Assessment:** ⚠️ **MODERATE rewrite needed.** The artifact names themselves (Neerc Se-ulb, Mjolak, Vermis, Turox) are hardcoded in ADD_MESSAGE strings. God name references (Cleptia, Scabies) appear in whip hit effects. Alignment god lists in muramasa/masamune use enum IDs — these will auto-adapt when pantheon is redefined but the enum order must be preserved. The `decosadshirt` class exists as a named artifact type.
-- [ ] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
+- [x] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
+  - **Room Types Analyzed:** shop, cathedral, library, bananadroparea, ownedarea, sumoarena
+  - **Story-Relevant Hardcoded Strings (6 total):**
+    - `cathedral::Enter()` — "The majestetic Cathedral of Valpurus looms before you. You watch it with utter respect." → **Must replace** (Cathedral of Valpurus name)
+    - `bananadroparea::DropItem()` — Victory text: "You plant the seedling of the Holy Mango World-tree and the people\nof your home village gather around, cheering..." → Contains references to Silva, Valpurus, Tweraif independence → **Must replace entire victory message**
+    - `bananadroparea::DropItem()` — Score entry: "restored Tweraif to independence and remained as its protector" → **Must replace** (Tweraif name)
+    - `shop::DropItem()` (NEW_ATTNAM config) — "Sorry, I'm only allowed to buy from Decos Bananas Co. if I wish to stay here." → **Must replace** (Decos Bananas Co.)
+    - `sumoarena::CheckDestroyTerrain()` — "The residents of New Attnam might not like this." → **Must replace** (New Attnam)
+  - **Team/Config References (no string rewrite needed, but logic context changes):**
+    - `NEW_ATTNAM_TEAM` — used in bananadroparea and sumoarena for hostility checks
+    - `ATTNAM_TEAM` — used in cathedral for hostility checks
+    - `GetMaster()->GetConfig() == NEW_ATTNAM` — banana pricing logic (cheaper bananas, expensive non-banana food)
+    - `GetMaster()->GetConfig() == BLACK_MARKET` — price multiplier x4
+    - `GetMaster()->GetConfig() == REBEL_CAMP` — quartermaster rejection message: "I'm a quartermaster, not a merchant."
+    - `game::TweraifIsFree()` — checks if all COLONIST_TEAM members are dead → enables mango seedling planting
+  - **Banana-Specific Logic:**
+    - `Item->IsBanana()` — used in bananadroparea for consumption/teleport restrictions
+    - `Item->IsMangoSeedling()` — triggers victory condition when planted at drop area
+    - NEW_ATTNAM shop: bananas priced at 1/4 + 1, non-food items free (0 price)
+  - **Kamikaze Dwarf Logic:**
+    - `cathedral::AddItemEffect()` and `ownedarea::AddItemEffect()` — teleport kamikaze weapons to kamikaze dwarf
+    - `FindRandomExplosiveReceiver()` — searches ATTNAM_TEAM for kamikazedwarf members
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only 5 hardcoded strings need adaptation, but the bananadroparea victory text is a multi-line narrative block that must be fully rewritten. The banana/mango seedling mechanic is central to the Freedom Quest ending and needs a thematically equivalent replacement (e.g., planting a sacred tree/seed to liberate the region). The Decos Bananas Co. shopkeeper message needs a setting-appropriate monopoly reference.
 - [ ] **Inventory `Main/Source/char.cpp`** — catalog character death messages referencing story states, Elpuri head checks
 - [ ] **Inventory `Main/Source/lterras.cpp`** — check for terrain-related hardcoded strings with setting references
 - [ ] **Inventory `Main/Source/materia.cpp`** — check for material-related hardcoded strings with setting references
