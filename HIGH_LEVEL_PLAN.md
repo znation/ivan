@@ -1009,7 +1009,49 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - Cruentus recommends Mortifer (line 1456): "Cruentus recommends you to his master, Mortifer."
   - **Generic templates (auto-adapt via %s):** Most other messages use `%s` placeholder for god name — no rewrite needed since new pantheon names will substitute automatically
   - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only ~8 hardcoded strings need adaptation; the rest auto-adapt. Valpurus/Mortifer champion gift text must be rewritten for new gods. "Inlux" Linux anagram should be replaced with setting-appropriate pun.
-- [ ] **Inventory `Main/Source/gear.cpp`** — catalog unique artifact implementations (Justifier, Turox, Mjolak, Neerc Se-ulb) with hit effects and descriptive messages
+- [x] **Inventory `Main/Source/gear.cpp`** — catalog unique artifact implementations (Justifier, Turox, Mjolak, Neerc Se-ulb) with hit effects and descriptive messages
+  - **Unique Artifacts with Hit Effects:**
+    - `justifier` (lines ~105-106, ~1743-1748): Holy sword of Valpurus; outline color green (rgb(0,255,0)); alpha shimmer animation. No hit effect override — uses base meleeweapon HitEffect.
+    - `neercseulb` (lines ~960-978): Dark mace of Mortifer/Cruentus; outline color red (rgb(255,0,0)); alpha shimmer animation. **HitEffect:** 1/5 chance — "%s Neerc Se-ulb's life-draining energies swallow %s!" → DRAIN damage 10+(RAND%11). Player does evil deed.
+    - `mjolak` (lines ~378-400): Dark hammer of Mortifer; outline color red. **HitEffect:** 1/3 chance — "A burst of Mjolak's unholy energy fries %s." → ENERGY damage 5+(RAND%6). Player does evil deed.
+    - `vermis` (lines ~402-422): Spear of Karl/Sophos. **HitEffect:** 1/5 chance — "%s Vermis sends %s on a sudden journey." / "Vermis sends %s on a sudden journey." → Teleport target randomly.
+    - `turox` (lines ~424-450): Holy mace of Legifer/Shining Knights. **HitEffect:** 1/5 chance — "%s smash%s %s with the full force of Turox." / "Turox is smashed against %s with full force." → Triggers magical explosion (BURNED damage 10+(RAND%100)) at hit position.
+    - `muramasa` (lines ~1642-1703): Dark katana of Aslona rebels. **HitEffect:** Against lawful/neutral creatures — 1/10 chance: random disease/debuff (lycanthropy, vampirism, parasites, hiccups, leprosy) OR 3/4 chance: slow/poison/confused. Message: "%s %s defiles %s." / "%s defiles %s." Against chaotic creatures: 1/4 chance reluctant.
+    - `masamune` (lines ~1705-1762): Holy katana of Aslona crown forces. **HitEffect:** Against chaotic creatures — removes most negative status effects, inflicts PANIC + TELEPORT_LOCK. Message: "%s %s rebukes %s." / "%s rebukes %s." Against good creatures: 1/4 chance reluctant.
+    - `whipofthievery` (lines ~452-478): Whip of Cleptia. **HitEffect:** When Cleptia helps — steals enemy's main wielded item. Message: "%s whip asks for the help of Cleptia as it steals %s %s." God relation affects success chance.
+    - `chameleonwhip` (lines ~1087-1113): Whip of Scabies. **HitEffect:** When Scabies helps — polymorphs target randomly. Message: "%s whip asks for the help of Scabies as it polymorphs %s." Player does evil deed, adjusts Scabies relation.
+    - `wondersmellstaff` (lines ~1367-1409): Staff with dual smoke effects. **HitEffect:** 1/5 chance — random: red smoke on enemies' squares OR blue smoke under hitter. Messages: "Strange red/blue smoke billows out of %s staff."
+    - `slowaxe` (lines ~1537-1560): Axe that applies SLOW status. Message: "%s axe chills %s." / "The axe chills %s." → SLOW 400+(RAND_N200) ticks.
+    - `terrorscythe` (lines ~1562-1587): Scythe that inflicts PANIC based on target's mana. Message: "%s scythe terrifies %s." / "The scythe terrifies %s." → PANIC 200+(RAND_N100) ticks.
+    - `bansheesickle` (lines ~1589-1614): Sickle that shrieks and calls attention. Message: "%s sickle shrieks at %s." / "The sickle shrieks at %s." → SOUND damage 4+(RAND&4) + CallForAttention.
+    - `rustscythe` (lines ~1616-1660): Scythe that rusts armor/body parts on humanoid targets. No special message — direct mechanical effect.
+    - `sharpaxe` (lines ~1662-1703): Axe that severs body parts from humanoids. Message: "Your %s is severed off!" / "%s %s is severed off!" → SevereBodyPart + AskForKeyPress("Bodypart severed!").
+    - `weepblade` (lines ~1495-1508): Blade that spills acid. **HitEffect:** 2/3 chance — "%s weeping blade spills acid on %s." → Spills SULPHURIC_ACID 25+(RAND%25).
+    - `acidshield` (lines ~1510-1547): Shield that douses attackers in sulphuric acid. Multiple messages: "completely doused", "splashed with acid from the shield".
+    - `eptyron` (lines ~1623-1660): Weapon/armor softener. **HitEffect:** Softens armor/body parts of humanoids. **BlockEffect:** Softens attacking weapons.
+  - **Special Equipment with Passive Effects:**
+    - `darkaxe::Be()` (lines ~1479-1493): Spills LIQUID_DARKNESS when equipped and volume < 500
+    - `gleipnir::Be()` (lines ~1608-1622): Whip that spills SULPHURIC_ACID when equipped and volume < 500
+    - `filthytunic::Be()` (lines ~1579-1593): Armor that spills GLOWING_BLOOD when equipped and volume < 90
+    - `daggerofvenom::Be()` (lines ~1462-1477): Spills POISON_LIQUID when equipped and volume < 500
+    - `decosadshirt` (lines ~1383-1400): Decos Bananas Co. branded shirt; tracks EquippedTicks; Save/Load overrides
+    - `taiaha::Zap()` (lines ~1597-1621): Zappable staff dealing BEAM_STRIKE, grants PERCEPTION XP
+    - `pica::Zap()` (lines ~1743-1768): Zappable weapon that spawns enchanted daggers
+    - `magestaff::Zap()` (lines ~1764-1809): Royal staff polymorph beam; generic staff polychromatic sparks
+    - `unpick::Zap()` (lines ~1623-1650): Zappable pickaxe that creates walls via BEAM_WALL_CREATION
+  - **God Alignment References in Code:**
+    - `muramasa` HitEffect checks: VALPURUS, LEGIFER, ATAVUS, DULCIS, SEGES, SOPHOS, SILVA, LORICATUS (lawful/neutral gods)
+    - `masamune` HitEffect checks: MELLIS, CLEPTIA, NEFAS, SCABIES, INFUSCOR, CRUENTUS, MORTIFER (chaotic/evil gods)
+  - **Hardcoded Strings Needing Rewrite:**
+    - "Neerc Se-ulb's life-draining energies" — artifact name + flavor text
+    - "Mjolak's unholy energy" — artifact name + flavor text
+    - "Vermis sends %s on a sudden journey." — artifact name + flavor text
+    - "full force of Turox" / "burned @bkp Turox's explosion" — artifact names
+    - "help of Cleptia" — god name reference in whipofthievery
+    - "help of Scabies" — god name reference in chameleonwhip
+    - "defiles %s" (muramasa) — flavor text for dark katana effect
+    - "rebukes %s" (masamune) — flavor text for holy katana effect
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** The artifact names themselves (Neerc Se-ulb, Mjolak, Vermis, Turox) are hardcoded in ADD_MESSAGE strings. God name references (Cleptia, Scabies) appear in whip hit effects. Alignment god lists in muramasa/masamune use enum IDs — these will auto-adapt when pantheon is redefined but the enum order must be preserved. The `decosadshirt` class exists as a named artifact type.
 - [ ] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
 - [ ] **Inventory `Main/Source/char.cpp`** — catalog character death messages referencing story states, Elpuri head checks
 - [ ] **Inventory `Main/Source/lterras.cpp`** — check for terrain-related hardcoded strings with setting references
