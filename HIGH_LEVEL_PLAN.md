@@ -1164,7 +1164,20 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - "Something explodes!" (line 423) — explosion message
     - "killed in a gas explosion" (line 427) — death cause string
   - **Assessment:** ✅ **NO rewrite needed.** All story-specific references are enum-based switch cases that will auto-adapt when material IDs and effect IDs are redefined in `define.dat`. The function names (ReceiveOmmelUrine, etc.) are internal C++ identifiers that don't appear to the player. Only generic messages like "You relax a bit" exist as hardcoded strings.
-- [ ] **Inventory `Main/Source/miscitem.cpp`** — check for misc item hardcoded strings with setting references
+- [x] **Inventory `Main/Source/miscitem.cpp`** (~4214 lines) — check for misc item hardcoded strings with setting references
+  - **Story-specific hardcoded strings (5 total):**
+    - Line 946: `CONST_S("slipped on a banana peel")` — death message when stepping on bananapeels → **Must replace** (banana reference)
+    - Line 2267: ADD_MESSAGE: "You could never hope to decipher this top secret message. It is meant for Petrus's eyes only." — encryptedscroll::Read() → **Must replace** (Petrus name, quest item context)
+    - Line 2465: ADD_MESSAGE: "This banana seems to be somehow disfunctional." — banana::Zap() broken state → **Must replace** (banana reference)
+    - Line 2471: ADD_MESSAGE: "Unfortunately, your banana is jammed!" — banana::Zap() jammed state → **Must replace** (banana reference)
+    - Line 2479: ADD_MESSAGE: "Oh no! Your banana jams in the middle of the firefight!" — banana::Zap() random jam → **Must replace** (banana reference)
+  - **Class-level story references (no player-facing strings, but class names need renaming):**
+    - `holybanana` class — sacred weapon item with flame special flag
+    - `bananapeels` class — slippery terrain material on ground
+    - `banana` class — zappable weapon with charges, jam mechanics, spoil handling
+  - **Generic hardcoded strings (no rewrite needed):**
+    - ~146 other ADD_MESSAGE/CONST_S calls are generic game messages (fireball summoning, earthquake, possession, wish effects, trap activation, etc.)
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only 5 hardcoded strings need adaptation, but they all reference "banana" which is the core joke item being replaced. The `holybanana`, `bananapeels`, and `banana` class names will also need renaming to match new replacement items. Cross-file updates required since these classes are referenced from other source files.
 - [ ] **Inventory `Main/Source/nonhuman.cpp`** — check for non-humanoid NPC hardcoded strings with setting references
 - [ ] **Inventory `Main/Source/team.cpp`** — catalog team ID definitions and any story-relevant team names/messages
 - [ ] **Inventory `Main/Source/worldmap.cpp`** — catalog world map generation text referencing Attnam, Pertturia, etc.
