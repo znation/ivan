@@ -1252,8 +1252,28 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - Hymn file descriptions reference Valpuri throughout
     - `Mola Mola` battle story, `The Great Battle` between Petrus and Archenemy → **Must replace**
   - **Assessment:** ⚠️ **MODERATE rewrite needed.** All descriptive text references Valpuri/Great Frog/Holybanana. Must be fully rewritten for new setting.
-- [ ] **Review `MANUAL` file** (5 story references found) — identify each reference and its context
-- [ ] **Review `NEWS` file** (36 story references found) — catalog changelog entries with story references, assess whether they need updating
+- [x] **Review `MANUAL` file** (~400 lines) — identify each reference and its context
+  - **Setting References Found:**
+    - Line 53: "This is a fan continuation of IVAN by members of the Cathedral of Attnam forum." → **Must replace** (Cathedral of Attnam forum name)
+    - Line 54: "Join us on Attnam.com for news, updates..." → **Must replace** (website URL/branding)
+    - Line 199: "Eg. Valpurus has the letters L++ this means that Valpurus is extremely..." → **Must replace** (Valpurus god name in alignment explanation example)
+    - Lines 242-243, 289, 367: GitHub/Attnam.com URLs → **Must update** when community rebrands
+  - **Assessment:** ⚠️ **LIGHT rewrite needed.** Only ~5 story-specific references. The forum name and website branding must be updated for the new setting. The Valpurus example in alignment explanation should use a new god name.
+
+- [x] **Review `NEWS` file** (~640 lines) — catalog changelog entries with story references, assess whether they need updating
+  - **Setting References Found (36+):**
+    - Aslona: "Add Aslona!", "civil war", "Aslona:" section header → **Must replace**
+    - Decos: "Decos' house", "Decos no longer lets you steal from him", "wearing a Decos ad shirt" → **Must replace**
+    - Petrus: "Petrus now takes the encrypted scroll", "gift stuff to Petrus's wives", "wife of Petrus torso" → **Must replace**
+    - Attnam/Cathedral: Multiple references throughout changelog (Cathedral, Attnam Catacombs, Attnam cellar, Attnam improvements) → **Must replace**
+    - Tweraif: "Freedom for Tweraif victory", "bringing freedom to Tweraif" → **Must replace**
+    - Valpurus/Mortifer: "champion of either Valpurus or Mortifer", prayer display bug → **Must replace**
+    - Tomb of Xinroch: Multiple references (Xinrochs, grave keeper, ghost level, TX rearranging) → **Must replace**
+    - Banana: "banana-and-pick-axe icon", "banana room exploit", "Bananas can now jam" → **Must replace**
+    - Ommel: "Ommel Cerumen cannot be wished for", "Ommel cerumen can no longer be wished" → **Must replace**
+    - Enner Beast: "Enner Beast now has a place to catch fish", "Added enner beast image" → **Must replace**
+    - New Attnam: "Female slaves are team New Attnam", "New Attnam has now many new NPCs, for instance a sumo wrestler" → **Must replace**
+  - **Assessment:** ⚠️ **HEAVY rewrite needed.** The NEWS file is a historical changelog documenting the game's development. All story-relevant references must be adapted to the new setting names. However, since this is historical documentation of changes made over time, consider whether to keep some original names as "historical" references or fully adapt everything. The changelog structure and dates should remain unchanged.
 
 ### 5.2 Creative Planning Needed
 - [ ] Define the new fantasy world's geography (continents, kingdoms, forests, mountains)
