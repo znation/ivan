@@ -1075,8 +1075,75 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - `cathedral::AddItemEffect()` and `ownedarea::AddItemEffect()` — teleport kamikaze weapons to kamikaze dwarf
     - `FindRandomExplosiveReceiver()` — searches ATTNAM_TEAM for kamikazedwarf members
   - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only 5 hardcoded strings need adaptation, but the bananadroparea victory text is a multi-line narrative block that must be fully rewritten. The banana/mango seedling mechanic is central to the Freedom Quest ending and needs a thematically equivalent replacement (e.g., planting a sacred tree/seed to liberate the region). The Decos Bananas Co. shopkeeper message needs a setting-appropriate monopoly reference.
-- [ ] **Inventory `Main/Source/char.cpp`** — catalog character death messages referencing story states, Elpuri head checks
-- [ ] **Inventory `Main/Source/lterras.cpp`** — check for terrain-related hardcoded strings with setting references
+- [x] **Inventory `Main/Source/char.cpp`** (~13353 lines) — catalog character death messages referencing story states, Elpuri head checks
+  - **Death Message System (lines 481-495):**
+    - `GetNormalDeathMessage()` returns generic death messages from array of ~30 options ("murdered @k", "eliminated @k", "slain @k", etc.) — no story references, uses `%s`/`@k` placeholders
+  - **Player Death with Story State Checks (lines 1907-1938):**
+    - `XinrochTombStoryState == 2`: Score entry: "delivered the Shadow Veil to the Necromancer and continued to further adventures, but was..." → **Must replace** (Shadow Veil quest item name, Necromancer title)
+    - `Max(AslonaStoryState, RebelStoryState) >= 4`: Score entry: "fought in the civil war of Aslona on the side of royalists/rebels, but was..." → **Must replace** (civil war location name, faction names)
+    - Generic death score entry otherwise
+  - **Evil Ending Victory Condition (lines 1563-1580):**
+    - When leaving city with Petrus' nut but without Golden Eagle Shirt:
+      - Victory music plays
+      - TextScreen: "An undead and sinister voice greets you as you leave the city behind:\n\n\"MoRtAl! ThOu HaSt SlAuGhTeReD pEtRuS aNd PlEaSeD mE!\nfRoM tHiS dAy On, ThOu ArT tHe DeArEsT sErVaNt Of AlL eViL!\"\n\nYou are victorious!"
+      - Score entry: "killed Petrus and became the Avatar of Chaos"
+    - **Must replace entire text block** — undead voice greeting, all capitalization style, Petrus name, Avatar of Chaos title
+  - **Item Check Functions (lines 2060-2085):**
+    - `HasHeadOfElpuri()` — checks for Elpuri's head item → **Function rename needed** when new boss trophy is defined
+    - `HasPetrussNut()` — checks for Petrus' left nut relic → **Function rename needed** when new quest relic is defined
+    - `HasGoldenEagleShirt()` — checks for Shirt of Golden Eagle → **Function rename needed** when new reward item is defined
+  - **New Attnam Reference (line 6640):**
+    - ADD_MESSAGE: "You recall your delight of the morning sunshine back in New Attnam."
+    - **Must replace** (location name)
+  - **Other Story-Related Code:**
+    - `GetTeam()->GetLeader() == this` — team leader death handling, generic
+    - `game::IsInWilderness()` check for ghost placement — generic
+    - `game::ShowDeathSmiley` callback — generic UI
+    - `CheckStarvationDeath(CONST_S("starved to death"))` — generic
+    - `CheckDeath(CONST_S("killed by a flying ") + Thingy->GetName(UNARTICLED))` — generic
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only ~5 hardcoded strings need adaptation, but the evil ending victory text is a multi-line narrative block with specific capitalization style that must be fully rewritten. The three item check functions (`HasHeadOfElpuri`, `HasPetrussNut`, `HasGoldenEagleShirt`) will need renaming when new quest items are defined — these are referenced from other files (human.cpp, game.cpp) so cross-file updates required.
+- [x] **Inventory `Main/Source/lterras.cpp`** (~1694 lines) — check for terrain-related hardcoded strings with setting references
+  - **Attnam Throne Victory (lines 248-283):**
+    - Three-stage vision system when sitting on throne at Attnam Cathedral (dungeon=ATTNAM, level=0):
+      - Vision 1: "You have a strange vision of yourself becoming a great ruler. The daydream fades in a whisper: \"Thou shalt be Our Champion first!\""
+      - Vision 2: "...\"Thou shalt wear Our shining armor first!\""
+      - Vision 3: "...\"Thou shalt surpass thy predecessor first!\""
+    - Final victory (Petrus' nut + Golden Eagle Shirt + max Valpurus relation):
+      - TextScreen: "A heavenly choir starts to sing Grandis Rana and a booming voice fills the air:\n\n\"MORTAL! THOU HAST SURPASSED PETRUS, AND PLEASED US GREATLY DURING THY ADVENTURES!\nWE HEREBY TITLE THEE AS OUR NEW HIGH PRIEST!\"\n\nYou are victorious!"
+      - Score entry: "became the new high priest of the Great Frog"
+    - **Must replace entire victory block** — choir song name (Grandis Rana), Petrus name, "Great Frog" title, all dialogue text
+  - **Aslona Throne Victory (lines 286-315):**
+    - Two-sword victory at Aslona Castle level 0 with Muramasa + Masamune + Blue Blood:
+      - TextScreen: "You feel strangely judged for a moment, but then you raise Asamarum and E-numa sa-am\nabove your head, and the castle submits to your reign. One by one, people trickle to\nthe throne room, until the gathered crowd start chanting and cheering:\n\n\"Long live the king!\"\n\nYou are victorious!"
+      - Score entry: "usurped the throne of Aslona"
+    - Partial sword vision: "You have a strange vision of the very castle walls shuddering in disdain and disgust."
+    - Rejection: "What do you think you're doing?! Get out!"
+    - **Must replace** — katana names (Asamarum, E-numa sa-am), Aslona name, all dialogue text
+  - **Xinroch Tomb Altar Victory (lines 795-828):**
+    - Three-stage vision system at Infuscor altar in Xinroch Tomb level 0:
+      - Vision 1: "You have a horrid vision of yourself becoming a master dark knight. The nightmare fades in a whisper: \"Thou shalt be My Champion first!\""
+      - Vision 2: "...\"Thou shalt bring Me the lost ruby flaming sword first!\""
+    - Final victory (Lost Ruby Flaming Sword + max Infuscor relation):
+      - TextScreen: "A ghastly red light emanates upward from the altar, and all eyes in \nthe temple are turned thither. A booming voice fills the air:\n\n\"mORtAl! Thou hast supplanted Xinroch and proven your devotion to Me! Therefore,\nI knight you, and hereby promote you to Master Dark Knight of the Unholy Order of Infuscor!\"\n\nYou are victorious!"
+      - Score entry: "became the new Master Dark Knight of the Unholy Order of Infuscor"
+    - **Must replace entire victory block** — Xinroch name, "Master Dark Knight", "Unholy Order of Infuscor" title, all dialogue text
+  - **Portal Gate Logic (lines 1083-1147):**
+    - `XINROCH_TOMB_ENTRANCE` portal: Story state check + warning message about dangerous portal
+      - "This dark gate seems to be a one-way portal. You sense something distant but extremely dangerous on the other side."
+    - `XINROCH_TOMB_EXIT` portal: Lost Ruby Flaming Sword possession check
+      - "Somehow you get the feeling you cannot return."
+    - **Must replace** — dungeon-specific names, flavor text
+  - **Oree's Lair Portal (lines 1118-1136):**
+    - Warning message: "You sense terrible evil trembling very near under your feet. You feel you should think twice before entering."
+    - **May need replacement** depending on new dungeon design
+  - **Other hardcoded strings:**
+    - Generic door/fountain/altar messages — no story references
+    - `ADD_MESSAGE("The ancient altar is covered with strange markings...")` (line 234) — generic
+    - `ADD_MESSAGE("You feel like a sinner.")` (line 327) — generic
+    - `ADD_MESSAGE("You don't dare to drink from this fountain.")` (line 691) — generic
+    - `ADD_MESSAGE("The fountain has dried out.")` (line 698) — generic
+    - `ADD_MESSAGE("You feel a horrible curse spreading.")` (line 1507) — generic
+  - **Assessment:** ⚠️ **HEAVY rewrite needed.** This file contains the three major victory conditions for all story arcs. Every name, title, and dialogue text must be adapted: Grandis Rana song, Petrus/Great Frog titles, Asamarum/E-numa sa-am katana names, Xinroch/Master Dark Knight/Unholy Order of Infuscor titles. The three-stage vision system structure should be preserved but all flavor text rewritten.
 - [ ] **Inventory `Main/Source/materia.cpp`** — check for material-related hardcoded strings with setting references
 - [ ] **Inventory `Main/Source/miscitem.cpp`** — check for misc item hardcoded strings with setting references
 - [ ] **Inventory `Main/Source/nonhuman.cpp`** — check for non-humanoid NPC hardcoded strings with setting references
