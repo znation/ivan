@@ -1144,7 +1144,26 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - `ADD_MESSAGE("The fountain has dried out.")` (line 698) — generic
     - `ADD_MESSAGE("You feel a horrible curse spreading.")` (line 1507) — generic
   - **Assessment:** ⚠️ **HEAVY rewrite needed.** This file contains the three major victory conditions for all story arcs. Every name, title, and dialogue text must be adapted: Grandis Rana song, Petrus/Great Frog titles, Asamarum/E-numa sa-am katana names, Xinroch/Master Dark Knight/Unholy Order of Infuscor titles. The three-stage vision system structure should be preserved but all flavor text rewritten.
-- [ ] **Inventory `Main/Source/materia.cpp`** — check for material-related hardcoded strings with setting references
+- [x] **Inventory `Main/Source/materia.cpp`** (~539 lines) — check for material-related hardcoded strings with setting references
+  - **No hardcoded story-specific ADD_MESSAGE/CONST_S strings found.**
+  - **Story-references are in function names and switch case IDs (enum-based, auto-adapt via .dat rewrite):**
+    - `EFFECT_OMMEL_URINE` → `Char->ReceiveOmmelUrine()` (line 90)
+    - `EFFECT_HOLY_BANANA` → `Char->ReceiveHolyBanana()` (line 124)
+    - `EFFECT_OMMEL_CERUMEN/SWEAT/TEARS/SNOT/BONE` → corresponding Receive functions (lines 151-155)
+    - `EFFECT_OMMEL_BLOOD` → `Char->ReceiveOmmelBlood()` (line 172)
+    - `HM_OMMEL` → `Enemy->AddOmmelConsumeEndMessage()` (line 279)
+    - `HM_HOLY_BANANA` → `Enemy->AddHolyBananaConsumeEndMessage()` (line 285)
+    - `CEM_OMMEL` → `Eater->AddOmmelConsumeEndMessage()` (line 323)
+    - `CEM_HOLY_BANANA` → `Eater->AddHolyBananaConsumeEndMessage()` (line 329)
+    - `CEM_OMMEL_BONE` → `Eater->AddOmmelBoneConsumeEndMessage()` (line 340)
+    - Also: `HM_FROG_FLESH`, `CEM_FROG_FLESH` — frog-related consume messages
+    - Other story-adjacent effects: `EFFECT_KOBOLD_FLESH`, `EFFECT_PEPSI`, `EFFECT_BLACK_UNICORN_FLESH`, etc.
+  - **Generic hardcoded strings (no rewrite needed):**
+    - "You relax a bit." (line 226) — panic reduction message
+    - "Suddenly you are engulfed in flames!" (line 419) — explosion message
+    - "Something explodes!" (line 423) — explosion message
+    - "killed in a gas explosion" (line 427) — death cause string
+  - **Assessment:** ✅ **NO rewrite needed.** All story-specific references are enum-based switch cases that will auto-adapt when material IDs and effect IDs are redefined in `define.dat`. The function names (ReceiveOmmelUrine, etc.) are internal C++ identifiers that don't appear to the player. Only generic messages like "You relax a bit" exist as hardcoded strings.
 - [ ] **Inventory `Main/Source/miscitem.cpp`** — check for misc item hardcoded strings with setting references
 - [ ] **Inventory `Main/Source/nonhuman.cpp`** — check for non-humanoid NPC hardcoded strings with setting references
 - [ ] **Inventory `Main/Source/team.cpp`** — catalog team ID definitions and any story-relevant team names/messages
