@@ -1217,9 +1217,41 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
   - **Assessment:** ✅ **NO rewrite needed.** All story-specific references are internal variable names and logic that don't appear to the player. The world map generation algorithm is tied to Attnam/New Attnam/Petrus placement but uses function calls and enum IDs rather than hardcoded strings.
 
 #### 5.1.4 Documentation & Other Files
-- [ ] **Examine `Doc/Lore/HolyStack/Titues.txt`** — religious text; find all setting references (god names, city names, lore terms)
-- [ ] **Examine `Doc/Lore/HolyStack/ValpuriFAQ.txt`** — FAQ in-character; catalog all setting references
-- [ ] **Examine `Doc/Lore/HolyStack/README.txt`** — documentation for HolyStack directory; find any setting references
+- [x] **Examine `Doc/Lore/HolyStack/Titues.txt`** (31 lines) — religious text; find all setting references
+  - **Setting References:**
+    - `Petrus Perlucidus Potissimus Magnus Cordatus Persapiens Sophos Praepotens` — Petrus's full Latin title → **Must replace** with new high priest's title
+    - `Pontifex Maximus Grandis Ranae` — "Highest Priest of the Great Frog" → **Must replace** (Great Frog reference)
+    - `Imperator Mänttä` — Emperor of Mänttä (Finnish town) → **Must replace** with new location
+    - `Dominus Paeanos Valpurus` — Hymn Master of Valpuri → **Must replace** (Valpurus/Valpuri god name)
+    - `Phylarchus Interplanus Communitatis Religiosus Pius Valpurus` — Head of ICHFV → **Must replace**
+    - `Magister Ludi Mathematicus` — Mathematical Guru Supreme
+    - `Mystagogus Hex`, `Nuntius Divinitas`, `Genitor Kahvi`, `Suco Sacrosanctus`
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** All Latin titles reference Petrus, Valpurus/Valpuri, Great Frog, and Finnish locations. Must be fully rewritten for new pantheon and setting.
+
+- [x] **Examine `Doc/Lore/HolyStack/ValpuriFAQ.txt`** (250 lines) — FAQ in-character; catalog all setting references
+  - **Setting References:**
+    - `PMGR = Pontifex Maximus Grandis Ranae` — "Highest Priest of the Great Frog" → **Must replace** throughout
+    - `Valpuri/Valpurus` god name — referenced ~50+ times → **Must replace** with new supreme deity name
+    - `ICHFV` (Interplan Community of Religious Pious Valpurus) — religious organization → **Must replace**
+    - `FEP` — another organization acronym → **Must replace**
+    - `Sea of Eternity` — cosmic location → **May need replacement** depending on new cosmology
+    - `Cosmic Source Code`, `Cosmic Datafile`, `Galactic dev/Null` — tech-cosmology terms → **May need replacement**
+    - Real-world references: Linux, Windows 2000, Bill Gates, Steve Ballmer, DJGPP compiler → **Must replace** with setting-appropriate equivalents
+    - Finnish locations: Ilomantsi (Finnish town) → **Must replace**
+    - `mickesaft's Windows-integrated Hunter-Seeker Algorithm` — Microsoft parody → **Must replace**
+    - Email: `valpurisammakko@hotmail.com` — "Valpuri frog" email → **Must replace**
+  - **Assessment:** ⚠️ **HEAVY rewrite needed.** This is a full in-character FAQ that must be completely rewritten for the new setting. The Linux/Windows parody humor should be replaced with setting-appropriate tech/cultural references. All god names, locations, and organization acronyms need replacement.
+
+- [x] **Examine `Doc/Lore/HolyStack/README.txt`** (31 lines) — documentation for HolyStack directory; find any setting references
+  - **Setting References:**
+    - `Holy Stack of Valpuri` — directory name and description → **Must replace** with new deity name
+    - `He who carrieth our flat universe, so that it won't sink into the Sea of Eternity` → **Must replace** (Valpuri + Sea of Eternity)
+    - `Holybanana-Hexist sect` — religious sect name → **Must replace**
+    - Prophet Vesa, Gospel of Timoteus, Third Book of Timo — real author names → **May need replacement**
+    - `Great Frog` — Valpurus epithet → **Must replace**
+    - Hymn file descriptions reference Valpuri throughout
+    - `Mola Mola` battle story, `The Great Battle` between Petrus and Archenemy → **Must replace**
+  - **Assessment:** ⚠️ **MODERATE rewrite needed.** All descriptive text references Valpuri/Great Frog/Holybanana. Must be fully rewritten for new setting.
 - [ ] **Review `MANUAL` file** (5 story references found) — identify each reference and its context
 - [ ] **Review `NEWS` file** (36 story references found) — catalog changelog entries with story references, assess whether they need updating
 
