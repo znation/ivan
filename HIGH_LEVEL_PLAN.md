@@ -1178,7 +1178,18 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
   - **Generic hardcoded strings (no rewrite needed):**
     - ~146 other ADD_MESSAGE/CONST_S calls are generic game messages (fireball summoning, earthquake, possession, wish effects, trap activation, etc.)
   - **Assessment:** ⚠️ **MODERATE rewrite needed.** Only 5 hardcoded strings need adaptation, but they all reference "banana" which is the core joke item being replaced. The `holybanana`, `bananapeels`, and `banana` class names will also need renaming to match new replacement items. Cross-file updates required since these classes are referenced from other source files.
-- [ ] **Inventory `Main/Source/nonhuman.cpp`** — check for non-humanoid NPC hardcoded strings with setting references
+- [x] **Inventory `Main/Source/nonhuman.cpp`** (~3000 lines) — check for non-humanoid NPC hardcoded strings with setting references
+  - **No player-facing story-specific ADD_MESSAGE/CONST_S strings found.**
+  - All 36 hardcoded strings are generic game messages (eating, hostile reaction warnings, strength/agility display, malignant aura, unarmed/kick/bite attacks, death messages with `%s` placeholders, vanish/materialize/reappear, life saved, brain on fire, psi attack, gas hiss, drizzle, rainfall)
+  - **Story-references are in class names and method logic (no player-facing strings):**
+    - `elpuri` class — unique boss character with SpecialEnemySightedReaction, Hit(), GetAICommand(), CreateCorpse() (spawns headofelpuri), TryToRiseFromTheDead()
+    - `ostrich::GetAICommand()` — AI behavior tied to New Attnam/Tweraif:
+      - Checks `TweraifIsFree()` and dungeon index `NEW_ATTNAM`
+      - Drops bananas at position (45,45), picks up bananas from ground
+      - Leaves/enters town mechanics with banana delivery loop
+      - **Must rewrite AI logic** when new setting replaces New Attnam/Tweraif/bananas
+    - `headofelpuri::Spawn()` called in elpuri::CreateCorpse() — spawns boss trophy on death
+  - **Assessment:** ✅ **NO string rewrite needed.** All hardcoded strings are generic. However, the ostrich AI logic (lines 708-795) contains New Attnam/Tweraif/banana-specific behavior that must be rewritten for the new setting — this is a behavioral/logic change rather than a text change.
 - [ ] **Inventory `Main/Source/team.cpp`** — catalog team ID definitions and any story-relevant team names/messages
 - [ ] **Inventory `Main/Source/worldmap.cpp`** — catalog world map generation text referencing Attnam, Pertturia, etc.
 
