@@ -1190,7 +1190,18 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
       - **Must rewrite AI logic** when new setting replaces New Attnam/Tweraif/bananas
     - `headofelpuri::Spawn()` called in elpuri::CreateCorpse() — spawns boss trophy on death
   - **Assessment:** ✅ **NO string rewrite needed.** All hardcoded strings are generic. However, the ostrich AI logic (lines 708-795) contains New Attnam/Tweraif/banana-specific behavior that must be rewritten for the new setting — this is a behavioral/logic change rather than a text change.
-- [ ] **Inventory `Main/Source/team.cpp`** — catalog team ID definitions and any story-relevant team names/messages
+- [x] **Inventory `Main/Source/team.cpp`** (~174 lines) — catalog team ID definitions and any story-relevant team names/messages
+  - **Story-specific hardcoded strings (2 total):**
+    - Line 97: ADD_MESSAGE("You hear an alarm ringing.") — triggered when player becomes hostile to ATTNAM_TEAM → **May need replacement** depending on new setting's city defense mechanics
+    - Line 120: ADD_MESSAGE("\"We will defend the Holy Order!\"") — angel dialogue when defending Attnam Cathedral → **Must replace** (Holy Order name, context)
+  - **Story-references in logic (no player-facing strings):**
+    - `game::GetPetrus()` call on line 68 — determines angel spawn position for Attnam defense → **Function reference needs updating** when Petrus is replaced
+    - Team ID checks: `ATTNAM_TEAM`, `PLAYER_TEAM`, `COLONIST_TEAM`, `NEW_ATTNAM_TEAM` — enum-based, auto-adapt via define.dat rewrite
+    - `game::IsSumoWrestling()` / `game::EndSumoWrestling(DISQUALIFIED)` — sumo quest tie-in → **May need replacement** when new mini-game is designed
+  - **Generic hardcoded strings (no rewrite needed):**
+    - "Two %s materialize." / "Three %s materialize." — angel spawn messages with placeholder
+    - "You have a feeling this wasn't a good idea..." — generic warning message
+  - **Assessment:** ⚠️ **LIGHT rewrite needed.** Only 2 hardcoded strings need adaptation. The `game::GetPetrus()` function call and sumo wrestling references are code-level changes that will be handled when new characters/quests are designed.
 - [ ] **Inventory `Main/Source/worldmap.cpp`** — catalog world map generation text referencing Attnam, Pertturia, etc.
 
 #### 5.1.4 Documentation & Other Files
