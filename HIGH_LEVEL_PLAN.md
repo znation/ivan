@@ -1202,7 +1202,19 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - "Two %s materialize." / "Three %s materialize." — angel spawn messages with placeholder
     - "You have a feeling this wasn't a good idea..." — generic warning message
   - **Assessment:** ⚠️ **LIGHT rewrite needed.** Only 2 hardcoded strings need adaptation. The `game::GetPetrus()` function call and sumo wrestling references are code-level changes that will be handled when new characters/quests are designed.
-- [ ] **Inventory `Main/Source/worldmap.cpp`** — catalog world map generation text referencing Attnam, Pertturia, etc.
+- [x] **Inventory `Main/Source/worldmap.cpp`** (~1327 lines) — catalog world map generation text referencing Attnam, Pertturia, etc.
+  - **No player-facing story-specific hardcoded strings found.**
+  - Only 2 active ADD_MESSAGE calls, both using `%s`/`%d` placeholders:
+    - Line 264: "World generator encountered bad seed: %d" — generic error message
+    - Line 723: "\"It's the world %s, but not as we know it...\"" — uses pet name placeholder, auto-adapts
+  - **Story-references are in variable names and logic (no player-facing strings):**
+    - `DistanceToAttnam` — location struct field tracking distance from Attnam → internal naming only
+    - `PerfectForAttnam`, `PerfectForNewAttnam` — continent selection vectors for cathedral placement
+    - `PetrusLikes` — continent where Petrus/Cathedral is placed (determined by evergreen forest + snow tile count)
+    - `NewAttnamPos`, `TunnelEntry`, `TunnelExit` — world map positions for New Attnam and underwater tunnel
+    - Core location placement logic: "Attnam and Gloomy Caves" appear on same continent as PetrusLikes
+    - `ABORT("Valpurus shall not carry more continents!")` (line 1042) — debug abort message, not player-facing
+  - **Assessment:** ✅ **NO rewrite needed.** All story-specific references are internal variable names and logic that don't appear to the player. The world map generation algorithm is tied to Attnam/New Attnam/Petrus placement but uses function calls and enum IDs rather than hardcoded strings.
 
 #### 5.1.4 Documentation & Other Files
 - [ ] **Examine `Doc/Lore/HolyStack/Titues.txt`** — religious text; find all setting references (god names, city names, lore terms)
