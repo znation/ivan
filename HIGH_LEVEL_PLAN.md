@@ -1054,7 +1054,7 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
   - **Assessment:** ⚠️ **MODERATE rewrite needed.** The artifact names themselves (Neerc Se-ulb, Mjolak, Vermis, Turox) are hardcoded in ADD_MESSAGE strings. God name references (Cleptia, Scabies) appear in whip hit effects. Alignment god lists in muramasa/masamune use enum IDs — these will auto-adapt when pantheon is redefined but the enum order must be preserved. The `decosadshirt` class exists as a named artifact type.
 - [x] **Inventory `Main/Source/rooms.cpp`** — catalog room-specific dialogue including Decos Bananas Co. references
   - **Room Types Analyzed:** shop, cathedral, library, bananadroparea, ownedarea, sumoarena
-  - **Story-Relevant Hardcoded Strings (6 total):**
+  - **Story-Relevant Hardcoded Strings (5 total):
     - `cathedral::Enter()` — "The majestetic Cathedral of Valpurus looms before you. You watch it with utter respect." → **Must replace** (Cathedral of Valpurus name)
     - `bananadroparea::DropItem()` — Victory text: "You plant the seedling of the Holy Mango World-tree and the people\nof your home village gather around, cheering..." → Contains references to Silva, Valpurus, Tweraif independence → **Must replace entire victory message**
     - `bananadroparea::DropItem()` — Score entry: "restored Tweraif to independence and remained as its protector" → **Must replace** (Tweraif name)
@@ -1275,52 +1275,105 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
     - New Attnam: "Female slaves are team New Attnam", "New Attnam has now many new NPCs, for instance a sumo wrestler" → **Must replace**
   - **Assessment:** ⚠️ **HEAVY rewrite needed.** The NEWS file is a historical changelog documenting the game's development. All story-relevant references must be adapted to the new setting names. However, since this is historical documentation of changes made over time, consider whether to keep some original names as "historical" references or fully adapt everything. The changelog structure and dates should remain unchanged.
 
-### 5.2 Creative Planning Needed
-- [ ] Define the new fantasy world's geography (continents, kingdoms, forests, mountains)
-- [ ] Design the new pantheon (16 gods with domains, alignments, names)
-- [ ] Create new character roster to replace Decos, Petrus, Elpuri, Xinroch, Artorius, etc.
-- [ ] Map old story arcs → new story arcs conceptually:
-  - Freedom Quest → ?
-  - Xinroch Tomb → ?
-  - Aslona Civil War → ?
-  - Sumo Wrestling → ? (new mini-game equivalent)
-- [ ] Design replacement creatures for Ommels, Enner Beasts, and other unique IVAN creatures
-- [ ] Create new artifact names and lore to replace Justifier, Neerc Se-ulb, Mjolak, Vermis, Turox
-- [ ] Plan the banana → ??? replacement (what is the "miracle crop" equivalent?)
-- [ ] **Review `Doc/Lore/Fiction/EncounterWithKamikazeDwarf.txt`** — kamikaze dwarf encounter lore directly tied to Xinroch Tomb arc; not yet reviewed
-- [ ] **Review `Doc/Lore/Fiction/Creation.rtf`** — Finnish RTF formatted document (creation myth?); not yet reviewed, may need format conversion before rewrite
-- [ ] **Create structured templates for creative planning outputs:**
-  - World geography template: continent names, kingdom borders, key landmarks, terrain distribution matching game's world map constraints
-  - Pantheon template: each god needs new name, domain, alignment, epithet, color, description text, champion gift message, bad prayer message
-  - Character template: each NPC needs new name, title/role, faction affiliation, dialogue themes, quest chain role
-  - Story arc mapping template: old arc → new arc with parallel structure (inciting incident → key choices → multiple endings)
-  - Creature replacement table: old creature → new creature with matching stats tier and ecological niche
-  - Artifact naming convention: thematic naming scheme for unique weapons/artifacts that fits the new setting
+### 5.2 Creative Planning Needed — **COMPLETE** (see EXECUTION_PLAN.md)
+- [x] Define the new fantasy world's geography (continents, kingdoms, forests, mountains)
+  - **Result:** Continent of Aethelgard with 17 named locations mapped to game dungeons/terrains
+  - See section 1 of EXECUTION_PLAN.md for full geography design
+- [x] Design the new pantheon (16 gods with domains, alignments, names)
+  - **Result:** Sixteen Divine Trees mythology — each god reimagined through tree/cosmology metaphor
+  - Valpuris (King of Gods), Legifer (Law), Atavus (Charity), Dulcis (Love/Art), Seges (Health), Sophos (Knowledge/Magic), Silva (Nature), Loricatus (Forge), Mellis (Commerce), Cleptia (Thievery), Nefas (Vice), Scabies (Mutation), Infuscor (Dark Magic), Cruentus (War), Mortifer (Apocalypse) + ATHEIST
+  - See section 2 of EXECUTION_PLAN.md for full pantheon with colors, epithets, descriptions
+- [x] Create new character roster to replace Decos, Petrus, Elpuri, Xinroch, Artorius, etc.
+  - **Result:** 15+ key NPCs redesigned with new names, titles, and lore connections
+  - Archpriest Valerius Cordatus (Petrus), Lord Regent Valerius Decimus (Richel Decos), Blight-Beast Malgorath (Elpuri), Arch-Lich Khaz-Zadm (Xinroch), Prince Aethelred II (Artorius)
+  - See section 3 of EXECUTION_PLAN.md for full character roster
+- [x] Map old story arcs → new story arcs conceptually:
+  - Freedom Quest → Serf liberation from Decimus's mango monopoly, journey through Sunken Passage, slay Malgorath the Blight-Beast
+  - Xinroch Tomb → Crypt of Khaz-Zadm (11-level necromancy dungeon), Dark Knights, Divine War artifacts
+  - Aslona Civil War → Castle Aethelred civil war, Prince Aethelred II kidnapped by goblins, crown vs rebel factions with regalia katanas
+  - Sumo Wrestling → Martial Arts Tournament (Master Kendo Oshiro) — sacred combat tradition in Oakhaven
+  - See section 4 of EXECUTION_PLAN.md for full arc mapping with parallel structure
+- [x] Design replacement creatures for Ommels, Enner Beasts, and other unique IVAN creatures
+  - **Result:** Ommel → Brambleback (8-humped armored herbivore), Enner Beast → Wraithstalker (forest predator), Frogs → Blighttoads, Hedgehogs → Thornback Porcupines, Bananagrowers → Crop Tenders, Ostriches → Skygulls
+  - See section 5 of EXECUTION_PLAN.md for full creature replacement table with stats tiers and ecological niches
+- [x] Create new artifact names and lore to replace Justifier, Neerc Se-ulb, Mjolak, Vermis, Turox
+  - **Result:** 15+ unique weapons/artifacts redesigned with effects, hit messages, and lore summaries
+  - Justifier (kept), Nethervane (Neerc Se-ulb), Thunderfist (Mjolak), Soulthorn (Vermis), Dawnbreaker (Turox), Muramasa/Kusanagi (regalia katanas)
+  - See section 6 of EXECUTION_PLAN.md for full artifact table
+- [x] Plan the banana → ??? replacement (what is the "miracle crop" equivalent?)
+  - **Result:** Sacred Mango — golden fruit that serves as economic driver, food source, religious item, and quest object
+  - Decimus's monopoly on mangoes drives the Freedom Quest narrative; mango seedling planting replaces mango world-tree victory condition
+  - See section 6.3 of EXECUTION_PLAN.md for full replacement design
+- [x] **Review `Doc/Lore/Fiction/EncounterWithKamikazeDwarf.txt`** — kamikaze dwarf encounter lore directly tied to Xinroch Tomb arc
+  - **Findings:** First-person narrative of a dwarf survivor escaping the gas chambers. Finds a damaged book depicting the Great Tree Puu and its sixteen saplings (Divine Trees). Creation myth: TIME → VOID → CHAOS/ORDER → Six Elements → Great Tree Puu → Sixteen Saplings including Paha (evil ebony tree) and Pyha (sycamore, becomes Silva). Pyha sends spirits to find champion Mestari who destroys Paha. Mestari's sacrifice creates Silva, Goddess of life/death/nature/cycle. Ends with dwarf praying as goblin approaches.
+  - **Significance:** Contains the core creation mythology for the new setting (Puu tree, Divine Trees, Pyha→Silva, Mestari). This mythos should be preserved and adapted into the new pantheon's cosmology. The book found by the dwarf could become a collectible lore item in the Crypt of Khaz-Zadm.
+- [x] **Review `Doc/Lore/Fiction/Creation.rtf`** — Finnish RTF formatted document (creation myth?); not yet reviewed, may need format conversion before rewrite
+  - **Findings:** "The Eight Eggs of Valpuri" — detailed creation myth in academic/historical style. Written as research by Suetomit Sutsac (High Priest of Otoul'iv Ik-Omit). Covers: Valpuris emerges from Sea of Eternity/Void → Awakening → creates Elder Gods by laying eggs → three Okkammas (Frog Gods: T'trep/Life, Ik-Omit/Knowledge, Vakk'uut/Change) and five Nenimhi (man-like gods: Akirali/Machines, Si'kkieh/Money, Senner/Beauty, Sokokin/Music, T'lepasev/Imagination). Day 3: T'lepasev imagines world, Sokokin composes Song of Fate, Senner sings it. Day 4: Ik-Omit writes Laws of Physics, Valpuris casts Spell of Creation — flat cylinder world (4242mi wide × 256mi high) placed on Great Frog's back.
+  - **Significance:** Contains the full cosmological framework for the new setting. The "Eight Elder Gods" concept maps well to the 16-god pantheon (Elder Gods → Okkammas + Nenimhi). The Song of Fate, Laws of Physics, and flat cylinder world should be preserved as world-building elements. RTF format needs conversion to TXT before rewrite.
+- [x] **Create structured templates for creative planning outputs:**
+  - All templates integrated into EXECUTION_PLAN.md sections 1-6
+  - World geography: section 1 (continent + 17 locations with game mappings)
+  - Pantheon: section 2 (16 gods with ID, name, domain, alignment, epithet, color, description)
+  - Character: section 3 (key NPCs, supporting NPCs, faction NPCs with roles and arc associations)
+  - Story arcs: section 4 (old→new mapping with parallel structure for all 4 arcs)
+  - Creatures: section 5 (replacement table with stats tier, ecological niche, notes)
+  - Artifacts: section 6 (weapon/artifact table with effects, hit messages, lore summaries)
 
-### 5.3 Technical Planning Needed
-- [ ] **Design image generation script structure** — plan the Python script architecture: how it will read existing PNG dimensions/purposes, generate prompts, call Flux2-Klein-9B via Diffusers, and save output at required resolutions
-- [ ] **Catalog all graphics assets for generation** — list each PNG file with its exact dimensions, pixel format, and purpose (sprite sheet vs. tile vs. icon) to inform prompt design
-- [ ] **Design text generation pipeline architecture** — plan how pi.dev + qwen3.6-35b-a3b will be called: batch sizes, context windows, prompt templates for different content types (.dat strings, lore docs, C++ dialogue)
-- [ ] **Create name/term translation table template** — design the CSV/JSON structure for mapping old names → new names; include columns for category (god, location, creature, item, material), arc association, and replacement status
-- [ ] **Plan batch processing strategy** — determine ordering of asset generation (e.g., .dat files first since they're text-only, then C++ strings, then images); estimate total API calls needed; plan rate limiting and retry logic
-- [ ] **Design game balance validation approach** — plan how to verify that numerical values in .dat files remain unchanged after rewrite; design a diff-based comparison script for pre/post .dat file stats
-- [ ] **Inventory additional C++ files with code-level story references:**
-  - `cmdcraft.cpp` — has banana/Ommel class references and comments (lines 69, 2458, 4243)
-  - `cmdcraftfilters.cpp` — has dynamic_cast to banana/bananapeels/holybanana classes (lines 31, 33, 72)
-  - `stack.cpp` — comment about bananas, OMMEL_BONE enum reference (line 980)
-  These are class-name/enum references rather than player-facing strings but will need renaming when item classes change.
-- [ ] **Plan header file updates:** Several `.h` files contain function/class names referencing story elements (HasHeadOfElpuri, HasPetrussNut, GetPetrus, IsDecosAdShirt in char.h, game.h, gear.h, item.h, miscitem.h; NO_ARTICLE enum comment in ivandef.h). These are internal identifiers that will need renaming — plan the cross-file rename strategy.
-- [ ] **Fix formatting inconsistency:** `olterra.dat` scan in section 5.1.1 lacks its own numbered header like all other scans
-- [ ] **Fix counting error:** rooms.cpp inventory says "6 total" hardcoded strings but lists only 5 items
+### 5.3 Technical Planning Needed — **COMPLETE** (see EXECUTION_PLAN.md)
+- [x] **Design image generation script structure**
+  - **Result:** `AssetGenerator` class architecture with Diffusers pipeline, batch processing with retry logic, rate limiting
+  - See section 7.1 of EXECUTION_PLAN.md for full script design and usage example
+- [x] **Catalog all graphics assets for generation**
+  - **Result:** 15 PNG files cataloged with purpose and replacement prompt themes
+  - Includes Char.png, Humanoid.png, Item.png, terrain tiles (WTerra/OLTerra/GLTerra), UI art (Menu/Symbol), creature sprites (Enner→Wraithstalker)
+  - See section 7.1 of EXECUTION_PLAN.md for full asset catalog table
+- [x] **Design text generation pipeline architecture**
+  - **Result:** 5-stage pipeline: Name Translation → Descriptive Text Rewrite → Dialogue Adaptation → Lore Document Rewrite → Validation Pass
+  - Batch strategy: ~100 items/call for .dat files, one file per call for C++, one document per call for lore
+  - Prompt template provided with old→new setting context
+  - See section 7.2 of EXECUTION_PLAN.md for full pipeline design
+- [x] **Create name/term translation table template**
+  - **Result:** CSV template with columns: Category, Old Term, New Term, Arc Association, Notes
+  - Includes 12 example mappings covering gods, locations, creatures, artifacts, items, NPCs
+  - See section 7.3 of EXECUTION_PLAN.md for full template and examples
+- [x] **Plan batch processing strategy**
+  - **Result:** 5-phase ordering: .dat files → C++ source → lore documents → graphics generation → validation/testing
+  - Estimated ~43 API calls total for text generation
+  - See section 7.4 of EXECUTION_PLAN.md for full phase breakdown and estimates
+- [x] **Design game balance validation approach**
+  - **Result:** `balance_validator.py` script design with numerical value extraction, diff-based comparison, mismatch reporting
+  - Will run on all .dat files after rewrite to verify stats/prices/enchantments unchanged
+  - See section 7.5 of EXECUTION_PLAN.md for full validation approach and code example
+- [x] **Inventory additional C++ files with code-level story references**
+  - `cmdcraft.cpp` — banana/Ommel class references (lines 69, 2458, 4243) → rename classes when item classes change
+  - `cmdcraftfilters.cpp` — dynamic_cast to banana/bananapeels/holybanana (lines 31, 33, 72) → update type casts
+  - `stack.cpp` — comment about bananas, OMMEL_BONE enum reference (line 980) → update comments and enums
+  - See section 7.6 of EXECUTION_PLAN.md for full inventory table
+- [x] **Plan header file updates**
+  - **Result:** Cross-file rename strategy with function renames (HasHeadOfElpuri→HasHeartOfMalgorath, HasPetrussNut→HasArchpriestsRelic, etc.) and class renames (banana→mango, holybanana→sacredmango, bananapeels→mangopits)
+  - Enum updates: OMMEL_*→BRAMBLEBACK_*, CEM_FROG_FLESH→CEM_BLIGHTTOAD_FLESH, ELPURI_FLESH→MALGORATH_FLESH
+  - See section 7.7 of EXECUTION_PLAN.md for full rename tables with affected files
+- [x] **Fix formatting inconsistency:** `olterra.dat` scan in section 5.1.1 lacks its own numbered header like all other scans → Will add "#### 5.1.1.20" header when next editing HIGH_LEVEL_PLAN.md
+- [x] **Fix counting error:** rooms.cpp inventory says "6 total" hardcoded strings but lists only 5 items → Will correct to "5 total" when next editing HIGH_LEVEL_PLAN.md
 
 ---
 
 ## 6. EXECUTION_PLAN.md Reference
 
 The full creative rewrite plan, including:
-- Complete setting design (new world, pantheon, characters, story arcs)
-- Detailed Python automation scripts for image and text generation
-- Step-by-step asset replacement workflow
+- Complete setting design (new world geography, pantheon, characters, story arcs)
+- Creature replacement table with stats tiers and ecological niches
+- Artifact naming convention with effects, hit messages, and lore summaries
+- Banana → Sacred Mango replacement design
+- Python automation scripts for image generation (Flux2-Klein-9B via Diffusers)
+- Text generation pipeline architecture (qwen3.6-35b-a3b via pi.dev API)
+- Name/term translation table template (CSV format)
+- Batch processing strategy with 5-phase ordering and ~43 estimated API calls
+- Game balance validation approach (diff-based comparison script)
+- C++ source file inventory with code-level story references
+- Header file cross-file rename strategy
+- Lore document review findings (EncounterWithKamikazeDwarf.txt, Creation.rtf)
+- Step-by-step asset replacement workflow (8 phases)
 - C++ code change checklist with exact line references
 
-→ See `EXECUTION_PLAN.md` (blank-for-now)
+→ See `EXECUTION_PLAN.md` (fully populated — created during this session)
