@@ -1287,6 +1287,15 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
 - [ ] Design replacement creatures for Ommels, Enner Beasts, and other unique IVAN creatures
 - [ ] Create new artifact names and lore to replace Justifier, Neerc Se-ulb, Mjolak, Vermis, Turox
 - [ ] Plan the banana → ??? replacement (what is the "miracle crop" equivalent?)
+- [ ] **Review `Doc/Lore/Fiction/EncounterWithKamikazeDwarf.txt`** — kamikaze dwarf encounter lore directly tied to Xinroch Tomb arc; not yet reviewed
+- [ ] **Review `Doc/Lore/Fiction/Creation.rtf`** — Finnish RTF formatted document (creation myth?); not yet reviewed, may need format conversion before rewrite
+- [ ] **Create structured templates for creative planning outputs:**
+  - World geography template: continent names, kingdom borders, key landmarks, terrain distribution matching game's world map constraints
+  - Pantheon template: each god needs new name, domain, alignment, epithet, color, description text, champion gift message, bad prayer message
+  - Character template: each NPC needs new name, title/role, faction affiliation, dialogue themes, quest chain role
+  - Story arc mapping template: old arc → new arc with parallel structure (inciting incident → key choices → multiple endings)
+  - Creature replacement table: old creature → new creature with matching stats tier and ecological niche
+  - Artifact naming convention: thematic naming scheme for unique weapons/artifacts that fits the new setting
 
 ### 5.3 Technical Planning Needed
 - [ ] **Design image generation script structure** — plan the Python script architecture: how it will read existing PNG dimensions/purposes, generate prompts, call Flux2-Klein-9B via Diffusers, and save output at required resolutions
@@ -1295,6 +1304,14 @@ Each source file should be inventoried for hardcoded story-specific strings (nam
 - [ ] **Create name/term translation table template** — design the CSV/JSON structure for mapping old names → new names; include columns for category (god, location, creature, item, material), arc association, and replacement status
 - [ ] **Plan batch processing strategy** — determine ordering of asset generation (e.g., .dat files first since they're text-only, then C++ strings, then images); estimate total API calls needed; plan rate limiting and retry logic
 - [ ] **Design game balance validation approach** — plan how to verify that numerical values in .dat files remain unchanged after rewrite; design a diff-based comparison script for pre/post .dat file stats
+- [ ] **Inventory additional C++ files with code-level story references:**
+  - `cmdcraft.cpp` — has banana/Ommel class references and comments (lines 69, 2458, 4243)
+  - `cmdcraftfilters.cpp` — has dynamic_cast to banana/bananapeels/holybanana classes (lines 31, 33, 72)
+  - `stack.cpp` — comment about bananas, OMMEL_BONE enum reference (line 980)
+  These are class-name/enum references rather than player-facing strings but will need renaming when item classes change.
+- [ ] **Plan header file updates:** Several `.h` files contain function/class names referencing story elements (HasHeadOfElpuri, HasPetrussNut, GetPetrus, IsDecosAdShirt in char.h, game.h, gear.h, item.h, miscitem.h; NO_ARTICLE enum comment in ivandef.h). These are internal identifiers that will need renaming — plan the cross-file rename strategy.
+- [ ] **Fix formatting inconsistency:** `olterra.dat` scan in section 5.1.1 lacks its own numbered header like all other scans
+- [ ] **Fix counting error:** rooms.cpp inventory says "6 total" hardcoded strings but lists only 5 items
 
 ---
 
