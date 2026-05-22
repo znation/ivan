@@ -11,7 +11,7 @@ while true; do
     # Show each event as it arrives so we can see thinking, tool calls, and text deltas
     echo "=== Starting pi ===" >&2
     pi --mode json \
-        "Address the next TODO item in HIGH_LEVEL_PLAN.md. Once it's done, write back to HIGH_LEVEL_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
+        "Address the next TODO item in EXECUTION_PLAN.md. To get more context about what we're attempting, feel free to take a look at HIGH_LEVEL_PLAN.md. Once your one TODO item is done, write back to EXECUTION_PLAN.md indicating it's complete, and commit any changes. Then, respond MORE if there are more TODO items, or DONE if all are done." \
         2>&1 | tee "$JSON_FILE"
 
     # Check for DONE or MORE in the raw JSON stream
