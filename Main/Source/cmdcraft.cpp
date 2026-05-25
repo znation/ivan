@@ -4240,7 +4240,7 @@ bool craftcore::IsBone(material* mat)
     vBone.push_back(DRAGON_BONE);
     vBone.push_back(WHALE_BONE);
     vBone.push_back(WRAITH_BONE);
-    vBone.push_back(OMMEL_BONE);
+    vBone.push_back(BRAMBLEBACK_BONE);
     // new IDs wont be sequential, so no range...
     return true;
   }();bDummyInit=true;//assigning just to remove IDE's unused warnings.. is dead code anyway, should not exist...

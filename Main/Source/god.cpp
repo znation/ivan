@@ -235,7 +235,7 @@ character* god::CreateAngel(team* Team, int LifeBase)
     {
       angel* Angel;
 
-      if(LifeBase && GetType() != VALPURUS
+      if(LifeBase && GetType() != VALPURIS
          && (!(RAND() % 5) || abs(Relation) == 1000))
       {
         Angel = archangel::Spawn(GetType());

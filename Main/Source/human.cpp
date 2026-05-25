@@ -301,7 +301,7 @@ void petrus::GetAICommand()
     if(CanBeSeenByPlayer())
       ADD_MESSAGE("%s shouts a magnificent prayer to Valpurus.", CHAR_NAME(DEFINITE));
 
-    angel* Angel = angel::Spawn(VALPURUS);
+    angel* Angel = angel::Spawn(VALPURIS);
     Angel->SetLifeExpectancy(10000, 0);
     v2 Where = GetLevel()->GetNearestFreeSquare(Angel, GetPos());
 
@@ -833,7 +833,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->IsBurning())
   {
-    long Price = GetConfig() == VALPURUS ? 25 : 5;
+    long Price = GetConfig() == VALPURIS ? 25 : 5;
 
     if(PLAYER->GetMoney() >= Price)
     {
@@ -864,7 +864,7 @@ void priest::BeTalkedTo()
         if(OldBodyPart)
         {
           HasOld = true;
-          long Price = GetConfig() == VALPURUS ? 50 : 10;
+          long Price = GetConfig() == VALPURIS ? 50 : 10;
 
           if(PLAYER->GetMoney() >= Price)
           {
@@ -894,7 +894,7 @@ void priest::BeTalkedTo()
         }
       }
 
-      long Price = GetConfig() == VALPURUS ? 100 : 20;
+      long Price = GetConfig() == VALPURIS ? 100 : 20;
 
       if(PLAYER->GetMoney() >= Price)
       {
@@ -926,7 +926,7 @@ void priest::BeTalkedTo()
 
       if(BodyPart->CanRegenerate() && BodyPart->IsBurnt())
       {
-        long Price = GetConfig() == VALPURUS ? 25 : 5;
+        long Price = GetConfig() == VALPURIS ? 25 : 5;
 
         if(PLAYER->GetMoney() >= Price)
         {
@@ -954,7 +954,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->TemporaryStateIsActivated(POISONED))
   {
-    long Price = GetConfig() == VALPURUS ? 25 : 5;
+    long Price = GetConfig() == VALPURIS ? 25 : 5;
 
     if(PLAYER->GetMoney() >= Price)
     {
@@ -976,7 +976,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->TemporaryStateIsActivated(LEPROSY))
   {
-    long Price = GetConfig() == VALPURUS ? 100 : 20;
+    long Price = GetConfig() == VALPURIS ? 100 : 20;
 
     if(PLAYER->GetMoney() >= Price)
     {
@@ -998,7 +998,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->TemporaryStateIsActivated(LYCANTHROPY))
   {
-    long Price = GetConfig() == VALPURUS ? 100 : 20;
+    long Price = GetConfig() == VALPURIS ? 100 : 20;
 
     if(PLAYER->GetMoney() >= Price)
     {
@@ -1023,7 +1023,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->TemporaryStateIsActivated(VAMPIRISM))
   {
-    long Price = GetConfig() == VALPURUS ? 100 : 20;
+    long Price = GetConfig() == VALPURIS ? 100 : 20;
 
     if(PLAYER->GetMoney() >= Price)
     {
@@ -1048,7 +1048,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->TemporaryStateIsActivated(PARASITE_TAPE_WORM))
   {
-    long Price = GetConfig() == VALPURUS ? 100 : 20;
+    long Price = GetConfig() == VALPURIS ? 100 : 20;
 
     if(PLAYER->GetMoney() >= Price)
     {
@@ -1072,7 +1072,7 @@ void priest::BeTalkedTo()
 
   if(PLAYER->TemporaryStateIsActivated(PARASITE_MIND_WORM))
   {
-    long Price = GetConfig() == VALPURUS ? 100 : 20;
+    long Price = GetConfig() == VALPURIS ? 100 : 20;
 
     if(PLAYER->GetMoney() >= Price)
     {

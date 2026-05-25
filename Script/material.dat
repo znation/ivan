@@ -1279,7 +1279,7 @@ solid
     Color = rgb16(80, 80, 176);
     NameStem = "golden eagle feather";
     Flexibility = 25;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     SoftenedMaterial = STYMPHALIAN_FEATHER;
     IntelligenceRequirement = 50;
     PriceModifier = 1000;
@@ -3632,7 +3632,7 @@ solid
     Density = 3500;
     Color = rgb16(240, 240, 240);
     NameStem = "diamond";
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     NaturalForm = stone;
     SoftenedMaterial = RUBY;
     HardenedMaterial = BLACK_DIAMOND;
@@ -4492,16 +4492,16 @@ organic /* Substances that spoil but are not flesh. */
     CommonFlags = Base&~(CAN_BE_WISHED|CAN_BE_MIRRORED);
   }
 
-  Config OMMEL_CERUMEN;
+  Config BRAMBLEBACK_CERUMEN;
   {
     StrengthValue = 1;
     Color = rgb16(180, 150, 50);
     NutritionValue = 500;
     PriceModifier = 10000;
     NameStem = "ommel cerumen";
-    Effect = EFFECT_OMMEL_CERUMEN;
-    ConsumeEndMessage = CEM_OMMEL;
-    HitMessage = HM_OMMEL;
+    Effect = EFFECT_BRAMBLEBACK_CERUMEN;
+    ConsumeEndMessage = CEM_BRAMBLEBACK;
+    HitMessage = HM_BRAMBLEBACK;
     AttachedGod = SOPHOS;
     Density = 500;
     ConsumeType = CT_PROCESSED;
@@ -4566,7 +4566,7 @@ organic /* Substances that spoil but are not flesh. */
     InteractionFlags = Base|CAN_BURN;
   }
 
-  Config OMMEL_BONE;
+  Config BRAMBLEBACK_BONE;
   {
     StrengthValue = 250;
     Flexibility = 4;
@@ -4579,9 +4579,9 @@ organic /* Substances that spoil but are not flesh. */
     SpoilModifier = 48000;
     AttachedGod = MORTIFER;
     SoftenedMaterial = DRAGON_BONE;
-    HardenedMaterial = OMMEL_TOOTH;
-    Effect = EFFECT_OMMEL_BONE;
-    ConsumeEndMessage = CEM_OMMEL_BONE;
+    HardenedMaterial = BRAMBLEBACK_TOOTH;
+    Effect = EFFECT_BRAMBLEBACK_BONE;
+    ConsumeEndMessage = CEM_BRAMBLEBACK_BONE;
     NameFlags = Base|USE_AN;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
@@ -4636,14 +4636,14 @@ organic /* Substances that spoil but are not flesh. */
     SpoilModifier = 72000;
     AttachedGod = MORTIFER;
     SoftenedMaterial = TROLL_TUSK;
-    HardenedMaterial = OMMEL_TOOTH;
+    HardenedMaterial = BRAMBLEBACK_TOOTH;
     IntelligenceRequirement = 5;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
     InteractionFlags = Base|CAN_BURN;
     FireResistance = 6;
   }
 
-  Config OMMEL_TOOTH;
+  Config BRAMBLEBACK_TOOTH;
   {
     StrengthValue = 375;
     Density = 5000;
@@ -4656,8 +4656,8 @@ organic /* Substances that spoil but are not flesh. */
     AttachedGod = MORTIFER;
     SoftenedMaterial = MAMMOTH_TUSK;
     IntelligenceRequirement = 7;
-    Effect = EFFECT_OMMEL_BONE;
-    ConsumeEndMessage = CEM_OMMEL_BONE;
+    Effect = EFFECT_BRAMBLEBACK_BONE;
+    ConsumeEndMessage = CEM_BRAMBLEBACK_BONE;
     NameFlags = Base|USE_AN;
     CategoryFlags = Base|IS_SPARKLING|IS_GOLEM_MATERIAL;
   }
@@ -5072,7 +5072,7 @@ liquid
     NameStem = "coke";
     Effect = EFFECT_TRAIN_WISDOM;
     ConsumeEndMessage = CEM_COCA_COLA;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     PriceModifier = 10000;
     CommonFlags = Base|IS_VALUABLE&~(CAN_BE_WISHED|CAN_BE_MIRRORED);
     InteractionFlags = Base|EFFECT_IS_GOOD;
@@ -5671,7 +5671,7 @@ liquid
     PriceModifier = 1500;
   }
 
-  Config OMMEL_BLOOD;
+  Config BRAMBLEBACK_BLOOD;
   {
     StrengthValue = 1;
     Color = rgb16(160, 0, 0);
@@ -5679,9 +5679,9 @@ liquid
     NutritionValue = 1500;
     PriceModifier = 2500;
     NameStem = "ommel blood";
-    Effect = EFFECT_OMMEL_BLOOD;
-    ConsumeEndMessage = CEM_OMMEL;
-    HitMessage = HM_OMMEL;
+    Effect = EFFECT_BRAMBLEBACK_BLOOD;
+    ConsumeEndMessage = CEM_BRAMBLEBACK;
+    HitMessage = HM_BRAMBLEBACK;
     Alpha = 175;
     AttachedGod = CRUENTUS;
     CategoryFlags = IS_BLOOD;
@@ -5693,7 +5693,7 @@ liquid
 
   /* Ommel liquids */
 
-  Config OMMEL_URINE;
+  Config BRAMBLEBACK_URINE;
   {
     StrengthValue = 1;
     Color = rgb16(160, 160, 0);
@@ -5701,9 +5701,9 @@ liquid
     NutritionValue = 500;
     PriceModifier = 2500;
     NameStem = "ommel urine";
-    Effect = EFFECT_OMMEL_URINE;
-    ConsumeEndMessage = CEM_OMMEL;
-    HitMessage = HM_OMMEL;
+    Effect = EFFECT_BRAMBLEBACK_URINE;
+    ConsumeEndMessage = CEM_BRAMBLEBACK;
+    HitMessage = HM_BRAMBLEBACK;
     Alpha = 150;
     AttachedGod = NEFAS;
     CommonFlags = Base|IS_VALUABLE&~CAN_BE_MIRRORED;
@@ -5712,48 +5712,48 @@ liquid
     InteractionFlags = Base|EFFECT_IS_GOOD;
   }
 
-  Config OMMEL_SWEAT;
+  Config BRAMBLEBACK_SWEAT;
   {
     StrengthValue = 1;
     Color = rgb16(144, 144, 240);
     NutritionValue = 250;
     PriceModifier = 2500;
     NameStem = "ommel sweat";
-    Effect = EFFECT_OMMEL_SWEAT;
-    ConsumeEndMessage = CEM_OMMEL;
-    HitMessage = HM_OMMEL;
+    Effect = EFFECT_BRAMBLEBACK_SWEAT;
+    ConsumeEndMessage = CEM_BRAMBLEBACK;
+    HitMessage = HM_BRAMBLEBACK;
     AttachedGod = SEGES;
     CommonFlags = Base|IS_VALUABLE&~CAN_BE_MIRRORED;
     NameFlags = Base|USE_AN;
     InteractionFlags = Base|EFFECT_IS_GOOD;
   }
 
-  Config OMMEL_TEARS;
+  Config BRAMBLEBACK_TEARS;
   {
     StrengthValue = 1;
     Color = rgb16(144, 144, 240);
     NutritionValue = 250;
     PriceModifier = 2500;
     NameStem = "ommel tears";
-    Effect = EFFECT_OMMEL_TEARS;
-    ConsumeEndMessage = CEM_OMMEL;
-    HitMessage = HM_OMMEL;
+    Effect = EFFECT_BRAMBLEBACK_TEARS;
+    ConsumeEndMessage = CEM_BRAMBLEBACK;
+    HitMessage = HM_BRAMBLEBACK;
     AttachedGod = MELLIS;
     CommonFlags = Base|IS_VALUABLE&~CAN_BE_MIRRORED;
     NameFlags = Base|USE_AN;
     InteractionFlags = Base|EFFECT_IS_GOOD;
   }
 
-  Config OMMEL_SNOT;
+  Config BRAMBLEBACK_SNOT;
   {
     StrengthValue = 1;
     Color = rgb16(145, 145, 16);
     NutritionValue = 750;
     PriceModifier = 7500;
     NameStem = "ommel snot";
-    Effect = EFFECT_OMMEL_SNOT;
-    ConsumeEndMessage = CEM_OMMEL;
-    HitMessage = HM_OMMEL;
+    Effect = EFFECT_BRAMBLEBACK_SNOT;
+    ConsumeEndMessage = CEM_BRAMBLEBACK;
+    HitMessage = HM_BRAMBLEBACK;
     AttachedGod = SEGES;
     Density = 800;
     CommonFlags = Base|IS_VALUABLE&~CAN_BE_MIRRORED;

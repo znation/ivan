@@ -346,8 +346,8 @@ class character : public entity, public id
   void Move(v2, truth, truth = false);
   virtual truth MoveRandomly();
   void ReceiveNutrition(long);
-  void ReceiveOmmelUrine(long);
-  void ReceiveOmmelBlood(long);
+  void ReceiveBramblebackUrine(long);
+  void ReceiveBramblebackBlood(long);
   void ReceivePepsi(long);
   void ReceiveSchoolFood(long);
   void Regenerate();
@@ -455,7 +455,7 @@ class character : public entity, public id
   void AddHealingLiquidConsumeEndMessage() const;
   void AddSchoolFoodConsumeEndMessage() const;
   void AddSchoolFoodHitMessage() const;
-  void AddOmmelConsumeEndMessage() const;
+  void AddBramblebackConsumeEndMessage() const;
   void AddPepsiConsumeEndMessage() const;
   void AddCocaColaConsumeEndMessage() const;
   void AddFrogFleshConsumeEndMessage() const;
@@ -465,7 +465,7 @@ class character : public entity, public id
   void AddBlackUnicornConsumeEndMessage() const;
   void AddGrayUnicornConsumeEndMessage() const;
   void AddWhiteUnicornConsumeEndMessage() const;
-  void AddOmmelBoneConsumeEndMessage() const;
+  void AddBramblebackBoneConsumeEndMessage() const;
   void AddLiquidHorrorConsumeEndMessage() const;
   void PrintInfo() const;
   virtual item* SevereBodyPart(int, truth = false, stack* = 0);
@@ -1071,11 +1071,11 @@ class character : public entity, public id
   virtual truth CanHear() const;
   void BeginLeprosy();
   void EndLeprosy();
-  void ReceiveOmmelCerumen(long);
-  void ReceiveOmmelSweat(long);
-  void ReceiveOmmelTears(long);
-  void ReceiveOmmelSnot(long);
-  void ReceiveOmmelBone(long);
+  void ReceiveBramblebackCerumen(long);
+  void ReceiveBramblebackSweat(long);
+  void ReceiveBramblebackTears(long);
+  void ReceiveBramblebackSnot(long);
+  void ReceiveBramblebackBone(long);
   truth IsSameAs(ccharacter*) const;
   ulong GetCommandFlags() const;
   void SetCommandFlags(ulong What) { CommandFlags = What; }

@@ -72,9 +72,9 @@ void team::Hostility(team* Enemy)
           for(int c = 0; c < 3; ++c)
           {
             if(!c)
-              Angel = archangel::Spawn(VALPURUS);
+              Angel = archangel::Spawn(VALPURIS);
             else
-              Angel = angel::Spawn(VALPURUS);
+              Angel = angel::Spawn(VALPURIS);
 
             v2 Where = game::GetCurrentLevel()->GetNearestFreeSquare(Angel, AngelPos);
 

@@ -87,7 +87,7 @@ truth material::Effect(character* Char, int BodyPart, long Amount)
   {
    case EFFECT_POISON: Char->BeginTemporaryState(POISONED, Amount); break;
    case EFFECT_DARKNESS: Char->ReceiveDarkness(Amount); break;
-   case EFFECT_OMMEL_URINE: Char->ReceiveOmmelUrine(Amount); break;
+   case EFFECT_BRAMBLEBACK_URINE: Char->ReceiveBramblebackUrine(Amount); break;
    case EFFECT_PEPSI: Char->ReceivePepsi(Amount); break;
    case EFFECT_KOBOLD_FLESH: Char->ReceiveKoboldFlesh(Amount); break;
    case EFFECT_HEAL: Char->ReceiveHeal(Amount); break;
@@ -148,11 +148,11 @@ truth material::Effect(character* Char, int BodyPart, long Amount)
                                 Volume % 250 + Pos.X + Pos.Y + 1);
       break;
     }
-   case EFFECT_OMMEL_CERUMEN: Char->ReceiveOmmelCerumen(Amount); break;
-   case EFFECT_OMMEL_SWEAT: Char->ReceiveOmmelSweat(Amount); break;
-   case EFFECT_OMMEL_TEARS: Char->ReceiveOmmelTears(Amount); break;
-   case EFFECT_OMMEL_SNOT: Char->ReceiveOmmelSnot(Amount); break;
-   case EFFECT_OMMEL_BONE: Char->ReceiveOmmelBone(Amount); break;
+   case EFFECT_BRAMBLEBACK_CERUMEN: Char->ReceiveBramblebackCerumen(Amount); break;
+   case EFFECT_BRAMBLEBACK_SWEAT: Char->ReceiveBramblebackSweat(Amount); break;
+   case EFFECT_BRAMBLEBACK_TEARS: Char->ReceiveBramblebackTears(Amount); break;
+   case EFFECT_BRAMBLEBACK_SNOT: Char->ReceiveBramblebackSnot(Amount); break;
+   case EFFECT_BRAMBLEBACK_BONE: Char->ReceiveBramblebackBone(Amount); break;
    case EFFECT_MUSTARD_GAS: Char->ReceiveMustardGas(BodyPart, Amount); break;
    case EFFECT_MUSTARD_GAS_LIQUID: Char->ReceiveMustardGasLiquid(BodyPart, Amount); break;
    case EFFECT_VAMPIRISM:
@@ -169,7 +169,7 @@ truth material::Effect(character* Char, int BodyPart, long Amount)
       Char->RestoreStamina();
       break;
     }
-   case EFFECT_OMMEL_BLOOD: Char->ReceiveOmmelBlood(Amount); break;
+   case EFFECT_BRAMBLEBACK_BLOOD: Char->ReceiveBramblebackBlood(Amount); break;
    case EFFECT_PANIC:
     {
       if(!Char->StateIsActivated(FEARLESS) && Char->GetPanicLevel() > 0)
@@ -276,7 +276,7 @@ truth material::HitEffect(character* Enemy, bodypart* BodyPart)
   {
    case HM_SCHOOL_FOOD: Enemy->AddSchoolFoodHitMessage(); break;
    case HM_FROG_FLESH: Enemy->AddFrogFleshConsumeEndMessage(); break;
-   case HM_OMMEL: Enemy->AddOmmelConsumeEndMessage(); break;
+   case HM_BRAMBLEBACK: Enemy->AddBramblebackConsumeEndMessage(); break;
    case HM_PEPSI: Enemy->AddPepsiConsumeEndMessage(); break;
    case HM_KOBOLD_FLESH: Enemy->AddKoboldFleshHitMessage(); break;
    case HM_HEALING_LIQUID: Enemy->AddHealingLiquidConsumeEndMessage(); break;
@@ -320,7 +320,7 @@ void material::AddConsumeEndMessage(character* Eater) const
    case CEM_SCHOOL_FOOD: Eater->AddSchoolFoodConsumeEndMessage(); break;
    case CEM_BONE: Eater->AddBoneConsumeEndMessage(); break;
    case CEM_FROG_FLESH: Eater->AddFrogFleshConsumeEndMessage(); break;
-   case CEM_OMMEL: Eater->AddOmmelConsumeEndMessage(); break;
+   case CEM_BRAMBLEBACK: Eater->AddBramblebackConsumeEndMessage(); break;
    case CEM_PEPSI: Eater->AddPepsiConsumeEndMessage(); break;
    case CEM_KOBOLD_FLESH: Eater->AddKoboldFleshConsumeEndMessage(); break;
    case CEM_HEALING_LIQUID: Eater->AddHealingLiquidConsumeEndMessage(); break;
@@ -337,7 +337,7 @@ void material::AddConsumeEndMessage(character* Eater) const
    case CEM_WHITE_UNICORN_FLESH:
     Eater->AddWhiteUnicornConsumeEndMessage();
     break;
-   case CEM_OMMEL_BONE: Eater->AddOmmelBoneConsumeEndMessage(); break;
+   case CEM_BRAMBLEBACK_BONE: Eater->AddBramblebackBoneConsumeEndMessage(); break;
    case CEM_COCA_COLA: Eater->AddCocaColaConsumeEndMessage(); break;
    case CEM_LIQUID_HORROR: Eater->AddLiquidHorrorConsumeEndMessage(); break;
   }

@@ -186,7 +186,7 @@ can /* materialcontainer-> */
   MainMaterialConfig == IRON;
   SecondaryMaterialConfig = { 25,
                               BANANA_FLESH, SCHOOL_FOOD, MUSHROOM_FLESH, PEA_SOUP,
-                              OMMEL_CERUMEN, OMMEL_SNOT, FLOATING_EYE_FLESH, CAT_FLESH,
+                              BRAMBLEBACK_CERUMEN, BRAMBLEBACK_SNOT, FLOATING_EYE_FLESH, CAT_FLESH,
                               RAT_FLESH, PINEAPPLE_FLESH, HEALING_LIQUID, CHICKEN_SOUP,
                               PORRIDGE, CUSTARD, HONEY, MYSTERY_MEAT, TUNA, SARDINE,
                               BEAR_FLESH, BLINK_DOG_FLESH, GRAY_UNICORN_FLESH, MANGO_FLESH,
@@ -265,7 +265,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 79,
                            ASH_WOOD, CYPRESS_WOOD, BAMBOO_WOOD, MAHOGANY_WOOD,
@@ -282,7 +282,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, KAURI_WOOD,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, STEEL, IRON, STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     MaterialConfigChances = { 79,
                               100, 50, 100, 50, 100, 50, 50, 25, 5, 1, 10, 200, 50, 50,
@@ -354,7 +354,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 79,
                            ASH_WOOD, CYPRESS_WOOD, BAMBOO_WOOD, MAHOGANY_WOOD,
@@ -371,7 +371,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, KAURI_WOOD,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, STEEL, IRON, STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     MaterialConfigChances = { 79,
                               100, 50, 100, 50, 100, 50, 50, 25, 5, 1, 10, 200, 50, 50,
@@ -446,7 +446,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 79,
                            ASH_WOOD, CYPRESS_WOOD, BAMBOO_WOOD, MAHOGANY_WOOD,
@@ -463,7 +463,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, KAURI_WOOD,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, STEEL, IRON, STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     MaterialConfigChances = { 79,
                               100, 50, 100, 50, 100, 50, 50, 25, 5, 1, 10, 200, 50, 50,
@@ -581,7 +581,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           BONE, WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           BONE, WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 96,
                            FUNGI_WOOD, SPRUCE_WOOD, SYCAMORE_WOOD, ELM_WOOD, ASH_WOOD,
@@ -633,7 +633,7 @@ meleeweapon
                            MOON_SILVER, FAIRY_STEEL, MITHRIL, STAR_METAL, DARK_GOLD,
                            DARK_MATTER, STAINLESS_STEEL, ARCANITE, OCCULTUM, ILLITHIUM,
                            PRIMORDIAL_ICE, STEEL, DWARF_STEEL, METEORIC_STEEL, UKKU_STEEL,
-                           SOUL_STEEL, BLOOD_STEEL, ADAMANT, OMMEL_BONE, OMMEL_TOOTH; }
+                           SOUL_STEEL, BLOOD_STEEL, ADAMANT, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     SecondaryMaterialConfig = { 42,
                            EBONY_WOOD, KAURI_WOOD, RATA_WOOD, SIDGURE_WOOD, SIDGURE_WOOD,
                            KAURI_WOOD, KAURI_WOOD, RATA_WOOD, RATA_WOOD, SIDGURE_WOOD, KAURI_WOOD, KAURI_WOOD,
@@ -675,7 +675,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == PINE_WOOD;
     MaterialConfigChances = { 67,
@@ -737,7 +737,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == BIRCH_WOOD;
     MaterialConfigChances = { 67,
@@ -801,7 +801,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == FIR_WOOD;
     MaterialConfigChances = { 68,
@@ -862,7 +862,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == FIR_WOOD;
     MaterialConfigChances = { 67,
@@ -925,7 +925,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == FIR_WOOD;
     MaterialConfigChances = { 67,
@@ -988,7 +988,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, JOTUN_ICE, PRIMORDIAL_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 67,
                            DRAGON_BONE, OBSIDIAN, JASPER, JACINTH,
@@ -1003,7 +1003,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, JOTUN_ICE, PRIMORDIAL_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, STEEL, IRON, STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     MaterialConfigChances = { 67,
                               10, 200, 50, 50,
@@ -1070,7 +1070,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 67,
                            DRAGON_BONE, OBSIDIAN, JASPER, JACINTH,
@@ -1085,7 +1085,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, STEEL, IRON, STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     MaterialConfigChances = { 67,
                               10, 200, 50, 50,
@@ -1155,7 +1155,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig = { 79,
                            ASH_WOOD, CYPRESS_WOOD, BAMBOO_WOOD, MAHOGANY_WOOD,
@@ -1172,7 +1172,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, KAURI_WOOD,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, STEEL, IRON, STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     MaterialConfigChances = { 79,
                               100, 50, 100, 50, 100, 50, 50, 25, 5, 1, 10, 200, 50, 50,
@@ -1242,7 +1242,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == OAK_WOOD;
     MaterialConfigChances = { 67,
@@ -1305,7 +1305,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == BIRCH_WOOD;
     MaterialConfigChances = { 67,
@@ -1363,7 +1363,7 @@ meleeweapon
                            SIDGURE_WOOD, HARDENED_ASH, BUFFALO_HORN, HARDENED_PLASTIC,
                            CARBIDE, MOOSE_ANTLER, UNICORN_HORN, HEPATIZON, OCTIRON,
                            ARCANITE, RED_ICE, JOTUN_ICE, STEEL_LEAF, BONE, WHALE_BONE,
-                           WRAITH_BONE, OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK; }
+                           WRAITH_BONE, BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK; }
     SecondaryMaterialConfig = { 39,
                            FUNGI_WOOD, SPRUCE_WOOD, SYCAMORE_WOOD, ELM_WOOD, ASH_WOOD,
                            CYPRESS_WOOD, HOLLY_WOOD, YEW_WOOD, BEECH_WOOD, BAMBOO_WOOD,
@@ -1372,7 +1372,7 @@ meleeweapon
                            SIDGURE_WOOD, HARDENED_ASH, BUFFALO_HORN, HARDENED_PLASTIC,
                            CARBIDE, MOOSE_ANTLER, UNICORN_HORN, HEPATIZON, OCTIRON,
                            ARCANITE, RED_ICE, JOTUN_ICE, STEEL_LEAF, BONE, WHALE_BONE,
-                           WRAITH_BONE, OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK; }
+                           WRAITH_BONE, BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK; }
     MaterialConfigChances = { 39,
                               25, 50, 75, 150, 200, 300, 25, 50, 75, 300, 250, 25, 50,
                               50, 75, 100, 250, 100, 100, 50, 10, 5, 50, 2, 1, 25, 5,
@@ -1426,7 +1426,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == FIR_WOOD;
     MaterialConfigChances = { 67,
@@ -1560,7 +1560,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, JOTUN_ICE, PRIMORDIAL_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == LEATHER;
     MaterialConfigChances = { 67,
@@ -1623,7 +1623,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == OAK_WOOD;
     MaterialConfigChances = { 67,
@@ -1721,7 +1721,7 @@ meleeweapon
                            PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                            PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                            UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                           WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                           WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                            TROLL_TUSK, MAMMOTH_TUSK; }
     SecondaryMaterialConfig == MAHOGANY_WOOD;
     MaterialConfigChances = { 79,
@@ -1842,8 +1842,8 @@ justifier /* meleeweapon-> */
   Adjective = "holy";
   PostFix = "named Valpurus' Justifier";
   ArticleMode = FORCE_THE;
-  MainMaterialConfig == VALPURIUM;
-  SecondaryMaterialConfig == VALPURIUM;
+  MainMaterialConfig == VALPURIS_METAL;
+  SecondaryMaterialConfig == VALPURIS_METAL;
   IsPolymorphable = false;
   IsPolymorphSpawnable = false;
   Alias == "Justifier";
@@ -1856,7 +1856,7 @@ justifier /* meleeweapon-> */
   CanBeEnchanted = false;
   CanBePiled = false;
   GearStates = HASTE|INFRA_VISION|ESP|POLYMORPH_CONTROL|TELEPORT_CONTROL;
-  AttachedGod = VALPURUS;
+  AttachedGod = VALPURIS;
   WieldedBitmapPos = 160, 16;
   IsQuestItem = true;
   DamageFlags = SLASH|PIERCE;
@@ -1924,7 +1924,7 @@ pickaxe /* meleeweapon-> */
                          PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                          PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                          UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                         WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                         WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                          TROLL_TUSK, MAMMOTH_TUSK; }
   SecondaryMaterialConfig == FIR_WOOD;
   MaterialConfigChances = { 67,
@@ -1999,13 +1999,13 @@ bodyarmor /* armor-> */
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
                            BLOOD_STEEL, LINEN_CLOTH, HEMP_CLOTH, WOOL_CLOTH, FELT, FABRIC,
-                           ELF_CLOTH, NYMPH_HAIR, OMMEL_HAIR, WOLF_SKIN, BEAR_SKIN,
+                           ELF_CLOTH, NYMPH_HAIR, BRAMBLEBACK_HAIR, WOLF_SKIN, BEAR_SKIN,
                            SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, LEATHER, BLACK_LEATHER,
                            TROLL_HIDE, OSTRICH_FEATHER, HARPY_FEATHER, GRIFFON_FEATHER,
                            SEA_WEED, FISH_SCALE, MERMAID_HAIR, SELKIE_SKIN, DREAM_CLOTH,
                            RAINBOW_CLOTH, SHADOW_CLOTH, STAINLESS_STEEL, PALM_LEAF,
                            WITCH_BARK, DARK_PETAL, ARCANITE, PEARL_GLASS, ILLITHIUM,
-                           OMMEL_BONE, OMMEL_TOOTH; }
+                           BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 62,
                               750, 1500, 200, 75, 50, 150, 250, 25, 5, 25, 300, 150, 15,
                               5, 75, 50, 25, 750, 1000, 250, 75, 15, 5, 90, 25, 80, 25,
@@ -2029,7 +2029,7 @@ bodyarmor /* armor-> */
     MainMaterialConfig = { 30,
                            DEEP_BRONZE, BRASS, MITHRIL, DARK_GOLD, DARK_MATTER,
                            STEEL, DWARF_STEEL, METEORIC_STEEL, UKKU_STEEL, SOUL_STEEL,
-                           BLOOD_STEEL, OMMEL_HAIR, TROLL_WOOL, NAGA_SKIN, TROLL_HIDE,
+                           BLOOD_STEEL, BRAMBLEBACK_HAIR, TROLL_WOOL, NAGA_SKIN, TROLL_HIDE,
                            GRIFFON_FEATHER, PHOENIX_FEATHER, SELKIE_SKIN, DREAM_CLOTH,
                            RAINBOW_CLOTH, SHADOW_CLOTH, STAINLESS_STEEL, CHLOROPHYTE,
                            ARCANITE, ILLITHIUM, HEPATIZON, OCTIRON, GALVORN, ADAMANT,
@@ -2059,7 +2059,7 @@ bodyarmor /* armor-> */
                            TIN, COPPER, BRONZE, VERDIGRIS, DEEP_BRONZE, BRASS, HEPATIZON,
                            SILVER, MOON_SILVER, FAIRY_STEEL, MITHRIL, PLATINUM, LEAD,
                            GOLD, DARK_GOLD, ELECTRUM, NICKEL, COBALT, TUNGSTEN, ELF_CLOTH,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
                            BEAR_SKIN, SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                            BOILED_LEATHER, QUILTED_LEATHER, STUDDED_LEATHER, TROLL_HIDE,
@@ -2080,7 +2080,7 @@ bodyarmor /* armor-> */
                            NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                            ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
                            HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
-                           OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, OMMEL_TOOTH,
+                           BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                            RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                            STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                            BLOOD_IRON, BLOOD_STEEL; }
@@ -2112,7 +2112,7 @@ bodyarmor /* armor-> */
     FormModifier = 20;
     MainMaterialConfig = { 71,
                            DEEP_BRONZE, BRASS, HEPATIZON, FAIRY_STEEL, MITHRIL,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, TROLL_HIDE, IMP_HIDE, GRIFFON_FEATHER,
                            PHOENIX_FEATHER, SEA_SERPENT_SCALE, DREAM_CLOTH, RAINBOW_CLOTH,
                            SHADOW_CLOTH, KEVLAR, STAINLESS_STEEL, ARCANITE, JOTUN_ICE,
@@ -2157,13 +2157,13 @@ bodyarmor /* armor-> */
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
                            BLOOD_STEEL, LINEN_CLOTH, HEMP_CLOTH, WOOL_CLOTH, FELT, FABRIC,
-                           ELF_CLOTH, NYMPH_HAIR, OMMEL_HAIR, WOLF_SKIN, BEAR_SKIN,
+                           ELF_CLOTH, NYMPH_HAIR, BRAMBLEBACK_HAIR, WOLF_SKIN, BEAR_SKIN,
                            SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, LEATHER, BLACK_LEATHER,
                            TROLL_HIDE, OSTRICH_FEATHER, HARPY_FEATHER, GRIFFON_FEATHER,
                            SEA_WEED, FISH_SCALE, MERMAID_HAIR, SELKIE_SKIN, DREAM_CLOTH,
                            RAINBOW_CLOTH, SHADOW_CLOTH, STAINLESS_STEEL, PALM_LEAF,
                            WITCH_BARK, DARK_PETAL, ARCANITE, PEARL_GLASS, ILLITHIUM,
-                           OMMEL_BONE, OMMEL_TOOTH; }
+                           BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 62,
                               750, 1500, 200, 250, 50, 150, 250, 25, 5, 25, 300, 150, 15,
                               5, 75, 50, 25, 750, 1000, 250, 75, 15, 5, 80, 25, 80, 25,
@@ -2194,7 +2194,7 @@ bodyarmor /* armor-> */
     AffectsEndurance = false;
     MainMaterialConfig = { 71,
                            DEEP_BRONZE, BRASS, HEPATIZON, FAIRY_STEEL, MITHRIL,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, TROLL_HIDE, IMP_HIDE, GRIFFON_FEATHER,
                            PHOENIX_FEATHER, SEA_SERPENT_SCALE, DREAM_CLOTH, RAINBOW_CLOTH,
                            SHADOW_CLOTH, KEVLAR, STAINLESS_STEEL, ARCANITE, JOTUN_ICE,
@@ -2223,7 +2223,7 @@ bodyarmor /* armor-> */
     LegArmorBitmapPos = 16, 544;
   }
 
-  Config OMMEL_CUIRASS;
+  Config BRAMBLEBACK_CUIRASS;
   {
     StrengthModifier = 600;
     DefaultSize = 100;
@@ -2244,7 +2244,7 @@ bodyarmor /* armor-> */
     CanBeBroken = false;
     CanBeBurned = false;
     IsDestroyable = false;
-    MainMaterialConfig == OMMEL_HAIR;
+    MainMaterialConfig == BRAMBLEBACK_HAIR;
     MaterialConfigChances == 100;
     InElasticityPenaltyModifier = 20;
     EnchantmentPlusChance = 5;
@@ -2280,7 +2280,7 @@ goldeneagleshirt /* armor->bodyarmor-> */
   BaseEnchantment = 10;
   InElasticityPenaltyModifier = 30;
   CanBeEnchanted = false;
-  AttachedGod = VALPURUS;
+  AttachedGod = VALPURIS;
   IsQuestItem = true;
   TorsoArmorBitmapPos = 32, 416;
   ArmArmorBitmapPos = 80, 416;
@@ -2302,15 +2302,15 @@ potion /* materialcontainer-> */
   NameSingular = "bottle";
   MainMaterialConfig == GLASS;
   SecondaryMaterialConfig = { 45,
-                              WATER, HEALING_LIQUID, OMMEL_URINE, POISON_LIQUID,
-                              VALDEMAR, ANTIDOTE_LIQUID, VODKA, TROLL_BLOOD, OMMEL_SWEAT,
-                              OMMEL_TEARS, SULPHURIC_ACID, MUSTARD_GAS_LIQUID, LIQUID_DARKNESS,
+                              WATER, HEALING_LIQUID, BRAMBLEBACK_URINE, POISON_LIQUID,
+                              VALDEMAR, ANTIDOTE_LIQUID, VODKA, TROLL_BLOOD, BRAMBLEBACK_SWEAT,
+                              BRAMBLEBACK_TEARS, SULPHURIC_ACID, MUSTARD_GAS_LIQUID, LIQUID_DARKNESS,
                               BROWN_SLIME, GREEN_SLIME, DARK_FROG_BLOOD, SPIDER_BLOOD, SWEAT,
                               SICK_BLOOD, LIGHT_FROG_BLOOD, CURE_ALL_LIQUID, MAGIC_LIQUID,
                               MILK, HONEY, COCA_COLA, INK, BRINE, CIDER, WHITE_WINE, RED_WINE,
                               BEER, ELF_ALE, DWARF_BEER, LIQUID_FEAR, ASPHALT, BLOOD, GREEN_BLOOD,
                               BLUE_BLOOD, PLANT_SAP, GLOWING_BLOOD, MERCURY, QUICK_SILVER,
-                              OMMEL_BLOOD, VINEGAR, NAPALM; }
+                              BRAMBLEBACK_BLOOD, VINEGAR, NAPALM; }
   MaterialConfigChances = { 45,
                             50, 50, 5, 20, 1, 8, 5, 20, 5, 5, 10, 2, 1, 3, 1, 2, 2, 1, 2, 3, 1,
                             5, 5, 5, 1, 1, 1, 3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 10,
@@ -2504,7 +2504,7 @@ leftnutofpetrus /* nut-> */
   CanBeCloned = false;
   CanBePiled = false;
   FormModifier = 15;
-  AttachedGod = VALPURUS;
+  AttachedGod = VALPURIS;
   IsQuestItem = true;
   IsValuable = true;
   CanBeBurned = false;
@@ -2944,12 +2944,12 @@ avatarofvalpurus
   NameSingular = "Avatar";
   PostFix = "of Valpurus";
   ArticleMode = FORCE_THE;
-  MainMaterialConfig == VALPURIUM;
+  MainMaterialConfig == VALPURIS_METAL;
   IsPolymorphable = false;
   IsPolymorphSpawnable = false;
   Roundness = 80;
   CanBeCloned = false;
-  AttachedGod = VALPURUS;
+  AttachedGod = VALPURIS;
   WieldedBitmapPos = 160, 128;
   IsQuestItem = true;
   CanBeBurned = false;
@@ -3034,7 +3034,7 @@ whip /* meleeweapon-> */
   MainMaterialConfig = { 18,
                          HUMAN_SKIN, SNAKE_SKIN, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                          QUILTED_LEATHER, STUDDED_LEATHER, MERMAID_HAIR, SELKIE_SKIN,
-                         ELF_CLOTH, NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, DREAM_CLOTH,
+                         ELF_CLOTH, NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, DREAM_CLOTH,
                          RAINBOW_CLOTH, SHADOW_CLOTH, FLEXI_CLOTH, QUICK_SILVER; }
   SecondaryMaterialConfig == EBONY_WOOD;
   MaterialConfigChances = { 18,
@@ -3057,7 +3057,7 @@ whip /* meleeweapon-> */
     Possibility = 5;
     BitmapPos = 32, 256;
     WieldedBitmapPos = 176, 208;
-    MainMaterialConfig = { 3, MERMAID_HAIR, NYMPH_HAIR, OMMEL_HAIR; }
+    MainMaterialConfig = { 3, MERMAID_HAIR, NYMPH_HAIR, BRAMBLEBACK_HAIR; }
     MaterialConfigChances = { 3, 75, 50, 25,}
     EnchantmentPlusChance = 60;
   }
@@ -3079,7 +3079,7 @@ whip /* meleeweapon-> */
     Possibility = 3;
     BitmapPos = 32, 256;
     WieldedBitmapPos = 176, 208;
-    MainMaterialConfig = { 3, HARDENED_LEATHER, OMMEL_HAIR, TROLL_WOOL; }
+    MainMaterialConfig = { 3, HARDENED_LEATHER, BRAMBLEBACK_HAIR, TROLL_WOOL; }
     MaterialConfigChances = { 3, 75, 50, 25,}
     EnchantmentPlusChance = 40;
   }
@@ -3232,7 +3232,7 @@ stone
     NameSingular = "ingot";
     IsValuable = true;
     MainMaterialConfig = { 35,
-                           VALPURIUM, BRASS, HEPATIZON, OCTIRON, ORICHALCUM, SILVER,
+                           VALPURIS_METAL, BRASS, HEPATIZON, OCTIRON, ORICHALCUM, SILVER,
                            MOON_SILVER, FAIRY_STEEL, MITHRIL, GALVORN, STAR_METAL,
                            PLATINUM, DARK_GOLD, ELECTRUM, IRIDIUM, PALLADIUM, CHROME,
                            TITANITE, STAINLESS_STEEL, PLASTIC_STEEL, DURALLOY,
@@ -3385,8 +3385,8 @@ shield /* armor-> */
                          DEEP_CORAL, HALCYON, MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ,
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, AEGI_SALT, HEMATITE, HARDENED_ASH,
-                         BONE, WHALE_BONE, WRAITH_BONE, OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK,
-                         MAMMOTH_TUSK, OMMEL_TOOTH, RESIDUUM, PIG_IRON, IRON,
+                         BONE, WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK,
+                         MAMMOTH_TUSK, BRAMBLEBACK_TOOTH, RESIDUUM, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                          BLOOD_IRON, BLOOD_STEEL, PLASTIC, HARDENED_PLASTIC; }
   MaterialConfigChances = { 107,
@@ -3565,7 +3565,7 @@ cloak /* armor-> */
   Alias = { 5, "robe", "cape", "cowl", "mantle", "blanket"; }
   MainMaterialConfig = { 38,
                          LINEN_CLOTH, HEMP_CLOTH, WOOL_CLOTH, FELT, FABRIC, ELF_CLOTH,
-                         NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
+                         NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
                          BEAR_SKIN, SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, NAGA_SKIN,
                          WYVERN_HIDE, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                          QUILTED_LEATHER, TROLL_HIDE, IMP_HIDE, OSTRICH_FEATHER,
@@ -3776,7 +3776,7 @@ cloak /* armor-> */
     GearStates = LEVITATION;
     PostFix = "of flying";
     Price = 2500;
-    MainMaterialConfig = { 4, FABRIC, OMMEL_HAIR, OSTRICH_FEATHER, GRIFFON_FEATHER; }
+    MainMaterialConfig = { 4, FABRIC, BRAMBLEBACK_HAIR, OSTRICH_FEATHER, GRIFFON_FEATHER; }
     MaterialConfigChances = { 4, 50, 150, 250, 50; }
     EnchantmentPlusChance = 2;
     AllowedDungeons == BLACK_MARKET;
@@ -3829,7 +3829,7 @@ cloak /* armor-> */
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -3845,7 +3845,7 @@ cloak /* armor-> */
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -3904,7 +3904,7 @@ boot /* armor-> */
                          TIN, COPPER, BRONZE, VERDIGRIS, DEEP_BRONZE, BRASS, HEPATIZON,
                          SILVER, MOON_SILVER, FAIRY_STEEL, MITHRIL, PLATINUM, LEAD,
                          GOLD, DARK_GOLD, ELECTRUM, NICKEL, COBALT, TUNGSTEN, ELF_CLOTH,
-                         NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
+                         NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
                          BEAR_SKIN, SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, NAGA_SKIN,
                          WYVERN_HIDE, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                          BOILED_LEATHER, QUILTED_LEATHER, STUDDED_LEATHER, TROLL_HIDE,
@@ -3925,7 +3925,7 @@ boot /* armor-> */
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
                          HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
-                         OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, OMMEL_TOOTH,
+                         BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                          RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                          BLOOD_IRON, BLOOD_STEEL; }
@@ -3959,7 +3959,7 @@ boot /* armor-> */
     Possibility = 25;
     MainMaterialConfig = { 71,
                            DEEP_BRONZE, BRASS, HEPATIZON, FAIRY_STEEL, MITHRIL,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, TROLL_HIDE, IMP_HIDE, GRIFFON_FEATHER,
                            PHOENIX_FEATHER, SEA_SERPENT_SCALE, DREAM_CLOTH, RAINBOW_CLOTH,
                            SHADOW_CLOTH, KEVLAR, STAINLESS_STEEL, ARCANITE, JOTUN_ICE,
@@ -4045,7 +4045,7 @@ boot /* armor-> */
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 100, 25, 100,
@@ -4065,7 +4065,7 @@ boot /* armor-> */
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -4112,7 +4112,7 @@ gauntlet /* armor-> */
                          TIN, COPPER, BRONZE, VERDIGRIS, DEEP_BRONZE, BRASS, HEPATIZON,
                          SILVER, MOON_SILVER, FAIRY_STEEL, MITHRIL, PLATINUM, LEAD,
                          GOLD, DARK_GOLD, ELECTRUM, NICKEL, COBALT, TUNGSTEN, ELF_CLOTH,
-                         NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
+                         NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
                          BEAR_SKIN, SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, NAGA_SKIN,
                          WYVERN_HIDE, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                          BOILED_LEATHER, QUILTED_LEATHER, STUDDED_LEATHER, TROLL_HIDE,
@@ -4133,7 +4133,7 @@ gauntlet /* armor-> */
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
                          HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
-                         OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, OMMEL_TOOTH,
+                         BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                          RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                          BLOOD_IRON, BLOOD_STEEL; }
@@ -4164,7 +4164,7 @@ gauntlet /* armor-> */
     Possibility = 25;
     MainMaterialConfig = { 71,
                            DEEP_BRONZE, BRASS, HEPATIZON, FAIRY_STEEL, MITHRIL,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, TROLL_HIDE, IMP_HIDE, GRIFFON_FEATHER,
                            PHOENIX_FEATHER, SEA_SERPENT_SCALE, DREAM_CLOTH, RAINBOW_CLOTH,
                            SHADOW_CLOTH, KEVLAR, STAINLESS_STEEL, ARCANITE, JOTUN_ICE,
@@ -4258,7 +4258,7 @@ belt /* armor-> */
   FlexibleNameSingular = "belt";
   MainMaterialConfig = { 38,
                          LINEN_CLOTH, HEMP_CLOTH, WOOL_CLOTH, FELT, FABRIC, ELF_CLOTH,
-                         NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
+                         NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
                          BEAR_SKIN, SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, NAGA_SKIN,
                          WYVERN_HIDE, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                          QUILTED_LEATHER, TROLL_HIDE, IMP_HIDE, OSTRICH_FEATHER,
@@ -4286,7 +4286,7 @@ belt /* armor-> */
     Possibility = 25;
     MainMaterialConfig = { 71,
                            DEEP_BRONZE, BRASS, HEPATIZON, FAIRY_STEEL, MITHRIL,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, TROLL_HIDE, IMP_HIDE, GRIFFON_FEATHER,
                            PHOENIX_FEATHER, SEA_SERPENT_SCALE, DREAM_CLOTH, RAINBOW_CLOTH,
                            SHADOW_CLOTH, KEVLAR, STAINLESS_STEEL, ARCANITE, JOTUN_ICE,
@@ -4372,7 +4372,7 @@ belt /* armor-> */
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -4390,7 +4390,7 @@ belt /* armor-> */
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -5217,7 +5217,7 @@ beartrap
                          FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                          ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                          METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                         BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                         BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
   MaterialConfigChances = { 30,
                             300, 750, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                             5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -5248,7 +5248,7 @@ helmet
                          TIN, COPPER, BRONZE, VERDIGRIS, DEEP_BRONZE, BRASS, HEPATIZON,
                          SILVER, MOON_SILVER, FAIRY_STEEL, MITHRIL, PLATINUM, LEAD,
                          GOLD, DARK_GOLD, ELECTRUM, NICKEL, COBALT, TUNGSTEN, ELF_CLOTH,
-                         NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
+                         NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, HUMAN_SKIN, WOLF_SKIN,
                          BEAR_SKIN, SNAKE_SKIN, CROCODILE_SKIN, BASILISK_SKIN, NAGA_SKIN,
                          WYVERN_HIDE, LEATHER, BLACK_LEATHER, HARDENED_LEATHER,
                          BOILED_LEATHER, QUILTED_LEATHER, STUDDED_LEATHER, TROLL_HIDE,
@@ -5269,7 +5269,7 @@ helmet
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
                          HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
-                         OMMEL_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, OMMEL_TOOTH,
+                         BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                          RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                          BLOOD_IRON, BLOOD_STEEL; }
@@ -5298,7 +5298,7 @@ helmet
     Possibility = 35;
     MainMaterialConfig = { 71,
                            DEEP_BRONZE, BRASS, HEPATIZON, FAIRY_STEEL, MITHRIL,
-                           NYMPH_HAIR, OMMEL_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
+                           NYMPH_HAIR, BRAMBLEBACK_HAIR, TROLL_WOOL, BASILISK_SKIN, NAGA_SKIN,
                            WYVERN_HIDE, TROLL_HIDE, IMP_HIDE, GRIFFON_FEATHER,
                            PHOENIX_FEATHER, SEA_SERPENT_SCALE, DREAM_CLOTH, RAINBOW_CLOTH,
                            SHADOW_CLOTH, KEVLAR, STAINLESS_STEEL, ARCANITE, JOTUN_ICE,
@@ -5338,7 +5338,7 @@ helmet
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               750, 1500, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -5543,7 +5543,7 @@ helmet
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               750, 1500, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -5604,7 +5604,7 @@ helmet
                            FAIRY_STEEL, MITHRIL, PLATINUM, LEAD, GOLD, DARK_GOLD, DARK_MATTER,
                            ELECTRUM, NICKEL, COBALT, PIG_IRON, IRON, STEEL, DWARF_STEEL,
                            METEORIC_STEEL, UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON,
-                           BLOOD_STEEL, STAINLESS_STEEL, OMMEL_BONE, OMMEL_TOOTH; }
+                           BLOOD_STEEL, STAINLESS_STEEL, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
     MaterialConfigChances = { 30,
                               750, 1500, 10, 100, 25, 50, 25, 10, 5, 1, 100, 25, 10,
                               5, 5, 5, 1, 500, 1000, 300, 100, 50, 10, 50, 15, 50,
@@ -5747,7 +5747,7 @@ helmet
                            MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ, ILLITHIUM, DRAGON_HIDE,
                            NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                            ROCK_CRYSTAL, PURPLE_CRYSTAL, PORCELAIN, HARDENED_ASH, BANANA_PEEL,
-                           BONE, WHALE_BONE, WRAITH_BONE, OMMEL_BONE, MAMMOTH_TUSK, OMMEL_TOOTH,
+                           BONE, WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                            IRON, STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                            BLOOD_IRON, BLOOD_STEEL, AMETHYST, TOPAZ, SAPPHIRE, EMERALD, RUBY; }
     MaterialConfigChances = { 100,
@@ -5861,7 +5861,7 @@ flamingsword /* meleeweapon-> */
                          PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                          PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                          UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                         WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                         WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                          TROLL_TUSK, MAMMOTH_TUSK; }
   SecondaryMaterialConfig == DRAGON_HIDE;
   MaterialConfigChances = { 67,
@@ -6353,7 +6353,7 @@ thunderhammer /* meleeweapon-> */
                          PEARL_GLASS, ILLITHIUM, RED_ICE, JOTUN_ICE, STEEL_LEAF,
                          PIG_IRON, IRON, STEEL, DWARF_STEEL, METEORIC_STEEL,
                          UKKU_STEEL, BLACK_IRON, SOUL_STEEL, BLOOD_IRON, BLOOD_STEEL,
-                         WHALE_BONE, WRAITH_BONE, OMMEL_BONE, OMMEL_TOOTH, SHARK_TOOTH,
+                         WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, SHARK_TOOTH,
                          TROLL_TUSK, MAMMOTH_TUSK; }
   SecondaryMaterialConfig == FIR_WOOD; /* FROZEN_LIGHTNING */
   MaterialConfigChances = { 67,
@@ -6448,7 +6448,7 @@ chameleonwhip /* meleeweapon->whip-> */
   StrengthModifier = 100;
   NameSingular = "chameleon whip";
   Alias = { 0; }
-  MainMaterialConfig == OMMEL_HAIR;
+  MainMaterialConfig == BRAMBLEBACK_HAIR;
   SecondaryMaterialConfig == RUBY;
   Roundness = 2;
   FormModifier = 30; /* this is multiplied by MainMaterial's flexibility */
@@ -6768,10 +6768,10 @@ holyhandgrenade
   NameSingular = "handgrenade";
   PostFix = "of Antioch";
   FormModifier = 15;
-  AttachedGod = VALPURUS;
+  AttachedGod = VALPURIS;
   Possibility = 5;
   Price = 500;
-  MainMaterialConfig == VALPURIUM;
+  MainMaterialConfig == VALPURIS_METAL;
   Adjective = "holy";
   Alias = { 3, "holy grenade", "hand grenade", "handgrenade"; }
   CanBePiled = false;
@@ -6792,7 +6792,7 @@ daggerofvenom
   NameSingular = "dagger";
   PostFix = "of venom";
   MainMaterialConfig = { 33,
-                         DRAGON_BONE, OMMEL_BONE, OMMEL_TOOTH, RUBY, DIAMOND, RED_JADE,
+                         DRAGON_BONE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH, RUBY, DIAMOND, RED_JADE,
                          GREEN_JADE, BLUE_JADE, WHITE_JADE, GREEN_CRYSTAL, BLUE_CRYSTAL,
                          DEEP_BRONZE, BRASS, HEPATIZON, OCTIRON, ORICHALCUM, MOON_SILVER,
                          FAIRY_STEEL, MITHRIL, GALVORN, STAR_METAL, DARK_GOLD, DARK_MATTER,
@@ -7127,7 +7127,7 @@ terrorscythe  /* meleeweapon-> */
                          FAIRY_STEEL, MITHRIL, GALVORN, STAR_METAL, DARK_GOLD, DARK_MATTER,
                          STAINLESS_STEEL, ARCANITE, ILLITHIUM, STEEL, DWARF_STEEL,
                          METEORIC_STEEL, UKKU_STEEL, ADAMANT, SOUL_STEEL, BLOOD_STEEL,
-                         PSYPHER, OMMEL_BONE, OMMEL_TOOTH; }
+                         PSYPHER, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
   SecondaryMaterialConfig == EBONY_WOOD;
   MaterialConfigChances = { 36,
                             10, 5, 5, 5, 25, 15, 10, 5, 5, 5, 5, 250, 50, 15, 5,
@@ -7356,7 +7356,7 @@ ullrbone
   CanBePiled = false;
   Roundness = 20;
   WieldedBitmapPos = 160, 336;
-  MainMaterialConfig == OMMEL_BONE;
+  MainMaterialConfig == BRAMBLEBACK_BONE;
   AllowEquip = true;
   IsValuable = true;
   AttachedGod = INFUSCOR;
@@ -7378,7 +7378,7 @@ taiaha /* meleeweapon-> */
   MainMaterialConfig = { 15,
                          AMETHYST, TOPAZ, ROSE_QUARTZ, NETHER_QUARTZ, PURPLE_CRYSTAL,
                          BLUE_CRYSTAL, GREEN_CRYSTAL, MAGIC_CRYSTAL, JADEITE, MALACHITE,
-                         NEPHRITE, BLACK_JADE, RED_JADE, OMMEL_BONE, OMMEL_TOOTH; }
+                         NEPHRITE, BLACK_JADE, RED_JADE, BRAMBLEBACK_BONE, BRAMBLEBACK_TOOTH; }
   SecondaryMaterialConfig == SIDGURE_WOOD;
   MaterialConfigChances = { 15,
                             10, 10, 200, 100, 50, 25, 15, 25, 250, 150, 75, 50,

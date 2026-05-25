@@ -1800,19 +1800,19 @@ class definesvalidator{
 #endif 
 
   
-#ifdef CEM_OMMEL // DO NOT MODIFY!
+#ifdef CEM_BRAMBLEBACK // DO NOT MODIFY!
   bsA = 4;
-  bsB = CEM_OMMEL;
+  bsB = CEM_BRAMBLEBACK;
   if(bsA!=bsB)
-    ssErrors << "Defined CEM_OMMEL with value 4 from .dat file mismatches hardcoded c++ define value of " << CEM_OMMEL << "!" << std::endl;
+    ssErrors << "Defined CEM_BRAMBLEBACK with value 4 from .dat file mismatches hardcoded c++ define value of " << CEM_BRAMBLEBACK << "!" << std::endl;
 #endif 
 
   
-#ifdef CEM_OMMEL_BONE // DO NOT MODIFY!
+#ifdef CEM_BRAMBLEBACK_BONE // DO NOT MODIFY!
   bsA = 15;
-  bsB = CEM_OMMEL_BONE;
+  bsB = CEM_BRAMBLEBACK_BONE;
   if(bsA!=bsB)
-    ssErrors << "Defined CEM_OMMEL_BONE with value 15 from .dat file mismatches hardcoded c++ define value of " << CEM_OMMEL_BONE << "!" << std::endl;
+    ssErrors << "Defined CEM_BRAMBLEBACK_BONE with value 15 from .dat file mismatches hardcoded c++ define value of " << CEM_BRAMBLEBACK_BONE << "!" << std::endl;
 #endif 
 
   
@@ -3008,59 +3008,59 @@ class definesvalidator{
 #endif 
 
   
-#ifdef EFFECT_OMMEL_BLOOD // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_BLOOD // DO NOT MODIFY!
   bsA = 34;
-  bsB = EFFECT_OMMEL_BLOOD;
+  bsB = EFFECT_BRAMBLEBACK_BLOOD;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_BLOOD with value 34 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_BLOOD << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_BLOOD with value 34 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_BLOOD << "!" << std::endl;
 #endif 
 
   
-#ifdef EFFECT_OMMEL_BONE // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_BONE // DO NOT MODIFY!
   bsA = 29;
-  bsB = EFFECT_OMMEL_BONE;
+  bsB = EFFECT_BRAMBLEBACK_BONE;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_BONE with value 29 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_BONE << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_BONE with value 29 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_BONE << "!" << std::endl;
 #endif 
 
   
-#ifdef EFFECT_OMMEL_CERUMEN // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_CERUMEN // DO NOT MODIFY!
   bsA = 25;
-  bsB = EFFECT_OMMEL_CERUMEN;
+  bsB = EFFECT_BRAMBLEBACK_CERUMEN;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_CERUMEN with value 25 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_CERUMEN << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_CERUMEN with value 25 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_CERUMEN << "!" << std::endl;
 #endif 
 
   
-#ifdef EFFECT_OMMEL_SNOT // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_SNOT // DO NOT MODIFY!
   bsA = 28;
-  bsB = EFFECT_OMMEL_SNOT;
+  bsB = EFFECT_BRAMBLEBACK_SNOT;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_SNOT with value 28 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_SNOT << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_SNOT with value 28 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_SNOT << "!" << std::endl;
 #endif 
 
   
-#ifdef EFFECT_OMMEL_SWEAT // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_SWEAT // DO NOT MODIFY!
   bsA = 26;
-  bsB = EFFECT_OMMEL_SWEAT;
+  bsB = EFFECT_BRAMBLEBACK_SWEAT;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_SWEAT with value 26 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_SWEAT << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_SWEAT with value 26 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_SWEAT << "!" << std::endl;
 #endif 
 
   
-#ifdef EFFECT_OMMEL_TEARS // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_TEARS // DO NOT MODIFY!
   bsA = 27;
-  bsB = EFFECT_OMMEL_TEARS;
+  bsB = EFFECT_BRAMBLEBACK_TEARS;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_TEARS with value 27 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_TEARS << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_TEARS with value 27 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_TEARS << "!" << std::endl;
 #endif 
 
   
-#ifdef EFFECT_OMMEL_URINE // DO NOT MODIFY!
+#ifdef EFFECT_BRAMBLEBACK_URINE // DO NOT MODIFY!
   bsA = 3;
-  bsB = EFFECT_OMMEL_URINE;
+  bsB = EFFECT_BRAMBLEBACK_URINE;
   if(bsA!=bsB)
-    ssErrors << "Defined EFFECT_OMMEL_URINE with value 3 from .dat file mismatches hardcoded c++ define value of " << EFFECT_OMMEL_URINE << "!" << std::endl;
+    ssErrors << "Defined EFFECT_BRAMBLEBACK_URINE with value 3 from .dat file mismatches hardcoded c++ define value of " << EFFECT_BRAMBLEBACK_URINE << "!" << std::endl;
 #endif 
 
   
@@ -4600,11 +4600,11 @@ class definesvalidator{
 #endif 
 
   
-#ifdef HM_OMMEL // DO NOT MODIFY!
+#ifdef HM_BRAMBLEBACK // DO NOT MODIFY!
   bsA = 3;
-  bsB = HM_OMMEL;
+  bsB = HM_BRAMBLEBACK;
   if(bsA!=bsB)
-    ssErrors << "Defined HM_OMMEL with value 3 from .dat file mismatches hardcoded c++ define value of " << HM_OMMEL << "!" << std::endl;
+    ssErrors << "Defined HM_BRAMBLEBACK with value 3 from .dat file mismatches hardcoded c++ define value of " << HM_BRAMBLEBACK << "!" << std::endl;
 #endif 
 
   
@@ -6312,83 +6312,83 @@ class definesvalidator{
 #endif 
 
   
-#ifdef OMMEL_BLOOD // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_BLOOD // DO NOT MODIFY!
   bsA = 16430;
-  bsB = OMMEL_BLOOD;
+  bsB = BRAMBLEBACK_BLOOD;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_BLOOD with value 16430 from .dat file mismatches hardcoded c++ define value of " << OMMEL_BLOOD << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_BLOOD with value 16430 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_BLOOD << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_BONE // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_BONE // DO NOT MODIFY!
   bsA = 8215;
-  bsB = OMMEL_BONE;
+  bsB = BRAMBLEBACK_BONE;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_BONE with value 8215 from .dat file mismatches hardcoded c++ define value of " << OMMEL_BONE << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_BONE with value 8215 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_BONE << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_CERUMEN // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_CERUMEN // DO NOT MODIFY!
   bsA = 8211;
-  bsB = OMMEL_CERUMEN;
+  bsB = BRAMBLEBACK_CERUMEN;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_CERUMEN with value 8211 from .dat file mismatches hardcoded c++ define value of " << OMMEL_CERUMEN << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_CERUMEN with value 8211 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_CERUMEN << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_CUIRASS // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_CUIRASS // DO NOT MODIFY!
   bsA = 4;
-  bsB = OMMEL_CUIRASS;
+  bsB = BRAMBLEBACK_CUIRASS;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_CUIRASS with value 4 from .dat file mismatches hardcoded c++ define value of " << OMMEL_CUIRASS << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_CUIRASS with value 4 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_CUIRASS << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_HAIR // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_HAIR // DO NOT MODIFY!
   bsA = 4135;
-  bsB = OMMEL_HAIR;
+  bsB = BRAMBLEBACK_HAIR;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_HAIR with value 4135 from .dat file mismatches hardcoded c++ define value of " << OMMEL_HAIR << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_HAIR with value 4135 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_HAIR << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_SNOT // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_SNOT // DO NOT MODIFY!
   bsA = 16434;
-  bsB = OMMEL_SNOT;
+  bsB = BRAMBLEBACK_SNOT;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_SNOT with value 16434 from .dat file mismatches hardcoded c++ define value of " << OMMEL_SNOT << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_SNOT with value 16434 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_SNOT << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_SWEAT // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_SWEAT // DO NOT MODIFY!
   bsA = 16432;
-  bsB = OMMEL_SWEAT;
+  bsB = BRAMBLEBACK_SWEAT;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_SWEAT with value 16432 from .dat file mismatches hardcoded c++ define value of " << OMMEL_SWEAT << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_SWEAT with value 16432 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_SWEAT << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_TEARS // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_TEARS // DO NOT MODIFY!
   bsA = 16433;
-  bsB = OMMEL_TEARS;
+  bsB = BRAMBLEBACK_TEARS;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_TEARS with value 16433 from .dat file mismatches hardcoded c++ define value of " << OMMEL_TEARS << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_TEARS with value 16433 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_TEARS << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_TOOTH // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_TOOTH // DO NOT MODIFY!
   bsA = 8219;
-  bsB = OMMEL_TOOTH;
+  bsB = BRAMBLEBACK_TOOTH;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_TOOTH with value 8219 from .dat file mismatches hardcoded c++ define value of " << OMMEL_TOOTH << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_TOOTH with value 8219 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_TOOTH << "!" << std::endl;
 #endif 
 
   
-#ifdef OMMEL_URINE // DO NOT MODIFY!
+#ifdef BRAMBLEBACK_URINE // DO NOT MODIFY!
   bsA = 16431;
-  bsB = OMMEL_URINE;
+  bsB = BRAMBLEBACK_URINE;
   if(bsA!=bsB)
-    ssErrors << "Defined OMMEL_URINE with value 16431 from .dat file mismatches hardcoded c++ define value of " << OMMEL_URINE << "!" << std::endl;
+    ssErrors << "Defined BRAMBLEBACK_URINE with value 16431 from .dat file mismatches hardcoded c++ define value of " << BRAMBLEBACK_URINE << "!" << std::endl;
 #endif 
 
   
@@ -9096,19 +9096,19 @@ class definesvalidator{
 #endif 
 
   
-#ifdef VALPURIUM // DO NOT MODIFY!
+#ifdef VALPURIS_METAL // DO NOT MODIFY!
   bsA = 4097;
-  bsB = VALPURIUM;
+  bsB = VALPURIS_METAL;
   if(bsA!=bsB)
-    ssErrors << "Defined VALPURIUM with value 4097 from .dat file mismatches hardcoded c++ define value of " << VALPURIUM << "!" << std::endl;
+    ssErrors << "Defined VALPURIS_METAL with value 4097 from .dat file mismatches hardcoded c++ define value of " << VALPURIS_METAL << "!" << std::endl;
 #endif 
 
   
-#ifdef VALPURUS // DO NOT MODIFY!
+#ifdef VALPURIS // DO NOT MODIFY!
   bsA = 1;
-  bsB = VALPURUS;
+  bsB = VALPURIS;
   if(bsA!=bsB)
-    ssErrors << "Defined VALPURUS with value 1 from .dat file mismatches hardcoded c++ define value of " << VALPURUS << "!" << std::endl;
+    ssErrors << "Defined VALPURIS with value 1 from .dat file mismatches hardcoded c++ define value of " << VALPURIS << "!" << std::endl;
 #endif 
 
   

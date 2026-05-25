@@ -1691,7 +1691,7 @@ truth muramasa::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
     {
       switch (Enemy->GetAttachedGod())
       {
-        case VALPURUS:
+        case VALPURIS:
         case LEGIFER:
         case ATAVUS:
         case DULCIS:

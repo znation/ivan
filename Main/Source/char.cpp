@@ -6035,7 +6035,7 @@ void character::ReceiveNutrition(long SizeOfEffect)
   EditNP(SizeOfEffect);
 }
 
-void character::ReceiveOmmelBlood(long Amount)
+void character::ReceiveBramblebackBlood(long Amount)
 {
   EditExperience(WILL_POWER, 500, Amount << 4);
   EditExperience(MANA, 500, Amount << 4);
@@ -6044,7 +6044,7 @@ void character::ReceiveOmmelBlood(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::ReceiveOmmelUrine(long Amount)
+void character::ReceiveBramblebackUrine(long Amount)
 {
   EditExperience(ARM_STRENGTH, 500, Amount << 4);
   EditExperience(LEG_STRENGTH, 500, Amount << 4);
@@ -6053,7 +6053,7 @@ void character::ReceiveOmmelUrine(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::ReceiveOmmelCerumen(long Amount)
+void character::ReceiveBramblebackCerumen(long Amount)
 {
   EditExperience(INTELLIGENCE, 500, Amount << 5);
   EditExperience(WISDOM, 500, Amount << 5);
@@ -6062,7 +6062,7 @@ void character::ReceiveOmmelCerumen(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::ReceiveOmmelSweat(long Amount)
+void character::ReceiveBramblebackSweat(long Amount)
 {
   EditExperience(AGILITY, 500, Amount << 4);
   EditExperience(DEXTERITY, 500, Amount << 4);
@@ -6072,7 +6072,7 @@ void character::ReceiveOmmelSweat(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::ReceiveOmmelTears(long Amount)
+void character::ReceiveBramblebackTears(long Amount)
 {
   EditExperience(PERCEPTION, 500, Amount << 4);
   EditExperience(CHARISMA, 500, Amount << 4);
@@ -6081,7 +6081,7 @@ void character::ReceiveOmmelTears(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::ReceiveOmmelSnot(long Amount)
+void character::ReceiveBramblebackSnot(long Amount)
 {
   EditExperience(ENDURANCE, 500, Amount << 5);
   RestoreLivingHP();
@@ -6090,7 +6090,7 @@ void character::ReceiveOmmelSnot(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::ReceiveOmmelBone(long Amount)
+void character::ReceiveBramblebackBone(long Amount)
 {
   EditExperience(ARM_STRENGTH, 500, Amount << 6);
   EditExperience(LEG_STRENGTH, 500, Amount << 6);
@@ -6108,7 +6108,7 @@ void character::ReceiveOmmelBone(long Amount)
     game::DoEvilDeed(Amount / 25);
 }
 
-void character::AddOmmelConsumeEndMessage() const
+void character::AddBramblebackConsumeEndMessage() const
 {
   if(IsPlayer())
     ADD_MESSAGE("You feel a primitive force coursing through your veins.");
@@ -10335,7 +10335,7 @@ void character::EditExperience(int Identifier, double Value, double Speed)
       else
       {
         PlayerMsg = "You feel very guru.";
-        game::GetGod(VALPURUS)->AdjustRelation(100);
+        game::GetGod(VALPURIS)->AdjustRelation(100);
       }
 
       game::SendLOSUpdateRequest();
@@ -12357,7 +12357,7 @@ void character::AddWhiteUnicornConsumeEndMessage() const
     ADD_MESSAGE("You feel purified.");
 }
 
-void character::AddOmmelBoneConsumeEndMessage() const
+void character::AddBramblebackBoneConsumeEndMessage() const
 {
   if(IsPlayer())
     ADD_MESSAGE("You feel the power of all your canine ancestors combining in your body.");

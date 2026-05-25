@@ -190,11 +190,11 @@ void valpurus::PrayGoodEffect()
                 "THE CHAOS HE HADST SOWN!\" A set of holy arms appear from nothing.");
 
     meleeweapon* Weapon = meleeweapon::Spawn(TWO_HANDED_SWORD);
-    Weapon->InitMaterials(MAKE_MATERIAL(VALPURIUM), MAKE_MATERIAL(VALPURIUM), true);
+    Weapon->InitMaterials(MAKE_MATERIAL(VALPURIS_METAL), MAKE_MATERIAL(VALPURIS_METAL), true);
     PLAYER->GetGiftStack()->AddItem(Weapon);
 
     shield* Shield = shield::Spawn();
-    Shield->InitMaterials(MAKE_MATERIAL(VALPURIUM));
+    Shield->InitMaterials(MAKE_MATERIAL(VALPURIS_METAL));
     PLAYER->GetGiftStack()->AddItem(Shield);
 
     game::MakePlayerGodChampion();

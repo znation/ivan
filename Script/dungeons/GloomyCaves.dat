@@ -290,7 +290,7 @@ Dungeon ELPURI_CAVE;
 
     Square, Random;
     {
-      Items == VALPURIUM VALPURIUM flamingsword { Enchantment = 10; LifeExpectancy = 1000:10000; Chance = 5; }
+      Items == VALPURIS_METAL VALPURIS_METAL flamingsword { Enchantment = 10; LifeExpectancy = 1000:10000; Chance = 5; }
     }
   }
 
@@ -989,7 +989,7 @@ Dungeon ELPURI_CAVE;
         Types
         {
           G = golem;
-          V = golem(VALPURIUM) { Inventory = { 2, scrollofgolemcreation, scrollofgolemcreation { Chance = 10; Times = 4; } } }
+          V = golem(VALPURIS_METAL) { Inventory = { 2, scrollofgolemcreation, scrollofgolemcreation { Chance = 10; Times = 4; } } }
         }
       }
       {

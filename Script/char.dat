@@ -402,7 +402,7 @@ petrus
   DeathMessage = "The high priest disappears in a bright light and only his left nut is left behind.";
   /* Replies overridden */
   /* BloodMaterial specifically *not* BLUE_BLOOD, as Petrus is of humble parentage */
-  AttachedGod = VALPURUS;
+  AttachedGod = VALPURIS;
   BodyPartsDisappearWhenSevered = true;
   CanBeConfused = false;
   EnergyResistance = 50;
@@ -753,7 +753,7 @@ guard
     Cloak = BEAR_SKIN cloak;
     RightWielded = IRON IRON meleeweapon(LONG_SWORD);
     LeftWielded = IRON shield;
-    RightRing = VALPURIUM ring(RING_OF_INFRA_VISION);
+    RightRing = VALPURIS_METAL ring(RING_OF_INFRA_VISION);
     Adjective = "patrol";
     CWeaponSkillHits = { 2, 200, 200; }
     RightSWeaponSkillHits = 100;
@@ -855,8 +855,8 @@ guard
     Amulet = amulet(AMULET_OF_ESP);
     BodyArmor = ILLITHIUM bodyarmor(PLATE_MAIL) { Enchantment = 3; }
     Cloak = PHOENIX_FEATHER cloak(CLOAK_OF_FIRE_RESISTANCE);
-    RightWielded = VALPURIUM VALPURIUM meleeweapon(LONG_SWORD) { Enchantment = 3; }
-    LeftWielded = VALPURIUM shield { Enchantment = 3; }
+    RightWielded = VALPURIS_METAL VALPURIS_METAL meleeweapon(LONG_SWORD) { Enchantment = 3; }
+    LeftWielded = VALPURIS_METAL shield { Enchantment = 3; }
     RightRing = ring(RING_OF_TELEPORT_CONTROL);
     LeftRing = ring(RING_OF_INVISIBILITY);
     RightGauntlet = ANGEL_HAIR gauntlet(GAUNTLET_OF_STRENGTH) { Enchantment = 3; }
@@ -944,12 +944,12 @@ guard
     Helmet = GOLD helmet(FULL_HELMET) { Enchantment = 2; }
     Amulet = amulet(AMULET_OF_LIFE_SAVING);
     BodyArmor = ARCANITE bodyarmor(PLATE_MAIL) { Enchantment = 2; }
-    Cloak = OMMEL_HAIR cloak(CLOAK_OF_FIRE_RESISTANCE);
+    Cloak = BRAMBLEBACK_HAIR cloak(CLOAK_OF_FIRE_RESISTANCE);
     RightWielded = ILLITHIUM OCTIRON meleeweapon(LONG_SWORD) { Enchantment = 2; }
     LeftWielded = OCTIRON shield { Enchantment = 2; }
     RightRing = ring(RING_OF_FIRE_RESISTANCE);
     LeftRing = ring(RING_OF_POISON_RESISTANCE);
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
     RightBoot = ILLITHIUM boot { Enchantment = 2; }
     DefaultName = "High Lady Kauhistuttava";
     Adjective = "master tomb";
@@ -1465,7 +1465,7 @@ priest
     "\"I shall punish you in the name of @Gd.\"";
   }
 
-  Config VALPURUS;
+  Config VALPURIS;
   {
     DefaultArmStrength = 15;
     DefaultLegStrength = 20;
@@ -1486,10 +1486,10 @@ priest
     TotalVolume = 100000;
     TotalSize = 180;
     DefaultName = "Verax";
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     PostFix = "of Valpurus";
     Helmet = MITHRIL helmet { Enchantment = 2; }
-    Amulet = VALPURIUM amulet(AMULET_OF_ESP);
+    Amulet = VALPURIS_METAL amulet(AMULET_OF_ESP);
     BodyArmor = MITHRIL bodyarmor(CHAIN_MAIL) { Enchantment = 2; }
     Cloak = NYMPH_HAIR cloak { Enchantment = 2; }
     Belt = NYMPH_HAIR belt { Enchantment = 2; }
@@ -1605,11 +1605,11 @@ priest
     Sex = FEMALE;
     Helmet = METEORIC_STEEL helmet { Enchantment = 2; }
     BodyArmor = METEORIC_STEEL bodyarmor(CHAIN_MAIL) { Enchantment = 2; }
-    Cloak = OMMEL_HAIR cloak { Enchantment = 2; }
-    Belt = OMMEL_HAIR belt { Enchantment = 2; }
+    Cloak = BRAMBLEBACK_HAIR cloak { Enchantment = 2; }
+    Belt = BRAMBLEBACK_HAIR belt { Enchantment = 2; }
     RightWielded = EBONY_WOOD wondersmellstaff { Enchantment = 3; }
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
-    RightBoot = OMMEL_HAIR boot { Enchantment = 2; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
+    RightBoot = BRAMBLEBACK_HAIR boot { Enchantment = 2; }
     Inventory == wand(WAND_OF_NECROMANCY);
     KnownCWeaponSkills == BLUNT_WEAPONS;
     CWeaponSkillHits == 50;
@@ -1774,7 +1774,7 @@ oree
   Belt = ARCANITE belt { Enchantment = 3; }
   BodyArmor = goldeneagleshirt;
   RightGauntlet = NYMPH_HAIR gauntlet(GAUNTLET_OF_DEXTERITY) { Enchantment = 3; }
-  RightBoot = OMMEL_HAIR boot(BOOT_OF_AGILITY) { Enchantment = 3; }
+  RightBoot = BRAMBLEBACK_HAIR boot(BOOT_OF_AGILITY) { Enchantment = 3; }
   KnownCWeaponSkills = { 3, UNARMED, KICK, BITE; }
   CWeaponSkillHits = { 3, 2000, 2000, 2000; }
   PanicLevel = 0;
@@ -1935,7 +1935,7 @@ darkknight
     Helmet = STEEL helmet(FULL_HELMET) { Enchantment = 2; }
     BodyArmor = STEEL bodyarmor(PLATE_MAIL) { Enchantment = 1; }
     RightWielded = STEEL STEEL meleeweapon(LONG_SWORD) { Enchantment = 1; }
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 1; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 1; }
     RightBoot = STEEL boot { Enchantment = 1; }
     PostFix = "templar";
     KnownCWeaponSkills == LARGE_SWORDS;
@@ -1959,7 +1959,7 @@ darkknight
     Helmet = METEORIC_STEEL helmet(FULL_HELMET) { Enchantment = 2; }
     BodyArmor = METEORIC_STEEL bodyarmor(PLATE_MAIL) { Enchantment = 2; }
     RightWielded = METEORIC_STEEL METEORIC_STEEL meleeweapon(BASTARD_SWORD) { Enchantment = 2; }
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
     RightBoot = METEORIC_STEEL boot { Enchantment = 2; }
     Adjective = "Xinroch's";
     NameSingular = "grave keeper";
@@ -1994,7 +1994,7 @@ darkknight
     Helmet = STEEL helmet(FULL_HELMET) { Enchantment = 2; }
     BodyArmor = STEEL bodyarmor(PLATE_MAIL) { Enchantment = 2; }
     RightWielded = STEEL STEEL meleeweapon(TWO_HANDED_SWORD) { Enchantment = 2; }
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
     RightBoot = STEEL boot { Enchantment = 2; }
     UsesLongAdjectiveArticle = true;
     Adjective = "elite";
@@ -2016,7 +2016,7 @@ darkknight
     BodyArmor = STEEL bodyarmor(PLATE_MAIL) { Enchantment = 2; }
     RightWielded = STEEL STEEL meleeweapon(BASTARD_SWORD) { Enchantment = 2; }
     LeftWielded = STEEL STEEL meleeweapon(BASTARD_SWORD) { Enchantment = 2; }
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
     RightBoot = STEEL boot { Enchantment = 2; }
     UsesLongAdjectiveArticle = true;
     NameSingular = "dark knightess";
@@ -2427,7 +2427,7 @@ frog
     SkinColor = rgb16(32, 88, 32);
     Adjective = "light";
     CWeaponSkillHits == 100;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     ScienceTalkPossibility = 25;
     ScienceTalkIntelligenceModifier = 2;
     ScienceTalkWisdomModifier = 5;
@@ -2454,7 +2454,7 @@ frog
     SkinColor = rgb16(32, 88, 32);
     Adjective = "greater light";
     CWeaponSkillHits == 200;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     ScienceTalkPossibility = 50;
     ScienceTalkIntelligenceModifier = 5;
     ScienceTalkWisdomModifier = 10;
@@ -2481,7 +2481,7 @@ frog
     SkinColor = rgb16(32, 88, 32);
     Adjective = "giant light";
     CWeaponSkillHits == 500;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     IsPolymorphable = false;
     ClassStates = TELEPORT_CONTROL;
     IsEnormous = true;
@@ -2904,11 +2904,11 @@ goblin
     AttributeBonus = 100;
     Helmet = STEEL helmet(FULL_HELMET) { Enchantment = 1; }
     BodyArmor = MITHRIL bodyarmor(CHAIN_MAIL) { Enchantment = 1; }
-    Cloak = OMMEL_HAIR cloak { Enchantment = 1; }
+    Cloak = BRAMBLEBACK_HAIR cloak { Enchantment = 1; }
     RightWielded = MITHRIL MITHRIL meleeweapon(SHORT_SWORD) { Enchantment = 2; }
     LeftWielded = MITHRIL MITHRIL meleeweapon(SHORT_SWORD) { Enchantment = 2; }
     RightRing = ring(RING_OF_TELEPORTATION);
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 1; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 1; }
     RightBoot = STEEL boot { Enchantment = 1; }
     TotalVolume = 50000;
     CWeaponSkillHits == 200;
@@ -3180,12 +3180,12 @@ golem
   UndeadVersions = false;
   AllowedDungeons = { 5, XINROCH_TOMB, ELPURI_CAVE, GOBLIN_FORT, PYRAMID, DARK_FOREST; }
 
-  Config VALPURIUM;
+  Config VALPURIS_METAL;
   {
     Frequency = 1000;
     DangerModifier = 500;
     Adjective = "valpurium";
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
   }
 
   Config SPIDER_SILK;
@@ -3672,7 +3672,7 @@ communist /* Ivan */
   Alias == "Ivan";
   ClassStates = INFRA_VISION;
   Helmet = helmet(GOROVITS_FAMILY_GAS_MASK);
-  Cloak = OMMEL_HAIR cloak(CLOAK_OF_ELECTRICITY_RESISTANCE) { Enchantment = 2; }
+  Cloak = BRAMBLEBACK_HAIR cloak(CLOAK_OF_ELECTRICITY_RESISTANCE) { Enchantment = 2; }
   BodyArmor = KEVLAR bodyarmor(PLATE_MAIL) { Enchantment = 2; }
   Belt = TROLL_HIDE belt { Enchantment = 2; }
   RightWielded = gorovitsweapon(GOROVITS_HAMMER);
@@ -5048,7 +5048,7 @@ xinrochghost
   LeftWielded = EBONY_WOOD shield { Enchantment = 2; }
   RightRing = ring(RING_OF_TELEPORT_CONTROL);
   LeftRing = ring(RING_OF_INVISIBILITY);
-  RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
+  RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
   RightBoot = METEORIC_STEEL boot { Enchantment = 2; }
   KnownCWeaponSkills = { 2, LARGE_SWORDS, SHIELDS; }
   CWeaponSkillHits = { 2, 1000, 1000; }
@@ -5390,8 +5390,8 @@ mistress
     BodyArmor = NYMPH_HAIR bodyarmor(PLATE_MAIL) { Enchantment = 1; }
     RightGauntlet = NYMPH_HAIR gauntlet { Enchantment = 1; }
     RightBoot = NYMPH_HAIR boot { Enchantment = 1; }
-    RightWielded = OMMEL_HAIR whip { Enchantment = 2; }
-    LeftWielded = OMMEL_HAIR whip { Enchantment = 2; }
+    RightWielded = BRAMBLEBACK_HAIR whip { Enchantment = 2; }
+    LeftWielded = BRAMBLEBACK_HAIR whip { Enchantment = 2; }
     CWeaponSkillHits == 500;
     RightSWeaponSkillHits = 500;
     LeftSWeaponSkillHits = 500;
@@ -5403,9 +5403,9 @@ mistress
   {
     HairColor = rgb16(200, 0, 0);
     AttributeBonus = 30;
-    BodyArmor = OMMEL_HAIR bodyarmor(PLATE_MAIL) { Enchantment = 2; }
-    RightGauntlet = OMMEL_HAIR gauntlet { Enchantment = 2; }
-    RightBoot = OMMEL_HAIR boot { Enchantment = 2; }
+    BodyArmor = BRAMBLEBACK_HAIR bodyarmor(PLATE_MAIL) { Enchantment = 2; }
+    RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
+    RightBoot = BRAMBLEBACK_HAIR boot { Enchantment = 2; }
     RightWielded = PHOENIX_FEATHER whip(RUNED_WHIP) { Enchantment = 3; }
     LeftWielded = PHOENIX_FEATHER whip(RUNED_WHIP) { Enchantment = 3; }
     CWeaponSkillHits == 1000;
@@ -5787,7 +5787,7 @@ kobold
     Helmet = METEORIC_STEEL helmet;
     BodyArmor = METEORIC_STEEL bodyarmor(CHAIN_MAIL);
     RightWielded = MITHRIL meleeweapon(SPEAR) { Enchantment = 1; }
-    Belt = OMMEL_HAIR belt;
+    Belt = BRAMBLEBACK_HAIR belt;
     Cloak = NYMPH_HAIR cloak;
     RightGauntlet = NYMPH_HAIR gauntlet;
     RightBoot = TROLL_HIDE boot;
@@ -6802,7 +6802,7 @@ orc
     CanBeCloned = false;
     IsPolymorphable = false;
     TotalVolume = 150000;
-    Inventory = { 4, potion { SecondaryMaterial = OMMEL_URINE; }, potion { SecondaryMaterial = OMMEL_URINE; }, potion { SecondaryMaterial = OMMEL_URINE; }, potion { SecondaryMaterial = OMMEL_URINE; } }
+    Inventory = { 4, potion { SecondaryMaterial = BRAMBLEBACK_URINE; }, potion { SecondaryMaterial = BRAMBLEBACK_URINE; }, potion { SecondaryMaterial = BRAMBLEBACK_URINE; }, potion { SecondaryMaterial = BRAMBLEBACK_URINE; } }
     CanBeConfused = false;
     FireResistance = 30;
     ElectricityResistance = 30;
@@ -7193,8 +7193,8 @@ imperialist
     Cloak = NYMPH_HAIR cloak { Enchantment = 1; }
     BodyArmor = MITHRIL bodyarmor(CHAIN_MAIL) { Enchantment = 1; }
     Belt = GOLD belt(BELT_OF_CARRYING) { Enchantment = 2; }
-    RightWielded = OMMEL_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 3; }
-    LeftWielded = OMMEL_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 3; }
+    RightWielded = BRAMBLEBACK_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 3; }
+    LeftWielded = BRAMBLEBACK_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 3; }
     LeftRing = ring(RING_OF_INFRA_VISION);
     RightGauntlet = NYMPH_HAIR gauntlet { Enchantment = 1; }
     RightBoot = MITHRIL boot(BOOT_OF_KICKING) { Enchantment = 3; }
@@ -7391,7 +7391,7 @@ smith
     LegBitmapPos = 0, 96;
     HairColor = rgb16(200, 200, 200);
     ClothColor = rgb16(100, 100, 100);
-    Cloak = OMMEL_HAIR cloak(CLOAK_OF_FIRE_RESISTANCE) { Enchantment = 1; }
+    Cloak = BRAMBLEBACK_HAIR cloak(CLOAK_OF_FIRE_RESISTANCE) { Enchantment = 1; }
     RightGauntlet = LEATHER gauntlet(GAUNTLET_OF_DEXTERITY) { Enchantment = 4; }
     RightWielded = MITHRIL meleeweapon(HAMMER) { Enchantment = 2; }
   }
@@ -7909,7 +7909,7 @@ darkmage
     TotalSize = 160;
     HairColor = rgb16(140, 140, 140);
     CapColor = rgb16(80, 80, 160);
-    Cloak = OMMEL_HAIR cloak { Enchantment = 4; }
+    Cloak = BRAMBLEBACK_HAIR cloak { Enchantment = 4; }
     RightWielded = ARCANITE ARCANITE meleeweapon(QUARTER_STAFF) { Enchantment = 5; }
     HPRequirementForGeneration = 350;
     DayRequirementForGeneration = 35;
@@ -8905,15 +8905,15 @@ archangel
     "\"I'm here only because @Gd wished so.\"";
   }
 
-  Config VALPURUS;
+  Config VALPURIS;
   {
     DefaultName = "Inlux";
-    BodyArmor = VALPURIUM bodyarmor(CHAIN_MAIL) { Enchantment = 0; }
+    BodyArmor = VALPURIS_METAL bodyarmor(CHAIN_MAIL) { Enchantment = 0; }
     Cloak = GOLDEN_EAGLE_FEATHER cloak { Enchantment = 0; }
     Belt = GOLDEN_EAGLE_FEATHER belt { Enchantment = 0; }
     RightGauntlet = GOLDEN_EAGLE_FEATHER gauntlet { Enchantment = 0; }
-    RightWielded = VALPURIUM VALPURIUM meleeweapon(TWO_HANDED_SWORD);
-    LeftWielded = VALPURIUM shield;
+    RightWielded = VALPURIS_METAL VALPURIS_METAL meleeweapon(TWO_HANDED_SWORD);
+    LeftWielded = VALPURIS_METAL shield;
     HostileReplies == "\"Thou wouldst defy the King Upon the Throne, the Lord of Lords and God of Gods, the Frog Beneath the World Who Bears the Greatest of All Burdens, Mighty Valpurus Himself? I shall not stand thy heresy any longer, worthless worm!\"";
   }
 
@@ -9017,8 +9017,8 @@ archangel
     DefaultName = "Rapax";
     IsSadist = true;
     IsMasochist = true;
-    RightWielded = OMMEL_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 5; }
-    LeftWielded = OMMEL_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 5; }
+    RightWielded = BRAMBLEBACK_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 5; }
+    LeftWielded = BRAMBLEBACK_HAIR RUBY whip(RUNED_WHIP) { Enchantment = 5; }
     KnownCWeaponSkills = { 2, WHIPS, BITE; }
     Inventory == potion { Times = 2; SecondaryMaterial = VODKA; }
   }
@@ -9059,7 +9059,7 @@ archangel
     DefaultName = "Erado";
     IsSadist = true;
     IsUndead = true;
-    Helmet = OMMEL_BONE skull;
+    Helmet = BRAMBLEBACK_BONE skull;
     RightWielded = PSYPHER OCTIRON terrorscythe { Enchantment = 4; }
     LeftWielded = PSYPHER OCTIRON meleeweapon(SICKLE) { Enchantment = 4; }
     KnownCWeaponSkills = { 2, POLE_ARMS, SMALL_SWORDS; }
@@ -9108,7 +9108,7 @@ tailor
     BodyArmor = HARDENED_LEATHER bodyarmor(PLATE_MAIL) { Enchantment = 1; }
     RightWielded = MITHRIL meleeweapon(DAGGER) { Enchantment = 2; }
     RightGauntlet = NYMPH_HAIR gauntlet(GAUNTLET_OF_DEXTERITY) { Enchantment = 4; }
-    RightBoot = OMMEL_HAIR boot { Enchantment = 1; }
+    RightBoot = BRAMBLEBACK_HAIR boot { Enchantment = 1; }
   }
 
   Config ASLONA_CASTLE;
@@ -9186,7 +9186,7 @@ mysticfrog
     SkinColor = rgb16(32, 88, 32);
     Adjective = "mystic light";
     ClassStates = TELEPORT_CONTROL|INVISIBLE|ESP;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     PolymorphIntelligenceRequirement = 15;
     ScienceTalkIntelligenceModifier = 25;
     ScienceTalkWisdomModifier = 50;

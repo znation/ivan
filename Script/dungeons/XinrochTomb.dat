@@ -925,7 +925,7 @@ Dungeon XINROCH_TOMB;
       Square, Pos 4,4;
       {
         Items == METEORIC_STEEL itemcontainer(CHEST|OCTAGONAL_LOCK) { Parameters = LOCKED; ItemsInside == Random { MinPrice = 1250; Times = 2; } }
-        Character = golem(OMMEL_BONE);
+        Character = golem(BRAMBLEBACK_BONE);
       }
     }
   }
@@ -1799,13 +1799,13 @@ Dungeon XINROCH_TOMB;
 
       Square, Random;
       {
-        Character = golem(OMMEL_BONE);
+        Character = golem(BRAMBLEBACK_BONE);
         Times = 2;
       }
 
       Square, Random;
       {
-        Character = golem(OMMEL_TOOTH) { Inventory == Random { MinPrice = 2500; Times = 2; Chance = 75; } }
+        Character = golem(BRAMBLEBACK_TOOTH) { Inventory == Random { MinPrice = 2500; Times = 2; Chance = 75; } }
       }
 
       Square, Pos 1, 0;
