@@ -522,7 +522,7 @@ for dat_file in ['item.dat', 'material.dat', 'char.dat']:
 - [x] Review Creation.rtf ("The Eight Eggs of Valpuri" — creation myth with Elder Gods and Nenimhi)
 
 ### Phase 2: Data File Rewrites
-- [ ] Rewrite `Script/define.dat` — rename enums, effect IDs, material IDs, team IDs, dungeon IDs
+- [x] Rewrite `Script/define.dat` — rename enums, effect IDs, material IDs, team IDs, dungeon IDs
 - [ ] Rewrite `Script/material.dat` — all names, descriptions, cross-references
 - [ ] Rewrite `Script/item.dat` — item names, descriptions, PostFixes, god attachments
 - [ ] Rewrite `Script/char.dat` — character names, descriptions, dialogue references

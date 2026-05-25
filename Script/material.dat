@@ -69,7 +69,7 @@ solid
    * Metals
    */
 
-  Config VALPURIUM;
+  Config VALPURIS_METAL;
   {
     StrengthValue = 400;
     ConsumeType = CT_METAL;
@@ -79,7 +79,7 @@ solid
     PriceModifier = 50000;
     NameStem = "valpurium";
     Flexibility = 4;
-    AttachedGod = VALPURUS;
+    AttachedGod = VALPURIS;
     IntelligenceRequirement = 50;
     CommonFlags = Base|IS_VALUABLE;
     CategoryFlags = Base|IS_METAL|IS_SPARKLING;
@@ -721,20 +721,20 @@ solid
     Flexibility = 20;
     AttachedGod = DULCIS;
     SoftenedMaterial = ELF_CLOTH;
-    HardenedMaterial = OMMEL_HAIR;
+    HardenedMaterial = BRAMBLEBACK_HAIR;
     IntelligenceRequirement = 9;
     CategoryFlags = Base|CAN_BE_TAILORED|IS_GOLEM_MATERIAL;
     InteractionFlags = Base|CAN_BURN;
     FireResistance = 1;
   }
 
-  Config OMMEL_HAIR;
+  Config BRAMBLEBACK_HAIR;
   {
     StrengthValue = 60;
     ConsumeType = CT_MISC_ANIMAL;
     Density = 400;
     Color = rgb16(160, 0, 0);
-    NameStem = "ommel hair";
+    NameStem = "brambleback hair";
     Flexibility = 15;
     AttachedGod = DULCIS;
     SoftenedMaterial = NYMPH_HAIR;
@@ -756,7 +756,7 @@ solid
     NameStem = "troll wool";
     Flexibility = 7;
     AttachedGod = DULCIS;
-    SoftenedMaterial = OMMEL_HAIR;
+    SoftenedMaterial = BRAMBLEBACK_HAIR;
     HardenedMaterial = ANGEL_HAIR;
     IntelligenceRequirement = 26;
     CommonFlags = Base|IS_VALUABLE;
@@ -2924,7 +2924,7 @@ solid
     NameStem = "petrified dragon bone";
     AttachedGod = MORTIFER;
     SoftenedMaterial = TURTLE_SHELL;
-    HardenedMaterial = OMMEL_BONE;
+    HardenedMaterial = BRAMBLEBACK_BONE;
     CommonFlags = Base|IS_VALUABLE;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
     InteractionFlags = Base&~CAN_DISSOLVE;
