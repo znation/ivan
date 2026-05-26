@@ -10,7 +10,7 @@ while true; do
 
     # Run pi in JSON mode, streaming all events to stdout while saving raw events
     pi --mode json \
-        'Address the next TODO item in EXECUTION_PLAN.md. To get more context about what we\'re attempting, feel free to take a look at HIGH_LEVEL_PLAN.md. Once your one TODO item is done, write back to EXECUTION_PLAN.md indicating it\'s complete, and commit any changes. Then respond with a JSON block on its own line: {"done": true} if all TODO items are finished, or {"done": false} if there are more TODO items remaining.' \
+        'Address the next TODO item in EXECUTION_PLAN.md. To get more context about what we'\''re attempting, feel free to take a look at HIGH_LEVEL_PLAN.md. Once your one TODO item is done, write back to EXECUTION_PLAN.md indicating it'\''s complete, and commit any changes. Then respond with a JSON block on its own line: {"done": true} if all TODO items are finished, or {"done": false} if there are more TODO items remaining.' \
         2>&1 | tee "$JSON_FILE"
 
     # Extract the final assistant message content from agent_end event.
