@@ -102,9 +102,9 @@ int game::Teams;
 int game::Dungeons;
 int game::StoryState;
 int game::GloomyCaveStoryState;
-int game::XinrochTombStoryState;
-int game::FreedomStoryState;
-int game::AslonaStoryState;
+int game::CryptOfKhazZadmStoryState;
+int game::OakhavenFreedomQuestState;
+int game::AslonaCivilWarState;
 int game::RebelStoryState;
 truth game::PlayerIsChampion;
 truth game::HasBoat;
@@ -863,9 +863,9 @@ truth game::Init(cfestring& loadBaseName)
       InitPlayerAttributeAverage();
       StoryState = 0;
       GloomyCaveStoryState = 0;
-      XinrochTombStoryState = 0;
-      FreedomStoryState = 0;
-      AslonaStoryState = 0;
+      CryptOfKhazZadmStoryState = 0;
+      OakhavenFreedomQuestState = 0;
+      AslonaCivilWarState = 0;
       RebelStoryState = 0;
       PlayerIsChampion = false;
       HasBoat = false;
@@ -982,7 +982,7 @@ void game::Run()
         Counter = 0;
       }
 
-      if(CurrentDungeonIndex == ELPURI_CAVE
+      if(CurrentDungeonIndex == VALPURIS_CATHEDRAL
          && CurrentLevelIndex == ZOMBIE_LEVEL
          && !RAND_N(1000 + NecroCounter))
       {
@@ -3478,7 +3478,7 @@ truth game::Save(cfestring& SaveName)
   SaveFile << AveragePlayerDexterityExperience;
   SaveFile << AveragePlayerAgilityExperience;
   SaveFile << Teams << Dungeons << StoryState << GloomyCaveStoryState;
-  SaveFile << XinrochTombStoryState << FreedomStoryState << AslonaStoryState << RebelStoryState;
+  SaveFile << CryptOfKhazZadmStoryState << OakhavenFreedomQuestState << AslonaCivilWarState << RebelStoryState;
   SaveFile << PlayerIsChampion << HasBoat << PlayerRunning;
   SaveFile << PlayerMassacreMap << PetMassacreMap << MiscMassacreMap;
   SaveFile << PlayerMassacreAmount << PetMassacreAmount << MiscMassacreAmount;
@@ -3558,7 +3558,7 @@ int game::Load(cfestring& saveName)
   SaveFile >> AveragePlayerDexterityExperience;
   SaveFile >> AveragePlayerAgilityExperience;
   SaveFile >> Teams >> Dungeons >> StoryState >> GloomyCaveStoryState;
-  SaveFile >> XinrochTombStoryState >> FreedomStoryState >> AslonaStoryState >> RebelStoryState;
+  SaveFile >> CryptOfKhazZadmStoryState >> OakhavenFreedomQuestState >> AslonaCivilWarState >> RebelStoryState;
   SaveFile >> PlayerIsChampion >> HasBoat >> PlayerRunning;
   SaveFile >> PlayerMassacreMap >> PetMassacreMap >> MiscMassacreMap;
   SaveFile >> PlayerMassacreAmount >> PetMassacreAmount >> MiscMassacreAmount;
@@ -4916,7 +4916,7 @@ void game::EnterArea(charactervector& Group, int Area, int EntryIndex)
       CurrentLevel->CreateGlobalRain(GlobalRainLiquid, GlobalRainSpeed);
     }
 
-    if(New && GetCurrentLevel()->IsOnGround() && CurrentDungeonIndex == XINROCH_TOMB)
+    if(New && GetCurrentLevel()->IsOnGround() && CurrentDungeonIndex == CRYPT_OF_KHAZ_ZADM)
     {
       GlobalRainLiquid = powder::Spawn(SOOT);
       GlobalRainSpeed = v2(-64, 128);
@@ -4933,7 +4933,7 @@ void game::EnterArea(charactervector& Group, int Area, int EntryIndex)
       CurrentLevel->CreateGlobalRain(GlobalRainLiquid, GlobalRainSpeed);
     }
 
-    if(New && CurrentDungeonIndex == ELPURI_CAVE && Area == OREE_LAIR)
+    if(New && CurrentDungeonIndex == VALPURIS_CATHEDRAL && Area == OREE_LAIR)
     {
       GlobalRainLiquid = liquid::Spawn(BLOOD);
       GlobalRainSpeed = v2(256, 512);

@@ -397,11 +397,15 @@ for dat_file in ['item.dat', 'material.dat', 'char.dat']:
 **Time:** ~2 hours (already done)
 **Resources:** None needed
 
-### Phase 2: Data File Rewrites - IN PROGRESS
+### Phase 2: Data File Rewrites - **COMPLETE**
+**Time:** ~3-4 hours
+**Resources:** Python script for .dat file processing
 **Time:** ~3-4 hours
 **Resources:** Python script for .dat file processing
 
-### Phase 3: C++ Source Files - IN PROGRESS
+### Phase 3: C++ Source Files - **IN PROGRESS**
+**Time:** TBD (human.cpp and game.cpp complete, remaining files pending)
+**Resources:** Manual editing of each file, batch replacement using sed/awk
 **Time:** ~6-8 hours
 **Resources:** Manual editing of each file, batch replacement using sed/awk
 
@@ -461,7 +465,11 @@ for dat_file in ['item.dat', 'material.dat', 'char.dat']:
 
 ---
 
-## 10. Summary of Files to Modify
+## 9. Summary of Files Modified
+
+### Completed:
+- ✅ `Main/Source/human.cpp` - Valpurus → Valpuris, Elpuri → Malgorath the Blight-Beast, Golden Eagle Shirt → Shirt of Golden Hawk, Attnam → Oakhaven
+- ✅ `Main/Source/game.cpp` - XinrochTombStoryState → CryptOfKhazZadmStoryState, FreedomStoryState → OakhavenFreedomQuestState, AslonaStoryState → AslonaCivilWarState
 
 ### Critical Files (Must Rewrite):
 - `Main/Source/human.cpp` (~200 strings)
@@ -477,7 +485,7 @@ for dat_file in ['item.dat', 'material.dat', 'char.dat']:
 - `Main/Source/cmdcraftfilters.cpp` (dynamic_cast update)
 - `Main/Source/stack.cpp` (comment and enum reference updates)
 
-### Lore Documents:
+### Remaining Files:
 - Doc/Lore/Fiction/*.txt (~14 files)
 - Doc/Lore/HolyStack/*.rtf (3 files)
 
