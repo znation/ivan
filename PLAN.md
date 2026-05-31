@@ -2,7 +2,9 @@
 
 ## Status Overview
 
-This plan unifies `HIGH_LEVEL_PLAN.md` (extensive research inventory) and `EXECUTION_PLAN.md` (creative design + technical pipeline). It is organized as a sequential, commit-per-task checklist.
+This plan unifies `HIGH_LEVEL_PLAN.md` (extensive research inventory) and `EXECUTION_PLAN.md` (creative design + technical pipeline). It is organized as a sequential, commit-per-task checklist. Each task has a `[ ]` checkbox; mark `[x]` after committing.
+
+**LLM tool:** Use the `pi` CLI (see `auto-complete-plan.sh`) with qwen3.6-35b-a3b for all narrative rewrites. Prompt templates for each content type are in `EXECUTION_PLAN.md` section 7.
 
 ---
 
@@ -22,574 +24,586 @@ This plan unifies `HIGH_LEVEL_PLAN.md` (extensive research inventory) and `EXECU
 
 ### A. Script Data Files (Creative Content)
 
-#### 1. `Script/material.dat` — 15 remaining old references
+#### 1. `Script/material.dat` — 17 remaining old references
 - `BANANA_PEEL`, `BANANA_FLESH`, `HOLY_BANANA_FLESH`, `BANANA_STOLLEN` — all banana family materials must be renamed to mango/mango-pit equivalents
-- `FROG_FLESH` → must rename to BLIGHTTOAD_FLESH (the enum was already renamed in define.dat, but the material Config name and its ConsumeEndMessage/HitMessage references still use old names)
+- `FROG_FLESH` → must rename to BLIGHTTOAD_FLESH
+- `DARK_FROG_BLOOD`, `LIGHT_FROG_BLOOD` → `DARK_BLIGHTTOAD_BLOOD`, `LIGHT_BLIGHTTOAD_BLOOD` *(not in original plan)*
 
-#### 2. `Script/item.dat` — ~27 remaining old references
+#### 2. `Script/item.dat` — ~22 remaining old references
 - **Quest items with PostFixes:** `PostFix = "of Attnam"`, `"named Valpurus' Justifier"`, `"of Petrus"`, `"of the left nut of Petrus"`, `"of Valpurus"`, `"of Elpuri"`, `"of Xinroch"`
 - **DescriptiveInfo text:** Multiple ~200-word lore descriptions referencing Decos, Richel, Petrus, Attnam, Tweraif, Xinroch, Elpuri, Valpuris Cathedral, etc.
 - **Class names:** `banana`, `holybanana`, `bananapeels` classes still use old names in ITEM() macros
 
-#### 3. `Script/char.dat` — ~30 remaining old references
-- `FROG_FLESH` → BLIGHTTOAD_FLESH (enum renamed, but Config name and FleshMaterial references remain)
+#### 3. `Script/char.dat` — ~29 remaining old references
+- `FROG_FLESH` → BLIGHTTOAD_FLESH; `DARK_FROG_BLOOD`/`LIGHT_FROG_BLOOD` refs
 - `banana`, `Bananagrower` character type names still use old naming
 
-#### 4. Dungeon `.dat` files — need review for remaining story text
-All dungeon files in `Script/dungeons/` have been inventoried in HIGH_LEVEL_PLAN.md but not yet rewritten:
-- `NewAttnam.dat`, `UnderwaterTunnel.dat`, `Attnam.dat`, `XinrochTomb.dat`, `AslonaCastle.dat`, `RebelCamp.dat`, `GoblinFort.dat`, `Pyramid.dat`, `BlackMarket.dat`, `FungalCave.dat`, `DarkForest.dat`, `Irinox.dat`, `Mondedr.dat`, `EmptyArea.dat`, `GloomyCaves.dat`
+#### 4. Dungeon `.dat` files — only 3 need changes (others already clean)
+| File | References |
+|---|---|
+| `Script/dungeons/NewAttnam.dat` | 14 |
+| `Script/dungeons/Attnam.dat` | 9 |
+| `Script/dungeons/XinrochTomb.dat` | 3 |
+| All other 12 dungeon files | 0 (already clean) |
 
 ### B. C++ Source Files (Hardcoded Strings + Class Renames)
 
-#### 5. `Main/Source/gods.cpp` — 2 references
-- Lines 797, 805: `BANANA_FLESH` material reference in god blessing code
+**Note:** Headers are updated in the same commit as their corresponding .cpp files — not as a separate phase — to keep the codebase compile-clean at every commit.
 
-#### 6. `Main/Source/materia.cpp` — 2 references
-- Line 278: `HM_FROG_FLESH` → needs rename to HM_BLIGHTTOAD_FLESH
-- Line 322: `CEM_FROG_FLESH` → needs rename to CEM_BLIGHTTOAD_FLESH
+| File | References | Notes |
+|---|---|---|
+| `Main/Source/human.cpp` | ~62 | Largest; all dialogue strings, quest text |
+| `Main/Source/game.cpp` | ~16 | Opening sequence, spawn calls |
+| `Main/Source/worldmap.cpp` | 35 | Variable names in map-gen logic *(missing from original plan)* |
+| `Main/Source/rooms.cpp` | ~13 | Cathedral text, bananadroparea, shop messages |
+| `Main/Source/nonhuman.cpp` | ~10 | Ostrich AI, banana pickup/delivery |
+| `Main/Source/lterras.cpp` | ~8 | Throne vision texts |
+| `Main/Source/miscitem.cpp` | ~6 | banana::Zap(), slip message, encrypted scroll |
+| `Main/Source/char.cpp` | ~4 | Evil ending, death score, function renames |
+| `Main/Source/gods.cpp` | 2 | BANANA_FLESH in god blessing code |
+| `Main/Source/materia.cpp` | 2 | HM_FROG_FLESH, CEM_FROG_FLESH |
+| `Main/Source/team.cpp` | 1 | Holy Order dialogue |
+| `Main/Source/gear.cpp` | ~5 | Artifact hit message strings |
+| `Main/Source/cmdcraftfilters.cpp` | 3 | dynamic_cast<banana*> type casts *(missing from original plan)* |
+| `Main/Source/cmdcraft.cpp` | 2 | Comments only *(missing from original plan)* |
+| `Main/Source/stack.cpp` | 1 | Comment only *(missing from original plan)* |
 
-#### 7. `Main/Source/rooms.cpp` — ~13 references
-- Banana-specific logic in `bananadroparea`, Decos Bananas Co. shopkeeper message, New Attnam references
+### C. Header Files (updated with their paired .cpp)
 
-#### 8. `Main/Source/nonhuman.cpp` — ~10 references
-- Ostrich AI: `HasDroppedBananas`, banana pickup/delivery loop tied to New Attnam/Tweraif
-
-#### 9. Remaining C++ files with story strings (invented from HIGH_LEVEL_PLAN.md inventory)
-The following files were inventoried but NOT yet modified after the 3 commits:
-- `Main/Source/human.cpp` — ~62 remaining old references (Petrus, Decos, Richel, Attnam, Tweraif, Xinroch, Elpuri names in dialogue strings)
-- `Main/Source/game.cpp` — ~16 remaining old references (opening sequence text, Richel Decos summons, letter to Petrus, Attnam description, banana present spawning)
-- `Main/Source/gear.cpp` — artifact hit effect messages referencing Neerc Se-ulb, Mjolak, Vermis, Turox names
-- `Main/Source/char.cpp` — death messages, evil ending victory text with Petrus/Mortifer references
-- `Main/Source/lterras.cpp` — throne vision texts (Grandis Rana song, Petrus/Great Frog titles, Asamarum/E-numa sa-am katanas)
-- `Main/Source/miscitem.cpp` — banana class methods (`banana::Zap()`, `bananapeels::StepOnEffect()`), "slipped on a banana peel" death message
-- `Main/Source/team.cpp` — alarm ringing, angel dialogue ("We will defend the Holy Order!")
-
-### C. Header Files (Class Definitions + Method Declarations)
-
-#### 10. Header files needing class/method renames
-| File | What Needs Changing |
-|------|-------------------|
-| `Main/Include/item.h` | `banana`, `holybanana`, `bananapeels` class definitions, `IsBanana()`, `IsBananaPeel()` methods |
-| `Main/Include/miscitem.h` | `ITEM(banana, ...)`, `ITEM(holybanana, banana)`, `ITEM(bananapeels, item)` macros |
-| `Main/Include/nonhuman.h` | `ostrich::HasDroppedBananas`, `IsBananaGrower()` method declarations |
-| `Main/Include/human.h` | `CHARACTER(bananagrower, humanoid)`, `IsBananaGrower()`, `ReceiveHolyBanana()`, `AddHolyBananaConsumeEndMessage()` |
-| `Main/Include/char.h` | `IsBananaGrower()`, `ReceiveHolyBanana()`, `AddHolyBananaConsumeEndMessage()` declarations |
-| `Main/Include/rooms.h` | `ROOM(bananadroparea, room)` macro |
-| `Main/Include/confdef.h` | `BANANA_PEEL`, `BANANA_FLESH`, `HOLY_BANANA_FLESH`, `BANANA_STOLLEN`, `FROG_FLESH`, `ROOM_BANANA_DROP_AREA` #define macros |
-| `Main/Include/ivandef.h` | `CEM_FROG_FLESH`, `HM_FROG_FLESH` defines |
-| `Main/Include/definesvalidator.h` | 27 validator checks for old names (BANANA_FLESH, BANANA_PEEL, etc.) |
+| File | What Needs Changing | Paired With |
+|------|-------------------|----|
+| `Main/Include/item.h` | `banana`→`mango`, `holybanana`→`sacredmango`, `bananapeels`→`mangopits` class defs; `IsBanana()`→`IsMango()` | Task 2.10 (miscitem.cpp) |
+| `Main/Include/miscitem.h` | ITEM() macros for renamed classes | Task 2.10 (miscitem.cpp) |
+| `Main/Include/nonhuman.h` | `HasDroppedBananas`→`HasDroppedMangos` | Task 2.7 (nonhuman.cpp) |
+| `Main/Include/human.h` | `CHARACTER(bananagrower,...)` → `croptender`; method renames | Task 2.1 (human.cpp) |
+| `Main/Include/char.h` | Method declarations to match human.h renames | Task 2.8 (char.cpp) |
+| `Main/Include/rooms.h` | `ROOM(bananadroparea, room)` → `ROOM(mangodroparea, room)` | Task 2.6 (rooms.cpp) |
+| `Main/Include/confdef.h` | All BANANA_*/FROG_FLESH/ROOM_BANANA_DROP_AREA #defines | Task 2.6 (rooms.cpp) |
+| `Main/Include/ivandef.h` | `CEM_FROG_FLESH`, `HM_FROG_FLESH` defines | Task 2.4 (materia.cpp) |
+| `Main/Include/definesvalidator.h` | Update 27 validator checks to new names | Task 2.15 (final cleanup) |
 
 ### D. Lore Documents
 
-#### 11. `Doc/Lore/Fiction/` — 14 TXT files
-All need creative rewriting: Attnam.txt, DwarvenWars.txt, EncounterWithKamikazeDwarf.txt, God_titles.txt, Hedgehogs.txt, HistoryOfDarkKnighthood.txt, HistoryOfGolems.txt, HolyBanana.txt, NewAttnamLegacy.txt, Ommel.txt, SaalThul.txt, Turox.txt, Vermis.txt
+#### `Doc/Lore/Fiction/` — 13 TXT files + 1 RTF
+Attnam.txt, DwarvenWars.txt, EncounterWithKamikazeDwarf.txt, God_titles.txt, Hedgehogs.txt, HistoryOfDarkKnighthood.txt, HistoryOfGolems.txt, HolyBanana.txt, NewAttnamLegacy.txt, Ommel.txt, SaalThul.txt, Turox.txt, Vermis.txt, **Creation.rtf** *(missing from original plan)*
 
-#### 12. `Doc/Lore/HolyStack/` — 3 RTF + 2 TXT files
+#### `Doc/Lore/HolyStack/` — 2 TXT + 2 RTF + media files
 - `Titues.txt`, `ValpuriFAQ.txt` (TXT) — heavy rewrite needed
-- `Mola_Mola.rtf`, `The_Great_Battle.rtf` (RTF) — need format conversion to TXT first, then rewrite
+- `Mola_Mola.rtf`, `The_Great_Battle.rtf` (RTF) — pandoc convert first
+- `Excisio.mp3`, `Incede_frater!.mp3`, `Valpuri_is_alive!.mp3` — rename *(missing from original plan)*
+- `Valpuri.jpg`, `Valpuri2.jpg`, `Valpuri3.jpg`, `Valpuri_ON_MAHTAVA.JPG` — rename *(missing from original plan)*
 
-#### 13. Documentation files
+### E. Documentation
 - `MANUAL` (~400 lines, ~5 story references)
 - `NEWS` (~640 lines, ~36+ story references)
 
-### E. Audio Assets
+### F. Audio Assets
+- `enner.wav`, `ennerdeath.wav` → replace with Wraithstalker equivalents
+- `Sound/SoundEffects.cfg` — update creature name references after reading its content
 
-#### 14. Sound effects (158 WAV files in `/Sound/`)
-Most are generic combat/sfx. Some may need replacement:
-- `enner.wav`, `ennerdeath.wav` — Enner Beast sounds → replace with Wraithstalker equivalents
-- `siren4.wav`, `choir.wav`, `choir2.wav`, `cathedral.wav` — atmospheric, style change only
-
-#### 15. Music (11 MIDI files in `/Music/`)
-All generic dungeon/world themes — style change only, no replacement needed
-
-### F. Graphics Assets
-
-#### 16. PNG sprite sheets and tiles (~30+ files)
-- `Char.png`, `Humanoid.png` — character sprites need full regeneration
-- `Item.png`, `Item-outlined.png` — item icons need regeneration
-- `WTerra.png`, `OLTerra.png`, `GLTerra.png` — terrain tiles need regeneration
-- `Menu.png`, `Menu1-5.png`, `Symbol.png` — UI art needs regeneration
-- `Enner.png` → Wraithstalker sprite, `IVlad.png` → Shadowpaw bunny sprite
-- `Font.png`, `Font2.png`, `Font3.png` — font bitmaps (style change)
-- `Effect.png`, `FOW.png`, `Smiley.png` — may keep or style-change
+### G. Graphics Assets (~30 PNG files)
+- `Enner.png` → `Wraithstalker.png`, `IVlad.png` → `Shadowpaw.png` (must-replace)
+- `Char.png`, `Humanoid.png`, `Item.png`, terrain tiles, UI art (regenerate)
+- `Font.png`, `Effect.png`, `FOW.png`, `Smiley.png`, `Cursor.png` (style change or keep)
 
 ---
 
 ## Unified Implementation Plan
 
-### Phase 0: Setup Audio/Visual Generation Infrastructure
+### Pre-flight: Safety Checkpoint
 
-Before generating any assets, we need to set up the tooling. This is a prerequisite for Phases 7+ (graphics) and optional for audio.
+```bash
+git tag pre-rewrite-checkpoint
+mkdir -p build && cd build && cmake .. && make -j$(nproc) 2>&1 | tail -20
+```
 
-#### Task 0.1: Install Local Inference Stack
-- **Image generation:** `wikeeyang/Flux2-Klein-9B-True-V2` via HuggingFace Diffusers
-  - Requires: `pip install diffusers transformers accelerate torch soundfile safetensors`
-  - GPU recommended (8GB+ VRAM), but CPU fallback possible with `accelerate`
-  - Alternative for lower-end hardware: `stabilityai/stable-diffusion-xl-base-1.0` or `black-forest-labs/FLUX.1-schnell`
-- **Audio generation:** For sound effects, use `facebook/musicgen-small` or `facebook/musicgen-medium` via Diffusers
-  - MusicGen can generate short WAV clips from text prompts at command line
-  - Alternative: `suno/bark` for voice/sfx, but MusicGen is more suitable for SFX
-- **Audio conversion:** Install `ffmpeg` for converting between formats (MIDI→WAV if needed)
+---
 
-#### Task 0.2: Create Asset Generation Scripts
-Create a Python package `tools/asset_gen/`:
+### Phase 0: Setup Infrastructure + Validator Prep
+
+#### Task 0.0: [ ] Update `definesvalidator.h` to Accept New Names
+**Why first:** The validator has 27 `#error` checks that fire on old names. Phase 1 dat changes remove old names, but Phase 2 C++ changes may lag — leaving a window where old names still exist in C++. Disabling or updating the validator first prevents spurious compile errors during the transition.
+
+**Action:** Update all 27 `#error` checks in `Main/Include/definesvalidator.h` to validate the NEW names (MANGO_PIT, MANGO_FLESH, BLIGHTTOAD_FLESH, etc.) rather than the old ones.
+
+**Verification:** `grep -c "#error" Main/Include/definesvalidator.h` returns same count with new names.
+
+#### Task 0.1: [ ] Install Local Inference Stack
+```bash
+pip install diffusers transformers accelerate torch soundfile safetensors pillow
+python -c "import torch; print(torch.cuda.is_available())"
+which ffmpeg || sudo apt-get install -y ffmpeg pandoc
+```
+- Image: `wikeeyang/Flux2-Klein-9B-True-V2` (or `black-forest-labs/FLUX.1-schnell` for CPU)
+- Audio: `facebook/musicgen-small` for music; `suno/bark` for SFX/voice
+- Run a 64×64 test generation to verify before proceeding.
+
+#### Task 0.2: [ ] Create `tools/asset_gen/` Package
 ```
 tools/asset_gen/
 ├── __init__.py
-├── image_generator.py    # Flux pipeline wrapper, batch generation
-├── audio_generator.py    # MusicGen pipeline for SFX/music
-├── asset_catalog.json    # JSON with dimensions/purposes/prompts per asset
-└── utils.py              # Rate limiting, retry logic, validation
+├── image_generator.py    # Flux pipeline wrapper: --prompt --width --height --output
+├── audio_generator.py    # MusicGen/Bark wrapper: --prompt --output --duration
+├── outline_util.py       # PIL-based white-border outline for Item-outlined.png
+├── balance_validator.py  # Reads old vs new .dat files, compares all numeric fields
+└── asset_catalog.json    # Per-asset: filename, dimensions, pixel format, prompt, priority
 ```
 
-#### Task 0.3: Create Asset Catalog JSON
-Generate a JSON file listing every PNG/WAV/MID that needs replacement, with:
-- filename, current dimensions, pixel format
-- purpose (sprite sheet, terrain tile, SFX, etc.)
-- new creative prompt for the Tolkien-inspired setting
-- priority level (must-replace vs style-change)
+**`balance_validator.py` must:**
+- Parse `.dat` files extracting all numeric values (NutritionValue, StrengthValue, PriceModifier, Enchantment, Color RGB)
+- Compare old vs new and output a diff report
+- Exit nonzero if any numeric value changed
+
+#### Task 0.3: [ ] Populate `asset_catalog.json`
+Get exact dimensions first:
+```bash
+python -c "
+from PIL import Image; import os
+for f in sorted(os.listdir('Graphics')):
+    if f.endswith('.png'):
+        img = Image.open(f'Graphics/{f}')
+        print(f'{f}: {img.size}')
+"
+```
+For each of the ~20 PNG files, record filename, current dimensions, new filename, generation prompt, and priority (`must-replace` vs `style-change`).
 
 ---
 
 ### Phase 1: Complete Script Data File Rewrites
 
-These are text-only changes with no dependencies on other phases. Each `.dat` file is a self-contained unit.
+Text-only changes in `.dat` files; no C++ dependencies. Run grep verification after each file.
 
-#### Task 1.1: Rewrite `Script/material.dat`
-**What to change:**
-- Rename all banana-family materials: `BANANA_PEEL` → `MANGO_PIT`, `BANANA_FLESH` → `MANGO_FLESH`, `HOLY_BANANA_FLESH` → `SACRED_MANGO_FLESH`, `BANANA_STOLLEN` → `ATAVUS_STOLLEN`
-- Rename `FROG_FLESH` → `BLIGHTTOAD_FLESH` (enum already renamed in define.dat)
-- Rewrite all DescriptiveInfo text for materials that have lore descriptions
-- Update cross-references: HardenedMaterial/SoftenedMaterial chains involving BANANA_STOLLEN
+#### Task 1.1: [ ] Rewrite `Script/material.dat` (17 references)
 
-**How:** Use sed/grep to find all occurrences, then apply the EXECUTION_PLAN.md name mapping table. For descriptive text, use LLM generation with prompt template from section 7.2 of EXECUTION_PLAN.md.
+**Exact substitutions:**
+| Old | New |
+|---|---|
+| `Config BANANA_PEEL` | `Config MANGO_PIT` |
+| `NameStem = "banana peel"` | `NameStem = "mango pit"` |
+| `NaturalForm = bananapeels` | `NaturalForm = mangopits` |
+| `Config BANANA_FLESH` | `Config MANGO_FLESH` |
+| `NameStem = "banana"` | `NameStem = "mango"` |
+| `HardenedMaterial = BANANA_STOLLEN` | `HardenedMaterial = ATAVUS_STOLLEN` |
+| `Config HOLY_BANANA_FLESH` | `Config SACRED_MANGO_FLESH` |
+| `NameStem = "holy banana"` | `NameStem = "sacred mango"` |
+| `SoftenedMaterial = BANANA_FLESH` | `SoftenedMaterial = MANGO_FLESH` |
+| `EFFECT_HOLY_BANANA` | `EFFECT_SACRED_MANGO` |
+| `CEM_HOLY_BANANA` | `CEM_SACRED_MANGO` |
+| `Config BANANA_STOLLEN` | `Config ATAVUS_STOLLEN` |
+| `NameStem = "banana stollen"` | `NameStem = "stollen of Atavus"` |
+| `Config DARK_FROG_BLOOD` | `Config DARK_BLIGHTTOAD_BLOOD` |
+| `NameStem = "dark frog blood"` | `NameStem = "dark blighttoad blood"` |
+| `Config LIGHT_FROG_BLOOD` | `Config LIGHT_BLIGHTTOAD_BLOOD` |
+| `NameStem = "light frog blood"` | `NameStem = "light blighttoad blood"` |
 
-**Verification:** `grep -c "BANANA_\|FROG_FLESH" Script/material.dat` should return 0 after completion.
+Use `pi` to rewrite all DescriptiveInfo text for banana-family and frog-flesh materials.
 
-#### Task 1.2: Rewrite `Script/item.dat`
-**What to change:**
-- Rename item classes in ITEM() macros: `banana` → `mango`, `holybanana` → `sacredmango`, `bananapeels` → `mangopits`
-- Update all PostFix strings referencing old names (Attnam, Valpurus, Petrus, Elpuri, Xinroch, Decos)
-- Rewrite all DescriptiveInfo text (~200-word lore blocks for unique items)
-- Update god attachment references where god names changed
+**Verification:** `grep -c "banana\|Banana\|BANANA\|FROG_FLESH\|frog blood\|frog flesh" Script/material.dat` → 0
 
-**How:** This is the largest single file (~8000 lines). Process in batches:
-1. First pass: mechanical renames (class names, PostFix strings) using sed
-2. Second pass: LLM-generated DescriptiveInfo rewrites for each unique item with lore
-3. Third pass: cross-reference validation
+#### Task 1.2: [ ] Rewrite `Script/item.dat` (22 references)
 
-**Verification:** `grep -c "banana\|Banana\|Valpurus\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus" Script/item.dat` should return 0.
+**Mechanical renames:**
+| Old | New |
+|---|---|
+| `ITEM(banana,` | `ITEM(mango,` |
+| `ITEM(holybanana, banana)` | `ITEM(sacredmango, mango)` |
+| `ITEM(bananapeels,` | `ITEM(mangopits,` |
+| `PostFix = "of Attnam"` | `PostFix = "of Oakhaven"` |
+| `"named Valpurus' Justifier"` | `"named Valpuris' Justifier"` |
+| `"of Petrus"` | `"of the Archpriest"` |
+| `"of the left nut of Petrus"` | `"of the Archpriest's Relic"` |
+| `"of Valpurus"` | `"of Valpuris"` |
+| `"of Elpuri"` | `"of Malgorath"` |
+| `"of Xinroch"` | `"of Khaz-Zadm"` |
 
-#### Task 1.3: Rewrite `Script/char.dat`
-**What to change:**
-- Rename `FROG_FLESH` → `BLIGHTTOAD_FLESH` in FleshMaterial references
-- Rename character types: `bananagrower` → `croptender`, update IsBananaGrower() references
-- Rewrite creature descriptions and dialogue text referencing old names
+Use `pi` to rewrite DescriptiveInfo blocks for all named artifacts (Justifier, Shirt of Golden Hawk, Nethervane, Thunderfist, Soulthorn, Dawnbreaker).
 
-**How:** Similar batch approach — mechanical renames first, then LLM for descriptive text.
+**Verification:** `grep -c "banana\|Banana\|Valpurus\b\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus" Script/item.dat` → 0
 
-**Verification:** `grep -c "FROG_FLESH\|banana\|Bananagrower" Script/char.dat` should return 0.
+#### Task 1.3: [ ] Rewrite `Script/char.dat` (29 references)
 
-#### Task 1.4: Rewrite Dungeon `.dat` Files
-Process each dungeon file in `Script/dungeons/`:
-- Rename level descriptions and short descriptions (e.g., "New Attnam" → "Oakhaven", "Tomb of Xinroch" → "Crypt of Khaz-Zadm")
-- Update all sign text referencing old names
-- Rewrite LevelMessage strings with new setting flavor
-- Update OTerrainMap references (BRICK_PROPAGANDA, BANANA_TREE, etc.)
+**Mechanical renames:**
+| Old | New |
+|---|---|
+| `FleshMaterial = FROG_FLESH` | `FleshMaterial = BLIGHTTOAD_FLESH` |
+| `DARK_FROG_BLOOD` refs | `DARK_BLIGHTTOAD_BLOOD` |
+| `LIGHT_FROG_BLOOD` refs | `LIGHT_BLIGHTTOAD_BLOOD` |
+| Config `bananagrower` | Config `croptender` |
+| `DefaultName = "banana grower"` | `DefaultName = "crop tender"` |
+| `banana::Spawn()` in char.dat | `mango::Spawn()` |
 
-**Order:** Start with story-critical dungeons first:
-1. `NewAttnam.dat` — Freedom Quest starting area
-2. `UnderwaterTunnel.dat` — Travel route
-3. `Attnam.dat` — Cathedral city
-4. `XinrochTomb.dat` — 11-level necromancy dungeon
-5. `AslonaCastle.dat`, `RebelCamp.dat` — Civil war arcs
-6. Remaining dungeons (GoblinFort, Pyramid, BlackMarket, FungalCave, etc.)
+Use `pi` to rewrite creature descriptions and NPC dialogue strings.
 
-**Verification:** After each file, grep for old names to confirm zero matches.
+**Verification:** `grep -c "FROG_FLESH\|frog blood\|banana\|Bananagrower" Script/char.dat` → 0
+
+#### Task 1.4: [ ] Rewrite 3 Dungeon `.dat` Files (others already clean)
+
+**`Script/dungeons/NewAttnam.dat`** (14 references):
+- All "New Attnam" / "Tweraif" → "Oakhaven"
+- LevelMessage strings with new setting flavor
+- `bananadroparea` room refs → `mangodroparea`
+- `BANANA_TREE` terrain/decoration references
+
+**`Script/dungeons/Attnam.dat`** (9 references):
+- All "Attnam" → "Valpuris" (city name)
+- Petrus/Valpurus NPC references → Archpriest Valerius Cordatus / Valpuris
+- LevelMessage strings updated
+
+**`Script/dungeons/XinrochTomb.dat`** (3 references):
+- "Xinroch" → "Khaz-Zadm"
+- Dark Knight order name updated
+
+**Verification:** `grep -c "banana\|Banana\|Attnam\|Tweraif\|Xinroch\|Petrus\|Elpuri" Script/dungeons/NewAttnam.dat Script/dungeons/Attnam.dat Script/dungeons/XinrochTomb.dat` → 0 for all
 
 ---
 
-### Phase 2: Complete C++ Source File Rewrites
+### Phase 2: C++ Source Files + Matching Headers
 
-These changes depend on the new names established in Phase 1. Process files from most-to-least story-critical.
+**Key principle:** Each task updates BOTH the .cpp source AND its corresponding header in the same commit. This keeps the codebase compile-clean at every step.
 
-#### Task 2.1: Rewrite `Main/Source/human.cpp` (~62 remaining references)
-**What to change:** All hardcoded dialogue strings referencing old names:
-- Petrus → Archpriest Valerius Cordatus (or just "Archpriest")
-- Decos/Richel → Lord Regent Valerius Decimus
-- Attnam/Tweraif → Oakhaven / Valpuris
-- Elpuri → Malgorath the Blight-Beast
-- Xinroch → Khaz-Zadm
-- All quest dialogue text blocks (Petrus quest chain, XinrochTomb necromancer dialogue, Freedom Quest lore, Aslona civil war dialogues)
+#### Task 2.1: [ ] `Main/Source/human.cpp` + `Main/Include/human.h` (~62 refs)
 
-**How:** This is the largest C++ file (~246KB). Process by function:
-1. `priest::BeTalkedTo()` — Petrus quest chain (~lines 650-840)
-2. `necromancer::BeTalkedTo()` — XinrochTomb quest (~lines 5120-5240)
-3. `tweraifpriest::BeTalkedTo()` — Freedom Quest lore (~lines 7100-7200)
-4. `imperialist::BeTalkedTo()` — Decos Bananas Co. dialogue (~lines 5500-5580)
-5. `aslonawizard::BeTalkedTo()`, `aslonacaptain::BeTalkedTo()`, `harvan::BeTalkedTo()`, `lordregent::BeTalkedTo()` — Civil war dialogues
+**Dialogue strings to rewrite with `pi`:**
+- `bananagrower::BeTalkedTo()` (~line 3279): banana farming → mango tending
+- `bananagrower::GetAICommand()` (~line 3442): string messages only; preserve logic
+- `priest::BeTalkedTo()` (~lines 650–840): Petrus quest chain → Archpriest Valerius Cordatus
+- `necromancer::BeTalkedTo()` (~lines 5120–5240): Xinroch → Khaz-Zadm
+- `tweraifpriest::BeTalkedTo()` (~lines 7100–7200): Freedom Quest lore with Oakhaven/Decimus
+- `imperialist::BeTalkedTo()` (~lines 5500–5580): Decos Bananas Co. → Decimus Harvest Co.
+- Civil war dialogues: `aslonawizard`, `aslonacaptain`, `harvan`, `lordregent`
 
-**Verification:** `grep -c "Valpurus\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus" Main/Source/human.cpp` should return 0.
+**Function/identifier renames in human.cpp:**
+| Old | New |
+|---|---|
+| `bananagrower::` (all method defs) | `croptender::` |
+| `HasDroppedBananas` | `HasDroppedMangos` |
+| `IsBananaGrower()` | `IsCropTender()` |
+| `ReceiveHolyBanana()` | `ReceiveSacredMango()` |
+| `AddHolyBananaConsumeEndMessage()` | `AddSacredMangoConsumeEndMessage()` |
 
-#### Task 2.2: Rewrite `Main/Source/game.cpp` (~16 remaining references)
+**human.h (same commit):**
+- `CHARACTER(bananagrower, humanoid)` → `CHARACTER(croptender, humanoid)`
+- All method declarations matching above renames
+
+**Verification:** `grep -c "banana\|Banana\|Petrus\|Tweraif\|Xinroch\|Decos\|Richel\|Elpuri\|bananagrower\|BananaGrow" Main/Source/human.cpp Main/Include/human.h` → 0
+
+#### Task 2.2: [ ] `Main/Source/game.cpp` (~16 remaining references)
+
 **What to change:**
-- Opening sequence text (lines ~790-830): banana colony, Decos mansion summons, letter delivery premise, Attnam description
-- Banana present spawning (line 913): `banana::Spawn()` → `mango::Spawn()`
-- Holy banana reference (line 1056): `holybanana::Spawn()` → `sacredmango::Spawn()`
-- Decos ad shirt contract dialogue (lines ~6430-6450)
+- Opening sequence text (~lines 790–830): banana colony → mango grove, Decos mansion → Decimus estate, Attnam description → Valpuris. Use `pi` for narrative rewrite.
+- `banana::Spawn()` (~line 913) → `mango::Spawn()`
+- `holybanana::Spawn()` (~line 1056) → `sacredmango::Spawn()`
+- Decos ad shirt contract dialogue (~lines 6430–6450) → Decimus harvest contract
+- Any remaining `Valpurus` → `Valpuris`, `Elpuri` → `Malgorath`, `Petrus` → Archpriest
 
-**How:** Direct string replacement + LLM rewrite for opening narrative.
+**Verification:** `grep -c "banana\|Banana\|Valpurus\b\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus" Main/Source/game.cpp` → 0
 
-#### Task 2.3: Rewrite `Main/Source/gods.cpp` (2 references)
-- Lines 797, 805: `BANANA_FLESH` → `MANGO_FLESH` in god blessing code
+#### Task 2.3: [ ] `Main/Source/gods.cpp` (2 references)
+- Lines 797, 805: `BANANA_FLESH` → `MANGO_FLESH`
+- No header changes needed.
 
-#### Task 2.4: Rewrite `Main/Source/materia.cpp` (2 references)
+#### Task 2.4: [ ] `Main/Source/materia.cpp` + `Main/Include/ivandef.h` (2+2 refs)
+
+**materia.cpp:**
 - Line 278: `HM_FROG_FLESH` → `HM_BLIGHTTOAD_FLESH`
 - Line 322: `CEM_FROG_FLESH` → `CEM_BLIGHTTOAD_FLESH`
 
-#### Task 2.5: Rewrite `Main/Source/gear.cpp` (artifact hit effect messages)
-**What to change:** Artifact names in ADD_MESSAGE strings:
-- "Neerc Se-ulb's life-draining energies" → "Nethervane's life-draining energies"
-- "Mjolak's unholy energy" → "Thunderfist's unholy energy"
-- "Vermis sends %s on a sudden journey" → "Soulthorn sends %s on a sudden journey"
-- "full force of Turox" / "Turox's explosion" → "Dawnbreaker" equivalents
+**ivandef.h (same commit):**
+- `CEM_FROG_FLESH` → `CEM_BLIGHTTOAD_FLESH`
+- `HM_FROG_FLESH` → `HM_BLIGHTTOAD_FLESH`
 
-**How:** Search for artifact name strings in ADD_MESSAGE calls and replace.
+#### Task 2.5: [ ] `Main/Source/gear.cpp` (artifact hit messages)
 
-#### Task 2.6: Rewrite `Main/Source/rooms.cpp` (~13 references)
-**What to change:**
-- `cathedral::Enter()` — Cathedral of Valpuris description
-- `bananadroparea::DropItem()` — Victory text (mango seedling planting), score entry
-- `shop::DropItem()` (NEW_ATTNAM config) — Decos Bananas Co. monopoly message
-- `sumoarena::CheckDestroyTerrain()` — New Attnam reference
+| Old | New |
+|---|---|
+| `"Neerc Se-ulb's life-draining energies"` | `"Nethervane's life-draining energies"` |
+| `"Mjolak's unholy energy"` | `"Thunderfist's unholy energy"` |
+| `"Vermis sends %s on a sudden journey"` | `"Soulthorn sends %s on a sudden journey"` |
+| `"full force of Turox"` | `"full force of Dawnbreaker"` |
+| `"Turox's explosion"` | `"Dawnbreaker's explosion"` |
 
-**How:** Direct string replacement with new setting names.
+No header changes needed.
 
-#### Task 2.7: Rewrite `Main/Source/nonhuman.cpp` (~10 references)
-**What to change:**
-- Ostrich AI logic (lines ~725-806): `HasDroppedBananas`, banana pickup/delivery loop
-- Replace with Skygull messenger bird behavior tied to Oakhaven
+#### Task 2.6: [ ] `Main/Source/rooms.cpp` + `Main/Include/rooms.h` + `Main/Include/confdef.h` (~13 refs)
 
-#### Task 2.8: Rewrite `Main/Source/char.cpp` (story strings)
-**What to change:**
-- Evil ending victory text (lines ~1563-1580): undead voice greeting, Petrus name, Avatar of Chaos title
+**rooms.cpp:**
+- `cathedral::Enter()` — Cathedral of Valpuris description text
+- `bananadroparea::DropItem()` → `mangodroparea::DropItem()`: victory text, score entry
+- `shop::DropItem()` (NEW_ATTNAM config) — Decos Bananas Co. → Decimus Harvest Co.
+- `sumoarena::CheckDestroyTerrain()` — New Attnam → Oakhaven
+
+**rooms.h (same commit):**
+- `ROOM(bananadroparea, room)` → `ROOM(mangodroparea, room)`
+
+**confdef.h (same commit):**
+| Old | New |
+|---|---|
+| `ROOM_BANANA_DROP_AREA` | `ROOM_MANGO_DROP_AREA` |
+| `BANANA_PEEL` | `MANGO_PIT` |
+| `BANANA_FLESH` | `MANGO_FLESH` |
+| `HOLY_BANANA_FLESH` | `SACRED_MANGO_FLESH` |
+| `BANANA_STOLLEN` | `ATAVUS_STOLLEN` |
+| `FROG_FLESH` | `BLIGHTTOAD_FLESH` |
+
+#### Task 2.7: [ ] `Main/Source/nonhuman.cpp` + `Main/Include/nonhuman.h` (~10 refs)
+
+**nonhuman.cpp:**
+- Ostrich AI: `HasDroppedBananas` → `HasDroppedMangos`; banana pickup/delivery loop messages
+- Ostrich display name → "skygull" in relevant NPC configs
+- Delivery loop: `banana` item casts → `mango`; `bananapeels` → `mangopits`
+
+**nonhuman.h (same commit):**
+- `HasDroppedBananas` → `HasDroppedMangos` field
+
+#### Task 2.8: [ ] `Main/Source/char.cpp` + `Main/Include/char.h` (story strings)
+
+**char.cpp:**
+- Evil ending victory text (~lines 1563–1580): Petrus → Archpriest, Avatar of Chaos title
 - Death score entries referencing story states
 - Function renames: `HasHeadOfElpuri()` → `HasHeartOfMalgorath()`, `HasPetrussNut()` → `HasArchpriestsRelic()`, `HasGoldenEagleShirt()` → `HasGoldenHawkTunic()`
 
-#### Task 2.9: Rewrite `Main/Source/lterras.cpp` (throne victory texts)
-**What to change:**
-- Attnam throne vision (lines ~248-283): Grandis Rana song, Petrus/Great Frog titles, high priest victory text
-- Aslona throne vision (lines ~286-315): katana names (Asamarum, E-numa sa-am), "Long live the king!"
-- Xinroch Tomb altar victory (lines ~795-828): Master Dark Knight title, Unholy Order of Infuscor
+**char.h (same commit):** matching method declarations renamed
 
-#### Task 2.10: Rewrite `Main/Source/miscitem.cpp` (banana class strings)
-**What to change:**
-- Line 946: "slipped on a banana peel" → "slipped on a mango pit"
-- Line 2267: encryptedscroll message referencing Petrus → Archpriest
-- Lines 2465, 2471, 2479: banana::Zap() jam messages → mango::Zap()
+#### Task 2.9: [ ] `Main/Source/lterras.cpp` (throne victory texts)
+- Attnam throne vision (~lines 248–283): Grandis Rana song → Tolkien-flavored epic verse with `pi`
+- Aslona throne vision (~lines 286–315): katana names → Muramasa/Masamune; "Long live the king!"
+- Xinroch Tomb altar (~lines 795–828): Master Dark Knight title → Unholy Order of Infuscor
 
-#### Task 2.11: Rewrite `Main/Source/team.cpp` (2 references)
-- Line 97: "You hear an alarm ringing." — keep or adapt
-- Line 120: "We will defend the Holy Order!" → new setting-appropriate angel dialogue
+#### Task 2.10: [ ] `Main/Source/miscitem.cpp` + `Main/Include/item.h` + `Main/Include/miscitem.h`
 
----
+**miscitem.cpp:**
+- Line 946: `"slipped on a banana peel"` → `"slipped on a mango pit"`
+- Line 2267: encryptedscroll message Petrus → Archpriest
+- Lines 2465, 2471, 2479: `banana::Zap()` messages → `mango::Zap()`
+- Method implementations: `banana::Zap()` → `mango::Zap()`, etc.
 
-### Phase 3: Header File Updates
+**item.h (same commit):**
+| Old | New |
+|---|---|
+| `class banana` | `class mango` |
+| `class holybanana : public banana` | `class sacredmango : public mango` |
+| `class bananapeels` | `class mangopits` |
+| `IsBanana()` | `IsMango()` |
+| `IsBananaPeel()` | `IsMangoPit()` |
 
-These are mechanical renames that must match the changes in Phases 1-2.
+**miscitem.h (same commit):**
+| Old | New |
+|---|---|
+| `ITEM(banana, materialcontainer)` | `ITEM(mango, materialcontainer)` |
+| `ITEM(holybanana, banana)` | `ITEM(sacredmango, mango)` |
+| `ITEM(bananapeels, item)` | `ITEM(mangopits, item)` |
 
-#### Task 3.1: Update `Main/Include/item.h`
-- Rename class definitions: `banana` → `mango`, `holybanana` → `sacredmango`, `bananapeels` → `mangopits`
-- Rename methods: `IsBanana()` → `IsMango()`, `IsBananaPeel()` → `IsMangoPit()`
+#### Task 2.11: [ ] `Main/Source/team.cpp` (1 reference)
+- Line 120: `"We will defend the Holy Order!"` → `"We will defend the Sacred Order of Valpuris!"`
 
-#### Task 3.2: Update `Main/Include/miscitem.h`
-- Update ITEM() macros for renamed classes
+#### Task 2.12: [ ] `Main/Source/worldmap.cpp` (35 references) *(ADDED — missing from original plan)*
 
-#### Task 3.3: Update `Main/Include/nonhuman.h`
-- Rename `HasDroppedBananas` → `HasDeliveredSkygulls` (or similar)
-- Update method declarations
+**Variable/identifier renames — preserve all logic, rename identifiers only:**
+| Old | New |
+|---|---|
+| `int DistanceToAttnam` | `int DistanceToValpuris` |
+| `DistanceToAttnam(d)` | `DistanceToValpuris(d)` |
+| `loc1.DistanceToAttnam` | `loc1.DistanceToValpuris` |
+| `PerfectForAttnam` | `PerfectForValpuris` |
+| `PerfectForNewAttnam` | `PerfectForOakhaven` |
+| `continent* PetrusLikes` | `continent* ArchpriestsLikes` |
+| `PetrusLikes` (all uses) | `ArchpriestsLikes` |
+| `v2 NewAttnamPos` | `v2 OakhavenPos` |
+| `NewAttnamPos` (all uses) | `OakhavenPos` |
+| `"Valpurus shall not carry more continents!"` | `"Valpuris shall not carry more continents!"` |
 
-#### Task 3.4: Update `Main/Include/human.h`
-- Rename `CHARACTER(bananagrower, humanoid)` → `CHARACTER(croptender, humanoid)`
-- Rename methods: `IsBananaGrower()` → `IsCropTender()`, `ReceiveHolyBanana()` → `ReceiveSacredMango()`, `AddHolyBananaConsumeEndMessage()` → `AddSacredMangoConsumeEndMessage()`
+All 35 occurrences are within worldmap.cpp; no header changes needed.
 
-#### Task 3.5: Update `Main/Include/char.h`
-- Rename method declarations to match human.h changes
+#### Task 2.13: [ ] `Main/Source/cmdcraftfilters.cpp` (3 references) *(ADDED — missing from original plan)*
 
-#### Task 3.6: Update `Main/Include/rooms.h`
-- Rename `ROOM(bananadroparea, room)` → `ROOM(mangodroparea, room)` or new name
+**Must be done AFTER item.h is updated in Task 2.10** (class names must exist):
+- Line 31: `dynamic_cast<banana*>` → `dynamic_cast<mango*>`
+- Line 33: `dynamic_cast<bananapeels*>` → `dynamic_cast<mangopits*>`
+- Line 72: `dynamic_cast<holybanana*>` → `dynamic_cast<sacredmango*>`
 
-#### Task 3.7: Update `Main/Include/confdef.h`
-- Rename #define macros: `BANANA_PEEL` → `MANGO_PIT`, `BANANA_FLESH` → `MANGO_FLESH`, `HOLY_BANANA_FLESH` → `SACRED_MANGO_FLESH`, `BANANA_STOLLEN` → `ATAVUS_STOLLEN`, `FROG_FLESH` → `BLIGHTTOAD_FLESH`, `ROOM_BANANA_DROP_AREA` → new name
+#### Task 2.14: [ ] `Main/Source/cmdcraft.cpp` + `Main/Source/stack.cpp` (comments only) *(ADDED)*
+- `cmdcraft.cpp` line 69: `//potions, mines... also bananas xD` → remove or update comment
+- `cmdcraft.cpp` line 2458: TODO mentioning `kiwi/banana` → `kiwi/mango`
+- `stack.cpp` comment `/* 4 bananas */` → `/* 4 mangos */`
 
-#### Task 3.8: Update `Main/Include/ivandef.h`
-- Rename `CEM_FROG_FLESH` → `CEM_BLIGHTTOAD_FLESH`, `HM_FROG_FLESH` → `HM_BLIGHTTOAD_FLESH`
-
-#### Task 3.9: Update `Main/Include/definesvalidator.h`
-- Update all 27 validator checks for renamed materials/effects
-
----
-
-### Phase 4: Lore Document Rewrites
-
-These are standalone text files that can be processed in any order. Each file is a self-contained unit.
-
-#### Task 4.1: Rewrite `Doc/Lore/Fiction/Attnam.txt`
-- History of Valpuris Cathedral and the Aethelgard Empire
-- Replace all references to Perttuera, Pertturia, Attnam, Valpuri, Decos, Petrus
-
-#### Task 4.2: Rewrite `Doc/Lore/Fiction/DwarvenWars.txt`
-- Keep structure (epic history), rename locations/characters to Tolkien-inspired equivalents
-- Khaz-zadm mines, Divine War artifacts
-
-#### Task 4.3: Rewrite `Doc/Lore/Fiction/EncounterWithKamikazeDwarf.txt`
-- First-person dwarf narrative — already partially aligned with new pantheon (Great Tree Puu)
-- Update remaining old references
-
-#### Task 4.4: Rewrite `Doc/Lore/Fiction/God_titles.txt`
-- All Latin titles referencing Petrus, Valpurus/Valpuri, Great Frog → new pantheon titles
-
-#### Task 4.5: Rewrite `Doc/Lore/Fiction/Hedgehogs.txt`
-- Replace hedgehog lore with Thornback Porcupine equivalent
-
-#### Task 4.6: Rewrite `Doc/Lore/Fiction/HistoryOfDarkKnighthood.txt`
-- Rename Xinroch → Khaz-Zadm, Dark Knights → Unholy Order of Infuscor
-- Update Divine War narrative
-
-#### Task 4.7: Rewrite `Doc/Lore/Fiction/HistoryOfGolems.txt`
-- Rename deities in golem creation lore
-
-#### Task 4.8: Rewrite `Doc/Lore/Fiction/HolyBanana.txt`
-- Replace with Sacred Mango origin story (Sage Orpheus → Seges, mango discovery)
-
-#### Task 4.9: Rewrite `Doc/Lore/Fiction/NewAttnamLegacy.txt`
-- Poem about Oakhaven under Decimus's tyranny
-
-#### Task 4.10: Rewrite `Doc/Lore/Fiction/Ommel.txt`
-- Replace with Brambleback creature encyclopedia entry
-
-#### Task 4.11: Rewrite `Doc/Lore/Fiction/SaalThul.txt`
-- Rename Saal'Thul → Shade Vespera, update deity/city references
-
-#### Task 4.12: Rewrite `Doc/Lore/Fiction/Turox.txt`
-- Rename Turox → Dawnbreaker, Fortress Prym → new name
-
-#### Task 4.13: Rewrite `Doc/Lore/Fiction/Vermis.txt`
-- Rename Vermis → Soulthorn, Karl → Brother Aldric the Scholar
-
-#### Task 4.14: Convert and rewrite RTF files in `Doc/Lore/HolyStack/`
-- `Mola_Mola.rtf`, `The_Great_Battle.rtf`: Convert to TXT using `pandoc` or `libreoffice --headless --convert-to txt`
-- Then rewrite content with new setting names
-
-#### Task 4.15: Rewrite `Doc/Lore/HolyStack/Titues.txt`
-- All Latin titles referencing Petrus, Valpurus/Valpuri → new pantheon
-
-#### Task 4.16: Rewrite `Doc/Lore/HolyStack/ValpuriFAQ.txt`
-- Heavy rewrite — entire in-character FAQ for new setting
-- Replace Linux/Windows parody with setting-appropriate tech references
-- Update all god names, locations, organization acronyms
-
-#### Task 4.17: Rewrite `Doc/Lore/HolyStack/README.txt`
-- Directory description referencing Valpuri/Great Frog → new deity
+#### Task 2.15: [ ] `Main/Include/definesvalidator.h` — Finalize New Name Validation
+After all source/header renames are complete, update all 27 `#error` checks to enforce the new names (MANGO_PIT, MANGO_FLESH, BLIGHTTOAD_FLESH, etc.). This locks in the new naming convention going forward.
 
 ---
 
-### Phase 5: Documentation Updates
+### Phase 3: Lore Document Rewrites
 
-#### Task 5.1: Rewrite `MANUAL` file
-- ~5 story references: forum name, website URL, Valpurus example in alignment explanation
+Standalone text files; independent of each other. Use `pi` with the style guide from EXECUTION_PLAN.md Section 5.
 
-#### Task 5.2: Rewrite `NEWS` changelog
+#### Fiction/ Directory
+
+| Task | Status | File | Key Changes |
+|---|---|---|---|
+| 3.1 | [ ] | `Attnam.txt` | Perttuera/Attnam/Valpuri/Decos/Petrus → Aethelgard/Valpuris/Decimus/Archpriest |
+| 3.2 | [ ] | `DwarvenWars.txt` | Locations → Khaz-zadm mines; Divine War artifacts |
+| 3.3 | [ ] | `EncounterWithKamikazeDwarf.txt` | Update remaining old refs |
+| 3.4 | [ ] | `God_titles.txt` | All Latin titles → new pantheon (Valpuris, not Valpurus) |
+| 3.5 | [ ] | `Hedgehogs.txt` | Replace hedgehog lore → Thornback Porcupine equivalent |
+| 3.6 | [ ] | `HistoryOfDarkKnighthood.txt` | Xinroch→Khaz-Zadm, Dark Knights→Unholy Order of Infuscor |
+| 3.7 | [ ] | `HistoryOfGolems.txt` | Rename deities in golem creation lore |
+| 3.8 | [ ] | `HolyBanana.txt` | Replace with Sacred Mango origin story (Seges, mango discovery) |
+| 3.9 | [ ] | `NewAttnamLegacy.txt` | Poem about Oakhaven under Decimus's tyranny |
+| 3.10 | [ ] | `Ommel.txt` | Replace with Brambleback creature encyclopedia entry |
+| 3.11 | [ ] | `SaalThul.txt` | Shade Vespera; update deity/city refs |
+| 3.12 | [ ] | `Turox.txt` | Turox → Dawnbreaker, Fortress Prym → new name |
+| 3.13 | [ ] | `Vermis.txt` | Vermis → Soulthorn, Karl → Brother Aldric the Scholar |
+| 3.14 | [ ] | `Creation.rtf` *(added)* | `pandoc Creation.rtf -o Creation.txt`; rewrite creation myth with new pantheon |
+
+#### HolyStack/ Directory
+
+| Task | Status | File | Key Changes |
+|---|---|---|---|
+| 3.15 | [ ] | `Titues.txt` | All Latin titles → new pantheon |
+| 3.16 | [ ] | `ValpuriFAQ.txt` | Full rewrite — in-character FAQ, all god/location/org refs |
+| 3.17 | [ ] | `README.txt` | Directory description → new deity |
+| 3.18 | [ ] | `Mola_Mola.rtf` | `pandoc` convert to TXT, then rewrite |
+| 3.19 | [ ] | `The_Great_Battle.rtf` | `pandoc` convert to TXT, then rewrite as Divine War narrative |
+| 3.20 | [ ] | `Valpuri*.jpg` files *(added)* | Rename to `Valpuris_*.jpg` or `deity_image_*.jpg` |
+| 3.21 | [ ] | `Valpuri*.mp3` files *(added)* | Rename `Excisio.mp3`, `Incede_frater!.mp3`, `Valpuri_is_alive!.mp3` to setting-appropriate names (e.g., `Exscindere.mp3`, `Incede_miles!.mp3`, `Valpuris_est_vivus!.mp3`) |
+
+---
+
+### Phase 4: Documentation Updates
+
+#### Task 4.1: [ ] Rewrite `MANUAL`
+- ~5 story references: forum name, website URL, Valpurus → Valpuris in alignment explanation
+- Keep structure and formatting; only update setting-specific names
+
+#### Task 4.2: [ ] Rewrite `NEWS`
 - ~36+ story references throughout historical changelog entries
 - Keep dates and structure; adapt all setting-specific names
 
 ---
 
-### Phase 6: Sound Effects
+### Phase 5: Sound Effects
 
-#### Task 6.1: Identify WAV files needing replacement
-- `enner.wav`, `ennerdeath.wav` — Enner Beast → Wraithstalker sounds
-- Any other creature-specific SFX that reference renamed creatures
+#### Task 5.1: [ ] Inventory `Sound/SoundEffects.cfg`
+Read the file. Identify all references to old creature/character names (enner, ostrich, frog, etc.). Document what needs renaming before proceeding.
 
-#### Task 6.2: Generate new sound effects using MusicGen
+#### Task 5.2: [ ] Generate Wraithstalker Sound Effects
 ```bash
-# Example: generate a forest predator roar
 python tools/asset_gen/audio_generator.py \
-  --prompt "dark fantasy forest predator growl, menacing, deep" \
-  --output Sound/wraithstalker.wav \
-  --duration 1.0
+  --prompt "dark fantasy forest predator growl, menacing, deep bass, 1 second" \
+  --output Sound/wraithstalker.wav --duration 1.0
+python tools/asset_gen/audio_generator.py \
+  --prompt "dark fantasy predator death cry, agonized screech fading" \
+  --output Sound/wraithstalkerdeath.wav --duration 2.0
 ```
 
-#### Task 6.3: Update `Sound/SoundEffects.cfg`
-- Replace references to old creature names in regex patterns
-- Update file references for replaced SFX
+#### Task 5.3: [ ] Update `Sound/SoundEffects.cfg`
+- Replace `enner.wav`/`ennerdeath.wav` → `wraithstalker.wav`/`wraithstalkerdeath.wav`
+- Update any other old creature-name references found in Task 5.1
 
 ---
 
-### Phase 7: Graphics Generation
+### Phase 6: Graphics Generation
 
-This phase requires the infrastructure from Phase 0 and the creative design from EXECUTION_PLAN.md sections 1-6.
+Requires Phase 0 infrastructure. All dimensions come from `asset_catalog.json`.
 
-#### Task 7.1: Generate Character Sprite Sheets
-**`Char.png`** — Dark fantasy adventurer sprites in medieval armor/clothing
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy roguelike character sprite sheet, medieval adventurer in worn leather and chainmail, pixel art style, 16x16 tiles on white background" \
-  --width 256 --height 256 \
-  --output Graphics/Char.png
-```
-
-**`Humanoid.png`** — Fantasy NPCs: priests, knights, merchants, rebels
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy roguelike humanoid NPC sprite sheet, various classes (priest in robes, knight in plate armor, merchant in cloak, rebel in leather), pixel art style, 16x16 tiles" \
-  --width 256 --height 256 \
-  --output Graphics/Humanoid.png
-```
-
-#### Task 7.2: Generate Item Icons
-**`Item.png`**, **`Item-outlined.png`** — Fantasy RPG item icons
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy RPG item icon sheet, swords maces spears whips staves shields potions scrolls rings amulets, pixel art style on white background" \
-  --width 256 --height 128 \
-  --output Graphics/Item.png
-
-# Then generate outlined version (white border) using image processing
-python tools/asset_gen/utils.py outline --input Graphics/Item.png --output Graphics/Item-outlined.png
-```
-
-#### Task 7.3: Generate Terrain Tiles
-**`WTerra.png`** — World terrain tiles (snow, glacier, desert, tundra, jungle, evergreen forest, steppe)
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy world map terrain tile set, snow plains glacier ice desert dunes tundra taiga dense evergreen forest rolling grassland, pixel art style, top-down view" \
-  --width 512 --height 256 \
-  --output Graphics/WTerra.png
-```
-
-**`OLTerra.png`** — Overworld terrain tiles with landmarks
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy overworld terrain tiles, cathedral ruins castle towers ancient stone walls forest paths mountain trails, pixel art style" \
-  --width 512 --height 256 \
-  --output Graphics/OLTerra.png
-```
-
-**`GLTerra.png`** — Ground terrain tiles (stone, gravel, bone, ice, coal, steel, obsidian)
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy dungeon ground tile set, stone floors gravel paths bone dust ice sheets coal seams dark steel obsidian, pixel art style" \
-  --width 512 --height 256 \
-  --output Graphics/GLTerra.png
-```
-
-#### Task 7.4: Generate UI Art
-**`Menu.png`, `Menu1-5.png`** — Dark fantasy UI with medieval borders
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy game menu screen, ornate medieval border design, parchment texture, gothic lettering space for text, pixel art style" \
-  --width 640 --height 480 \
-  --output Graphics/Menu.png
-```
-
-**`Symbol.png`** — New IVAN logo: dark fantasy crest/emblem
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy game logo emblem, shield with crossed swords and a great tree, gothic design, pixel art style on transparent background" \
-  --width 128 --height 128 \
-  --output Graphics/Symbol.png
-```
-
-#### Task 7.5: Generate Creature Sprites
-**`Enner.png` → `Wraithstalker.png`** — Large predatory forest creature with glowing eyes
+#### Task 6.1: [ ] Generate `Wraithstalker.png` (replaces `Enner.png`)
 ```bash
 python tools/asset_gen/image_generator.py \
   --prompt "dark fantasy roguelike monster sprite, massive predatory forest beast with glowing yellow eyes and shadowy fur, pixel art style on white background" \
-  --width 256 --height 128 \
+  --width <from catalog> --height <from catalog> \
   --output Graphics/Wraithstalker.png
 ```
+Update all code references: `grep -r "Enner.png" .` → rename to `Wraithstalker.png`.
 
-**`IVlad.png → Shadowpaw.png`** — Bunny companion sprite
+#### Task 6.2: [ ] Generate `Shadowpaw.png` (replaces `IVlad.png`)
 ```bash
 python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy roguelike pet sprite, small dark bunny with glowing eyes, pixel art style on white background" \
-  --width 64 --height 64 \
+  --prompt "dark fantasy roguelike companion sprite, small dark bunny with glowing eyes, pixel art style on white background" \
+  --width <from catalog> --height <from catalog> \
   --output Graphics/Shadowpaw.png
 ```
+Update code references: `grep -r "IVlad.png" .` → rename to `Shadowpaw.png`.
 
-#### Task 7.6: Generate Font Bitmaps (Style Change)
-**`Font.png`, `Font2.png`, `Font3.png`** — Medieval/fantasy style bitmap fonts
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "medieval gothic bitmap font, complete ASCII character set including uppercase lowercase numbers punctuation, pixel art style on white background" \
-  --width 512 --height 64 \
-  --output Graphics/Font.png
-```
+#### Task 6.3: [ ] Generate Character Sprite Sheets
+- `Char.png` — dark fantasy adventurer sprites
+- `Humanoid.png` — NPC sprites (priest, knight, merchant, rebel)
 
-#### Task 7.7: Generate Remaining Assets
-- `Effect.png` — Fantasy spell effects (fire, lightning, dark energy, holy light)
-- `FOW.png` — Fog of war overlay pattern
-- `Smiley.png` — Expression sprites (keep or replace)
-- `Cursor.png` — Fantasy arrow/crosshair cursor
+#### Task 6.4: [ ] Generate Item Icons
+- `Item.png` — fantasy RPG item icon sheet
+- `Item-outlined.png` — generated via `python tools/asset_gen/outline_util.py --input Graphics/Item.png --output Graphics/Item-outlined.png`
+
+#### Task 6.5: [ ] Generate Terrain Tiles
+- `WTerra.png` — world map terrain (snow, glacier, desert, tundra, jungle, steppe)
+- `OLTerra.png` — overworld tiles with landmarks
+- `GLTerra.png` — ground/dungeon floor tiles
+
+#### Task 6.6: [ ] Generate UI Art
+- `Menu.png`, `Menu1-5.png` — dark fantasy menu screens with medieval borders
+- `Symbol.png` — new IVAN emblem (shield with crossed swords and great tree)
+
+#### Task 6.7: [ ] Remaining Assets (lower priority)
+- `Font.png`, `Font2.png`, `Font3.png` — bitmap fonts (style change if desired)
+- `Effect.png`, `FOW.png`, `Smiley.png`, `Cursor.png` — may keep or style-change
 
 ---
 
-### Phase 8: Validation & Testing
+### Phase 7: Validation & Testing
 
-#### Task 8.1: Run Balance Validator
+#### Task 7.1: [ ] Balance Validator
 ```bash
 python tools/asset_gen/balance_validator.py \
   --old-backup backup_before_rewrite/ \
   --new-files Script/ \
   --output validation_report.txt
 ```
-Verify all numerical values (PriceModifier, NutritionValue, StrengthValue, Color RGB, Enchantment levels) are unchanged.
+Verify all numeric values (PriceModifier, NutritionValue, StrengthValue, Color RGB, Enchantment) unchanged.
 
-#### Task 8.2: String Search for Missed References
+#### Task 7.2: [ ] Comprehensive String Search
 ```bash
-# Check for any remaining old references across the entire codebase
-grep -r "banana\|Banana\|BANANA_\|Valpurus\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus\|FROG_FLESH\|OMMEL_" \
-  --include="*.cpp" --include="*.h" --include="*.dat" --include="*.txt" . | grep -v ".git/" > missed_references.txt
-
-# If missed_references.txt is non-empty, fix remaining references
+grep -r "banana\|Banana\|BANANA_\|Valpurus\b\|Attnam\|Tweraif\|Elpuri\b\|Xinroch\|Decos\b\|Richel\b\|Petrus\b\|FROG_FLESH\|frog flesh\|frog blood\|OMMEL_\|bananagrower\|bananapeels\|holybanana" \
+  --include="*.cpp" --include="*.h" --include="*.dat" --include="*.txt" --include="*.md" \
+  . | grep -v ".git/" | grep -v "PLAN.md\|EXECUTION_PLAN.md\|HIGH_LEVEL_PLAN.md" \
+  > missed_references.txt
+wc -l missed_references.txt
 ```
+Fix any remaining hits before proceeding.
 
-#### Task 8.3: Compile Test
+#### Task 7.3: [ ] Compile Test
 ```bash
-mkdir build && cd build
-cmake .. && make -j$(nproc)
+mkdir -p build && cd build && cmake .. && make -j$(nproc) 2>&1 | tail -50
 ```
-Verify the project compiles without errors after all renames.
+Zero errors required.
 
-#### Task 8.4: Runtime Testing
-- Launch the game and verify opening sequence displays correctly
-- Test each story arc (Freedom Quest, XinrochTomb, Aslona Civil War)
-- Verify all dialogue text uses new setting names
-- Check that renamed classes work correctly (mango zapping, mangopit slipping, etc.)
+#### Task 7.4: [ ] Runtime Testing
+- Launch game; verify opening sequence uses Oakhaven, Decimus, Archpriest
+- Test Freedom Quest: slay Malgorath, return heart, receive freedom
+- Test XinrochTomb: all text uses Khaz-Zadm / Unholy Order of Infuscor
+- Test Aslona Civil War: Muramasa/Masamune; faction names correct
+- Verify mango zapping, mangopit slipping work correctly
+- Verify no "banana peel" slip message; "mango pit" appears instead
 
 ---
 
 ## Commit Strategy
 
-After completing each task above:
-1. Stage changes: `git add -A`
-2. Commit with descriptive message: `git commit -m "Phase X.Y: [description]"`
-3. Update this PLAN.md to mark the completed task as `[x]`
-
-This ensures every logical unit of work is tracked in git history and the plan stays synchronized with progress.
+After completing each task:
+1. Stage specific files: `git add <file1> <file2> ...` (never `git add -A`)
+2. Run the task's verification grep before committing
+3. Commit: `git commit -m "Phase X.Y: [description]"`
+4. Mark the task `[x]` in this PLAN.md
 
 ---
 
-## Summary of Remaining Work by Category
+## Summary of Remaining Work
 
-| Category | Tasks | Estimated Effort |
-|----------|-------|-----------------|
-| **Script Data Files** | 1.1-1.4 (material.dat, item.dat, char.dat, dungeons/) | Heavy — ~20K lines total across all .dat files |
-| **C++ Source Rewrites** | 2.1-2.11 (human.cpp, game.cpp, gear.cpp, rooms.cpp, etc.) | Heavy — ~500+ hardcoded strings to rewrite |
-| **Header File Updates** | 3.1-3.9 (mechanical renames) | Light-Medium — straightforward find/replace |
-| **Lore Documents** | 4.1-4.17 (14 TXT + 2 RTF converted) | Medium — ~50K words of creative text to rewrite |
-| **Documentation** | 5.1-5.2 (MANUAL, NEWS) | Light — ~1000 lines total |
-| **Sound Effects** | 6.1-6.3 (identify + generate replacements) | Medium — depends on how many SFX need replacement |
-| **Graphics Generation** | 7.1-7.7 (~20 PNG files) | Heavy — requires GPU and inference time per asset |
-| **Validation & Testing** | 8.1-8.4 (balance check, string search, compile, runtime) | Medium — thorough testing required |
+| Phase | Tasks | Files Changed | Effort |
+|---|---|---|---|
+| **Pre-flight** | Backup tag + compile check | — | 10 min |
+| **0** | Infrastructure + validator prep | `tools/asset_gen/`, `definesvalidator.h` | 2–4 hrs |
+| **1** | Script .dat files (4 tasks) | material.dat, item.dat, char.dat, 3 dungeon files | Medium-Heavy |
+| **2** | C++ source + headers (15 tasks, paired) | 14 .cpp + 9 .h files | Heavy |
+| **3** | Lore documents (21 tasks) | 13 TXT + 2 RTF + 6 media renames | Medium |
+| **4** | Documentation (2 tasks) | MANUAL, NEWS | Light |
+| **5** | Sound effects (3 tasks) | Sound/*.wav, SoundEffects.cfg | Medium |
+| **6** | Graphics (7 tasks) | ~20 Graphics/*.png | Heavy (GPU time) |
+| **7** | Validation + testing (4 tasks) | — | Medium |
+| **TOTAL** | ~57 discrete tasks | ~50 files | ~2–3 weeks |
