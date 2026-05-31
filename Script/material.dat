@@ -4225,17 +4225,17 @@ organic /* Substances that spoil but are not flesh. */
     InteractionFlags = Base|CAN_BURN;
   }
 
-  Config BANANA_PEEL;
+  Config MANGO_PEEL;
   {
     StrengthValue = 5;
     ConsumeType = CT_MISC_PLANT;
     Density = 500;
     Color = rgb16(224, 224, 0);
-    NameStem = "banana peel";
+    NameStem = "mango peel";
     Flexibility = 10;
     AttachedGod = SILVA;
     HardenedMaterial = LEAF;
-    NaturalForm = bananapeels;
+    NaturalForm = mangopeels;
     BodyFlags = Base|USE_MATERIAL_ATTRIBUTES;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
@@ -4246,7 +4246,7 @@ organic /* Substances that spoil but are not flesh. */
 
   /* Fruits */
 
-  Config BANANA_FLESH;
+  Config MANGO_FLESH;
   {
     StrengthValue = 3;
     Density = 1200;
@@ -4254,15 +4254,15 @@ organic /* Substances that spoil but are not flesh. */
     NutritionValue = 1000;
     Color = rgb16(224, 224, 0);
     PriceModifier = 3000;
-    NameStem = "banana";
+    NameStem = "mango";
     Flexibility = 5;
     AttachedGod = SILVA;
     SoftenedMaterial = PLANT_FIBER;
-    HardenedMaterial = BANANA_STOLLEN;
+    HardenedMaterial = MANGO_STOLLEN;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
 
-  Config HOLY_BANANA_FLESH;
+  Config SACRED_MANGO_FLESH;
   {
     StrengthValue = 3;
     Density = 1200;
@@ -4270,12 +4270,12 @@ organic /* Substances that spoil but are not flesh. */
     NutritionValue = 20000;
     Color = rgb16(224, 224, 0);
     PriceModifier = 3000;
-    NameStem = "holy banana";
+    NameStem = "sacred mango";
     Flexibility = 10;
     AttachedGod = SILVA;
-    SoftenedMaterial = BANANA_FLESH;
-    Effect = EFFECT_HOLY_BANANA;
-    ConsumeEndMessage = CEM_HOLY_BANANA;
+    SoftenedMaterial = MANGO_FLESH;
+    Effect = EFFECT_SACRED_MANGO;
+    ConsumeEndMessage = CEM_SACRED_MANGO;
     CommonFlags = Base|IS_VALUABLE&~(CAN_BE_WISHED|CAN_BE_MIRRORED);
     BodyFlags = Base|IS_WARM;
   }
@@ -4328,7 +4328,7 @@ organic /* Substances that spoil but are not flesh. */
     CommonFlags = Base|IS_VALUABLE&~CAN_BE_WISHED;
   }
 
-  Config MANGO_FLESH;
+  Config TROPICAL_MANGO_FLESH;
   {
     StrengthValue = 3;
     Density = 1200;
@@ -4336,7 +4336,7 @@ organic /* Substances that spoil but are not flesh. */
     NutritionValue = 1000;
     Color = rgb16(250, 158, 74);
     PriceModifier = 3000;
-    NameStem = "mango";
+    NameStem = "tropical mango";
     Flexibility = 5;
     AttachedGod = SILVA;
     SoftenedMaterial = PLANT_FIBER;
@@ -4389,7 +4389,7 @@ organic /* Substances that spoil but are not flesh. */
     Flexibility = 5;
     SpoilModifier = 20000;
     AttachedGod = SEGES;
-    HardenedMaterial = BANANA_STOLLEN;
+    HardenedMaterial = MANGO_STOLLEN;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
 
@@ -4405,7 +4405,7 @@ organic /* Substances that spoil but are not flesh. */
     Flexibility = 5;
     SpoilModifier = 20000;
     AttachedGod = SEGES;
-    HardenedMaterial = BANANA_STOLLEN;
+    HardenedMaterial = MANGO_STOLLEN;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
 
@@ -4421,11 +4421,11 @@ organic /* Substances that spoil but are not flesh. */
     Flexibility = 5;
     SpoilModifier = 20000;
     AttachedGod = SEGES;
-    HardenedMaterial = BANANA_STOLLEN;
+    HardenedMaterial = MANGO_STOLLEN;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
 
-  Config BANANA_STOLLEN;
+  Config MANGO_STOLLEN;
   {
     StrengthValue = 5;
     ConsumeType = CT_PROCESSED;
@@ -4433,11 +4433,11 @@ organic /* Substances that spoil but are not flesh. */
     NutritionValue = 1000;
     Color = rgb16(255, 225, 53);
     PriceModifier = 3000;
-    NameStem = "banana stollen";
+    NameStem = "mango stollen";
     Flexibility = 5;
     SpoilModifier = 20000;
     AttachedGod = ATAVUS;
-    SoftenedMaterial = BANANA_FLESH;
+    SoftenedMaterial = MANGO_FLESH;
     CategoryFlags = Base|IS_GOLEM_MATERIAL;
   }
 
@@ -5582,12 +5582,12 @@ liquid
     HardenedMaterial = HEALING_LIQUID;
   }
 
-  Config DARK_FROG_BLOOD;
+  Config BLIGHTTOAD_BLOOD;
   {
     StrengthValue = 1;
     NutritionValue = 40;
     Color = rgb16(50, 0, 0);
-    NameStem = "dark frog blood";
+    NameStem = "blighttoad blood";
     Alpha = 175;
     Flexibility = 40;
     AttachedGod = CRUENTUS;
@@ -5653,13 +5653,13 @@ liquid
     ConsumeWisdomLimit = 3;
   }
 
-  Config LIGHT_FROG_BLOOD;
+  Config MARSH_TOAD_BLOOD;
   {
     StrengthValue = 1;
     NutritionValue = 400;
     Color = rgb16(150, 0, 0);
     Emitation = rgb24(160, 100, 100);
-    NameStem = "light frog blood";
+    NameStem = "marsh toad blood";
     Alpha = 175;
     Flexibility = 40;
     AttachedGod = CRUENTUS;
@@ -5985,27 +5985,27 @@ flesh
     BodyFlags = Base&~IS_WARM_BLOODED;
   }
 
-  Config FROG_FLESH;
+  Config BLIGHTTOAD_FLESH;
   {
     ConsumeWisdomLimit = 0;
     Effect = EFFECT_DARKNESS;
-    ConsumeEndMessage = CEM_FROG_FLESH;
-    HitMessage = HM_FROG_FLESH;
-    NameStem = "frog flesh";
+    ConsumeEndMessage = CEM_BLIGHTTOAD_FLESH;
+    HitMessage = HM_BLIGHTTOAD_FLESH;
+    NameStem = "blighttoad flesh";
     AttachedGod = MORTIFER;
     BodyFlags = Base&~IS_WARM_BLOODED;
     InteractionFlags = Base&~CAN_DISSOLVE;
   }
 
-  Config ELPURI_FLESH;
+  Config MALGORATH_FLESH;
   {
     ConsumeWisdomLimit = 0;
     Effect = EFFECT_DARKNESS;
-    ConsumeEndMessage = CEM_FROG_FLESH;
-    HitMessage = HM_FROG_FLESH;
+    ConsumeEndMessage = CEM_BLIGHTTOAD_FLESH;
+    HitMessage = HM_BLIGHTTOAD_FLESH;
     StrengthValue = 10;
     Density = 2400;
-    NameStem = "Elpuri's flesh";
+    NameStem = "Malgorath's flesh";
     Color = rgb16(60, 60, 60);
     AttachedGod = MORTIFER;
     NameFlags = Base|USE_AN;
