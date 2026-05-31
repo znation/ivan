@@ -709,7 +709,7 @@ void ostrich::GetAICommand()
 {
   if(game::OakhavenIsFree() ||
      (GetDungeon()->GetIndex() != NEW_ATTNAM)
-   ) // Behave normally outside of New Attnam.
+   ) // Behave normally outside of Oakhaven.
   {
     nonhumanoid::GetAICommand();
     return;
@@ -722,30 +722,30 @@ void ostrich::GetAICommand()
     return;
 
   if(GetPos() == v2(45, 45))
-    HasDroppedBananas = true;
+    HasDroppedMangos = true;
 
   itemvector ItemVector;
   GetStackUnder()->FillItemVector(ItemVector);
-  int BananasPicked = 0;
+  int MangosPicked = 0;
 
   for(uint c = 0; c < ItemVector.size(); ++c)
-    if(ItemVector[c]->IsBanana() && ItemVector[c]->CanBeSeenBy(this)
+    if(ItemVector[c]->IsMango() && ItemVector[c]->CanBeSeenBy(this)
        && ItemVector[c]->IsPickable(this)
        && !MakesBurdened(GetCarriedWeight() + ItemVector[c]->GetWeight()))
     {
       ItemVector[c]->MoveTo(GetStack());
-      ++BananasPicked;
+      ++MangosPicked;
     }
 
-  if(BananasPicked)
+  if(MangosPicked)
   {
     if(CanBeSeenByPlayer())
-      ADD_MESSAGE("%s picks up %s.", CHAR_NAME(DEFINITE), BananasPicked == 1 ? "the banana" : "some bananas");
+      ADD_MESSAGE("%s picks up %s.", CHAR_NAME(DEFINITE), MangosPicked == 1 ? "the mango" : "some mangos");
 
     return;
   }
 
-  if(!HasDroppedBananas)
+  if(!HasDroppedMangos)
   {
     SetGoingTo(v2(45, 45));
 
@@ -781,7 +781,7 @@ void ostrich::GetAICommand()
     if(CanBeSeenByPlayer())
       ADD_MESSAGE("%s enters the town.", CHAR_NAME(INDEFINITE));
 
-    HasDroppedBananas = false;
+    HasDroppedMangos = false;
   }
   else
   {
@@ -797,13 +797,13 @@ void ostrich::GetAICommand()
 void ostrich::Save(outputfile& SaveFile) const
 {
   nonhumanoid::Save(SaveFile);
-  SaveFile << HasDroppedBananas;
+  SaveFile << HasDroppedMangos;
 }
 
 void ostrich::Load(inputfile& SaveFile)
 {
   nonhumanoid::Load(SaveFile);
-  SaveFile >> HasDroppedBananas;
+  SaveFile >> HasDroppedMangos;
 }
 
 truth ostrich::HandleCharacterBlockingTheWay(character* Char, v2 Pos, int Dir)
@@ -1474,7 +1474,7 @@ truth elpuri::TryToRiseFromTheDead()
 
   for(int c = 0; c < GetSquaresUnder(); ++c)
     for(stackiterator i = GetLSquareUnder(c)->GetStack()->GetBottom(); i.HasItem(); ++i)
-      if(i->IsHeadOfElpuri())
+      if(i->IsHeartOfMalgorath())
       {
         i->SendToHell();
         i->RemoveFromSlot();

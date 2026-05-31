@@ -245,13 +245,13 @@ CHARACTER(snake, nonhumanoid)
 CHARACTER(ostrich, nonhumanoid)
 {
  public:
-  ostrich() : HasDroppedBananas(false) { }
+  ostrich() : HasDroppedMangos(false) { }
   virtual void Save(outputfile&) const;
   virtual void Load(inputfile&);
  protected:
   virtual truth HandleCharacterBlockingTheWay(character*, v2, int);
   virtual void GetAICommand();
-  truth HasDroppedBananas;
+  truth HasDroppedMangos;
 };
 
 CHARACTER(chameleon, nonhumanoid)
