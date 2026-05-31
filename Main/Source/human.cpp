@@ -678,7 +678,7 @@ void petrus::BeTalkedTo()
     }
   }
 
-  if(PLAYER->HasGoldenEagleShirt())
+  if(PLAYER->HasGoldenHawkTunic())
   {
     ADD_MESSAGE("Archpriest Cordatus smiles. \"Thou hast defeated Malgorath the Blight-Beast! Mayst thou be blessed by Valpuris for the rest of thy life! "
                 "And thou possess the Shirt of Golden Hawk, the symbol of Our status! Return it now, please.\"");

@@ -303,10 +303,10 @@ class character : public entity, public id
   truth TestForPickup(item*) const;
   void ThrowItem(int, item*);
   truth TryMove(v2, truth, truth, truth* =NULL);
-  truth HasHeadOfElpuri() const;
-  truth HasGoldenEagleShirt() const;
+  truth HasHeartOfMalgorath() const;
+  truth HasGoldenHawkTunic() const;
   truth HasEncryptedScroll() const;
-  truth HasPetrussNut() const;
+  truth HasArchpriestsRelic() const;
   truth RemoveEncryptedScroll();
   truth HasShadowVeil() const;
   truth HasLostRubyFlamingSword() const;

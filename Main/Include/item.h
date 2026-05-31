@@ -238,7 +238,7 @@ class item : public object
   virtual double GetWeaponStrength() const;
   virtual truth Open(character*);
   truth Consume(character*, long);
-  virtual truth IsHeadOfElpuri() const { return false; }
+  virtual truth IsHeartOfMalgorath() const { return false; }
   virtual truth IsPetrussNut() const { return false; }
   virtual truth IsGoldenEagleShirt() const { return false; }
   virtual truth IsABone() const { return false; }

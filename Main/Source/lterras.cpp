@@ -247,28 +247,28 @@ truth throne::SitOn(character* Sitter)
 
   if(GetLSquareUnder()->GetDungeonIndex() == ATTNAM && GetLSquareUnder()->GetLevelIndex() == 0)
   {
-    if(Sitter->HasPetrussNut() && Sitter->HasGoldenEagleShirt() && game::GetGod(VALPURIS)->GetRelation() != 1000)
+    if(Sitter->HasArchpriestsRelic() && Sitter->HasGoldenHawkTunic() && game::GetGod(VALPURIS)->GetRelation() != 1000)
     {
       ADD_MESSAGE("You have a strange vision of yourself becoming a great ruler. The daydream fades in a whisper: "
                   "\"Thou shalt be Our Champion first!\"");
       return true;
     }
 
-    if(Sitter->HasPetrussNut() && !Sitter->HasGoldenEagleShirt() && game::GetGod(VALPURIS)->GetRelation() == 1000)
+    if(Sitter->HasArchpriestsRelic() && !Sitter->HasGoldenHawkTunic() && game::GetGod(VALPURIS)->GetRelation() == 1000)
     {
       ADD_MESSAGE("You have a strange vision of yourself becoming a great ruler. The daydream fades in a whisper: "
                   "\"Thou shalt wear Our shining armor first!\"");
       return true;
     }
 
-    if(!Sitter->HasPetrussNut() && Sitter->HasGoldenEagleShirt() && game::GetGod(VALPURIS)->GetRelation() == 1000)
+    if(!Sitter->HasArchpriestsRelic() && Sitter->HasGoldenHawkTunic() && game::GetGod(VALPURIS)->GetRelation() == 1000)
     {
       ADD_MESSAGE("You have a strange vision of yourself becoming a great ruler. The daydream fades in a whisper: "
                   "\"Thou shalt surpass thy predecessor first!\"");
       return true;
     }
 
-    if(Sitter->HasPetrussNut() && Sitter->HasGoldenEagleShirt() && game::GetGod(VALPURIS)->GetRelation() == 1000)
+    if(Sitter->HasArchpriestsRelic() && Sitter->HasGoldenHawkTunic() && game::GetGod(VALPURIS)->GetRelation() == 1000)
     {
       game::PlayVictoryMusic();
       game::TextScreen(CONST_S("A heavenly choir starts to sing Grandis Rana and a booming voice fills the air:\n\n"
@@ -1124,7 +1124,7 @@ truth stairs::Enter(truth DirectionUp) const
 
   if(GetConfig() == OREE_LAIR_EXIT)
   {
-    if(PLAYER->HasGoldenEagleShirt())
+    if(PLAYER->HasGoldenHawkTunic())
     {
       ADD_MESSAGE("Somehow you get the feeling you cannot return.");
 

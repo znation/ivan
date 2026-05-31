@@ -1560,7 +1560,7 @@ truth character::TryMove(v2 MoveVector, truth Important, truth Run, truth* pbWai
                               + game::GetCurrentDungeon()->GetLevelDescription(game::GetCurrentLevelIndex())
                               + "? [y/N]"))
     {
-      if(HasPetrussNut() && !HasGoldenEagleShirt())
+      if(HasArchpriestsRelic() && !HasGoldenHawkTunic())
       {
         game::PlayVictoryMusic();
         game::TextScreen(CONST_S("An undead and sinister voice greets you as you leave the city behind:\n\n"
@@ -1569,7 +1569,7 @@ truth character::TryMove(v2 MoveVector, truth Important, truth Run, truth* pbWai
         game::GetCurrentArea()->SendNewDrawRequest();
         game::DrawEverything();
         ShowAdventureInfo();
-        festring Msg = CONST_S("killed Petrus and became the Avatar of Chaos");
+        festring Msg = CONST_S("killed Archpriest Cordatus and became the Avatar of Chaos");
         PLAYER->AddScoreEntry(Msg, 3, false);
         game::End(Msg);
         return true;
@@ -2057,16 +2057,16 @@ void character::AddWeaponHitMessage(ccharacter* Enemy, citem* Weapon, int BodyPa
   ADD_MESSAGE("%s", Msg.CStr());
 }
 
-truth character::HasHeadOfElpuri() const
+truth character::HasHeartOfMalgorath() const
 {
   for(stackiterator i = GetStack()->GetBottom(); i.HasItem(); ++i)
-    if(i->IsHeadOfElpuri())
+    if(i->IsHeartOfMalgorath())
       return true;
 
-  return combineequipmentpredicates()(this, &item::IsHeadOfElpuri, 1);
+  return combineequipmentpredicates()(this, &item::IsHeartOfMalgorath, 1);
 }
 
-truth character::HasPetrussNut() const
+truth character::HasArchpriestsRelic() const
 {
   for(stackiterator i = GetStack()->GetBottom(); i.HasItem(); ++i)
     if(i->IsPetrussNut())
@@ -2075,7 +2075,7 @@ truth character::HasPetrussNut() const
   return combineequipmentpredicates()(this, &item::IsPetrussNut, 1);
 }
 
-truth character::HasGoldenEagleShirt() const
+truth character::HasGoldenHawkTunic() const
 {
   for(stackiterator i = GetStack()->GetBottom(); i.HasItem(); ++i)
     if(i->IsGoldenEagleShirt())
@@ -6637,7 +6637,7 @@ void character::PrintBeginVampirismMessage() const
 void character::PrintEndVampirismMessage() const
 {
   if(IsPlayer())
-    ADD_MESSAGE("You recall your delight of the morning sunshine back in New Attnam.");
+    ADD_MESSAGE("You recall your delight of the morning sunshine back in Oakhaven.");
 }
 
 void character::PrintBeginFearlessMessage () const
@@ -9251,7 +9251,7 @@ void character::GetHitByExplosion(const explosion* Explosion, int Damage)
 
   // The ReceiveDamage calls above might cause 'this' to be polymorphed, in which case
   // SquareUnder[0] is null and calling GetArea or SpillBlood will crash.
-  // See https://github.com/Attnam/ivan/issues/237 for details.
+  // See https://github.com/oakhaven/ivan/issues/237 for details.
   if(SquareUnder[0] && Pummeled && GetArea()->IsValidPos(SpillPos))
     GetTorso()->SpillBlood((8 - Explosion->Size + RAND() % (8 - Explosion->Size)) >> 1, SpillPos);
 
