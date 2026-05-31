@@ -185,7 +185,7 @@ can /* materialcontainer-> */
   /* Adjective and PostFix overridden */
   MainMaterialConfig == IRON;
   SecondaryMaterialConfig = { 25,
-                              BANANA_FLESH, SCHOOL_FOOD, MUSHROOM_FLESH, PEA_SOUP,
+                              MANGO_FLESH, SCHOOL_FOOD, MUSHROOM_FLESH, PEA_SOUP,
                               BRAMBLEBACK_CERUMEN, BRAMBLEBACK_SNOT, FLOATING_EYE_FLESH, CAT_FLESH,
                               RAT_FLESH, PINEAPPLE_FLESH, HEALING_LIQUID, CHICKEN_SOUP,
                               PORRIDGE, CUSTARD, HONEY, MYSTERY_MEAT, TUNA, SARDINE,
@@ -215,7 +215,7 @@ lump
   FormModifier = 10;
   NameSingular = "lump";
   MainMaterialConfig = { 6,
-                         BANANA_FLESH, SCHOOL_FOOD, KELP, MYSTERY_MEAT, SNAKE_JERKY, BEAR_FLESH; }
+                         MANGO_FLESH, SCHOOL_FOOD, KELP, MYSTERY_MEAT, SNAKE_JERKY, BEAR_FLESH; }
   MaterialConfigChances = { 6, 75, 5, 5, 5, 5, 5; }
   OKVisualEffects = MIRROR|FLIP;
   Roundness = 75;
@@ -525,7 +525,7 @@ meleeweapon
     CanBeWished = false;
     NameSingular = "stollen knife";
     Adjective = "grand";
-    PostFix = "of Attnam";
+    PostFix = "of Oakhaven";
     ArticleMode = FORCE_THE;
     MainMaterialConfig == GOLD;
     SecondaryMaterialConfig == SILVER;
@@ -543,7 +543,7 @@ meleeweapon
     WieldedBitmapPos = 176, 112;
     Price = 250;
     DamageFlags = SLASH|BLUNT;
-    DescriptiveInfo = "Every year on the Atavus day, a humongous loaf of banana stollen is baked in the Cathedral and blessed by the high priest himself. The whole town then gathers for a feast where the stollen is cut by this very ceremonial knife and the celebrations of Atavus' charity can properly begin.";
+    DescriptiveInfo = "Every year on the Atavus day, a humongous loaf of mango stollen is baked in the Cathedral and blessed by the Archpriest himself. The whole town then gathers for a feast where the stollen is cut by this very ceremonial knife and the celebrations of Atavus' charity can properly begin.";
   }
 
   Config BROKEN|GRAND_STOLLEN_KNIFE;
@@ -1763,7 +1763,7 @@ meleeweapon
 }
 }
 
-banana /* materialcontainer-> */
+mango /* materialcontainer-> */
 {
   Possibility = 150;
   WeaponCategory = BLUNT_WEAPONS;
@@ -1774,9 +1774,9 @@ banana /* materialcontainer-> */
   BitmapPos = 0, 112;
   FormModifier = 25;
   DefaultSize = 20;
-  NameSingular = "banana";
-  MainMaterialConfig == BANANA_PEEL;
-  SecondaryMaterialConfig == BANANA_FLESH;
+  NameSingular = "mango";
+  MainMaterialConfig == MANGO_PEEL;
+  SecondaryMaterialConfig == MANGO_FLESH;
   Alias = { 3, "fruit", "gun", "snack"; }
   Roundness = 15;
   CanBeBroken = true;
@@ -1787,7 +1787,7 @@ banana /* materialcontainer-> */
   IsValuable = false;
   IsSadistWeapon = true;
   AllowedDungeons = { 5, NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, BLACK_MARKET; }
-  DescriptiveInfo = "Ugh, not bananas again! There was pretty much nothing but bananas to eat back in New Attnam, and you would finally like to try a different diet.";
+  DescriptiveInfo = "Ugh, not mangos again! There was pretty much nothing but mangos to eat back in Oakhaven, and you would finally like to try a different diet.";
 
   Config BROKEN;
   {
@@ -1797,7 +1797,7 @@ banana /* materialcontainer-> */
   }
 }
 
-holybanana /* materialcontainer->banana-> */
+sacredmango /* materialcontainer->mango-> */
 {
   Possibility = 5;
   DefaultMainVolume = 100;
@@ -1815,7 +1815,7 @@ holybanana /* materialcontainer->banana-> */
   WieldedBitmapPos = 160, 320;
   CanBePiled = false;
   CanBeBroken = false;
-  SecondaryMaterialConfig == HOLY_BANANA_FLESH;
+  SecondaryMaterialConfig == HOLY_MANGO_FLESH;
   BaseEmitation = rgb24(160, 140, 110);
   CanBeCloned = false;
   CanBeMirrored = true; /* will create a peel */
@@ -1823,7 +1823,7 @@ holybanana /* materialcontainer->banana-> */
   IsValuable = true;
   CanBePiled = false;
   IsMaterialChangeable = false;
-  DescriptiveInfo = "Oily Orpiv was an explorer turned merchant. His commercial empire began its rise when on one expedition, he discovered a small village that never had to deal with the hardships of agriculture because of a seemingly miraculous crop. Oily Orpiv had discovered the banana. Being a follower of Mellis, he saw the monetary potential in this new fruit, subjugated the people and turned them into a highly efficient banana production facility. He made a quick profit that he soon used as investment for further business ventures. It is said that Oily Orpiv saved the third banana he ever saw (he ate the first and sold the second, claiming it was the first one) as a keepsake. When later in his life he became the champion of Mellis, this banana was imbued with powers both beneficial and deadly by Oily Orpiv's appreciative patron.";
+  DescriptiveInfo = "Oily Orpiv was an explorer turned merchant. His commercial empire began its rise when on one expedition, he discovered a small village that never had to deal with the hardships of agriculture because of a seemingly miraculous crop. Oily Orpiv had discovered the mango. Being a follower of Mellis, he saw the monetary potential in this new fruit, subjugated the people and turned them into a highly efficient mango production facility. He made a quick profit that he soon used as investment for further business ventures. It is said that Oily Orpiv saved the third mango he ever saw (he ate the first and sold the second, claiming it was the first one) as a keepsake. When later in his life he became the champion of Mellis, this mango was imbued with powers both beneficial and deadly by Oily Orpiv's appreciative patron.";
 }
 
 justifier /* meleeweapon-> */
@@ -1840,7 +1840,7 @@ justifier /* meleeweapon-> */
   IsMaterialChangeable = false;
   NameSingular = "broad sword";
   Adjective = "holy";
-  PostFix = "named Valpurus' Justifier";
+  PostFix = "named Valpuris' Justifier";
   ArticleMode = FORCE_THE;
   MainMaterialConfig == VALPURIS_METAL;
   SecondaryMaterialConfig == VALPURIS_METAL;
@@ -2079,7 +2079,7 @@ bodyarmor /* armor-> */
                            DEEP_CORAL, HALCYON, MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ,
                            NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                            ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
-                           HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
+                           HEMATITE, HARDENED_ASH, MANGO_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
                            BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                            RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                            STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
@@ -2343,7 +2343,7 @@ potion /* materialcontainer-> */
   }
 }
 
-bananapeels
+mangopeels
 {
   DefaultSize = 20;
   Possibility = 100;
@@ -2352,8 +2352,8 @@ bananapeels
   StrengthModifier = 50;
   BitmapPos = 0, 128;
   FormModifier = 20;
-  NameSingular = "banana peel";
-  MainMaterialConfig == BANANA_PEEL;
+  NameSingular = "mango peel";
+  MainMaterialConfig == MANGO_PEEL;
   Roundness = 10;
   WeaponCategory = WHIPS;
   AttachedGod = NEFAS;
@@ -2496,7 +2496,7 @@ leftnutofpetrus /* nut-> */
   IsDestroyable = false;
   BaseEmitation = rgb24(166, 112, 112);
   Adjective = "left";
-  PostFix = "of Petrus";
+  PostFix = "of the Archpriest";
   ArticleMode = FORCE_THE;
   IsPolymorphable = false;
   IsPolymorphSpawnable = false;
@@ -2543,7 +2543,7 @@ loaf
   NameSingular = "loaf";
   NamePlural = "loaves";
   MainMaterialConfig = { 9,
-                         BEEF, PORK, DARK_BREAD, FLAT_BREAD, RYE_BREAD, CHEESE, BANANA_STOLLEN,
+                         BEEF, PORK, DARK_BREAD, FLAT_BREAD, RYE_BREAD, CHEESE, MANGO_STOLLEN,
                          CHOCOLATE, VENISON; }
   MaterialConfigChances = { 9,
                             50, 50, 100, 100, 100, 50, 1, 3, 50; }
@@ -2577,12 +2577,12 @@ copyofleftnutofpetrus /* nut-> */
   DefaultMainVolume = 500;
   NameSingular = "copy";
   NamePlural = "copies";
-  PostFix = "of the left nut of Petrus";
+  PostFix = "of the Archpriest's Relic";
   FormModifier = 15;
   AttachedGod = MELLIS;
   IsValuable = false;
   IsAbstract = true;
-  DescriptiveInfo = "High priest Petrus lost his right nut in a gruesome, unfortunate accident that left it mangled beyond repair by even divine magic. His remaining nut thus became an object of veneration as the only hope for an heir to the Attnamese throne.";
+  DescriptiveInfo = "Archpriest Valerius Cordatus lost his right nut in a gruesome, unfortunate accident that left it mangled beyond repair by even divine magic. His remaining nut thus became an object of veneration as the only hope for an heir to the throne of Valpuris.";
 
   Config CHEAP;
   {
@@ -2942,7 +2942,7 @@ avatarofvalpurus
   FormModifier = 15;
   UsesLongArticle = true;
   NameSingular = "Avatar";
-  PostFix = "of Valpurus";
+  PostFix = "of Valpuris";
   ArticleMode = FORCE_THE;
   MainMaterialConfig == VALPURIS_METAL;
   IsPolymorphable = false;
@@ -3482,7 +3482,7 @@ shield /* armor-> */
     CanBeMirrored = true;
     CanBePiled = false;
     Price = 1000;
-    DescriptiveInfo = "A tower displayed argent on a field sable is emblazoned on this shield. Forged in likeness of lord Xinroch's arcanite shield, it used to belong to the master of dark templars who guard Xinroch's eternal resting place. Both Cruentus and Infuscor blessed the shield to offer unparalleled protection against blade and spell alike.";
+    DescriptiveInfo = "A tower displayed argent on a field sable is emblazoned on this shield. Forged in likeness of Arch-Lich Khaz-Zadm's arcanite shield, it used to belong to the master of dark templars who guard Khaz-Zadm's eternal resting place. Both Cruentus and Infuscor blessed the shield to offer unparalleled protection against blade and spell alike.";
   }
 
   Config SHIELD_OF_FIRE_RESISTANCE;
@@ -3702,7 +3702,7 @@ cloak /* armor-> */
     ArticleMode = FORCE_THE;
     CanBeEnchanted = false;
     CanBePiled = false;
-    DescriptiveInfo = "Lord Xinroch was the greatest and most powerful grand master dark knight to ever live. He was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished. But years eventually caught up with him, after a life full of victory. No matter how strong magic sustains the body, mortals were created to die and all that lives will wither eventually. But Xinroch wasn't one to give up and thus he started to heavily fund research into the newly-invented magic school of necromancy. It was thanks to his sponsorship that this discipline could start to spread, but unfortunately the early necromancers were unable to stave off the dwindling of Xinroch's life. The Tomb of Xinroch was erected on the battlefield where Lord Xinroch was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory.";
+    DescriptiveInfo = "Arch-Lich Khaz-Zadm was the greatest and most powerful grand master dark knight to ever live. He was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished. But years eventually caught up with him, after a life full of victory. No matter how strong magic sustains the body, mortals were created to die and all that lives will wither eventually. But Khaz-Zadm wasn't one to give up and thus he started to heavily fund research into the newly-invented magic school of necromancy. It was thanks to his sponsorship that this discipline could start to spread, but unfortunately the early necromancers were unable to stave off the dwindling of Khaz-Zadm's life. The Crypt of Khaz-Zadm was erected on the battlefield where Arch-Lich Khaz-Zadm was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory.";
   }
 
   Config CLOAK_OF_WEREWOLF;
@@ -3924,7 +3924,7 @@ boot /* armor-> */
                          DEEP_CORAL, HALCYON, MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ,
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
-                         HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
+                         HEMATITE, HARDENED_ASH, MANGO_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
                          BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                          RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
@@ -4132,7 +4132,7 @@ gauntlet /* armor-> */
                          DEEP_CORAL, HALCYON, MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ,
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
-                         HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
+                         HEMATITE, HARDENED_ASH, MANGO_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
                          BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                          RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
@@ -4961,7 +4961,7 @@ headofelpuri /* cannot wear helmet etc, so NOT head-> */
   BitmapPos = 16, 0;
   DefaultMainVolume = 25000;
   NameSingular = "head";
-  PostFix = "of Elpuri";
+  PostFix = "of Malgorath";
   ArticleMode = FORCE_THE;
   MainMaterialConfig == ELPURI_FLESH;
   IsPolymorphable = false;
@@ -4974,7 +4974,7 @@ headofelpuri /* cannot wear helmet etc, so NOT head-> */
   IsQuestItem = true;
   CanBeBurned = false;
   CanBePiled = false;
-  DescriptiveInfo = "Alas, great Elpuri, may thy hunger be finally forgotten in the sleep of death.";
+  DescriptiveInfo = "Alas, great Malgorath, may thy hunger be finally forgotten in the sleep of death.";
 }
 
 corpse
@@ -5268,7 +5268,7 @@ helmet
                          DEEP_CORAL, HALCYON, MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ,
                          NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
                          ROCK_CRYSTAL, PURPLE_CRYSTAL, BRIM_STONE, PORCELAIN, AEGI_SALT,
-                         HEMATITE, HARDENED_ASH, BANANA_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
+                         HEMATITE, HARDENED_ASH, MANGO_PEEL, BONE, WHALE_BONE, WRAITH_BONE,
                          BRAMBLEBACK_BONE, SHARK_TOOTH, TROLL_TUSK, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                          RESIDUUM, ECTOPLASM, MAGIC_VAPOUR, QUICK_SILVER, PIG_IRON, IRON,
                          STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
@@ -5746,7 +5746,7 @@ helmet
                            JACINTH, AGATE, ONYX, NACRE, CORAL, DEEP_CORAL, HALCYON,
                            MILKY_QUARTZ, QUARTZITE, ROSE_QUARTZ, ILLITHIUM, DRAGON_HIDE,
                            NETHER_QUARTZ, JADEITE, MALACHITE, NEPHRITE, BLACK_JADE,
-                           ROCK_CRYSTAL, PURPLE_CRYSTAL, PORCELAIN, HARDENED_ASH, BANANA_PEEL,
+                           ROCK_CRYSTAL, PURPLE_CRYSTAL, PORCELAIN, HARDENED_ASH, MANGO_PEEL,
                            BONE, WHALE_BONE, WRAITH_BONE, BRAMBLEBACK_BONE, MAMMOTH_TUSK, BRAMBLEBACK_TOOTH,
                            IRON, STEEL, DWARF_STEEL, METEORIC_STEEL, BLACK_IRON, SOUL_STEEL,
                            BLOOD_IRON, BLOOD_STEEL, AMETHYST, TOPAZ, SAPPHIRE, EMERALD, RUBY; }
@@ -5910,7 +5910,7 @@ flamingsword /* meleeweapon-> */
     MaterialConfigChances == 100;
     EnchantmentPlusChance = 0;
     Adjective = "lost ruby flaming";
-    PostFix = "of Xinroch";
+    PostFix = "of Khaz-Zadm";
     AttachedGod = INFUSCOR;
     CanBeWished = false;
     IsDestroyable = false;
@@ -5927,7 +5927,7 @@ flamingsword /* meleeweapon-> */
     ArticleMode = FORCE_THE;
     DamageFlags = SLASH|PIERCE;
     GearStates = GAS_IMMUNITY|DISEASE_IMMUNITY;
-    DescriptiveInfo = "Lord Xinroch was the greatest and most powerful grand master dark knight to ever live. Some sources claim that he was no one in his youth, maybe even one of the children kidnapped from forgotten villages to be trained for war. But soon, his talents became apparent and he rose quickly through the ranks, never stopping until the very top. In his many skirmishes with the forces of Light, Xinroch destroyed two archangels, Incendo and Lucis, and took their flaming swords. He wielded them with unparalleled skill, and his two crossed flaming swords are still found on the banner of the grand master dark knights to this day. During a battle late in his life, Xinroch lost one of the flaming swords he wielded for most of his life, and after his death, the lost sword became shrouded in myths. It was even said that the return of this sword will herald the return of Lord Xinroch himself.";
+    DescriptiveInfo = "Arch-Lich Khaz-Zadm was the greatest and most powerful grand master dark knight to ever live. Some sources claim that he was no one in his youth, maybe even one of the children kidnapped from forgotten villages to be trained for war. But soon, his talents became apparent and he rose quickly through the ranks, never stopping until the very top. In his many skirmishes with the forces of Light, Khaz-Zadm destroyed two archangels, Incendo and Lucis, and took their flaming swords. He wielded them with unparalleled skill, and his two crossed flaming swords are still found on the banner of the grand master dark knights to this day. During a battle late in his life, Khaz-Zadm lost one of the flaming swords he wielded for most of his life, and after his death, the lost sword became shrouded in myths. It was even said that the return of this sword will herald the return of Arch-Lich Khaz-Zadm himself.";
   }
 }
 
@@ -6145,8 +6145,8 @@ skullofxinroch
   BitmapPos = 48, 112;
   Category = MISC;
   NameSingular = "skull";
-  PostFix = "of Xinroch the skeleton warlord";
-  Alias == "skull of Xinroch";
+  PostFix = "of Khaz-Zadm the Lich-King";
+  Alias == "skull of Khaz-Zadm";
   MainMaterialConfig == BONE;
   IsTwoHanded = true;
   AttachedGod = INFUSCOR;
@@ -6164,7 +6164,7 @@ skullofxinroch
   ArticleMode = FORCE_THE;
   IsQuestItem = true;
   Price = 500;
-  DescriptiveInfo = "It was a great shame to the guardians of the Tomb of Xinroch when several decades ago, an unknown necromancer managed to slip past their guard and animate the skeleton of Xinroch in a mockery of his once-living might. But even though you hold in your hands the skull of this diminished and defeated Xinroch, it radiates an aura of ageless, adamant glory. All hail the mighty lord Xinroch.";
+  DescriptiveInfo = "It was a great shame to the guardians of the Crypt of Khaz-Zadm when several decades ago, an unknown necromancer managed to slip past their guard and animate the skeleton of Khaz-Zadm in a mockery of his once-living might. But even though you hold in your hands the skull of this diminished and defeated Khaz-Zadm, it radiates an aura of ageless, adamant glory. All hail the mighty Arch-Lich Khaz-Zadm.";
 }
 
 gorovitsweapon
@@ -6274,7 +6274,7 @@ encryptedscroll /* scroll-> */
   AttachedGod = MELLIS;
   IsQuestItem = true;
   CanBeBurned = false;
-  DescriptiveInfo = "This scroll contains a coded message for the eyes of the high priest Petrus only. Given to you by Richel Decos, the viceroy of New Attnam, it should be delivered posthaste to the Cathedral of Attnam.";
+  DescriptiveInfo = "This scroll contains a coded message for the eyes of the Archpriest Valerius Cordatus only. Given to you by Lord Regent Valerius Decimus, the viceroy of Oakhaven, it should be delivered posthaste to the Cathedral of Valpuris.";
 }
 
 horn /* magicalinstrument-> */
@@ -6625,7 +6625,7 @@ decosadshirt /* armor->bodyarmor-> */
   DefaultMainVolume = 1000;
   StrengthModifier = 75;
   NameSingular = "shirt";
-  PostFix = "with a Decos Bananas Co. ad";
+  PostFix = "with a Decimus Harvest Co. ad";
   MainMaterialConfig == NYLON;
   CanBeBroken = false;
   InElasticityPenaltyModifier = 30;
@@ -6635,7 +6635,7 @@ decosadshirt /* armor->bodyarmor-> */
   AthleteArmArmorBitmapPos = 80, 448;
   LegArmorBitmapPos = 16, 416;
   Price = 0;
-  DescriptiveInfo = "Eat a banana. Be happy.";
+  DescriptiveInfo = "Eat a mango. Be happy.";
 }
 
 filthytunic /* armor->bodyarmor-> */
@@ -6937,7 +6937,7 @@ pantheonbook /* holybook-> */
   AttachedGod = NONE; /* it's about them all, but none in particular */
   WieldedBitmapPos = 176, 144;
   ReadDifficulty = 1500;
-  DescriptiveInfo = "The most famous theosophical work of professor Keathos of the Tweraif University, this book discusses the manifold, often-times contradictory myths and legends associated with the divine pantheon.";
+  DescriptiveInfo = "The most famous theosophical work of professor Keathos of the University of Valpuris, this book discusses the manifold, often-times contradictory myths and legends associated with the divine pantheon.";
   Alias = { 2, "tome", "knowledge"; }
 }
 
