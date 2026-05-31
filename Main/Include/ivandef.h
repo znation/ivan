@@ -1023,7 +1023,7 @@ cv2 SILHOUETTE_SIZE(48, 64); // it is TILE_SIZE*3,TILE_SIZE*4 tho..
 /* NameFlags */
 #define USE_AN 1
 #define USE_ADJECTIVE_AN 2
-#define NO_ARTICLE 4 // for instance "Petrus's wive number 4"
+#define NO_ARTICLE 4 // for instance "Archpriest Cordatus's wife number 4"
 #define FORCE_THE 8
 #define SHOW_MATERIAL 16 // only works for terrains
 

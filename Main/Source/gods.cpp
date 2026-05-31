@@ -21,7 +21,7 @@
 #define CHAOS_BASIC_COLOR MakeRGB16(200, 0, 0)
 #define CHAOS_ELITE_COLOR MakeRGB16(40, 40, 40)
 
-cchar* valpurus::GetName() const { return "Valpurus"; }
+cchar* valpurus::GetName() const { return "Valpuris"; }
 cchar* valpurus::GetDescription() const { return "King of Gods"; }
 int valpurus::GetAlignment() const { return ALPP; }
 int valpurus::GetBasicAlignment() const { return GOOD; }
@@ -209,7 +209,7 @@ void valpurus::PrayGoodEffect()
 
 void valpurus::PrayBadEffect()
 {
-  ADD_MESSAGE("Valpurus smites you with a small hammer.");
+  ADD_MESSAGE("Valpuris smites you with a small hammer.");
   PLAYER->ReceiveDamage(0, 10, PHYSICAL_DAMAGE, HEAD, RAND() & 7);
   PLAYER->CheckDeath(CONST_S("faced the hammer of Justice from the hand of ") + GetName(), 0);
 }

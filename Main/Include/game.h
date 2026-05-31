@@ -274,8 +274,8 @@ class game
   static ulong GetLOSTick() { return LOSTick; }
   static void SendLOSUpdateRequest() { LOSUpdateRequested = true; }
   static void RemoveLOSUpdateRequest() { LOSUpdateRequested = false; }
-  static character* GetArchpriest() { return Petrus; }
-  static void SetArchpriest(character* What) { Petrus = What; }
+  static character* GetArchpriest() { return Archpriest; }
+  static void SetArchpriest(character* What) { Archpriest = What; }
   static truth HandleQuitMessage();
   static int GetDirectionForVector(v2);
   static int GetPlayerAlignment();
