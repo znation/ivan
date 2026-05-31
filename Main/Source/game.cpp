@@ -795,27 +795,27 @@ truth game::Init(cfestring& loadBaseName)
                                    "resting on your face. On your way to work you had serious trouble avoiding\n"
                                    "the lions and pythons roaming wild around the village. After getting kicked\n"
                                    "by colony masters for being late you performed your twelve-hour routine of\n"
-                                   "climbing trees, gathering bananas, climbing trees, gathering bananas, chasing\n"
-                                   "monkeys that stole the first gathered bananas, carrying bananas to the village\n"
+                                   "climbing trees, gathering mangos, climbing trees, gathering mangos, chasing\n"
+                                   "monkeys that stole the first gathered mangos, carrying mangos to the village\n"
                                    "and trying to look happy when real food was distributed.\n\n"
                                    "Finally you were about to enjoy your free time by taking a quick dip in the\n"
                                    "nearby crocodile bay. However, at this point something unusual happened.\n"
-                                   "You were summoned to the mansion of Richel Decos, the viceroy of the\n"
+                                   "You were summoned to the mansion of Lord Regent Valerius Decimus, the viceroy of the\n"
                                    "colony, and were led directly to him."));
 
       iosystem::TextScreen(CONST_S("\"I have a task for you, citizen\", said the viceroy picking his golden\n"
-                                   "teeth, \"The market price of bananas has taken a deep dive and yet the\n"
+                                   "teeth, \"The market price of mangos has taken a deep dive and yet the\n"
                                    "central government is about to raise taxes. I have sent appeals to high\n"
-                                   "priest Petrus but received no response. I fear my enemies in Attnam are\n"
+                                   "Archpriest Cordatus but received no response. I fear my enemies in Valpuris are\n"
                                    "plotting against me and intercepting my messages before they reach him!\"\n\n"
-                                   "\"That is why you must travel to Attnam with a letter I'll give you and\n"
-                                   "deliver it to Petrus directly. Alas, you somehow have to cross the sea\n"
-                                   "between. Because it's winter, all Attnamese ships are trapped by ice and\n"
+                                   "\"That is why you must travel to Valpuris with a letter I'll give you and\n"
+                                   "deliver it to the Archpriest directly. Alas, you somehow have to cross the sea\n"
+                                   "between. Because it's winter, all Valpurian ships are trapped by ice and\n"
                                    "I have none. Therefore you must venture through the small underwater tunnel\n"
                                    "connecting our islands. It is infested with monsters, but since you have\n"
                                    "stayed alive here so long, the trip will surely cause you no trouble.\"\n\n"
                                    "You have never been so happy! According to the mansion's traveling\n"
-                                   "brochures, Attnam is a peaceful but bustling world city on a beautiful\n"
+                                   "brochures, Valpuris is a peaceful but bustling world city on a beautiful\n"
                                    "snowy fell surrounded by frozen lakes glittering in the arctic sun just\n"
                                    "like the diamonds of the imperial treasury. Not that you would believe a\n"
                                    "word. The point is that tomorrow you can finally forget your home and\n"
@@ -849,7 +849,7 @@ truth game::Init(cfestring& loadBaseName)
       Player->SetMoney(Player->GetMoney() + RAND() % 11);
       GetTeam(0)->SetLeader(Player);
       InitDangerMap();
-      Petrus = 0;
+      Archpriest = 0;
       InitDungeons();
       v2 NewWorldSize = ivanconfig::GetWorldSizeConfig();
       SetCurrentArea(WorldMap = new worldmap(NewWorldSize.X, NewWorldSize.Y));
@@ -905,12 +905,12 @@ truth game::Init(cfestring& loadBaseName)
       commandsystem::ClearSwapWeapons(); //to clear the memory from possibly previously loaded game
       craftcore::ClearSuspendedList(); //to clear the memory from possibly previously loaded game
       bool PlayerHasReceivedAllGodsKnownBonus = false;
-      ADD_MESSAGE("You commence your journey to Attnam. Use direction keys to "
+      ADD_MESSAGE("You commence your journey to Valpuris. Use direction keys to "
                   "move, '>' to enter an area and '?' to view other commands.");
 
       if(IsXMas())
       {
-        item* Present = banana::Spawn();
+        item* Present = mango::Spawn();
         Player->GetStack()->AddItem(Present);
         ADD_MESSAGE("Atavus is happy today! He gives you %s.", Present->CHAR_NAME(INDEFINITE));
       }
@@ -1053,7 +1053,7 @@ void game::Run()
           Item->SetTeam(MONSTER_TEAM);
           }
           else
-          Item = holybanana::Spawn();
+          Item = holymango::Spawn();
 
           CurrentLevel->GetLSquare(CurrentLevel->GetRandomSquare())->AddItem(Item);
           }
@@ -4209,10 +4209,10 @@ void game::BusyAnimation(bitmap* Buffer, truth ForceDraw)
 
 void game::CreateBusyAnimationCache()
 {
-  bitmap Elpuri(TILE_V2, TRANSPARENT_COLOR);
-  Elpuri.ActivateFastFlag();
+  bitmap Malgorath(TILE_V2, TRANSPARENT_COLOR);
+  Malgorath.ActivateFastFlag();
   packcol16 Color = MakeRGB16(60, 60, 60);
-  igraph::GetCharacterRawGraphic()->MaskedBlit(&Elpuri, v2(64, 0), ZERO_V2, TILE_V2, &Color);
+  igraph::GetCharacterRawGraphic()->MaskedBlit(&Malgorath, v2(64, 0), ZERO_V2, TILE_V2, &Color);
   bitmap Circle(v2(200, 200), TRANSPARENT_COLOR);
   Circle.ActivateFastFlag();
 
@@ -4239,7 +4239,7 @@ void game::CreateBusyAnimationCache()
   {
     B1.Bitmap = B2.Bitmap = BusyAnimationCache[c] = new bitmap(v2(200, 200), 0);
     B1.Bitmap->ActivateFastFlag();
-    Elpuri.NormalMaskedBlit(B1);
+    Malgorath.NormalMaskedBlit(B1);
     double Rotation = 0.3 + c * FPI / 80;
 
     for(int x = 0; x < 10; ++x)
@@ -6146,7 +6146,7 @@ long game::GetScore()
   return long(0.01 * Counter);
 }
 
-/* Only works if New Attnam is loaded */
+/* Only works if Oakhaven is loaded */
 
 truth game::OakhavenIsFree()
 {
@@ -6447,12 +6447,12 @@ truth game::EndSumoWrestling(int Result)
     DrawEverything();
   }
 
-  // Send the bananagrowers back to work
+  // Send the crop tenders back to work
   std::vector<character*> VillagePeople = bugfixdp::FindCharactersOnLevel();
   for(int j = 0; j < VillagePeople.size(); j++)
   {
     character* Villager = VillagePeople[j];
-    if(Villager && dynamic_cast<bananagrower*>(Villager))
+    if(Villager && dynamic_cast<croptender*>(Villager))
     {
       Villager->SetFeedingSumo(false);
     }
