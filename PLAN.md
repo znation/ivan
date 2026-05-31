@@ -476,15 +476,16 @@ Standalone text files; independent of each other. Use Claude with the style guid
 #### Task 5.1: [x] Inventory `Sound/SoundEffects.cfg`
 Read the file. Identify all references to old creature/character names (enner, ostrich, frog, etc.). Document what needs renaming before proceeding.
 
-#### Task 5.2: [ ] Generate Wraithstalker Sound Effects
+#### Task 5.2: [x] Generate Wraithstalker Sound Effects
 ```bash
-python tools/asset_gen/audio_generator.py \
-  --prompt "dark fantasy forest predator growl, menacing, deep bass, 1 second" \
+~/venv/bin/python tools/asset_gen/audio_generator.py \
+  --prompt "[SOUND] deep predatory growl, dark forest beast, low rumbling bass" \
   --output Sound/wraithstalker.wav --duration 1.0
-python tools/asset_gen/audio_generator.py \
-  --prompt "dark fantasy predator death cry, agonized screech fading" \
+~/venv/bin/python tools/asset_gen/audio_generator.py \
+  --prompt "[SOUND] agonized shriek, dark beast dying, screech fading into silence" \
   --output Sound/wraithstalkerdeath.wav --duration 2.0
 ```
+Generated: wraithstalker.wav (47kB, 1.0s @ 24kHz), wraithstalkerdeath.wav (94kB, 2.0s @ 24kHz). Model: suno/bark-small on CPU.
 
 #### Task 5.3: [x] Update `Sound/SoundEffects.cfg`
 - Replace `enner.wav`/`ennerdeath.wav` → `wraithstalker.wav`/`wraithstalkerdeath.wav`
