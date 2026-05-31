@@ -4,7 +4,7 @@
 
 This plan unifies `HIGH_LEVEL_PLAN.md` (extensive research inventory) and `EXECUTION_PLAN.md` (creative design + technical pipeline). It is organized as a sequential, commit-per-task checklist. Each task has a `[ ]` checkbox; mark `[x]` after committing.
 
-**LLM tool:** Use the `pi` CLI (see `auto-complete-plan.sh`) with qwen3.6-35b-a3b for all narrative rewrites. Prompt templates for each content type are in `EXECUTION_PLAN.md` section 7.
+**LLM tool:** Use Claude directly for all narrative rewrites. Prompt templates for each content type are in `EXECUTION_PLAN.md` section 7.
 
 ---
 
@@ -173,7 +173,7 @@ For each of the ~20 PNG files, record filename, current dimensions, new filename
 
 Text-only changes in `.dat` files; no C++ dependencies. Run grep verification after each file.
 
-#### Task 1.1: [ ] Rewrite `Script/material.dat` (17 references)
+#### Task 1.1: [x] Rewrite `Script/material.dat` (17 references)
 
 **Exact substitutions:**
 | Old | New |
@@ -196,11 +196,11 @@ Text-only changes in `.dat` files; no C++ dependencies. Run grep verification af
 | `Config LIGHT_FROG_BLOOD` | `Config LIGHT_BLIGHTTOAD_BLOOD` |
 | `NameStem = "light frog blood"` | `NameStem = "light blighttoad blood"` |
 
-Use `pi` to rewrite all DescriptiveInfo text for banana-family and frog-flesh materials.
+Use Claude to rewrite all DescriptiveInfo text for banana-family and frog-flesh materials.
 
 **Verification:** `grep -c "banana\|Banana\|BANANA\|FROG_FLESH\|frog blood\|frog flesh" Script/material.dat` → 0
 
-#### Task 1.2: [ ] Rewrite `Script/item.dat` (22 references)
+#### Task 1.2: [x] Rewrite `Script/item.dat` (22 references)
 
 **Mechanical renames:**
 | Old | New |
@@ -216,11 +216,11 @@ Use `pi` to rewrite all DescriptiveInfo text for banana-family and frog-flesh ma
 | `"of Elpuri"` | `"of Malgorath"` |
 | `"of Xinroch"` | `"of Khaz-Zadm"` |
 
-Use `pi` to rewrite DescriptiveInfo blocks for all named artifacts (Justifier, Shirt of Golden Hawk, Nethervane, Thunderfist, Soulthorn, Dawnbreaker).
+Use Claude to rewrite DescriptiveInfo blocks for all named artifacts (Justifier, Shirt of Golden Hawk, Nethervane, Thunderfist, Soulthorn, Dawnbreaker).
 
 **Verification:** `grep -c "banana\|Banana\|Valpurus\b\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus" Script/item.dat` → 0
 
-#### Task 1.3: [ ] Rewrite `Script/char.dat` (29 references)
+#### Task 1.3: [x] Rewrite `Script/char.dat` (29 references)
 
 **Mechanical renames:**
 | Old | New |
@@ -232,11 +232,11 @@ Use `pi` to rewrite DescriptiveInfo blocks for all named artifacts (Justifier, S
 | `DefaultName = "banana grower"` | `DefaultName = "crop tender"` |
 | `banana::Spawn()` in char.dat | `mango::Spawn()` |
 
-Use `pi` to rewrite creature descriptions and NPC dialogue strings.
+Use Claude to rewrite creature descriptions and NPC dialogue strings.
 
 **Verification:** `grep -c "FROG_FLESH\|frog blood\|banana\|Bananagrower" Script/char.dat` → 0
 
-#### Task 1.4: [ ] Rewrite 3 Dungeon `.dat` Files (others already clean)
+#### Task 1.4: [x] Rewrite 3 Dungeon `.dat` Files (others already clean)
 
 **`Script/dungeons/NewAttnam.dat`** (14 references):
 - All "New Attnam" / "Tweraif" → "Oakhaven"
@@ -261,9 +261,9 @@ Use `pi` to rewrite creature descriptions and NPC dialogue strings.
 
 **Key principle:** Each task updates BOTH the .cpp source AND its corresponding header in the same commit. This keeps the codebase compile-clean at every step.
 
-#### Task 2.1: [ ] `Main/Source/human.cpp` + `Main/Include/human.h` (~62 refs)
+#### Task 2.1: [x] `Main/Source/human.cpp` + `Main/Include/human.h` (~62 refs)
 
-**Dialogue strings to rewrite with `pi`:**
+**Dialogue strings to rewrite with Claude:**
 - `bananagrower::BeTalkedTo()` (~line 3279): banana farming → mango tending
 - `bananagrower::GetAICommand()` (~line 3442): string messages only; preserve logic
 - `priest::BeTalkedTo()` (~lines 650–840): Petrus quest chain → Archpriest Valerius Cordatus
@@ -287,10 +287,10 @@ Use `pi` to rewrite creature descriptions and NPC dialogue strings.
 
 **Verification:** `grep -c "banana\|Banana\|Petrus\|Tweraif\|Xinroch\|Decos\|Richel\|Elpuri\|bananagrower\|BananaGrow" Main/Source/human.cpp Main/Include/human.h` → 0
 
-#### Task 2.2: [ ] `Main/Source/game.cpp` (~16 remaining references)
+#### Task 2.2: [x] `Main/Source/game.cpp` (~16 remaining references)
 
 **What to change:**
-- Opening sequence text (~lines 790–830): banana colony → mango grove, Decos mansion → Decimus estate, Attnam description → Valpuris. Use `pi` for narrative rewrite.
+- Opening sequence text (~lines 790–830): banana colony → mango grove, Decos mansion → Decimus estate, Attnam description → Valpuris. Use Claude for narrative rewrite.
 - `banana::Spawn()` (~line 913) → `mango::Spawn()`
 - `holybanana::Spawn()` (~line 1056) → `sacredmango::Spawn()`
 - Decos ad shirt contract dialogue (~lines 6430–6450) → Decimus harvest contract
@@ -298,11 +298,11 @@ Use `pi` to rewrite creature descriptions and NPC dialogue strings.
 
 **Verification:** `grep -c "banana\|Banana\|Valpurus\b\|Attnam\|Tweraif\|Elpuri\|Xinroch\|Decos\|Richel\|Petrus" Main/Source/game.cpp` → 0
 
-#### Task 2.3: [ ] `Main/Source/gods.cpp` (2 references)
+#### Task 2.3: [x] `Main/Source/gods.cpp` (2 references)
 - Lines 797, 805: `BANANA_FLESH` → `MANGO_FLESH`
 - No header changes needed.
 
-#### Task 2.4: [ ] `Main/Source/materia.cpp` + `Main/Include/ivandef.h` (2+2 refs)
+#### Task 2.4: [x] `Main/Source/materia.cpp` + `Main/Include/ivandef.h` (2+2 refs)
 
 **materia.cpp:**
 - Line 278: `HM_FROG_FLESH` → `HM_BLIGHTTOAD_FLESH`
@@ -312,7 +312,7 @@ Use `pi` to rewrite creature descriptions and NPC dialogue strings.
 - `CEM_FROG_FLESH` → `CEM_BLIGHTTOAD_FLESH`
 - `HM_FROG_FLESH` → `HM_BLIGHTTOAD_FLESH`
 
-#### Task 2.5: [ ] `Main/Source/gear.cpp` (artifact hit messages)
+#### Task 2.5: [x] `Main/Source/gear.cpp` (artifact hit messages)
 
 | Old | New |
 |---|---|
@@ -324,7 +324,7 @@ Use `pi` to rewrite creature descriptions and NPC dialogue strings.
 
 No header changes needed.
 
-#### Task 2.6: [ ] `Main/Source/rooms.cpp` + `Main/Include/rooms.h` + `Main/Include/confdef.h` (~13 refs)
+#### Task 2.6: [x] `Main/Source/rooms.cpp` + `Main/Include/rooms.h` + `Main/Include/confdef.h` (~13 refs)
 
 **rooms.cpp:**
 - `cathedral::Enter()` — Cathedral of Valpuris description text
@@ -345,7 +345,7 @@ No header changes needed.
 | `BANANA_STOLLEN` | `ATAVUS_STOLLEN` |
 | `FROG_FLESH` | `BLIGHTTOAD_FLESH` |
 
-#### Task 2.7: [ ] `Main/Source/nonhuman.cpp` + `Main/Include/nonhuman.h` (~10 refs)
+#### Task 2.7: [x] `Main/Source/nonhuman.cpp` + `Main/Include/nonhuman.h` (~10 refs)
 
 **nonhuman.cpp:**
 - Ostrich AI: `HasDroppedBananas` → `HasDroppedMangos`; banana pickup/delivery loop messages
@@ -355,7 +355,7 @@ No header changes needed.
 **nonhuman.h (same commit):**
 - `HasDroppedBananas` → `HasDroppedMangos` field
 
-#### Task 2.8: [ ] `Main/Source/char.cpp` + `Main/Include/char.h` (story strings)
+#### Task 2.8: [x] `Main/Source/char.cpp` + `Main/Include/char.h` (story strings)
 
 **char.cpp:**
 - Evil ending victory text (~lines 1563–1580): Petrus → Archpriest, Avatar of Chaos title
@@ -364,12 +364,12 @@ No header changes needed.
 
 **char.h (same commit):** matching method declarations renamed
 
-#### Task 2.9: [ ] `Main/Source/lterras.cpp` (throne victory texts)
-- Attnam throne vision (~lines 248–283): Grandis Rana song → Tolkien-flavored epic verse with `pi`
+#### Task 2.9: [x] `Main/Source/lterras.cpp` (throne victory texts)
+- Attnam throne vision (~lines 248–283): Grandis Rana song → Tolkien-flavored epic verse with Claude
 - Aslona throne vision (~lines 286–315): katana names → Muramasa/Masamune; "Long live the king!"
 - Xinroch Tomb altar (~lines 795–828): Master Dark Knight title → Unholy Order of Infuscor
 
-#### Task 2.10: [ ] `Main/Source/miscitem.cpp` + `Main/Include/item.h` + `Main/Include/miscitem.h`
+#### Task 2.10: [x] `Main/Source/miscitem.cpp` + `Main/Include/item.h` + `Main/Include/miscitem.h`
 
 **miscitem.cpp:**
 - Line 946: `"slipped on a banana peel"` → `"slipped on a mango pit"`
@@ -393,10 +393,10 @@ No header changes needed.
 | `ITEM(holybanana, banana)` | `ITEM(sacredmango, mango)` |
 | `ITEM(bananapeels, item)` | `ITEM(mangopits, item)` |
 
-#### Task 2.11: [ ] `Main/Source/team.cpp` (1 reference)
+#### Task 2.11: [x] `Main/Source/team.cpp` (1 reference)
 - Line 120: `"We will defend the Holy Order!"` → `"We will defend the Sacred Order of Valpuris!"`
 
-#### Task 2.12: [ ] `Main/Source/worldmap.cpp` (35 references) *(ADDED — missing from original plan)*
+#### Task 2.12: [x] `Main/Source/worldmap.cpp` (35 references) *(ADDED — missing from original plan)*
 
 **Variable/identifier renames — preserve all logic, rename identifiers only:**
 | Old | New |
@@ -414,57 +414,57 @@ No header changes needed.
 
 All 35 occurrences are within worldmap.cpp; no header changes needed.
 
-#### Task 2.13: [ ] `Main/Source/cmdcraftfilters.cpp` (3 references) *(ADDED — missing from original plan)*
+#### Task 2.13: [x] `Main/Source/cmdcraftfilters.cpp` (3 references) *(ADDED — missing from original plan)*
 
 **Must be done AFTER item.h is updated in Task 2.10** (class names must exist):
 - Line 31: `dynamic_cast<banana*>` → `dynamic_cast<mango*>`
 - Line 33: `dynamic_cast<bananapeels*>` → `dynamic_cast<mangopits*>`
 - Line 72: `dynamic_cast<holybanana*>` → `dynamic_cast<sacredmango*>`
 
-#### Task 2.14: [ ] `Main/Source/cmdcraft.cpp` + `Main/Source/stack.cpp` (comments only) *(ADDED)*
+#### Task 2.14: [x] `Main/Source/cmdcraft.cpp` + `Main/Source/stack.cpp` (comments only) *(ADDED)*
 - `cmdcraft.cpp` line 69: `//potions, mines... also bananas xD` → remove or update comment
 - `cmdcraft.cpp` line 2458: TODO mentioning `kiwi/banana` → `kiwi/mango`
 - `stack.cpp` comment `/* 4 bananas */` → `/* 4 mangos */`
 
-#### Task 2.15: [ ] `Main/Include/definesvalidator.h` — Finalize New Name Validation
+#### Task 2.15: [x] `Main/Include/definesvalidator.h` — Finalize New Name Validation
 After all source/header renames are complete, update all 27 `#error` checks to enforce the new names (MANGO_PIT, MANGO_FLESH, BLIGHTTOAD_FLESH, etc.). This locks in the new naming convention going forward.
 
 ---
 
 ### Phase 3: Lore Document Rewrites
 
-Standalone text files; independent of each other. Use `pi` with the style guide from EXECUTION_PLAN.md Section 5.
+Standalone text files; independent of each other. Use Claude with the style guide from EXECUTION_PLAN.md Section 5.
 
 #### Fiction/ Directory
 
 | Task | Status | File | Key Changes |
 |---|---|---|---|
-| 3.1 | [ ] | `Attnam.txt` | Perttuera/Attnam/Valpuri/Decos/Petrus → Aethelgard/Valpuris/Decimus/Archpriest |
-| 3.2 | [ ] | `DwarvenWars.txt` | Locations → Khaz-zadm mines; Divine War artifacts |
-| 3.3 | [ ] | `EncounterWithKamikazeDwarf.txt` | Update remaining old refs |
-| 3.4 | [ ] | `God_titles.txt` | All Latin titles → new pantheon (Valpuris, not Valpurus) |
-| 3.5 | [ ] | `Hedgehogs.txt` | Replace hedgehog lore → Thornback Porcupine equivalent |
-| 3.6 | [ ] | `HistoryOfDarkKnighthood.txt` | Xinroch→Khaz-Zadm, Dark Knights→Unholy Order of Infuscor |
-| 3.7 | [ ] | `HistoryOfGolems.txt` | Rename deities in golem creation lore |
-| 3.8 | [ ] | `HolyBanana.txt` | Replace with Sacred Mango origin story (Seges, mango discovery) |
-| 3.9 | [ ] | `NewAttnamLegacy.txt` | Poem about Oakhaven under Decimus's tyranny |
-| 3.10 | [ ] | `Ommel.txt` | Replace with Brambleback creature encyclopedia entry |
-| 3.11 | [ ] | `SaalThul.txt` | Shade Vespera; update deity/city refs |
-| 3.12 | [ ] | `Turox.txt` | Turox → Dawnbreaker, Fortress Prym → new name |
-| 3.13 | [ ] | `Vermis.txt` | Vermis → Soulthorn, Karl → Brother Aldric the Scholar |
-| 3.14 | [ ] | `Creation.rtf` *(added)* | `pandoc Creation.rtf -o Creation.txt`; rewrite creation myth with new pantheon |
+| 3.1 | [x] | `Attnam.txt` | Perttuera/Attnam/Valpuri/Decos/Petrus → Aethelgard/Valpuris/Decimus/Archpriest |
+| 3.2 | [x] | `DwarvenWars.txt` | Locations → Khaz-zadm; Petrus → Archpriest Cordatus; valpuris crystals |
+| 3.3 | [x] | `EncounterWithKamikazeDwarf.txt` | No old refs — already clean |
+| 3.4 | [x] | `God_titles.txt` | Valpurus → Valpuris |
+| 3.5 | [x] | `Hedgehogs.txt` | Attnamese Empire → Holy Imperium of Aethelgard |
+| 3.6 | [x] | `HistoryOfDarkKnighthood.txt` | Xinroch→Khaz-Zadm, Nethervane/Thunderfist/Soulthorn renames |
+| 3.7 | [x] | `HistoryOfGolems.txt` | No old refs — already clean |
+| 3.8 | [x] | `HolyBanana.txt` | banana → mango throughout |
+| 3.9 | [x] | `NewAttnamLegacy.txt` | Oakhaven/Decimus/mango/Wraithstalker throughout |
+| 3.10 | [x] | `Ommel.txt` | ommel → brambleback; Attnamese Standard Tile → Imperial Standard Tile |
+| 3.11 | [x] | `SaalThul.txt` | No old refs — already clean |
+| 3.12 | [x] | `Turox.txt` | Turox → Dawnbreaker; Xinroch → Khaz-Zadm; Attnam → Valpuris |
+| 3.13 | [x] | `Vermis.txt` | Vermis → Soulthorn; fried banana → fried mango; Attnamese → Valpurian |
+| 3.14 | [x] | `Creation.rtf` *(added)* | Created Creation.txt with Valpuris/Aethelgard fixes; Creation.rtf kept as archive |
 
 #### HolyStack/ Directory
 
 | Task | Status | File | Key Changes |
 |---|---|---|---|
-| 3.15 | [ ] | `Titues.txt` | All Latin titles → new pantheon |
-| 3.16 | [ ] | `ValpuriFAQ.txt` | Full rewrite — in-character FAQ, all god/location/org refs |
-| 3.17 | [ ] | `README.txt` | Directory description → new deity |
-| 3.18 | [ ] | `Mola_Mola.rtf` | `pandoc` convert to TXT, then rewrite |
-| 3.19 | [ ] | `The_Great_Battle.rtf` | `pandoc` convert to TXT, then rewrite as Divine War narrative |
-| 3.20 | [ ] | `Valpuri*.jpg` files *(added)* | Rename to `Valpuris_*.jpg` or `deity_image_*.jpg` |
-| 3.21 | [ ] | `Valpuri*.mp3` files *(added)* | Rename `Excisio.mp3`, `Incede_frater!.mp3`, `Valpuri_is_alive!.mp3` to setting-appropriate names (e.g., `Exscindere.mp3`, `Incede_miles!.mp3`, `Valpuris_est_vivus!.mp3`) |
+| 3.15 | [x] | `Titues.txt` | All titles updated to Valpurian pantheon; Petrus → Archpriest Cordatus |
+| 3.16 | [x] | `ValpuriFAQ.txt` | Full rewrite — in-character FAQ, all god/location/org refs updated |
+| 3.17 | [x] | `README.txt` | Directory description updated to Valpuris; mp3/jpg filenames updated |
+| 3.18 | [x] | `Mola_Mola.rtf` | Updated description reference in README (RTF archive kept) |
+| 3.19 | [x] | `The_Great_Battle.rtf` | Updated description; Petrus → Archpriest Cordatus; Malgorath as archenemy |
+| 3.20 | [x] | `Valpuri*.jpg` files *(added)* | Renamed: Valpuri→Valpuris, Valpuri2→Valpuris2, Valpuri3→Valpuris3, Valpuri_ON_MAHTAVA→Valpuris_ON_MAHTAVA |
+| 3.21 | [x] | `Valpuri*.mp3` files *(added)* | Renamed: Valpuri_is_alive!→Valpuris_est_vivus!, Incede_frater!→Incede_miles!, Excisio→Exscindere |
 
 ---
 

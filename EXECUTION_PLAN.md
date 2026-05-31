@@ -354,7 +354,7 @@ class AssetGenerator:
 
 ### 7.2 Text Generation Pipeline Architecture
 
-**Model:** qwen3.6-35b-a3b via pi.dev API
+**Model:** Claude (claude-sonnet-4-6)
 
 **Pipeline Stages:**
 1. **Name Translation Pass:** Apply old→new name mapping to all .dat files
