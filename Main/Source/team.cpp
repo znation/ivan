@@ -65,7 +65,7 @@ void team::Hostility(team* Enemy)
 
         if(game::GetGloomyCaveStoryState() != 2)
         {
-          v2 AngelPos = game::GetPetrus() ? game::GetPetrus()->GetPos() : v2(28, 20);
+          v2 AngelPos = game::GetArchpriest() ? game::GetArchpriest()->GetPos() : v2(28, 20);
           int Seen = 0;
           angel* Angel;
 

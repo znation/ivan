@@ -274,8 +274,8 @@ class game
   static ulong GetLOSTick() { return LOSTick; }
   static void SendLOSUpdateRequest() { LOSUpdateRequested = true; }
   static void RemoveLOSUpdateRequest() { LOSUpdateRequested = false; }
-  static character* GetPetrus() { return Petrus; }
-  static void SetPetrus(character* What) { Petrus = What; }
+  static character* GetArchpriest() { return Petrus; }
+  static void SetArchpriest(character* What) { Petrus = What; }
   static truth HandleQuitMessage();
   static int GetDirectionForVector(v2);
   static int GetPlayerAlignment();
@@ -543,7 +543,7 @@ class game
   static team** Team;
   static ulong LOSTick;
   static truth LOSUpdateRequested;
-  static character* Petrus;
+  static character* Archpriest;
   static truth Loading;
   static truth JumpToPlayerBe;
   static gamescript* GameScript;

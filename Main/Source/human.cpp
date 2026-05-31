@@ -70,7 +70,7 @@ truth ghost::SpecialEnemySightedReaction(character*) { return !(Active = true); 
 
 petrus::~petrus()
 {
-  game::SetPetrus(0);
+  game::SetArchpriest(0);
 }
 
 truth ennerbeast::Hit(character* Enemy, v2, int, int)
@@ -422,7 +422,7 @@ void petrus::Load(inputfile& SaveFile)
 {
   humanoid::Load(SaveFile);
   SaveFile >> LastHealed;
-  game::SetPetrus(this);
+  game::SetArchpriest(this);
 }
 
 item* humanoid::GetMainWielded() const
@@ -658,11 +658,11 @@ void petrus::BeTalkedTo()
       game::PlayVictoryMusic();
       game::TextScreen(CONST_S("\"Yes, citizen? Ah, it is thee. I was wondering were hast thou wandered off. Art thou\n"
                                "coming back to beg for forgiveness and mercy?\"\n\n"
-                               "But Petrus' anger is quickly quelled when you fall to your knees and present to him\n"
+                               "But Archpriest Cordatus' anger is quickly quelled when you fall to your knees and present to him\n"
                                "the two regal swords of Aslona. He takes them and admires them in silence for a while,\n"
                                "though interrupted by Sir Lancelyn who realizes your deeds, screams in rage and is\n"
                                "promptly dragged away to a prison cell.\n\n"
-                               "Lost in thoughts, Petrus hands the swords to a servant and turns back to you again:\n\n"
+                               "Lost in thoughts, Archpriest Cordatus hands the swords to a servant and turns back to you again:\n\n"
                                "\"I have decided thy fate, slave. I shan't have thee executed if thou canst prove thy worth.\n"
                                "Sir Galladon hast telepathically informed me that our trainee guards are just about ready\n"
                                "for their first war. Thou shalt join my army and help conquer Aslona while they are reeling.\n"
@@ -680,14 +680,14 @@ void petrus::BeTalkedTo()
 
   if(PLAYER->HasGoldenEagleShirt())
   {
-    ADD_MESSAGE("Petrus smiles. \"Thou hast defeated Malgorath the Blight-Beast! Mayst thou be blessed by Valpuris for the rest of thy life! "
+    ADD_MESSAGE("Archpriest Cordatus smiles. \"Thou hast defeated Malgorath the Blight-Beast! Mayst thou be blessed by Valpuris for the rest of thy life! "
                 "And thou possess the Shirt of Golden Hawk, the symbol of Our status! Return it now, please.\"");
 
-    if(game::TruthQuestion(CONST_S("Will you give the Shirt of Golden Hawk to Petrus? [y/n]"), REQUIRES_ANSWER))
+    if(game::TruthQuestion(CONST_S("Will you give the Shirt of Golden Hawk to Archpriest Cordatus? [y/n]"), REQUIRES_ANSWER))
     {
       game::PlayVictoryMusic();
       game::TextScreen(CONST_S("The Holy Shirt is returned to its old owner and you kneel down to receive your reward.\n"
-                               "Petrus taps your shoulder with the Justifier and raises you to nobility. Later you\n"
+                               "Archpriest Cordatus taps your shoulder with the Justifier and raises you to nobility. Later you\n"
                                "receive a small dukedom in the middle of tundra where you rule with justice till\n"
                                "the end of your content life.\n\nYou are victorious!"));
 
@@ -701,7 +701,7 @@ void petrus::BeTalkedTo()
     }
     else
     {
-      ADD_MESSAGE("Petrus's face turns red. \"I see. Thy greed hath overcome thy wisdom. Then, "
+      ADD_MESSAGE("Archpriest Cordatus's face turns red. \"I see. Thy greed hath overcome thy wisdom. Then, "
                   "we shall fight for the shiny shirt. May Valpuris bless him who is better.\"");
 
       /* And now we actually make his face change color ;-) */
@@ -719,8 +719,8 @@ void petrus::BeTalkedTo()
   if(PLAYER->HasHeadOfMalgorath the Blight-Beast())
   {
     game::PlayVictoryMusic();
-    game::TextScreen(CONST_S("You have slain Malgorath the Blight-Beast, and Petrus grants you the freedom you desire.\n"
-                             "You spend the next months in Attnam as an honored hero and when the\n"
+    game::TextScreen(CONST_S("You have slain Malgorath the Blight-Beast, and Archpriest Cordatus grants you the freedom you desire.\n"
+                             "You spend the next months in Valpuris as an honored hero and when the\n"
                              "sea finally melts, you board the first ship, leaving your past forever\n"
                              "behind.\n\nYou are victorious!"));
 
@@ -733,7 +733,7 @@ void petrus::BeTalkedTo()
   }
   else if(game::GetGloomyCaveStoryState() == 1)
   {
-    ADD_MESSAGE("Petrus says: \"Bring me the head of Malgorath the Blight-Beast and we'll talk.\"");
+    ADD_MESSAGE("Archpriest Cordatus says: \"Bring me the head of Malgorath the Blight-Beast and we'll talk.\"");
     return;
   }
 
@@ -742,10 +742,10 @@ void petrus::BeTalkedTo()
     if(PLAYER->RemoveEncryptedScroll())
     {
       game::TextScreen(CONST_S("You kneel down and bow before the high priest and hand him the encrypted scroll.\n"
-                               "Petrus raises his arm, the scroll glows yellow, and lo! The letters are clear and\n"
-                               "readable. Petrus asks you to voice them aloud. The first two thousand words praise\n"
+                               "Archpriest Cordatus raises his arm, the scroll glows yellow, and lo! The letters are clear and\n"
+                               "readable. Archpriest Cordatus asks you to voice them aloud. The first two thousand words praise\n"
                                "Valpuris the Creator and all His manifestations and are followed by a canticle of\n"
-                               "Saint Petrus the Lion-Hearted lasting roughly three thousand words. Finally there\n"
+                               "Saint Archpriest Cordatus the Lion-Hearted lasting roughly three thousand words. Finally there\n"
                                "are some sentences actually concerning your mission:\n\n"
                                "\"Alas, I fear dirty tongues have spread lies to my Lord's ears. I assure all tales\n"
                                "of treasures here in Oakhaven are but mythic legends. There is nothing of value here.\n"
@@ -757,11 +757,11 @@ void petrus::BeTalkedTo()
                                "\"Yours sincerely,\n"
                                "Valerius Decimus, the viceroy of Oakhaven\""));
 
-      game::TextScreen(CONST_S("You almost expected the last bit. Petrus seems to be deep in his thoughts and you\n"
+      game::TextScreen(CONST_S("You almost expected the last bit. Archpriest Cordatus seems to be deep in his thoughts and you\n"
                                "wonder what shape your destiny is taking in his mind. Suddenly he seems to return\n"
                                "to this reality and talks to you.\n\n"
                                "\"Oh, thou art still here. We were just discussing telepathically with Sir Galladon.\n"
-                               "We started doubting Decos's alleged poverty a while back when he bought a couple of\n"
+                               "We started doubting Decimus's alleged poverty a while back when he bought a couple of\n"
                                "medium-sized castles nearby. Thy brethren from Oakhaven have also told Us about\n"
                                "vast riches seized from them. Our law says all such stolen valuables belong to \n"
                                "the Cathedral's treasury, so this is a severe claim. However, proof is needed,\n"
@@ -785,7 +785,7 @@ void petrus::BeTalkedTo()
                              "witnessed thou leaving the dreaded underwater tunnel. This means thou most likely hast\n"
                              "defeated The Carnivorous Matriarch Vespera and art a talented monster slayer. We happen to have a task\n"
                              "perfect for such a person.\"\n\n"
-                             "\"An evil dark frog named Malgorath the Blight-Beast who hates Valpuris and Attnam more than anything hath\n"
+                             "\"An evil dark frog named Malgorath the Blight-Beast who hates Valpuris and Valpuris more than anything hath\n"
                              "taken control over an abandoned mine nearby. It is pestering our fine city in many ways\n"
                              "and reconnaissance has reported an army of monsters gathering in the cave. Our guards\n"
                              "are not trained to fight underground and We dare not send them. To make things worse,\n"
@@ -1321,16 +1321,16 @@ void librarian::BeTalkedTo()
   switch(RandomizeReply(Said, 12))
   {
    case 0:
-    if(game::GetPetrus() && !game::GetStoryState())
-      ADD_MESSAGE("\"Thou shouldst visit Petrus in his great Cathedral.\"");
-    else if(game::GetPetrus() && game::GetStoryState() == 1)
-      ADD_MESSAGE("\"Thou shouldst visit Petrus if thou art in need of further adventures.\"");
+    if(game::GetArchpriest() && !game::GetStoryState())
+      ADD_MESSAGE("\"Thou shouldst visit Archpriest Cordatus in his great Cathedral.\"");
+    else if(game::GetArchpriest() && game::GetStoryState() == 1)
+      ADD_MESSAGE("\"Thou shouldst visit Archpriest Cordatus if thou art in need of further adventures.\"");
     else
       ADD_MESSAGE("\"They say a wand of polymorph hath dozens of uses.\"");
 
     break;
    case 1:
-    if(game::GetPetrus() && game::GetGloomyCaveStoryState())
+    if(game::GetArchpriest() && game::GetGloomyCaveStoryState())
       ADD_MESSAGE("\"Thou art going to fight Malgorath the Blight-Beast? Beware! It is a powerful enemy. Other monsters "
                   "are very vulnerable if surrounded by thy party, but not that beast, for it may "
                   "slay a horde of thy friends at once with its horrendous tail attack.\"");
@@ -1343,7 +1343,7 @@ void librarian::BeTalkedTo()
 
     break;
    case 2:
-    if(game::GetPetrus() && game::GetGloomyCaveStoryState())
+    if(game::GetArchpriest() && game::GetGloomyCaveStoryState())
       ADD_MESSAGE("\"Malgorath the Blight-Beast the Dark Frog abhors light and resides in a level of eternal darkness.\"");
     else if(game::GetCryptOfKhazZadmStoryState())
       ADD_MESSAGE("\"The Crypt of Khaz-Zadm is a chilling place. It is said that a whole cavern of magical ice can be found when wandering its tunnels.\"");
@@ -1354,10 +1354,10 @@ void librarian::BeTalkedTo()
 
     break;
    case 3:
-    if(game::GetPetrus() && game::GetGloomyCaveStoryState())
+    if(game::GetArchpriest() && game::GetGloomyCaveStoryState())
       ADD_MESSAGE("\"Malgorath the Blight-Beast's attacks are so strong that they may shatter many of thy precious items.\"");
     else if(game::GetCryptOfKhazZadmStoryState())
-      ADD_MESSAGE("\"The Crypt of Khaz-Zadm is guarded by fanatical dark knights that once followed Xinroch and swore to protect him even in death.\"");
+      ADD_MESSAGE("\"The Crypt of Khaz-Zadm is guarded by fanatical dark knights that once followed Khaz-Zadm and swore to protect him even in death.\"");
     /*else if(game::GetAslonaStoryState())
       ADD_MESSAGE("\"Malgorath the Blight-Beast the Dark Frog abhors light and resides in a level of eternal darkness.\"");*/
     else
@@ -1372,10 +1372,10 @@ void librarian::BeTalkedTo()
 
     break;
    case 5:
-    if(game::GetPetrus() && game::GetGloomyCaveStoryState())
+    if(game::GetArchpriest() && game::GetGloomyCaveStoryState())
       ADD_MESSAGE("\"The Shirt of Golden Hawk is a legendary artifact. Thou canst not find a better armor.\"");
     /*else if(game::GetCryptOfKhazZadmStoryState())
-      ADD_MESSAGE("\"The Crypt of Khaz-Zadm is guarded by fanatical dark knights that once followed Xinroch and swore to protect him even in death.\"");
+      ADD_MESSAGE("\"The Crypt of Khaz-Zadm is guarded by fanatical dark knights that once followed Khaz-Zadm and swore to protect him even in death.\"");
     else if(game::GetAslonaStoryState())
       ADD_MESSAGE("\"Malgorath the Blight-Beast the Dark Frog abhors light and resides in a level of eternal darkness.\"");*/
     else
@@ -1384,7 +1384,7 @@ void librarian::BeTalkedTo()
 
     break;
    case 6:
-    ADD_MESSAGE("\"Attnam is traditionally ruled by the high priest of the Great Frog. He "
+    ADD_MESSAGE("\"Valpuris is traditionally ruled by the high priest of the Great Frog. He "
                 "holds the Shirt of Golden Hawk and has always killed his predecessor.\"");
     break;
    case 7:
@@ -1397,11 +1397,11 @@ void librarian::BeTalkedTo()
                 "Thou shouldst not engage it in melee but rather kill it from afar.\"");
     break;
    case 9:
-    if(game::GetPetrus() && game::GetGloomyCaveStoryState())
+    if(game::GetArchpriest() && game::GetGloomyCaveStoryState())
       ADD_MESSAGE("\"Thou art not alone in thy attempt to defeat Malgorath the Blight-Beast. A brave "
                   "adventurer called Ivan also diveth into its cave not long ago.\"");
     /*else if(game::GetCryptOfKhazZadmStoryState())
-      ADD_MESSAGE("\"The Crypt of Khaz-Zadm is guarded by fanatical dark knights that once followed Xinroch and swore to protect him even in death.\"");
+      ADD_MESSAGE("\"The Crypt of Khaz-Zadm is guarded by fanatical dark knights that once followed Khaz-Zadm and swore to protect him even in death.\"");
     else if(game::GetAslonaStoryState())
       ADD_MESSAGE("\"Malgorath the Blight-Beast the Dark Frog abhors light and resides in a level of eternal darkness.\"");*/
     else
@@ -2395,7 +2395,7 @@ playerkind::playerkind() : SoulID(0), IsBonePlayer(false), IsClone(false)
 
 petrus::petrus() : LastHealed(0)
 {
-  game::SetPetrus(this);
+  game::SetArchpriest(this);
 }
 
 shopkeeper::shopkeeper()
@@ -3276,7 +3276,7 @@ col24 angel::GetBaseEmitation() const
   return 0;
 }
 
-void bananagrower::BeTalkedTo()
+void croptender::BeTalkedTo()
 {
   if(!GetPos().IsAdjacent(PLAYER->GetPos()))
     return;
@@ -3289,7 +3289,7 @@ void bananagrower::BeTalkedTo()
   {
     if(GetRelation(PLAYER) != HOSTILE
        && Profession.Find("president", 0) != festring::NPos && !(RAND() % 7))
-      ADD_MESSAGE("\"I'm glad Petrus spared my life even though I was the president.\"");
+      ADD_MESSAGE("\"I'm glad Archpriest Cordatus spared my life even though I was the president.\"");
 
     ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, 6)]);
   }
@@ -3297,12 +3297,12 @@ void bananagrower::BeTalkedTo()
     ProcessAndAddMessage(GetFriendlyReplies()[6 + RandomizeReply(Said, 3)]);
 }
 
-void bananagrower::RandomizeProfession()
+void croptender::RandomizeProfession()
 {
   switch(RAND_N(12))
   {
    case 0:
-    Profession = CONST_S("the president of Tweraif");
+    Profession = CONST_S("the president of Oakhaven");
     break;
    case 1:
     Profession = CONST_S("a diplomat");
@@ -3335,23 +3335,23 @@ void bananagrower::RandomizeProfession()
   }
 }
 
-void bananagrower::PostConstruct()
+void croptender::PostConstruct()
 {
   Stamina = MaxStamina / 5;
   RandomizeProfession();
-  HasDroppedBananas = FeedingMango = false;
+  HasDroppedMangos = FeedingMango = false;
 }
 
-void bananagrower::Save(outputfile& SaveFile) const
+void croptender::Save(outputfile& SaveFile) const
 {
   humanoid::Save(SaveFile);
-  SaveFile << Profession << HasDroppedBananas << FeedingMango;
+  SaveFile << Profession << HasDroppedMangos << FeedingMango;
 }
 
-void bananagrower::Load(inputfile& SaveFile)
+void croptender::Load(inputfile& SaveFile)
 {
   humanoid::Load(SaveFile);
-  SaveFile >> Profession >> HasDroppedBananas >> FeedingMango;
+  SaveFile >> Profession >> HasDroppedMangos >> FeedingMango;
 }
 
 void smith::BeTalkedTo()
@@ -3439,7 +3439,7 @@ truth humanoid::CheckZap()
     return character::CheckZap();
 }
 
-void bananagrower::GetAICommand()
+void croptender::GetAICommand()
 {
   if(game::OakhavenIsFree() ||
      (GetDungeon()->GetIndex() != NEW_ATTNAM)
@@ -3461,20 +3461,20 @@ void bananagrower::GetAICommand()
   {
     itemvector ItemVector;
     GetStack()->FillItemVector(ItemVector);
-    int BananasDropped = 0;
+    int MangosDropped = 0;
     uint c;
 
     for(c = 0; c < ItemVector.size(); ++c)
-      if(ItemVector[c]->IsBanana())
+      if(ItemVector[c]->IsMango())
       {
         ItemVector[c]->MoveTo(GetStackUnder());
-        ++BananasDropped;
+        ++MangosDropped;
       }
 
-    if(BananasDropped)
+    if(MangosDropped)
     {
       if(CanBeSeenByPlayer())
-        ADD_MESSAGE("%s drops %s.", CHAR_NAME(DEFINITE), BananasDropped == 1 ? "a banana" : "some mangoes");
+        ADD_MESSAGE("%s drops %s.", CHAR_NAME(DEFINITE), MangosDropped == 1 ? "a mango" : "some mangoes");
 
       return;
     }
@@ -3484,7 +3484,7 @@ void bananagrower::GetAICommand()
     int PeelsPickedUp = 0;
 
     for(c = 0; c < ItemVector.size(); ++c)
-      if(ItemVector[c]->IsBananaPeel())
+      if(ItemVector[c]->IsMangoPeel())
       {
         ItemVector[c]->MoveTo(GetStack());
         ++PeelsPickedUp;
@@ -3494,15 +3494,15 @@ void bananagrower::GetAICommand()
     {
       if(CanBeSeenByPlayer())
         ADD_MESSAGE("%s picks up %s.", CHAR_NAME(DEFINITE),
-                    PeelsPickedUp == 1 ? "a banana peel" : "some banana peels");
+                    PeelsPickedUp == 1 ? "a mango peel" : "some mango peels");
 
       return;
     }
 
-    HasDroppedBananas = true;
+    HasDroppedMangos = true;
   }
 
-  if(!HasDroppedBananas)
+  if(!HasDroppedMangos)
   {
     SetGoingTo(MangoTarget);
 
@@ -3517,10 +3517,10 @@ void bananagrower::GetAICommand()
     GetStack()->Clean();
     character* Sumo = game::GetSumo();
     FeedingMango = Sumo && Sumo->GetNP() < (SATIATED_LEVEL + BLOATED_LEVEL) >> 1 && !(RAND() % 15);
-    int Bananas = FeedingMango ? 3 : 10;
+    int Mangos = FeedingMango ? 3 : 10;
 
-    for(int c = 0; c < Bananas; ++c)
-      GetStack()->AddItem(banana::Spawn());
+    for(int c = 0; c < Mangos; ++c)
+      GetStack()->AddItem(mango::Spawn());
 
     v2 Where = GetLevel()->GetNearestFreeSquare(this, v2(0, 45));
 
@@ -3538,7 +3538,7 @@ void bananagrower::GetAICommand()
     if(CanBeSeenByPlayer())
       ADD_MESSAGE("%s enters the town.", CHAR_NAME(INDEFINITE));
 
-    HasDroppedBananas = false;
+    HasDroppedMangos = false;
   }
   else
   {
@@ -3580,12 +3580,12 @@ truth genie::CanCreateBodyPart(int I) const
   return I == TORSO_INDEX || I == HEAD_INDEX || I == RIGHT_ARM_INDEX || I == LEFT_ARM_INDEX;
 }
 
-truth bananagrower::HandleCharacterBlockingTheWay(character* Char, v2 Pos, int Dir)
+truth croptender::HandleCharacterBlockingTheWay(character* Char, v2 Pos, int Dir)
 {
   return Char->GetPos() == v2(45, 45) && (Displace(Char, true) || Hit(Char, Pos, Dir));
 }
 
-festring& bananagrower::ProcessMessage(festring& Msg) const
+festring& croptender::ProcessMessage(festring& Msg) const
 {
   character::ProcessMessage(Msg);
   SEARCH_N_REPLACE(Msg, "@pd", GetProfession());
@@ -3625,7 +3625,7 @@ void elder::CreateBodyParts(int SpecialFlags)
       {
         character* Char = Square->GetCharacter();
 
-        if(Char && Char->IsBananaGrower() && Hit(Char, Square->GetPos(), NotDiagonal[d], true))
+        if(Char && Char->IsCropTender() && Hit(Char, Square->GetPos(), NotDiagonal[d], true))
         {
           LastHit = game::GetTick();
           TerminateGoingTo();
@@ -5129,7 +5129,7 @@ void necromancer::BeTalkedTo()
   {
     if(PLAYER->HasShadowVeil() && PLAYER->RemoveShadowVeil(this))
     {
-      game::TextScreen(CONST_S("\"At last I can make my escape from Petrus' wretched clutches!\"\n\n"
+      game::TextScreen(CONST_S("\"At last I can make my escape from Archpriest Cordatus' wretched clutches!\"\n\n"
                                "Anmah takes the shadow veil from you and seems completely lost in\n"
                                "thoughts for a while. Suddenly, he looks up:\n\n"
                                "\"Oh, you are still here. Good! Pray tell me, what did you find in the Tomb?\n"
@@ -5172,7 +5172,7 @@ void necromancer::BeTalkedTo()
                                "To your surprise, the words rearrange themselves on the page,\n"
                                "revealing a previously inscrutable message.\n"
                                "The necromancer scans the page from left to right several times. His face contorts:\n"
-                               "\"Bah! A canticle of Saint Petrus the Lion-Hearted!\"\n"
+                               "\"Bah! A canticle of Saint Archpriest Cordatus the Lion-Hearted!\"\n"
                                "He continues down the page. His eyes widen:\n"
                                "\"O ho! 10 000 mangoes? It sounds bad out in the colonies. I'm sorry to hear about it.\"\n"
                                "\n"
@@ -5180,7 +5180,7 @@ void necromancer::BeTalkedTo()
                                "\"Alas, no news about my trial. But thank you for sharing.\"\n\n"
       */
       game::TextScreen(CONST_S("\"You might be asking what am I doing down here? Lets just say I had spent some time\n"
-                               "arranging... things in the catacombs below. I was the undertaker for the city of Attnam,\n"
+                               "arranging... things in the catacombs below. I was the undertaker for the city of Valpuris,\n"
                                "you see. Well, curiosity got the better of me and I admit I dabbled in some necromancy.\n"
                                "223 years later, and I was still down here, drinking blood, eating bones, and generally \n"
                                "trying all the old life-extension tricks. Finally I got caught by that meddling Haedlac.\n"
@@ -5191,7 +5191,7 @@ void necromancer::BeTalkedTo()
       game::TextScreen(CONST_S("\"Wait, don't go yet! It gets lonely here, with no one to talk to but the punishers.\n"
                                "Keep me company a little longer, please... Maybe I can tell you a story? I can relate\n"
                                "the history of dark knighthood to you.\"\n\n"
-                               "\"Long ago, there lived a powerful warrior, Xinroch, who rose up the ranks\n"
+                               "\"Long ago, there lived a powerful warrior, Khaz-Zadm, who rose up the ranks\n"
                                "of the fearsome order of the dark knights, to become the grand master dark knight. \n\n"
                                "His soul dwells within his mausoleum, not far from here. He doesn't stand a chance\n"
                                "of returning to us; not without a piece of his soul getting out. There is a cadre\n"
@@ -5199,20 +5199,20 @@ void necromancer::BeTalkedTo()
                                "of their legendary master, they may obstruct your entry to the tomb. Little do they know\n"
                                "that in order for their master to be reborn, his spirit must be freed from the place.\n"
                                "Of course, disturbing such a restless soul would be dangerous. You may need to subdue it\n"
-                               "by force to gain what you need. Legend has it Xinroch's spirit is able to wield weapons,\n"
+                               "by force to gain what you need. Legend has it Khaz-Zadm's spirit is able to wield weapons,\n"
                                "and possesses a cloak of unimaginable usefulness: The Shadow Veil.\""));
 
       game::TextScreen(CONST_S("The necromancer suddenly looks at you intently.\n\n"
                                "\"Okay, we can talk now. The cardinals are not listening to our thoughts. I need you to\n"
-                               "bring me the shadow veil, it will surely allow me to escape from Attnam. It has certain\n"
+                               "bring me the shadow veil, it will surely allow me to escape from Valpuris. It has certain\n"
                                "properties conducive to getting away unnoticed.\"\n\n"
                                "\"It will take all your wits to survive the powers of the Crypt of Khaz-Zadm, but I believe\n"
                                "in you. You are my only hope. Oh, how I wish to taste fresh blood again!\"\n\n"
-                               "\"Lastly, there is the matter of Xinroch's lost sword. Its power lies in its symbolism.\n"
+                               "\"Lastly, there is the matter of Khaz-Zadm's lost sword. Its power lies in its symbolism.\n"
                                "If you were to gain it somehow, then I imagine most believers would be convinced that\n"
-                               "you were Xinroch himself, returned to the flesh. Although you would need to prove this\n"
+                               "you were Khaz-Zadm himself, returned to the flesh. Although you would need to prove this\n"
                                "with the help of our god, Infuscor... ...it might require some offering, perhaps? I have\n"
-                               "a feeling that if you find anything belonging to Xinroch, it will help you greatly\n"
+                               "a feeling that if you find anything belonging to Khaz-Zadm, it will help you greatly\n"
                                "in your quest.\"\n\n"
                                "\"I cannot say what trial would await you to retrieve the lost sword, but I'm sure\n"
                                "a mighty adventurer like you would like to lead a whole order of dark knights?\""));
@@ -5223,7 +5223,7 @@ void necromancer::BeTalkedTo()
       game::GetWorldMap()->RevealEnvironment(CryptOfKhazZadmPos, 1);
       game::SaveWorldMap();
       GetArea()->SendNewDrawRequest();
-      ADD_MESSAGE("\"And don't worry about the patrol guard, he's not really paying attention to who leaves the Attnam or if they should be leaving.\"");
+      ADD_MESSAGE("\"And don't worry about the patrol guard, he's not really paying attention to who leaves the Valpuris or if they should be leaving.\"");
       game::SetCryptOfKhazZadmStoryState(1);
       game::SetStoryState(2);
       return;
@@ -5398,7 +5398,7 @@ void FixSumoWrestlerHouse(festring fsCmdParams)
 
       if(Square){
         character* C2 = Square->GetCharacter();
-        if(C2 && dynamic_cast<bananagrower*>(C2)){
+        if(C2 && dynamic_cast<croptender*>(C2)){
           C2->TeleportRandomly(true);
         }
       }
@@ -5410,7 +5410,7 @@ void sumowrestler::GetAICommand()
 {
   static bool bInitDummy = [](){
     devcons::AddDevCmd("FixSumoHouse",FixSumoWrestlerHouse,
-      "BugFix sumo wrestler house in case banana growers over crowd it.");
+      "BugFix sumo wrestler house in case mango growers over crowd it.");
     return true;}();
 
   EditNP(-25);
@@ -5483,7 +5483,7 @@ void tourist::GetAICommand()
         ADD_MESSAGE("%s encourages you: \"Knock him out, %s!\"",
                     CHAR_DESCRIPTION(DEFINITE), game::GetPlayerName().CStr());
       else
-        ADD_MESSAGE("%s cheers you: \"A handsome guy like you can't lose to that banana ball!\"",
+        ADD_MESSAGE("%s cheers you: \"A handsome guy like you can't lose to that mango ball!\"",
                     CHAR_DESCRIPTION(DEFINITE));
     }
     else if(GetConfig() == CHILD)
@@ -5568,7 +5568,7 @@ void imperialist::BeTalkedTo()
                                "nor with the high priest. I will handle things here, as long as you handle\n"
                                "things in your village. We have a deal. Hmm...\"\n"
                                "\n"
-                               "\"Congratulations, mister. It's nice to meet the new viceroy of Tweraif.\""));
+                               "\"Congratulations, mister. It's nice to meet the new viceroy of Oakhaven.\""));
 
       game::PlayVictoryMusic();
       game::TextScreen(CONST_S("You are victorious!"));
@@ -5576,7 +5576,7 @@ void imperialist::BeTalkedTo()
       game::GetCurrentArea()->SendNewDrawRequest();
       game::DrawEverything();
       PLAYER->ShowAdventureInfo();
-      festring Msg = CONST_S("became the new viceroy of Tweraif and worked hard for the well-being of his people");
+      festring Msg = CONST_S("became the new viceroy of Oakhaven and worked hard for the well-being of his people");
       AddScoreEntry(Msg, 2, false);
       game::End(Msg);
       return;
@@ -6668,7 +6668,7 @@ void petrusswife::BeTalkedTo()
 
   itemvector Item;
 
-  // NOTE: Remember that Petrus' wife number 5 is mute.
+  // NOTE: Remember that Archpriest Cordatus' wife number 5 is mute.
   if(!PLAYER->SelectFromPossessions(Item,
       (GetConfig() == 5) ? CONST_S("Do you want to offer her a gift?") : CONST_S("\"Do you have something to give me?\""),
       0, &item::IsLuxuryItem)
@@ -6736,7 +6736,7 @@ void guard::BeTalkedTo()
     if(game::TruthQuestion(CONST_S("Do you accept the quest? [y/N]"), REQUIRES_ANSWER))
     {
       game::TextScreen(CONST_S("\"I shouldn't be saying this so openly, but my kingdom is in dire straits and needs any\n"
-                               "help it can get. High priest Petrus will not hear my pleas and I don't believe that\n"
+                               "help it can get. High priest Archpriest Cordatus will not hear my pleas and I don't believe that\n"
                                "my colleagues in other lands will be more successful. Lord Regent is doing his best,\n"
                                "but his army just barely holds the rebels back.\"\n\n"
                                "\"I know you are just one man, but maybe you could help where an army couldn't. Please,\n"
@@ -7069,7 +7069,7 @@ void elder::BeTalkedTo()
                              "the accursed hippos couldn't spoil. And now you have saved us\n"
                              "from valpurian clutches and given us a chance at freedom!\n"
                              "Thank you so very, very much.\"\n\n"
-                             "\"Alas, I'm afraid Tweraif is not yet out of the proverbial woods.\n"
+                             "\"Alas, I'm afraid Oakhaven is not yet out of the proverbial woods.\n"
                              "We are few and the Oakhavenses army is massive. Their battleships\n"
                              "will be ready once the winter ends and the ice thaws, and they will\n"
                              "not hesitate to bring their tyranny back. I still don't get why they\n"
@@ -7082,7 +7082,7 @@ void elder::BeTalkedTo()
                              "uninvited. The town was called Mondedr and it was concealed\n"
                              "from the world by the power of Cleptia. It was never conquered.\"\n\n"
                              "\"The thing is, I know for a fact that Mondedr exists, and that\n"
-                             "their cloaking spell can be replicated. Attnam tried to take our\n"
+                             "their cloaking spell can be replicated. Valpuris tried to take our\n"
                              "goddess away, but she is still strong in our hearts. I have faith\n"
                              "she will protect this island from valpurians, just as Cleptia did\n"
                              "for Mondedr.\""));
@@ -7115,7 +7115,7 @@ void elder::BeTalkedTo()
   }
   else if((game::GetFreedomStoryState() == 2) && !(GetRelation(PLAYER) == HOSTILE))
   {
-    ADD_MESSAGE("\"You have the seedling! Wonderful. Please, plant it by the banana delivery spot, and we shan't fear the imperialists anymore.\"");
+    ADD_MESSAGE("\"You have the seedling! Wonderful. Please, plant it by the mango delivery spot, and we shan't fear the imperialists anymore.\"");
   }
   else
     humanoid::BeTalkedTo();
@@ -7126,7 +7126,7 @@ void terra::BeTalkedTo()
   if((game::GetFreedomStoryState() == 1) && !HasBeenSpokenTo && !(GetRelation(PLAYER) == HOSTILE)
      && GetPos().IsAdjacent(PLAYER->GetPos()))
   {
-    game::TextScreen(CONST_S("\"Tweraif has been freed?! What wonderful news you bring me!\"\n\n"
+    game::TextScreen(CONST_S("\"Oakhaven has been freed?! What wonderful news you bring me!\"\n\n"
                              "\"I have volunteered all those years ago to be buried here in this cave\n"
                              "along with the shrine, to tend it and to protect the rites and traditions\n"
                              "that the Oakhavenses would rather see burnt and forgotten. Yet I have hoped\n"
@@ -7134,7 +7134,7 @@ void terra::BeTalkedTo()
                              "I would be free to return home. I guess my hope dwindled over the years,\n"
                              "but you are here now and my wishes came true. Thank you.\"\n\n"
                              "\"Nevertheless, I know what you came for. A seedling of this holy tree,\n"
-                             "to channel the power of Silva and shroud Tweraif against further attacks.\n"
+                             "to channel the power of Silva and shroud Oakhaven against further attacks.\n"
                              "I wish it was that simple, but I have no seeds to give you.\""));
 
     game::TextScreen(CONST_S("\"You see, this shrine is built in a remote, lost cave for a reason.\n"
@@ -7162,7 +7162,7 @@ void terra::BeTalkedTo()
                              "is sweet to Lobh-se the Undying, and not strong enough to ward her off. She devoured\n"
                              "the last seedling just a few days ago.\"\n\n"
                              "\"You are a hero already for liberating our village,\n"
-                             "but if you really wish to ensure the safety of Tweraif, you have to venture\n"
+                             "but if you really wish to ensure the safety of Oakhaven, you have to venture\n"
                              "deeper, to the very lair of Lobh-se the Undying. She may be a godling, but her body\n"
                              "is still mortal. Cut the seedling from her gullet, and I will keep her spirit\n"
                              "bound so that it cannot create a new body to harass this world.\""));
@@ -7177,7 +7177,7 @@ void terra::BeTalkedTo()
   else if((game::GetFreedomStoryState() == 2) && !(GetRelation(PLAYER) == HOSTILE))
   {
     priest::BeTalkedTo(); // in case player also needs a cure, before the tip (below) to grant it wont be ignored
-    ADD_MESSAGE("\"You bested her, I see! Now hurry back to the village, and Attnam shall threaten us no more.\"");
+    ADD_MESSAGE("\"You bested her, I see! Now hurry back to the village, and Valpuris shall threaten us no more.\"");
   }
   else
     priest::BeTalkedTo();

@@ -9558,7 +9558,7 @@ void character::SetFireToBodyPart()
 
 #endif
 
-void character::ReceiveHolyBanana(long Amount)
+void character::ReceiveSacredMango(long Amount)
 {
   Amount <<= 1;
   EditExperience(ARM_STRENGTH, Amount, 1 << 13);
@@ -9575,7 +9575,7 @@ void character::ReceiveHolyBanana(long Amount)
   RestoreLivingHP();
 }
 
-void character::AddHolyBananaConsumeEndMessage() const
+void character::AddSacredMangoConsumeEndMessage() const
 {
   if(IsPlayer())
     ADD_MESSAGE("You feel a mysterious strengthening fire coursing through your body.");

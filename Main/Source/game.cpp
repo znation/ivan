@@ -143,7 +143,7 @@ truth game::Loading = false;
 truth game::JumpToPlayerBe = false;
 truth game::InGetCommand = false;
 truth game::InQuitMessage = false;
-character* game::Petrus = 0;
+character* game::Archpriest = 0;
 time_t game::TimePlayedBeforeLastLoad;
 time_t game::LastLoad;
 time_t game::GameBegan;

@@ -121,7 +121,7 @@ truth material::Effect(character* Char, int BodyPart, long Amount)
       Char->EditExperience(PERCEPTION, Amount, 1 << 14);
       break;
     }
-   case EFFECT_HOLY_BANANA: Char->ReceiveHolyBanana(Amount); break;
+   case EFFECT_SACRED_MANGO: Char->ReceiveSacredMango(Amount); break;
    case EFFECT_EVIL_WONDER_STAFF_VAPOUR:
     {
       v2 Pos = GetMotherEntity()->GetSquareUnderEntity()->GetPos();
@@ -282,7 +282,7 @@ truth material::HitEffect(character* Enemy, bodypart* BodyPart)
    case HM_HEALING_LIQUID: Enemy->AddHealingLiquidConsumeEndMessage(); break;
    case HM_ANTIDOTE: Enemy->AddAntidoteConsumeEndMessage(); break;
    case HM_CONFUSE: Enemy->AddConfuseHitMessage(); break;
-   case HM_HOLY_BANANA: Enemy->AddHolyBananaConsumeEndMessage(); break;
+   case HM_SACRED_MANGO: Enemy->AddSacredMangoConsumeEndMessage(); break;
   }
 
   long Amount = Max<long>(GetVolume() >> 1, 1);
@@ -326,7 +326,7 @@ void material::AddConsumeEndMessage(character* Eater) const
    case CEM_HEALING_LIQUID: Eater->AddHealingLiquidConsumeEndMessage(); break;
    case CEM_ANTIDOTE: Eater->AddAntidoteConsumeEndMessage(); break;
    case CEM_ESP: Eater->AddESPConsumeMessage(); break;
-   case CEM_HOLY_BANANA: Eater->AddHolyBananaConsumeEndMessage(); break;
+   case CEM_SACRED_MANGO: Eater->AddSacredMangoConsumeEndMessage(); break;
    case CEM_PEA_SOUP: Eater->AddPeaSoupConsumeEndMessage(); break;
    case CEM_BLACK_UNICORN_FLESH:
     Eater->AddBlackUnicornConsumeEndMessage();

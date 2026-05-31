@@ -927,7 +927,7 @@ class character : public entity, public id
   void ShowAdventureInfo() const;
   void ShowAdventureInfoAlt() const;
   virtual truth BoundToUse(citem*, int) const { return false; }
-  virtual truth IsBananaGrower() const { return false; }
+  virtual truth IsCropTender() const { return false; }
   virtual int GetRandomApplyBodyPart() const;
   virtual int GetTalent() const { return 0; }
   virtual int GetWeakness() const { return 0; }
@@ -938,8 +938,8 @@ class character : public entity, public id
   virtual void DetachBodyPart();
   virtual void SetFireToBodyPart();
 #endif
-  void ReceiveHolyBanana(long);
-  void AddHolyBananaConsumeEndMessage() const;
+  void ReceiveSacredMango(long);
+  void AddSacredMangoConsumeEndMessage() const;
   virtual truth PreProcessForBone();
   truth PostProcessForBone(double&, int&);
   truth PostProcessForBone();

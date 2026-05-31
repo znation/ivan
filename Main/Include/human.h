@@ -646,14 +646,14 @@ CHARACTER(cossack, humanoid)
   virtual void GetAICommand();
 };
 
-CHARACTER(bananagrower, humanoid)
+CHARACTER(croptender, humanoid)
 {
  public:
   virtual void Save(outputfile&) const;
   virtual void Load(inputfile&);
   virtual void BeTalkedTo();
   virtual festring& ProcessMessage(festring&) const;
-  virtual truth IsBananaGrower() const { return true; }
+  virtual truth IsCropTender() const { return true; }
   festring GetProfession() const { return Profession; }
   virtual void SetFeedingSumo(truth What) { FeedingSumo = What; }
  protected:
@@ -662,7 +662,7 @@ CHARACTER(bananagrower, humanoid)
   virtual void GetAICommand();
   void RandomizeProfession();
   festring Profession;
-  truth HasDroppedBananas;
+  truth HasDroppedMangos;
   truth FeedingSumo;
 };
 
