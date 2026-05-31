@@ -1,0 +1,252 @@
+[
+  {
+    "filename": "Graphics/Enner.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Creature sprite — Enner Beast (now Wraithstalker). Full-screen encounter art.",
+    "new_filename": "Graphics/Wraithstalker.png",
+    "prompt": "dark fantasy roguelike full-screen encounter art, massive terrifying forest predator beast, glowing pale-yellow eyes, matted shadow-black fur, vaguely lupine silhouette but twisted and enormous, long clawed limbs, haunting and otherworldly, painterly pixel art style on pure white background, 800x600",
+    "priority": "must-replace",
+    "notes": "Referenced in Script/char.dat and Sound/SoundEffects.cfg. Old file Enner.png should be kept as backup."
+  },
+  {
+    "filename": "Graphics/IVlad.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Player companion sprite — IVlad the pet rabbit (now Shadowpaw). Full-screen encounter art.",
+    "new_filename": "Graphics/Shadowpaw.png",
+    "prompt": "dark fantasy roguelike full-screen encounter art, small shadow-black bunny rabbit with faintly glowing violet eyes, wispy shadowy fur that wisps at the edges, endearing but slightly uncanny expression, painterly pixel art style on pure white background, 800x600",
+    "priority": "must-replace",
+    "notes": "Referenced in char.dat NPC config. Old IVlad.png kept as backup."
+  },
+  {
+    "filename": "Graphics/Char.png",
+    "width": 600,
+    "height": 200,
+    "purpose": "Player and humanoid character sprite sheet — rows of 16x16 tile sprites.",
+    "new_filename": "Graphics/Char.png",
+    "prompt": "roguelike character sprite sheet, dark fantasy medieval adventurers, warriors mages and rogues, 16x16 pixel art tiles arranged in a grid, muted earthy tones with occasional magical highlights, black outlines, transparent background, 600x200",
+    "priority": "style-change",
+    "notes": "Char-outlined.png is the white-outlined version — regenerate with outline_util.py after updating Char.png."
+  },
+  {
+    "filename": "Graphics/Char-outlined.png",
+    "width": 600,
+    "height": 200,
+    "purpose": "Outlined variant of Char.png — generated from Char.png using outline_util.py.",
+    "new_filename": "Graphics/Char-outlined.png",
+    "prompt": "GENERATED — run: python tools/asset_gen/outline_util.py --input Graphics/Char.png --output Graphics/Char-outlined.png",
+    "priority": "derived",
+    "notes": "Do not generate directly — derived from Char.png via outline_util.py."
+  },
+  {
+    "filename": "Graphics/Humanoid.png",
+    "width": 192,
+    "height": 700,
+    "purpose": "Humanoid NPC sprite sheet — vertical strip of 16x16 or 32x32 creature tiles.",
+    "new_filename": "Graphics/Humanoid.png",
+    "prompt": "roguelike humanoid NPC sprite sheet, dark fantasy creatures, guards priests merchants undead, 16x16 pixel art tiles arranged vertically, muted tones, black outlines, transparent background, 192x700",
+    "priority": "style-change",
+    "notes": "Humanoid-outlined.png is derived via outline_util.py."
+  },
+  {
+    "filename": "Graphics/Humanoid-outlined.png",
+    "width": 192,
+    "height": 700,
+    "purpose": "Outlined variant of Humanoid.png — generated from Humanoid.png using outline_util.py.",
+    "new_filename": "Graphics/Humanoid-outlined.png",
+    "prompt": "GENERATED — run: python tools/asset_gen/outline_util.py --input Graphics/Humanoid.png --output Graphics/Humanoid-outlined.png",
+    "priority": "derived",
+    "notes": "Do not generate directly — derived from Humanoid.png via outline_util.py."
+  },
+  {
+    "filename": "Graphics/Item.png",
+    "width": 256,
+    "height": 432,
+    "purpose": "Item icon sprite sheet — grid of 16x16 item tiles (weapons, armor, consumables, etc.).",
+    "new_filename": "Graphics/Item.png",
+    "prompt": "roguelike item sprite sheet, dark fantasy weapons armor potions scrolls and artifacts, 16x16 pixel art tiles in a grid, jewel-toned highlights on dark objects, black outlines, transparent background, 256x432",
+    "priority": "style-change",
+    "notes": "Item-outlined.png is derived via outline_util.py. Mango/sacred-mango item tiles should replace banana-looking icons."
+  },
+  {
+    "filename": "Graphics/Item-outlined.png",
+    "width": 256,
+    "height": 432,
+    "purpose": "Outlined variant of Item.png — generated from Item.png using outline_util.py.",
+    "new_filename": "Graphics/Item-outlined.png",
+    "prompt": "GENERATED — run: python tools/asset_gen/outline_util.py --input Graphics/Item.png --output Graphics/Item-outlined.png",
+    "priority": "derived",
+    "notes": "Do not generate directly — derived from Item.png via outline_util.py."
+  },
+  {
+    "filename": "Graphics/WTerra.png",
+    "width": 384,
+    "height": 208,
+    "purpose": "World map terrain tiles — overworld tile sheet for the world map view.",
+    "new_filename": "Graphics/WTerra.png",
+    "prompt": "roguelike world map terrain tile sheet, dark fantasy overworld, forests mountains rivers swamps castles, 16x16 pixel art tiles, muted earthy greens browns and grays, top-down view, 384x208",
+    "priority": "style-change",
+    "notes": "World terrain — keep same tile layout, just darken palette toward Tolkien aesthetic."
+  },
+  {
+    "filename": "Graphics/OLTerra.png",
+    "width": 312,
+    "height": 464,
+    "purpose": "Overland terrain tiles — outdoor dungeon-level tile sheet.",
+    "new_filename": "Graphics/OLTerra.png",
+    "prompt": "roguelike outdoor level terrain tile sheet, dark fantasy wilderness, stone ruins cobblestones grass mud water trees shadows, 16x16 pixel art tiles, muted earthy tones, 312x464",
+    "priority": "style-change",
+    "notes": "Used for outdoor IVAN levels — forest, city streets, etc."
+  },
+  {
+    "filename": "Graphics/GLTerra.png",
+    "width": 384,
+    "height": 208,
+    "purpose": "Underground/dungeon terrain tiles — cave and dungeon floor/wall tile sheet.",
+    "new_filename": "Graphics/GLTerra.png",
+    "prompt": "roguelike dungeon terrain tile sheet, dark fantasy underground, stone floors walls stalagmites lava water rubble, 16x16 pixel art tiles, dark grays blacks purples with torch-lit highlights, 384x208",
+    "priority": "style-change",
+    "notes": "Used for dungeon levels — must feel ominous and underground."
+  },
+  {
+    "filename": "Graphics/Menu.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Main menu background — full-screen title screen art.",
+    "new_filename": "Graphics/Menu.png",
+    "prompt": "dark fantasy roguelike title screen art, ancient stone archway leading into a glowing dungeon entrance, gothic atmospheric lighting, moonlit sky above, mist and shadows, painterly pixel art style, 800x600",
+    "priority": "style-change",
+    "notes": "First image player sees. High visual impact. Menu1-5 are alternative/loading screens."
+  },
+  {
+    "filename": "Graphics/Menu1.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Alternate menu/loading screen 1.",
+    "new_filename": "Graphics/Menu1.png",
+    "prompt": "dark fantasy roguelike atmospheric art, misty dark forest with ancient ruins, elven stone columns draped in moss, silver moonlight filtering through trees, painterly pixel art, 800x600",
+    "priority": "style-change",
+    "notes": "Variant loading screen."
+  },
+  {
+    "filename": "Graphics/Menu2.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Alternate menu/loading screen 2.",
+    "new_filename": "Graphics/Menu2.png",
+    "prompt": "dark fantasy roguelike atmospheric art, underground cavern with glowing crystal formations and a distant torchlit corridor, stalactites casting long shadows, painterly pixel art, 800x600",
+    "priority": "style-change",
+    "notes": "Variant loading screen."
+  },
+  {
+    "filename": "Graphics/Menu3.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Alternate menu/loading screen 3.",
+    "new_filename": "Graphics/Menu3.png",
+    "prompt": "dark fantasy roguelike atmospheric art, ancient cathedral interior at night, candlelight on stained glass showing the Archpriest's sigil, long stone nave, painterly pixel art, 800x600",
+    "priority": "style-change",
+    "notes": "Variant loading screen — cathedral of Valpuris."
+  },
+  {
+    "filename": "Graphics/Menu4.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Alternate menu/loading screen 4.",
+    "new_filename": "Graphics/Menu4.png",
+    "prompt": "dark fantasy roguelike atmospheric art, medieval market town at dusk, timber-framed buildings, cobblestone streets, merchants packing up stalls, distant keep on a hill, painterly pixel art, 800x600",
+    "priority": "style-change",
+    "notes": "Variant loading screen — Oakhaven."
+  },
+  {
+    "filename": "Graphics/Menu5.png",
+    "width": 800,
+    "height": 600,
+    "purpose": "Alternate menu/loading screen 5.",
+    "new_filename": "Graphics/Menu5.png",
+    "prompt": "dark fantasy roguelike atmospheric art, ancient dwarven tomb entrance carved into a mountainside, runes glowing faintly on stone pillars, skeletal remains at the threshold, painterly pixel art, 800x600",
+    "priority": "style-change",
+    "notes": "Variant loading screen — Khaz-Zadm tomb."
+  },
+  {
+    "filename": "Graphics/Symbol.png",
+    "width": 400,
+    "height": 600,
+    "purpose": "God/deity symbol sprite sheet — icons for the game's pantheon displayed in the prayer screen.",
+    "new_filename": "Graphics/Symbol.png",
+    "prompt": "dark fantasy roguelike deity symbol sheet, icons for Valpuris (sun and anchor), Seges (wheat sheaf), Silva (oak leaf), Sophos (eye and book), Loricatus (anvil and hammer), Mortifer (hourglass and skull), Infuscor (inverted crown), Cruentus (crossed swords), Legifer (scales), Nefas (broken chain), 32x32 pixel art icons in a grid, 400x600",
+    "priority": "style-change",
+    "notes": "Must include icons for the new Tolkien-inspired pantheon replacing original IVAN gods."
+  },
+  {
+    "filename": "Graphics/Effect.png",
+    "width": 128,
+    "height": 64,
+    "purpose": "Combat visual effect tiles — spell/explosion/hit effect sprites.",
+    "new_filename": "Graphics/Effect.png",
+    "prompt": "roguelike combat effect sprite sheet, small 16x8 pixel art tiles, magical spell impacts, fire sparks, ice shards, lightning bolts, poison clouds, holy light bursts, dark fantasy style, 128x64",
+    "priority": "style-change",
+    "notes": "Keep same tile count/layout — only style change."
+  },
+  {
+    "filename": "Graphics/FOW.png",
+    "width": 16,
+    "height": 16,
+    "purpose": "Fog of war tile — the dark overlay for unexplored areas.",
+    "new_filename": "Graphics/FOW.png",
+    "prompt": "16x16 pixel art fog of war tile, solid dark gray-black semi-opaque square with slight texture",
+    "priority": "keep",
+    "notes": "Functional tile — keep as-is or make slightly more textured."
+  },
+  {
+    "filename": "Graphics/Font.png",
+    "width": 250,
+    "height": 218,
+    "purpose": "Primary bitmap font sprite sheet.",
+    "new_filename": "Graphics/Font.png",
+    "prompt": "bitmap font sprite sheet, dark fantasy serif font, white glyphs on black background, ASCII characters arranged in a grid, 6x8 or 8x10 pixels per glyph, legible at small sizes, 250x218",
+    "priority": "style-change",
+    "notes": "Font2 and Font3 are alternate/colored variants."
+  },
+  {
+    "filename": "Graphics/Font2.png",
+    "width": 250,
+    "height": 218,
+    "purpose": "Secondary bitmap font — used for UI labels or colored text.",
+    "new_filename": "Graphics/Font2.png",
+    "prompt": "bitmap font sprite sheet, dark fantasy serif font, golden-yellow glyphs on transparent background, same layout as Font.png, 6x8 pixels per glyph, 250x218",
+    "priority": "style-change",
+    "notes": "Variant — golden color for item names / highlights."
+  },
+  {
+    "filename": "Graphics/Font3.png",
+    "width": 250,
+    "height": 218,
+    "purpose": "Tertiary bitmap font — third font variant.",
+    "new_filename": "Graphics/Font3.png",
+    "prompt": "bitmap font sprite sheet, dark fantasy serif font, pale silver-gray glyphs on transparent background, same layout as Font.png, 6x8 pixels per glyph, 250x218",
+    "priority": "style-change",
+    "notes": "Variant — silver/gray for system messages."
+  },
+  {
+    "filename": "Graphics/Smiley.png",
+    "width": 144,
+    "height": 48,
+    "purpose": "Player character emotion/smiley face icons — displayed in the HUD.",
+    "new_filename": "Graphics/Smiley.png",
+    "prompt": "roguelike HUD face icons, dark fantasy adventurer portrait faces in 48x48 pixel art, showing states: normal alert wounded critical dying, muted colors with expressive eyes, 144x48",
+    "priority": "style-change",
+    "notes": "Player status face strip — keep same number of states."
+  },
+  {
+    "filename": "Graphics/Cursor.png",
+    "width": 96,
+    "height": 48,
+    "purpose": "Mouse/UI cursor sprite — the custom cursor used in menus.",
+    "new_filename": "Graphics/Cursor.png",
+    "prompt": "pixel art cursor sprite, dark fantasy style, small pointed sword or dagger shape, white with dark outline, 32x48 pixels, clean and readable at small size, 96x48",
+    "priority": "keep",
+    "notes": "Functional cursor — low priority, keep original or make a sword cursor."
+  }
+]

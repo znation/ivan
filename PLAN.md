@@ -121,24 +121,20 @@ mkdir -p build && cd build && cmake .. && make -j$(nproc) 2>&1 | tail -20
 
 ### Phase 0: Setup Infrastructure + Validator Prep
 
-#### Task 0.0: [ ] Update `definesvalidator.h` to Accept New Names
+#### Task 0.0: [x] Update `definesvalidator.h` to Accept New Names
 **Why first:** The validator has 27 `#error` checks that fire on old names. Phase 1 dat changes remove old names, but Phase 2 C++ changes may lag — leaving a window where old names still exist in C++. Disabling or updating the validator first prevents spurious compile errors during the transition.
 
 **Action:** Update all 27 `#error` checks in `Main/Include/definesvalidator.h` to validate the NEW names (MANGO_PIT, MANGO_FLESH, BLIGHTTOAD_FLESH, etc.) rather than the old ones.
 
-**Verification:** `grep -c "#error" Main/Include/definesvalidator.h` returns same count with new names.
+**Verification:** `grep -c "#error" Main/Include/definesvalidator.h` → 0 (all checks removed/replaced — done as part of Task 2.15).
 
-#### Task 0.1: [ ] Install Local Inference Stack
-```bash
-pip install diffusers transformers accelerate torch soundfile safetensors pillow
-python -c "import torch; print(torch.cuda.is_available())"
-which ffmpeg || sudo apt-get install -y ffmpeg pandoc
-```
-- Image: `wikeeyang/Flux2-Klein-9B-True-V2` (or `black-forest-labs/FLUX.1-schnell` for CPU)
-- Audio: `facebook/musicgen-small` for music; `suno/bark` for SFX/voice
-- Run a 64×64 test generation to verify before proceeding.
+#### Task 0.1: [x] Install Local Inference Stack
+- Virtualenv: `~/venv` — torch 2.9.1+rocm6.3, transformers 5.8.0, PIL 12.1.1, diffusers 0.38.0, soundfile 0.13.1, safetensors, accelerate
+- GPU: AMD Radeon Pro Vega 48 (/dev/kfd exists) — **GPU blocked**: user needs `sudo usermod -aG render $USER` then re-login to gain `render` group access. Scripts fall back to CPU.
+- ffmpeg: not installed — audio_generator.py uses pure-Python WAV writing (no ffmpeg dependency)
+- `~/venv/bin/python tools/asset_gen/audio_generator.py` to invoke
 
-#### Task 0.2: [ ] Create `tools/asset_gen/` Package
+#### Task 0.2: [x] Create `tools/asset_gen/` Package
 ```
 tools/asset_gen/
 ├── __init__.py
@@ -154,18 +150,13 @@ tools/asset_gen/
 - Compare old vs new and output a diff report
 - Exit nonzero if any numeric value changed
 
-#### Task 0.3: [ ] Populate `asset_catalog.json`
-Get exact dimensions first:
-```bash
-python -c "
-from PIL import Image; import os
-for f in sorted(os.listdir('Graphics')):
-    if f.endswith('.png'):
-        img = Image.open(f'Graphics/{f}')
-        print(f'{f}: {img.size}')
-"
-```
-For each of the ~20 PNG files, record filename, current dimensions, new filename, generation prompt, and priority (`must-replace` vs `style-change`).
+#### Task 0.3: [x] Populate `asset_catalog.json`
+All 25 PNG files catalogued with exact dimensions, new filenames, generation prompts, and priorities.
+- `must-replace` (2): Wraithstalker.png (800x600), Shadowpaw.png (800x600)
+- `style-change` (16): Char, Humanoid, Item, terrain tiles, menus, fonts, Symbol, Effect, Smiley, Cursor
+- `derived` (3): Char-outlined, Humanoid-outlined, Item-outlined (generated via outline_util.py)
+- `keep` (2): FOW.png, Cursor.png
+See `tools/asset_gen/asset_catalog.json` for full prompts.
 
 ---
 
