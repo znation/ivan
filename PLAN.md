@@ -548,14 +548,17 @@ Update code references: `grep -r "IVlad.png" .` → rename to `Shadowpaw.png`.
 
 ### Phase 7: Validation & Testing
 
-#### Task 7.1: [ ] Balance Validator
+#### Task 7.1: [x] Balance Validator
 ```bash
-python tools/asset_gen/balance_validator.py \
-  --old-backup backup_before_rewrite/ \
-  --new-files Script/ \
+python3 tools/asset_gen/balance_validator.py \
+  --git-ref pre-rewrite-checkpoint \
+  --files Script/material.dat Script/item.dat Script/char.dat \
+         Script/dungeons/Attnam.dat Script/dungeons/NewAttnam.dat Script/dungeons/XinrochTomb.dat \
+         Script/olterra.dat \
   --output validation_report.txt
 ```
 Verify all numeric values (PriceModifier, NutritionValue, StrengthValue, Color RGB, Enchantment) unchanged.
+All 7 files: PASS — zero balance-critical numeric value changes detected.
 
 #### Task 7.2: [x] Comprehensive String Search
 ```bash
@@ -567,7 +570,7 @@ wc -l missed_references.txt
 ```
 Fix any remaining hits before proceeding.
 
-#### Task 7.3: [ ] Compile Test
+#### Task 7.3: [x] Compile Test
 ```bash
 mkdir -p build && cd build && cmake .. && make -j$(nproc) 2>&1 | tail -50
 ```
