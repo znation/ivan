@@ -25,9 +25,9 @@ Dungeon NEW_ATTNAM;
 
   Level 0;
   {
-    LevelMessage = "You hear someone shouting: \"Faster! Faster! The Empire wants yer bananas!\"";
-    Description = "New Attnam";
-    ShortDescription = "New Attnam";
+    LevelMessage = "You hear someone shouting: \"Faster! Faster! The Empire wants yer mangos!\"";
+    Description = "Oakhaven";
+    ShortDescription = "Oakhaven";
     FillSquare = solidterrain(GRASS_TERRAIN), 0;
     Size = 55, 55;
     GenerateMonsters = false;
@@ -78,7 +78,7 @@ Dungeon NEW_ATTNAM;
 
     Room
     {
-      Type = ROOM_BANANA_DROP_AREA;
+      Type = ROOM_MANGO_DROP_AREA;
       Pos = 4,4;
       Size = 17,19;
       WallSquare = BALSA_WOOD solidterrain(PARQUET), EBONY_WOOD wall(BRICK_FINE);
@@ -200,7 +200,7 @@ Dungeon NEW_ATTNAM;
           2 == lantern { SquarePosition = DOWN; }
           3 == lantern { SquarePosition = RIGHT; }
           4 == lantern { SquarePosition = LEFT; }
-          c == GOLD itemcontainer(CHEST) { Parameters = LOCKED; ItemsInside = { 2, stone { Times = 0:10; }, GOLD banana; } }
+          c == GOLD itemcontainer(CHEST) { Parameters = LOCKED; ItemsInside = { 2, stone { Times = 0:10; }, GOLD mango; } }
           Y == trinket(LARGE_CLOCK);
         }
       }
@@ -229,7 +229,7 @@ Dungeon NEW_ATTNAM;
 
     Room
     {
-      Type = ROOM_BANANA_DROP_AREA;
+      Type = ROOM_MANGO_DROP_AREA;
       Size = 3, 3;
       Pos = 44, 44;
       AltarPossible = false;
@@ -244,7 +244,7 @@ Dungeon NEW_ATTNAM;
 
       Square, Pos 1, 1;
       {
-        Items == banana { Times = 10; }
+        Items == mango { Times = 10; }
       }
     }
 
@@ -253,7 +253,7 @@ Dungeon NEW_ATTNAM;
       Size = 4, 4;
       Pos = 25, 35;
       GenerateDoor = false;
-      Type = ROOM_BANANA_DROP_AREA;
+      Type = ROOM_MANGO_DROP_AREA;
       FloorSquare = solidterrain(FLOOR), 0;
       GenerateWindows = false;
 
@@ -345,7 +345,7 @@ Dungeon NEW_ATTNAM;
         Types
         {
           # == 0;
-          b == banana { Chance = 50; SpoilPercentage = 49; Times = 10; }
+          b == mango { Chance = 50; SpoilPercentage = 49; Times = 10; }
           k == kiwi { Times = 10; }
           p == pineapple { Times = 3; }
           2 == lantern { SquarePosition = DOWN; }
@@ -463,7 +463,7 @@ Dungeon NEW_ATTNAM;
 
     Square, Random NOT_IN_ROOM|HAS_NO_OTERRAIN;
     {
-      OTerrain = decoration(BANANA_TREE);
+      OTerrain = decoration(MANGO_TREE);
       Times = 0:10;
     }
 
@@ -479,27 +479,27 @@ Dungeon NEW_ATTNAM;
 
     Square, Pos 0, 45;
     {
-      Character = bananagrower;
+      Character = croptender;
     }
 
     Square, Pos 10, 45;
     {
-      Character = bananagrower;
+      Character = croptender;
     }
 
     Square, Pos 20, 45;
     {
-      Character = bananagrower;
+      Character = croptender;
     }
 
     Square, Pos 30, 45;
     {
-      Character = bananagrower;
+      Character = croptender;
     }
 
     Square, Pos 40, 45;
     {
-      Character = bananagrower;
+      Character = croptender;
     }
 
     Square, Pos 45, 0;
@@ -544,7 +544,7 @@ Dungeon NEW_ATTNAM;
 
     Square, Pos 11, 40;
     {
-      OTerrain = sign { Text = "Zulko's wholesale banana market. We offer quality bananas straight from the jungle at a bargain price and even some other exotic fruits for most demanding customers."; }
+      OTerrain = sign { Text = "Zulko's wholesale mango market. We offer quality mangos straight from the jungle at a bargain price and even some other exotic fruits for most demanding customers."; }
     }
 
     Square, Pos 25, 39;
@@ -559,13 +559,13 @@ Dungeon NEW_ATTNAM;
 
     Square, Pos 43, 43;
     {
-      OTerrain = sign { Text = "New Attnam's main ostrich landing site. The delicious fruits of Decos Bananas Co. are gathered here by native professionals and then distributed aerially all over the civilized world."; }
+      OTerrain = sign { Text = "Oakhaven's main skygull landing site. The delicious mangos of Decimus Harvest Co. are gathered here by crop tenders and then distributed aerially all over the civilized world."; }
     }
   }
 
   Level 1;
   {
-    Description = "New Attnam's sumo wrestling arena";
+    Description = "Oakhaven's sacred martial arts arena";
     ShortDescription = "Sumo Arena";
     FillSquare = solidterrain(GROUND), MORAINE earth;
     Size = 55, 55;

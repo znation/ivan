@@ -84,8 +84,8 @@ Dungeon ATTNAM;
 
   Level 0;
   {
-    Description = "Attnam";
-    ShortDescription = "Attnam";
+    Description = "Valpuris";
+    ShortDescription = "Valpuris";
     FillSquare = solidterrain(SNOW_TERRAIN), 0;
     Size = 61, 67;
     GenerateMonsters = false;
@@ -371,7 +371,7 @@ Dungeon ATTNAM;
         {
           # == 0;
           a == avatarofvalpurus;
-          b == banana;
+          b == mango;
           k == kiwi;
           p == pineapple;
           e == backpack;
@@ -384,7 +384,7 @@ Dungeon ATTNAM;
           2 == lantern { SquarePosition = DOWN; }
           3 == lantern { SquarePosition = RIGHT; }
           4 == lantern { SquarePosition = LEFT; }
-          C == GOLD itemcontainer(CHEST) { ItemsInside = { 3, meleeweapon(GRAND_STOLLEN_KNIFE), stone { Times = 10; }, GOLD banana; } }
+          C == GOLD itemcontainer(CHEST) { ItemsInside = { 3, meleeweapon(GRAND_STOLLEN_KNIFE), stone { Times = 10; }, GOLD mango; } }
           y == GOLD itemcontainer(LARGE_CHEST) { ItemsInside = { 14,
                                                                  flamingsword { Chance = 20; },
                                                                  darkaxe { Chance = 20; },
@@ -415,8 +415,8 @@ Dungeon ATTNAM;
           w == Random { MinPrice = 350; Category = WEAPON|SHIELD; ConfigFlags = NO_BROKEN; Enchantment = 1; }
           c == Random { MinPrice = 700; Category = WEAPON|SHIELD; ConfigFlags = NO_BROKEN; Enchantment = 3; }
           m == Random { MinPrice = 350; Category = HELMET|CLOAK|BODY_ARMOR|BELT|BOOT|GAUNTLET; ConfigFlags = NO_BROKEN; Enchantment = 1; }
-          X == itemcontainer(LARGE_CHEST) { ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, banana { Times = 0:10; }, carrot { Times = 0:3; } } }
-          t == itemcontainer(LARGE_CHEST) { ItemsInside = { 7, can { Times = 0:3; SecondaryMaterial = 0; }, PLANT_FIBER lump { Times = 0:1; }, lantern(BROKEN) { Times = 0:2; }, brokenbottle { Times = 0:5; }, bananapeels { Times = 0:5; }, banana(BROKEN) { Times = 0:1; }, bone { Times = 0:5; } } }
+          X == itemcontainer(LARGE_CHEST) { ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, mango { Times = 0:10; }, carrot { Times = 0:3; } } }
+          t == itemcontainer(LARGE_CHEST) { ItemsInside = { 7, can { Times = 0:3; SecondaryMaterial = 0; }, PLANT_FIBER lump { Times = 0:1; }, lantern(BROKEN) { Times = 0:2; }, brokenbottle { Times = 0:5; }, mangopeels { Times = 0:5; }, mango(BROKEN) { Times = 0:1; }, bone { Times = 0:5; } } }
           T == itemcontainer(LARGE_CHEST) { ItemsInside == Random { Times = 3:7; MaxPrice = 10; Category = CLOAK|BODY_ARMOR|BELT|BOOT|GAUNTLET; ConfigFlags = BROKEN; } }
           n == trinket(POTTED_PLANT);
           N == trinket(POTTED_CACTUS);
@@ -566,7 +566,7 @@ Dungeon ATTNAM;
 
       Square, Pos 1, 4;
       {
-        Items == banana;
+        Items == mango;
         Times = 100;
       }
 
@@ -999,7 +999,7 @@ Dungeon ATTNAM;
           F = decoration(WELL);
           H = olterraincontainer(SHELF)
           {
-            ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, banana { Times = 0:10; }, carrot { Times = 0:3; } }
+            ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, mango { Times = 0:10; }, carrot { Times = 0:3; } }
           }
           L = IRON door(BARDOOR) { Parameters = LOCKED; }
           I = ironmaiden;
@@ -1028,7 +1028,7 @@ Dungeon ATTNAM;
           t = decoration(TORTURE_RACK);
           w = decoration(WOODEN_HORSE);
           x = MARBLE wall(BRICK_FINE);
-          1 = MARBLE sign { Text = "Here rests in honored glory an Attnamese soldier known but to Valpurus."; }
+          1 = MARBLE sign { Text = "Here rests in honored glory a Valpurian soldier known but to Valpuris."; }
         }
       }
       {

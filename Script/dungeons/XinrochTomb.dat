@@ -22,7 +22,7 @@
 Dungeon XINROCH_TOMB;
 {
   Levels = 11;
-  Description = "Tomb of Xinroch";
+  Description = "Crypt of Khaz-Zadm";
   ShortDescription = "TX";
 
   LevelDefault
@@ -554,7 +554,7 @@ Dungeon XINROCH_TOMB;
         {
           # = 0;
           B = GRAVEL earth;
-          t = BALSA_WOOD decoration(BANANA_TREE);
+          t = BALSA_WOOD decoration(MANGO_TREE);
         }
       }
       {
@@ -722,7 +722,7 @@ Dungeon XINROCH_TOMB;
         {
           z = zombie;
           d = zombie { Inventory == nut { Times = 2; } }
-          b = zombie { Inventory == can { SecondaryMaterial = BANANA_FLESH; } }
+          b = zombie { Inventory == can { SecondaryMaterial = MANGO_FLESH; } }
           p = zombie { Inventory == can { SecondaryMaterial = PINEAPPLE_FLESH; } }
           c = zombie { Inventory == carrot; }
           Z = zombie { Inventory == pineapple { Times = 2; } }
@@ -1757,7 +1757,7 @@ Dungeon XINROCH_TOMB;
     }
   }
 
-  Level 9; /* Xinroch's Ghost level */
+  Level 9; /* Khaz-Zadm's Ghost level */
   {
     Description = "unholy tomb";
     ShortDescription = "Unholy Tomb";
@@ -1908,7 +1908,7 @@ Dungeon XINROCH_TOMB;
       GenerateFountains = false;
     }
 
-    Room /* Temple of Xinroch */
+    Room /* Temple of Khaz-Zadm */
     {
       Pos = 20, 20;
       Size = 41, 41;
