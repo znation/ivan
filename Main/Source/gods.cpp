@@ -794,7 +794,7 @@ void loricatus::PrayBadEffect()
       {
         MainWielded->AddName(Desc, PLURAL);
         Desc << " vibrate and soften";
-        delete SecondaryWielded->SetMainMaterial(MAKE_MATERIAL(BANANA_FLESH));
+        delete SecondaryWielded->SetMainMaterial(MAKE_MATERIAL(MANGO_FLESH));
       }
       else
       {
@@ -802,7 +802,7 @@ void loricatus::PrayBadEffect()
         Desc << " vibrates and softens";
       }
 
-      delete MainWielded->SetMainMaterial(MAKE_MATERIAL(BANANA_FLESH));
+      delete MainWielded->SetMainMaterial(MAKE_MATERIAL(MANGO_FLESH));
       ADD_MESSAGE("Your %s.", Desc.CStr());
     }
     else

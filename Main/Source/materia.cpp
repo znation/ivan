@@ -275,7 +275,7 @@ truth material::HitEffect(character* Enemy, bodypart* BodyPart)
   switch(GetHitMessage())
   {
    case HM_SCHOOL_FOOD: Enemy->AddSchoolFoodHitMessage(); break;
-   case HM_FROG_FLESH: Enemy->AddFrogFleshConsumeEndMessage(); break;
+   case HM_BLIGHTTOAD_FLESH: Enemy->AddBlightToadFleshConsumeEndMessage(); break;
    case HM_BRAMBLEBACK: Enemy->AddBramblebackConsumeEndMessage(); break;
    case HM_PEPSI: Enemy->AddPepsiConsumeEndMessage(); break;
    case HM_KOBOLD_FLESH: Enemy->AddKoboldFleshHitMessage(); break;
@@ -319,7 +319,7 @@ void material::AddConsumeEndMessage(character* Eater) const
   {
    case CEM_SCHOOL_FOOD: Eater->AddSchoolFoodConsumeEndMessage(); break;
    case CEM_BONE: Eater->AddBoneConsumeEndMessage(); break;
-   case CEM_FROG_FLESH: Eater->AddFrogFleshConsumeEndMessage(); break;
+   case CEM_BLIGHTTOAD_FLESH: Eater->AddBlightToadFleshConsumeEndMessage(); break;
    case CEM_BRAMBLEBACK: Eater->AddBramblebackConsumeEndMessage(); break;
    case CEM_PEPSI: Eater->AddPepsiConsumeEndMessage(); break;
    case CEM_KOBOLD_FLESH: Eater->AddKoboldFleshConsumeEndMessage(); break;

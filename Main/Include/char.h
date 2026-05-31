@@ -458,7 +458,7 @@ class character : public entity, public id
   void AddBramblebackConsumeEndMessage() const;
   void AddPepsiConsumeEndMessage() const;
   void AddCocaColaConsumeEndMessage() const;
-  void AddFrogFleshConsumeEndMessage() const;
+  void AddBlightToadFleshConsumeEndMessage() const;
   void AddKoboldFleshConsumeEndMessage() const;
   void AddKoboldFleshHitMessage() const;
   void AddBoneConsumeEndMessage() const;

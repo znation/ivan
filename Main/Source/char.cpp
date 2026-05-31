@@ -6155,7 +6155,7 @@ void character::ReceiveDarkness(long Amount)
     game::DoEvilDeed(int(Amount / 50));
 }
 
-void character::AddFrogFleshConsumeEndMessage() const
+void character::AddBlightToadFleshConsumeEndMessage() const
 {
   if(IsPlayer())
     ADD_MESSAGE("Arg. You feel the fate of a navastater placed upon you...");
