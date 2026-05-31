@@ -56,7 +56,7 @@ truth shop::PickupItem(character* Customer, item* ForSale, int Amount)
     Price = Amount * (Price * 100
                       / (100 + Customer->GetAttribute(CHARISMA)) + 1);
 
-    if(GetMaster()->GetConfig() == NEW_ATTNAM)
+    if(GetMaster()->GetConfig() == OAKHAVEN)
     {
       if(ForSale->IsMango())
         Price = (Price >> 2) + 1;
@@ -158,7 +158,7 @@ truth shop::DropItem(character* Customer, item* ForSale, int Amount)
      || GetMaster()->GetRelation(Customer) == HOSTILE)
     return true;
 
-  if(GetMaster()->GetConfig() == NEW_ATTNAM)
+  if(GetMaster()->GetConfig() == OAKHAVEN)
   {
     ADD_MESSAGE("\"Sorry, I'm only allowed to buy from "
                 "Decimus Harvest Co. if I wish to stay here.\"");
@@ -310,7 +310,7 @@ void cathedral::Enter(character* Visitor)
 truth cathedral::PickupItem(character* Visitor, item* Item, int)
 {
   if(game::GetGloomyCaveStoryState() == 2
-     || game::GetTeam(ATTNAM_TEAM)->GetRelation(Visitor->GetTeam()) == HOSTILE)
+     || game::GetTeam(VALPURIS_TEAM)->GetRelation(Visitor->GetTeam()) == HOSTILE)
     return true;
 
   if(Visitor->IsPlayer())
@@ -327,7 +327,7 @@ truth cathedral::PickupItem(character* Visitor, item* Item, int)
     {
       if(!Visitor->TryToStealFromShop(GetMaster(), Item))
       {
-        Visitor->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+        Visitor->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
       }
       return true;
     }
@@ -339,7 +339,7 @@ truth cathedral::PickupItem(character* Visitor, item* Item, int)
 truth cathedral::DropItem(character* Visitor, item* Item, int)
 {
   if(game::GetGloomyCaveStoryState() == 2
-     || game::GetTeam(ATTNAM_TEAM)->GetRelation(Visitor->GetTeam()) == HOSTILE)
+     || game::GetTeam(VALPURIS_TEAM)->GetRelation(Visitor->GetTeam()) == HOSTILE)
     return true;
 
   if(Visitor->IsPlayer())
@@ -363,17 +363,17 @@ void cathedral::KickSquare(character* Kicker, lsquare* Square)
 {
   if(!AllowKick(Kicker, Square)
      && Kicker->IsPlayer() && game::GetGloomyCaveStoryState() != 2
-     && game::GetTeam(ATTNAM_TEAM)->GetRelation(Kicker->GetTeam()) != HOSTILE)
+     && game::GetTeam(VALPURIS_TEAM)->GetRelation(Kicker->GetTeam()) != HOSTILE)
   {
     ADD_MESSAGE("You have harmed the property of the Cathedral!");
-    Kicker->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+    Kicker->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
   }
 }
 
 truth cathedral::ConsumeItem(character* HungryMan, item*, int)
 {
   if(game::GetGloomyCaveStoryState() == 2
-     || (game::GetTeam(ATTNAM_TEAM)->GetRelation(HungryMan->GetTeam())
+     || (game::GetTeam(VALPURIS_TEAM)->GetRelation(HungryMan->GetTeam())
          == HOSTILE))
     return true;
 
@@ -383,7 +383,7 @@ truth cathedral::ConsumeItem(character* HungryMan, item*, int)
 
     if(game::TruthQuestion(CONST_S("Do you still want to do this? [y/N]")))
     {
-      HungryMan->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+      HungryMan->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
       return true;
     }
   }
@@ -406,7 +406,7 @@ void cathedral::Load(inputfile& SaveFile)
 truth cathedral::Drink(character* Thirsty) const
 {
   if(game::GetGloomyCaveStoryState() == 2
-     || game::GetTeam(ATTNAM_TEAM)->GetRelation(Thirsty->GetTeam()) == HOSTILE)
+     || game::GetTeam(VALPURIS_TEAM)->GetRelation(Thirsty->GetTeam()) == HOSTILE)
     return game::TruthQuestion(CONST_S("Do you want to drink? [y/N]"));
 
   if(Thirsty->IsPlayer())
@@ -415,7 +415,7 @@ truth cathedral::Drink(character* Thirsty) const
 
     if(game::TruthQuestion(CONST_S("Do you still want to do this? [y/N]")))
     {
-      Thirsty->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+      Thirsty->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
       return true;
     }
   }
@@ -438,7 +438,7 @@ void shop::TeleportSquare(character* Infidel, lsquare* Square)
 void cathedral::TeleportSquare(character* Teleporter, lsquare* Square)
 {
   if(game::GetGloomyCaveStoryState() == 2 || !Teleporter
-     || (game::GetTeam(ATTNAM_TEAM)->GetRelation(Teleporter->GetTeam())
+     || (game::GetTeam(VALPURIS_TEAM)->GetRelation(Teleporter->GetTeam())
          == HOSTILE))
     return;
 
@@ -446,14 +446,14 @@ void cathedral::TeleportSquare(character* Teleporter, lsquare* Square)
   {
     ADD_MESSAGE("You have done unnatural things to "
                 "the property of the Cathedral!");
-    Teleporter->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+    Teleporter->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
   }
 }
 
 truth cathedral::Dip(character* Thirsty) const
 {
   if(game::GetGloomyCaveStoryState() == 2
-     || game::GetTeam(ATTNAM_TEAM)->GetRelation(Thirsty->GetTeam()) == HOSTILE)
+     || game::GetTeam(VALPURIS_TEAM)->GetRelation(Thirsty->GetTeam()) == HOSTILE)
     return true;
 
   if(Thirsty->IsPlayer())
@@ -464,7 +464,7 @@ truth cathedral::Dip(character* Thirsty) const
 
     if(game::TruthQuestion(CONST_S("Are you sure you want to dip? [y/N]")))
     {
-      Thirsty->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+      Thirsty->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
       return true;
     }
   }
@@ -706,7 +706,7 @@ void library::TeleportSquare(character* Infidel, lsquare* Square)
 
 truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
 {
-  if(game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Hungry->GetTeam()) == HOSTILE)
+  if(game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Hungry->GetTeam()) == HOSTILE)
     return true;
 
   if(Hungry->IsPlayer())
@@ -720,7 +720,7 @@ truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
     {
       if(!Hungry->TryToStealFromShop(GetMaster(), Item))
       {
-        Hungry->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+        Hungry->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
       }
       return true;
     }
@@ -732,7 +732,7 @@ truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
 truth mangodroparea::DropItem(character* Dropper, item* Item, int)
 {
   if(Dropper->IsPlayer() && (Item->IsMangoSeedling()) &&
-    (game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Dropper->GetTeam()) != HOSTILE))
+    (game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Dropper->GetTeam()) != HOSTILE))
   {
     if(game::OakhavenIsFree())
     {
@@ -762,7 +762,7 @@ truth mangodroparea::DropItem(character* Dropper, item* Item, int)
     }
   }
 
-  return (game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Dropper->GetTeam()) == HOSTILE
+  return (game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Dropper->GetTeam()) == HOSTILE
           || (Dropper->IsPlayer() && ((!Item->IsMango() && !Item->IsLanternOnWall())
           || game::TruthQuestion(CONST_S("Do you wish to "
                                          "donate this item "
@@ -772,14 +772,14 @@ truth mangodroparea::DropItem(character* Dropper, item* Item, int)
 void mangodroparea::KickSquare(character* Kicker, lsquare* Square)
 {
   if(!AllowKick(Kicker, Square) && Kicker->IsPlayer()
-     && game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Kicker->GetTeam())
+     && game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Kicker->GetTeam())
      != HOSTILE)
   {
     for(stackiterator i = Square->GetStack()->GetBottom(); i.HasItem(); ++i)
       if(i->IsMango() || i->IsLanternOnWall())
       {
         ADD_MESSAGE("You have harmed the property of the town!");
-        Kicker->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+        Kicker->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
         return;
       }
   }
@@ -787,7 +787,7 @@ void mangodroparea::KickSquare(character* Kicker, lsquare* Square)
 
 truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 {
-  if(game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(HungryMan->GetTeam())
+  if(game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(HungryMan->GetTeam())
      == HOSTILE)
     return true;
 
@@ -800,7 +800,7 @@ truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 
     if(game::TruthQuestion(CONST_S("Do you still want to do this? [y/N]")))
     {
-      HungryMan->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+      HungryMan->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
       return true;
     }
   }
@@ -811,14 +811,14 @@ truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 void mangodroparea::TeleportSquare(character* Infidel, lsquare* Square)
 {
   if(!Infidel
-     || game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Infidel->GetTeam())
+     || game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Infidel->GetTeam())
      == HOSTILE)
     return;
 
   for(stackiterator i = Square->GetStack()->GetBottom(); i.HasItem(); ++i)
     if(i->IsMango() || i->IsLanternOnWall())
     {
-      Infidel->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+      Infidel->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
       return;
     }
 }
@@ -840,7 +840,7 @@ truth shop::AllowKick(ccharacter* Char, const lsquare* LSquare) const
 
 truth cathedral::AllowKick(ccharacter* Char, const lsquare* LSquare) const
 {
-  return (game::GetTeam(ATTNAM_TEAM)->GetRelation(Char->GetTeam()) == HOSTILE
+  return (game::GetTeam(VALPURIS_TEAM)->GetRelation(Char->GetTeam()) == HOSTILE
           || !LSquare->GetStack()->GetItems());
 }
 
@@ -855,7 +855,7 @@ truth library::AllowKick(ccharacter* Char, const lsquare* LSquare) const
 truth mangodroparea::AllowKick(ccharacter* Char, const lsquare*) const
 {
   return (!Char->IsPlayer()
-          || (game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Char->GetTeam())
+          || (game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Char->GetTeam())
               == HOSTILE));
 }
 
@@ -873,7 +873,7 @@ void shop::HostileAction(character* Guilty) const
 void cathedral::HostileAction(character* Guilty) const
 {
   if(game::GetGloomyCaveStoryState() != 2 && Guilty)
-    Guilty->GetTeam()->Hostility(game::GetTeam(ATTNAM_TEAM));
+    Guilty->GetTeam()->Hostility(game::GetTeam(VALPURIS_TEAM));
 }
 
 void library::HostileAction(character* Guilty) const
@@ -890,24 +890,24 @@ void library::HostileAction(character* Guilty) const
 void mangodroparea::HostileAction(character* Guilty) const
 {
   if(Guilty)
-    Guilty->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+    Guilty->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
 }
 
 void sumoarena::DestroyTerrain(character* Who)
 {
   if(Who)
-    Who->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+    Who->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
 }
 
 void sumoarena::HostileAction(character* Guilty) const
 {
   if(Guilty)
-    Guilty->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
+    Guilty->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
 }
 
 truth sumoarena::CheckDestroyTerrain(character* Infidel)
 {
-  if(Infidel->GetTeam()->GetRelation(game::GetTeam(NEW_ATTNAM_TEAM))
+  if(Infidel->GetTeam()->GetRelation(game::GetTeam(NEW_VALPURIS_TEAM))
      == HOSTILE)
     return true;
 
@@ -984,7 +984,7 @@ character* cathedral::FindRandomExplosiveReceiver() const
 {
   std::vector<character*> ListOfDwarfs;
 
-  for(character* p : game::GetTeam(ATTNAM_TEAM)->GetMember())
+  for(character* p : game::GetTeam(VALPURIS_TEAM)->GetMember())
     if(p->IsEnabled() && p->IsKamikazeDwarf())
       ListOfDwarfs.push_back(p);
 

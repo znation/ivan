@@ -19,7 +19,7 @@
  * proceed at your own risk!
  */
 
-Dungeon ATTNAM;
+Dungeon VALPURIS_CATHEDRAL;
 {
   Levels = 5;
   Description = "attnamese catacombs";
@@ -92,7 +92,7 @@ Dungeon ATTNAM;
     Rooms = 20:25;
     Items = 0;
     IsOnGround = true;
-    TeamDefault = ATTNAM_TEAM;
+    TeamDefault = VALPURIS_TEAM;
     LOSModifier = 48;
     IgnoreDefaultSpecialSquares = false;
     CanGenerateBone = false;
@@ -480,7 +480,7 @@ Dungeon ATTNAM;
           f = frog(GREATER_LIGHT);
           i = frog(GIANT_LIGHT);
           y = mysticfrog(LIGHT);
-          s = femaleslave(ATTNAM);
+          s = femaleslave(VALPURIS_CATHEDRAL);
           j = femaleslave(JESTER);
           1 = petrusswife(1);
           2 = petrusswife(2);
@@ -572,7 +572,7 @@ Dungeon ATTNAM;
 
       Square, Pos 5, 1;
       {
-        Character = shopkeeper(ATTNAM) { Flags = IS_MASTER; }
+        Character = shopkeeper(VALPURIS_CATHEDRAL) { Flags = IS_MASTER; }
         OTerrain = decoration(CHAIR);
       }
 
@@ -732,7 +732,7 @@ Dungeon ATTNAM;
 
       Square, Pos 3, 2;
       {
-        Character = smith(ATTNAM) { Flags = IS_MASTER; }
+        Character = smith(VALPURIS_CATHEDRAL) { Flags = IS_MASTER; }
       }
 
       Square, Pos 3, 3;
@@ -806,7 +806,7 @@ Dungeon ATTNAM;
 
       Square, Pos 3, 2;
       {
-        Character = tailor(ATTNAM) { Flags = IS_MASTER; }
+        Character = tailor(VALPURIS_CATHEDRAL) { Flags = IS_MASTER; }
       }
 
       Square, Pos 3, 3;
@@ -881,7 +881,7 @@ Dungeon ATTNAM;
     Rooms = 1;
     Items = 0;
     IsOnGround = false;
-    TeamDefault = ATTNAM_TEAM;
+    TeamDefault = VALPURIS_TEAM;
     LOSModifier = 16;
     IgnoreDefaultSpecialSquares = false;
     CanGenerateBone = false;

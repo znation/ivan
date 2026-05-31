@@ -699,7 +699,7 @@ void worldmap::Generate()
     }
     
     GetWSquare(OakhavenPos)->ChangeOWTerrain(newattnam::Spawn());
-    SetEntryPos(NEW_ATTNAM, OakhavenPos);
+    SetEntryPos(OAKHAVEN, OakhavenPos);
     GetWSquare(TunnelEntry)->ChangeOWTerrain(underwatertunnel::Spawn());
     SetEntryPos(UNDER_WATER_TUNNEL, TunnelEntry);
     GetWSquare(TunnelExit)->ChangeOWTerrain(underwatertunnelexit::Spawn());

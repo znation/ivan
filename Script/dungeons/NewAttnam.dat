@@ -19,7 +19,7 @@
  * proceed at your own risk!
  */
 
-Dungeon NEW_ATTNAM;
+Dungeon OAKHAVEN;
 {
   Levels = 2;
 
@@ -34,7 +34,7 @@ Dungeon NEW_ATTNAM;
     Rooms = 8:12;
     Items = 0;
     IsOnGround = true;
-    TeamDefault = NEW_ATTNAM_TEAM;
+    TeamDefault = OAKHAVEN_TEAM;
     LOSModifier = 48;
     IgnoreDefaultSpecialSquares = false;
     AutoReveal = true;
@@ -141,7 +141,7 @@ Dungeon NEW_ATTNAM;
           # = 0;
           I = imperialist(VICE_ROY) { Team = COLONIST_TEAM; Flags = IS_MASTER; }
           g = guard(ROOKIE) { Team = COLONIST_TEAM; }
-          f = femaleslave(NEW_ATTNAM) { Team = NEW_ATTNAM_TEAM; }
+          f = femaleslave(OAKHAVEN) { Team = OAKHAVEN_TEAM; }
         }
       }
       {
@@ -307,7 +307,7 @@ Dungeon NEW_ATTNAM;
 
       Square, Pos 3, 3;
       {
-        Character = shopkeeper(NEW_ATTNAM) { Team = COLONIST_TEAM; Flags = IS_MASTER; }
+        Character = shopkeeper(OAKHAVEN) { Team = COLONIST_TEAM; Flags = IS_MASTER; }
       }
 
       Square, Pos 3, 6;
@@ -539,7 +539,7 @@ Dungeon NEW_ATTNAM;
 
     Square, Pos 11, 23;
     {
-      OTerrain = sign { Text = "The mansion of Viceroy Richel Decos, formerly a temple of nature."; }
+      OTerrain = sign { Text = "The mansion of Lord Regent Valerius Decimus, formerly a temple of nature."; }
     }
 
     Square, Pos 11, 40;
@@ -573,7 +573,7 @@ Dungeon NEW_ATTNAM;
     Items = 0;
     GenerateMonsters = false;
     IsOnGround = false;
-    TeamDefault = NEW_ATTNAM_TEAM;
+    TeamDefault = OAKHAVEN_TEAM;
     LOSModifier = 32;
     IgnoreDefaultSpecialSquares = false;
     CanGenerateBone = false;

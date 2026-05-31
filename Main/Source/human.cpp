@@ -204,7 +204,7 @@ void skeleton::CreateCorpse(lsquare* Square)
 void petrus::CreateCorpse(lsquare* Square)
 {
   if(game::GetGloomyCaveStoryState() == 2)
-    game::GetTeam(ATTNAM_TEAM)->SetRelation(game::GetTeam(PLAYER_TEAM), FRIEND);
+    game::GetTeam(VALPURIS_TEAM)->SetRelation(game::GetTeam(PLAYER_TEAM), FRIEND);
 
   Square->AddItem(leftnutofpetrus::Spawn());
   SendToHell();
@@ -3442,7 +3442,7 @@ truth humanoid::CheckZap()
 void croptender::GetAICommand()
 {
   if(game::OakhavenIsFree() ||
-     (GetDungeon()->GetIndex() != NEW_ATTNAM)
+     (GetDungeon()->GetIndex() != OAKHAVEN)
    ) // Behave normally outside of Oakhaven.
   {
     humanoid::GetAICommand();
@@ -4902,7 +4902,7 @@ void femaleslave::BeTalkedTo()
 {
   static long Said;
 
-  if(GetConfig() != NEW_ATTNAM || GetRelation(PLAYER) == HOSTILE)
+  if(GetConfig() != OAKHAVEN || GetRelation(PLAYER) == HOSTILE)
     humanoid::BeTalkedTo();
   else if(!game::OakhavenIsFree())
     ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, 4)]);

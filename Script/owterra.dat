@@ -43,7 +43,7 @@ attnam
   BitmapPos = 0, 48;
   NameStem = "mighty cathedral reaching the clouds";
   UsesLongArticle = false;
-  AttachedDungeon = ATTNAM;
+  AttachedDungeon = VALPURIS_CATHEDRAL;
   CanBeGenerated = true;
   NativeGTerrainTypes = { 1, EVERGREEN_FOREST; }
   RevealEnvironmentInitially = true;
@@ -71,7 +71,7 @@ newattnam
   BitmapPos = 16, 64;
   NameStem = "primitive village";
   UsesLongArticle = false;
-  AttachedDungeon = NEW_ATTNAM;
+  AttachedDungeon = OAKHAVEN;
   CanBeGenerated = false; /* Overridden by the world map generator */
   NativeGTerrainTypes = { 1, JUNGLE; }
   /*IsCoreLocation = true;*/
@@ -169,7 +169,7 @@ xinrochtomb
   BitmapPos = 0, 64;
   NameStem = "sombre and forbidding mausoleum";
   UsesLongArticle = false;
-  AttachedDungeon = XINROCH_TOMB;
+  AttachedDungeon = CRYPT_OF_KHAZ_ZADM;
   AttachedArea = 0;
   CanBeGenerated = true;
   NativeGTerrainTypes = { 2, GLACIER, TUNDRA; }

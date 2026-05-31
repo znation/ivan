@@ -329,11 +329,11 @@ void level::Generate(int Index)
   Map = reinterpret_cast<lsquare***>(area::Map);
   SquareStack = new lsquare*[XSizeTimesYSize];
 
-  /*if((Index == 0 && GetDungeon()->GetIndex() == NEW_ATTNAM)
-     || (Index == 0 && GetDungeon()->GetIndex() == ATTNAM))
+  /*if((Index == 0 && GetDungeon()->GetIndex() == OAKHAVEN)
+     || (Index == 0 && GetDungeon()->GetIndex() == VALPURIS_CATHEDRAL))
     NightAmbientLuminance = MakeRGB24(95, 95, 95);
   */
-  if((Index == 0) && (GetDungeon()->GetIndex() == XINROCH_TOMB))
+  if((Index == 0) && (GetDungeon()->GetIndex() == CRYPT_OF_KHAZ_ZADM))
     NightAmbientLuminance = MakeRGB24(105, 95, 95);
   else if(IsOnGround())
     NightAmbientLuminance = MakeRGB24(95, 95, 95);
@@ -2571,7 +2571,7 @@ void level::CreateGlobalRain(liquid* Liquid, v2 Speed)
 
 void level::CheckSunLight()
 {
-  if(Index == 0 && GetDungeon()->GetIndex() == NEW_ATTNAM)
+  if(Index == 0 && GetDungeon()->GetIndex() == OAKHAVEN)
   {
     double Cos = cos(FPI * (game::GetTick() % 48000) / 24000.);
 
@@ -2587,7 +2587,7 @@ void level::CheckSunLight()
       AmbientLuminance = NightAmbientLuminance;
     }
   }
-  else if(Index == 0 && GetDungeon()->GetIndex() == ATTNAM)
+  else if(Index == 0 && GetDungeon()->GetIndex() == VALPURIS_CATHEDRAL)
   {
     double Cos = cos(FPI * (game::GetTick() % 48000) / 24000.);
 
@@ -2603,7 +2603,7 @@ void level::CheckSunLight()
       AmbientLuminance = NightAmbientLuminance;
     }
   }
-  else if(Index == 0 && GetDungeon()->GetIndex() == XINROCH_TOMB)
+  else if(Index == 0 && GetDungeon()->GetIndex() == CRYPT_OF_KHAZ_ZADM)
   {
     double Cos = cos(FPI * (game::GetTick() % 48000) / 24000.);
 

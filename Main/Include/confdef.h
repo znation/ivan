@@ -644,8 +644,8 @@
 #define PANDA_BEAR 6
 
 #define IMPRISONED_FEMALE 1
-/* 2 reserved for ATTNAM */
-/* 3 reserved for NEW_ATTNAM */
+/* 2 reserved for VALPURIS_CATHEDRAL */
+/* 3 reserved for OAKHAVEN */
 #define JESTER 4
 
 #define ZOMBIE_OF_KHAZ_ZADM 1
@@ -782,8 +782,8 @@
 #define OREE_LAIR_EXIT 400
 #define SUMO_ARENA_ENTRY 700
 #define SUMO_ARENA_EXIT 800
-#define XINROCH_TOMB_ENTRANCE 900
-#define XINROCH_TOMB_EXIT 1000
+#define CRYPT_OF_KHAZ_ZADM_ENTRANCE 900
+#define CRYPT_OF_KHAZ_ZADM_EXIT 1000
 
 #define BOOK_CASE 1
 #define CHEST_OF_DRAWERS 2

@@ -94,7 +94,7 @@ wall
     DigMessage = "You break the wall down despite the uncomfortable feeling of being constantly watched.";
     MainMaterialConfig == GRANITE;
     NameSingular = "wall";
-    PostFix = "and a poster with a picture of high priest Petrus, the ruler of the Attnamese Empire";
+    PostFix = "and a poster with a picture of Archpriest Cordatus, the ruler of the Valpurian Empire";
     BitmapPos = 80, 272;
     HPModifier = 150;
   }
@@ -127,7 +127,7 @@ wall
     MainMaterialConfig == BALSA_WOOD;
     Adjective = "primitive";
     NameSingular = "wall";
-    PostFix = "and a poster with a picture of high priest Petrus, the ruler of the Attnamese Empire";
+    PostFix = "and a poster with a picture of Archpriest Cordatus, the ruler of the Valpurian Empire";
     BitmapPos = 96, 272;
     HPModifier = 75;
   }
@@ -674,7 +674,7 @@ decoration
     HPModifier = 25;
   }
 
-  Config BANANA_TREE;
+  Config MANGO_TREE;
   {
     OKVisualEffects = MIRROR;
     CanBeDestroyed = true;
@@ -686,7 +686,7 @@ decoration
     BitmapPos = 16, 368;
     HPModifier = 25;
     /* IsAlwaysTransparent = false; */
-    LeftOverItems == banana { Times = 0:1; }
+    LeftOverItems == mango { Times = 0:1; }
   }
 
   Config DEAD_TREE;

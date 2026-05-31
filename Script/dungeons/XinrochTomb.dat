@@ -19,7 +19,7 @@
  * proceed at your own risk!
  */
 
-Dungeon XINROCH_TOMB;
+Dungeon CRYPT_OF_KHAZ_ZADM;
 {
   Levels = 11;
   Description = "Crypt of Khaz-Zadm";
@@ -125,7 +125,7 @@ Dungeon XINROCH_TOMB;
     Rooms = 5:8;
     Items = 0;
     IsOnGround = true;
-    TeamDefault = XINROCH_TOMB_ENTRY_TEAM;
+    TeamDefault = CRYPT_OF_KHAZ_ZADM_ENTRY_TEAM;
     LOSModifier = 48;
     IgnoreDefaultSpecialSquares = true;
     CanGenerateBone = false;
@@ -991,7 +991,7 @@ Dungeon XINROCH_TOMB;
 
       Square, Pos 3, 3;
       {
-        Character = shopkeeper(XINROCH_TOMB) { Team = XINROCH_TOMB_ENTRY_TEAM; Flags = IS_MASTER; }
+        Character = shopkeeper(CRYPT_OF_KHAZ_ZADM) { Team = CRYPT_OF_KHAZ_ZADM_ENTRY_TEAM; Flags = IS_MASTER; }
       }
 
       ItemMap
@@ -1431,8 +1431,8 @@ Dungeon XINROCH_TOMB;
           B = bear(MUTANT_BEAR) { Inventory = { 2, Random { Category = AMULET|RING|WAND|SCROLL; Chance = 75; }, Random { Category = VALUABLE; } } }
           S = skeleton(WARRIOR);
           b = bear(CAVE_BEAR);
-          g = guard(TOMB_ENTRY) { Team = XINROCH_TOMB_NECRO_TEAM; }
-          P = priest(INFUSCOR) { Team = XINROCH_TOMB_NECRO_TEAM; }
+          g = guard(TOMB_ENTRY) { Team = CRYPT_OF_KHAZ_ZADM_NECRO_TEAM; }
+          P = priest(INFUSCOR) { Team = CRYPT_OF_KHAZ_ZADM_NECRO_TEAM; }
         }
       }
       {

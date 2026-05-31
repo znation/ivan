@@ -50,14 +50,14 @@ void team::Hostility(team* Enemy)
 
     /* This is a gum solution. The behaviour should come from the script. */
 
-    /*if(ID == COLONIST_TEAM && Enemy->ID == NEW_ATTNAM_TEAM)
+    /*if(ID == COLONIST_TEAM && Enemy->ID == NEW_VALPURIS_TEAM)
       return;*/
 
     game::Hostility(this, Enemy);
 
     if(ID == PLAYER_TEAM)
     {
-      if(Enemy->ID == ATTNAM_TEAM)
+      if(Enemy->ID == VALPURIS_TEAM)
       {
         /* This is a gum solution. The message should come from the script. */
         if(PLAYER->CanHear())

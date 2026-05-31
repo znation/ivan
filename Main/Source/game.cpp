@@ -1021,8 +1021,8 @@ void game::Run()
       if(!(GetTick() % 1000))
         CurrentLevel->CheckSunLight();
 
-      if((CurrentDungeonIndex == NEW_ATTNAM
-          || CurrentDungeonIndex == ATTNAM)
+      if((CurrentDungeonIndex == OAKHAVEN
+          || CurrentDungeonIndex == VALPURIS_CATHEDRAL)
          && CurrentLevelIndex == 0)
       {
         long OldVolume = GlobalRainLiquid->GetVolume();
@@ -3930,7 +3930,7 @@ void game::Hostility(team* Attacker, team* Defender)
   for(int c = 0; c < Teams; ++c)
     if(GetTeam(c) != Attacker && GetTeam(c) != Defender
        && GetTeam(c)->GetRelation(Defender) == FRIEND
-       && c != NEW_ATTNAM_TEAM
+       && c != NEW_VALPURIS_TEAM
        && c != TOURIST_GUIDE_TEAM) // gum solution
       GetTeam(c)->SetRelation(Attacker, HOSTILE);
 }
@@ -4909,7 +4909,7 @@ void game::EnterArea(charactervector& Group, int Area, int EntryIndex)
     /* Gum solution! */
 
     if(New && GetCurrentLevel()->IsOnGround() &&
-       CurrentDungeonIndex == ATTNAM)
+       CurrentDungeonIndex == VALPURIS_CATHEDRAL)
     {
       GlobalRainLiquid = powder::Spawn(SNOW);
       GlobalRainSpeed = v2(-64, 128);
@@ -4924,7 +4924,7 @@ void game::EnterArea(charactervector& Group, int Area, int EntryIndex)
     }
 
     if(New && GetCurrentLevel()->IsOnGround() &&
-       (CurrentDungeonIndex == NEW_ATTNAM || CurrentDungeonIndex == ASLONA_CASTLE ||
+       (CurrentDungeonIndex == OAKHAVEN || CurrentDungeonIndex == ASLONA_CASTLE ||
         CurrentDungeonIndex == REBEL_CAMP || CurrentDungeonIndex == MONDEDR ||
         CurrentDungeonIndex == DARK_FOREST || CurrentDungeonIndex == IRINOX))
     {
@@ -6330,7 +6330,7 @@ truth game::TryToEnterSumoArena()
 
 truth game::TryToExitSumoArena()
 {
-  if(GetTeam(PLAYER_TEAM)->GetRelation(GetTeam(NEW_ATTNAM_TEAM)) == HOSTILE)
+  if(GetTeam(PLAYER_TEAM)->GetRelation(GetTeam(NEW_VALPURIS_TEAM)) == HOSTILE)
     return true;
 
   itemvector IVector;

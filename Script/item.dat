@@ -199,7 +199,7 @@ can /* materialcontainer-> */
   WieldedBitmapPos = 176, 144;
   IsValuable = false;
   AllowedDungeons = { 10,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
                       REBEL_CAMP, MONDEDR, BLACK_MARKET, IRINOX, DARK_FOREST; }
   DescriptiveInfo = "A sturdy, hermetically-sealed container that will prevent the contents from spoiling.";
 }
@@ -223,7 +223,7 @@ lump
   WieldedBitmapPos = 160, 112;
   IsValuable = false;
   AllowedDungeons = { 10,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
                       REBEL_CAMP, MONDEDR, BLACK_MARKET, IRINOX, DARK_FOREST; }
   DescriptiveInfo = "A shapeless chunk.";
 }
@@ -1786,7 +1786,7 @@ mango /* materialcontainer-> */
   AllowEquip = false;
   IsValuable = false;
   IsSadistWeapon = true;
-  AllowedDungeons = { 5, NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, BLACK_MARKET; }
+  AllowedDungeons = { 5, OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, BLACK_MARKET; }
   DescriptiveInfo = "Ugh, not mangos again! There was pretty much nothing but mangos to eat back in Oakhaven, and you would finally like to try a different diet.";
 
   Config BROKEN;
@@ -2553,7 +2553,7 @@ loaf
   WieldedBitmapPos = 160, 352;
   IsValuable = false;
   AllowedDungeons = { 10,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
                       REBEL_CAMP, MONDEDR, BLACK_MARKET, IRINOX, DARK_FOREST; }
   DescriptiveInfo = "Some processed food to sate your hunger.";
 }
@@ -2973,7 +2973,7 @@ kiwi
   AllowEquip = false;
   IsValuable = false;
   AllowedDungeons = { 7,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, FUNGAL_CAVE,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, FUNGAL_CAVE,
                       DARK_FOREST, BLACK_MARKET; }
   DescriptiveInfo = "Kiwis would be more popular if the plants didn't try to eat the harvesters.";
 }
@@ -2995,7 +2995,7 @@ pineapple
   WieldedBitmapPos = 176, 144;
   IsValuable = false;
   AllowedDungeons = { 10,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
                       REBEL_CAMP, MONDEDR, BLACK_MARKET, IRINOX, DARK_FOREST; }
   DescriptiveInfo = "A delicious fruit native to the vast pine forests of the far north.";
 }
@@ -3018,7 +3018,7 @@ palmbranch
   WieldedBitmapPos = 160, 208;
   IsValuable = false;
   Alias == "weapon";
-  AllowedDungeons = { 2, NEW_ATTNAM, UNDER_WATER_TUNNEL; }
+  AllowedDungeons = { 2, OAKHAVEN, UNDER_WATER_TUNNEL; }
 }
 
 whip /* meleeweapon-> */
@@ -6490,7 +6490,7 @@ carrot
   WieldedBitmapPos = 160, 352;
   IsValuable = false;
   AllowedDungeons = { 12,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE, MONDEDR,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE, MONDEDR,
                       REBEL_CAMP, GOBLIN_FORT, BLACK_MARKET, IRINOX, DARK_FOREST, FUNGAL_CAVE; }
   DescriptiveInfo = "Beloved by bunnies and people with poor eyesight.";
 
@@ -6551,7 +6551,7 @@ sausage
   IsValuable = false;
   IsSadistWeapon = true;
   AllowedDungeons = { 10,
-                      NEW_ATTNAM, ATTNAM, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
+                      OAKHAVEN, VALPURIS_CATHEDRAL, UNDER_WATER_TUNNEL, ELPURI_CAVE, ASLONA_CASTLE,
                       REBEL_CAMP, MONDEDR, BLACK_MARKET, IRINOX, DARK_FOREST; }
 }
 

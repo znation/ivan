@@ -245,7 +245,7 @@ truth throne::SitOn(character* Sitter)
 
   Sitter->EditAP(-1000);
 
-  if(GetLSquareUnder()->GetDungeonIndex() == ATTNAM && GetLSquareUnder()->GetLevelIndex() == 0)
+  if(GetLSquareUnder()->GetDungeonIndex() == VALPURIS_CATHEDRAL && GetLSquareUnder()->GetLevelIndex() == 0)
   {
     if(Sitter->HasArchpriestsRelic() && Sitter->HasGoldenHawkTunic() && game::GetGod(VALPURIS)->GetRelation() != 1000)
     {
@@ -793,7 +793,7 @@ truth altar::SitOn(character* Sitter)
 {
   ADD_MESSAGE("You kneel down and worship %s for a moment.", GetMasterGod()->GetName());
 
-  if((GetMasterGod()->GetType() == INFUSCOR) && (game::GetCurrentDungeonIndex() == XINROCH_TOMB) && (game::GetCurrentLevelIndex() == 0))
+  if((GetMasterGod()->GetType() == INFUSCOR) && (game::GetCurrentDungeonIndex() == CRYPT_OF_KHAZ_ZADM) && (game::GetCurrentLevelIndex() == 0))
   {
     if(Sitter->HasLostRubyFlamingSword() && game::GetGod(INFUSCOR)->GetRelation() != 1000)
     {
@@ -1078,7 +1078,7 @@ truth stairs::Enter(truth DirectionUp) const
 
   /* "Temporary" gum solutions */
 
-  if(GetConfig() == XINROCH_TOMB_ENTRANCE)
+  if(GetConfig() == CRYPT_OF_KHAZ_ZADM_ENTRANCE)
   {
     if((game::GetXinrochTombStoryState() == 2) || (PLAYER->GetMoveType() & ETHEREAL))
     {
@@ -1096,7 +1096,7 @@ truth stairs::Enter(truth DirectionUp) const
     }
   }
 
-  if(GetConfig() == XINROCH_TOMB_EXIT)
+  if(GetConfig() == CRYPT_OF_KHAZ_ZADM_EXIT)
   {
     if(PLAYER->HasLostRubyFlamingSword())
     {

@@ -708,7 +708,7 @@ col16 carnivorousplant::GetTorsoSpecialColor() const // the flower
 void ostrich::GetAICommand()
 {
   if(game::OakhavenIsFree() ||
-     (GetDungeon()->GetIndex() != NEW_ATTNAM)
+     (GetDungeon()->GetIndex() != OAKHAVEN)
    ) // Behave normally outside of Oakhaven.
   {
     nonhumanoid::GetAICommand();
