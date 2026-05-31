@@ -299,13 +299,13 @@ truth mjolak::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
         game::DoEvilDeed(10);
 
       if(Enemy->IsPlayer() || Hitter->IsPlayer() || Enemy->CanBeSeenByPlayer() || Hitter->CanBeSeenByPlayer())
-        ADD_MESSAGE("A burst of %s Mjolak's unholy energy fries %s.",
+        ADD_MESSAGE("A burst of %s Thunderfist's unholy energy fries %s.",
                     Hitter->CHAR_POSSESSIVE_PRONOUN, Enemy->CHAR_DESCRIPTION(DEFINITE));
     }
     else
     {
       if(Enemy->IsPlayer() || Enemy->CanBeSeenByPlayer())
-        ADD_MESSAGE("A burst of Mjolak's unholy energy fries %s.", Enemy->CHAR_DESCRIPTION(DEFINITE));
+        ADD_MESSAGE("A burst of Thunderfist's unholy energy fries %s.", Enemy->CHAR_DESCRIPTION(DEFINITE));
     }
 
     return Enemy->ReceiveBodyPartDamage(Hitter, 5 + (RAND() % 6), ENERGY, BodyPartIndex, Direction) || BaseSuccess;
@@ -324,13 +324,13 @@ truth vermis::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
     if(Hitter)
     {
       if(Enemy->IsPlayer() || Enemy->CanBeSeenByPlayer())
-        ADD_MESSAGE("%s Vermis sends %s on a sudden journey.",
+        ADD_MESSAGE("%s Soulthorn sends %s on a sudden journey.",
                     Hitter->CHAR_POSSESSIVE_PRONOUN, Enemy->CHAR_DESCRIPTION(DEFINITE));
     }
     else
     {
       if(Enemy->IsPlayer() || Enemy->CanBeSeenByPlayer())
-        ADD_MESSAGE("Vermis sends %s on a sudden journey.", Enemy->CHAR_DESCRIPTION(DEFINITE));
+        ADD_MESSAGE("Soulthorn sends %s on a sudden journey.", Enemy->CHAR_DESCRIPTION(DEFINITE));
     }
 
     Enemy->TeleportRandomly();
@@ -350,19 +350,19 @@ truth turox::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
     if(Hitter)
     {
       if(Enemy->IsPlayer() || Hitter->IsPlayer() || Enemy->CanBeSeenByPlayer() || Hitter->CanBeSeenByPlayer())
-        ADD_MESSAGE("%s smash%s %s with the full force of Turox.",
+        ADD_MESSAGE("%s smash%s %s with the full force of Dawnbreaker.",
                     Hitter->CHAR_PERSONAL_PRONOUN, Hitter->IsPlayer() ? "" : "es", Enemy->CHAR_DESCRIPTION(DEFINITE));
     }
     else
     {
       if(Enemy->IsPlayer() || Enemy->CanBeSeenByPlayer())
-        ADD_MESSAGE("Turox is smashed against %s with full force.", Enemy->CHAR_DESCRIPTION(DEFINITE));
+        ADD_MESSAGE("Dawnbreaker is smashed against %s with full force.", Enemy->CHAR_DESCRIPTION(DEFINITE));
     }
 
     if(GetSquareUnder()->CanBeSeenByPlayer(true))
       ADD_MESSAGE("A magical explosion is triggered!");
 
-    Enemy->GetLevel()->Explosion(Hitter, CONST_S("burned @bkp Turox's explosion"), HitPos, 10 + RAND() % 100);
+    Enemy->GetLevel()->Explosion(Hitter, CONST_S("burned @bkp Dawnbreaker's explosion"), HitPos, 10 + RAND() % 100);
     return true;
   }
   else
@@ -579,7 +579,7 @@ truth neercseulb::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
       game::DoEvilDeed(10);
 
     if(Enemy->IsPlayer() || Hitter->IsPlayer() || Enemy->CanBeSeenByPlayer() || Hitter->CanBeSeenByPlayer())
-      ADD_MESSAGE("%s Neerc Se-ulb's life-draining energies swallow %s!",
+      ADD_MESSAGE("%s Nethervane's life-draining energies swallow %s!",
                   Hitter->CHAR_POSSESSIVE_PRONOUN, Enemy->CHAR_DESCRIPTION(DEFINITE));
 
     return Enemy->ReceiveBodyPartDamage(Hitter, 10 + (RAND() % 11), DRAIN, BodyPartIndex, Direction) || BaseSuccess;
