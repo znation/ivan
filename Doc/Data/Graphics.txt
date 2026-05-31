@@ -75,7 +75,7 @@ font.pcx (*)		the default font
 fow.pcx			the fog of war tile
 glterra.pcx (*)		ground terrain graphics
 humanoid.pcx (*)	humanoid bodypart graphics
-icon.bmp		the banana and pick-axe icon
+icon.bmp		the mango and pick-axe icon
 item.pcx (*)		item graphics
 menu.pcx		the main menu background
 olterra.pcx (*)		over terrain graphics

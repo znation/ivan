@@ -14,7 +14,7 @@ From lower level to higher level
   - mostly you'll have to rely on healing liquid / healers to get a normal limb back instead
 - Summon archangel
 
-##### Valpurus
+##### Valpuris
 - No spells; just use Legifer and Atavus and sacrifice until champion
 - When champion, auto-summon a guard as a permanent ally
   - guards could possibly upgrade eventually

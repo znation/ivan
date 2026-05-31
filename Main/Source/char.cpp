@@ -1906,7 +1906,7 @@ void character::Die(ccharacter* Killer, cfestring& Msg, ulong DeathFlags)
 
   if(IsPlayer())
   {
-    if(game::GetXinrochTombStoryState() == 2)
+    if(game::GetCryptOfKhazZadmStoryState() == 2)
     {
       festring MsgBut = CONST_S("delivered the Shadow Veil to the Necromancer and continued to further adventures, but was ");
       festring NewMsg = MsgBut << Msg;

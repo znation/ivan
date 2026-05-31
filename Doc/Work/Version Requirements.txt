@@ -2,7 +2,7 @@ Every version must henceforth include one new feature
 from every one of these categories:
 
 fountain effects
-banana jokes
+mango jokes
 special monsters
 special items
 special materials

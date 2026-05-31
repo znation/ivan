@@ -348,8 +348,8 @@ class game
   static void SetStoryState(int What) { StoryState = What; }
   static int GetGloomyCaveStoryState() { return GloomyCaveStoryState; }
   static void SetGloomyCaveStoryState(int What) { GloomyCaveStoryState = What; }
-  static int GetXinrochTombStoryState() { return XinrochTombStoryState; }
-  static void SetXinrochTombStoryState(int What) { XinrochTombStoryState = What; }
+  static int GetCryptOfKhazZadmStoryState() { return CryptOfKhazZadmStoryState; }
+  static void SetCryptOfKhazZadmStoryState(int What) { CryptOfKhazZadmStoryState = What; }
   static int GetFreedomStoryState() { return FreedomStoryState; }
   static void SetFreedomStoryState(int What) { FreedomStoryState = What; }
   static int GetAslonaStoryState() { return AslonaStoryState; }
@@ -565,7 +565,7 @@ class game
   static int Dungeons;
   static int StoryState;
   static int GloomyCaveStoryState;
-  static int XinrochTombStoryState;
+  static int CryptOfKhazZadmStoryState;
   static int FreedomStoryState;
   static int AslonaStoryState;
   static int RebelStoryState;

@@ -1080,7 +1080,7 @@ truth stairs::Enter(truth DirectionUp) const
 
   if(GetConfig() == CRYPT_OF_KHAZ_ZADM_ENTRANCE)
   {
-    if((game::GetXinrochTombStoryState() == 2) || (PLAYER->GetMoveType() & ETHEREAL))
+    if((game::GetCryptOfKhazZadmStoryState() == 2) || (PLAYER->GetMoveType() & ETHEREAL))
     {
       ADD_MESSAGE("This dark gate seems to be a one-way portal. You sense something distant but extremely "
                   "dangerous on the other side. You feel you should think twice before entering.");

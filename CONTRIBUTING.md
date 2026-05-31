@@ -23,7 +23,7 @@ __Forbidden jobs__
  - Upsetting game balance.
  - Adding/modding weapons without knowing how the weapon system is balanced.
  - Adding content that breaches the [Code of Conduct](https://github.com/Attnam/ivan/blob/master/CODE_OF_CONDUCT.md).
- - Telepathically communicating with Elpuri.
+ - Telepathically communicating with Malgorath.
 
 
 # Commits, pull requests (PRs) and merging

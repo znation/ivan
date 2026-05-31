@@ -7487,7 +7487,7 @@ elder
     "\"I remember still clearly when we first found you in the jungle. You were five and had seemingly been raised by hippos since birth.\"",
     "\"It is said Mortifer was the first being to die, felled by the hand of His brother, Valpuris.\"",
     "\"It is said Valpuris is cursed to forever bear the world upon His shoulders, without a moment of respite, as a penance and punishment for His deeds.\"",
-    "\"Even though you have lived here, you are somehow different from the Tweraifians, I can sense it. Is it your aggressive and wild character or your stupidity that separates us? Or is it just that your skin is white and our black?\"",
+    "\"Even though you have lived here, you are somehow different from the Oakhavenians, I can sense it. Is it your aggressive and wild character or your stupidity that separates us? Or is it just that your skin is white and our black?\"",
     "\"Not long ago Oakhaven was a civilization advanced beyound your comprehension. But we were pacifists and could not repulse Valpuris's grunt army.\"",
     "@Dd seems very melancholic. \"I was the head chancellor of the University of Oakhaven before the invasion...\"",
     "\"For a decade I served this Decimus lad as a crop tender like everyone else, but then an elephant stepped on my toe and my leg was amputated. I couldn't climb trees anymore so they made me a tourist guide.\"",
@@ -10055,7 +10055,7 @@ terra
     "\"Through the millennia, Lobh-se has gained every imaginable disease and was bitten by every existing poisonous creature. Now she is practically invulnerable to all damage.\"",
     "\"Fortunately, Lobh-se only leaves her lair in the heart of the night and even then does not venture far, since nutrition is plenty here, and she returns promptly when satiated. Still, it is becoming harder and harder to ward her off.\"",
     "\"This cave once was a magnificent garden, a bulwark against evil. But after the Valpurian invasion, the power of Silva was weakened, and darkness and strife crept in here from below.\"",
-    "\"I am bound by sacred oaths to protect this shrine with my life. I remained behind when Tweraifians buried the entrance to hide this place from Valpuris.\"";
+    "\"I am bound by sacred oaths to protect this shrine with my life. I remained behind when Oakhavenians buried the entrance to hide this place from Valpuris.\"";
   }
   DeathMessage = "@Dd dies, whispering: \"I'm sorry! I failed you, Silva.\"";
 }
