@@ -557,7 +557,7 @@ python tools/asset_gen/balance_validator.py \
 ```
 Verify all numeric values (PriceModifier, NutritionValue, StrengthValue, Color RGB, Enchantment) unchanged.
 
-#### Task 7.2: [ ] Comprehensive String Search
+#### Task 7.2: [x] Comprehensive String Search
 ```bash
 grep -r "banana\|Banana\|BANANA_\|Valpurus\b\|Attnam\|Tweraif\|Elpuri\b\|Xinroch\|Decos\b\|Richel\b\|Petrus\b\|FROG_FLESH\|frog flesh\|frog blood\|OMMEL_\|bananagrower\|bananapeels\|holybanana" \
   --include="*.cpp" --include="*.h" --include="*.dat" --include="*.txt" --include="*.md" \
