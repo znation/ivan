@@ -482,7 +482,7 @@ Standalone text files; independent of each other. Use Claude with the style guid
 
 ### Phase 5: Sound Effects
 
-#### Task 5.1: [ ] Inventory `Sound/SoundEffects.cfg`
+#### Task 5.1: [x] Inventory `Sound/SoundEffects.cfg`
 Read the file. Identify all references to old creature/character names (enner, ostrich, frog, etc.). Document what needs renaming before proceeding.
 
 #### Task 5.2: [ ] Generate Wraithstalker Sound Effects
@@ -495,7 +495,7 @@ python tools/asset_gen/audio_generator.py \
   --output Sound/wraithstalkerdeath.wav --duration 2.0
 ```
 
-#### Task 5.3: [ ] Update `Sound/SoundEffects.cfg`
+#### Task 5.3: [x] Update `Sound/SoundEffects.cfg`
 - Replace `enner.wav`/`ennerdeath.wav` → `wraithstalker.wav`/`wraithstalkerdeath.wav`
 - Update any other old creature-name references found in Task 5.1
 
