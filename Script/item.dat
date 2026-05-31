@@ -6501,7 +6501,7 @@ carrot
   }
 }
 
-mango
+mangofood
 {
   WeaponCategory = BLUNT_WEAPONS;
   DefaultSize = 20;

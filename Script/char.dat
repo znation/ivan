@@ -7055,7 +7055,7 @@ croptender
   TorsoBitmapPos = 32, 0;
   ArmBitmapPos = 64, 64;
   LegBitmapPos = 0, 288;
-  Inventory == mango { Times = 10; }
+  Inventory == mangofood { Times = 10; }
   /* AI will no longer go insane if he leaves Oakhaven. */
   HostileReplies == "\"Mango POWER!\"";
   AttachedGod = SILVA;

@@ -50,7 +50,7 @@ void team::Hostility(team* Enemy)
 
     /* This is a gum solution. The behaviour should come from the script. */
 
-    /*if(ID == COLONIST_TEAM && Enemy->ID == NEW_VALPURIS_TEAM)
+    /*if(ID == COLONIST_TEAM && Enemy->ID == OAKHAVEN_TEAM)
       return;*/
 
     game::Hostility(this, Enemy);

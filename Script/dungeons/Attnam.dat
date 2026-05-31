@@ -415,8 +415,8 @@ Dungeon VALPURIS_CATHEDRAL;
           w == Random { MinPrice = 350; Category = WEAPON|SHIELD; ConfigFlags = NO_BROKEN; Enchantment = 1; }
           c == Random { MinPrice = 700; Category = WEAPON|SHIELD; ConfigFlags = NO_BROKEN; Enchantment = 3; }
           m == Random { MinPrice = 350; Category = HELMET|CLOAK|BODY_ARMOR|BELT|BOOT|GAUNTLET; ConfigFlags = NO_BROKEN; Enchantment = 1; }
-          X == itemcontainer(LARGE_CHEST) { ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, mango { Times = 0:10; }, carrot { Times = 0:3; } } }
-          t == itemcontainer(LARGE_CHEST) { ItemsInside = { 7, can { Times = 0:3; SecondaryMaterial = 0; }, PLANT_FIBER lump { Times = 0:1; }, lantern(BROKEN) { Times = 0:2; }, brokenbottle { Times = 0:5; }, mangopeels { Times = 0:5; }, mango(BROKEN) { Times = 0:1; }, bone { Times = 0:5; } } }
+          X == itemcontainer(LARGE_CHEST) { ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, mangofood { Times = 0:10; }, carrot { Times = 0:3; } } }
+          t == itemcontainer(LARGE_CHEST) { ItemsInside = { 7, can { Times = 0:3; SecondaryMaterial = 0; }, PLANT_FIBER lump { Times = 0:1; }, lantern(BROKEN) { Times = 0:2; }, brokenbottle { Times = 0:5; }, mangopeels { Times = 0:5; }, mangofood(BROKEN) { Times = 0:1; }, bone { Times = 0:5; } } }
           T == itemcontainer(LARGE_CHEST) { ItemsInside == Random { Times = 3:7; MaxPrice = 10; Category = CLOAK|BODY_ARMOR|BELT|BOOT|GAUNTLET; ConfigFlags = BROKEN; } }
           n == trinket(POTTED_PLANT);
           N == trinket(POTTED_CACTUS);
@@ -566,7 +566,7 @@ Dungeon VALPURIS_CATHEDRAL;
 
       Square, Pos 1, 4;
       {
-        Items == mango;
+        Items == mangofood;
         Times = 100;
       }
 
@@ -999,7 +999,7 @@ Dungeon VALPURIS_CATHEDRAL;
           F = decoration(WELL);
           H = olterraincontainer(SHELF)
           {
-            ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, mango { Times = 0:10; }, carrot { Times = 0:3; } }
+            ItemsInside = { 4, can { Times = 0:3; }, loaf { Times = 2:10; }, mangofood { Times = 0:10; }, carrot { Times = 0:3; } }
           }
           L = IRON door(BARDOOR) { Parameters = LOCKED; }
           I = ironmaiden;

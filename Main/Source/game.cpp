@@ -103,8 +103,8 @@ int game::Dungeons;
 int game::StoryState;
 int game::GloomyCaveStoryState;
 int game::CryptOfKhazZadmStoryState;
-int game::OakhavenFreedomQuestState;
-int game::AslonaCivilWarState;
+int game::FreedomStoryState;
+int game::AslonaStoryState;
 int game::RebelStoryState;
 truth game::PlayerIsChampion;
 truth game::HasBoat;
@@ -864,8 +864,8 @@ truth game::Init(cfestring& loadBaseName)
       StoryState = 0;
       GloomyCaveStoryState = 0;
       CryptOfKhazZadmStoryState = 0;
-      OakhavenFreedomQuestState = 0;
-      AslonaCivilWarState = 0;
+      FreedomStoryState = 0;
+      AslonaStoryState = 0;
       RebelStoryState = 0;
       PlayerIsChampion = false;
       HasBoat = false;
@@ -3478,7 +3478,7 @@ truth game::Save(cfestring& SaveName)
   SaveFile << AveragePlayerDexterityExperience;
   SaveFile << AveragePlayerAgilityExperience;
   SaveFile << Teams << Dungeons << StoryState << GloomyCaveStoryState;
-  SaveFile << CryptOfKhazZadmStoryState << OakhavenFreedomQuestState << AslonaCivilWarState << RebelStoryState;
+  SaveFile << CryptOfKhazZadmStoryState << FreedomStoryState << AslonaStoryState << RebelStoryState;
   SaveFile << PlayerIsChampion << HasBoat << PlayerRunning;
   SaveFile << PlayerMassacreMap << PetMassacreMap << MiscMassacreMap;
   SaveFile << PlayerMassacreAmount << PetMassacreAmount << MiscMassacreAmount;
@@ -3558,7 +3558,7 @@ int game::Load(cfestring& saveName)
   SaveFile >> AveragePlayerDexterityExperience;
   SaveFile >> AveragePlayerAgilityExperience;
   SaveFile >> Teams >> Dungeons >> StoryState >> GloomyCaveStoryState;
-  SaveFile >> CryptOfKhazZadmStoryState >> OakhavenFreedomQuestState >> AslonaCivilWarState >> RebelStoryState;
+  SaveFile >> CryptOfKhazZadmStoryState >> FreedomStoryState >> AslonaStoryState >> RebelStoryState;
   SaveFile >> PlayerIsChampion >> HasBoat >> PlayerRunning;
   SaveFile >> PlayerMassacreMap >> PetMassacreMap >> MiscMassacreMap;
   SaveFile >> PlayerMassacreAmount >> PetMassacreAmount >> MiscMassacreAmount;
@@ -3930,7 +3930,7 @@ void game::Hostility(team* Attacker, team* Defender)
   for(int c = 0; c < Teams; ++c)
     if(GetTeam(c) != Attacker && GetTeam(c) != Defender
        && GetTeam(c)->GetRelation(Defender) == FRIEND
-       && c != NEW_VALPURIS_TEAM
+       && c != OAKHAVEN_TEAM
        && c != TOURIST_GUIDE_TEAM) // gum solution
       GetTeam(c)->SetRelation(Attacker, HOSTILE);
 }
@@ -6330,7 +6330,7 @@ truth game::TryToEnterSumoArena()
 
 truth game::TryToExitSumoArena()
 {
-  if(GetTeam(PLAYER_TEAM)->GetRelation(GetTeam(NEW_VALPURIS_TEAM)) == HOSTILE)
+  if(GetTeam(PLAYER_TEAM)->GetRelation(GetTeam(OAKHAVEN_TEAM)) == HOSTILE)
     return true;
 
   itemvector IVector;

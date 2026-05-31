@@ -686,7 +686,7 @@ decoration
     BitmapPos = 16, 368;
     HPModifier = 25;
     /* IsAlwaysTransparent = false; */
-    LeftOverItems == mango { Times = 0:1; }
+    LeftOverItems == mangofood { Times = 0:1; }
   }
 
   Config DEAD_TREE;

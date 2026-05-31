@@ -716,7 +716,7 @@ void petrus::BeTalkedTo()
     }
   }
 
-  if(PLAYER->HasHeadOfMalgorath the Blight-Beast())
+  if(PLAYER->HasHeartOfMalgorath())
   {
     game::PlayVictoryMusic();
     game::TextScreen(CONST_S("You have slain Malgorath the Blight-Beast, and Archpriest Cordatus grants you the freedom you desire.\n"
@@ -797,9 +797,9 @@ void petrus::BeTalkedTo()
                              "\"Good luck, and return when thou hast succeeded.\""));
 
     game::LoadWorldMap();
-    v2 Malgorath the Blight-BeastCavePos = game::GetWorldMap()->GetEntryPos(0, ELPURI_CAVE);
-    game::GetWorldMap()->GetWSquare(Malgorath the Blight-BeastCavePos)->ChangeOWTerrain(elpuricave::Spawn());
-    game::GetWorldMap()->RevealEnvironment(Malgorath the Blight-BeastCavePos, 1);
+    v2 MalgorathCavePos = game::GetWorldMap()->GetEntryPos(0, ELPURI_CAVE);
+    game::GetWorldMap()->GetWSquare(MalgorathCavePos)->ChangeOWTerrain(elpuricave::Spawn());
+    game::GetWorldMap()->RevealEnvironment(MalgorathCavePos, 1);
     game::SaveWorldMap();
     GetArea()->SendNewDrawRequest();
     ADD_MESSAGE("\"And by the way, visit the librarian. He might have advice for thee.\"");
@@ -3339,19 +3339,19 @@ void croptender::PostConstruct()
 {
   Stamina = MaxStamina / 5;
   RandomizeProfession();
-  HasDroppedMangos = FeedingMango = false;
+  HasDroppedMangos = FeedingSumo = false;
 }
 
 void croptender::Save(outputfile& SaveFile) const
 {
   humanoid::Save(SaveFile);
-  SaveFile << Profession << HasDroppedMangos << FeedingMango;
+  SaveFile << Profession << HasDroppedMangos << FeedingSumo;
 }
 
 void croptender::Load(inputfile& SaveFile)
 {
   humanoid::Load(SaveFile);
-  SaveFile >> Profession >> HasDroppedMangos >> FeedingMango;
+  SaveFile >> Profession >> HasDroppedMangos >> FeedingSumo;
 }
 
 void smith::BeTalkedTo()
@@ -3455,7 +3455,7 @@ void croptender::GetAICommand()
   if(!IsEnabled())
     return;
 
-  cv2 MangoTarget = FeedingMango ? MANGO_ROOM_POS + v2(1, 2) : v2(45, 45);
+  cv2 MangoTarget = FeedingSumo ? SUMO_ROOM_POS + v2(1, 2) : v2(45, 45);
 
   if(GetPos() == MangoTarget)
   {
@@ -3516,8 +3516,8 @@ void croptender::GetAICommand()
 
     GetStack()->Clean();
     character* Sumo = game::GetSumo();
-    FeedingMango = Sumo && Sumo->GetNP() < (SATIATED_LEVEL + BLOATED_LEVEL) >> 1 && !(RAND() % 15);
-    int Mangos = FeedingMango ? 3 : 10;
+    FeedingSumo = Sumo && Sumo->GetNP() < (SATIATED_LEVEL + BLOATED_LEVEL) >> 1 && !(RAND() % 15);
+    int Mangos = FeedingSumo ? 3 : 10;
 
     for(int c = 0; c < Mangos; ++c)
       GetStack()->AddItem(mango::Spawn());

@@ -244,7 +244,7 @@ Dungeon OAKHAVEN;
 
       Square, Pos 1, 1;
       {
-        Items == mango { Times = 10; }
+        Items == mangofood { Times = 10; }
       }
     }
 
@@ -345,7 +345,7 @@ Dungeon OAKHAVEN;
         Types
         {
           # == 0;
-          b == mango { Chance = 50; SpoilPercentage = 49; Times = 10; }
+          b == mangofood { Chance = 50; SpoilPercentage = 49; Times = 10; }
           k == kiwi { Times = 10; }
           p == pineapple { Times = 3; }
           2 == lantern { SquarePosition = DOWN; }

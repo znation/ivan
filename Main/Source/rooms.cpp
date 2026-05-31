@@ -706,7 +706,7 @@ void library::TeleportSquare(character* Infidel, lsquare* Square)
 
 truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
 {
-  if(game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Hungry->GetTeam()) == HOSTILE)
+  if(game::GetTeam(OAKHAVEN_TEAM)->GetRelation(Hungry->GetTeam()) == HOSTILE)
     return true;
 
   if(Hungry->IsPlayer())
@@ -720,7 +720,7 @@ truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
     {
       if(!Hungry->TryToStealFromShop(GetMaster(), Item))
       {
-        Hungry->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+        Hungry->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
       }
       return true;
     }
@@ -732,7 +732,7 @@ truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
 truth mangodroparea::DropItem(character* Dropper, item* Item, int)
 {
   if(Dropper->IsPlayer() && (Item->IsMangoSeedling()) &&
-    (game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Dropper->GetTeam()) != HOSTILE))
+    (game::GetTeam(OAKHAVEN_TEAM)->GetRelation(Dropper->GetTeam()) != HOSTILE))
   {
     if(game::OakhavenIsFree())
     {
@@ -762,7 +762,7 @@ truth mangodroparea::DropItem(character* Dropper, item* Item, int)
     }
   }
 
-  return (game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Dropper->GetTeam()) == HOSTILE
+  return (game::GetTeam(OAKHAVEN_TEAM)->GetRelation(Dropper->GetTeam()) == HOSTILE
           || (Dropper->IsPlayer() && ((!Item->IsMango() && !Item->IsLanternOnWall())
           || game::TruthQuestion(CONST_S("Do you wish to "
                                          "donate this item "
@@ -772,14 +772,14 @@ truth mangodroparea::DropItem(character* Dropper, item* Item, int)
 void mangodroparea::KickSquare(character* Kicker, lsquare* Square)
 {
   if(!AllowKick(Kicker, Square) && Kicker->IsPlayer()
-     && game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Kicker->GetTeam())
+     && game::GetTeam(OAKHAVEN_TEAM)->GetRelation(Kicker->GetTeam())
      != HOSTILE)
   {
     for(stackiterator i = Square->GetStack()->GetBottom(); i.HasItem(); ++i)
       if(i->IsMango() || i->IsLanternOnWall())
       {
         ADD_MESSAGE("You have harmed the property of the town!");
-        Kicker->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+        Kicker->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
         return;
       }
   }
@@ -787,7 +787,7 @@ void mangodroparea::KickSquare(character* Kicker, lsquare* Square)
 
 truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 {
-  if(game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(HungryMan->GetTeam())
+  if(game::GetTeam(OAKHAVEN_TEAM)->GetRelation(HungryMan->GetTeam())
      == HOSTILE)
     return true;
 
@@ -800,7 +800,7 @@ truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 
     if(game::TruthQuestion(CONST_S("Do you still want to do this? [y/N]")))
     {
-      HungryMan->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+      HungryMan->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
       return true;
     }
   }
@@ -811,14 +811,14 @@ truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 void mangodroparea::TeleportSquare(character* Infidel, lsquare* Square)
 {
   if(!Infidel
-     || game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Infidel->GetTeam())
+     || game::GetTeam(OAKHAVEN_TEAM)->GetRelation(Infidel->GetTeam())
      == HOSTILE)
     return;
 
   for(stackiterator i = Square->GetStack()->GetBottom(); i.HasItem(); ++i)
     if(i->IsMango() || i->IsLanternOnWall())
     {
-      Infidel->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+      Infidel->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
       return;
     }
 }
@@ -855,7 +855,7 @@ truth library::AllowKick(ccharacter* Char, const lsquare* LSquare) const
 truth mangodroparea::AllowKick(ccharacter* Char, const lsquare*) const
 {
   return (!Char->IsPlayer()
-          || (game::GetTeam(NEW_VALPURIS_TEAM)->GetRelation(Char->GetTeam())
+          || (game::GetTeam(OAKHAVEN_TEAM)->GetRelation(Char->GetTeam())
               == HOSTILE));
 }
 
@@ -890,24 +890,24 @@ void library::HostileAction(character* Guilty) const
 void mangodroparea::HostileAction(character* Guilty) const
 {
   if(Guilty)
-    Guilty->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+    Guilty->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
 }
 
 void sumoarena::DestroyTerrain(character* Who)
 {
   if(Who)
-    Who->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+    Who->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
 }
 
 void sumoarena::HostileAction(character* Guilty) const
 {
   if(Guilty)
-    Guilty->GetTeam()->Hostility(game::GetTeam(NEW_VALPURIS_TEAM));
+    Guilty->GetTeam()->Hostility(game::GetTeam(OAKHAVEN_TEAM));
 }
 
 truth sumoarena::CheckDestroyTerrain(character* Infidel)
 {
-  if(Infidel->GetTeam()->GetRelation(game::GetTeam(NEW_VALPURIS_TEAM))
+  if(Infidel->GetTeam()->GetRelation(game::GetTeam(OAKHAVEN_TEAM))
      == HOSTILE)
     return true;
 
