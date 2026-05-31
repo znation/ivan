@@ -470,11 +470,11 @@ Standalone text files; independent of each other. Use Claude with the style guid
 
 ### Phase 4: Documentation Updates
 
-#### Task 4.1: [ ] Rewrite `MANUAL`
+#### Task 4.1: [x] Rewrite `MANUAL`
 - ~5 story references: forum name, website URL, Valpurus → Valpuris in alignment explanation
 - Keep structure and formatting; only update setting-specific names
 
-#### Task 4.2: [ ] Rewrite `NEWS`
+#### Task 4.2: [x] Rewrite `NEWS`
 - ~36+ story references throughout historical changelog entries
 - Keep dates and structure; adapt all setting-specific names
 

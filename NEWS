@@ -46,8 +46,8 @@ Version 0.58, released 15th March 2020
 Changes:
 * Add Aslona!
 * Add new ROOM_OWNED_AREA type for generic owned rooms. Uses code similar to
-  the Cathedral or Decos' house.
-* Change structure of quests. Petrus now takes the encrypted scroll and gives
+  the Cathedral or Decimus' house.
+* Change structure of quests. Archpriest Cordatus now takes the encrypted scroll and gives
   you some alone time. If you chat with him again, you will receive the GC quest,
   or you can find other people to chat for other quests.
 * Add some new monsters, items, artifacts, materials and crafting recipes.
@@ -81,7 +81,7 @@ Changes:
 * Add many new sound effects.
 
 Fixes:
-* Decos no longer lets you steal from him.
+* Decimus no longer lets you steal from him.
 * You can no longer leave the Black Market through walls.
 * Slightly nerf Black Market.
 * Display Willpower in wizard mode secrets.
@@ -141,7 +141,7 @@ Version 0.56, released 19th February 2019
 -----------------------------------------
 
  Changes:
-* New banana-and-pick-axe icon on Mac and Windows.
+* New mango-and-pick-axe icon on Mac and Windows.
 * Remove Google groups e-mail address.
 
 Fixes:
@@ -157,7 +157,7 @@ Version 0.55, released 20th December 2018
 -----------------------------------------
 
 Changes:
-* Added Freedom for Tweraif victory: It is now possible to win by bringing freedom to Tweraif, and then making sure it stays free. It is a low-ranking win, but at least your village will be safe.
+* Added Freedom for Oakhaven victory: It is now possible to win by bringing freedom to Oakhaven, and then making sure it stays free. It is a low-ranking win, but at least your village will be safe.
 * Considerably reworked Lobh-se.
 * Added new shields, amulet, wand and artifacts.
 * Added several new materials.
@@ -168,7 +168,7 @@ Changes:
 * Decreased frequency of magical equipment.
 * Improved stethoscope display.
 * Tweak the effects of prayers.
-* You may only become the champion of either Valpurus or Mortifer.
+* You may only become the champion of either Valpuris or Mortifer.
 * Increase effects of Wisdom on prayers.
 * You can now attempt to steal from shops.
 * Added crafting.
@@ -253,12 +253,12 @@ Changes:
 * Outlined graphics from IVAN3D.
 * Option to display the turn number on log messages.
 
-Tomb of Xinroch, now with MORE evil:
-* Buffed both Xinrochs.
-* Buffed Xinroch's grave keeper.
+Tomb of Khaz-Zadm, now with MORE evil:
+* Buffed both Khaz-Zadm bosses.
+* Buffed Khaz-Zadm's grave keeper.
 * Slightly better rewards for bosses.
 * One more vault for Catacombs.
-* Maze on ghost Xinroch's level made more interesting.
+* Maze on ghost Khaz-Zadm's level made more interesting.
 * Tweaked dwarven gas chamber.
 * Added two hidden vaults to TX.
 * Added a small TX shop.
@@ -298,7 +298,7 @@ Changes:
 * New horn of healing and horn of plenty.
 * New wand of webbing and alchemy.
 * New dwarven gas traps.
-* Golem room in Tomb of Xinroch now spawns only bone golems.
+* Golem room in Tomb of Khaz-Zadm now spawns only bone golems.
 
 Fixes:
 * Magic weapon price increased.
@@ -321,15 +321,15 @@ Version 0.50.9, released 27th October 2017
 
 Changes:
 * Several hundered new dialogue lines added,
-* Story of Xinroch added,
+* Story of Khaz-Zadm added,
 * 45 new items, including several artifacts, added,
 * Full helmets grant sound resistance,
 * Tin headgear block ESP,
 * Several potions added,
 * Two new optional minibosses are generated,
 * Spider level added,
-* Improvements to Attnam and its underground,
-* More people in Tomb of Xinroch,
+* Improvements to Valpuris and its underground,
+* More people in Tomb of Khaz-Zadm,
 * Sirens can be generated,
 * Science talking with more NPCs possible,
 * Several materials added,
@@ -346,8 +346,8 @@ Version 0.50.8, released 23rd December 2016
 -------------------------------------------
 
 Changes:
-* New Christmas trees in Attnam during Atavus Day!!!
-* New Grand Stollen Knife of Attnam!!!
+* New Christmas trees in Valpuris during Atavus Day!!!
+* New Grand Stollen Knife of Valpuris!!!
 * New message when sitting on an iron maiden!?
 * Periodic warnings for leprosy.
 * Significant re-balancing of prayer effects.
@@ -359,7 +359,7 @@ Fixes:
 * Fountain dipping works like other dipping.
 * Quest items can no longer be sold.
 * As usual, multifarious grammatical corrections. :)
-* Lots of rearranging of the Tomb of Xinroch (TX).
+* Lots of rearranging of the Tomb of Khaz-Zadm (TX).
 * New world map icon for TX.
 * Sun shines on TX Entry level.
 
@@ -375,7 +375,7 @@ Released as a part of the Annual Roguelike Release Party.
 Changes:
 * New multi-platform build system: instructions can be found in INSTALL.
 * Add music!!!
-* New dungeon: the Tomb of Xinroch.
+* New dungeon: the Tomb of Khaz-Zadm.
 * Priests and priestesses can heal burns on body parts, and also put out the character if they're on fire.
 * Enner Beast now has a place to catch fish.
 * Maze rooms!
@@ -412,7 +412,7 @@ Changes:
 Fixes:
 * Screenshot directory now created before taking screenshot.
 * Fixed a bothersome problem with pet movement.
-* Coffin sprite now correctly used in the Attnam Catacombs.
+* Coffin sprite now correctly used in the Valpuris Catacombs.
 * Toggle option for smart open/close/apply functions.
 * Explosions only cause bleeding if they cause physical damage.
 * Can no longer eat or drink burning objects
@@ -450,7 +450,7 @@ Version 0.50.2, released 11th April 2015
 
 Changes:
 * Whips can be broken.
-* Female slaves are team New Attnam, not Imperialist team.
+* Female slaves are team Oakhaven, not Imperialist team.
 * Skeletons can be spawned by zapping wand of necromancy at a pile of bones and a skull. With high Int, you create skeleton warriors instead.
 * Melee weapons that are on fire will do fire damage, with a chance to set limbs on fire.
 * Gods will now answer to the new perils of fire subsystem when you pray.
@@ -500,7 +500,7 @@ Fire subsystem:
 Fixes:
 * Found that materials no longer sparkle if dipped in fluids, and no longer resume sparkling even after the fluid has evaporated, which is a BUG!
 * Fixed a provisional bug where scrolls and books could be dipped without being on fire.
-* Ghosts, powder, fluids were all burning. Even the snow in Attnam was on fire! This was fixed for gases, fluids and powders.
+* Ghosts, powder, fluids were all burning. Even the snow in Valpuris was on fire! This was fixed for gases, fluids and powders.
 * Fixed window bug.
 * Removed test1 and test2 sirens.
 * Fixed typo in Atavus X-mas message.
@@ -509,15 +509,15 @@ Fixes:
 * Fixed cycleoption to be more generic (thus usable for other config options), rather than having code for the DirectionKeyMap option within its functions.
 * Bugfix for off-center loading animation.
 * Typo fixes.
-* Fixed bug in gods.cpp that caused game to not display the last time the player prayed to Valpurus and Mortifer.
+* Fixed bug in gods.cpp that caused game to not display the last time the player prayed to Valpuris and Mortifer.
 * Fixed Silva Earthquake crashing on GC6.
 * Player or NPC being struck by mine-activated mustard gas no longer causes a crash.
 * Gas immunity bones message bug (thanks Pent, Eagle V) fixed(?) and needs testing.
 * Fixed the shop door creation bug (dungeon script files).
 * "Fixed" Elite guard taming: TamingDifficulty = 30.
-* Double checked that Ommel Cerumen cannot be wished for (this is therefore fixed).
+* Double checked that Brambleback Cerumen cannot be wished for (this is therefore fixed).
 * Fixed the library exploit.
-* Fixed the banana room exploit.
+* Fixed the mango room exploit.
 * Holy hand grenade arm and drop in cathedral now go to dwarf room.
 * Mustard gas hostility bug fixed.
 * Fixed the drinking pea soup in the world map bug by including a check to avoid attempting to place a gas cloud in over world.
@@ -564,12 +564,12 @@ Changes:
 * Some code related to mind worms added
 * Mola Mola added to char.pcx by Kahvi
 * Bats and spiders are now animated
-* Added some underground levels to Attnam
+* Added some underground levels to Valpuris
 * Coffin added
 * Punisher added
-* Added Kahvi's map of Attnam's cellar partially
+* Added Kahvi's map of Valpuris's cellar partially
 * Added new abstraction for locked items
-* Attnam's cellar has lamps
+* Valpuris's cellar has lamps
 * Humanoid.pcx modified, ready for Kahvi's addition of broken armor pics
 * Added a smiley to the "Unfortunately you died." screen
 * Added can materials
@@ -577,14 +577,14 @@ Changes:
 * Added zombie of Khaz-zadm
 * Added lots of new zombies, skeletons and ghosts
 * Added first-born sons and daughters
-* You can now gift stuff to Petrus's wives
+* You can now gift stuff to Archpriest Cordatus's wives
 * Implemented alcoholic guards
 * Items can now be hasted and slowed to speed or slow their spoiling
 * Whip of thievery is now less powerful when thrown
 * Some of the best monsters are now immune to thievery
 * Lines cut in materia.cpp
 * Coffin added to OLTerra.pcx by Kahvi
-* Pregnant wife of Petrus torso added to Humanoid.pcx by Kahvi
+* Pregnant wife of Archpriest Cordatus torso added to Humanoid.pcx by Kahvi
 * Added enner beast image by blob to GC5 entering screen
 
 Fixes:
@@ -614,8 +614,8 @@ Fixes:
 * A small bug correction in the lookmode
 * Children no longer spoil
 * Corrected a bug in the scroll of change material code
-* Corrected a crash which occurred while wearing a Decos ad shirt
-* Ommel cerumen can no longer be wished
+* Corrected a crash which occurred while wearing a Decimus ad shirt
+* Brambleback cerumen can no longer be wished
 * Fixed a bug in the dagger of venom code
 * Fixed a fatal bug in the fly code
 * Fixed a bug in the weaponskill code
@@ -628,7 +628,7 @@ Version 0.50, released 10th December 2004
 * items made of iron alloys can now rust
 * added directional light and day and night which use it
 * added some cosmetical weather effects
-* New Attnam has now many new NPCs, for instance a sumo wrestler who
+* Oakhaven has now many new NPCs, for instance a sumo wrestler who
   can be challenged
 * polymorph control is now more interesting; you need to see a monster
   once before you can polymorph into it, and more powerful ones require
