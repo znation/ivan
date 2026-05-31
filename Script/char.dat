@@ -248,7 +248,7 @@ character
     "cold fusion", "execution",  "warfare", "miracles", "the truth",
 
     "herecy", "programming", "gaming", "spheres", "curves",
-    "shapes", "speciesism", "feudalism", "bananas", "poker",
+    "shapes", "speciesism", "feudalism", "mangos", "poker",
     "meteorology", "pornography", "waves", "anarchy", "torture",
     "accidents", "activity", "theathre", "runes", "writing",
     "masonry", "pottery", "religions", "burial", "working",
@@ -398,10 +398,10 @@ petrus
   RightSWeaponSkillHits = 1000;
   PanicLevel = 0;
   CanBeCloned = false;
-  DefaultName = "Petrus";
+  DefaultName = "Archpriest Valerius Cordatus";
   DeathMessage = "The high priest disappears in a bright light and only his left nut is left behind.";
   /* Replies overridden */
-  /* BloodMaterial specifically *not* BLUE_BLOOD, as Petrus is of humble parentage */
+  /* BloodMaterial specifically *not* BLUE_BLOOD, as Archpriest Cordatus is of humble parentage */
   AttachedGod = VALPURIS;
   BodyPartsDisappearWhenSevered = true;
   CanBeConfused = false;
@@ -447,7 +447,7 @@ farmer
     "@Dd seems suspicious. \"You look like one from Luppliva! Go away!\"",
     "@Dd sighs: \"Again polar bears ate my cattle...\"",
     "\"I would like to be like Ivan. Ivan is a good worker.\"",
-    "\"Have you heard about the Justice Legion of Attnam? What? No, I have not. It's forbidden to know anything about them.\"",
+    "\"Have you heard about the Justice Legion of Valpuris? What? No, I have not. It's forbidden to know anything about them.\"",
     "\"I'd better not see you flirt with my wife, or else...\"",
     "\"You! Ain't you from Mondedr, stranger?! I'll be watching you.\"",
     "\"Eh?\"",
@@ -481,7 +481,7 @@ farmer
     FriendlyReplies =
     {
       5,
-      "\"Let's just say that Petrus' wife No. 3 was beautiful and I wasn't careful.\"",
+      "\"Let's just say that Archpriest Cordatus' wife No. 3 was beautiful and I wasn't careful.\"",
       "\"Would you have a nut to spare?\"",
       "\"Eh?\"",
       "\"Huh?\"",
@@ -511,34 +511,34 @@ farmer
       "\"Praised be Cruentus!\"",
       "\"Praised be Infuscor!\"",
       "\"Blood for Cruentus! Souls for Infuscor!\"",
-      "\"Long, long time ago, there was a War in Heavens. Valpurus rose to usurp the throne of Mortifer, then King of Gods, and eventually triumphed. After his armies conquered all Heavens, Valpurus murdered Mortifer and banished him into the darkness beyond stars.\"",
+      "\"Long, long time ago, there was a War in Heavens. Valpuris rose to usurp the throne of Mortifer, then King of Gods, and eventually triumphed. After his armies conquered all Heavens, Valpuris murdered Mortifer and banished him into the darkness beyond stars.\"",
       "\"To prevent the destruction of the very world they were fighting for, Mortifer placed a powerful geas upon all gods that prevents them from ever entering the world. Thus, even the primordial War in Heavens was fought by the many priests and other servants the gods have acquired and empowered.\"",
-      "\"The original Order of the Dark Knights was established by Cruentus nearly three millennia ago, to battle the knights templar of Valpurus during the ancient War in Heavens.\"",
+      "\"The original Order of the Dark Knights was established by Cruentus nearly three millennia ago, to battle the knights templar of Valpuris during the ancient War in Heavens.\"",
       "\"Today, the dark knights have splintered into two distinct branches, the Unholy Order of Infuscor and the Dark Knights of Cruentus, plus a handful of fringe cults.\"",
       "\"All dark knights are still formally united under the leadership of a grand master dark knight, though how much do masters of each group heed the orders of their grand master depends entirely upon his or her power and authority.\"",
       "\"The name of the first grand master dark knight was lost to history, yet his deeds remain. Legends say he was more a daemon than a man. He even won the favour of Mortifer and was given the newly forged Neerc Se-ulb to wield against the swarming armies of Light.\"",
-      "\"The first grand master dark knight led his armies from victory to victory, but pride was his undoing. Believing that none could defeat him, he challenged Pervetus, the high priest of Valpurus, to a duel. At first, it seemed to quickly be turning into another easy victory... until his mace-arm was severed.\"",
+      "\"The first grand master dark knight led his armies from victory to victory, but pride was his undoing. Believing that none could defeat him, he challenged Pervetus, the high priest of Valpuris, to a duel. At first, it seemed to quickly be turning into another easy victory... until his mace-arm was severed.\"",
       "\"When the first grand master dark knight fell and Neerc Se-ulb was lost for a time, Mortifer vowed to never lend his mace again but to a true champion of Chaos. But Cruentus trusted in the power of his dark knights and the next grand master received the terrible halberd named Mjolak to crush all who would oppose the god of blood.\"",
-      "\"The second grand master dark knight was a son of the first one. He swore an oath of revenge, to slay the high priest of Valpurus in honor of his father's death. Yet his name was erased from all records to clean the stain of shame he brought upon his family.\"",
-      "\"The second grand master dark knight ruthlessly crushed all resistance and many an enemy fled even before battle, for his trumpeters used horns of fear to devastating effect. Where the father took nearly a decade to slowly force valpurian troops back, the son brought his army of dark knights before the gates of the Citadel of Valpurus in only a few years.\"",
-      "\"As his men razed and burned the once-mighty Citadel of Valpurus, the second grand master dark knight assailed Pervetus, the high priest of Valpurus. Now being of venerable age, Pervetus quickly fell to the power of Mjolak.\"",
+      "\"The second grand master dark knight was a son of the first one. He swore an oath of revenge, to slay the high priest of Valpuris in honor of his father's death. Yet his name was erased from all records to clean the stain of shame he brought upon his family.\"",
+      "\"The second grand master dark knight ruthlessly crushed all resistance and many an enemy fled even before battle, for his trumpeters used horns of fear to devastating effect. Where the father took nearly a decade to slowly force valpurian troops back, the son brought his army of dark knights before the gates of the Citadel of Valpuris in only a few years.\"",
+      "\"As his men razed and burned the once-mighty Citadel of Valpuris, the second grand master dark knight assailed Pervetus, the high priest of Valpuris. Now being of venerable age, Pervetus quickly fell to the power of Mjolak.\"",
       "\"In a hubris of an easy victory, the second grand master dark knight turned his back to the dead high priest Pervetus he just slain and did not see a strange glow of a magical amulet that brought Pervetus back with renewed vigor. The high priest lifted Justifier and with a single mightly blow, cut off both of the grand master's hands. And in a single moment of weakness, the grand master shamed his family for the ages to come, for he didn't face death with dignity, but panicked and ran for his life.\"",
-      "\"Our lord Xinroch was the greatest and most powerful grand master dark knight to ever live, and the third to bear that title. His two crossed flaming swords are still found on the banner of the grand master dark knights to this day.\"",
-      "\"Some sources claim Xinroch was no one in his youth, maybe even one of the children kidnapped from forgotten villages to be trained for war. But soon, his talents became apparent. He was clever, quick to learn and utterly ruthless when he could get what he wanted.\"",
-      "\"In his many skirmishes with the forces of Light, Xinroch destroyed two archangels, Incendo and Lucis, and took their flaming swords. He wielded them with unparalleled skill, earning him the sobriquet of 'Xinroch the Flame of Chaos'.\"",
-      "\"While his predecessors were beasts on the battlefield and masters of the military arts of tactics and strategy, Xinroch was well-versed in the use of another weapon they rarely considered - diplomacy. He conquered a land - then used the fear to gain ten times more in a fraction of time.\"",
-      "\"Xinroch was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
-      "\"Even Ischaldirh, the champion of Infuscor since times immemorial, who always thought of warriors as nothing more than brutes and uncivilized savages, eventually befriended Xinroch and accompanied him on many a campaign. Not even demigods could stand in their way.\"",
-      "\"Just as Xinroch outlived high priest Pervetus and took all his lands, years caught up with Xinroch at last after a life full of victory. No matter how strong magic sustains the body, mortals were created to die and all that lives will wither eventually. Only that which already died and was raised to undeath or which ascended beyond this world is truly immortal.\"",
-      "\"During one of the countless battles late in his life, Xinroch lost one of the iconic ruby flaming swords he wielded most of his life. The dwarves of Khaz-zadm forged an arcanite shield for him, but it was clear to everyone his prime years have irreversibly passed.\"",
-      "\"In his declining years, Xinroch heavily funded research into the newly-invented magic school of necromancy. It was thanks to his sponsorship that this discipline could start to spread, but unfortunately the early necromancers were unable to stave off the dwindling of Xinroch's life.\"",
-      "\"Xinroch died in a glorious battle. His army crushed the invasion of frost giants while Xinroch himself, by then of venerable age, dueled and slayed their jarl. Yet his years and exhaustion took their toll and Xinroch could not fend off the treacherous dagger his most trusted lieutenant turned against him. Old grand master slain and the battle won, this second-in-command became the new grand master dark knight.\"",
-      "\"Xinroch's successor feared his former master so much he eventually resigned his title of the grand master dark knight and entered the Tomb, to remain enternally vigilant as a keeper of Xinroch's grave and prevent Xinroch's resurrection and terrible revenge.\"",
-      "\"When Xinroch brought dark knights and dark mages together in a peculiar alliance, even their two ever-rival gods set aside their differences for a time. What none of their worshippers could expect, though, was the child born from the blood of Cruentus and the dark magic of Infuscor, the first vampire.\"",
-      "\"This Tomb was erected on the battlefield where Xinroch was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory. Let his majestic glory never be forgotten!\"",
-      "\"Some believe it is possible to bring our lord Xinroch back. Whether through high necromancy or some dark miracle, he might be able to lead his faithful again!\"",
-      "\"It was a great shame to the dark templars when several decades ago, an unknown necromancer managed to slip past their guards and animate the skeleton of Xinroch in a mockery of his once-living might. Whether the spell was cast with belief that it could truly bring Xinroch back, or with utmost disrespect for the dearly departed, the dark templars swore they will never allow another man or woman to enter their lord's resting place.\"",
-      "\"All hail our mighty lord Xinroch.\"";
+      "\"Our lord Khaz-Zadm was the greatest and most powerful grand master dark knight to ever live, and the third to bear that title. His two crossed flaming swords are still found on the banner of the grand master dark knights to this day.\"",
+      "\"Some sources claim Khaz-Zadm was no one in his youth, maybe even one of the children kidnapped from forgotten villages to be trained for war. But soon, his talents became apparent. He was clever, quick to learn and utterly ruthless when he could get what he wanted.\"",
+      "\"In his many skirmishes with the forces of Light, Khaz-Zadm destroyed two archangels, Incendo and Lucis, and took their flaming swords. He wielded them with unparalleled skill, earning him the sobriquet of 'Khaz-Zadm the Flame of Chaos'.\"",
+      "\"While his predecessors were beasts on the battlefield and masters of the military arts of tactics and strategy, Khaz-Zadm was well-versed in the use of another weapon they rarely considered - diplomacy. He conquered a land - then used the fear to gain ten times more in a fraction of time.\"",
+      "\"Khaz-Zadm was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
+      "\"Even Ischaldirh, the champion of Infuscor since times immemorial, who always thought of warriors as nothing more than brutes and uncivilized savages, eventually befriended Khaz-Zadm and accompanied him on many a campaign. Not even demigods could stand in their way.\"",
+      "\"Just as Khaz-Zadm outlived high priest Pervetus and took all his lands, years caught up with Khaz-Zadm at last after a life full of victory. No matter how strong magic sustains the body, mortals were created to die and all that lives will wither eventually. Only that which already died and was raised to undeath or which ascended beyond this world is truly immortal.\"",
+      "\"During one of the countless battles late in his life, Khaz-Zadm lost one of the iconic ruby flaming swords he wielded most of his life. The dwarves of Khaz-zadm forged an arcanite shield for him, but it was clear to everyone his prime years have irreversibly passed.\"",
+      "\"In his declining years, Khaz-Zadm heavily funded research into the newly-invented magic school of necromancy. It was thanks to his sponsorship that this discipline could start to spread, but unfortunately the early necromancers were unable to stave off the dwindling of Khaz-Zadm's life.\"",
+      "\"Khaz-Zadm died in a glorious battle. His army crushed the invasion of frost giants while Khaz-Zadm himself, by then of venerable age, dueled and slayed their jarl. Yet his years and exhaustion took their toll and Khaz-Zadm could not fend off the treacherous dagger his most trusted lieutenant turned against him. Old grand master slain and the battle won, this second-in-command became the new grand master dark knight.\"",
+      "\"Khaz-Zadm's successor feared his former master so much he eventually resigned his title of the grand master dark knight and entered the Tomb, to remain enternally vigilant as a keeper of Khaz-Zadm's grave and prevent Khaz-Zadm's resurrection and terrible revenge.\"",
+      "\"When Khaz-Zadm brought dark knights and dark mages together in a peculiar alliance, even their two ever-rival gods set aside their differences for a time. What none of their worshippers could expect, though, was the child born from the blood of Cruentus and the dark magic of Infuscor, the first vampire.\"",
+      "\"This Tomb was erected on the battlefield where Khaz-Zadm was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory. Let his majestic glory never be forgotten!\"",
+      "\"Some believe it is possible to bring our lord Khaz-Zadm back. Whether through high necromancy or some dark miracle, he might be able to lead his faithful again!\"",
+      "\"It was a great shame to the dark templars when several decades ago, an unknown necromancer managed to slip past their guards and animate the skeleton of Khaz-Zadm in a mockery of his once-living might. Whether the spell was cast with belief that it could truly bring Khaz-Zadm back, or with utmost disrespect for the dearly departed, the dark templars swore they will never allow another man or woman to enter their lord's resting place.\"",
+      "\"All hail our mighty lord Khaz-Zadm.\"";
     }
     ScienceTalkPossibility = 0;
     Inventory = { 2, holybook(CRUENTUS) { Chance = 10; }, wand(WAND_OF_NECROMANCY) { Chance = 10; } }
@@ -653,13 +653,13 @@ guard
     FriendlyReplies =
     {
       7,
-      "@Dd says sadly: \"Back then I used to love bananas. One day the master guard slipped on a peel I'd dropped. Guess where I got transferred?\"",
-      "\"Lions killed a couple of banana growers again. Hope they're now satisfied and don't attack us.\"",
+      "@Dd says sadly: \"Back then I used to love mangos. One day the master guard slipped on a peel I'd dropped. Guess where I got transferred?\"",
+      "\"Lions killed a couple of crop tenders again. Hope they're now satisfied and don't attack us.\"",
       "\"This place's as hot as the elemental plane of fire! I want back home.\"",
       "\"What lousy pay we're getting here!\"",
       "\"The food's not fit for orcs!\"",
       "\"My feet hurt, I've been on them all day!\"",
-      "\"New Attnam, damn, I'm still only in New Attnam. Every time I think I'm gonna wake up back in the dungeon.\"";
+      "\"Oakhaven, damn, I'm still only in Oakhaven. Every time I think I'm gonna wake up back in the dungeon.\"";
     }
     DeathMessage = "@Dd dies screaming: \"Please, no! I don't want to die!\"";
     AutomaticallySeen = true;
@@ -739,10 +739,10 @@ guard
     FriendlyReplies =
     {
       4,
-      "@Dd states in a very serious tone: \"My job is vital for the safety of the nation. No one knows what Petrus would do if something happened to his most dear lovers, or one of them escaped.\"",
+      "@Dd states in a very serious tone: \"My job is vital for the safety of the nation. No one knows what Archpriest Cordatus would do if something happened to his most dear lovers, or one of them escaped.\"",
       "\"Don't you dare to touch any of the ladies!\"",
       "\"And everyone said I didn't have the balls to achieve a high status in the guard! Hah!\"",
-      "@Dd seems very proud. \"I'm not just a guard, but also the lead singer in the Cathedral's choir. My mezzo-soprano voice is famous Attnam-wide.\"";
+      "@Dd seems very proud. \"I'm not just a guard, but also the lead singer in the Cathedral's choir. My mezzo-soprano voice is famous Valpuris-wide.\"";
     }
   }
 
@@ -802,7 +802,7 @@ guard
       "\"I know your kind, always sneaking about. Won't fool me!\"",
       "\"Hands to yourself, thief! Oh, sorry, you came to buy something?\"",
       "\"Your gold is welcome here.\"",
-      "\"Attnam's guards can barely wield a sword. But we are trained by the laws of the dungeon, so don't make any rash moves here.\"",
+      "\"Valpuris's guards can barely wield a sword. But we are trained by the laws of the dungeon, so don't make any rash moves here.\"",
       "\"When I was here, I wanted to be there, when I was there all I could think of was getting back into the dungeon.\"";
     }
     HostileReplies =
@@ -839,7 +839,7 @@ guard
       7,
       "@Dd sounds annoyed. \"Why do I have to work with these amateurs? They can't beat a rookie dark knight properly!\"",
       "\"Don't believe Haedlac if he boasts about that enner beast. In reality he fled immediately and the monster stepped on a land mine while chasing him.\"",
-      "@Dd shouts excitedly: \"Attnam victoor!\"",
+      "@Dd shouts excitedly: \"Valpuris victoor!\"",
       "\"We are the Imperial Guard. Bow.\"",
       "\"Hi! You look fabulous today!\"",
       "\"Out of my way, scum!\"",
@@ -881,25 +881,25 @@ guard
     {
       14,
       "\"And this medal I got after killing my first enner beast using ingenious tactical maneuvers...\"",
-      "\"My great-grandfather, Sir Haedlac Galladon IV, once told me a story he heard from his great-grandfather: That when the young Petrus lead the Revolution, his beard was only one foot long. Not that I would believe such urban legends.\"",
-      "\"In addition to all my other responsibilities, I am the head of the Attnamese Bureau of Investigation. By the way, you love mangos and hate bananas.\"",
+      "\"My great-grandfather, Sir Haedlac Galladon IV, once told me a story he heard from his great-grandfather: That when the young Archpriest Cordatus lead the Revolution, his beard was only one foot long. Not that I would believe such urban legends.\"",
+      "\"In addition to all my other responsibilities, I am the head of the Valpurian Bureau of Investigation. By the way, you love mangos and hate mangos.\"",
       "\"See the amulet? Don't think badly of the Government.\"",
       "\"No crime can be tolerated. Justice shall tower over freedom!\"",
       "\"In my left hand, judgement - in my right, retribution!\"",
       "\"Those Shining Knights think they are above law, delivering 'justice' as they see fit. A law is a law, even for a paladin.\"",
-      "\"I will never allow vigilantes in Attnam. Lady Decora must learn her place.\"",
+      "\"I will never allow vigilantes in Valpuris. Lady Decora must learn her place.\"",
       "\"Enemy of my enemy is still my enemy, but much easier to double cross.\"",
       "\"You can't make an omelet without ruthlessly crushing dozens of eggs beneath your steel boot and then publicly disemboweling the chickens that laid them as a warning to others.\"",
-      "\"I'm the Attnamese Cardinal of Peace. I shall bring peace to the whole world, one nation at a time.\"",
+      "\"I'm the Valpurian Cardinal of Peace. I shall bring peace to the whole world, one nation at a time.\"",
       "\"Stop, citizen! You are guilty of a thought-crime! I thereby condemn you to re-education by the hand of the master torturer! Tee hee - just kidding. But you should have seen your face!\"",
-      "\"I'm the seventh knight of my family line in the service of Petrus. My great-great-great-great-grandfather received knighthood after he helped Petrus overthrow High Priest Priscus.\"",
-      "\"The house of Galladon has served Petrus ever since he took over.\"";
+      "\"I'm the seventh knight of my family line in the service of Archpriest Cordatus. My great-great-great-great-grandfather received knighthood after he helped Archpriest Cordatus overthrow High Priest Priscus.\"",
+      "\"The house of Galladon has served Archpriest Cordatus ever since he took over.\"";
     }
     HostileReplies =
     {
       3,
       "\"Your transgressions end here!\"",
-      "\"My mandate is absolute. I am above question, above doubt. Valpurus guides me and commands your destruction.\"",
+      "\"My mandate is absolute. I am above question, above doubt. Valpuris guides me and commands your destruction.\"",
       "\"There is mercy for the repentant - for you, there is punishment and death!\"";
     }
     IsImmuneToItemTeleport = true;
@@ -927,11 +927,11 @@ guard
       9,
       "@Dd says helplessly: \"I know, right? Purple. It had to be Infuscor's favourite color.\"",
       "\"Don't even think of disturbing the Tomb.\"",
-      "\"They say Xinroch's restless soul dwells below. I heard it guards a portal to another dimension. I wouldn't be caught dead going through there.\"",
+      "\"They say Khaz-Zadm's restless soul dwells below. I heard it guards a portal to another dimension. I wouldn't be caught dead going through there.\"",
       "\"Souls for Infuscor!\"",
-      "\"Our lord Xinroch was the greatest and most powerful grand master dark knight to ever live, and the third to bear that title.\"",
-      "\"Xinroch was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
-      "\"This Tomb was erected on the battlefield where Xinroch was slain, replacing the old temple ravaged and desecrated during the last battle.\"",
+      "\"Our lord Khaz-Zadm was the greatest and most powerful grand master dark knight to ever live, and the third to bear that title.\"",
+      "\"Khaz-Zadm was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
+      "\"This Tomb was erected on the battlefield where Khaz-Zadm was slain, replacing the old temple ravaged and desecrated during the last battle.\"",
       "\"Today, the dark knights have splintered into two distinct branches, the Unholy Order of Infuscor and the Dark Knights of Cruentus, plus a handful of fringe cults.\"",
       "@Dd mutters. \"Hundreds of years guarding this Tomb. I wish those necromancers would get on with it!\"";
     }
@@ -970,15 +970,15 @@ guard
     FriendlyReplies =
     {
       10,
-      "\"An old temple of the Dark Gods once stood here, during Xinroch's leadership. Here he declared himself the grand master dark knight. Here he brought the forces of Infuscor and Cruentus together for the first time. Here he died.\"",
-      "\"This Tomb was erected on the battlefield where Xinroch was slain, replacing the old temple ravaged and desecrated during the last battle.\"",
-      "\"Xinroch's successor feared his former master so much he eventually resigned his title of the grand master dark knight and entered the Tomb, to remain enternally vigilant as a keeper of Xinroch's grave and prevent Xinroch's resurrection and terrible revenge.\"",
-      "\"We await the return of our lord Xinroch to lead the forces of Darkness into battle against the High Priest of Valpurus!\"",
-      "\"Since Xinroch was the grand master dark knight, all the masters of the Unholy Order of Infuscor have come here to kneel at the altar. The next master of the Unholy Order would be chosen by Infuscor herself.\"",
+      "\"An old temple of the Dark Gods once stood here, during Khaz-Zadm's leadership. Here he declared himself the grand master dark knight. Here he brought the forces of Infuscor and Cruentus together for the first time. Here he died.\"",
+      "\"This Tomb was erected on the battlefield where Khaz-Zadm was slain, replacing the old temple ravaged and desecrated during the last battle.\"",
+      "\"Khaz-Zadm's successor feared his former master so much he eventually resigned his title of the grand master dark knight and entered the Tomb, to remain enternally vigilant as a keeper of Khaz-Zadm's grave and prevent Khaz-Zadm's resurrection and terrible revenge.\"",
+      "\"We await the return of our lord Khaz-Zadm to lead the forces of Darkness into battle against the High Priest of Valpuris!\"",
+      "\"Since Khaz-Zadm was the grand master dark knight, all the masters of the Unholy Order of Infuscor have come here to kneel at the altar. The next master of the Unholy Order would be chosen by Infuscor herself.\"",
       "\"All dark knights are still formally united under the leadership of a grand master dark knight, though how much do masters of each group heed the orders of their grand master depends entirely upon his or her power and authority.\"",
       "\"The amulet? Heh, good insurance policies are hard to come by.\"",
-      "\"Some believe it is possible to bring our lord Xinroch back. Whether through high necromancy or some dark miracle, he might be able to lead his faithful again!\"",
-      "\"It was a great shame to the dark templars when several decades ago, an unknown necromancer managed to slip past their guards and animate the skeleton of Xinroch in a mockery of his once-living might. Whether the spell was cast with belief that it could truly bring Xinroch back, or with utmost disrespect for the dearly departed, the dark templars swore they will never allow another man or woman to enter their lord's resting place.\"",
+      "\"Some believe it is possible to bring our lord Khaz-Zadm back. Whether through high necromancy or some dark miracle, he might be able to lead his faithful again!\"",
+      "\"It was a great shame to the dark templars when several decades ago, an unknown necromancer managed to slip past their guards and animate the skeleton of Khaz-Zadm in a mockery of his once-living might. Whether the spell was cast with belief that it could truly bring Khaz-Zadm back, or with utmost disrespect for the dearly departed, the dark templars swore they will never allow another man or woman to enter their lord's resting place.\"",
       "\"Be careful when entering the Tomb to pay homage. If you encounter the dark templars, they do not like disturbances!\"";
     }
     IsImmuneToItemTeleport = true;
@@ -1102,7 +1102,7 @@ guard
       "\"Can you believe that the bastard Black-cloak managed to sneak into the very king's rooms?!\"",
       "\"If you've got to travel, by Seges, stay on the roads! The wilderness just isn't safe. We've had sightings of bandits, goblins and even undead!\"",
       "\"Would you believe it? Harvan Black-cloak murdered king Othyr, and yet people go flocking to the banner of his rebellion!\"",
-      "\"I understand that the treasury is empty, but begging for help in Attnam seems like a bad idea.\"",
+      "\"I understand that the treasury is empty, but begging for help in Valpuris seems like a bad idea.\"",
       "\"So many bandits have appeared in the backcountry. We just don't have the troops nor the time to comb the wilderness for them.\"";
     }
   }
@@ -1137,7 +1137,7 @@ guard
       "\"Kings have been assassinated before, but this time... I don't know. It's different.\"",
       "\"The king is dead, his heir too young. We needed a strong leader and Lord Regent answered the call.\"",
       "\"Would you believe it? Harvan Black-cloak murdered king Othyr, and yet people go flocking to the banner of his rebellion!\"",
-      "\"I understand that the treasury is empty, but begging for help in Attnam seems like a bad idea.\"",
+      "\"I understand that the treasury is empty, but begging for help in Valpuris seems like a bad idea.\"",
       "\"So many bandits have appeared in the backcountry. We just don't have the troops nor the time to comb the wilderness for them.\"";
     }
   }
@@ -1230,7 +1230,7 @@ shopkeeper
     FriendlyReplies =
     {
       4,
-      "\"Welcome to the cheapest banana shop in the world!\"",
+      "\"Welcome to the cheapest mango shop in the world!\"",
       "@Dd sighs: \"It's depressing that the locals have so little purchasing power... But Mellis bless the tourists!\"",
       "\"No, I don't sell spoiled food. Decos' alchemists have pumped so many magic potions into the soil that nothing here will go bad before you buy it.\"",
       "\"I wish I was as brilliant an economic genius as the viceroy. Who would have thought levitating ostriches were so low-cost and efficient form of food delivery?\"";
@@ -1255,7 +1255,7 @@ shopkeeper
     {
       4,
       "@Dd sighs: \"If only I hadn't chosen a city in the middle of nowhere...\"",
-      "@Dd sighs: \"Mutant mushrooms ate the last caravan, and the one before it ran into an enner beast. It must be all Elpuri's doings!\"",
+      "@Dd sighs: \"Mutant mushrooms ate the last caravan, and the one before it ran into an enner beast. It must be all Malgorath's doings!\"",
       "\"You truly can't find better prices in this city! Indeed, you can't find ANY prices, since my store is a monopoly.\"",
       "\"Don't try anything. The high priest is a friend of mine.\"";
     }
@@ -1280,10 +1280,10 @@ shopkeeper
       8,
       "@Dd sighs: \"I wonder why I have so few customers these days...\"",
       "\"The topmost reason why I work here is that the monsters devour tax collectors.\"",
-      "\"Elpuri, eh? Folks say he hatched as a light frog in the Cathedral of Attnam. Yet his voracious appetite quickly set him apart. He ate and grew until his swollen bulk dwarfed even the largest of the giant dark frogs.\"",
-      "\"I've heard that Elpuri once was the favorite pet of Petrus. When a prisoner outlived their usefulness, the high priest threw the poor soul to Elpuri. Yet such morbid meals only darkened Elpuri's blood and did nothing to sate his ever-growing hunger.\"",
-      "\"After being renounced by Petrus, Elpuri fled the Cathedral and found refuge here in these caves, where he bides his time to build an army of dark frogs and strike back against the high priest.\"",
-      "\"Elpuri is also known by some as the Devourer. His hunger is truly unchecked - he is said to have fathered generations of dark frogs, yet devoured them faster than they could flood and torment the world.\"",
+      "\"Malgorath, eh? Folks say he hatched as a marsh toad in the Cathedral of Valpuris. Yet his voracious appetite quickly set him apart. He ate and grew until his swollen bulk dwarfed even the largest of the giant blight-toads.\"",
+      "\"I've heard that Malgorath once was the favorite pet of Archpriest Cordatus. When a prisoner outlived their usefulness, the high priest threw the poor soul to Malgorath. Yet such morbid meals only darkened Malgorath's blood and did nothing to sate his ever-growing hunger.\"",
+      "\"After being renounced by Archpriest Cordatus, Malgorath fled the Cathedral and found refuge here in these caves, where he bides his time to build an army of blight-toads and strike back against the high priest.\"",
+      "\"Malgorath is also known by some as the Devourer. His hunger is truly unchecked - he is said to have fathered generations of blight-toads, yet devoured them faster than they could flood and torment the world.\"",
       "\"The monsters don't really bother me, no. Not even they are stupid enough to want to be on the bad side of the Guild.\"",
       "\"The monsters don't attack me, because of our mutually profitable contract.\"";
     }
@@ -1325,7 +1325,7 @@ shopkeeper
       "\"What wondrous treasures, have I! At a special price for you only. There you are, have a nice look at them!\"",
       "\"I chop prices, not limbs! Usually, heh heh heh.\"",
       "\"Fine stuff, eh? Don't forget to thank me, heh heh heh.\"",
-      "\"Have you met Petrus, that high priest? Believe me this one, the man is scum. They're all the same, those rotten priests.\"",
+      "\"Have you met Archpriest Cordatus, that high priest? Believe me this one, the man is scum. They're all the same, those rotten priests.\"",
       "\"Peddling is great - safer and better paid then guarding. Don't try it, though, or I'll have to remove competition.\"";
     }
     HostileReplies =
@@ -1487,7 +1487,7 @@ priest
     TotalSize = 180;
     DefaultName = "Verax";
     AttachedGod = VALPURIS;
-    PostFix = "of Valpurus";
+    PostFix = "of Valpuris";
     Helmet = MITHRIL helmet { Enchantment = 2; }
     Amulet = VALPURIS_METAL amulet(AMULET_OF_ESP);
     BodyArmor = MITHRIL bodyarmor(CHAIN_MAIL) { Enchantment = 2; }
@@ -1502,30 +1502,30 @@ priest
     FriendlyReplies =
     {
       14,
-      "@Dd talks to you: \"Valpurus the Great Frog is the highest of all gods. The Wise know that the world is really a @ws which He carries on His back. This is why this Cathedral and the whole city of Attnam is dedicated to His worship.\"",
-      "\"The souls of the virtuous, the devout and the faithful bath forever in the radiant glory of Valpurus and sing praises on His greatness. The souls of sinners, heretics and unbelievers are swallowed by Mortifer and damned to relive their worst nightmares for all eternity!\"",
-      "\"The Cathedral of Valpurus has no windows, for it is written in the Holy Book of Valpurus: 'Windows is Evil.'\"",
+      "@Dd talks to you: \"Valpuris the Great Frog is the highest of all gods. The Wise know that the world is really a @ws which He carries on His back. This is why this Cathedral and the whole city of Valpuris is dedicated to His worship.\"",
+      "\"The souls of the virtuous, the devout and the faithful bath forever in the radiant glory of Valpuris and sing praises on His greatness. The souls of sinners, heretics and unbelievers are swallowed by Mortifer and damned to relive their worst nightmares for all eternity!\"",
+      "\"The Cathedral of Valpuris has no windows, for it is written in the Holy Book of Valpuris: 'Windows is Evil.'\"",
       "\"I am the Cardinal of Truth, therefore everything I say is truth.\"",
       "\"Repeat after me: 1 + 1 = 3.\"",
       "\"Repeat after me: War is Peace.\"",
       "\"Repeat after me: Freedom is Slavery.\"",
       "\"Repeat after me: Ignorance is Strength.\"",
-      "\"Hail mighty Petrus!\"",
+      "\"Hail mighty Archpriest Cordatus!\"",
       "\"Ad maiorem Valpuri gloriam.\"",
       "\"Thou shalt not suffer a witch to live! Mystic frogs are OK, though.\"",
-      "\"Thus spake Valpurus: 'I am the King of Gods, Valpurus. Thou shalt praise no other gods before me.\"",
+      "\"Thus spake Valpuris: 'I am the King of Gods, Valpuris. Thou shalt praise no other gods before me.\"",
       "@Dd smirks: \"I would not wish to startle you, but thanks to this amulet, I will always know if you're telling me the truth.\"",
-      "@Dd frowns: \"In thy prayers thou must understand Valpurus is a busy god who knows His importance. He will not help newbies. Thou shouldst only pray to Him when He hath called thee a Champion!\"";
+      "@Dd frowns: \"In thy prayers thou must understand Valpuris is a busy god who knows His importance. He will not help newbies. Thou shouldst only pray to Him when He hath called thee a Champion!\"";
     }
     HostileReplies =
     {
       4,
       "\"Cleanse! Purge! Kill!\"",
-      "\"Valpurus guides my weapon.\"",
+      "\"Valpuris guides my weapon.\"",
       "\"Prepare to meet @Gd, fool!\"",
       "@Dd sighs: \"Infidels to the left, heathens to the right. Tremendous.\"";
     }
-    Inventory == can { Times = 2; SecondaryMaterial = LIGHT_FROG_BLOOD; }
+    Inventory == can { Times = 2; SecondaryMaterial = MARSH_TOAD_BLOOD; }
   }
 
   Config SILVA;
@@ -1565,8 +1565,8 @@ priest
       7, /* 4 first are used before revolution */
       "\"Silva is the goddess of nature, who protects all living things. Her earthly manifestation, located in the elven nation of Lunethia, is a giant holy tree which reaches the clouds.\"",
       "\"In the old temple we had a marvellous altar carved from a branch of Silva Herself, but Decos made firewood out of it.\"",
-      "\"You cannot contact any god unless you know the right rituals. Alas, I'm unable to teach you any, since after the invasion the Attnamese forbade us to officially worship any god save Valpurus. I can therefore only help you as a healer.\"",
-      "\"With my holy powers, I'm capable of reattaching severed limbs and removing various diseases and poisons. For a price, of course. Should I not bring enough income to the colony, the occupiers would make me a banana grower, too.\"",
+      "\"You cannot contact any god unless you know the right rituals. Alas, I'm unable to teach you any, since after the invasion the Valpurian forbade us to officially worship any god save Valpuris. I can therefore only help you as a healer.\"",
+      "\"With my holy powers, I'm capable of reattaching severed limbs and removing various diseases and poisons. For a price, of course. Should I not bring enough income to the colony, the occupiers would make me a crop tender, too.\"",
       "\"Truly, you must have been sent by Silva herself! We can finally rebuild the old temple and our lives.\"",
       "\"I cannot thank you enough for freeing us, but I'm afraid I must continue to charge for my services.\"",
       "\"Do not forget us, fair hero. It is a matter of time before word reaches the High Priest and I'm afraid of what he may do in his displeasure.\"";
@@ -1617,14 +1617,14 @@ priest
     FriendlyReplies =
     {
       10,
-      "\"Our lord Xinroch was the greatest and most powerful grand master dark knight to ever live.\"",
-      "\"Xinroch was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
-      "\"This Tomb was erected on the battlefield where Xinroch was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory. Let his majestic glory never be forgotten!\"",
-      "\"I know it is possible to bring our lord Xinroch back. Whether it takes magic or miracle, he will lead his faithful again!\"",
+      "\"Our lord Khaz-Zadm was the greatest and most powerful grand master dark knight to ever live.\"",
+      "\"Khaz-Zadm was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
+      "\"This Tomb was erected on the battlefield where Khaz-Zadm was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory. Let his majestic glory never be forgotten!\"",
+      "\"I know it is possible to bring our lord Khaz-Zadm back. Whether it takes magic or miracle, he will lead his faithful again!\"",
       "\"Praised be Infuscor!\"",
       "\"Souls for Infuscor!\"",
-      "\"All hail our mighty lord Xinroch.\"";
-      "\"One of these days I'll summon our lord Xinroch back, and Chaos will reign forever!\"",
+      "\"All hail our mighty lord Khaz-Zadm.\"";
+      "\"One of these days I'll summon our lord Khaz-Zadm back, and Chaos will reign forever!\"",
       "\"Oh, you like my tattoos? Every priest of Infuscor gets them as a part of their ordination. A holy purple ink is used to tattoo the entirety of the holy book of Infuscor over the initiate's body, so that the wise words may guide them through the rest of their lives.\"",
       "\"Can't you see I'm busy, infidel?\"";
     }
@@ -1692,7 +1692,7 @@ priest
       "\"Legifer is the All-Seeing Sun. He sees and remembers every your deed until you die and are judged at the Last Court of Heavens.\"",
       "\"Judge, but do not condemn. Anybody can be redeemed.\"",
       "\"I am one of the last Shining Knights. And now I am stuck in this place, because the High Priest won't let me leave, nor will he allow me to do anything.\"",
-      "\"The Order of the Shining Knights was founded by my forebears to fight the Dark Knights of Xinroch.\"",
+      "\"The Order of the Shining Knights was founded by my forebears to fight the Dark Knights of Khaz-Zadm.\"",
       "\"The Shining Knights once were a proud and powerful order, but after the fateful defeat at the Fortress of Prym, only a handful of wandering knights remained.\"",
       "\"The mantle of a Shining Knight is passed down in a family. I was bequeathed knighthood by my mother, who succeeded her father, and so on since the days of Prym.\"",
       "\"All Shining Knights bear the symbol of the All-Seeing Sun, for Legifer guides us in our wanderings.\"",
@@ -1701,7 +1701,7 @@ priest
       "\"This hammer was forged for me by a good friend. When he was but a baby, he lost his home. Yet he managed to revive all the craft and artistry of the destroyed dwarven city of Khaz-zadm and I will hold this hammer against all evil to honor the legacy of his people.\"",
       "\"Legifer helps us find and uproot all evil. May His holy flames scorch all sins away.\"",
       "\"I will pray for you and good luck in your quest. May His holy flames guide your way.\"",
-      "\"I was sent to Attnam by a vision from Legifer. I didn't understand at first, but now... Now I'm starting to see.\"",
+      "\"I was sent to Valpuris by a vision from Legifer. I didn't understand at first, but now... Now I'm starting to see.\"",
       "\"There is no being so evil that the light of His holy flames cannot reach them and raise them up.\"",
       "\"The four Cardinals... Foul thoughts blacken the soul, but sometimes, I can't help myself.\"";
     }
@@ -1785,7 +1785,7 @@ oree
   {
     3,
     "@Dd prays to @Gd.",
-    "\"You have slain Elpuri. Now nothing will interfere with my plans! Fufufu!\"",
+    "\"You have slain Malgorath. Now nothing will interfere with my plans! Fufufu!\"",
     "@Dd laughs: \"No time for small talk. Time to drink blood!\"";
   }
   FleshMaterial = DAEMON_FLESH;
@@ -1948,7 +1948,7 @@ darkknight
     GauntletColor = rgb16(50, 50, 50);
     BootColor = rgb16(128, 128, 128);
     CanBeGenerated = false;
-    HostileReplies == "@Dd yells: \"Who dares disturb the slumber of the lord Xinroch?\"";
+    HostileReplies == "@Dd yells: \"Who dares disturb the slumber of the lord Khaz-Zadm?\"";
     AttachedGod = INFUSCOR;
     UndeadVersions = false;
   }
@@ -1961,7 +1961,7 @@ darkknight
     RightWielded = METEORIC_STEEL METEORIC_STEEL meleeweapon(BASTARD_SWORD) { Enchantment = 2; }
     RightGauntlet = BRAMBLEBACK_HAIR gauntlet { Enchantment = 2; }
     RightBoot = METEORIC_STEEL boot { Enchantment = 2; }
-    Adjective = "Xinroch's";
+    Adjective = "Khaz-Zadm's";
     NameSingular = "grave keeper";
     ArticleMode = NO_ARTICLE;
     KnownCWeaponSkills == LARGE_SWORDS;
@@ -2084,7 +2084,7 @@ darkknight
     FriendlyReplies =
     {
       5,
-      "\"Yeah, I was a guard in Attnam once. Is that all?\"",
+      "\"Yeah, I was a guard in Valpuris once. Is that all?\"",
       "\"The blood never bothered me anyway.\"",
       "\"Reach the Heavens through violence!\"",
       "\"I like watching things die.\"",
@@ -2127,7 +2127,7 @@ darkknight
     TamingDifficulty = NO_TAMING;
     IsUnique = true;
     CanBeWished = true;
-    DefaultName = "Xinroch";
+    DefaultName = "Khaz-Zadm";
     DangerModifier = 1800;
     IsNameable = false;
     CanBeCloned = false;
@@ -2311,7 +2311,7 @@ frog
   AttackStyle = USE_HEAD;
   BaseBiteStrength = 750;
   KnownCWeaponSkills == BITE;
-  FleshMaterial = FROG_FLESH;
+  FleshMaterial = BLIGHTTOAD_FLESH;
   PanicLevel = 50;
   MoveType = WALK|SWIM;
   CanRead = true;
@@ -2329,7 +2329,7 @@ frog
     DefaultWisdom = 20;
     DefaultCharisma = 5;
     DefaultMana = 20;
-    BloodMaterial = DARK_FROG_BLOOD;
+    BloodMaterial = BLIGHTTOAD_BLOOD;
     TotalVolume = 5000;
     TorsoBitmapPos = 80, 0;
     TotalSize = 25;
@@ -2359,7 +2359,7 @@ frog
     DefaultCharisma = 4;
     DefaultMana = 25;
     BaseBiteStrength = 1000;
-    BloodMaterial = DARK_FROG_BLOOD;
+    BloodMaterial = BLIGHTTOAD_BLOOD;
     TotalVolume = 50000;
     TorsoBitmapPos = 96, 0;
     TotalSize = 100;
@@ -2389,7 +2389,7 @@ frog
     DefaultCharisma = 3;
     DefaultMana = 30;
     BaseBiteStrength = 1250;
-    BloodMaterial = DARK_FROG_BLOOD;
+    BloodMaterial = BLIGHTTOAD_BLOOD;
     TotalVolume = 250000;
     TorsoBitmapPos = 64, 0;
     TotalSize = 200;
@@ -2421,7 +2421,7 @@ frog
     DefaultCharisma = 15;
     DefaultMana = 20;
     TotalVolume = 5000;
-    BloodMaterial = LIGHT_FROG_BLOOD;
+    BloodMaterial = MARSH_TOAD_BLOOD;
     TorsoBitmapPos = 80, 0;
     TotalSize = 25;
     SkinColor = rgb16(32, 88, 32);
@@ -2448,7 +2448,7 @@ frog
     DefaultMana = 25;
     BaseBiteStrength = 1000;
     TotalVolume = 50000;
-    BloodMaterial = LIGHT_FROG_BLOOD;
+    BloodMaterial = MARSH_TOAD_BLOOD;
     TorsoBitmapPos = 96, 0;
     TotalSize = 100;
     SkinColor = rgb16(32, 88, 32);
@@ -2475,7 +2475,7 @@ frog
     DefaultMana = 30;
     BaseBiteStrength = 1250;
     TotalVolume = 250000;
-    BloodMaterial = LIGHT_FROG_BLOOD;
+    BloodMaterial = MARSH_TOAD_BLOOD;
     TorsoBitmapPos = 64, 0;
     TotalSize = 200;
     SkinColor = rgb16(32, 88, 32);
@@ -2653,7 +2653,7 @@ skeleton
     NameSingular = "skeleton warlord";
     IsUnique = true;
     CanBeWished = true;
-    DefaultName = "Xinroch";
+    DefaultName = "Khaz-Zadm";
     DangerModifier = 1500;
     IsNameable = false;
     CanBeCloned = false;
@@ -3781,7 +3781,7 @@ hunter
     "\"Bears, ogres, slaves, farmers... Ah, there's so much to hunt here!\"",
     "\"I am the Great White Hunter. Get out of My way!\"",
     "\"I saw a communist visiting the city a few days past. I'm now organising a party to seek and hunt him down.\"",
-    "\"It is good Petrus had his predecessor assassinated. Can you believe it, the dude tried to take from us our natural right to carry a spear in the street!\"";
+    "\"It is good Archpriest Cordatus had his predecessor assassinated. Can you believe it, the dude tried to take from us our natural right to carry a spear in the street!\"";
   }
   AttachedGod = LORICATUS;
   ScienceTalkAdjectiveAttribute =
@@ -4001,7 +4001,7 @@ dolphin
     {
       7,
       "@Dd peeps: \"A soft rain drips down, The trees whisper in the wind, Sounds eclipsed by screams.\"",
-      "@Dd peeps: \"From the gloomy cave, A great dark frog leaps at us, The sound of slaughter.\"",
+      "@Dd peeps: \"From the gloomy cave, A great blight-toad leaps at us, The sound of slaughter.\"",
       "@Dd peeps: \"White destroyed by red, On ground drenched in many bloods, This peace is final.\"",
       "@Dd peeps: \"Silence reigns bloody, Through deep caves gloomy and dim, A faint sobbing comes.\"",
       "@Dd peeps: \"The adventurer, Lost in the womb of the earth, Braves the evil dark.\"",
@@ -4089,15 +4089,15 @@ petrusswife
   TotalVolume = 40000;
   TotalSize = 170;
   CanRead = true;
-  NameSingular = "Petrus' wife";
-  NamePlural = "Petrus' wives";
+  NameSingular = "Archpriest Cordatus' wife";
+  NamePlural = "Archpriest Cordatus' wives";
   ArticleMode = NO_ARTICLE;
   IsAbstract = true;
   PanicLevel = 95;
   BaseUnarmedStrength = 200;
   IsExtraCoward = true;
   WieldedPosition = 0, -1;
-  HostileReplies == "\"Murderer! Just wait until Petrus finds you!\"";
+  HostileReplies == "\"Murderer! Just wait until Archpriest Cordatus finds you!\"";
   AttachedGod = DULCIS;
   WillCarryItems = false;
   IsExtraFragile = true;
@@ -4129,12 +4129,12 @@ petrusswife
     FriendlyReplies =
     {
       6,
-      "\"I'm not Petrus' first wife, only his eldest right now. He outlived nearly a dozen wives by now.\"",
-      "\"Amicus veritas, sed magis amica mihi Petrus.\"",
-      "\"I have written most Attnamese trade agreements, draft bills and international treaties for the past twenty years. But don't tell Petrus, he would be mad.\"",
-      "\"Oh, you come from Tweraif? I've heard so much about local University!\"",
+      "\"I'm not Archpriest Cordatus' first wife, only his eldest right now. He outlived nearly a dozen wives by now.\"",
+      "\"Amicus veritas, sed magis amica mihi Archpriest Cordatus.\"",
+      "\"I have written most Valpurian trade agreements, draft bills and international treaties for the past twenty years. But don't tell Archpriest Cordatus, he would be mad.\"",
+      "\"Oh, you come from Oakhaven? I've heard so much about local University!\"",
       "\"You met professor Kaethos?! I have read everything he ever wrote! I would love to meet him some day and discuss his theory of thaumic superunification.\"",
-      "\"I wed Petrus because it made access to education much easier for me. And you know what? I eventually fell in love with him.\"";
+      "\"I wed Archpriest Cordatus because it made access to education much easier for me. And you know what? I eventually fell in love with him.\"";
     }
     DeathMessage = "With a calm face, @Dd whispers, dying: \"Dulce et decorum est pro patria mori.\"";
     ScienceTalkIntelligenceModifier = 25;
@@ -4214,12 +4214,12 @@ petrusswife
     {
       8,
       "\"I'm so sick jealous of those dolphins...\"",
-      "\"I'm Petrus' favorite, not No. 1!\"",
-      "\"No. 3 once was here with her twin sister. I've heard that one of them cheated on Petrus and... I really shouldn't be telling you this.\"",
-      "\"I have no idea what Petrus sees on No. 4! She's so dumb it hurts!\"",
+      "\"I'm Archpriest Cordatus' favorite, not No. 1!\"",
+      "\"No. 3 once was here with her twin sister. I've heard that one of them cheated on Archpriest Cordatus and... I really shouldn't be telling you this.\"",
+      "\"I have no idea what Archpriest Cordatus sees on No. 4! She's so dumb it hurts!\"",
       "\"I'm not sure I should be talking to you. No. 5 once said too much and... Well, she won't be using her tongue again.\"",
-      "\"Petrus gave me a daughter, now I want to give him a son.\"",
-      "\"If only I could be the one to give Petrus his firstborn son...\"",
+      "\"Archpriest Cordatus gave me a daughter, now I want to give him a son.\"",
+      "\"If only I could be the one to give Archpriest Cordatus his firstborn son...\"",
       "\"That head on the wall looks really scary sometimes. Just like we were being watched.\"";
     }
     RightWielded = firstbornchild(FEMALE);
@@ -4235,14 +4235,14 @@ petrusswife
     FriendlyReplies =
     {
       8,
-      "\"Petrus also married my twin sister, but I haven't seen her around for some time.\"",
-      "\"I despise Petrus. Surprised to hear me talk like that? He took away the love of my life, what worse can he do to me?\"",
-      "\"I never loved Petrus. He knew it and that must be why he allowed me to fall in love with someone else. To torment me.\"",
-      "\"After my transgression, why has Petrus never punished me? Does he think it's more cruel to leave me to rot in this harem?\"",
-      "\"I once was a princess of a proud nomad tribe of the great eastern steppes. Me and my twin sister were wed to Petrus as a tribute of peace.\"",
+      "\"Archpriest Cordatus also married my twin sister, but I haven't seen her around for some time.\"",
+      "\"I despise Archpriest Cordatus. Surprised to hear me talk like that? He took away the love of my life, what worse can he do to me?\"",
+      "\"I never loved Archpriest Cordatus. He knew it and that must be why he allowed me to fall in love with someone else. To torment me.\"",
+      "\"After my transgression, why has Archpriest Cordatus never punished me? Does he think it's more cruel to leave me to rot in this harem?\"",
+      "\"I once was a princess of a proud nomad tribe of the great eastern steppes. Me and my twin sister were wed to Archpriest Cordatus as a tribute of peace.\"",
       "\"I miss the smell of horses, the rhythm of their run. I remember me and my sister riding for hours, miles upon miles of pure joy and freedom.\"",
       "\"How I hate this gilded cage! I was born to feel the wind and rain on my face, not to sit in an armchair all day long, chitter and broider.\"",
-      "\"You want to learn more about the four Cardinals? They are the most trusted knights and advisors of Petrus: a coward, a liar, a thief and a madman.\"";
+      "\"You want to learn more about the four Cardinals? They are the most trusted knights and advisors of Archpriest Cordatus: a coward, a liar, a thief and a madman.\"";
     }
     PanicLevel = 20;
     IsExtraCoward = false;
@@ -4269,14 +4269,14 @@ petrusswife
     FriendlyReplies =
     {
       8,
-      "\"Uncle Petrus is so kind. After my father's house burned down because of the disargeement they had had, Petrus took me here and made me his wife!\"",
-      "\"Uncle Petrus has a *massive* sword! Tee hee.\"",
+      "\"Uncle Archpriest Cordatus is so kind. After my father's house burned down because of the disargeement they had had, Archpriest Cordatus took me here and made me his wife!\"",
+      "\"Uncle Archpriest Cordatus has a *massive* sword! Tee hee.\"",
       "\"I'm boooored!\"",
       "\"Have you heard No. 5? No, because she can't speak! Tee hee.\"",
       "\"Don't mind No. 3! She looks grumpy, but she has so many stories!\"",
       "\"No. 1 is so clever it's scary. Really!\"",
-      "\"I got a pony for my twentieth birthday! Unfortunately I can't see her, because I can't leave the harem, but uncle Petrus told me she's beautiful!\"",
-      "\"Uncle Petrus says I am special! He says it to all his wives, but I know he means it for me. Tee hee.\"";
+      "\"I got a pony for my twentieth birthday! Unfortunately I can't see her, because I can't leave the harem, but uncle Archpriest Cordatus told me she's beautiful!\"",
+      "\"Uncle Archpriest Cordatus says I am special! He says it to all his wives, but I know he means it for me. Tee hee.\"";
     }
     ScienceTalkIntelligenceModifier = 0;
     ScienceTalkWisdomModifier = 0;
@@ -4308,9 +4308,9 @@ petrusswife
     FriendlyReplies =
     {
       6,
-      "\"The day I became Petrus' wife was the best day of my life. And it haven't gotten worse since!\"",
+      "\"The day I became Archpriest Cordatus' wife was the best day of my life. And it haven't gotten worse since!\"",
       "\"Leave? Why would I want to leave? I have luxury here, servants - everything I can wish for. Outside, there is just poverty and grime.\"",
-      "\"Why must Petrus stay in this forest? There isn't even a proper hairdresser here!\"",
+      "\"Why must Archpriest Cordatus stay in this forest? There isn't even a proper hairdresser here!\"",
       "\"No. 5 was babbling all the time, once. I couldn't stand it, but now the silence is even worse.\"",
       "\"Don't bother talking to No. 3, she's weird.\"",
       "\"Being one of six wives is a dream job. Pay is good and you only have to work about one night a week!\"";
@@ -4330,18 +4330,18 @@ petrusswife
     FriendlyReplies =
     {
       10,
-      "@Dd says very loudly: \"All hail mighty Petrus.\"",
-      "@Dd says with a nervous glance around: \"Praise Valpurus.\"",
+      "@Dd says very loudly: \"All hail mighty Archpriest Cordatus.\"",
+      "@Dd says with a nervous glance around: \"Praise Valpuris.\"",
       "@Dd stifles a smirk: \"I love the Cathedral.\"",
       "\"I may be only a few minutes older than my twin sister, but I'm still here to protect her, as older siblings should always do.\"",
-      "\"I couldn't stand my dear sister being punished for falling in love. Petrus never could tell us apart, anyway.\"",
+      "\"I couldn't stand my dear sister being punished for falling in love. Archpriest Cordatus never could tell us apart, anyway.\"",
       "\"I hope they didn't catch the farmer. Maybe one day, my sister and him will escape. I wish they were happy together.\"",
-      "\"I once was a princess of a proud nomad tribe of the great eastern steppes. Me and my twin sister were wed to Petrus as a tribute of peace.\"",
+      "\"I once was a princess of a proud nomad tribe of the great eastern steppes. Me and my twin sister were wed to Archpriest Cordatus as a tribute of peace.\"",
       "\"I miss the smell of horses, the rhythm of their run. I remember me and my sister riding for hours, miles upon miles of pure joy and freedom.\"",
       "\"How I hate this dank dungeon! I was born to feel the wind and rain on my face, not to sit in a small cell all day long, alone.\"",
       "\"How is my little sister doing?\"";
     }
-    HostileReplies == "@Dd snickers: \"Be careful about damaging Petrus' property, he'll be angry.\"";
+    HostileReplies == "@Dd snickers: \"Be careful about damaging Archpriest Cordatus' property, he'll be angry.\"";
     DeathMessage = "@Dd dies with a last whisper: \"Curse you!\"";
     IsExtraCoward = false;
     IgnoreDanger = true;
@@ -4400,7 +4400,7 @@ housewife
     "\"Can you help me find my husband? He is hiding somewhere. He's that farmer who's just been mugged with a frying pan.\"",
     "\"Yesterday a bear rushed through my kitchen wall and ruined all my pies. Animals are truly annoying. Why can't we just burn the whole forest down?\"",
     "\"Wolves ate my seventh daughter last week. Damn. It'll take eight years to produce an equally good replacement worker.\"",
-    "\"Petrus' wives are so arrogant towards us working class ones. Grr...\"",
+    "\"Archpriest Cordatus' wives are so arrogant towards us working class ones. Grr...\"",
     "\"Don't think too much, the Cardinals can hear you.\"",
     "\"If you men only knew!\"";
   }
@@ -4441,34 +4441,34 @@ housewife
       "\"Praised be Cruentus!\"",
       "\"Praised be Infuscor!\"",
       "\"Blood for Cruentus! Souls for Infuscor!\"",
-      "\"Long, long time ago, there was a War in Heavens. Valpurus rose to usurp the throne of Mortifer, then King of Gods, and eventually triumphed. After his armies conquered all Heavens, Valpurus murdered Mortifer and banished him into the darkness beyond stars.\"",
+      "\"Long, long time ago, there was a War in Heavens. Valpuris rose to usurp the throne of Mortifer, then King of Gods, and eventually triumphed. After his armies conquered all Heavens, Valpuris murdered Mortifer and banished him into the darkness beyond stars.\"",
       "\"To prevent the destruction of the very world they were fighting for, Mortifer placed a powerful geas upon all gods that prevents them from ever entering the world. Thus, even the primordial War in Heavens was fought by the many priests and other servants the gods have acquired and empowered.\"",
-      "\"The original Order of the Dark Knights was established by Cruentus nearly three millennia ago, to battle the knights templar of Valpurus during the ancient War in Heavens.\"",
+      "\"The original Order of the Dark Knights was established by Cruentus nearly three millennia ago, to battle the knights templar of Valpuris during the ancient War in Heavens.\"",
       "\"Today, the dark knights have splintered into two distinct branches, the Unholy Order of Infuscor and the Dark Knights of Cruentus, plus a handful of fringe cults.\"",
       "\"All dark knights are still formally united under the leadership of a grand master dark knight, though how much do masters of each group heed the orders of their grand master depends entirely upon his or her power and authority.\"",
       "\"The name of the first grand master dark knight was lost to history, yet his deeds remain. Legends say he was more a daemon than a man. He even won the favour of Mortifer and was given the newly forged Neerc Se-ulb to wield against the swarming armies of Light.\"",
-      "\"The first grand master dark knight led his armies from victory to victory, but pride was his undoing. Believing that none could defeat him, he challenged Pervetus, the high priest of Valpurus, to a duel. At first, it seemed to quickly be turning into another easy victory... until his mace-arm was severed.\"",
+      "\"The first grand master dark knight led his armies from victory to victory, but pride was his undoing. Believing that none could defeat him, he challenged Pervetus, the high priest of Valpuris, to a duel. At first, it seemed to quickly be turning into another easy victory... until his mace-arm was severed.\"",
       "\"When the first grand master dark knight fell and Neerc Se-ulb was lost for a time, Mortifer vowed to never lend his mace again but to a true champion of Chaos. But Cruentus trusted in the power of his dark knights and the next grand master received the terrible halberd named Mjolak to crush all who would oppose the god of blood.\"",
-      "\"The second grand master dark knight was a son of the first one. He swore an oath of revenge, to slay the high priest of Valpurus in honor of his father's death. Yet his name was erased from all records to clean the stain of shame he brought upon his family.\"",
-      "\"The second grand master dark knight ruthlessly crushed all resistance and many an enemy fled even before battle, for his trumpeters used horns of fear to devastating effect. Where the father took nearly a decade to slowly force valpurian troops back, the son brought his army of dark knights before the gates of the Citadel of Valpurus in only a few years.\"",
-      "\"As his men razed and burned the once-mighty Citadel of Valpurus, the second grand master dark knight assailed Pervetus, the high priest of Valpurus. Now being of venerable age, Pervetus quickly fell to the power of Mjolak.\"",
+      "\"The second grand master dark knight was a son of the first one. He swore an oath of revenge, to slay the high priest of Valpuris in honor of his father's death. Yet his name was erased from all records to clean the stain of shame he brought upon his family.\"",
+      "\"The second grand master dark knight ruthlessly crushed all resistance and many an enemy fled even before battle, for his trumpeters used horns of fear to devastating effect. Where the father took nearly a decade to slowly force valpurian troops back, the son brought his army of dark knights before the gates of the Citadel of Valpuris in only a few years.\"",
+      "\"As his men razed and burned the once-mighty Citadel of Valpuris, the second grand master dark knight assailed Pervetus, the high priest of Valpuris. Now being of venerable age, Pervetus quickly fell to the power of Mjolak.\"",
       "\"In a hubris of an easy victory, the second grand master dark knight turned his back to the dead high priest Pervetus he just slain and did not see a strange glow of a magical amulet that brought Pervetus back with renewed vigor. The high priest lifted Justifier and with a single mightly blow, cut off both of the grand master's hands. And in a single moment of weakness, the grand master shamed his family for the ages to come, for he didn't face death with dignity, but panicked and ran for his life.\"",
-      "\"Our lord Xinroch was the greatest and most powerful grand master dark knight to ever live, and the third to bear that title. His two crossed flaming swords are still found on the banner of the grand master dark knights to this day.\"",
-      "\"Some sources claim Xinroch was no one in his youth, maybe even one of the children kidnapped from forgotten villages to be trained for war. But soon, his talents became apparent. He was clever, quick to learn and utterly ruthless when he could get what he wanted.\"",
-      "\"In his many skirmishes with the forces of Light, Xinroch destroyed two archangels, Incendo and Lucis, and took their flaming swords. He wielded them with unparalleled skill, earning him the sobriquet of 'Xinroch the Flame of Chaos'.\"",
-      "\"While his predecessors were beasts on the battlefield and masters of the military arts of tactics and strategy, Xinroch was well-versed in the use of another weapon they rarely considered - diplomacy. He conquered a land - then used the fear to gain ten times more in a fraction of time.\"",
-      "\"Xinroch was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
-      "\"Even Ischaldirh, the champion of Infuscor since times immemorial, who always thought of warriors as nothing more than brutes and uncivilized savages, eventually befriended Xinroch and accompanied him on many a campaign. Not even demigods could stand in their way.\"",
-      "\"Just as Xinroch outlived high priest Pervetus and took all his lands, years caught up with Xinroch at last after a life full of victory. No matter how strong magic sustains the body, mortals were created to die and all that lives will wither eventually. Only that which already died and was raised to undeath or which ascended beyond this world is truly immortal.\"",
-      "\"During one of the countless battles late in his life, Xinroch lost one of the iconic ruby flaming swords he wielded most of his life. The dwarves of Khaz-zadm forged an arcanite shield for him, but it was clear to everyone his prime years have irreversibly passed.\"",
-      "\"In his declining years, Xinroch heavily funded research into the newly-invented magic school of necromancy. It was thanks to his sponsorship that this discipline could start to spread, but unfortunately the early necromancers were unable to stave off the dwindling of Xinroch's life.\"",
-      "\"Xinroch died in a glorious battle. His army crushed the invasion of frost giants while Xinroch himself, by then of venerable age, dueled and slayed their jarl. Yet his years and exhaustion took their toll and Xinroch could not fend off the treacherous dagger his most trusted lieutenant turned against him. Old grand master slain and the battle won, this second-in-command became the new grand master dark knight.\"",
-      "\"Xinroch's successor feared his former master so much he eventually resigned his title of the grand master dark knight and entered the Tomb, to remain enternally vigilant as a keeper of Xinroch's grave and prevent Xinroch's resurrection and terrible revenge.\"",
-      "\"When Xinroch brought dark knights and dark mages together in a peculiar alliance, even their two ever-rival gods set aside their differences for a time. What none of their worshippers could expect, though, was the child born from the blood of Cruentus and the dark magic of Infuscor, the first vampire.\"",
-      "\"This Tomb was erected on the battlefield where Xinroch was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory. Let his majestic glory never be forgotten!\"",
-      "\"Some believe it is possible to bring our lord Xinroch back. Whether through high necromancy or some dark miracle, he might be able to lead his faithful again!\"",
-      "\"It was a great shame to the dark templars when several decades ago, an unknown necromancer managed to slip past their guards and animate the skeleton of Xinroch in a mockery of his once-living might. Whether the spell was cast with belief that it could truly bring Xinroch back, or with utmost disrespect for the dearly departed, the dark templars swore they will never allow another man or woman to enter their lord's resting place.\"",
-      "\"All hail our mighty lord Xinroch.\"";
+      "\"Our lord Khaz-Zadm was the greatest and most powerful grand master dark knight to ever live, and the third to bear that title. His two crossed flaming swords are still found on the banner of the grand master dark knights to this day.\"",
+      "\"Some sources claim Khaz-Zadm was no one in his youth, maybe even one of the children kidnapped from forgotten villages to be trained for war. But soon, his talents became apparent. He was clever, quick to learn and utterly ruthless when he could get what he wanted.\"",
+      "\"In his many skirmishes with the forces of Light, Khaz-Zadm destroyed two archangels, Incendo and Lucis, and took their flaming swords. He wielded them with unparalleled skill, earning him the sobriquet of 'Khaz-Zadm the Flame of Chaos'.\"",
+      "\"While his predecessors were beasts on the battlefield and masters of the military arts of tactics and strategy, Khaz-Zadm was well-versed in the use of another weapon they rarely considered - diplomacy. He conquered a land - then used the fear to gain ten times more in a fraction of time.\"",
+      "\"Khaz-Zadm was highly successful in all his campaigns, and it was during his life that the Unholy Order of the Dark Knights truly flourished.\"",
+      "\"Even Ischaldirh, the champion of Infuscor since times immemorial, who always thought of warriors as nothing more than brutes and uncivilized savages, eventually befriended Khaz-Zadm and accompanied him on many a campaign. Not even demigods could stand in their way.\"",
+      "\"Just as Khaz-Zadm outlived high priest Pervetus and took all his lands, years caught up with Khaz-Zadm at last after a life full of victory. No matter how strong magic sustains the body, mortals were created to die and all that lives will wither eventually. Only that which already died and was raised to undeath or which ascended beyond this world is truly immortal.\"",
+      "\"During one of the countless battles late in his life, Khaz-Zadm lost one of the iconic ruby flaming swords he wielded most of his life. The dwarves of Khaz-zadm forged an arcanite shield for him, but it was clear to everyone his prime years have irreversibly passed.\"",
+      "\"In his declining years, Khaz-Zadm heavily funded research into the newly-invented magic school of necromancy. It was thanks to his sponsorship that this discipline could start to spread, but unfortunately the early necromancers were unable to stave off the dwindling of Khaz-Zadm's life.\"",
+      "\"Khaz-Zadm died in a glorious battle. His army crushed the invasion of frost giants while Khaz-Zadm himself, by then of venerable age, dueled and slayed their jarl. Yet his years and exhaustion took their toll and Khaz-Zadm could not fend off the treacherous dagger his most trusted lieutenant turned against him. Old grand master slain and the battle won, this second-in-command became the new grand master dark knight.\"",
+      "\"Khaz-Zadm's successor feared his former master so much he eventually resigned his title of the grand master dark knight and entered the Tomb, to remain enternally vigilant as a keeper of Khaz-Zadm's grave and prevent Khaz-Zadm's resurrection and terrible revenge.\"",
+      "\"When Khaz-Zadm brought dark knights and dark mages together in a peculiar alliance, even their two ever-rival gods set aside their differences for a time. What none of their worshippers could expect, though, was the child born from the blood of Cruentus and the dark magic of Infuscor, the first vampire.\"",
+      "\"This Tomb was erected on the battlefield where Khaz-Zadm was slain, to honor and guard his grave against all who would wish to disturb his last sleep or defile his memory. Let his majestic glory never be forgotten!\"",
+      "\"Some believe it is possible to bring our lord Khaz-Zadm back. Whether through high necromancy or some dark miracle, he might be able to lead his faithful again!\"",
+      "\"It was a great shame to the dark templars when several decades ago, an unknown necromancer managed to slip past their guards and animate the skeleton of Khaz-Zadm in a mockery of his once-living might. Whether the spell was cast with belief that it could truly bring Khaz-Zadm back, or with utmost disrespect for the dearly departed, the dark templars swore they will never allow another man or woman to enter their lord's resting place.\"",
+      "\"All hail our mighty lord Khaz-Zadm.\"";
     }
     ScienceTalkPossibility = 0;
     Inventory = { 2, holybook(INFUSCOR) { Chance = 10; }, HUMAN_FLESH lump; }
@@ -4570,10 +4570,10 @@ femaleslave
     FriendlyReplies =
     {
       5,
-      "\"Praise our lord Petrus!\"",
+      "\"Praise our lord Archpriest Cordatus!\"",
       "\"Does that toy frog really need us serving it?\"",
       "\"I'm not a slave. I'm a high-ranking palm branch officer with a good career history.\"",
-      "\"I can tell you, serving Petrus is much more fun than pleasing that Decos bastard.\"",
+      "\"I can tell you, serving Archpriest Cordatus is much more fun than pleasing that Decos bastard.\"",
       "\"You seem oddly familiar. Oh! Isn't that the monkey smell of my home village!\"";
     }
   }
@@ -4591,10 +4591,10 @@ femaleslave
     FriendlyReplies =
     {
       7, /* 4 first are used before revolution */
-      "\"Thank Silva I don't have to gather bananas!\"",
-      "\"My sister got a promotion last year. I've heard she is now a very successful slave in the Cathedral of Attnam. I am so jealous!\"",
+      "\"Thank Silva I don't have to gather mangos!\"",
+      "\"My sister got a promotion last year. I've heard she is now a very successful slave in the Cathedral of Valpuris. I am so jealous!\"",
       "\"Palm leaves are good for health. Mr. Decos loves their smell.\"",
-      "\"When I was a highly educated doctor in independent Tweraif, I didn't have to wear stupid bikinis all day long.\"",
+      "\"When I was a highly educated doctor in independent Oakhaven, I didn't have to wear stupid bikinis all day long.\"",
       "\"Our hero!\" @Dd shouts as @pp hugs you. \"Aargh! Go away, you're all sweaty and bloody!\"",
       "\"Don't tell me you need a palm leaf expert, too.\"",
       "\"Now it's my sister's turn to be jealous!\"";
@@ -4724,18 +4724,18 @@ librarian
   FriendlyReplies =
   {
     15,
-    "\"Are you going to fight Elpuri? If so, beware, for it is a powerful enemy. Other monsters are very vulnerable if surrounded by your party, but not that beast. It may slay a horde of your friends at once with its horrendous tail attack.\"",
-    "\"Elpuri the Dark Frog abhors light and resides in a place of eternal darkness.\"",
+    "\"Are you going to fight Malgorath? If so, beware, for it is a powerful enemy. Other monsters are very vulnerable if surrounded by your party, but not that beast. It may slay a horde of your friends at once with its horrendous tail attack.\"",
+    "\"Malgorath the Dark Frog abhors light and resides in a place of eternal darkness.\"",
     "\"Shh! You shall be silent in the library.\"",
     "\"Brute force bereft of wisdom falls to ruin by its own weight.\"",
-    "\"Elpuri's attacks are so strong that they may shatter many of your precious items.\"",
+    "\"Malgorath's attacks are so strong that they may shatter many of your precious items.\"",
     "\"Don't you smell all the knowledge floating around here?\"",
     "\"The Shirt of the Golden Eagle is a legendary artifact. You cannot find a better armor.\"",
     "\"In this book they talk about Mortifer, the Great Chaos God. He hates mortals, gods and everything and will respond only to Champions of Evil.\"",
-    "\"Attnam is traditionally ruled by the high priest of the Great Frog. He holds the holy broadsword named Valpurus' Justifier and the Shirt of the Golden Eagle, and has always killed his predecessor.\"",
+    "\"Valpuris is traditionally ruled by the high priest of the Great Frog. He holds the holy broadsword named Valpuris' Justifier and the Shirt of the Golden Eagle, and has always killed his predecessor.\"",
     "\"You should keep all the artifacts you find. They shall make you famous after your retirement. If you can somehow survive that long, that is.\"",
     "\"If you should ever encounter an enner beast, know this: It is a horrible foe. It may shatter your items and armor with its scream that penetrates iron and stone. You should not engage it in melee but rather kill it from afar.\"",
-    "\"A brave adventurer called Ivan delved into the cave of Elpuri not long ago.\"",
+    "\"A brave adventurer called Ivan delved into the cave of Malgorath not long ago.\"",
     "\"It is said that chaotic gods offer great power to their followers. But remember that lawful gods will help you even when things go bad.\"",
     "\"If a man cannot choose, he ceases to be a man.\"",
     "@Dd sighs: \"The censorship laws in this town are really too strict...\"";
@@ -4872,22 +4872,22 @@ zombie
     {
       17,
       "\"Once, I was a duchess of a great dwarven fortress-city of Khaz-zadm.\"",
-      "\"After the Dwarven Wars, our land lay in ruins. Our mines were undermined and filled with masterless golems. Our resources were stretched thin. That was when Petrus came with his offer of charity. I should have known better.\"",
-      "\"Naught but ashes remain from my people. Petrus even saw that the word would not spread to Kharaz-arad or other dwarven lands.\"",
-      "\"No one remembers Priscus, the former High Priest of Valpurus, these days. Only me.\"",
-      "\"The poor children of Khaz-zadm! Taken from their murdered parents and trained to die at the behest of the high priest, praising Valpurus with their dying breath.\"",
-      "\"Khaz-zadm once held the richest deposits of valpurian ore on this whole continent. No wonder Attnam has no shortage of vaplurium these days.\"",
-      "\"Attnam and Khaz-zadm were close partners for many years. Attnam bought its sacred metal from us, but we needed attnamese priests to bless the smelting, lest a burnt slag was produced instead of a magical metal.\"",
+      "\"After the Dwarven Wars, our land lay in ruins. Our mines were undermined and filled with masterless golems. Our resources were stretched thin. That was when Archpriest Cordatus came with his offer of charity. I should have known better.\"",
+      "\"Naught but ashes remain from my people. Archpriest Cordatus even saw that the word would not spread to Kharaz-arad or other dwarven lands.\"",
+      "\"No one remembers Priscus, the former High Priest of Valpuris, these days. Only me.\"",
+      "\"The poor children of Khaz-zadm! Taken from their murdered parents and trained to die at the behest of the high priest, praising Valpuris with their dying breath.\"",
+      "\"Khaz-zadm once held the richest deposits of valpurian ore on this whole continent. No wonder Valpuris has no shortage of vaplurium these days.\"",
+      "\"Valpuris and Khaz-zadm were close partners for many years. Valpuris bought its sacred metal from us, but we needed attnamese priests to bless the smelting, lest a burnt slag was produced instead of a magical metal.\"",
       "\"I remember with fondness our shared visits with high priest Priscus. I was greatly saddened by the betrayal of the orcish delegation and his death. Too late did I learn the truth - I fell for the tricks of the same enemy he did.\"",
       "\"High priest Priscus had a life-long dream - Pax Attnamica, a peace amongst all the lands, races and religions. Alas, not everyone even in his own country agreed with his pacifistic ways and eventually, his efforts led to his untimely demise.\"",
       "\"Many have recounted the story differently, but I believe this: It was neither the retinue of Priscus, nor the orcish delegation of Vol-Khan who betrayed and massacred the other. There is someone else to blame.\"",
-      "\"I learned too late it was Petrus along with Sir Galladon I. and his loyal elite guards who ambushed and murdered both Priscus and Vol-Khan, winning the attnamese throne for Petrus and throwing all khanite orcs into chaos.\"",
+      "\"I learned too late it was Archpriest Cordatus along with Sir Galladon I. and his loyal elite guards who ambushed and murdered both Priscus and Vol-Khan, winning the attnamese throne for Archpriest Cordatus and throwing all khanite orcs into chaos.\"",
       "\"Vol-Khan was a great leader and politician. He managed to unite most of the orcish tribes in a singular horde the likes of which nobody had seen since the ancient War in Heavens. Yet he did not seek conquest, but rather strength and prosperity in unity for his people.\"",
       "\"Once, the great mountain was filled with the joy of dwarven life. But Khaz-zadm has fallen and its corridors are now gloomy and full of monsters.\"", /* Yes, gloomy caves once were the dwarven city of Khaz-zadm and its mines. */
       "\"Khaz-zadm stretched for miles below the great mountain - a monument to craftsdwarfship. What remains of it now but another dark dungeon?\"",          /* That's why there are so many artificial rooms and corridors in a 'cave'. */
-      "\"We dug deep in our days of glory. And in the deepest reaches of Khaz-zadm, we built a massive fortress of solid steel. No one could ever dream of conquering it, even during the Dwarven Wars.\"", /* But Elpuri took it once it was abandoned. */
+      "\"We dug deep in our days of glory. And in the deepest reaches of Khaz-zadm, we built a massive fortress of solid steel. No one could ever dream of conquering it, even during the Dwarven Wars.\"", /* But Malgorath took it once it was abandoned. */
       "\"I only met Vol-Khan once, yet I saw a strong, wilful man in him, not a murderer.\"",
-      "\"After the coup, I knew that another war would come. Priscus was a politician. Petrus was a warrior.\"";
+      "\"After the coup, I knew that another war would come. Priscus was a politician. Archpriest Cordatus was a warrior.\"";
     }
     Inventory = { 2, key(HEXAGONAL_LOCK) { Chance = 75; }, key(OCTAGONAL_LOCK) { Chance = 75; } }
   }
@@ -4904,7 +4904,7 @@ zombie
     FriendlyReplies =
     {
       4,
-      "\"Mighty Petrus said: 'Eating brainz is bad.'\"",
+      "\"Mighty Archpriest Cordatus said: 'Eating brainz is bad.'\"",
       "\"I got off lightly - only three life sentences!\"",
       "\"Poems while you wait! Pay one brain, get one poem and one for free!\"",
       "\"My CV? I was a poet before I became a zombie. Then I worked as a mook, but quickly switched to freelance cannibal. And now I'm a prisoner.\"";
@@ -5041,7 +5041,7 @@ xinrochghost
   EyeColor = rgb16(200, 0, 0);
   BaseEmitation = rgb24(110, 110, 160);
   NameSingular = "ghost";
-  PostFix = "of Xinroch";
+  PostFix = "of Khaz-Zadm";
   Helmet = METEORIC_STEEL helmet(FULL_HELMET) { Enchantment = 2; }
   BodyArmor = METEORIC_STEEL bodyarmor(CHAIN_MAIL) { Enchantment = 2; }
   RightWielded = METEORIC_STEEL EBONY_WOOD meleeweapon(LONG_SWORD) { Enchantment = 2; }
@@ -5310,7 +5310,7 @@ mistress
   LeftSWeaponSkillHits = 200;
   ClassStates = INFRA_VISION;
   PanicLevel = 20;
-  Inventory = { 3, banana { Chance = 10; }, holybanana { Chance = 1; }, RUBBER stick { Chance = 5; } }
+  Inventory = { 3, mango { Chance = 10; }, sacredmango { Chance = 1; }, RUBBER stick { Chance = 5; } }
   HostileReplies == "\"Come closer, little boy, I'll teach you something...\"";
   AttachedGod = NEFAS;
   FleshMaterial = ELF_FLESH;
@@ -5367,7 +5367,7 @@ mistress
     "mushrooms", "rock", "nefasim", "birth-control", "fetishes",
     "testicle crushing", "pleasures", "anatomy", "pain", "sin",
 
-    "bananas", "bestiality", "agony", "Kama Sutra", "spanking",
+    "mangos", "bestiality", "agony", "Kama Sutra", "spanking",
     "piercings", "adultery", "frottage", "thumbscrews", "egoism",
     "beer", "castration", "watersports", "scaphism", "seduction",
     "iron maidens", "fisting", "drugs", "lingerie", "tablillas",
@@ -6896,9 +6896,9 @@ orc
       "\"We are a proud new nation which renounced both the barbarism of Ur-Khan's horde and the slavery under human overlords.\"",
       "\"The orcish freeholds do not recognize the rulership of Khans. We rule ourselves as a true democracy.\"",
       "\"We cannot tolerate the greenskin threat anymore! No goblin shall think it stands equal to an orc or a man.\"",
-      "\"My lords want the head of Guugzamesh served to them on a silver platter, and Attnam can be very helpful in that.\"",
-      "\"How long can Petrus ignore me?! I'm here to offer him an alliance!\"",
-      "\"Oh, the emisary of Aslona is here, too. I will enjoy seeing him grovel and beg for the help from Attnam.\"",
+      "\"My lords want the head of Guugzamesh served to them on a silver platter, and Valpuris can be very helpful in that.\"",
+      "\"How long can Archpriest Cordatus ignore me?! I'm here to offer him an alliance!\"",
+      "\"Oh, the emisary of Aslona is here, too. I will enjoy seeing him grovel and beg for the help from Valpuris.\"",
       "\"Many of my peers have fallen in wars under the old king of Aslona. I will not mourn the fall of the new king, either.\"";
     }
     HostileReplies =
@@ -7031,7 +7031,7 @@ cossack
   }
 }
 
-bananagrower
+croptender
 {
   DefaultArmStrength = 10;
   DefaultLegStrength = 15;
@@ -7046,7 +7046,7 @@ bananagrower
   DefaultMana = 5;
   TotalVolume = 80000;
   TotalSize = 170;
-  NameSingular = "banana grower";
+  NameSingular = "crop tender";
   RightGauntlet = LEATHER gauntlet;
   SkinColor = rgb16(128, 80, 48);
   HairColor = rgb16(80, 48, 32);
@@ -7055,23 +7055,23 @@ bananagrower
   TorsoBitmapPos = 32, 0;
   ArmBitmapPos = 64, 64;
   LegBitmapPos = 0, 288;
-  Inventory == banana { Times = 10; }
-  /* AI will no longer go insane if he leaves New Attnam. */
-  HostileReplies == "\"Banana POWER!\"";
+  Inventory == mango { Times = 10; }
+  /* AI will no longer go insane if he leaves Oakhaven. */
+  HostileReplies == "\"Mango POWER!\"";
   AttachedGod = SILVA;
   CanRead = true;
   FriendlyReplies =
   {
     9, /* 6 first are used before the revolution */
-    "@Dd curses: \"I hate bananas. I wish I still was @pd.\"",
-    "\"I was @pd before Attnam invaded our peaceful land.\"",
-    "@Dd glances thoughtfully to the sky: \"Our climate is truly optimal for bananas. It rains all the time here. Damn.\"",
+    "@Dd curses: \"I hate mangos. I wish I still was @pd.\"",
+    "\"I was @pd before Valpuris invaded our peaceful land.\"",
+    "@Dd glances thoughtfully to the sky: \"Our climate is truly optimal for mangos. It rains all the time here. Damn.\"",
     "\"1 + 1 = 3. I still don't believe it.\"",
     "@Dd sighs: \"Piranhas ate my mother-in-law a few days ago. And I thought that nature brings us no good!\"",
     "@Dd seems irritated. \"Go away! I know you can leave and I can't, and I'd prefer to forget that fact.\"";
     "@Dd seems very joyful. \"I can finally be @pd again!\"",
     "\"I knew you would come to save us!\"",
-    "\"Kill Petrus for us, too!\"";
+    "\"Kill Archpriest Cordatus for us, too!\"";
   }
   AutomaticallySeen = true;
   ScienceTalkPossibility = 10;
@@ -7209,9 +7209,9 @@ imperialist
       "\"Everything has a price - your loyalty and life, the air we breathe, sunshine, even my own beliefs.\"",
       "\"Poor people shouldn't complain - after all it's their own fault.\"",
       "\"Why can't those darn tax collectors ever believe an honest but poor enterpreneur who says he can't pay? Hmmm. I wonder if my room has something to do with it?\"",
-      "\"I couldn't possibly thank this city enough for making Decos Bananas Co. the world's greatest fruit producer. So I don't do it all.\"",
+      "\"I couldn't possibly thank this city enough for making Decimus Harvest Co. the world's greatest fruit producer. So I don't do it all.\"",
       "\"Low work and transportation costs have allowed me to thrive in a way envied by all rivals.\"",
-      "\"I won't stop until my bananas lie on the breakfast tables of every single dwarf, elf and man above Valpurus!\"",
+      "\"I won't stop until my mangos lie on the breakfast tables of every single dwarf, elf and man above Valpuris!\"",
       "\"What? You're still here? What the hell I pay you for? Wait, I don't pay you anything. Never mind.\"";
     }
   }
@@ -7253,9 +7253,9 @@ imperialist
       "\"Bazzaria, ah, home sweet home! You can buy there everything and anything, for the right price.\"",
       "@Dd smiles: \"How many lights do you see?\"",
       "\"Bazzaria is a land of possibility and opportunity, where every man can live his dream. Women, children and slaves not so much.\"",
-      "\"New Attnam? Yes, my brother is a viceroy there.\"",
-      "\"When I arrived to Attnam, Petrus immediately recognized my skills and appointed me the Cardinal of Love.\"",
-      "\"I was tasked with re-education of thought-criminals by mighty Petrus himself!\"";
+      "\"Oakhaven? Yes, my brother is a viceroy there.\"",
+      "\"When I arrived to Valpuris, Archpriest Cordatus immediately recognized my skills and appointed me the Cardinal of Love.\"",
+      "\"I was tasked with re-education of thought-criminals by mighty Archpriest Cordatus himself!\"";
     }
     DeathMessage = "@Dd screams, dying: \"I see the door! The extasy of death! I'm coming!\"";
     ScienceTalkName =
@@ -7333,8 +7333,8 @@ imperialist
       "\"The way to turn our economy stronger is not by making rich people poorer, it's by making poor people work harder.\"",
       "\"It's called political economy because it is has nothing to do with either politics or economy.\"",
       "\"Hmm... It is virtually impossible to compete in today's economy without the Cathedral's favor.\"",
-      "\"The Attnamese domination of the local economy is based on its army.\"",
-      "\"A powerful Attnam is coming, and Bazzaria has only two choices: Either they're at the table, or they're on the menu!\"",
+      "\"The Valpurian domination of the local economy is based on its army.\"",
+      "\"A powerful Valpuris is coming, and Bazzaria has only two choices: Either they're at the table, or they're on the menu!\"",
       "\"The trick to strong and stable economy is to work the citizens hard enough they can't afford the luxury of thought.\"";
     }
     ScienceTalkPossibility = 20;
@@ -7444,7 +7444,7 @@ ostrich
   FleshMaterial = OSTRICH_FLESH;
   DeathMessage = "@Dd is squashed to a bloody mass of feathers.";
   StandVerb = "floating";
-  /* AI will no longer go insane if it leaves New Attnam */
+  /* AI will no longer go insane if it leaves Oakhaven */
   AttachedGod = SILVA;
   ClassStates = LEVITATION;
   AutomaticallySeen = true;
@@ -7485,17 +7485,17 @@ elder
     16,
     "\"So you're leaving? The stars tell me you will fight glorious battles, meet interesting people, find out surprising things and eventually die a violent death. Good luck.\"",
     "\"I remember still clearly when we first found you in the jungle. You were five and had seemingly been raised by hippos since birth.\"",
-    "\"It is said Mortifer was the first being to die, felled by the hand of His brother, Valpurus.\"",
-    "\"It is said Valpurus is cursed to forever bear the world upon His shoulders, without a moment of respite, as a penance and punishment for His deeds.\"",
+    "\"It is said Mortifer was the first being to die, felled by the hand of His brother, Valpuris.\"",
+    "\"It is said Valpuris is cursed to forever bear the world upon His shoulders, without a moment of respite, as a penance and punishment for His deeds.\"",
     "\"Even though you have lived here, you are somehow different from the Tweraifians, I can sense it. Is it your aggressive and wild character or your stupidity that separates us? Or is it just that your skin is white and our black?\"",
-    "\"Not long ago Tweraif was a civilization advanced beyound your comprehension. But we were pacifists and could not repulse Attnam's grunt army.\"",
-    "@Dd seems very melancholic. \"I was the head chancellor of the University of Tweraif before the invasion...\"",
-    "\"For a decade I served this Decos lad as a banana grower like everyone else, but then an elephant stepped on my toe and my leg was amputated. I couldn't climb trees anymore so they made me a tourist guide.\"",
+    "\"Not long ago Oakhaven was a civilization advanced beyound your comprehension. But we were pacifists and could not repulse Valpuris's grunt army.\"",
+    "@Dd seems very melancholic. \"I was the head chancellor of the University of Oakhaven before the invasion...\"",
+    "\"For a decade I served this Decos lad as a crop tender like everyone else, but then an elephant stepped on my toe and my leg was amputated. I couldn't climb trees anymore so they made me a tourist guide.\"",
     "\"According to old knowledge ostriches were once kings of the sky. Their divine perception, seven foot wingspans, and almost supernatural speed were envied by men and gods alike. Then one of them discovered levitation and soon they all became lazy and eventually dropped their wings.\"",
-    "\"Previously we could use donkeys to carry the bananas. Then one day Attnamese tested a fierce magical bomb nearby. All the asses mutated horribly and started attacking us. The donkeys, I mean, not the colonists.\"",
-    "\"The government of Attnam is led by the high priest of Valpurus, the Great Frog who carries the world. When I was young, Petrus assumed this position by killing the former high priest.\"",
-    "\"Some time ago Attnamese military alchemists managed to crossbreed the carnivorous plant and the pineapple tree. They named the result as genetrix vesana and discovered it was a powerful hunter. The colonists tried to transport it to Attnam through the underwater tunnel but never arrived in the destination.\"",
-    "\"Oh, you're going to Attnam through the tunnel? I don't envy you. There's a dreadful monster dwelling in the its forbidden depths: Lobh-se, the misbegotten daughter of Scabies, who exists only to devour any man or beast she senses.\"",
+    "\"Previously we could use donkeys to carry the mangos. Then one day Valpurian tested a fierce magical bomb nearby. All the asses mutated horribly and started attacking us. The donkeys, I mean, not the colonists.\"",
+    "\"The government of Valpuris is led by the high priest of Valpuris, the Great Frog who carries the world. When I was young, Archpriest Cordatus assumed this position by killing the former high priest.\"",
+    "\"Some time ago Valpurian military alchemists managed to crossbreed the carnivorous plant and the pineapple tree. They named the result as genetrix vesana and discovered it was a powerful hunter. The colonists tried to transport it to Valpuris through the underwater tunnel but never arrived in the destination.\"",
+    "\"Oh, you're going to Valpuris through the tunnel? I don't envy you. There's a dreadful monster dwelling in the its forbidden depths: Lobh-se, the misbegotten daughter of Scabies, who exists only to devour any man or beast she senses.\"",
     "\"Through the millenia, Lobh-se has gained every imaginable disease and was bitten by every existing poisonous creature. Now she is practically invulnerable to all damage.\"",
     "\"When I was a child, we used to travel through the tunnel to easily reach the mainland. A mighty and wise guardian lived down there then... But now the tunnel is overrun by hedgehogs and carnivorous plants.\"",
     "\"Beware and avoid Lobh-se at all costs! Fortunately, this is rather easy, as she only leaves her lair in the heart of the night and even then does not venture far, since nutrition is plenty in the hidden cave, and she returns promptly when satiated.\"";
@@ -7531,7 +7531,7 @@ encourager
   LegBitmapPos = 16, 208;
   TotalVolume = 90000;
   TotalSize = 170;
-  NameSingular = "banana grower encourager";
+  NameSingular = "crop tender encourager";
   Belt = LEATHER belt;
   RightWielded = HARDENED_LEATHER whip;
   RightBoot = HARDENED_LEATHER boot;
@@ -7547,7 +7547,7 @@ encourager
     4;
     "@Dd shouts harshly: \"Work! Work! Bring food to yer betters!\"",
     "@Dd shouts almost sadly: \"Gonna leave, man? Pity. Me kinda liked kicking ya.\"",
-    "@Dd screams at your face: \"Me talented shouter. That made everyone in Attnam jealous. Me was sent here and told to never come back.\"",
+    "@Dd screams at your face: \"Me talented shouter. That made everyone in Valpuris jealous. Me was sent here and told to never come back.\"",
     "@Dd shouts smiling: \"Me has team management diploma from Decos business school! Me very good at encouraging workers.\"";
   }
   AutomaticallySeen = true;
@@ -7990,7 +7990,7 @@ darkmage
       8,
       "@Dd conjures a quick illusion. \"This is picture from my great-grandson's fourth birthday last week. His name is Timmy. And this is the arcanite golem I gave him.\"",
       "\"Timotheodon, my only great-grandson, once stole my spellbook and tried to blast his classmates with a fireball. Isn't he a lovable rascal?\"",
-      "@Dd sighs: \"My late wife, Helen, baked a wonderful banana stollen. Atavus day is not the same anymore, without her.\"",
+      "@Dd sighs: \"My late wife, Helen, baked a wonderful mango stollen. Atavus day is not the same anymore, without her.\"",
       "\"I miss my wife so much. I even considered looking into necromancy, but... No, she wouldn't like it that way.\"",
       "@Dd winks at you: \"Ever tried a shot of vodka with just a sprinkle of ommel urine? That gives it just the right bite!\"",
       "\"Magic always comes at a price.\"",
@@ -8188,11 +8188,11 @@ elpuri
   NameSingular = "Master Dark Frog";
   IsPolymorphable = false;
   CanBeGenerated = false;
-  Alias == "Elpuri";
+  Alias == "Malgorath";
   CWeaponSkillHits == 1000;
   PanicLevel = 0;
   CanBeCloned = false;
-  DefaultName = "Elpuri";
+  DefaultName = "Malgorath";
   HostileReplies =
   {
     6,
@@ -8203,7 +8203,7 @@ elpuri
     "\"PeTrUs!!! I rEmEmBeR!!! oNe DaY, i WiLl DeVoUr EnOuGh, I wIlL gRoW eNoUgH aNd ThEn I wIlL fEaSt On HiS fLeSh!!!\"",
     "@Dd roars horribly: \"DiE, pUnY hUmAn!!!\"";
   }
-  BloodMaterial = DARK_FROG_BLOOD;
+  BloodMaterial = BLIGHTTOAD_BLOOD;
   SkinColor = rgb16(60, 60, 60);
   ClassStates = INFRA_VISION|TELEPORT_CONTROL;
   BaseBiteStrength = 1500;
@@ -8662,14 +8662,14 @@ sumowrestler
   FriendlyReplies =
   {
     9, /* 6 first are used before the revolution */
-    "@Dd smiles broadly: \"'Tis the perfect occupation, this. I eat like kings! Or at least like kings who only eat bananas.\"",
+    "@Dd smiles broadly: \"'Tis the perfect occupation, this. I eat like kings! Or at least like kings who only eat mangos.\"",
     "\"The ancient rules of this traditional martial art were designed by Mr. Decos himself, so don't complain about them.\"",
     "\"My real name is Alfred, but the viceroy said it wasn't exotic enough for this job.\"",
-    "@Dd is in a buoyant mood. \"I love the new rule! Before the invasion, my wife always complained about my weight. Now she doesn't, since she's a slave in Attnam.\"",
-    "@Dd seems to be recalling sorrowful memories. \"When Tweraif was still sovereign, I tried to run a restaurant for a while. It ended in bankruptcy since I ate all the food myself.\"",
+    "@Dd is in a buoyant mood. \"I love the new rule! Before the invasion, my wife always complained about my weight. Now she doesn't, since she's a slave in Valpuris.\"",
+    "@Dd seems to be recalling sorrowful memories. \"When Oakhaven was still sovereign, I tried to run a restaurant for a while. It ended in bankruptcy since I ate all the food myself.\"",
     "@Dd winks at you: \"A belt of levitation is really useful for large people.\"",
-    "@Dd looks almost panicked. \"Hey, why aren't people bringing me bananas anymore! I'm hungry! Help! Don't let me starve!\"",
-    "\"If you attack Attnam, too, please don't liberate my wife. She'll force me to commence a merciless diet for sure!\"",
+    "@Dd looks almost panicked. \"Hey, why aren't people bringing me mangos anymore! I'm hungry! Help! Don't let me starve!\"",
+    "\"If you attack Valpuris, too, please don't liberate my wife. She'll force me to commence a merciless diet for sure!\"",
     "\"I think I'm going to move abroad and start teaching sumo wrestling to foreigners. I'm sure it'll be the number one fashion sport of big-boned people in no time!\"";
   }
   AutomaticallySeen = true;
@@ -8719,7 +8719,7 @@ tourist
     {
       6,
       "\"Don't you barbarians really eat anything but fruits? I need some greasy sausages badly!\"",
-      "\"We're from Bazaria, the great trader nation, where every coin has equal rights. Richel Decos was our fellow countryman before he bought this town from the Attnamese.\"",
+      "\"We're from Bazaria, the great trader nation, where every coin has equal rights. Richel Decos was our fellow countryman before he bought this town from the Valpurian.\"",
       "\"Back home I plan commercials acted during theatre play breaks.\"",
       "\"It is good for my son to see how we would live if science and trade hadn't brought us the prosperity and welfare it has.\"",
       "\"I couldn't believe my eyes when the travel agent showed me the extraordinary low prices of Decos Paradise Tours Inc. I believed they were a joke until he revealed the ingenious travel method: customers levitate over the ocean after consuming magical mushrooms! Needless to say, our holiday plans were immediately decided.\"",
@@ -8759,8 +8759,8 @@ tourist
       5,
       "\"I heard natives like you paint every inch of their body, dance complex ritual dances around a big bonfire and utter forbidden voodoo spells. When will you begin?\"",
       "\"Why are all the villagers so sweaty? Can't they try to wash themselves often enough at least when civilized people are around?\"",
-      "\"I so love bananas! This is a heaven!\"",
-      "\"My friend's brother's ex-wife's uncle's old schoolmate inherited some money, bought shares of Decos Bananas Co. and became a millionaire. I think of it as an example of how anyone can become rich and happy if he tries hard enough.\"",
+      "\"I so love mangos! This is a heaven!\"",
+      "\"My friend's brother's ex-wife's uncle's old schoolmate inherited some money, bought shares of Decimus Harvest Co. and became a millionaire. I think of it as an example of how anyone can become rich and happy if he tries hard enough.\"",
       "\"Richel Decos is such a wonderful person! I wish I was married to someone as well-off as him!\"";
     }
   }
@@ -8914,7 +8914,7 @@ archangel
     RightGauntlet = GOLDEN_EAGLE_FEATHER gauntlet { Enchantment = 0; }
     RightWielded = VALPURIS_METAL VALPURIS_METAL meleeweapon(TWO_HANDED_SWORD);
     LeftWielded = VALPURIS_METAL shield;
-    HostileReplies == "\"Thou wouldst defy the King Upon the Throne, the Lord of Lords and God of Gods, the Frog Beneath the World Who Bears the Greatest of All Burdens, Mighty Valpurus Himself? I shall not stand thy heresy any longer, worthless worm!\"";
+    HostileReplies == "\"Thou wouldst defy the King Upon the Throne, the Lord of Lords and God of Gods, the Frog Beneath the World Who Bears the Greatest of All Burdens, Mighty Valpuris Himself? I shall not stand thy heresy any longer, worthless worm!\"";
   }
 
   Config LEGIFER;
@@ -9157,7 +9157,7 @@ mysticfrog
     DefaultWillPower = 35;
     DefaultWisdom = 25;
     DefaultCharisma = 6;
-    BloodMaterial = DARK_FROG_BLOOD;
+    BloodMaterial = BLIGHTTOAD_BLOOD;
     SkinColor = rgb16(60, 60, 60);
     Adjective = "mystic dark";
     CanBeGenerated = true;
@@ -9182,7 +9182,7 @@ mysticfrog
     DefaultWillPower = 30;
     DefaultWisdom = 35;
     DefaultCharisma = 30;
-    BloodMaterial = LIGHT_FROG_BLOOD;
+    BloodMaterial = MARSH_TOAD_BLOOD;
     SkinColor = rgb16(32, 88, 32);
     Adjective = "mystic light";
     ClassStates = TELEPORT_CONTROL|INVISIBLE|ESP;
@@ -9428,7 +9428,7 @@ siren
       "\"I'm not 'an elf', I come from the royal blood of Vindael, or wood-children, if you will.\"",
       "\"I've heard a mistress of Nefas has infiltrated even this very Cathedral. Do not trust Dar'Vindael, for their words and deeds are just as treacherous as their goddess!\"",
       "\"I never understood why are your people calling mine 'dark elves'. We may be living in the Dark Forest, but we give our lives to fight Darkness in all its forms.\"",
-      "\"The violation of our borders must end! We don't care where Attnam gets its wood, but the Dark Forest will not be exploited.\"";
+      "\"The violation of our borders must end! We don't care where Valpuris gets its wood, but the Dark Forest will not be exploited.\"";
     }
     IsExtraCoward = true;
     UndeadVersions = false;
@@ -9763,8 +9763,8 @@ bum
     "\"As a little boy, I saw my father get into a fight with other farmers. You wouldn't believe how easily a sickle chops off limbs.\"",
     "\"I miss my cloak. The cold is not so bad, but I felt safer with it wrapped around my body.\"",
     "\"Me and my father once got cornered by a pack of wolves when I was young. He took off his belt and chased them off. Belts really can pack a whip, har har har.\"",
-    "\"I met this Ivan when he was in Attnam a few weeks back. He had a cute pet bunny, Vladimir!\"",
-    "\"I met this Ivan when he was in Attnam a few weeks back. He seemed a cool guy, but quite reclusive. Maybe I was not cool enough for him to want to hang out? Har har har.\"",
+    "\"I met this Ivan when he was in Valpuris a few weeks back. He had a cute pet bunny, Vladimir!\"",
+    "\"I met this Ivan when he was in Valpuris a few weeks back. He seemed a cool guy, but quite reclusive. Maybe I was not cool enough for him to want to hang out? Har har har.\"",
     "\"Yes, I've met some orcs in my days, both khanites and from the freeholds. Did you know they can all see in the dark as well as a cat? They can't read, though, but who needs that, right? Har har har.\"",
     "\"Yes, I've met some orcs in my days, both khanites and from the freeholds. Did you know they can't smell at all? I once saw an orc standing in a cloud of mustard gas like it was nothing!\"",
     "\"Have you ever lost a limb? Or maybe contracted leprosy? Woke up after a night of drinking as a wolf and knew nothing about it? Trust me and ask any priest, they know quite a bit about stuff like that.\"",
@@ -9786,7 +9786,7 @@ bum
     "\"Trolls really have tough hides. I made a pair of boots from the one I encountered in mountains far to the north, and used them for years before they wore out.\"",
     "\"One priestess once told me that angels look out for ardent worshippers. I'm not sure what ardent means, so I just smiled and nodded.\"",
     "\"Those kamikaze dwarves can't tell friend from foe. Maybe the gods don't care about a little friendly fire? Har har har!\"",
-    "\"Have you seen Petrus? Wise men have massive beards, indeed. Har har har!\"",
+    "\"Have you seen Archpriest Cordatus? Wise men have massive beards, indeed. Har har har!\"",
     "\"One of my friends always said that when everything else fails, you can always bite your foes to death. Granted, she was a werewolf, but still...\"",
     "\"Don't believe those rumors about an enchanted valpurium flaming sword just lying around! It's all lies! Lies, I say!\"",
     "\"I've heard tales about arcanite, a magical metal lighter than some wood! I would love to try out a shield made of arcanite.\"",
@@ -9845,7 +9845,7 @@ bum
     "\"My grandpa used to tell me bedtime stories about frogs, both light and dark. Did you know they like to eat magnolias?\"",
     "\"My grandpa used to tell me bedtime stories about ommels, the kings of the wild. They dwarf elephants, scare dragons and completely ignore humankind. The elder males, called bristlers, are so ancient their hair is said to petrify while still on their bodies!\"",
     "\"Don't be shy to talk to your friends. You can learn more, my mama used to say, and you definitely can! Har har har.\"",
-    "\"Eh, the shop magic is strange. How they can keep all the bananas fresh and unspoiled in the middle of a winter, I have no idea.\"",
+    "\"Eh, the shop magic is strange. How they can keep all the mangos fresh and unspoiled in the middle of a winter, I have no idea.\"",
     "\"If you hate hose floating eyes as much as I do, try waiting for them in the dark. They can't see in darkness any better then you! Har har har!\"",
     "\"I didn't know how much Nefas was into vodka until I got into a drinking contest with a mistress. When I regained consciousness, she told me how they train in the temples with full kegs.\"",
     "\"My grandpa once lost an arm to an unfortunate chain explosion of some of his wands. He had a wand of resurrection on hand, though, so a single zap made it all better.\"",
@@ -9855,14 +9855,14 @@ bum
     "\"Mining is hard, exhausting job. I used to work in a valpurium mine back in the day and man, was I hungry after a work shift!\"",
     "\"Be careful what you wish for, my mama always told me. Well, I wish I had a bottle full of vodka! Har har har.\"",
     "\"Har har har, masochists like it rough, if you know what I mean.\"",
-    "\"Loricatus? That's the smith god, right? I don't know what's with him, but he seems to really hate bananas.\"",
+    "\"Loricatus? That's the smith god, right? I don't know what's with him, but he seems to really hate mangos.\"",
     "\"I've heard that Silva rocks!\"",
-    "\"Once I ate a resurrected banana and gosh, was it tasty!\"",
+    "\"Once I ate a resurrected mango and gosh, was it tasty!\"",
     "\"I met an angel once. She fixed my arm. Lovely lady, she was.\"",
     "\"Don't eat too much, my mama told me, or you'll grow fat and clumsy.\"",
     "\"I've heard that unicorns taste weird. Not that I would know first-hand.\"",
-    "\"Tweraif? Yeah, I heard about it from a guy... What was his name again? Oily Orpiv, I think.\"",
-    "\"I once saw an apprentice dark mage polymorph his small chest and spill all his stuff. I would have laughed, but I didn't wanna be turned into a dark frog.\"",
+    "\"Oakhaven? Yeah, I heard about it from a guy... What was his name again? Oily Orpiv, I think.\"",
+    "\"I once saw an apprentice dark mage polymorph his small chest and spill all his stuff. I would have laughed, but I didn't wanna be turned into a blight-toad.\"",
     "\"I've heard you can fetch a nice iron arm from the dwarves of Kharaz-arad.\"",
     "\"I once tried to pet a hedgehog and got my hand all screwed up. Tried it next time with a gauntlet, and let me tell ya, it takes the sting from their spines!\"",
     "\"You ever thrown a bone to a doggie? I love the way it makes them happy.\"",
@@ -9876,12 +9876,12 @@ bum
     "\"You came through that scary underwater tunnel, right? I've heard it's deeper than it seems. Sounds spooky, eh?\"",
     "\"I hate zombies! Dead things should stay dead and not try to bite you. I was bitten once, in the Cellar, and my arm got all inflamed and necrotic.\"",
     "\"You know how people talk about the genies locked in old oil lamps? Tavern stories and wishful legends, I tell ya!\"",
-    "\"One Cossack once told me about an old guy named Xinroch. He lived and died long ago, but he lost his favorite sword, so he came back.\"",
-    "\"Some Cossack once told me about a guy named Xinroch who can be at several places at once! And to top it off, he's dead! Yeah!\"",
+    "\"One Cossack once told me about an old guy named Khaz-Zadm. He lived and died long ago, but he lost his favorite sword, so he came back.\"",
+    "\"Some Cossack once told me about a guy named Khaz-Zadm who can be at several places at once! And to top it off, he's dead! Yeah!\"",
     "\"I've heard that only the dead can be safe around an enner beast! I say when you're dead, it's no longer of concern what's around you, eh?\"",
     "\"The Cathedral has impenetrable defenses with its four Cardinals scanning the thoughts of everyone, they say. Well, they still get their stuff stolen by kobolds, har har har! Those little midgets are so dumb no thoughts can be read from them! Har har!\"",
     "\"My mama told me you only need a wand of polymorph and some rocks to make a fortune. Eh, never held a wand in my hands, so what can I know?\"",
-    "\"Those bananas are dangerous, I tell ya! You eat one, you drop that peel-thingy and then someone goes and slips on it, cracking their skull open!\"",
+    "\"Those mangos are dangerous, I tell ya! You eat one, you drop that peel-thingy and then someone goes and slips on it, cracking their skull open!\"",
     "\"Let me give you a word of advice - next time you get drunk, don't let the bottles lying on the ground. Broken bottles are a pain in the foot, if you know what I mean.\"",
     "\"I got attacked by a kobold one night, but I blocked his spear with my lantern and then beaten him to death with it.\"",
     "\"Mistresses love a good whipping, you say? Eh, I got whipped once and let me tell ya, there's nothing to love about it.\"",
@@ -9893,7 +9893,7 @@ bum
     "\"Some priest once told me that gods can be quite jealous of their worshipers. I guess that's why they can't stand each other?\"",
     "\"When my mama took me to an altar for the first time, she made me kneel there. It makes the gods happy, she said.\"",
     "\"I knew a guy who had this altar in his home and kept pushing his fingers down his throat and vomiting all over it! He said it was an offering for some Scabies, but ew!\"",
-    "\"There was this arch-magic-guy some years back running around with a wand of resurrection. Those lucky bastards he raised where so grateful he quickly amassed an army of followers! Then he attacked Attnam and got promptly massacred.\"",
+    "\"There was this arch-magic-guy some years back running around with a wand of resurrection. Those lucky bastards he raised where so grateful he quickly amassed an army of followers! Then he attacked Valpuris and got promptly massacred.\"",
     "\"Someone once told me that necromancy is not for vegetarians. Well, they have to work with meat, I guess?\"",
     "\"They say necromancy sows Chaos into your heart. I say you have to already have some Chaos in you to even try using necromancy.\"",
     "\"Only time I ever ate a fortune cookie, it said: 'When aflame, douse yourself with water from a fountain.' Why the Dark Gods would I be aflame in the first place?\"",
@@ -10049,13 +10049,13 @@ terra
     "\"Silva is the goddess of earth, forests and animals. She is the Mother Nature and the source of all that is alive.\"",
     "\"The roots of Silva drink from the Waters of Eternity, where the dead souls wander over an endless twilight ocean, and Her treetop supports the Heavens of the other gods.\"",
     "\"Would you happen to know Kaethos? I hope he is alright after all those years. Sometimes, I still think back to our... Nevermind.\"",
-    "\"Hopefully one day, I will find an apprentice to take my place. How I wish to see Tweraif again!\"",
+    "\"Hopefully one day, I will find an apprentice to take my place. How I wish to see Oakhaven again!\"",
     "\"My vigil is long and lonely, but necessary. Lobh-se cannot be let out of her prison.\"",
     "\"Beware and avoid Lobh-se at all costs! She is the misbegotten daughter of Scabies, who exists only to devour any man or beast she senses.\"",
     "\"Through the millennia, Lobh-se has gained every imaginable disease and was bitten by every existing poisonous creature. Now she is practically invulnerable to all damage.\"",
     "\"Fortunately, Lobh-se only leaves her lair in the heart of the night and even then does not venture far, since nutrition is plenty here, and she returns promptly when satiated. Still, it is becoming harder and harder to ward her off.\"",
-    "\"This cave once was a magnificent garden, a bulwark against evil. But after the Attnamese invasion, the power of Silva was weakened, and darkness and strife crept in here from below.\"",
-    "\"I am bound by sacred oaths to protect this shrine with my life. I remained behind when Tweraifians buried the entrance to hide this place from Attnam.\"";
+    "\"This cave once was a magnificent garden, a bulwark against evil. But after the Valpurian invasion, the power of Silva was weakened, and darkness and strife crept in here from below.\"",
+    "\"I am bound by sacred oaths to protect this shrine with my life. I remained behind when Tweraifians buried the entrance to hide this place from Valpuris.\"";
   }
   DeathMessage = "@Dd dies, whispering: \"I'm sorry! I failed you, Silva.\"";
 }
@@ -10248,7 +10248,7 @@ aslonapriest /* priest-> */
     "\"The people have faith in Seges, and I do my best to heal and comfort them in adversity.\"",
     "\"No wonder everyone is so cranky these days. If you had to live year-round in a cold, drafty castle like this one, you'd be cranky, too.\"",
     "\"Was it the Black-cloak or Lord Regent who caused the old king's death? I doubt we'll ever know for sure.\"",
-    "\"I've sometimes thought I'd like to make a pilgrimage to the Cathedral of Attnam, but my duties prevent me from such extensive and dangerous travel.\"",
+    "\"I've sometimes thought I'd like to make a pilgrimage to the Cathedral of Valpuris, but my duties prevent me from such extensive and dangerous travel.\"",
     "\"There's something strange about Lord Regent.\"";
   }
   Inventory = { 3, lantern, potion { Times = 2; SecondaryMaterial = CURE_ALL_LIQUID; }, Random { Category = WAND; Times = 5; } }
@@ -10329,7 +10329,7 @@ harvan
   {
     3,
     "\"So you're with him, after all.\"",
-    "\"I should have expected someone from Attnam to be nothing but a traitor.\"",
+    "\"I should have expected someone from Valpuris to be nothing but a traitor.\"",
     "\"I don!t want to kill you, but trust me that I will.\"";
   }
 }
