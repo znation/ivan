@@ -54,10 +54,10 @@ ITEM(materialcontainer, item)
   material* SecondaryMaterial;
 };
 
-ITEM(banana, materialcontainer)
+ITEM(mango, materialcontainer)
 {
  public:
-  banana() : TimesUsed(0), Charges(6), Jammed(false) { }
+  mango() : TimesUsed(0), Charges(6), Jammed(false) { }
   virtual truth Zap(character*, v2, int);
   virtual void Save(outputfile&) const;
   virtual void Load(inputfile&);
@@ -66,7 +66,7 @@ ITEM(banana, materialcontainer)
   virtual truth IsZapWorthy(ccharacter*) const { return Charges > TimesUsed; }
   virtual truth IsChargeable(ccharacter*) const { return true; }
   virtual void SignalSpoil(material*);
-  virtual truth IsBanana() const { return true; }
+  virtual truth IsMango() const { return true; }
   virtual material* RemoveSecondaryMaterial();
  protected:
   int TimesUsed;
@@ -74,7 +74,7 @@ ITEM(banana, materialcontainer)
   truth Jammed;
 };
 
-ITEM(holybanana, banana)
+ITEM(sacredmango, mango)
 {
  public:
   virtual truth HitEffect(character*, character*, v2, int, int, truth);
@@ -153,13 +153,13 @@ ITEM(potion, materialcontainer)
   virtual truth AddAdjective(festring&, truth) const;
 };
 
-ITEM(bananapeels, item)
+ITEM(mangopeels, item)
 {
  public:
   virtual item* BetterVersion() const;
   virtual truth HasBetterVersion() const { return true; }
   virtual void StepOnEffect(character*);
-  virtual truth IsBananaPeel() const { return true; }
+  virtual truth IsMangoPeel() const { return true; }
   virtual truth IsDangerous(ccharacter*) const;
   virtual truth RaiseTheDead(character*);
 };

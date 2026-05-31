@@ -813,7 +813,7 @@ truth altar::SitOn(character* Sitter)
     {
       game::TextScreen(CONST_S("A ghastly red light emanates upward from the altar, and all eyes in \n"
                                "the temple are turned thither. A booming voice fills the air:\n\n"
-                               "\"mORtAl! Thou hast supplanted Xinroch and proven your devotion to Me! Therefore,\n"
+                               "\"mORtAl! Thou hast supplanted Khaz-Zadm and proven your devotion to Me! Therefore,\n"
                                "I knight you, and hereby promote you to Master Dark Knight of the Unholy Order of Infuscor!\"\n\n"
                                "You are victorious!"));
       game::GetCurrentArea()->SendNewDrawRequest();

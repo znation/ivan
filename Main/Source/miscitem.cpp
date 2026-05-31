@@ -20,7 +20,7 @@ void materialcontainer::InitMaterials(material* M1, material* M2, truth CUP)
 void materialcontainer::InitMaterials(const materialscript* M, const materialscript* C, truth CUP)
 { InitMaterials(M->Instantiate(), C->Instantiate(), CUP); }
 
-int holybanana::GetSpecialFlags() const { return ST_FLAME_1; }
+int sacredmango::GetSpecialFlags() const { return ST_FLAME_1; }
 
 col16 ullrbone::GetOutlineColor(int) const { return MakeRGB16(210, 210, 210); }
 
@@ -46,7 +46,7 @@ truth cauldron::IsDipDestination(ccharacter*) const { return SecondaryMaterial &
 
 truth stick::AddAdjective(festring& String, truth Articled) const { return AddBurningAdjective(String, Articled); }
 
-truth bananapeels::IsDangerous(ccharacter* Stepper) const { return Stepper->HasALeg(); }
+truth mangopeels::IsDangerous(ccharacter* Stepper) const { return Stepper->HasALeg(); }
 
 truth brokenbottle::IsDangerous(ccharacter* Stepper) const { return Stepper->HasALeg(); }
 
@@ -931,7 +931,7 @@ void scrollofcharging::FinishReading(character* Reader)
   Reader->EditExperience(INTELLIGENCE, 300, 1 << 12);
 }
 
-void bananapeels::StepOnEffect(character* Stepper)
+void mangopeels::StepOnEffect(character* Stepper)
 {
   if(Stepper->HasALeg() && !(RAND() % 5))
   {
@@ -943,7 +943,7 @@ void bananapeels::StepOnEffect(character* Stepper)
     /* Do damage against any random bodypart except legs */
 
     Stepper->ReceiveDamage(0, 1 + (RAND() & 1), PHYSICAL_DAMAGE, ALL&~LEGS);
-    Stepper->CheckDeath(CONST_S("slipped on a banana peel"), 0);
+    Stepper->CheckDeath(CONST_S("slipped on a mango peel"), 0);
     Stepper->EditAP(-500);
   }
 }
@@ -2264,7 +2264,7 @@ item* brokenbottle::Fix()
 
 truth encryptedscroll::Read(character*)
 {
-  ADD_MESSAGE("You could never hope to decipher this top secret message. It is meant for Petrus's eyes only.");
+  ADD_MESSAGE("You could never hope to decipher this top secret message. It is meant for the Archpriest's eyes only.");
   return false;
 }
 
@@ -2389,7 +2389,7 @@ truth horn::Apply(character* Blower)
         Food = pineapple::Spawn();
         break;
        default:
-        Food = banana::Spawn();
+        Food = mango::Spawn();
         break;
       }
 
@@ -2436,9 +2436,9 @@ void magicalinstrument::Load(inputfile& SaveFile)
   SaveFile >> LastUsed;
 }
 
-item* bananapeels::BetterVersion() const
+item* mangopeels::BetterVersion() const
 {
-  return banana::Spawn();
+  return mango::Spawn();
 }
 
 truth beartrap::IsPickable(character* Picker) const
@@ -2446,29 +2446,29 @@ truth beartrap::IsPickable(character* Picker) const
   return !IsActive() && !Picker->IsStuckToTrap(GetTrapID());
 }
 
-void banana::Save(outputfile& SaveFile) const
+void mango::Save(outputfile& SaveFile) const
 {
   materialcontainer::Save(SaveFile);
   SaveFile << TimesUsed << Charges << Jammed;
 }
 
-void banana::Load(inputfile& SaveFile)
+void mango::Load(inputfile& SaveFile)
 {
   materialcontainer::Load(SaveFile);
   SaveFile >> TimesUsed >> Charges >> Jammed;
 }
 
-truth banana::Zap(character*, v2, int)
+truth mango::Zap(character*, v2, int)
 {
   if(IsBroken())
   {
-    ADD_MESSAGE("This banana seems to be somehow disfunctional.");
+    ADD_MESSAGE("This mango seems to be somehow disfunctional.");
     return false;
   }
 
   if(Jammed)
   {
-    ADD_MESSAGE("Unfortunately, your banana is jammed!");
+    ADD_MESSAGE("Unfortunately, your mango is jammed!");
     return false;
   }
 
@@ -2476,7 +2476,7 @@ truth banana::Zap(character*, v2, int)
   {
     if(TimesUsed && !RAND_N(10))
     {
-      ADD_MESSAGE("Oh no! Your banana jams in the middle of the firefight!");
+      ADD_MESSAGE("Oh no! Your mango jams in the middle of the firefight!");
       Jammed = true;
     }
     else
@@ -2491,7 +2491,7 @@ truth banana::Zap(character*, v2, int)
   return true;
 }
 
-void banana::SignalSpoil(material* Material)
+void mango::SignalSpoil(material* Material)
 {
   if(!Exists())
     return;
@@ -2684,15 +2684,15 @@ void can::DipInto(liquid* Liquid, character* Dipper)
   Dipper->DexterityAction(10);
 }
 
-truth holybanana::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
+truth sacredmango::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
                             int BodyPartIndex, int Direction, truth BlockedByArmour)
 {
-  truth BaseSuccess = banana::HitEffect(Enemy, Hitter, HitPos, BodyPartIndex, Direction, BlockedByArmour);
+  truth BaseSuccess = mango::HitEffect(Enemy, Hitter, HitPos, BodyPartIndex, Direction, BlockedByArmour);
 
   if(Enemy->IsEnabled() && RAND() & 1)
   {
     if(Enemy->IsPlayer() || Hitter->IsPlayer() || Enemy->CanBeSeenByPlayer() || Hitter->CanBeSeenByPlayer())
-      ADD_MESSAGE("%s banana burns %s.", Hitter->CHAR_POSSESSIVE_PRONOUN, Enemy->CHAR_DESCRIPTION(DEFINITE));
+      ADD_MESSAGE("%s mango burns %s.", Hitter->CHAR_POSSESSIVE_PRONOUN, Enemy->CHAR_DESCRIPTION(DEFINITE));
 
     return Enemy->ReceiveBodyPartDamage(Hitter, 2 + (RAND() & 3), FIRE, BodyPartIndex, Direction) || BaseSuccess;
   }
@@ -2700,7 +2700,7 @@ truth holybanana::HitEffect(character* Enemy, character* Hitter, v2 HitPos,
     return BaseSuccess;
 }
 
-truth holybanana::Zap(character* Zapper, v2, int Direction)
+truth sacredmango::Zap(character* Zapper, v2, int Direction)
 {
   if(Charges > TimesUsed)
   {
@@ -2729,7 +2729,7 @@ truth holybanana::Zap(character* Zapper, v2, int Direction)
   return true;
 }
 
-void holybanana::AddInventoryEntry(ccharacter* Viewer, festring& Entry, int, truth ShowSpecialInfo) const // never piled
+void sacredmango::AddInventoryEntry(ccharacter* Viewer, festring& Entry, int, truth ShowSpecialInfo) const // never piled
 {
   AddName(Entry, INDEFINITE);
 
@@ -2759,7 +2759,7 @@ void holybanana::AddInventoryEntry(ccharacter* Viewer, festring& Entry, int, tru
   }
 }
 
-truth holybanana::ReceiveDamage(character* Damager, int Damage, int Type, int)
+truth sacredmango::ReceiveDamage(character* Damager, int Damage, int Type, int)
 {
   if(TimesUsed != 6 && Type & (PHYSICAL_DAMAGE|FIRE|ENERGY) && Damage && (Damage > 50 || !(RAND() % (100 / Damage))))
   {
@@ -3004,10 +3004,10 @@ material* materialcontainer::RemoveSecondaryMaterial()
   return OldMaterial;
 }
 
-material* banana::RemoveSecondaryMaterial()
+material* mango::RemoveSecondaryMaterial()
 {
   material* OldMaterial = MainMaterial;
-  item* Peel = bananapeels::Spawn(0, NO_MATERIALS);
+  item* Peel = mangopeels::Spawn(0, NO_MATERIALS);
   Peel->InitMaterials(OldMaterial);
   DonateSlotTo(Peel);
   DonateIDTo(Peel);
@@ -3357,9 +3357,9 @@ void itemcontainer::SetParameters(int Param)
   SetIsLocked(Param & LOCKED);
 }
 
-truth bananapeels::RaiseTheDead(character*)
+truth mangopeels::RaiseTheDead(character*)
 {
-  GetSlot()->AddFriendItem(banana::Spawn());
+  GetSlot()->AddFriendItem(mango::Spawn());
   RemoveFromSlot();
   SendToHell();
   return true;

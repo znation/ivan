@@ -508,7 +508,7 @@ class item : public object
   void ResetThermalEnergies();
   virtual void SetItemsInside(const fearray<contentscript<item>>&, int) { }
   virtual int GetCarryingBonus() const { return 0; }
-  virtual truth IsBanana() const { return false; }
+  virtual truth IsMango() const { return false; }
   virtual truth IsMangoSeedling() const { return false; }
   virtual truth IsEncryptedScroll() const { return false; }
   virtual truth IsNuke() const { return false; }
@@ -588,7 +588,7 @@ class item : public object
   virtual void RemoveRust();
   virtual truth IsBurnt() const;
   virtual void RemoveBurns();
-  virtual truth IsBananaPeel() const { return false; }
+  virtual truth IsMangoPeel() const { return false; }
   void SetSpoilPercentage(int);
   virtual pixelpredicate GetFluidPixelAllowedPredicate() const;
   void RedistributeFluids();
