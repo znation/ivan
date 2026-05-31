@@ -78,7 +78,7 @@ ROOM(library, room)
   virtual void HostileAction(character*) const;
 };
 
-ROOM(bananadroparea, room)
+ROOM(mangodroparea, room)
 {
  public:
   virtual truth PickupItem(character*, item*, int);

@@ -431,7 +431,7 @@ class game
   static void SetTooGreatDangerFound(truth What) { TooGreatDangerFoundTruth = What; }
   static void CreateBusyAnimationCache();
   static long GetScore();
-  static truth TweraifIsFree();
+  static truth OakhavenIsFree();
   static truth IsXMas();
   static int AddToItemDrawVector(const itemvector&);
   static void ClearItemDrawVector();

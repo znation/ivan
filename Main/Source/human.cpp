@@ -823,7 +823,7 @@ void priest::BeTalkedTo()
 
     if(GetConfig() != SILVA)
       humanoid::BeTalkedTo();
-    else if(!game::TweraifIsFree())
+    else if(!game::OakhavenIsFree())
       ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, 4)]);
     else
       ProcessAndAddMessage(GetFriendlyReplies()[4 + RandomizeReply(Said, 3)]);
@@ -1098,7 +1098,7 @@ void priest::BeTalkedTo()
 
   if(GetConfig() != SILVA)
     humanoid::BeTalkedTo();
-  else if(!game::TweraifIsFree())
+  else if(!game::OakhavenIsFree())
     ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, 4)]);
   else
     ProcessAndAddMessage(GetFriendlyReplies()[4 + RandomizeReply(Said, 3)]);
@@ -3285,7 +3285,7 @@ void bananagrower::BeTalkedTo()
 
   if(GetRelation(PLAYER) == HOSTILE)
     ProcessAndAddMessage(GetHostileReplies()[RandomizeReply(Said, GetHostileReplies().Size)]);
-  else if(!game::TweraifIsFree())
+  else if(!game::OakhavenIsFree())
   {
     if(GetRelation(PLAYER) != HOSTILE
        && Profession.Find("president", 0) != festring::NPos && !(RAND() % 7))
@@ -3441,7 +3441,7 @@ truth humanoid::CheckZap()
 
 void bananagrower::GetAICommand()
 {
-  if(game::TweraifIsFree() ||
+  if(game::OakhavenIsFree() ||
      (GetDungeon()->GetIndex() != NEW_ATTNAM)
    ) // Behave normally outside of Oakhaven.
   {
@@ -4904,7 +4904,7 @@ void femaleslave::BeTalkedTo()
 
   if(GetConfig() != NEW_ATTNAM || GetRelation(PLAYER) == HOSTILE)
     humanoid::BeTalkedTo();
-  else if(!game::TweraifIsFree())
+  else if(!game::OakhavenIsFree())
     ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, 4)]);
   else
     ProcessAndAddMessage(GetFriendlyReplies()[4 + RandomizeReply(Said, 3)]);
@@ -5444,7 +5444,7 @@ void sumowrestler::BeTalkedTo()
 
   if(GetRelation(PLAYER) == HOSTILE)
     ProcessAndAddMessage(GetHostileReplies()[RandomizeReply(Said, GetHostileReplies().Size)]);
-  else if(!game::TweraifIsFree())
+  else if(!game::OakhavenIsFree())
     ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, 6)]);
   else
     ProcessAndAddMessage(GetFriendlyReplies()[6 + RandomizeReply(Said, 3)]);
@@ -5536,7 +5536,7 @@ void imperialist::BeTalkedTo()
       ProcessAndAddMessage(GetFriendlyReplies()[RandomizeReply(Said, GetFriendlyReplies().Size - 1)]);
   }
   else if(GetConfig() == HOARD_MASTER && (PLAYER->GetMoney() >= 50000) &&
-          game::TweraifIsFree() && !(GetRelation(PLAYER) == HOSTILE) &&
+          game::OakhavenIsFree() && !(GetRelation(PLAYER) == HOSTILE) &&
           GetPos().IsAdjacent(PLAYER->GetPos())
          )
   {
@@ -7061,7 +7061,7 @@ void mirrorimp::CreateCorpse(lsquare* Square)
 
 void elder::BeTalkedTo()
 {
-  if(game::TweraifIsFree() && !game::GetFreedomStoryState() && !HasBeenSpokenTo
+  if(game::OakhavenIsFree() && !game::GetFreedomStoryState() && !HasBeenSpokenTo
      && !(GetRelation(PLAYER) == HOSTILE) && GetPos().IsAdjacent(PLAYER->GetPos()))
   {
     game::TextScreen(CONST_S("\"My boy, my wonderful boy! From the very day I found you,\n"

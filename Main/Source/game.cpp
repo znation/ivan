@@ -6148,7 +6148,7 @@ long game::GetScore()
 
 /* Only works if New Attnam is loaded */
 
-truth game::TweraifIsFree()
+truth game::OakhavenIsFree()
 {
   for(character* p : GetTeam(COLONIST_TEAM)->GetMember())
     if(p->IsEnabled())
@@ -6263,7 +6263,7 @@ truth game::TryToEnterSumoArena()
   if(!Sumo || !Sumo->IsEnabled() || Sumo->GetRelation(Player) == HOSTILE || !Player->CanBeSeenBy(Sumo))
     return true;
 
-  if(TweraifIsFree())
+  if(OakhavenIsFree())
   {
     ADD_MESSAGE("\"You started this stupid revolution, after which I've been constantly hungry. Get lost!\"");
     return false;

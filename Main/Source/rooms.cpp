@@ -58,7 +58,7 @@ truth shop::PickupItem(character* Customer, item* ForSale, int Amount)
 
     if(GetMaster()->GetConfig() == NEW_ATTNAM)
     {
-      if(ForSale->IsBanana())
+      if(ForSale->IsMango())
         Price = (Price >> 2) + 1;
       else if(ForSale->IsEatable(GetMaster()))
         Price <<= 2;
@@ -161,7 +161,7 @@ truth shop::DropItem(character* Customer, item* ForSale, int Amount)
   if(GetMaster()->GetConfig() == NEW_ATTNAM)
   {
     ADD_MESSAGE("\"Sorry, I'm only allowed to buy from "
-                "Decos Bananas Co. if I wish to stay here.\"");
+                "Decimus Harvest Co. if I wish to stay here.\"");
     return false;
   }
   else if(GetMaster()->GetConfig() == REBEL_CAMP)
@@ -299,7 +299,7 @@ void cathedral::Enter(character* Visitor)
 {
   if(Visitor->IsPlayer() && !Entered)
   {
-    ADD_MESSAGE("The majestetic Cathedral of Valpurus looms "
+    ADD_MESSAGE("The majestetic Cathedral of Valpuris looms "
                 "before you. You watch it with utter respect.");
     Entered = true;
   }
@@ -704,7 +704,7 @@ void library::TeleportSquare(character* Infidel, lsquare* Square)
   }
 }
 
-truth bananadroparea::PickupItem(character* Hungry, item* Item, int)
+truth mangodroparea::PickupItem(character* Hungry, item* Item, int)
 {
   if(game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Hungry->GetTeam()) == HOSTILE)
     return true;
@@ -729,12 +729,12 @@ truth bananadroparea::PickupItem(character* Hungry, item* Item, int)
   return false;
 }
 
-truth bananadroparea::DropItem(character* Dropper, item* Item, int)
+truth mangodroparea::DropItem(character* Dropper, item* Item, int)
 {
   if(Dropper->IsPlayer() && (Item->IsMangoSeedling()) &&
     (game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Dropper->GetTeam()) != HOSTILE))
   {
-    if(game::TweraifIsFree())
+    if(game::OakhavenIsFree())
     {
       if(game::TruthQuestion(CONST_S("Do you wish to plant the mango seedling? [y/n]")))
       {
@@ -743,13 +743,13 @@ truth bananadroparea::DropItem(character* Dropper, item* Item, int)
                                  "of your home village gather around, cheering. Within moments,\n"
                                  "the seedling sprouts and grows, nourished by the returning\n"
                                  "favour of Silva. You feel Her glory permeating the whole island,\n"
-                                 "hiding it from the forces of Valpurus, should they attempt\n"
-                                 "to return. Tweraif can be free again!\n\nYou are victorious!"));
+                                 "hiding it from the forces of Valpuris, should they attempt\n"
+                                 "to return. Oakhaven can be free again!\n\nYou are victorious!"));
 
         game::GetCurrentArea()->SendNewDrawRequest();
         game::DrawEverything();
         PLAYER->ShowAdventureInfo();
-        festring Msg = CONST_S("restored Tweraif to independence and remained as its protector");
+        festring Msg = CONST_S("restored Oakhaven to independence and remained as its protector");
         PLAYER->AddScoreEntry(Msg, 2, false);
         game::End(Msg);
         return true;
@@ -763,20 +763,20 @@ truth bananadroparea::DropItem(character* Dropper, item* Item, int)
   }
 
   return (game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Dropper->GetTeam()) == HOSTILE
-          || (Dropper->IsPlayer() && ((!Item->IsBanana() && !Item->IsLanternOnWall())
+          || (Dropper->IsPlayer() && ((!Item->IsMango() && !Item->IsLanternOnWall())
           || game::TruthQuestion(CONST_S("Do you wish to "
                                          "donate this item "
                                          "to the town? [y/N]")))));
 }
 
-void bananadroparea::KickSquare(character* Kicker, lsquare* Square)
+void mangodroparea::KickSquare(character* Kicker, lsquare* Square)
 {
   if(!AllowKick(Kicker, Square) && Kicker->IsPlayer()
      && game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Kicker->GetTeam())
      != HOSTILE)
   {
     for(stackiterator i = Square->GetStack()->GetBottom(); i.HasItem(); ++i)
-      if(i->IsBanana() || i->IsLanternOnWall())
+      if(i->IsMango() || i->IsLanternOnWall())
       {
         ADD_MESSAGE("You have harmed the property of the town!");
         Kicker->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
@@ -785,7 +785,7 @@ void bananadroparea::KickSquare(character* Kicker, lsquare* Square)
   }
 }
 
-truth bananadroparea::ConsumeItem(character* HungryMan, item* Item, int)
+truth mangodroparea::ConsumeItem(character* HungryMan, item* Item, int)
 {
   if(game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(HungryMan->GetTeam())
      == HOSTILE)
@@ -793,7 +793,7 @@ truth bananadroparea::ConsumeItem(character* HungryMan, item* Item, int)
 
   if(HungryMan->IsPlayer())
   {
-    if(!Item->IsBanana() && !Item->IsLanternOnWall())
+    if(!Item->IsMango() && !Item->IsLanternOnWall())
       return true;
 
     ADD_MESSAGE("Eating this is forbidden.");
@@ -808,7 +808,7 @@ truth bananadroparea::ConsumeItem(character* HungryMan, item* Item, int)
   return HungryMan->IsSumoWrestler();
 }
 
-void bananadroparea::TeleportSquare(character* Infidel, lsquare* Square)
+void mangodroparea::TeleportSquare(character* Infidel, lsquare* Square)
 {
   if(!Infidel
      || game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Infidel->GetTeam())
@@ -816,7 +816,7 @@ void bananadroparea::TeleportSquare(character* Infidel, lsquare* Square)
     return;
 
   for(stackiterator i = Square->GetStack()->GetBottom(); i.HasItem(); ++i)
-    if(i->IsBanana() || i->IsLanternOnWall())
+    if(i->IsMango() || i->IsLanternOnWall())
     {
       Infidel->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
       return;
@@ -852,7 +852,7 @@ truth library::AllowKick(ccharacter* Char, const lsquare* LSquare) const
           || !LSquare->CanBeSeenBy(GetMaster()));
 }
 
-truth bananadroparea::AllowKick(ccharacter* Char, const lsquare*) const
+truth mangodroparea::AllowKick(ccharacter* Char, const lsquare*) const
 {
   return (!Char->IsPlayer()
           || (game::GetTeam(NEW_ATTNAM_TEAM)->GetRelation(Char->GetTeam())
@@ -887,7 +887,7 @@ void library::HostileAction(character* Guilty) const
   }
 }
 
-void bananadroparea::HostileAction(character* Guilty) const
+void mangodroparea::HostileAction(character* Guilty) const
 {
   if(Guilty)
     Guilty->GetTeam()->Hostility(game::GetTeam(NEW_ATTNAM_TEAM));
@@ -911,7 +911,7 @@ truth sumoarena::CheckDestroyTerrain(character* Infidel)
      == HOSTILE)
     return true;
 
-  ADD_MESSAGE("The residents of New Attnam might not like this.");
+  ADD_MESSAGE("The residents of Oakhaven might not like this.");
 
   if(game::TruthQuestion(CONST_S("Are you sure you want to do this? [y/N]")))
   {

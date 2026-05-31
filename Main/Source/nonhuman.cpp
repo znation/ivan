@@ -707,7 +707,7 @@ col16 carnivorousplant::GetTorsoSpecialColor() const // the flower
 
 void ostrich::GetAICommand()
 {
-  if(game::TweraifIsFree() ||
+  if(game::OakhavenIsFree() ||
      (GetDungeon()->GetIndex() != NEW_ATTNAM)
    ) // Behave normally outside of New Attnam.
   {
