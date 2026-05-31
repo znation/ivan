@@ -66,7 +66,7 @@ void craftcore::ClearSuspendedList()
 
 bool craftcore::EmptyContentsIfPossible(recipedata& rpd,item* itContainer, bool bMoveToInventory)
 {
-  materialcontainer* mc = dynamic_cast<materialcontainer*>(itContainer); //potions, mines... also bananas xD
+  materialcontainer* mc = dynamic_cast<materialcontainer*>(itContainer); //potions, mines... also mangos
   itemcontainer* ic = dynamic_cast<itemcontainer*>(itContainer); //chests
 
   bool bEmptied = false;
@@ -2455,7 +2455,7 @@ struct srpForgeItem : public recipe{
           break;
         }else{
           festring fsDoWhat = "You don't have the power required to enchant";
-          if(itSpawn->GetCategory()==FOOD)fsDoWhat="You never learned how to cook"; //TODO sounds weird for kiwi/banana TODO could at least roast stuff TODO needs seeds to create flour and bake breads
+          if(itSpawn->GetCategory()==FOOD)fsDoWhat="You never learned how to cook"; //TODO sounds weird for kiwi/mango TODO could at least roast stuff TODO needs seeds to create flour and bake breads
           if(itSpawn->GetCategory()==POTION)fsDoWhat="You never learned how to make";
           if(itSpawn->GetCategory()==BOOK)fsDoWhat="You don't have time to write";
           if(itSpawn->GetCategory()==MISC)fsDoWhat="You are overwhelmed by the complexity of";

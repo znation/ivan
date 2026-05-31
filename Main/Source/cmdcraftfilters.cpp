@@ -28,9 +28,9 @@ bool craftcore::MoreCraftDeniedFilters(item* it){
 
   if(dynamic_cast<backpack*>(it)!=NULL)return false;
 
-  if(dynamic_cast<banana*>(it)!=NULL)return false;
+  if(dynamic_cast<mango*>(it)!=NULL)return false;
 
-  if(dynamic_cast<bananapeels*>(it)!=NULL)return false;
+  if(dynamic_cast<mangopeels*>(it)!=NULL)return false;
 
   if(dynamic_cast<bansheesickle*>(it)!=NULL)return false;
 
@@ -69,7 +69,7 @@ bool craftcore::MoreCraftDeniedFilters(item* it){
 
   if(dynamic_cast<gorovitsweapon*>(it)!=NULL)return false;
 
-  if(dynamic_cast<holybanana*>(it)!=NULL)return false;
+  if(dynamic_cast<sacredmango*>(it)!=NULL)return false;
 
   if(dynamic_cast<holyhandgrenade*>(it)!=NULL)return false;
 

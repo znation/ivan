@@ -43,16 +43,16 @@ struct location
   v2 Position;
   int GTerrainType;
   int ContinentIndex;
-  int DistanceToAttnam;
+  int DistanceToValpuris;
 
-  location(v2 p, int t, int i, int d) : Position(p), GTerrainType(t), ContinentIndex(i), DistanceToAttnam(d){}
+  location(v2 p, int t, int i, int d) : Position(p), GTerrainType(t), ContinentIndex(i), DistanceToValpuris(d){}
 };
 
 struct distancetoattnam
 {
   inline bool operator() (const location& loc1, const location& loc2)
   {
-    return (loc1.DistanceToAttnam < loc2.DistanceToAttnam);
+    return (loc1.DistanceToValpuris < loc2.DistanceToValpuris);
   }
 };
 
@@ -277,20 +277,20 @@ void worldmap::Generate()
     GenerateClimate();
     SmoothClimate();
     CalculateContinents();
-    std::vector<continent*> PerfectForAttnam, PerfectForNewAttnam;
+    std::vector<continent*> PerfectForValpuris, PerfectForOakhaven;
 
     for(uint c = 1; c < Continent.size(); ++c)
       if(Continent[c]->GetSize() > GeometricMeanSize && Continent[c]->GetSize() < (!UsingPangea ? 1024 : 16385)
          && Continent[c]->GetGTerrainAmount(EGForestType)
          && Continent[c]->GetGTerrainAmount(SnowType))
-        PerfectForAttnam.push_back(Continent[c]);
+        PerfectForValpuris.push_back(Continent[c]);
 
-    if(!PerfectForAttnam.size())
+    if(!PerfectForValpuris.size())
       continue;
 
-    v2 NewAttnamPos, TunnelEntry, TunnelExit;
+    v2 OakhavenPos, TunnelEntry, TunnelExit;
     truth Correct = false;
-    continent* PetrusLikes;
+    continent* ArchpriestsLikes;
     truth Completed = true;
 
     // Store this before we start making islands which have no continent number.
@@ -301,15 +301,15 @@ void worldmap::Generate()
     for(int c1 = 0; c1 < 25; ++c1)
     {
       game::BusyAnimation();
-      PetrusLikes = PerfectForAttnam[RAND() % PerfectForAttnam.size()];
+      ArchpriestsLikes = PerfectForValpuris[RAND() % PerfectForValpuris.size()];
       
-      int EGForestAmount = PetrusLikes->GetGTerrainAmount(EGForestType);
-      int SnowAmount = PetrusLikes->GetGTerrainAmount(SnowType);
-      //ADD_MESSAGE("PetrusLikes has %d EGForest and %d Snow tiles.", EGForestAmount, SnowAmount);
+      int EGForestAmount = ArchpriestsLikes->GetGTerrainAmount(EGForestType);
+      int SnowAmount = ArchpriestsLikes->GetGTerrainAmount(SnowType);
+      //ADD_MESSAGE("ArchpriestsLikes has %d EGForest and %d Snow tiles.", EGForestAmount, SnowAmount);
 
       for(int c2 = 1; c2 < 50; ++c2)
       {
-        TunnelExit = PetrusLikes->GetMember(RAND() % PetrusLikes->GetSize());
+        TunnelExit = ArchpriestsLikes->GetMember(RAND() % ArchpriestsLikes->GetSize());
 
         for(int d1 = 0; d1 < 8; ++d1)
         {
@@ -390,7 +390,7 @@ void worldmap::Generate()
                 NewAttnamIndex == 7 - d1;
                 NewAttnamIndex = RAND() & 7);
 
-            NewAttnamPos = TunnelEntry
+            OakhavenPos = TunnelEntry
                            + game::GetMoveVector(NewAttnamIndex);
             static int DiagonalDir[4] = { 0, 2, 5, 7 };
             static int NotDiagonalDir[4] = { 1, 3, 4, 6 };
@@ -479,12 +479,12 @@ void worldmap::Generate()
         for(int y1 = 0; y1 < YSize; ++y1)
           if((PossibleLocationBuffer[x1][y1] == true) && (NoIslandAltitudeBuffer[x1][y1] > 0))
           {
-            AvailableLocations.push_back(location(v2(x1, y1), TypeBuffer[x1][y1], GetContinentUnder(v2(x1, y1))->GetIndex(), (TunnelExit - v2(x1, y1)).GetManhattanLength())); // was AttnamPos
+            AvailableLocations.push_back(location(v2(x1, y1), TypeBuffer[x1][y1], GetContinentUnder(v2(x1, y1))->GetIndex(), (TunnelExit - v2(x1, y1)).GetManhattanLength())); // was ValpurisPos
           }
 
       // Remove those positions that have already been taken up by core places, plus the origin.
       // To get a nice boundary around the TunnelExit, we could add the neighbouring positions to the forbidden positions. Later perhaps.
-      std::vector<v2> ForbiddenPositions = {v2(0, 0), NewAttnamPos, TunnelEntry, TunnelExit};
+      std::vector<v2> ForbiddenPositions = {v2(0, 0), OakhavenPos, TunnelEntry, TunnelExit};
       for(uint i = 0; i < ForbiddenPositions.size(); i++)
       {
         AvailableLocations.erase(
@@ -495,7 +495,7 @@ void worldmap::Generate()
           AvailableLocations.end());
       }
 
-      // Sort the vector of global available locations according to distance to Attnam. Closest places are first.
+      // Sort the vector of global available locations according to distance to Valpuris. Closest places are first.
       std::sort(AvailableLocations.begin(), AvailableLocations.end(), distancetoattnam());
       
       // Pick out only the places that can be generated that are not core locations, and get their native ground terrain type
@@ -548,18 +548,18 @@ void worldmap::Generate()
             }
 
             place ConfigID(Type, DataBase->Config, NativeGroundTerrainTypes, false, DataBase->CanBeOnAnyTerrain, DataBase->IsCoreLocation);
-            ToBePlaced.push_back(ConfigID); // Append core locations Attnam and Gloomy Caves
+            ToBePlaced.push_back(ConfigID); // Append core locations Valpuris and Gloomy Caves
           }
         }
       }
       
-      // Pre-pend Attnam and Gloomy Caves to vector ToBePlaced by reversing ToBePlaced. Now Attnam and GC will be more likely to be placed first for their respective terrain type and hence appear on the same continent as the underwater tunnel exit.
+      // Pre-pend Valpuris and Gloomy Caves to vector ToBePlaced by reversing ToBePlaced. Now Valpuris and GC will be more likely to be placed first for their respective terrain type and hence appear on the same continent as the underwater tunnel exit.
       std::reverse(ToBePlaced.begin(), ToBePlaced.end());
 
       // Do this for as many times as there are number of continents.
       for(uint c = 1; c < Continent.size(); ++c)
       {
-        if(UsingPangea && (c != PetrusLikes->GetIndex()))
+        if(UsingPangea && (c != ArchpriestsLikes->GetIndex()))
           continue; // continues to the end of loop until we are using the right continent
         
         // Get the next nearest continent index by looking at the top of the available locations.
@@ -576,7 +576,7 @@ void worldmap::Generate()
             AvailableLocationsOnThisContinent.push_back(AvailableLocations[i]);
           }
         }
-        // Go through all the locations on the continent. These are always in order of distance to Attnam, closest at the top.
+        // Go through all the locations on the continent. These are always in order of distance to Valpuris, closest at the top.
         for(uint i = 0; i < AvailableLocationsOnThisContinent.size(); i++)
         {
           // Go through all remaining places. These are always in a random order :)
@@ -590,11 +590,11 @@ void worldmap::Generate()
               {
                 v2 NewPos = AvailableLocationsOnThisContinent[i].Position;
 
-                // Check that Attnam and Gloomy Caves (core locations) appear on the same continent as PetrusLikes
-                if(ToBePlaced[j].IsCoreLocation && (ThisContinent != PetrusLikes->GetIndex()))
+                // Check that Valpuris and Gloomy Caves (core locations) appear on the same continent as ArchpriestsLikes
+                if(ToBePlaced[j].IsCoreLocation && (ThisContinent != ArchpriestsLikes->GetIndex()))
                 {
                   //ADD_MESSAGE("Failed to place core location on continent with UT exit!");
-                  //ADD_MESSAGE("ThisContinent: %d, PetrusLikes: %d", ThisContinent, PetrusLikes->GetIndex());
+                  //ADD_MESSAGE("ThisContinent: %d, ArchpriestsLikes: %d", ThisContinent, ArchpriestsLikes->GetIndex());
                   // Just a simple flag with a break will do
                   CoreLocationFailure = true;
                   break;
@@ -645,7 +645,7 @@ void worldmap::Generate()
         }
       }
       
-      // If there are still towns to be placed, or Attnam or GC not appearing on start continent, then re-roll
+      // If there are still towns to be placed, or Valpuris or GC not appearing on start continent, then re-roll
       if(!ToBePlaced.empty() || CoreLocationFailure)
       {
         AvailableLocations.clear();
@@ -698,13 +698,13 @@ void worldmap::Generate()
       }
     }
     
-    GetWSquare(NewAttnamPos)->ChangeOWTerrain(newattnam::Spawn());
-    SetEntryPos(NEW_ATTNAM, NewAttnamPos);
+    GetWSquare(OakhavenPos)->ChangeOWTerrain(newattnam::Spawn());
+    SetEntryPos(NEW_ATTNAM, OakhavenPos);
     GetWSquare(TunnelEntry)->ChangeOWTerrain(underwatertunnel::Spawn());
     SetEntryPos(UNDER_WATER_TUNNEL, TunnelEntry);
     GetWSquare(TunnelExit)->ChangeOWTerrain(underwatertunnelexit::Spawn());
     SetEntryPos(UNDER_WATER_TUNNEL_EXIT, TunnelExit);
-    PLAYER->PutTo(NewAttnamPos);
+    PLAYER->PutTo(OakhavenPos);
     CalculateLuminances();
     CalculateNeighbourBitmapPoses();
     break;
@@ -1039,7 +1039,7 @@ void worldmap::CalculateContinents()
             RemoveEmptyContinents();
 
             if(Continent.size() == 255)
-              ABORT("Valpurus shall not carry more continents!");
+              ABORT("Valpuris shall not carry more continents!");
           }
 
           continent* NewContinent = new continent(Continent.size());
