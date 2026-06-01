@@ -1815,7 +1815,7 @@ sacredmango /* materialcontainer->mango-> */
   WieldedBitmapPos = 160, 320;
   CanBePiled = false;
   CanBeBroken = false;
-  SecondaryMaterialConfig == HOLY_MANGO_FLESH;
+  SecondaryMaterialConfig == SACRED_MANGO_FLESH;
   BaseEmitation = rgb24(160, 140, 110);
   CanBeCloned = false;
   CanBeMirrored = true; /* will create a peel */

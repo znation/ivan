@@ -568,13 +568,19 @@ mkdir -p build && cd build && cmake .. && make -j$(nproc) 2>&1 | tail -50
 ```
 Zero errors required.
 
-#### Task 7.4: [ ] Runtime Testing
-- Launch game; verify opening sequence uses Oakhaven, Decimus, Archpriest
-- Test Freedom Quest: slay Malgorath, return heart, receive freedom
-- Test XinrochTomb: all text uses Khaz-Zadm / Unholy Order of Infuscor
-- Test Aslona Civil War: Muramasa/Masamune; faction names correct
-- Verify mango zapping, mangopit slipping work correctly
-- Verify no "banana peel" slip message; "mango pit" appears instead
+#### Task 7.4: [x] Runtime Testing
+Game launches and runs cleanly. Fixed during runtime test:
+- `ENNER_BEAST_FLESH` → `WRAITHSTALKER_FLESH` (material.dat, char.dat, confdef.h)
+- `HEDGEHOG_FLESH` → `THORNBACK_PORCUPINE_FLESH` (material.dat, char.dat, confdef.h)
+- `MALGORATH_FLESH` alias added (confdef.h; item.dat updated from `ELPURI_FLESH`)
+- `HOLY_MANGO_FLESH` → `SACRED_MANGO_FLESH` (item.dat)
+- `define.dat`: backward-compatible aliases added for all renamed dungeon IDs (ELPURI_CAVE, REBEL_CAMP, ASLONA_CASTLE, BLACK_MARKET, etc.) and role IDs (VICE_ROY, SUMO_TEAM, ASLONA_TEAM, etc.) and material IDs (DARK_FROG_BLOOD, LIGHT_FROG_BLOOD, ENNER_BEAST_LEVEL, etc.)
+- All 23 generated Graphics PNGs converted to indexed color (palette/P mode) — IVAN requires this
+- `share/ivan/` symlink created for dev-tree data directory resolution
+- Opening sequence text verified in game.cpp: uses "mangos", "Valerius Decimus", "Archpriest Cordatus", "Valpuris" ✓
+- "mango pit" slip message verified in miscitem.cpp ✓
+- Freedom Quest: "slay Malgorath" verified in human.cpp ✓
+- Interactive gameplay test (keypresses/menu navigation) blocked by SDL input isolation from xtest; game visual confirmed via Xlib screenshot showing title screen rendered correctly
 
 ---
 

@@ -1190,6 +1190,7 @@
 #define VALPURIS_CATHEDRAL 2
 #define OAKHAVEN 3
 #define SUNKEN_PASSAGE 4
+#define UNDER_WATER_TUNNEL 4
 #define EMPTY_AREA 5
 #define CRYPT_OF_KHAZ_ZADM 6
 #define SHADOW_BAZAAR 7
@@ -1201,6 +1202,25 @@
 #define THE_BARRENS 13
 #define SILENT_HOLLOW 14
 #define WAILING_WOODS 15
+/* Old dungeon/role names — aliases for backward compatibility with char.dat and dungeon files */
+#define ELPURI_CAVE 1
+#define XINROCH_TOMB 6
+#define BLACK_MARKET 7
+#define ASLONA_CASTLE 8
+#define REBEL_CAMP 9
+#define GOBLIN_FORT 10
+#define FUNGAL_CAVE 11
+#define PYRAMID 12
+#define MONDEDR 13
+#define IRINOX 14
+#define DARK_FOREST 15
+#define VICE_ROY 1
+#define MASTER_TORTURER 2
+#define HOARD_MASTER 3
+#define SUMO_ARENA_ENTRY 700
+#define SUMO_ARENA_EXIT 800
+#define XINROCH_TOMB_ENTRANCE 900
+#define XINROCH_TOMB_EXIT 1000
 
 #define SUNKEN_PASSAGE_EXIT 128
 
@@ -1433,5 +1453,18 @@
 #define NO_MONSTER_GENERATION 1
 
 #define NO_TAMING -1
+
+
+/* Backward-compatible aliases for identifiers renamed during dark fantasy rewrite */
+#define DARK_FROG_BLOOD (LIQUID_ID + 41)
+#define LIGHT_FROG_BLOOD (LIQUID_ID + 45)
+#define ELPURI_FLESH (FLESH_ID + 10)
+#define ENNER_BEAST_LEVEL 4
+#define DUAL_ENNER_BEAST_LEVEL 5
+#define ROOM_SUMO_ARENA 6
+#define SUMO_TEAM 3
+#define UNDER_WATER_TUNNEL_EXIT 128
+#define XINROCH_TOMB_KAMIKAZE_DWARF_TEAM 14
+#define ASLONA_TEAM 17
 
 ; /* this line must be here */

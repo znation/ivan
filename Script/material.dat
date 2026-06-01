@@ -6046,12 +6046,12 @@ flesh
     AttachedGod = MORTIFER;
   }
 
-  Config ENNER_BEAST_FLESH;
+  Config WRAITHSTALKER_FLESH;
   {
     StrengthValue = 10;
     Density = 1800;
     ConsumeWisdomLimit = 0;
-    NameStem = "enner beast flesh";
+    NameStem = "wraithstalker flesh";
     AttachedGod = DULCIS;
     NameFlags = Base|USE_AN;
   }
@@ -6300,9 +6300,9 @@ flesh
     ConsumeWisdomLimit = 4;
   }
 
-  Config HEDGEHOG_FLESH;
+  Config THORNBACK_PORCUPINE_FLESH;
   {
-    NameStem = "hedgehog flesh";
+    NameStem = "thornback porcupine flesh";
     AttachedGod = MORTIFER;
   }
 
