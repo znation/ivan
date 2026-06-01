@@ -497,23 +497,13 @@ Generated: wraithstalker.wav (47kB, 1.0s @ 24kHz), wraithstalkerdeath.wav (94kB,
 
 Requires Phase 0 infrastructure. All dimensions come from `asset_catalog.json`.
 
-#### Task 6.1: [ ] Generate `Wraithstalker.png` (replaces `Enner.png`)
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy roguelike monster sprite, massive predatory forest beast with glowing yellow eyes and shadowy fur, pixel art style on white background" \
-  --width <from catalog> --height <from catalog> \
-  --output Graphics/Wraithstalker.png
-```
-Update all code references: `grep -r "Enner.png" .` → rename to `Wraithstalker.png`.
+#### Task 6.1: [x] Generate `Wraithstalker.png` (replaces `Enner.png`)
+Generated via `stabilityai/sd-turbo` on AMD Vega 48 GPU (ROCm 6.3), 4 steps, 512px upscaled to 800x600.
+Updated `Script/dungeons/GloomyCaves.dat` line 368: `EnterImage = "Wraithstalker.png"`.
 
-#### Task 6.2: [ ] Generate `Shadowpaw.png` (replaces `IVlad.png`)
-```bash
-python tools/asset_gen/image_generator.py \
-  --prompt "dark fantasy roguelike companion sprite, small dark bunny with glowing eyes, pixel art style on white background" \
-  --width <from catalog> --height <from catalog> \
-  --output Graphics/Shadowpaw.png
-```
-Update code references: `grep -r "IVlad.png" .` → rename to `Shadowpaw.png`.
+#### Task 6.2: [x] Generate `Shadowpaw.png` (replaces `IVlad.png`)
+Generated via `stabilityai/sd-turbo` on AMD Vega 48 GPU (ROCm 6.3), 4 steps, 512px upscaled to 800x600.
+Updated `Script/dungeons/GloomyCaves.dat` line 782: `EnterImage = "Shadowpaw.png"`.
 
 #### Task 6.3: [ ] Generate Character Sprite Sheets
 - `Char.png` — dark fantasy adventurer sprites
