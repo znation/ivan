@@ -505,26 +505,36 @@ Updated `Script/dungeons/GloomyCaves.dat` line 368: `EnterImage = "Wraithstalker
 Generated via `stabilityai/sd-turbo` on AMD Vega 48 GPU (ROCm 6.3), 4 steps, 512px upscaled to 800x600.
 Updated `Script/dungeons/GloomyCaves.dat` line 782: `EnterImage = "Shadowpaw.png"`.
 
-#### Task 6.3: [ ] Generate Character Sprite Sheets
-- `Char.png` — dark fantasy adventurer sprites
-- `Humanoid.png` — NPC sprites (priest, knight, merchant, rebel)
+#### Task 6.3: [x] Generate Character Sprite Sheets
+Generated via `stabilityai/sd-turbo` on GPU, resized to exact dimensions:
+- `Char.png` (600x200) — dark fantasy adventurer sprites
+- `Char-outlined.png` (600x200) — via `outline_util.py --batch`
+- `Humanoid.png` (192x700) — NPC sprites (guards, priests, merchants)
+- `Humanoid-outlined.png` (192x700) — via `outline_util.py --batch`
 
-#### Task 6.4: [ ] Generate Item Icons
-- `Item.png` — fantasy RPG item icon sheet
-- `Item-outlined.png` — generated via `python tools/asset_gen/outline_util.py --input Graphics/Item.png --output Graphics/Item-outlined.png`
+#### Task 6.4: [x] Generate Item Icons
+Generated via `stabilityai/sd-turbo` on GPU:
+- `Item.png` (256x432) — dark fantasy weapons, armor, potions, scrolls, artifacts
+- `Item-outlined.png` (256x432) — via `outline_util.py --batch`
 
-#### Task 6.5: [ ] Generate Terrain Tiles
-- `WTerra.png` — world map terrain (snow, glacier, desert, tundra, jungle, steppe)
-- `OLTerra.png` — overworld tiles with landmarks
-- `GLTerra.png` — ground/dungeon floor tiles
+#### Task 6.5: [x] Generate Terrain Tiles
+Generated via `stabilityai/sd-turbo` on GPU:
+- `WTerra.png` (384x208) — world map terrain (forests, mountains, rivers, swamps)
+- `OLTerra.png` (312x464) — overland tiles (ruins, cobblestones, grass, mud)
+- `GLTerra.png` (384x208) — dungeon tiles (stone floors, walls, stalagmites, lava)
 
-#### Task 6.6: [ ] Generate UI Art
-- `Menu.png`, `Menu1-5.png` — dark fantasy menu screens with medieval borders
-- `Symbol.png` — new IVAN emblem (shield with crossed swords and great tree)
+#### Task 6.6: [x] Generate UI Art
+Generated via `stabilityai/sd-turbo` on GPU:
+- `Menu.png` (800x600) — stone archway dungeon entrance title screen
+- `Menu1-5.png` (800x600 each) — misty forest, crystal cavern, cathedral, Oakhaven, Khaz-Zadm tomb
+- `Symbol.png` (400x600) — deity icon sheet for Valpurian pantheon
 
-#### Task 6.7: [ ] Remaining Assets (lower priority)
-- `Font.png`, `Font2.png`, `Font3.png` — bitmap fonts (style change if desired)
-- `Effect.png`, `FOW.png`, `Smiley.png`, `Cursor.png` — may keep or style-change
+#### Task 6.7: [x] Remaining Assets
+Generated via `stabilityai/sd-turbo` on GPU:
+- `Font.png`, `Font2.png`, `Font3.png` (250x218 each) — white/gold/silver dark fantasy bitmap fonts
+- `Effect.png` (128x64) — combat spell/impact effects
+- `Smiley.png` (144x48) — HUD player status face strip
+- `FOW.png` and `Cursor.png` — kept as-is (functional tiles, no change needed)
 
 ---
 
