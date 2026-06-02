@@ -1233,6 +1233,7 @@
 #define WRAITHSTALKER_LEVEL 4
 #define ZOMBIE_LEVEL 5
 #define COMMUNIST_LEVEL 7
+#define IVAN_LEVEL 7
 #define DARK_LEVEL 8
 #define OREE_LAIR 12
 
