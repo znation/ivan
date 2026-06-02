@@ -1,0 +1,42 @@
+{
+  "2,0": {
+    "config": "PARQUET",
+    "name": "floor",
+    "material": "FIR_WOOD",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, dungeon underground floor, fir wood planks texture, torch-lit stone, subterranean atmosphere."
+  },
+  "0,0": {
+    "config": "FLOOR",
+    "name": "floor",
+    "material": "GRAVEL",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, dungeon underground floor, gray gravel stone texture, torch-lit stone, subterranean atmosphere."
+  },
+  "1,1": {
+    "config": "GRASS_TERRAIN",
+    "name": "ground",
+    "material": "GRASS",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, dungeon underground ground, green grass texture, torch-lit stone, subterranean atmosphere."
+  },
+  "2,1": {
+    "config": "LANDING_SITE",
+    "name": "ostrich landing site",
+    "material": "GRASS",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, dungeon underground ostrich landing site, green grass texture, torch-lit stone, subterranean atmosphere."
+  },
+  "2,2": {
+    "config": "SAND_TERRAIN",
+    "name": "ground",
+    "material": "SAND",
+    "pixel_x": 32,
+    "pixel_y": 32,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, dungeon underground ground, sandy yellow ground texture, torch-lit stone, subterranean atmosphere."
+  }
+}

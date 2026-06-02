@@ -1,0 +1,933 @@
+{
+  "0,19": {
+    "name": "lantern",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, lantern, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,21": {
+    "name": "long sword / rune sword / lost ruby flaming flamingsword of Khaz-Zadm",
+    "material": "RUBY",
+    "pixel_x": 16,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, long sword / rune sword / lost ruby flaming flamingsword of Khaz-Zadm, made of red gemstone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,0": {
+    "name": "two-handed sword",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, two-handed sword, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,1": {
+    "name": "two-handed scimitar / grand stollen knife of Oakhaven / scimitar",
+    "material": "GOLD",
+    "pixel_x": 0,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, two-handed scimitar / grand stollen knife of Oakhaven / scimitar, made of bright gold metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,9": {
+    "name": "spear / runed spear named Vermis",
+    "material": "DIAMOND",
+    "pixel_x": 16,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, spear / runed spear named Vermis, made of clear gemstone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,16": {
+    "name": "axe / dark axe / chilling axe",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, axe / dark axe / chilling axe, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,5": {
+    "name": "halberd / unholy halberd named Mjolak",
+    "material": "METEORIC_STEEL",
+    "pixel_x": 0,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, halberd / unholy halberd named Mjolak, made of meteoric steel, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,2": {
+    "name": "mace / ancient mace named Neerc Se-ulb / mace named Turox",
+    "material": "METEORIC_STEEL",
+    "pixel_x": 0,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mace / ancient mace named Neerc Se-ulb / mace named Turox, made of meteoric steel, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,1": {
+    "name": "war hammer",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, war hammer, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,9": {
+    "name": "sickle / banshee sickle",
+    "material": "MITHRIL",
+    "pixel_x": 48,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, sickle / banshee sickle, made of pale blue mithril, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,16": {
+    "name": "dagger / dagger of venom / notched throwing knife named Pica",
+    "material": "STAR_METAL",
+    "pixel_x": 48,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, dagger / dagger of venom / notched throwing knife named Pica, made of star metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,15": {
+    "name": "short sword / short sword named Saal'thul / weeping blade",
+    "material": "MITHRIL",
+    "pixel_x": 48,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, short sword / short sword named Saal'thul / weeping blade, made of pale blue mithril, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,10": {
+    "name": "bastard sword",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, bastard sword, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,5": {
+    "name": "battle axe",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, battle axe, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,7": {
+    "name": "scythe / scythe of terror / scythe of oxidation",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, scythe / scythe of terror / scythe of oxidation, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,15": {
+    "name": "quarterstaff / staff of wondrous smells / seedling of the Holy Mango World-tree",
+    "material": "OCTIRON",
+    "pixel_x": 64,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, quarterstaff / staff of wondrous smells / seedling of the Holy Mango World-tree, made of octiron, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,10": {
+    "name": "hammer / Gorovits family hammer / thunder hammer",
+    "material": "MITHRIL",
+    "pixel_x": 48,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, hammer / Gorovits family hammer / thunder hammer, made of pale blue mithril, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,7": {
+    "name": "rolling pin",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, rolling pin, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,6": {
+    "name": "frying pan",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, frying pan, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,22": {
+    "name": "beast claw",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, beast claw, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,9": {
+    "name": "cleaver",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, cleaver, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,12": {
+    "name": "katana / wicked katana named Asa'marum / noble katana named E-numa sa-am",
+    "material": "BLACK_JADE",
+    "pixel_x": 112,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, katana / wicked katana named Asa'marum / noble katana named E-numa sa-am, made of black jade, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,17": {
+    "name": "mango",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mango, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,10": {
+    "name": "pickaxe",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, pickaxe, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,6": {
+    "name": "chain mail",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, chain mail, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,8": {
+    "name": "plate mail",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, plate mail, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,13": {
+    "name": "armor of great health",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, armor of great health, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,11": {
+    "name": "ommel bristler armor",
+    "material": "BRAMBLEBACK_HAIR",
+    "pixel_x": 80,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, ommel bristler armor, made of brambleback hair, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "8,0": {
+    "name": "vial",
+    "material": "",
+    "pixel_x": 128,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, vial, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,16": {
+    "name": "whip / whipofthievery / chameleonwhip",
+    "material": "NYMPH_HAIR",
+    "pixel_x": 32,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, whip / whipofthievery / chameleonwhip, made of nymph hair, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "8,1": {
+    "name": "ingot",
+    "material": "",
+    "pixel_x": 128,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, ingot, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,18": {
+    "name": "big mine",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, big mine, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,14": {
+    "name": "shield / acidshield",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, shield / acidshield, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,19": {
+    "name": "cloak",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, cloak, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,23": {
+    "name": "boot",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, boot, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,25": {
+    "name": "gauntlet",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, gauntlet, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,24": {
+    "name": "belt",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, belt, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,3": {
+    "name": "small chest",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, small chest, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,5": {
+    "name": "chest",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, chest, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,4": {
+    "name": "large chest",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, large chest, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,23": {
+    "name": "small strong-box",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, small strong-box, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,3": {
+    "name": "beartrap",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, beartrap, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,4": {
+    "name": "helmet",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, helmet, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,2": {
+    "name": "full helmet / helmet of attractivity / helmet of indomitable will",
+    "material": "BLUE_CRYSTAL",
+    "pixel_x": 48,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, full helmet / helmet of attractivity / helmet of indomitable will, made of blue crystal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,25": {
+    "name": "Gorovits family gas mask",
+    "material": "KEVLAR",
+    "pixel_x": 64,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, Gorovits family gas mask, made of kevlar, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,13": {
+    "name": "mask / war mask of Tlachtlallotlachitl",
+    "material": "TIN",
+    "pixel_x": 80,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mask / war mask of Tlachtlallotlachitl, made of tin, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,13": {
+    "name": "flamingsword",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, flamingsword, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,9": {
+    "name": "mjolak",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mjolak, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,14": {
+    "name": "vermis",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, vermis, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,7": {
+    "name": "turox",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, turox, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,18": {
+    "name": "puppy skull",
+    "material": "",
+    "pixel_x": 112,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, puppy skull, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,12": {
+    "name": "thunderhammer",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, thunderhammer, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,17": {
+    "name": "saalthul / weepblade",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, saalthul / weepblade, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,17": {
+    "name": "carrot",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, carrot, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,1": {
+    "name": "mangofood",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mangofood, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,16": {
+    "name": "wondersmellstaff",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, wondersmellstaff, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,19": {
+    "name": "filthytunic",
+    "material": "",
+    "pixel_x": 112,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, filthytunic, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,18": {
+    "name": "daggerofvenom / pica",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, daggerofvenom / pica, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,11": {
+    "name": "darkaxe / slowaxe / sharpaxe",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, darkaxe / slowaxe / sharpaxe, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,8": {
+    "name": "terrorscythe / rustscythe",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, terrorscythe / rustscythe, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,11": {
+    "name": "bansheesickle",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, bansheesickle, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,22": {
+    "name": "taiaha",
+    "material": "",
+    "pixel_x": 112,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, taiaha, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,20": {
+    "name": "potted cactus",
+    "material": "MARBLE",
+    "pixel_x": 64,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, potted cactus, made of white marble stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,21": {
+    "name": "potted plant",
+    "material": "MARBLE",
+    "pixel_x": 112,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, potted plant, made of white marble stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "6,20": {
+    "name": "timepiece",
+    "material": "ARCANITE",
+    "pixel_x": 96,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, timepiece, made of arcanite, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,20": {
+    "name": "grandfather clock",
+    "material": "ARCANITE",
+    "pixel_x": 112,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, grandfather clock, made of arcanite, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,21": {
+    "name": "dead fish",
+    "material": "SARDINE",
+    "pixel_x": 80,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, dead fish, made of sardine, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "6,21": {
+    "name": "fish skeleton",
+    "material": "BONE",
+    "pixel_x": 96,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, fish skeleton, made of pale yellowed bone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "6,15": {
+    "name": "eptyron",
+    "material": "",
+    "pixel_x": 96,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, eptyron, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,16": {
+    "name": "lantern",
+    "material": "GLASS",
+    "pixel_x": 0,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, lantern, made of glass, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "11,9": {
+    "name": "can / potted cactus / dead fish",
+    "material": "SARDINE",
+    "pixel_x": 176,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, can / potted cactus / dead fish, made of sardine, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,3": {
+    "name": "lump",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, lump, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,7": {
+    "name": "mango",
+    "material": "MANGO_PEEL",
+    "pixel_x": 0,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mango, made of mango peel, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "10,20": {
+    "name": "holy sacredmango of Oily Orpiv",
+    "material": "",
+    "pixel_x": 160,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, holy sacredmango of Oily Orpiv, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,4": {
+    "name": "holy broad sword named Valpuris' Justifier",
+    "material": "VALPURIS_METAL",
+    "pixel_x": 0,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, holy broad sword named Valpuris' Justifier, made of valpuris metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,6": {
+    "name": "pick-axe",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, pick-axe, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "10,9": {
+    "name": "chain mail of great health / torso / corpse",
+    "material": "BRAMBLEBACK_HAIR",
+    "pixel_x": 160,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, chain mail of great health / torso / corpse, made of brambleback hair, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,7": {
+    "name": "Shirt of the Golden Eagle",
+    "material": "GOLDEN_EAGLE_FEATHER",
+    "pixel_x": 16,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, Shirt of the Golden Eagle, made of golden eagle feather, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,10": {
+    "name": "bottle",
+    "material": "GLASS",
+    "pixel_x": 0,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, bottle, made of glass, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,8": {
+    "name": "mango peel",
+    "material": "MANGO_PEEL",
+    "pixel_x": 0,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mango peel, made of mango peel, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,10": {
+    "name": "broken bottle",
+    "material": "GLASS",
+    "pixel_x": 16,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, broken bottle, made of glass, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,11": {
+    "name": "scroll",
+    "material": "PARCHMENT",
+    "pixel_x": 16,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, scroll, made of parchment, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,13": {
+    "name": "nut",
+    "material": "HUMAN_FLESH",
+    "pixel_x": 16,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, nut, made of human flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,15": {
+    "name": "bone / bone of Ullr",
+    "material": "BRAMBLEBACK_BONE",
+    "pixel_x": 16,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, bone / bone of Ullr, made of brambleback bone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,17": {
+    "name": "loaf",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, loaf, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,18": {
+    "name": "wand of polymorph",
+    "material": "OCTIRON",
+    "pixel_x": 0,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, wand of polymorph, made of octiron, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,20": {
+    "name": "Avatar of Valpuris",
+    "material": "VALPURIS_METAL",
+    "pixel_x": 0,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, Avatar of Valpuris, made of valpuris metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,24": {
+    "name": "kiwi",
+    "material": "KIWI_FLESH",
+    "pixel_x": 0,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, kiwi, made of kiwi flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,23": {
+    "name": "pineapple",
+    "material": "PINEAPPLE_FLESH",
+    "pixel_x": 0,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, pineapple, made of pineapple flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,15": {
+    "name": "palm branch",
+    "material": "PALM_LEAF",
+    "pixel_x": 0,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, palm branch, made of palm leaf, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,0": {
+    "name": "runed whip",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, runed whip, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,1": {
+    "name": "backpack",
+    "material": "LEATHER",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, backpack, made of leather, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,2": {
+    "name": "holy book / large and mysterious saga of the pantheon",
+    "material": "PARCHMENT",
+    "pixel_x": 32,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, holy book / large and mysterious saga of the pantheon, made of parchment, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,21": {
+    "name": "pile of 50 million roubles",
+    "material": "PARCHMENT",
+    "pixel_x": 0,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, pile of 50 million roubles, made of parchment, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,3": {
+    "name": "oil lamp",
+    "material": "GOLD",
+    "pixel_x": 32,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, oil lamp, made of bright gold metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,3": {
+    "name": "stone",
+    "material": "OBSIDIAN",
+    "pixel_x": 0,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, stone, made of black obsidian stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,18": {
+    "name": "land mine / dwarven gas trap",
+    "material": "IRON",
+    "pixel_x": 32,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, land mine / dwarven gas trap, made of dark iron metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,26": {
+    "name": "round key",
+    "material": "BRONZE",
+    "pixel_x": 16,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, round key, made of bronze, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,21": {
+    "name": "blessed shield of the Phoenix / acid shield",
+    "material": "PHOENIX_FEATHER",
+    "pixel_x": 32,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, blessed shield of the Phoenix / acid shield, made of phoenix feather, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,22": {
+    "name": "cloak of invisibility",
+    "material": "ECTOPLASM",
+    "pixel_x": 32,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, cloak of invisibility, made of ectoplasm, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,25": {
+    "name": "boot of strength",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, boot of strength, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,23": {
+    "name": "gauntlet of strength",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, gauntlet of strength, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,24": {
+    "name": "thief's girdle of carrying",
+    "material": "ANGEL_HAIR",
+    "pixel_x": 32,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, thief's girdle of carrying, made of angel hair, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,25": {
+    "name": "ring of fire resistance",
+    "material": "DIAMOND",
+    "pixel_x": 16,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, ring of fire resistance, made of clear gemstone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "2,25": {
+    "name": "amulet of life saving",
+    "material": "SILVER",
+    "pixel_x": 32,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, amulet of life saving, made of shiny silver metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "10,8": {
+    "name": "head / groin / bear trap",
+    "material": "",
+    "pixel_x": 160,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, head / groin / bear trap, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "10,22": {
+    "name": "arm / leg",
+    "material": "",
+    "pixel_x": 160,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, arm / leg, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,0": {
+    "name": "heart of Malgorath",
+    "material": "MALGORATH_FLESH",
+    "pixel_x": 16,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, heart of Malgorath, made of malgorath flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,0": {
+    "name": "largecorpse",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, largecorpse, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,26": {
+    "name": "whistle",
+    "material": "TIN",
+    "pixel_x": 0,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, whistle, made of tin, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "1,24": {
+    "name": "full helmet of piercing perception",
+    "material": "KEVLAR",
+    "pixel_x": 16,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, full helmet of piercing perception, made of kevlar, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,6": {
+    "name": "stethoscope",
+    "material": "STEEL",
+    "pixel_x": 48,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, stethoscope, made of gray steel metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,7": {
+    "name": "puppy skull / skull of Khaz-Zadm the Lich-King",
+    "material": "BONE",
+    "pixel_x": 48,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, puppy skull / skull of Khaz-Zadm the Lich-King, made of pale yellowed bone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "3,19": {
+    "name": "horn of bravery",
+    "material": "SILVER",
+    "pixel_x": 48,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, horn of bravery, made of shiny silver metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "10,14": {
+    "name": "chameleon whip",
+    "material": "BRAMBLEBACK_HAIR",
+    "pixel_x": 160,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, chameleon whip, made of brambleback hair, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,17": {
+    "name": "carrot",
+    "material": "CARROT_FLESH",
+    "pixel_x": 64,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, carrot, made of carrot flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,14": {
+    "name": "mango",
+    "material": "MANGO_FLESH",
+    "pixel_x": 0,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, mango, made of mango flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,8": {
+    "name": "sausage",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, sausage, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "4,23": {
+    "name": "lyre of charm",
+    "material": "UNICORN_HORN",
+    "pixel_x": 64,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, lyre of charm, made of unicorn horn, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,4": {
+    "name": "shirt with a Decimus Harvest Co. ad",
+    "material": "NYLON",
+    "pixel_x": 80,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, shirt with a Decimus Harvest Co. ad, made of nylon, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "6,19": {
+    "name": "filthy tunic of martyr Bessica",
+    "material": "ANGEL_HAIR",
+    "pixel_x": 96,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, filthy tunic of martyr Bessica, made of angel hair, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,15": {
+    "name": "stick",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, stick, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "6,2": {
+    "name": "dwarven gas grenade",
+    "material": "IRON",
+    "pixel_x": 110,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, dwarven gas grenade, made of dark iron metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,3": {
+    "name": "Gorovits family life-size copy of Lenin's mummy",
+    "material": "LEAD",
+    "pixel_x": 80,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, Gorovits family life-size copy of Lenin's mummy, made of lead, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,5": {
+    "name": "chastity belt",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, chastity belt, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "11,24": {
+    "name": "first-born son",
+    "material": "HUMAN_FLESH",
+    "pixel_x": 176,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, first-born son, made of human flesh, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,20": {
+    "name": "celestial monograph of Solicitus",
+    "material": "PAPYRUS",
+    "pixel_x": 80,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, celestial monograph of Solicitus, made of papyrus, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "0,9": {
+    "name": "Morgo's magnificent manual of materials",
+    "material": "PARCHMENT",
+    "pixel_x": 0,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, Morgo's magnificent manual of materials, made of parchment, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "6,22": {
+    "name": "taiaha",
+    "material": "",
+    "pixel_x": 96,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, taiaha, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "5,19": {
+    "name": "cauldron",
+    "material": "COPPER",
+    "pixel_x": 80,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, cauldron, made of copper, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,15": {
+    "name": "blasphemous great axe named Eptyron",
+    "material": "PLASTIC_STEEL",
+    "pixel_x": 112,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, blasphemous great axe named Eptyron, made of plastic steel, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,25": {
+    "name": "map of black market",
+    "material": "",
+    "pixel_x": 112,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, map of black market, made of stone, centered on black background, detailed small sprite, Tolkien aesthetic."
+  },
+  "7,0": {
+    "name": "thaumic bomb",
+    "material": "STEEL",
+    "pixel_x": 112,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike item icon, 16x16 pixel art, thaumic bomb, made of gray steel metal, centered on black background, detailed small sprite, Tolkien aesthetic."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "0,0": {
+    "name": "Valpuris symbol",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Valpuris divine sigil, sun and anchor, god of order and justice, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "1,0": {
+    "name": "Seges symbol",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Seges divine sigil, wheat sheaf, goddess of harvest and plenty, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "2,0": {
+    "name": "Silva symbol",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Silva divine sigil, oak leaf and bow, goddess of the wild hunt, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "3,0": {
+    "name": "Sophos symbol",
+    "material": "",
+    "pixel_x": 48,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Sophos divine sigil, open eye and quill, god of knowledge and magic, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "4,0": {
+    "name": "Loricatus symbol",
+    "material": "",
+    "pixel_x": 64,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Loricatus divine sigil, hammer and anvil, god of smithing and craft, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "5,0": {
+    "name": "Mortifer symbol",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Mortifer divine sigil, hourglass and skull, god of death and entropy, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "6,0": {
+    "name": "Infuscor symbol",
+    "material": "",
+    "pixel_x": 96,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Infuscor divine sigil, inverted crown, god of shadows and betrayal, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "7,0": {
+    "name": "Cruentus symbol",
+    "material": "",
+    "pixel_x": 112,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Cruentus divine sigil, crossed blades, god of war and bloodshed, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "8,0": {
+    "name": "Legifer symbol",
+    "material": "",
+    "pixel_x": 128,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Legifer divine sigil, scales of justice, god of law and binding oaths, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "9,0": {
+    "name": "Nefas symbol",
+    "material": "",
+    "pixel_x": 144,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Nefas divine sigil, broken chain, god of chaos and forbidden knowledge, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "10,0": {
+    "name": "Dulcis symbol",
+    "material": "",
+    "pixel_x": 160,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Dulcis divine sigil, honey comb, goddess of pleasure, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "11,0": {
+    "name": "Mellis symbol",
+    "material": "",
+    "pixel_x": 176,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Mellis divine sigil, cup and vine, god of feasting, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "12,0": {
+    "name": "Scabies symbol",
+    "material": "",
+    "pixel_x": 192,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Scabies divine sigil, plague skull, god of disease and filth, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "13,0": {
+    "name": "Atavus symbol",
+    "material": "",
+    "pixel_x": 208,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Atavus divine sigil, coiled serpent, god of ancestry and memory, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  },
+  "14,0": {
+    "name": "Verax symbol",
+    "material": "",
+    "pixel_x": 224,
+    "pixel_y": 0,
+    "prompt": "dark fantasy deity symbol, 16x16 pixel art icon, Verax divine sigil, sunburst eye, god of truth and oaths, Tolkien pantheon, heraldic gold on dark background, flat colors, strong outline, no gradients"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "0,3": {
+    "config": "attnam",
+    "name": "mighty cathedral reaching the clouds",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 48,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, mighty cathedral reaching the clouds, stone, small landmark symbol, bird's eye. location: attnam"
+  },
+  "1,3": {
+    "config": "malgorathcave",
+    "name": "hideous cave entrance radiating pure evil",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 48,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, hideous cave entrance radiating pure evil, stone, small landmark symbol, bird's eye. location: malgorathcave"
+  },
+  "1,4": {
+    "config": "newattnam",
+    "name": "primitive village",
+    "material": "",
+    "pixel_x": 16,
+    "pixel_y": 64,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, primitive village, stone, small landmark symbol, bird's eye. location: newattnam"
+  },
+  "2,4": {
+    "config": "underwatertunnel",
+    "name": "entrance to an underwater tunnel",
+    "material": "",
+    "pixel_x": 32,
+    "pixel_y": 64,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, entrance to an underwater tunnel, stone, small landmark symbol, bird's eye. location: underwatertunnel"
+  },
+  "7,6": {
+    "config": "aslonacastle",
+    "name": "mighty seaside castle",
+    "material": "",
+    "pixel_x": 112,
+    "pixel_y": 96,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, mighty seaside castle, stone, small landmark symbol, bird's eye. location: aslonacastle"
+  },
+  "5,6": {
+    "config": "goblinfort",
+    "name": "overgrown ruins of ancient fortress",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 96,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, overgrown ruins of ancient fortress, stone, small landmark symbol, bird's eye. location: goblinfort"
+  },
+  "6,8": {
+    "config": "pyramid",
+    "name": "crumbling pyramid",
+    "material": "",
+    "pixel_x": 96,
+    "pixel_y": 128,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, crumbling pyramid, stone, small landmark symbol, bird's eye. location: pyramid"
+  },
+  "5,5": {
+    "config": "blackmarket",
+    "name": "old, decrepit building",
+    "material": "",
+    "pixel_x": 80,
+    "pixel_y": 80,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, old, decrepit building, stone, small landmark symbol, bird's eye. location: blackmarket"
+  },
+  "0,4": {
+    "config": "xinrochtomb",
+    "name": "sombre and forbidding mausoleum",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 64,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, overworld map icon, sombre and forbidding mausoleum, stone, small landmark symbol, bird's eye. location: xinrochtomb"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "0,0": {
+    "name": "fire blast",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, fire blast: orange-red flames, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "1,0": {
+    "name": "ice shard",
+    "pixel_x": 16,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, ice shard: blue-white ice crystal, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "2,0": {
+    "name": "lightning bolt",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, lightning bolt: yellow electric spark, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "3,0": {
+    "name": "acid splash",
+    "pixel_x": 48,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, acid splash: green corrosive liquid, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "4,0": {
+    "name": "holy light",
+    "pixel_x": 64,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, holy light: white-gold divine radiance, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "5,0": {
+    "name": "shadow bolt",
+    "pixel_x": 80,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, shadow bolt: dark purple shadow energy, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "6,0": {
+    "name": "poison cloud",
+    "pixel_x": 96,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, poison cloud: sickly green toxic mist, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "7,0": {
+    "name": "physical impact",
+    "pixel_x": 112,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, physical impact: gray impact sparks, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "0,1": {
+    "name": "explosion flash",
+    "pixel_x": 0,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, explosion flash: bright orange-white detonation, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "1,1": {
+    "name": "sound wave",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, sound wave: blue-white concentric rings, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "2,1": {
+    "name": "blood spatter",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, blood spatter: crimson red droplets, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "3,1": {
+    "name": "smoke puff",
+    "pixel_x": 48,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, smoke puff: dark gray smoke wisp, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "4,1": {
+    "name": "magic spark",
+    "pixel_x": 64,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, magic spark: violet-white magical energy, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "5,1": {
+    "name": "water splash",
+    "pixel_x": 80,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, water splash: blue water droplets, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "6,1": {
+    "name": "stone shatter",
+    "pixel_x": 96,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, stone shatter: gray rock fragments, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  },
+  "7,1": {
+    "name": "healing glow",
+    "pixel_x": 112,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike combat effect sprite, 16x16 pixel art, healing glow: soft green restoration light, particle effect, high contrast on black background, flat colors, glowing, no gradients"
+  }
+}

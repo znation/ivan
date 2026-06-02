@@ -1,0 +1,245 @@
+{
+  "0,0": {
+    "name": "healthy adventurer face",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "_face_idx": 0,
+    "_face_col": 0,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "0,1": {
+    "name": "healthy adventurer face",
+    "pixel_x": 0,
+    "pixel_y": 16,
+    "_face_idx": 0,
+    "_face_col": 0,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "0,2": {
+    "name": "healthy adventurer face",
+    "pixel_x": 0,
+    "pixel_y": 32,
+    "_face_idx": 0,
+    "_face_col": 0,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "1,0": {
+    "name": "healthy adventurer face",
+    "pixel_x": 16,
+    "pixel_y": 0,
+    "_face_idx": 0,
+    "_face_col": 1,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "1,1": {
+    "name": "healthy adventurer face",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "_face_idx": 0,
+    "_face_col": 1,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "1,2": {
+    "name": "healthy adventurer face",
+    "pixel_x": 16,
+    "pixel_y": 32,
+    "_face_idx": 0,
+    "_face_col": 1,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "2,0": {
+    "name": "healthy adventurer face",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "_face_idx": 0,
+    "_face_col": 2,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "2,1": {
+    "name": "healthy adventurer face",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "_face_idx": 0,
+    "_face_col": 2,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "2,2": {
+    "name": "healthy adventurer face",
+    "pixel_x": 32,
+    "pixel_y": 32,
+    "_face_idx": 0,
+    "_face_col": 2,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, healthy adventurer face, confident alert expression, adventurer health indicator, full health, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "3,0": {
+    "name": "wounded adventurer face",
+    "pixel_x": 48,
+    "pixel_y": 0,
+    "_face_idx": 1,
+    "_face_col": 0,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "3,1": {
+    "name": "wounded adventurer face",
+    "pixel_x": 48,
+    "pixel_y": 16,
+    "_face_idx": 1,
+    "_face_col": 0,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "3,2": {
+    "name": "wounded adventurer face",
+    "pixel_x": 48,
+    "pixel_y": 32,
+    "_face_idx": 1,
+    "_face_col": 0,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "4,0": {
+    "name": "wounded adventurer face",
+    "pixel_x": 64,
+    "pixel_y": 0,
+    "_face_idx": 1,
+    "_face_col": 1,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "4,1": {
+    "name": "wounded adventurer face",
+    "pixel_x": 64,
+    "pixel_y": 16,
+    "_face_idx": 1,
+    "_face_col": 1,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "4,2": {
+    "name": "wounded adventurer face",
+    "pixel_x": 64,
+    "pixel_y": 32,
+    "_face_idx": 1,
+    "_face_col": 1,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "5,0": {
+    "name": "wounded adventurer face",
+    "pixel_x": 80,
+    "pixel_y": 0,
+    "_face_idx": 1,
+    "_face_col": 2,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "5,1": {
+    "name": "wounded adventurer face",
+    "pixel_x": 80,
+    "pixel_y": 16,
+    "_face_idx": 1,
+    "_face_col": 2,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "5,2": {
+    "name": "wounded adventurer face",
+    "pixel_x": 80,
+    "pixel_y": 32,
+    "_face_idx": 1,
+    "_face_col": 2,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, wounded adventurer face, pained grimace, adventurer health indicator, badly hurt, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "6,0": {
+    "name": "dying adventurer face",
+    "pixel_x": 96,
+    "pixel_y": 0,
+    "_face_idx": 2,
+    "_face_col": 0,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "6,1": {
+    "name": "dying adventurer face",
+    "pixel_x": 96,
+    "pixel_y": 16,
+    "_face_idx": 2,
+    "_face_col": 0,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "6,2": {
+    "name": "dying adventurer face",
+    "pixel_x": 96,
+    "pixel_y": 32,
+    "_face_idx": 2,
+    "_face_col": 0,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "7,0": {
+    "name": "dying adventurer face",
+    "pixel_x": 112,
+    "pixel_y": 0,
+    "_face_idx": 2,
+    "_face_col": 1,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "7,1": {
+    "name": "dying adventurer face",
+    "pixel_x": 112,
+    "pixel_y": 16,
+    "_face_idx": 2,
+    "_face_col": 1,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "7,2": {
+    "name": "dying adventurer face",
+    "pixel_x": 112,
+    "pixel_y": 32,
+    "_face_idx": 2,
+    "_face_col": 1,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "8,0": {
+    "name": "dying adventurer face",
+    "pixel_x": 128,
+    "pixel_y": 0,
+    "_face_idx": 2,
+    "_face_col": 2,
+    "_face_row": 0,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "8,1": {
+    "name": "dying adventurer face",
+    "pixel_x": 128,
+    "pixel_y": 16,
+    "_face_idx": 2,
+    "_face_col": 2,
+    "_face_row": 1,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  },
+  "8,2": {
+    "name": "dying adventurer face",
+    "pixel_x": 128,
+    "pixel_y": 32,
+    "_face_idx": 2,
+    "_face_col": 2,
+    "_face_row": 2,
+    "prompt": "dark fantasy roguelike HUD portrait, 48x48 pixel art, dying adventurer face, pale terrified expression, adventurer health indicator, near death, helmet and armor, muted palette, strong black outline, no gradients, centered face in frame"
+  }
+}

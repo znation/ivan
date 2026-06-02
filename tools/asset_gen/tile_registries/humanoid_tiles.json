@@ -1,0 +1,1136 @@
+{
+  "0,26": {
+    "name": "human legs / ghost legs",
+    "pixel_x": 0,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, human legs / ghost legs, side-facing body part tile, stone."
+  },
+  "2,26": {
+    "name": "human torso / ghost torso",
+    "pixel_x": 32,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, human torso / ghost torso, side-facing body part tile, stone."
+  },
+  "0,0": {
+    "name": "high priest legs / farmer legs / communist legs",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, high priest legs / farmer legs / communist legs, side-facing body part tile, stone."
+  },
+  "2,5": {
+    "name": "high priest torso / librarian torso",
+    "pixel_x": 32,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, high priest torso / librarian torso, side-facing body part tile, stone."
+  },
+  "4,1": {
+    "name": "high priest arms / shopkeeper arms / priest arms",
+    "pixel_x": 64,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, high priest arms / shopkeeper arms / priest arms, side-facing body part tile, stone."
+  },
+  "6,9": {
+    "name": "high priest head",
+    "pixel_x": 96,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, high priest head, side-facing body part tile, stone."
+  },
+  "2,1": {
+    "name": "farmer torso / marketeer torso / priest torso",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, farmer torso / marketeer torso / priest torso, side-facing body part tile, stone."
+  },
+  "1,10": {
+    "name": "cultist legs / dark mage legs / necromancer legs",
+    "pixel_x": 16,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, cultist legs / dark mage legs / necromancer legs, side-facing body part tile, stone."
+  },
+  "3,22": {
+    "name": "cultist torso / necromancer torso / Anmah torso",
+    "pixel_x": 48,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, cultist torso / necromancer torso / Anmah torso, side-facing body part tile, stone."
+  },
+  "0,4": {
+    "name": "guard legs / peddler legs / knight legs",
+    "pixel_x": 0,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, guard legs / peddler legs / knight legs, side-facing body part tile, stone."
+  },
+  "2,8": {
+    "name": "guard torso / peddler torso / knight torso",
+    "pixel_x": 32,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, guard torso / peddler torso / knight torso, side-facing body part tile, stone."
+  },
+  "4,5": {
+    "name": "guard arms / peddler arms / knight arms",
+    "pixel_x": 64,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, guard arms / peddler arms / knight arms, side-facing body part tile, stone."
+  },
+  "6,7": {
+    "name": "guard head / peddler head / knight head",
+    "pixel_x": 96,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, guard head / peddler head / knight head, side-facing body part tile, stone."
+  },
+  "6,23": {
+    "name": "emissary head / Lord Regent head",
+    "pixel_x": 96,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, emissary head / Lord Regent head, side-facing body part tile, stone."
+  },
+  "0,2": {
+    "name": "shopkeeper legs / priest legs / Verax legs",
+    "pixel_x": 0,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, shopkeeper legs / priest legs / Verax legs, side-facing body part tile, stone."
+  },
+  "2,2": {
+    "name": "shopkeeper torso",
+    "pixel_x": 32,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, shopkeeper torso, side-facing body part tile, stone."
+  },
+  "6,4": {
+    "name": "shopkeeper head / Zolku head / master torturer head",
+    "pixel_x": 96,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, shopkeeper head / Zolku head / master torturer head, side-facing body part tile, stone."
+  },
+  "0,1": {
+    "name": "Zolku legs / plant torso",
+    "pixel_x": 0,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Zolku legs / plant torso, side-facing body part tile, stone."
+  },
+  "3,12": {
+    "name": "Zolku torso / smith torso / Ikiros torso",
+    "pixel_x": 48,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Zolku torso / smith torso / Ikiros torso, side-facing body part tile, stone."
+  },
+  "4,0": {
+    "name": "Zolku arms / frog torso / werewolf arms",
+    "pixel_x": 64,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Zolku arms / frog torso / werewolf arms, side-facing body part tile, stone."
+  },
+  "0,3": {
+    "name": "marketeer legs / dark knight legs / vampire legs",
+    "pixel_x": 0,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, marketeer legs / dark knight legs / vampire legs, side-facing body part tile, stone."
+  },
+  "5,11": {
+    "name": "marketeer arms / dark knight arms / ghost arms",
+    "pixel_x": 80,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, marketeer arms / dark knight arms / ghost arms, side-facing body part tile, stone."
+  },
+  "7,15": {
+    "name": "marketeer head / mistress head",
+    "pixel_x": 112,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, marketeer head / mistress head, side-facing body part tile, stone."
+  },
+  "3,5": {
+    "name": "quartermaster torso / Old Chaos Flame torso / ghost torso",
+    "pixel_x": 48,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, quartermaster torso / Old Chaos Flame torso / ghost torso, side-facing body part tile, stone."
+  },
+  "6,0": {
+    "name": "quartermaster head / frog torso / werewolf head",
+    "pixel_x": 96,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, quartermaster head / frog torso / werewolf head, side-facing body part tile, stone."
+  },
+  "6,8": {
+    "name": "priest head / Verax head / Senex head",
+    "pixel_x": 96,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, priest head / Verax head / Senex head, side-facing body part tile, stone."
+  },
+  "0,9": {
+    "name": "priestess legs / slave legs / elder priestess legs",
+    "pixel_x": 0,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, priestess legs / slave legs / elder priestess legs, side-facing body part tile, stone."
+  },
+  "2,13": {
+    "name": "priestess torso / slave torso / elder priestess torso",
+    "pixel_x": 32,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, priestess torso / slave torso / elder priestess torso, side-facing body part tile, stone."
+  },
+  "4,13": {
+    "name": "priestess arms / slave arms / Moryggan arms",
+    "pixel_x": 64,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, priestess arms / slave arms / Moryggan arms, side-facing body part tile, stone."
+  },
+  "7,0": {
+    "name": "priestess head / Archpriest Cordatus' wife head / hedgehog torso",
+    "pixel_x": 112,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, priestess head / Archpriest Cordatus' wife head / hedgehog torso, side-facing body part tile, stone."
+  },
+  "1,9": {
+    "name": "blood daemon king legs",
+    "pixel_x": 16,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, blood daemon king legs, side-facing body part tile, stone."
+  },
+  "3,10": {
+    "name": "blood daemon king torso",
+    "pixel_x": 48,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, blood daemon king torso, side-facing body part tile, stone."
+  },
+  "5,10": {
+    "name": "blood daemon king arms",
+    "pixel_x": 80,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, blood daemon king arms, side-facing body part tile, stone."
+  },
+  "6,2": {
+    "name": "blood daemon king head",
+    "pixel_x": 96,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, blood daemon king head, side-facing body part tile, stone."
+  },
+  "6,15": {
+    "name": "dark knight head / crop tender encourager head",
+    "pixel_x": 96,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dark knight head / crop tender encourager head, side-facing body part tile, stone."
+  },
+  "0,6": {
+    "name": "Old Chaos Flame legs / hunter legs / ghost legs",
+    "pixel_x": 0,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Old Chaos Flame legs / hunter legs / ghost legs, side-facing body part tile, stone."
+  },
+  "1,3": {
+    "name": "wraithstalker legs / boy legs",
+    "pixel_x": 16,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, wraithstalker legs / boy legs, side-facing body part tile, stone."
+  },
+  "2,3": {
+    "name": "wraithstalker torso / boy torso",
+    "pixel_x": 32,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, wraithstalker torso / boy torso, side-facing body part tile, stone."
+  },
+  "4,3": {
+    "name": "wraithstalker arms / boy arms",
+    "pixel_x": 64,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, wraithstalker arms / boy arms, side-facing body part tile, stone."
+  },
+  "6,20": {
+    "name": "wraithstalker head / boy head / girl head",
+    "pixel_x": 96,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, wraithstalker head / boy head / girl head, side-facing body part tile, stone."
+  },
+  "5,0": {
+    "name": "frog torso / kamikaze dwarf arms",
+    "pixel_x": 80,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, frog torso / kamikaze dwarf arms, side-facing body part tile, stone."
+  },
+  "3,0": {
+    "name": "mass torso / werewolf torso / orc torso",
+    "pixel_x": 48,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mass torso / werewolf torso / orc torso, side-facing body part tile, stone."
+  },
+  "0,5": {
+    "name": "skeleton legs",
+    "pixel_x": 0,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton legs, side-facing body part tile, stone."
+  },
+  "2,6": {
+    "name": "skeleton torso",
+    "pixel_x": 32,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton torso, side-facing body part tile, stone."
+  },
+  "4,6": {
+    "name": "skeleton arms",
+    "pixel_x": 64,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton arms, side-facing body part tile, stone."
+  },
+  "6,6": {
+    "name": "skeleton head",
+    "pixel_x": 96,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton head, side-facing body part tile, stone."
+  },
+  "1,4": {
+    "name": "goblin legs",
+    "pixel_x": 16,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin legs, side-facing body part tile, stone."
+  },
+  "2,7": {
+    "name": "goblin torso",
+    "pixel_x": 32,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin torso, side-facing body part tile, stone."
+  },
+  "4,9": {
+    "name": "goblin arms",
+    "pixel_x": 64,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin arms, side-facing body part tile, stone."
+  },
+  "6,3": {
+    "name": "goblin head",
+    "pixel_x": 96,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin head, side-facing body part tile, stone."
+  },
+  "3,13": {
+    "name": "goblin prince torso / goblin king torso",
+    "pixel_x": 48,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin prince torso / goblin king torso, side-facing body part tile, stone."
+  },
+  "7,18": {
+    "name": "goblin prince head",
+    "pixel_x": 112,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin prince head, side-facing body part tile, stone."
+  },
+  "6,18": {
+    "name": "goblin king head",
+    "pixel_x": 96,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, goblin king head, side-facing body part tile, stone."
+  },
+  "11,0": {
+    "name": "mommo slime torso / mommo torso",
+    "pixel_x": 176,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mommo slime torso / mommo torso, side-facing body part tile, stone."
+  },
+  "12,0": {
+    "name": "mommo torso",
+    "pixel_x": 192,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mommo torso, side-facing body part tile, stone."
+  },
+  "0,16": {
+    "name": "golem legs",
+    "pixel_x": 0,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, golem legs, side-facing body part tile, stone."
+  },
+  "16,0": {
+    "name": "golem torso / spider torso",
+    "pixel_x": 256,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, golem torso / spider torso, side-facing body part tile, stone."
+  },
+  "4,16": {
+    "name": "golem arms / punisher arms",
+    "pixel_x": 64,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, golem arms / punisher arms, side-facing body part tile, stone."
+  },
+  "6,16": {
+    "name": "golem head",
+    "pixel_x": 96,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, golem head, side-facing body part tile, stone."
+  },
+  "14,0": {
+    "name": "wolf torso",
+    "pixel_x": 224,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, wolf torso, side-facing body part tile, stone."
+  },
+  "15,1": {
+    "name": "puppy torso",
+    "pixel_x": 240,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, puppy torso, side-facing body part tile, stone."
+  },
+  "25,0": {
+    "name": "dog torso",
+    "pixel_x": 400,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dog torso, side-facing body part tile, stone."
+  },
+  "19,1": {
+    "name": "spider torso",
+    "pixel_x": 304,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, spider torso, side-facing body part tile, stone."
+  },
+  "19,0": {
+    "name": "jackal torso",
+    "pixel_x": 304,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, jackal torso, side-facing body part tile, stone."
+  },
+  "18,0": {
+    "name": "ass torso",
+    "pixel_x": 288,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, ass torso, side-facing body part tile, stone."
+  },
+  "2,9": {
+    "name": "communist torso / Lord Regent torso",
+    "pixel_x": 32,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, communist torso / Lord Regent torso, side-facing body part tile, stone."
+  },
+  "4,7": {
+    "name": "communist arms",
+    "pixel_x": 64,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, communist arms, side-facing body part tile, stone."
+  },
+  "6,11": {
+    "name": "communist head",
+    "pixel_x": 96,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, communist head, side-facing body part tile, stone."
+  },
+  "2,12": {
+    "name": "hunter torso",
+    "pixel_x": 32,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, hunter torso, side-facing body part tile, stone."
+  },
+  "4,8": {
+    "name": "hunter arms",
+    "pixel_x": 64,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, hunter arms, side-facing body part tile, stone."
+  },
+  "6,12": {
+    "name": "hunter head",
+    "pixel_x": 96,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, hunter head, side-facing body part tile, stone."
+  },
+  "21,0": {
+    "name": "bear torso",
+    "pixel_x": 336,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bear torso, side-facing body part tile, stone."
+  },
+  "12,1": {
+    "name": "bear torso",
+    "pixel_x": 192,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bear torso, side-facing body part tile, stone."
+  },
+  "20,0": {
+    "name": "dolphin torso",
+    "pixel_x": 320,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dolphin torso, side-facing body part tile, stone."
+  },
+  "0,7": {
+    "name": "Archpriest Cordatus' wife legs / seamstress legs",
+    "pixel_x": 0,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Archpriest Cordatus' wife legs / seamstress legs, side-facing body part tile, stone."
+  },
+  "2,10": {
+    "name": "Archpriest Cordatus' wife torso / housewife torso / jester torso",
+    "pixel_x": 32,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Archpriest Cordatus' wife torso / housewife torso / jester torso, side-facing body part tile, stone."
+  },
+  "4,10": {
+    "name": "Archpriest Cordatus' wife arms / housewife arms / jester arms",
+    "pixel_x": 64,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Archpriest Cordatus' wife arms / housewife arms / jester arms, side-facing body part tile, stone."
+  },
+  "0,8": {
+    "name": "housewife legs / jester legs",
+    "pixel_x": 0,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, housewife legs / jester legs, side-facing body part tile, stone."
+  },
+  "5,6": {
+    "name": "cultist arms / necromancer arms / Anmah arms",
+    "pixel_x": 80,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, cultist arms / necromancer arms / Anmah arms, side-facing body part tile, stone."
+  },
+  "7,5": {
+    "name": "slave head",
+    "pixel_x": 112,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, slave head, side-facing body part tile, stone."
+  },
+  "6,14": {
+    "name": "librarian head / village elder head",
+    "pixel_x": 96,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, librarian head / village elder head, side-facing body part tile, stone."
+  },
+  "0,10": {
+    "name": "zombie legs",
+    "pixel_x": 0,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, zombie legs, side-facing body part tile, stone."
+  },
+  "2,14": {
+    "name": "zombie torso",
+    "pixel_x": 32,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, zombie torso, side-facing body part tile, stone."
+  },
+  "4,14": {
+    "name": "zombie arms",
+    "pixel_x": 64,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, zombie arms, side-facing body part tile, stone."
+  },
+  "7,7": {
+    "name": "zombie head",
+    "pixel_x": 112,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, zombie head, side-facing body part tile, stone."
+  },
+  "7,10": {
+    "name": "Moonrise Stealing Dark head / kamikaze dwarf head / smith head",
+    "pixel_x": 112,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Moonrise Stealing Dark head / kamikaze dwarf head / smith head, side-facing body part tile, stone."
+  },
+  "7,32": {
+    "name": "gas-ghoul head",
+    "pixel_x": 112,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, gas-ghoul head, side-facing body part tile, stone."
+  },
+  "1,5": {
+    "name": "imp legs",
+    "pixel_x": 16,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imp legs, side-facing body part tile, stone."
+  },
+  "3,7": {
+    "name": "imp torso",
+    "pixel_x": 48,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imp torso, side-facing body part tile, stone."
+  },
+  "4,2": {
+    "name": "imp arms / eddy torso",
+    "pixel_x": 64,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imp arms / eddy torso, side-facing body part tile, stone."
+  },
+  "6,1": {
+    "name": "imp head / carnivorousplant torso",
+    "pixel_x": 96,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imp head / carnivorousplant torso, side-facing body part tile, stone."
+  },
+  "29,1": {
+    "name": "bat torso",
+    "pixel_x": 464,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bat torso, side-facing body part tile, stone."
+  },
+  "1,2": {
+    "name": "mistress legs",
+    "pixel_x": 16,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mistress legs, side-facing body part tile, stone."
+  },
+  "3,6": {
+    "name": "mistress torso / law student torso",
+    "pixel_x": 48,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mistress torso / law student torso, side-facing body part tile, stone."
+  },
+  "5,5": {
+    "name": "mistress arms",
+    "pixel_x": 80,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mistress arms, side-facing body part tile, stone."
+  },
+  "0,11": {
+    "name": "werewolf legs",
+    "pixel_x": 0,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, werewolf legs, side-facing body part tile, stone."
+  },
+  "0,12": {
+    "name": "werewolf legs",
+    "pixel_x": 0,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, werewolf legs, side-facing body part tile, stone."
+  },
+  "4,15": {
+    "name": "werewolf arms",
+    "pixel_x": 64,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, werewolf arms, side-facing body part tile, stone."
+  },
+  "7,9": {
+    "name": "werewolf head",
+    "pixel_x": 112,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, werewolf head, side-facing body part tile, stone."
+  },
+  "2,19": {
+    "name": "vampire torso",
+    "pixel_x": 32,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, vampire torso, side-facing body part tile, stone."
+  },
+  "6,33": {
+    "name": "vampire head",
+    "pixel_x": 96,
+    "pixel_y": 528,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, vampire head, side-facing body part tile, stone."
+  },
+  "1,7": {
+    "name": "kobold legs",
+    "pixel_x": 16,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, kobold legs, side-facing body part tile, stone."
+  },
+  "3,11": {
+    "name": "kobold torso",
+    "pixel_x": 48,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, kobold torso, side-facing body part tile, stone."
+  },
+  "4,11": {
+    "name": "kobold arms",
+    "pixel_x": 64,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, kobold arms, side-facing body part tile, stone."
+  },
+  "7,13": {
+    "name": "kobold head",
+    "pixel_x": 112,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, kobold head, side-facing body part tile, stone."
+  },
+  "1,8": {
+    "name": "gibberling legs",
+    "pixel_x": 16,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, gibberling legs, side-facing body part tile, stone."
+  },
+  "3,9": {
+    "name": "gibberling torso",
+    "pixel_x": 48,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, gibberling torso, side-facing body part tile, stone."
+  },
+  "5,9": {
+    "name": "gibberling arms",
+    "pixel_x": 80,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, gibberling arms, side-facing body part tile, stone."
+  },
+  "7,6": {
+    "name": "gibberling head",
+    "pixel_x": 112,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, gibberling head, side-facing body part tile, stone."
+  },
+  "31,0": {
+    "name": "cat torso",
+    "pixel_x": 496,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, cat torso, side-facing body part tile, stone."
+  },
+  "32,0": {
+    "name": "rat torso",
+    "pixel_x": 512,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, rat torso, side-facing body part tile, stone."
+  },
+  "27,0": {
+    "name": "angel torso",
+    "pixel_x": 432,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, angel torso, side-facing body part tile, stone."
+  },
+  "5,16": {
+    "name": "angel arms / fallen archangel arms",
+    "pixel_x": 80,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, angel arms / fallen archangel arms, side-facing body part tile, stone."
+  },
+  "7,16": {
+    "name": "angel head / fallen archangel head",
+    "pixel_x": 112,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, angel head / fallen archangel head, side-facing body part tile, stone."
+  },
+  "0,13": {
+    "name": "kamikaze dwarf legs",
+    "pixel_x": 0,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, kamikaze dwarf legs, side-facing body part tile, stone."
+  },
+  "3,1": {
+    "name": "kamikaze dwarf torso",
+    "pixel_x": 48,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, kamikaze dwarf torso, side-facing body part tile, stone."
+  },
+  "33,0": {
+    "name": "mammoth torso",
+    "pixel_x": 528,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mammoth torso, side-facing body part tile, stone."
+  },
+  "34,0": {
+    "name": "unicorn torso",
+    "pixel_x": 544,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, unicorn torso, side-facing body part tile, stone."
+  },
+  "2,17": {
+    "name": "genie torso",
+    "pixel_x": 32,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, genie torso, side-facing body part tile, stone."
+  },
+  "4,17": {
+    "name": "genie arms",
+    "pixel_x": 64,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, genie arms, side-facing body part tile, stone."
+  },
+  "6,17": {
+    "name": "genie head",
+    "pixel_x": 96,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, genie head, side-facing body part tile, stone."
+  },
+  "36,0": {
+    "name": "lion torso",
+    "pixel_x": 576,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, lion torso, side-facing body part tile, stone."
+  },
+  "5,1": {
+    "name": "carnivorousplant torso / orc officer arms / orc general arms",
+    "pixel_x": 80,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, carnivorousplant torso / orc officer arms / orc general arms, side-facing body part tile, stone."
+  },
+  "1,1": {
+    "name": "buffalo torso / child tourist legs / boy legs",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, buffalo torso / child tourist legs / boy legs, side-facing body part tile, stone."
+  },
+  "23,0": {
+    "name": "snake torso",
+    "pixel_x": 368,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, snake torso, side-facing body part tile, stone."
+  },
+  "0,15": {
+    "name": "orc legs / rebel leader legs",
+    "pixel_x": 0,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc legs / rebel leader legs, side-facing body part tile, stone."
+  },
+  "5,2": {
+    "name": "orc arms / rebel leader arms",
+    "pixel_x": 80,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc arms / rebel leader arms, side-facing body part tile, stone."
+  },
+  "7,12": {
+    "name": "orc head",
+    "pixel_x": 112,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc head, side-facing body part tile, stone."
+  },
+  "3,3": {
+    "name": "orc slaughterer torso / orc squad leader torso / master torturer torso",
+    "pixel_x": 48,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc slaughterer torso / orc squad leader torso / master torturer torso, side-facing body part tile, stone."
+  },
+  "7,11": {
+    "name": "orc squad leader head / orc officer head / orc general head",
+    "pixel_x": 112,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc squad leader head / orc officer head / orc general head, side-facing body part tile, stone."
+  },
+  "0,14": {
+    "name": "orc officer legs / orc general legs / orc marshal legs",
+    "pixel_x": 0,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc officer legs / orc general legs / orc marshal legs, side-facing body part tile, stone."
+  },
+  "3,2": {
+    "name": "orc officer torso / orc general torso / orc marshal torso",
+    "pixel_x": 48,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, orc officer torso / orc general torso / orc marshal torso, side-facing body part tile, stone."
+  },
+  "7,14": {
+    "name": "cossack head",
+    "pixel_x": 112,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, cossack head, side-facing body part tile, stone."
+  },
+  "0,18": {
+    "name": "crop tender legs / village elder legs",
+    "pixel_x": 0,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, crop tender legs / village elder legs, side-facing body part tile, stone."
+  },
+  "2,0": {
+    "name": "crop tender torso / village elder torso / crop tender encourager torso",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, crop tender torso / village elder torso / crop tender encourager torso, side-facing body part tile, stone."
+  },
+  "4,4": {
+    "name": "crop tender arms / smith arms / Ikiros arms",
+    "pixel_x": 64,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, crop tender arms / smith arms / Ikiros arms, side-facing body part tile, stone."
+  },
+  "3,15": {
+    "name": "imperialist torso",
+    "pixel_x": 48,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imperialist torso, side-facing body part tile, stone."
+  },
+  "5,7": {
+    "name": "imperialist arms",
+    "pixel_x": 80,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imperialist arms, side-facing body part tile, stone."
+  },
+  "6,13": {
+    "name": "imperialist head",
+    "pixel_x": 96,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, imperialist head, side-facing body part tile, stone."
+  },
+  "6,5": {
+    "name": "hoardmaster head",
+    "pixel_x": 96,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, hoardmaster head, side-facing body part tile, stone."
+  },
+  "7,30": {
+    "name": "Khalybs head",
+    "pixel_x": 112,
+    "pixel_y": 480,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Khalybs head, side-facing body part tile, stone."
+  },
+  "1,13": {
+    "name": "crop tender encourager legs",
+    "pixel_x": 16,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, crop tender encourager legs, side-facing body part tile, stone."
+  },
+  "1,0": {
+    "name": "chameleon torso",
+    "pixel_x": 16,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chameleon torso, side-facing body part tile, stone."
+  },
+  "13,1": {
+    "name": "mushroom torso",
+    "pixel_x": 208,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mushroom torso, side-facing body part tile, stone."
+  },
+  "8,2": {
+    "name": "mushroom torso",
+    "pixel_x": 128,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mushroom torso, side-facing body part tile, stone."
+  },
+  "3,14": {
+    "name": "dark mage torso / wizard torso",
+    "pixel_x": 48,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dark mage torso / wizard torso, side-facing body part tile, stone."
+  },
+  "5,4": {
+    "name": "dark mage arms / wizard arms",
+    "pixel_x": 80,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dark mage arms / wizard arms, side-facing body part tile, stone."
+  },
+  "7,19": {
+    "name": "dark mage head / wizard head",
+    "pixel_x": 112,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dark mage head / wizard head, side-facing body part tile, stone."
+  },
+  "11,1": {
+    "name": "moose torso",
+    "pixel_x": 176,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, moose torso, side-facing body part tile, stone."
+  },
+  "21,1": {
+    "name": "magpie torso",
+    "pixel_x": 336,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, magpie torso, side-facing body part tile, stone."
+  },
+  "8,0": {
+    "name": "skunk torso",
+    "pixel_x": 128,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skunk torso, side-facing body part tile, stone."
+  },
+  "14,1": {
+    "name": "stalker torso",
+    "pixel_x": 224,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, stalker torso, side-facing body part tile, stone."
+  },
+  "10,4": {
+    "name": "Master Dark Frog torso",
+    "pixel_x": 160,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Master Dark Frog torso, side-facing body part tile, stone."
+  },
+  "8,4": {
+    "name": "plant torso",
+    "pixel_x": 128,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, plant torso, side-facing body part tile, stone."
+  },
+  "10,0": {
+    "name": "bunny torso",
+    "pixel_x": 160,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bunny torso, side-facing body part tile, stone."
+  },
+  "9,0": {
+    "name": "bunny torso",
+    "pixel_x": 144,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bunny torso, side-facing body part tile, stone."
+  },
+  "18,2": {
+    "name": "bunny torso",
+    "pixel_x": 288,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bunny torso, side-facing body part tile, stone."
+  },
+  "13,0": {
+    "name": "hattifattener torso",
+    "pixel_x": 208,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, hattifattener torso, side-facing body part tile, stone."
+  },
+  "7,8": {
+    "name": "necromancer head / Anmah head",
+    "pixel_x": 112,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, necromancer head / Anmah head, side-facing body part tile, stone."
+  },
+  "1,11": {
+    "name": "sumo wrestler legs",
+    "pixel_x": 16,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, sumo wrestler legs, side-facing body part tile, stone."
+  },
+  "2,22": {
+    "name": "sumo wrestler torso",
+    "pixel_x": 32,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, sumo wrestler torso, side-facing body part tile, stone."
+  },
+  "4,21": {
+    "name": "sumo wrestler arms",
+    "pixel_x": 64,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, sumo wrestler arms, side-facing body part tile, stone."
+  },
+  "6,21": {
+    "name": "sumo wrestler head",
+    "pixel_x": 96,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, sumo wrestler head, side-facing body part tile, stone."
+  },
+  "1,14": {
+    "name": "male tourist legs",
+    "pixel_x": 16,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, male tourist legs, side-facing body part tile, stone."
+  },
+  "2,23": {
+    "name": "male tourist torso",
+    "pixel_x": 32,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, male tourist torso, side-facing body part tile, stone."
+  },
+  "5,3": {
+    "name": "male tourist arms",
+    "pixel_x": 80,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, male tourist arms, side-facing body part tile, stone."
+  },
+  "1,12": {
+    "name": "female tourist legs / law student legs",
+    "pixel_x": 16,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, female tourist legs / law student legs, side-facing body part tile, stone."
+  },
+  "3,23": {
+    "name": "female tourist torso",
+    "pixel_x": 48,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, female tourist torso, side-facing body part tile, stone."
+  },
+  "7,3": {
+    "name": "female tourist head",
+    "pixel_x": 112,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, female tourist head, side-facing body part tile, stone."
+  },
+  "2,24": {
+    "name": "child tourist torso / boy torso",
+    "pixel_x": 32,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, child tourist torso / boy torso, side-facing body part tile, stone."
+  },
+  "5,22": {
+    "name": "child tourist arms / boy arms",
+    "pixel_x": 80,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, child tourist arms / boy arms, side-facing body part tile, stone."
+  },
+  "7,22": {
+    "name": "child tourist head",
+    "pixel_x": 112,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, child tourist head, side-facing body part tile, stone."
+  },
+  "7,4": {
+    "name": "seamstress head",
+    "pixel_x": 112,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, seamstress head, side-facing body part tile, stone."
+  },
+  "12,4": {
+    "name": "behemoth spider torso",
+    "pixel_x": 192,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, behemoth spider torso, side-facing body part tile, stone."
+  },
+  "1,15": {
+    "name": "siren legs",
+    "pixel_x": 16,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, siren legs, side-facing body part tile, stone."
+  },
+  "3,18": {
+    "name": "siren torso",
+    "pixel_x": 48,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, siren torso, side-facing body part tile, stone."
+  },
+  "5,15": {
+    "name": "siren arms / law student arms",
+    "pixel_x": 80,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, siren arms / law student arms, side-facing body part tile, stone."
+  },
+  "7,23": {
+    "name": "siren head",
+    "pixel_x": 112,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, siren head, side-facing body part tile, stone."
+  },
+  "7,25": {
+    "name": "elven ambassador head",
+    "pixel_x": 112,
+    "pixel_y": 400,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, elven ambassador head, side-facing body part tile, stone."
+  },
+  "13,2": {
+    "name": "mind worm hatchling torso",
+    "pixel_x": 208,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mind worm hatchling torso, side-facing body part tile, stone."
+  },
+  "6,22": {
+    "name": "punisher head",
+    "pixel_x": 96,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, punisher head, side-facing body part tile, stone."
+  },
+  "8,26": {
+    "name": "law student head",
+    "pixel_x": 128,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, law student head, side-facing body part tile, stone."
+  },
+  "7,20": {
+    "name": "boy head",
+    "pixel_x": 112,
+    "pixel_y": 335,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, boy head, side-facing body part tile, stone."
+  },
+  "6,25": {
+    "name": "heir head",
+    "pixel_x": 96,
+    "pixel_y": 415,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, heir head, side-facing body part tile, stone."
+  },
+  "1,16": {
+    "name": "bum legs",
+    "pixel_x": 16,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bum legs, side-facing body part tile, stone."
+  },
+  "2,18": {
+    "name": "bum torso",
+    "pixel_x": 32,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bum torso, side-facing body part tile, stone."
+  },
+  "5,12": {
+    "name": "bum arms",
+    "pixel_x": 80,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bum arms, side-facing body part tile, stone."
+  },
+  "3,16": {
+    "name": "fallen archangel torso",
+    "pixel_x": 48,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, fallen archangel torso, side-facing body part tile, stone."
+  },
+  "8,8": {
+    "name": "mushroom torso",
+    "pixel_x": 128,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mushroom torso, side-facing body part tile, stone."
+  }
+}

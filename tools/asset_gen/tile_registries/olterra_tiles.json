@@ -1,0 +1,434 @@
+{
+  "4,17": {
+    "config": "BRICK_FINE",
+    "name": "wall",
+    "material": "GRANITE",
+    "pixel_x": 64,
+    "pixel_y": 272,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, wall, gray granite stone, ground-level top-down. stone wall surface"
+  },
+  "5,17": {
+    "config": "BRICK_PROPAGANDA",
+    "name": "wall",
+    "material": "GRANITE",
+    "pixel_x": 80,
+    "pixel_y": 272,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, wall, gray granite stone, ground-level top-down. stone wall surface"
+  },
+  "1,16": {
+    "config": "BRICK_OLD",
+    "name": "old wall",
+    "material": "GRANITE",
+    "pixel_x": 16,
+    "pixel_y": 256,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, old wall, gray granite stone, ground-level top-down. stone wall surface"
+  },
+  "3,17": {
+    "config": "BRICK_PRIMITIVE",
+    "name": "primitive wall",
+    "material": "BALSA_WOOD",
+    "pixel_x": 48,
+    "pixel_y": 272,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, primitive wall, pale wood, ground-level top-down. stone wall surface"
+  },
+  "6,17": {
+    "config": "BRICK_PRIMITIVE_PROPAGANDA",
+    "name": "primitive wall",
+    "material": "BALSA_WOOD",
+    "pixel_x": 96,
+    "pixel_y": 272,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, primitive wall, pale wood, ground-level top-down."
+  },
+  "0,2": {
+    "config": "STONE_WALL",
+    "name": "wall",
+    "material": "GRANITE",
+    "pixel_x": 0,
+    "pixel_y": 32,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, wall, gray granite stone, ground-level top-down."
+  },
+  "3,18": {
+    "config": "BROKEN_WALL",
+    "name": "broken wall",
+    "material": "GRANITE",
+    "pixel_x": 48,
+    "pixel_y": 288,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, broken wall, gray granite stone, ground-level top-down."
+  },
+  "0,27": {
+    "config": "TENT_WALL",
+    "name": "tent wall",
+    "material": "FELT",
+    "pixel_x": 0,
+    "pixel_y": 432,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, tent wall, felt, ground-level top-down."
+  },
+  "1,20": {
+    "config": "PINE",
+    "name": "pine",
+    "material": "PINE_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 320,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, pine, pine wood, ground-level top-down."
+  },
+  "1,22": {
+    "config": "FIR",
+    "name": "fir",
+    "material": "FIR_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 352,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, fir, fir wood planks, ground-level top-down."
+  },
+  "1,23": {
+    "config": "PALM",
+    "name": "palm",
+    "material": "BALSA_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 368,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, palm, pale wood, ground-level top-down."
+  },
+  "2,21": {
+    "config": "HOLY_TREE",
+    "name": "holy tree",
+    "material": "GOLD",
+    "pixel_x": 32,
+    "pixel_y": 336,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, holy tree, bright gold metal, ground-level top-down."
+  },
+  "0,17": {
+    "config": "CARPET",
+    "name": "carpet",
+    "material": "FABRIC",
+    "pixel_x": 0,
+    "pixel_y": 272,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, carpet, fabric, ground-level top-down."
+  },
+  "0,25": {
+    "config": "COUCH",
+    "name": "couch",
+    "material": "FABRIC",
+    "pixel_x": 0,
+    "pixel_y": 400,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, couch, fabric, ground-level top-down."
+  },
+  "5,18": {
+    "config": "CHAIR",
+    "name": "chair",
+    "material": "FIR_WOOD",
+    "pixel_x": 80,
+    "pixel_y": 288,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, chair, fir wood planks, ground-level top-down."
+  },
+  "0,26": {
+    "config": "ARM_CHAIR",
+    "name": "armchair",
+    "material": "LINEN_CLOTH",
+    "pixel_x": 0,
+    "pixel_y": 416,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, armchair, linen cloth, ground-level top-down."
+  },
+  "3,14": {
+    "config": "BENCH",
+    "name": "bench",
+    "material": "FIR_WOOD",
+    "pixel_x": 48,
+    "pixel_y": 224,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, bench, fir wood planks, ground-level top-down."
+  },
+  "3,19": {
+    "config": "DOUBLE_BED",
+    "name": "luxurious double bed",
+    "material": "FABRIC",
+    "pixel_x": 48,
+    "pixel_y": 304,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, luxurious double bed, fabric, ground-level top-down."
+  },
+  "0,22": {
+    "config": "CHEAP_BED",
+    "name": "cheap bed",
+    "material": "HEMP_CLOTH",
+    "pixel_x": 0,
+    "pixel_y": 352,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, cheap bed, hemp cloth, ground-level top-down."
+  },
+  "0,21": {
+    "config": "PLAIN_BED",
+    "name": "bed",
+    "material": "LINEN_CLOTH",
+    "pixel_x": 0,
+    "pixel_y": 336,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, bed, linen cloth, ground-level top-down."
+  },
+  "2,20": {
+    "config": "POOL_BORDER",
+    "name": "pool border",
+    "material": "MARBLE",
+    "pixel_x": 32,
+    "pixel_y": 320,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, pool border, white marble stone, ground-level top-down."
+  },
+  "3,20": {
+    "config": "POOL_CORNER",
+    "name": "pool corner",
+    "material": "MARBLE",
+    "pixel_x": 48,
+    "pixel_y": 320,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, pool corner, white marble stone, ground-level top-down."
+  },
+  "1,27": {
+    "config": "ANVIL",
+    "name": "anvil",
+    "material": "IRON",
+    "pixel_x": 16,
+    "pixel_y": 432,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, anvil, dark iron metal, ground-level top-down."
+  },
+  "1,26": {
+    "config": "SHARD",
+    "name": "shard",
+    "material": "FIR_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 416,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, shard, fir wood planks, ground-level top-down."
+  },
+  "3,22": {
+    "config": "CACTUS",
+    "name": "cactus",
+    "material": "PLANT_FIBER",
+    "pixel_x": 48,
+    "pixel_y": 352,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, cactus, plant fiber, ground-level top-down."
+  },
+  "5,23": {
+    "config": "BIRCH",
+    "name": "birch tree",
+    "material": "BIRCH_WOOD",
+    "pixel_x": 80,
+    "pixel_y": 368,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, birch tree, birch wood, ground-level top-down."
+  },
+  "2,23": {
+    "config": "DWARF_BIRCH",
+    "name": "dwarf birch",
+    "material": "BIRCH_WOOD",
+    "pixel_x": 32,
+    "pixel_y": 368,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, dwarf birch, birch wood, ground-level top-down."
+  },
+  "0,0": {
+    "config": "PEDESTAL",
+    "name": "pedestal",
+    "material": "MARBLE",
+    "pixel_x": 0,
+    "pixel_y": 0,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, pedestal, white marble stone, ground-level top-down."
+  },
+  "1,1": {
+    "config": "FORGE",
+    "name": "forge",
+    "material": "BASALT",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, forge, basalt, ground-level top-down."
+  },
+  "2,1": {
+    "config": "FURNACE",
+    "name": "furnace",
+    "material": "BASALT",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, furnace, basalt, ground-level top-down."
+  },
+  "5,2": {
+    "config": "OVEN",
+    "name": "oven",
+    "material": "COPPER",
+    "pixel_x": 80,
+    "pixel_y": 32,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, oven, copper, ground-level top-down."
+  },
+  "1,3": {
+    "config": "WOODEN_HORSE",
+    "name": "wooden horse",
+    "material": "FIR_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 48,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, wooden horse, fir wood planks, ground-level top-down."
+  },
+  "5,4": {
+    "config": "TORTURE_RACK",
+    "name": "torture rack",
+    "material": "LEATHER",
+    "pixel_x": 80,
+    "pixel_y": 64,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, torture rack, leather, ground-level top-down."
+  },
+  "3,3": {
+    "config": "DESK",
+    "name": "writing desk",
+    "material": "FIR_WOOD",
+    "pixel_x": 48,
+    "pixel_y": 48,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, writing desk, fir wood planks, ground-level top-down."
+  },
+  "2,14": {
+    "config": "WORK_BENCH",
+    "name": "workbench",
+    "material": "FIR_WOOD",
+    "pixel_x": 32,
+    "pixel_y": 224,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, workbench, fir wood planks, ground-level top-down."
+  },
+  "5,14": {
+    "config": "TAILORING_BENCH",
+    "name": "tailoring bench",
+    "material": "FIR_WOOD",
+    "pixel_x": 80,
+    "pixel_y": 224,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, tailoring bench, fir wood planks, ground-level top-down."
+  },
+  "3,15": {
+    "config": "TABLE",
+    "name": "table",
+    "material": "FIR_WOOD",
+    "pixel_x": 48,
+    "pixel_y": 240,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, table, fir wood planks, ground-level top-down."
+  },
+  "4,15": {
+    "config": "WELL",
+    "name": "well",
+    "material": "GRANITE",
+    "pixel_x": 64,
+    "pixel_y": 240,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, well, gray granite stone, ground-level top-down."
+  },
+  "7,18": {
+    "config": "SHACKLES",
+    "name": "shackles",
+    "material": "IRON",
+    "pixel_x": 112,
+    "pixel_y": 288,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, shackles, dark iron metal, ground-level top-down."
+  },
+  "4,21": {
+    "config": "DEAD_TREE",
+    "name": "dead tree",
+    "material": "FIR_WOOD",
+    "pixel_x": 64,
+    "pixel_y": 336,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, dead tree, fir wood planks, ground-level top-down."
+  },
+  "5,22": {
+    "config": "STRANGE_TREE",
+    "name": "strange tree",
+    "material": "BONE",
+    "pixel_x": 80,
+    "pixel_y": 352,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, strange tree, pale yellowed bone, ground-level top-down."
+  },
+  "1,6": {
+    "config": "BARDOOR",
+    "name": "bardoor",
+    "material": "BONE",
+    "pixel_x": 16,
+    "pixel_y": 96,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, bardoor, pale yellowed bone, ground-level top-down."
+  },
+  "1,9": {
+    "config": "SECRET_DOOR",
+    "name": "very secret door",
+    "material": "BONE",
+    "pixel_x": 16,
+    "pixel_y": 144,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, very secret door, pale yellowed bone, ground-level top-down."
+  },
+  "0,7": {
+    "config": "CURTAIN",
+    "name": "curtain",
+    "material": "FELT",
+    "pixel_x": 0,
+    "pixel_y": 112,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, curtain, felt, ground-level top-down."
+  },
+  "0,12": {
+    "config": "STAIRS_UP",
+    "name": "stairs up",
+    "material": "FELT",
+    "pixel_x": 0,
+    "pixel_y": 192,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, stairs up, felt, ground-level top-down."
+  },
+  "0,13": {
+    "config": "STAIRS_DOWN",
+    "name": "stairs down",
+    "material": "FELT",
+    "pixel_x": 0,
+    "pixel_y": 208,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, stairs down, felt, ground-level top-down."
+  },
+  "1,17": {
+    "config": "BOOK_CASE",
+    "name": "bookcase",
+    "material": "FIR_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 272,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, bookcase, fir wood planks, ground-level top-down."
+  },
+  "0,14": {
+    "config": "CHEST_OF_DRAWERS",
+    "name": "chest of drawers",
+    "material": "FIR_WOOD",
+    "pixel_x": 0,
+    "pixel_y": 224,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, chest of drawers, fir wood planks, ground-level top-down."
+  },
+  "1,8": {
+    "config": "SHELF",
+    "name": "shelf",
+    "material": "FIR_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 128,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, shelf, fir wood planks, ground-level top-down."
+  },
+  "2,6": {
+    "config": "BARDOOR",
+    "name": "bardoor",
+    "material": "MARBLE",
+    "pixel_x": 32,
+    "pixel_y": 96,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, bardoor, white marble stone, ground-level top-down."
+  },
+  "1,10": {
+    "config": "SECRET_DOOR",
+    "name": "broken very secret door",
+    "material": "MARBLE",
+    "pixel_x": 16,
+    "pixel_y": 160,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, broken very secret door, white marble stone, ground-level top-down."
+  },
+  "0,6": {
+    "config": "CURTAIN",
+    "name": "torn curtain",
+    "material": "MARBLE",
+    "pixel_x": 0,
+    "pixel_y": 96,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, torn curtain, white marble stone, ground-level top-down."
+  },
+  "5,19": {
+    "config": "SNOW_BOULDER",
+    "name": "snow-covered snow boulder",
+    "material": "GRANITE",
+    "pixel_x": 80,
+    "pixel_y": 306,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, snow-covered snow boulder, gray granite stone, ground-level top-down."
+  },
+  "2,7": {
+    "config": "BROKEN_BARWALL",
+    "name": "broken broken barwall",
+    "material": "IRON",
+    "pixel_x": 32,
+    "pixel_y": 112,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, broken broken barwall, dark iron metal, ground-level top-down. stone wall surface"
+  }
+}
