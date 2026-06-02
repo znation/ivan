@@ -594,17 +594,26 @@ After completing each task:
 
 ---
 
+---
+
+### Phase 8: Post-Audit Cleanup (found during codebase audit on 2026-06-02)
+
+#### Task 8.1: [x] Rename `ennerbeast`→`wraithstalker`, `ennerchild`→`wraithstalkerchild`, `ennerhead`→`wraithstalkerskull`
+Graphics and sounds for the enner beast were replaced in Phases 5–6, but C++ class names and all data file identifiers were never renamed. Fixed in commit `b3264d4`.
+
+**Files changed:** `Main/Include/human.h`, `Main/Include/bodypart.h`, `Main/Include/ivandef.h` (added `WRAITHSTALKER_LEVEL`, `DUAL_WRAITHSTALKER_LEVEL`), `Main/Source/human.cpp`, `Main/Source/bodypart.cpp`, `Script/char.dat`, `Script/item.dat`, `Script/dungeons/GloomyCaves.dat`, `Script/dungeons/XinrochTomb.dat`
+
+#### Task 8.2: [x] Rename `vladimir`→`shadowpaw` character class
+`Shadowpaw.png` was generated in Phase 6 but the C++ class `vladimir` and `DefaultName = "Vladimir"` were never updated. Fixed in commit `6e81453`. Also fixed one missed `ennerbeast::Spawn()` in `game.cpp`.
+
+**Files changed:** `Main/Include/nonhuman.h`, `Main/Source/nonhuman.cpp`, `Main/Source/game.cpp`, `Script/char.dat`, `Script/dungeons/GloomyCaves.dat`, `Script/dungeon.dat`
+
+#### Task 8.3: [x] Remove orphaned `Enner.png` and `IVlad.png`
+These files were superseded by `Wraithstalker.png` and `Shadowpaw.png` but never deleted. Removed in commit `4261a25`.
+
+---
+
 ## Summary of Remaining Work
 
-| Phase | Tasks | Files Changed | Effort |
-|---|---|---|---|
-| **Pre-flight** | Backup tag + compile check | — | 10 min |
-| **0** | Infrastructure + validator prep | `tools/asset_gen/`, `definesvalidator.h` | 2–4 hrs |
-| **1** | Script .dat files (4 tasks) | material.dat, item.dat, char.dat, 3 dungeon files | Medium-Heavy |
-| **2** | C++ source + headers (15 tasks, paired) | 14 .cpp + 9 .h files | Heavy |
-| **3** | Lore documents (21 tasks) | 13 TXT + 2 RTF + 6 media renames | Medium |
-| **4** | Documentation (2 tasks) | MANUAL, NEWS | Light |
-| **5** | Sound effects (3 tasks) | Sound/*.wav, SoundEffects.cfg | Medium |
-| **6** | Graphics (7 tasks) | ~20 Graphics/*.png | Heavy (GPU time) |
-| **7** | Validation + testing (4 tasks) | — | Medium |
-| **TOTAL** | ~57 discrete tasks | ~50 files | ~2–3 weeks |
+All 60 tasks complete. Zero old references remain in active source/data files.
+Compile: PASS. Balance validation: PASS.
