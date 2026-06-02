@@ -309,15 +309,12 @@ int iosystem::Menu(std::vector<bitmap*> vBackGround, v2 Pos,
       k = GET_KEY(false);
     }
 
-    // Phase 4.1: Gamepad navigation support for menus
-    // D-pad / left stick movement (mapped to KEY_UP/KEY_DOWN + 0xE000)
-    if(k >= KEY_UP && k <= GAMEPAD_DPAD_DOWN) {
+    if(k == KEY_UP || k == GAMEPAD_DPAD_UP) {
       if(iSelected > 0)
         --iSelected;
       else
         iSelected = (CountChars('\r', sMS)-1);
     }
-    // Gamepad down direction only (filter out LEFT/RIGHT from the DOWN range)
     else if(k == KEY_DOWN || k == GAMEPAD_DPAD_DOWN) {
       if(iSelected < (CountChars('\r', sMS)-1))
         ++iSelected;
