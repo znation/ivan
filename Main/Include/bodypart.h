@@ -599,7 +599,7 @@ ITEM(largecorpse, corpse)
   virtual void ModifyAnimationFrames(int& AF) const { AF <<= 2; }
 };
 
-ITEM(ennerhead, head)
+ITEM(wraithstalkerskull, head)
 {
  protected:
   virtual int GetClassAnimationFrames() const { return 32; }

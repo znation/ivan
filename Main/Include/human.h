@@ -320,7 +320,7 @@ CHARACTER(darkknight, humanoid)
   virtual void SpecialBodyPartSeverReaction();
 };
 
-CHARACTER(ennerbeast, humanoid)
+CHARACTER(wraithstalker, humanoid)
 {
  public:
   virtual truth Hit(character*, v2, int, int = 0);
@@ -331,7 +331,7 @@ CHARACTER(ennerbeast, humanoid)
   virtual truth AttackIsBlockable(int) const { return false; }
 };
 
-CHARACTER(ennerchild, humanoid)
+CHARACTER(wraithstalkerchild, humanoid)
 {
  public:
   virtual truth Hit(character*, v2, int, int = 0);

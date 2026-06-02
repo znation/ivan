@@ -1332,7 +1332,7 @@ Dungeon CRYPT_OF_KHAZ_ZADM;
   {
     FillSquare = BONE solidterrain(GROUND), OBSIDIAN earth;
     TunnelSquare = BONE solidterrain(GROUND), 0;
-    LevelMessage = "You hear some high, wailing screams in the distance. Enner children must dwell in the level!";
+    LevelMessage = "You hear some high, wailing screams in the distance. Wraithstalker spawn must dwell in the level!";
 
     RoomDefault
     {
@@ -1345,12 +1345,12 @@ Dungeon CRYPT_OF_KHAZ_ZADM;
 
     Square, Random NOT_IN_ROOM;
     {
-      Character = ennerchild(BOY);
+      Character = wraithstalkerchild(BOY);
     }
 
     Square, Random NOT_IN_ROOM;
     {
-      Character = ennerchild(GIRL);
+      Character = wraithstalkerchild(GIRL);
     }
 
     Square, BoundedRandom 7*XSize/8, 1, XSize-2, YSize-2, NOT_WALKABLE|ATTACHABLE;
@@ -1406,7 +1406,7 @@ Dungeon CRYPT_OF_KHAZ_ZADM;
           A = GREEN_CRYSTAL altar(INFUSCOR);
           S = STEEL sign { Text = "Mutant bear - Experimental result: Particularly dangerous!"; }
           s = STEEL sign { Text = "Skeleton warrior - Experimental result: Typical."; }
-          z = STEEL sign { Text = "Enner children - Experimental status: On hiatus; specimens have escaped!"; }
+          z = STEEL sign { Text = "Wraithstalker spawn - Experimental status: On hiatus; specimens have escaped!"; }
           Z = STEEL sign { Text = "Cave bear - Experimental status: Next candidate for mutation trials."; }
           P = GREEN_CRYSTAL monsterportal;
         }

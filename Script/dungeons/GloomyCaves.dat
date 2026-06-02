@@ -362,7 +362,7 @@ Dungeon ELPURI_CAVE;
 
   Level ENNER_BEAST_LEVEL;
   {
-    LevelMessage = "You hear a wailing scream in the distance. An enner beast must dwell in the level!";
+    LevelMessage = "You hear a wailing scream in the distance. A wraithstalker must dwell in the level!";
     IgnoreDefaultSpecialSquares = true;
     Items = 35:70;
     EnterImage = "Wraithstalker.png";
@@ -385,7 +385,7 @@ Dungeon ELPURI_CAVE;
 
       Square, Pos 4, 16;
       {
-        Character = ennerbeast;
+        Character = wraithstalker;
       }
 
       Square, Pos -1, 22;

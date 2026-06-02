@@ -73,7 +73,7 @@ petrus::~petrus()
   game::SetArchpriest(0);
 }
 
-truth ennerbeast::Hit(character* Enemy, v2, int, int)
+truth wraithstalker::Hit(character* Enemy, v2, int, int)
 {
   if(CheckIfTooScaredToHit(Enemy))
     return false;
@@ -119,7 +119,7 @@ truth ennerbeast::Hit(character* Enemy, v2, int, int)
   return true;
 }
 
-truth ennerchild::Hit(character* Enemy, v2, int, int)
+truth wraithstalkerchild::Hit(character* Enemy, v2, int, int)
 {
   if(CheckIfTooScaredToHit(Enemy))
     return false;
@@ -132,7 +132,7 @@ truth ennerchild::Hit(character* Enemy, v2, int, int)
   rect Rect;
   femath::CalculateEnvironmentRectangle(Rect, GetLevel()->GetBorder(), GetPos(), 30);
 
-  // Enner girl is older
+  // Wraithstalker girl is older
   int BaseScreamStrength = 50;
 
   if(GetConfig() == BOY)
@@ -171,7 +171,7 @@ truth ennerchild::Hit(character* Enemy, v2, int, int)
   return true;
 }
 
-truth ennerchild::ReceiveDamage(character* Damager, int Damage, int Type, int TargetFlags, int Direction,
+truth wraithstalkerchild::ReceiveDamage(character* Damager, int Damage, int Type, int TargetFlags, int Direction,
                               truth Divide, truth PenetrateArmor, truth Critical, truth ShowMsg)
 {
   truth Success = false;
@@ -250,7 +250,7 @@ truth golem::MoveRandomly()
     return character::MoveRandomly();
 }
 
-void ennerbeast::GetAICommand()
+void wraithstalker::GetAICommand()
 {
   SeekLeader(GetLeader());
 
@@ -269,7 +269,7 @@ void ennerbeast::GetAICommand()
   EditAP(-1000);
 }
 
-void ennerchild::GetAICommand()
+void wraithstalkerchild::GetAICommand()
 {
   SeekLeader(GetLeader());
 
@@ -1392,7 +1392,7 @@ void librarian::BeTalkedTo()
                 "They shall make thee famous after thy retirement.\"");
     break;
    case 8:
-    ADD_MESSAGE("\"If thou wilt ever encounter an enner beast, know this: It is a horrible foe. "
+    ADD_MESSAGE("\"If thou wilt ever encounter a wraithstalker, know this: It is a horrible foe. "
                 "It may shatter thy items and armor with its scream that penetrates iron and stone. "
                 "Thou shouldst not engage it in melee but rather kill it from afar.\"");
     break;
@@ -4535,20 +4535,20 @@ void humanoid::SetFireToBodyPart() { }
 
 #endif
 
-truth ennerbeast::MustBeRemovedFromBone() const
+truth wraithstalker::MustBeRemovedFromBone() const
 {
   return !IsEnabled()
     || GetTeam()->GetID() != MONSTER_TEAM
     || GetDungeon()->GetIndex() != ELPURI_CAVE
-    || GetLevel()->GetIndex() != ENNER_BEAST_LEVEL;
+    || GetLevel()->GetIndex() != WRAITHSTALKER_LEVEL;
 }
 
-truth ennerchild::MustBeRemovedFromBone() const
+truth wraithstalkerchild::MustBeRemovedFromBone() const
 {
   return !IsEnabled()
     || GetTeam()->GetID() != MONSTER_TEAM
     || GetDungeon()->GetIndex() != CRYPT_OF_KHAZ_ZADM
-    || GetLevel()->GetIndex() != DUAL_ENNER_BEAST_LEVEL;
+    || GetLevel()->GetIndex() != DUAL_WRAITHSTALKER_LEVEL;
 }
 
 truth child::MustBeRemovedFromBone() const
@@ -4859,18 +4859,18 @@ truth guard::MoveTowardsHomePos()
     return humanoid::MoveTowardsHomePos();
 }
 
-bodypart* ennerbeast::MakeBodyPart(int I) const
+bodypart* wraithstalker::MakeBodyPart(int I) const
 {
   if(I == HEAD_INDEX)
-    return ennerhead::Spawn(0, NO_MATERIALS);
+    return wraithstalkerskull::Spawn(0, NO_MATERIALS);
   else
     return humanoid::MakeBodyPart(I);
 }
 
-bodypart* ennerchild::MakeBodyPart(int I) const
+bodypart* wraithstalkerchild::MakeBodyPart(int I) const
 {
   if(I == HEAD_INDEX)
-    return ennerhead::Spawn(0, NO_MATERIALS);
+    return wraithstalkerskull::Spawn(0, NO_MATERIALS);
   else
     return humanoid::MakeBodyPart(I);
 }

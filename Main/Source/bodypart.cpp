@@ -70,7 +70,7 @@ head* corpse::Behead() { return Deceased->Behead(); }
 truth corpse::CanBeCloned() const { return GetDeceased()->CanBeCloned(); }
 int corpse::GetAttachedGod() const { return GetDeceased()->GetTorso()->GetAttachedGod(); }
 
-v2 ennerhead::GetBitmapPos(int Frame) const
+v2 wraithstalkerskull::GetBitmapPos(int Frame) const
 { return Frame & 16 ? head::GetBitmapPos(Frame) : head::GetBitmapPos(Frame) + v2(16, 0); }
 
 alpha blinkdogtorso::GetAlphaA(int Frame) const { return (Frame & 31) != 31 ? 255 : 0; }
