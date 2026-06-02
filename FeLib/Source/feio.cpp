@@ -249,11 +249,11 @@ int iosystem::Menu(std::vector<bitmap*> vBackGround, v2 Pos,
       Buffer.Fill(XPos, YPos, ((VeryUnGuruPrintf.GetSize() + 3) << 3), 9, 0);
 
       if(i == iSelected)
-        FONT->PrintfUnshaded(&Buffer, v2(XPos + 1, YPos + 1), WHITE,
-                             "%d. %s", i + 1, VeryUnGuruPrintf.CStr());
+        FONT->Printf(&Buffer, v2(XPos, YPos), WHITE,
+                     "%d. %s", i + 1, VeryUnGuruPrintf.CStr());
       else
-        FONT->Printf(&Buffer, v2(XPos, YPos), Color, "%d. %s",
-                     i + 1, VeryUnGuruPrintf.CStr());
+        FONT->PrintfUnshaded(&Buffer, v2(XPos, YPos), Color,
+                             "%d. %s", i + 1, VeryUnGuruPrintf.CStr());
 
     }
 

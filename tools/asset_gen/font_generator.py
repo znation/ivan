@@ -8,7 +8,11 @@ Format requirements (from FeLib/Source/rawbit.cpp):
   - Each glyph occupies an 8x8 pixel cell
   - Palette inversion: game index N -> PNG palette[255-N], PNG pixel value = 255-N
   - TRANSPARENT_PALETTE_INDEX = 191 -> must map to RGB(255,0,255) = TRANSPARENT_COLOR 0xF81F
-  - Indices 192-255 are material-color range; do not use for font glyphs
+  - Font.png glyphs use material color index 207 (group 0, shade 15 = full brightness).
+    This lets Printf's shadow pass use ShadeCol (dark) and the main pass use Color
+    (caller-supplied), giving a proper drop shadow instead of a same-colored ghost.
+  - Font2/Font3 use regular palette index 0 with fixed colors — they are alternate
+    font choices where the color is baked in.
 
 Glyph source: PSF1 Linux console fonts (8×8 pixel-perfect bitmaps).
 TrueType fonts are unsuitable because 8px cells have too few pixels to represent
@@ -34,10 +38,13 @@ PSF_CANDIDATES = [
     '/usr/share/consolefonts/Lat38-VGA8.psf.gz',
 ]
 
+# (filename, fixed_color_or_None, glyph_game_index)
+# Font.png uses material index 207 so Printf's shadow/color passes work correctly.
+# Font2/Font3 bake in a fixed color via regular palette index 0.
 VARIANTS = [
-    ('Font.png',  (0xE8, 0xD5, 0xA3)),  # warm parchment — aged-manuscript
-    ('Font2.png', (0xD4, 0xA0, 0x20)),  # burnished gold  — elvish/regal
-    ('Font3.png', (0x8C, 0xA8, 0xC8)),  # cold silver-blue — mystic/grey pilgrim
+    ('Font.png',  None,                 207),  # material color — caller controls tint
+    ('Font2.png', (0xD4, 0xA0, 0x20),    0),  # burnished gold  — elvish/regal
+    ('Font3.png', (0x8C, 0xA8, 0xC8),    0),  # cold silver-blue — mystic/grey pilgrim
 ]
 
 
@@ -72,7 +79,8 @@ def load_psf_glyphs(path):
 
 def build_game_palette(glyph_color):
     palette = [(0, 0, 0)] * 256
-    palette[0] = glyph_color
+    if glyph_color is not None:
+        palette[0] = glyph_color  # regular-color fonts bake glyph color here
     palette[TRANSPARENT_IDX] = TRANSPARENT_RGB
     return palette
 
@@ -96,7 +104,7 @@ def find_psf():
     )
 
 
-def generate_font(glyph_color, output_path):
+def generate_font(glyph_color, glyph_game_index, output_path):
     glyphs = load_psf_glyphs(find_psf())
 
     # Canvas in game-space indices; start fully transparent
@@ -117,7 +125,7 @@ def generate_font(glyph_color, output_path):
         for y in range(CELL_H):
             for x in range(CELL_W):
                 if glyph[y, x]:
-                    canvas[cell_y + y, cell_x + x] = 0  # full glyph color
+                    canvas[cell_y + y, cell_x + x] = glyph_game_index
 
     game_palette = build_game_palette(glyph_color)
     png_palette = game_to_png_palette(game_palette)
@@ -138,10 +146,10 @@ def main():
     graphics_dir = os.path.join(repo_root, 'Graphics')
     share_dir = os.path.join(repo_root, 'share', 'ivan', 'Graphics')
 
-    for filename, color in VARIANTS:
+    for filename, color, glyph_idx in VARIANTS:
         print(f"\nGenerating {filename} ...")
         out = os.path.join(graphics_dir, filename)
-        generate_font(color, out)
+        generate_font(color, glyph_idx, out)
         if os.path.isdir(share_dir):
             dest = os.path.join(share_dir, filename)
             if not os.path.samefile(out, dest):
