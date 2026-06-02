@@ -4949,7 +4949,7 @@ leftleg /* bodypart->leg-> */
   NameSingular = "left leg";
 }
 
-headofelpuri /* cannot wear helmet etc, so NOT head-> */
+heartofmalgorath /* cannot wear helmet etc, so NOT head-> */
 {
   Possibility = 0;
   CanBeWished = false;
@@ -4960,10 +4960,10 @@ headofelpuri /* cannot wear helmet etc, so NOT head-> */
   FormModifier = 15;
   BitmapPos = 16, 0;
   DefaultMainVolume = 25000;
-  NameSingular = "head";
+  NameSingular = "heart";
   PostFix = "of Malgorath";
   ArticleMode = FORCE_THE;
-  MainMaterialConfig == ELPURI_FLESH;
+  MainMaterialConfig == MALGORATH_FLESH;
   IsPolymorphable = false;
   IsPolymorphSpawnable = false;
   Roundness = 80;

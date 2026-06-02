@@ -375,10 +375,10 @@ CHARACTER(largecreature, nonhumanoid)
   virtual void LoadSquaresUnder();
 };
 
-CHARACTER(elpuri, largecreature)
+CHARACTER(malgorath, largecreature)
 {
  public:
-  elpuri() : Active(false) { }
+  malgorath() : Active(false) { }
   virtual void Save(outputfile&) const;
   virtual void Load(inputfile&);
   virtual truth Hit(character*, v2, int, int = 0);

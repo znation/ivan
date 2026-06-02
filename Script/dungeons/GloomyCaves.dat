@@ -920,7 +920,7 @@ Dungeon ELPURI_CAVE;
       Square, Pos 5, 5;
       {
         OTerrain = portal(DARK_LEVEL) { AttachedArea = DARK_LEVEL + 1; AttachedEntry = STAIRS_UP; }
-        Character = elpuri;
+        Character = malgorath;
       }
 
       Square, Random;

@@ -401,7 +401,7 @@ ITEM(key, item)
   virtual void Break(character*, int = YOURSELF);
 };
 
-ITEM(headofelpuri, item) // can't wear equipment, so not "head"
+ITEM(heartofmalgorath, item) // can't wear equipment, so not "head"
 {
  public:
   virtual truth IsHeartOfMalgorath() const { return true; }

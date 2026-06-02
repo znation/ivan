@@ -61,7 +61,7 @@ OWTERRAIN(attnam, owterrain)
 {
 };
 
-OWTERRAIN(elpuricave, owterrain)
+OWTERRAIN(malgorathcave, owterrain)
 {
 };
 

@@ -1111,7 +1111,7 @@ void game::Run()
           else if(!RAND_N(5))
           Char = magpie::Spawn();
           else if(!RAND_N(5))
-          Char = elpuri::Spawn();
+          Char = malgorath::Spawn();
           else if(!RAND_N(5))
           Char = shadowpaw::Spawn();
           else if(!RAND_N(5))

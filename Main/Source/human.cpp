@@ -798,7 +798,7 @@ void petrus::BeTalkedTo()
 
     game::LoadWorldMap();
     v2 MalgorathCavePos = game::GetWorldMap()->GetEntryPos(0, ELPURI_CAVE);
-    game::GetWorldMap()->GetWSquare(MalgorathCavePos)->ChangeOWTerrain(elpuricave::Spawn());
+    game::GetWorldMap()->GetWSquare(MalgorathCavePos)->ChangeOWTerrain(malgorathcave::Spawn());
     game::GetWorldMap()->RevealEnvironment(MalgorathCavePos, 1);
     game::SaveWorldMap();
     GetArea()->SendNewDrawRequest();

@@ -21,7 +21,7 @@ int nonhumanoid::GetBiteMaxDamage() const { return int(BiteDamage * 1.25 + 1); }
 int nonhumanoid::GetCarryingStrength() const { return (Max(GetAttribute(LEG_STRENGTH), 1) << 1) + CarryingBonus; }
 truth nonhumanoid::UseMaterialAttributes() const { return GetTorso()->UseMaterialAttributes(); }
 
-truth elpuri::SpecialEnemySightedReaction(character*) { return !(Active = true); }
+truth malgorath::SpecialEnemySightedReaction(character*) { return !(Active = true); }
 
 cchar* billswill::FirstPersonBiteVerb() const { return "emit psi waves at"; }
 cchar* billswill::FirstPersonCriticalBiteVerb() const { return "emit powerful psi waves at"; }
@@ -80,7 +80,7 @@ bodypart* mysticfrog::MakeBodyPart(int) const { return mysticfrogtorso::Spawn(0,
 
 bodypart* lobhse::MakeBodyPart(int) const { return lobhsetorso::Spawn(0, NO_MATERIALS); }
 
-truth elpuri::Hit(character* Enemy, v2, int, int Flags)
+truth malgorath::Hit(character* Enemy, v2, int, int Flags)
 {
   if(CheckIfTooScaredToHit(Enemy))
     return false;
@@ -811,19 +811,19 @@ truth ostrich::HandleCharacterBlockingTheWay(character* Char, v2 Pos, int Dir)
   return Char->GetPos() == v2(45, 45) && (Displace(Char, true) || Hit(Char, Pos, Dir));
 }
 
-void elpuri::Save(outputfile& SaveFile) const
+void malgorath::Save(outputfile& SaveFile) const
 {
   largecreature::Save(SaveFile);
   SaveFile << Active;
 }
 
-void elpuri::Load(inputfile& SaveFile)
+void malgorath::Load(inputfile& SaveFile)
 {
   largecreature::Load(SaveFile);
   SaveFile >> Active;
 }
 
-void elpuri::GetAICommand()
+void malgorath::GetAICommand()
 {
   if(Active)
     character::GetAICommand();
@@ -836,7 +836,7 @@ void elpuri::GetAICommand()
   }
 }
 
-int elpuri::ReceiveBodyPartDamage(character* Damager, int Damage, int Type, int BodyPartIndex,
+int malgorath::ReceiveBodyPartDamage(character* Damager, int Damage, int Type, int BodyPartIndex,
                                   int Direction, truth PenetrateResistance, truth Critical,
                                   truth ShowNoDamageMsg, truth CaptureBodyPart)
 {
@@ -953,10 +953,10 @@ int floatingeye::TakeHit(character* Enemy, item* Weapon, bodypart* EnemyBodyPart
                                 Success, Type, Direction, Critical, ForceHit);
 }
 
-void elpuri::CreateCorpse(lsquare* Square)
+void malgorath::CreateCorpse(lsquare* Square)
 {
   largecreature::CreateCorpse(Square);
-  Square->AddItem(headofelpuri::Spawn());
+  Square->AddItem(heartofmalgorath::Spawn());
 }
 
 truth snake::SpecialBiteEffect(character* Char, v2, int, int, truth BlockedByArmour, truth Critical, int DoneDamage)
@@ -1468,7 +1468,7 @@ void skunk::GetAICommand()
   nonhumanoid::GetAICommand();
 }
 
-truth elpuri::TryToRiseFromTheDead()
+truth malgorath::TryToRiseFromTheDead()
 {
   character::TryToRiseFromTheDead();
 
@@ -1563,7 +1563,7 @@ void nonhumanoid::AddAttackInfo(felist&) const { }
 
 #endif
 
-truth elpuri::MustBeRemovedFromBone() const
+truth malgorath::MustBeRemovedFromBone() const
 {
   return !IsEnabled()
          || GetTeam()->GetID() != MONSTER_TEAM
