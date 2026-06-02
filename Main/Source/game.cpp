@@ -1099,7 +1099,7 @@ void game::Run()
           else if(!RAND_N(5))
           Char = skunk::Spawn();
           else if(!RAND_N(5))
-          Char = ennerbeast::Spawn();
+          Char = wraithstalker::Spawn();
           else if(!RAND_N(5))
           Char = werewolfhuman::Spawn();
           else if(!RAND_N(5))
