@@ -4565,7 +4565,7 @@ truth child::MustBeRemovedFromBone() const
 truth communist::MustBeRemovedFromBone() const
 {
   return !IsEnabled()
-    || GetTeam()->GetID() != IVAN_TEAM
+    || GetTeam()->GetID() != COMMUNIST_TEAM
     || GetDungeon()->GetIndex() != ELPURI_CAVE
     || GetLevel()->GetIndex() != IVAN_LEVEL;
 }

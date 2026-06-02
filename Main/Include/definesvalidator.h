@@ -5032,12 +5032,12 @@ class definesvalidator{
 #endif 
 
   
-#ifdef IVAN_TEAM // DO NOT MODIFY!
+#ifdef COMMUNIST_TEAM // DO NOT MODIFY!
   bsA = 6;
-  bsB = IVAN_TEAM;
+  bsB = COMMUNIST_TEAM;
   if(bsA!=bsB)
-    ssErrors << "Defined IVAN_TEAM with value 6 from .dat file mismatches hardcoded c++ define value of " << IVAN_TEAM << "!" << std::endl;
-#endif 
+    ssErrors << "Defined COMMUNIST_TEAM with value 6 from .dat file mismatches hardcoded c++ define value of " << COMMUNIST_TEAM << "!" << std::endl;
+#endif
 
   
 #ifdef JACINTH // DO NOT MODIFY!

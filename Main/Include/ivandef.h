@@ -517,7 +517,7 @@ cv2 SILHOUETTE_SIZE(48, 64); // it is TILE_SIZE*3,TILE_SIZE*4 tho..
 #define SUMO_TEAM 3
 #define ANGEL_TEAM 4
 #define GUILD_TEAM 5
-#define IVAN_TEAM 6
+#define COMMUNIST_TEAM 6
 #define OAKHAVEN_TEAM 7
 #define COLONIST_TEAM 8
 #define TOURIST_GUIDE_TEAM 9

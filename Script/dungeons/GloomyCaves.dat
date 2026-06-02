@@ -797,12 +797,12 @@ Dungeon ELPURI_CAVE;
 
     Square, Random NOT_IN_ROOM;
     {
-      Character = communist { Team = IVAN_TEAM; Flags = IS_LEADER; }
+      Character = communist { Team = COMMUNIST_TEAM; Flags = IS_LEADER; }
     }
 
     Square, Random;
     {
-      Character = vladimir { Team = IVAN_TEAM; }
+      Character = vladimir { Team = COMMUNIST_TEAM; }
     }
 
     Square, Random IN_ROOM|HAS_NO_OTERRAIN;
