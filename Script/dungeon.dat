@@ -31,7 +31,7 @@ Teams = 19;
  *  3 == SUMO_TEAM == Huang Ming Pong during an arena fight.
  *  4 == ANGEL_TEAM == Spawned hostile angels.
  *  5 == GUILD_TEAM == Dungeon shopkeepers.
- *  6 == COMMUNIST_TEAM == Ivan and Vladimir.
+ *  6 == COMMUNIST_TEAM == Ivan and Shadowpaw.
  *  7 == OAKHAVEN_TEAM == Natives of Oakhaven.
  *  8 == COLONIST_TEAM == Colonists of Oakhaven.
  *  9 == TOURIST_GUIDE_TEAM == Dummy team which holds the village elder, whom the tourists follow.

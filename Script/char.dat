@@ -3713,7 +3713,7 @@ communist /* Ivan */
     "\"Vodka strong, meat rotten.\"",
     "\"@Nu gone through space-time portal. @Nu searches for stolen family treasure - exact replica of Lenin's mummy!\"",
     "\"You can always find party in Lunethia. But in Soviet Russia, Party can always find you!\"",
-    "\"Vladimir @nu best buddy. @Nu meet Vladimir first in magic test area near Voktsovadil.\"",
+    "\"Shadowpaw @nu best friend. @Nu meet Shadowpaw first in magic test area near Voktsovadil.\"",
     "\"Lenin want @nu kill capitalists!\"";
   }
   AttachedGod = LORICATUS;
@@ -8363,7 +8363,7 @@ bunny
   }
 }
 
-vladimir
+shadowpaw
 {
   DefaultArmStrength = 60;
   DefaultAgility = 30;
@@ -8390,8 +8390,8 @@ vladimir
   TotalSize = 400;
   MoveType = WALK;
   DestroysWalls = true;
-  DefaultName = "Vladimir";
-  Alias == "Vladimir";
+  DefaultName = "Shadowpaw";
+  Alias == "Shadowpaw";
   TotalVolume = 800000;
   IsUnique = true;
   CanApply = true;
@@ -9761,7 +9761,7 @@ bum
     "\"As a little boy, I saw my father get into a fight with other farmers. You wouldn't believe how easily a sickle chops off limbs.\"",
     "\"I miss my cloak. The cold is not so bad, but I felt safer with it wrapped around my body.\"",
     "\"Me and my father once got cornered by a pack of wolves when I was young. He took off his belt and chased them off. Belts really can pack a whip, har har har.\"",
-    "\"I met this Ivan when he was in Valpuris a few weeks back. He had a cute pet bunny, Vladimir!\"",
+    "\"I met this Ivan when he was in Valpuris a few weeks back. He had a peculiar beast companion, Shadowpaw!\"",
     "\"I met this Ivan when he was in Valpuris a few weeks back. He seemed a cool guy, but quite reclusive. Maybe I was not cool enough for him to want to hang out? Har har har.\"",
     "\"Yes, I've met some orcs in my days, both khanites and from the freeholds. Did you know they can all see in the dark as well as a cat? They can't read, though, but who needs that, right? Har har har.\"",
     "\"Yes, I've met some orcs in my days, both khanites and from the freeholds. Did you know they can't smell at all? I once saw an orc standing in a cloud of mustard gas like it was nothing!\"",

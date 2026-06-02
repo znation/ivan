@@ -802,7 +802,7 @@ Dungeon ELPURI_CAVE;
 
     Square, Random;
     {
-      Character = vladimir { Team = COMMUNIST_TEAM; }
+      Character = shadowpaw { Team = COMMUNIST_TEAM; }
     }
 
     Square, Random IN_ROOM|HAS_NO_OTERRAIN;

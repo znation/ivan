@@ -425,7 +425,7 @@ CHARACTER(bunny, nonhumanoid)
   virtual void GetAICommand();
 };
 
-CHARACTER(vladimir, largecreature)
+CHARACTER(shadowpaw, largecreature)
 {
  public:
   virtual truth MustBeRemovedFromBone() const;

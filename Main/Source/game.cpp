@@ -1113,7 +1113,7 @@ void game::Run()
           else if(!RAND_N(5))
           Char = elpuri::Spawn();
           else if(!RAND_N(5))
-          Char = vladimir::Spawn();
+          Char = shadowpaw::Spawn();
           else if(!RAND_N(5))
           Char = billswill::Spawn();
           else if(!RAND_N(5))

@@ -68,7 +68,7 @@ int hattifattener::GetSpecialBodyPartFlags(int) const { return ST_LIGHTNING; }
 int hattifattener::GetBodyPartWobbleData(int) const
 { return WOBBLE_HORIZONTALLY|(1 << WOBBLE_SPEED_SHIFT)|(1 << WOBBLE_FREQ_SHIFT); }
 
-col16 vladimir::GetSkinColor() const { return MakeRGB16(60 + RAND() % 190, 60 + RAND() % 190, 60 + RAND() % 190); }
+col16 shadowpaw::GetSkinColor() const { return MakeRGB16(60 + RAND() % 190, 60 + RAND() % 190, 60 + RAND() % 190); }
 
 col16 fusanga::GetSkinColor() const { return MakeRGB16(60 + RAND() % 190, 60 + RAND() % 190, 60 + RAND() % 190); }
 
@@ -1713,7 +1713,7 @@ void largecreature::LoadSquaresUnder()
                                                                    + game::GetLargeMoveVector(12 + c));
 }
 
-truth vladimir::MustBeRemovedFromBone() const
+truth shadowpaw::MustBeRemovedFromBone() const
 {
   return !IsEnabled()
          || GetTeam()->GetID() != COMMUNIST_TEAM
