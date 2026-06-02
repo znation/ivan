@@ -264,8 +264,9 @@ def _process_smiley(pipe, targets, rgba_img, orig_palette, sheet_file):
 
 
 def _regenerate_outlined(sheet):
-    """Run outline_util.py to regenerate the -outlined variant."""
+    """Run outline_util.py to regenerate the -outlined variant, then convert to P mode."""
     import subprocess
+    from PIL import Image
     outline_script = Path(__file__).parent / "outline_util.py"
     input_file = GRAPHICS_DIR / SHEET_FILES[sheet]
     output_file = GRAPHICS_DIR / SHEET_FILES[sheet].replace(".png", "-outlined.png")
@@ -278,8 +279,13 @@ def _regenerate_outlined(sheet):
     )
     if result.returncode != 0:
         print(f"  outline_util.py error: {result.stderr[:200]}")
-    else:
-        print(f"  Done: {output_file.name}")
+        return
+    # outline_util.py outputs RGBA; convert to indexed P mode to match IVAN's requirement
+    rgba = Image.open(output_file).convert("RGBA")
+    orig = Image.open(input_file)
+    orig_palette = get_original_palette(orig)
+    save_as_indexed(rgba, orig_palette, output_file)
+    print(f"  Done (P mode): {output_file.name}")
 
 
 ALL_SHEETS_ORDERED = [
