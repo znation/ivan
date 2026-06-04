@@ -1,6 +1,6 @@
 /*
  *
- *  Iter Vehemens ad Necem (IVAN)
+ *  Violent Adventure to Lethal Ends (VALE)
  *  Copyright (C) Timo Kiviluoto
  *  Released under the GNU General
  *  Public License
@@ -962,7 +962,7 @@ truth commandsystem::ShowKeyLayout(character*)
    case DIR_NORM: // Normal
    {
      List.AddEntry(CONST_S("789       movement (normal)"), LIGHT_GRAY);
-     List.SetLastEntryHelp(festring() << "IVAN uses most of the keyboard for command key bindings, though some "
+     List.SetLastEntryHelp(festring() << "VALE uses most of the keyboard for command key bindings, though some "
                                       << "commands are only accessible in wizard mode. Note that the game "
                                       << "distinguishes between lowercase and uppercase letters, so if you are "
                                       << "experiencing troubles, first check whether you don't have active CapsLock.");
@@ -973,7 +973,7 @@ truth commandsystem::ShowKeyLayout(character*)
    case DIR_ALT: // Alternative
    {
      List.AddEntry(CONST_S("789       movement (alternative)"), LIGHT_GRAY);
-     List.SetLastEntryHelp(festring() << "IVAN uses most of the keyboard for command key bindings, though some "
+     List.SetLastEntryHelp(festring() << "VALE uses most of the keyboard for command key bindings, though some "
                                       << "commands are only accessible in wizard mode. Note that the game "
                                       << "distinguishes between lowercase and uppercase letters, so if you are "
                                       << "experiencing troubles, first check whether you don't have active CapsLock.");
@@ -984,7 +984,7 @@ truth commandsystem::ShowKeyLayout(character*)
    case DIR_HACK: // Nethack
    {
      List.AddEntry(CONST_S("yku       movement (NetHack)"), LIGHT_GRAY);
-     List.SetLastEntryHelp(festring() << "IVAN uses most of the keyboard for command key bindings, though some "
+     List.SetLastEntryHelp(festring() << "VALE uses most of the keyboard for command key bindings, though some "
                                       << "commands are only accessible in wizard mode. Note that the game "
                                       << "distinguishes between lowercase and uppercase letters, so if you are "
                                       << "experiencing troubles, first check whether you don't have active CapsLock.");

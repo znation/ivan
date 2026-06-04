@@ -1,6 +1,6 @@
 /*
  *
- *  Iter Vehemens ad Necem (IVAN)
+ *  Violent Adventure to Lethal Ends (VALE)
  *  Copyright (C) Timo Kiviluoto
  *  Released under the GNU General
  *  Public License
@@ -75,7 +75,7 @@ void highscore::Draw() const
 
   if(GetVersion() != HIGH_SCORE_VERSION)
   {
-    iosystem::TextScreen(CONST_S("The highscore file is for another version of IVAN."));
+    iosystem::TextScreen(CONST_S("The highscore file is for another version of VALE."));
     return;
   }
 
@@ -91,7 +91,7 @@ void highscore::Draw() const
     Desc.Resize(13, ' ');
     Desc << Entry[c];
     List.AddEntry(Desc, c == uint(LastAdd) ? WHITE : LIGHT_GRAY, 13);
-    List.SetLastEntryHelp(festring() << "The brave, foolish souls who ventured into the world of IVAN.");
+    List.SetLastEntryHelp(festring() << "The brave, foolish souls who ventured into the world of VALE.");
   }
 
   List.SetFlags(FADE);

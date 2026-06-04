@@ -1,6 +1,6 @@
 /*
  *
- *  Iter Vehemens ad Necem (IVAN)
+ *  Violent Adventure to Lethal Ends (VALE)
  *  Copyright (C) Timo Kiviluoto
  *  Released under the GNU General
  *  Public License
@@ -84,7 +84,7 @@ int main(int argc, char** argv)
 
   if(argc > 1 && festring(argv[1]) == "--version")
   {
-    std::cout << "Iter Vehemens ad Necem version " << IVAN_VERSION << std::endl;
+    std::cout << "Violent Adventure to Lethal Ends version " << IVAN_VERSION << std::endl;
     return 0;
   }
 
@@ -177,7 +177,7 @@ int main(int argc, char** argv)
                                 CONST_S("Released under the GNU\r"
                                         "General Public License\r"
                                         "More info: see COPYING\r"),
-                                CONST_S("IVAN v" IVAN_VERSION "\r"),
+                                CONST_S("VALE v" IVAN_VERSION "\r"),
                                 ivanconfig::GetExtraMenuGraphics());
 
     switch(Select)

@@ -1,6 +1,6 @@
 /*
  *
- *  Iter Vehemens ad Necem (IVAN)
+ *  Violent Adventure to Lethal Ends (VALE)
  *  Copyright (C) Timo Kiviluoto
  *  Released under the GNU General
  *  Public License
@@ -814,14 +814,14 @@ festring GetUserDataDir()
 #ifdef UNIX
   festring Dir;
 #ifdef MAC_APP
-  Dir << getenv("HOME") << "/Library/Application Support/IVAN/";
+  Dir << getenv("HOME") << "/Library/Application Support/VALE/";
 #else
   char *xdg_home = getenv("XDG_DATA_HOME"); // check if XDG_DATA_HOME is set
   if (xdg_home != NULL) { // if it is, use that directory
-          Dir << xdg_home << "/ivan/";
+          Dir << xdg_home << "/vale/";
   } else { // otherwise, default to home directory
           struct stat folderInfo = {0};
-          Dir << getenv("HOME") << "/.ivan/";
+          Dir << getenv("HOME") << "/.vale/";
           if(stat(Dir.CStr(), &folderInfo) == -1) mkdir(Dir.CStr(), 0755); //Check if user data folder doesn't exists, create it if true
   }
 #endif /* MAC_APP */
