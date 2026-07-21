@@ -165,15 +165,17 @@ def make_prompt(sheet, name, material, adjective="", extra=""):
 def parse_terrain_dat(filepath, sheet_name):
     """
     Parse a terrain .dat file (glterra.dat or olterra.dat) using proper Config block extraction.
+    Also scans top-level named blocks (door, stairs, altar, etc.) that aren't
+    Config blocks, matching the pattern parse_item_dat already uses.
     Returns registry dict keyed by "col,row".
     """
     text = strip_comments(Path(filepath).read_text())
     registry = {}
 
-    for config_name, block_content, preceding in extract_config_blocks(text):
+    def add_entry(config_name, block_content, preceding):
         bitmappos = extract_bitmap_pos(block_content)
         if not bitmappos:
-            continue
+            return
         px, py = bitmappos
         col, row = px // 16, py // 16
         key = f"{col},{row}"
@@ -211,6 +213,12 @@ def parse_terrain_dat(filepath, sheet_name):
         # Prefer first entry at a given position (keeps the most specific Config)
         if key not in registry:
             registry[key] = entry
+
+    for config_name, block_content, preceding in extract_config_blocks(text):
+        add_entry(config_name, block_content, preceding)
+
+    for block_name, block_content in extract_top_level_blocks(text):
+        add_entry(block_name, block_content, "")
 
     return registry
 
@@ -284,7 +292,7 @@ def parse_item_dat(filepath):
     final = {}
     for key, data in registry.items():
         names = data["names"][:3]
-        materials = list(data["materials"])[:2]
+        materials = data["materials"][:2]
         name_str = " / ".join(names) if names else "item"
         mat_str = materials[0] if materials else ""
         final[key] = {
@@ -318,11 +326,11 @@ def _accumulate_item(registry, bitmappos, block_content, preceding, block_name="
     material = extract_material(block_content)
 
     if key not in registry:
-        registry[key] = {"names": [], "materials": set(), "pixel_x": px, "pixel_y": py}
+        registry[key] = {"names": [], "materials": [], "pixel_x": px, "pixel_y": py}
     if display and display not in registry[key]["names"]:
         registry[key]["names"].append(display)
-    if material:
-        registry[key]["materials"].add(material)
+    if material and material not in registry[key]["materials"]:
+        registry[key]["materials"].append(material)
 
 
 # ─────────────────────────────────────────────
@@ -387,34 +395,34 @@ def parse_char_dat_humanoid(filepath):
     return final
 
 
-def parse_char_dat_nonhuman(filepath):
+def parse_char_torso(filepath):
     """
-    Parse char.dat for Char.png (non-humanoid) BitmapPos fields.
+    Parse char.dat for Char.png. Char.png is driven solely by TorsoBitmapPos
+    on normaltorso-type creatures (simple beasts whose entire visible sprite
+    is their "torso" — see normaltorso::GetGraphicsContainerIndex() in
+    bodypart.cpp, the only body part that renders to GR_CHARACTER instead of
+    GR_HUMANOID). Positions outside Char.png's 600x200 bounds belong to
+    humanoid creatures' torsos, which render to Humanoid.png instead (already
+    handled by parse_char_dat_humanoid).
     Returns registry for Char sheet, keyed by "col,row".
     """
     text = strip_comments(Path(filepath).read_text())
     registry = {}
 
-    for m in re.finditer(r"(?<![a-zA-Z])BitmapPos\s*=\s*(\d+)\s*,\s*(\d+)", text):
+    for m in re.finditer(r"(?<![A-Za-z])TorsoBitmapPos\s*=\s*(\d+)\s*,\s*(\d+)", text):
         px, py = int(m.group(1)), int(m.group(2))
-        # Char.png is 600x200; Humanoid is 192x700.
-        # Char entries: x < 600, y < 200; exclude humanoid body-part fields
-        if px >= 600 or py >= 200:
-            continue
-        # Skip if preceded by a body-part prefix keyword
-        before_short = text[max(0, m.start()-30):m.start()]
-        if re.search(r"(Leg|Torso|Arm|Head)BitmapPos\s*=\s*$", before_short):
+        if px + 16 > 600 or py + 16 > 200:
             continue
 
         col, row = px // 16, py // 16
         key = f"{col},{row}"
 
-        before = find_preceding_context(text, m.start(), 600)
+        before = text[:m.start()]
         chars = re.findall(r"\n([a-z_][a-z_0-9]*)\s*\n?\s*\{", before)
         char_name = chars[-1] if chars else ""
 
-        ns_m = re.search(r'NameSingular\s*=\s*"([^"]*)"', before[-300:])
-        adj_m = re.search(r'Adjective\s*=\s*"([^"]+)"', before[-300:])
+        ns_m = re.search(r'NameSingular\s*=\s*"([^"]*)"', before[-600:])
+        adj_m = re.search(r'Adjective\s*=\s*"([^"]+)"', before[-600:])
         name = ns_m.group(1) if ns_m else char_name.replace("_", " ")
         adj = adj_m.group(1) if adj_m else ""
         display = f"{adj} {name}".strip() if adj else name
@@ -433,6 +441,67 @@ def parse_char_dat_nonhuman(filepath):
             "pixel_x": data["pixel_x"],
             "pixel_y": data["pixel_y"],
             "prompt": make_prompt("Char", name_str, ""),
+        }
+    return final
+
+
+# Item.dat fields that render worn/wielded equipment overlays onto Humanoid.png
+# (see UpdateArmorPicture / UpdateWieldedPicture call sites in bodypart.cpp —
+# all of these target GR_HUMANOID, never GR_CHARACTER).
+CHAR_OVERLAY_FIELDS = {
+    "WieldedBitmapPos":         "wielded",
+    "HelmetBitmapPos":          "worn on head",
+    "TorsoArmorBitmapPos":      "worn on torso",
+    "AthleteArmArmorBitmapPos": "worn on torso",
+    "ArmArmorBitmapPos":        "worn on arm",
+    "LegArmorBitmapPos":        "worn on leg",
+    "BootBitmapPos":            "worn on foot",
+    "CloakBitmapPos":           "worn as cloak",
+    "BeltBitmapPos":            "worn as belt",
+    "GauntletBitmapPos":        "worn as gauntlet",
+}
+
+
+def parse_item_dat_char_overlays(filepath):
+    """
+    Parse item.dat for the worn/wielded equipment overlay BitmapPos fields
+    that render onto Humanoid.png. Returns registry keyed by "col,row".
+    """
+    text = strip_comments(Path(filepath).read_text())
+    registry = {}
+
+    def scan_block(block_content, block_name):
+        ns = extract_field_from_block(block_content, "NameSingular") or \
+             block_name.replace("_", " ")
+        adj = extract_field_from_block(block_content, "Adjective") or ""
+        display = f"{adj} {ns}".strip() if adj else ns
+
+        for field, label in CHAR_OVERLAY_FIELDS.items():
+            for m in re.finditer(rf"(?<![A-Za-z]){field}\s*=\s*(\d+)\s*,\s*(\d+)", block_content):
+                px, py = int(m.group(1)), int(m.group(2))
+                col, row = px // 16, py // 16
+                key = f"{col},{row}"
+                entry_str = f"{display} ({label})".strip()
+                if key not in registry:
+                    registry[key] = {"names": [], "pixel_x": px, "pixel_y": py}
+                if entry_str not in registry[key]["names"]:
+                    registry[key]["names"].append(entry_str)
+
+    for config_name, block_content, preceding in extract_config_blocks(text):
+        scan_block(block_content, config_name.lower())
+
+    for block_name, block_content in extract_top_level_blocks(text):
+        scan_block(block_content, block_name)
+
+    final = {}
+    for key, data in registry.items():
+        names = data["names"][:3]
+        name_str = " / ".join(names) if names else "equipment overlay"
+        final[key] = {
+            "name": name_str,
+            "pixel_x": data["pixel_x"],
+            "pixel_y": data["pixel_y"],
+            "prompt": make_prompt("Humanoid", name_str, ""),
         }
     return final
 
@@ -560,8 +629,9 @@ SHEET_BUILDERS = {
     "OLTerra":   lambda: parse_terrain_dat(SCRIPT_DIR / "olterra.dat", "OLTerra"),
     "WTerra":    lambda: parse_owterra(SCRIPT_DIR / "owterra.dat"),
     "Item":      lambda: parse_item_dat(SCRIPT_DIR / "item.dat"),
-    "Char":      lambda: parse_char_dat_nonhuman(SCRIPT_DIR / "char.dat"),
-    "Humanoid":  lambda: parse_char_dat_humanoid(SCRIPT_DIR / "char.dat"),
+    "Char":      lambda: parse_char_torso(SCRIPT_DIR / "char.dat"),
+    "Humanoid":  lambda: {**parse_item_dat_char_overlays(SCRIPT_DIR / "item.dat"),
+                          **parse_char_dat_humanoid(SCRIPT_DIR / "char.dat")},
     "Symbol":    build_symbol_registry,
     "Effect":    build_effect_registry,
     "Smiley":    build_smiley_registry,
