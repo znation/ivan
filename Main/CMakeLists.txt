@@ -26,17 +26,17 @@ set_source_files_properties(
     Source/cmdswapweap.cpp
     PROPERTIES HEADER_FILE_ONLY TRUE)
 
-add_executable(ivan ${IVAN_SOURCES} Resource/Ivan.rc)
-target_include_directories(ivan PUBLIC Include ../Felib/Include ../audio ../fantasyname ../FastNoise ${PCRE_INCLUDE_DIRS} ${SDL2_mixer_INCLUDE_DIR})
-target_link_libraries(ivan FeLib FeAudio xbrzscale fantasyname fastnoise ${PCRE_LIBRARIES} ${SDL2_mixer_LIBRARY})
+add_executable(vale ${IVAN_SOURCES} Resource/Vale.rc)
+target_include_directories(vale PUBLIC Include ../Felib/Include ../audio ../fantasyname ../FastNoise ${PCRE_INCLUDE_DIRS} ${SDL2_mixer_INCLUDE_DIR})
+target_link_libraries(vale FeLib FeAudio xbrzscale fantasyname fastnoise ${PCRE_LIBRARIES} ${SDL2_mixer_LIBRARY})
 
 if(MSVC AND _VCPKG_INSTALLED_DIR)
-  # Gum solution. Manually copy pcre.dll to where ivan.exe will end up.
-  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/pcre.dll" DESTINATION "ivan")
+  # Gum solution. Manually copy pcre.dll to where vale.exe will end up.
+  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/pcre.dll" DESTINATION "vale")
 endif()
 
 if(UNIX)
-    install(TARGETS ivan DESTINATION "${CMAKE_INSTALL_BINDIR}")
+    install(TARGETS vale DESTINATION "${CMAKE_INSTALL_BINDIR}")
 else()
-    install(TARGETS ivan DESTINATION "ivan")
+    install(TARGETS vale DESTINATION "vale")
 endif()

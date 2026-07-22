@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Developer Studio generated include file.
-// Used by Ivan.rc
+// Used by Vale.rc
 //
 #define IDI_ICON                        101
 

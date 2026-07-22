@@ -21,26 +21,26 @@ if(UNIX)
   include(GNUInstallDirs)
 
   if(BUILD_MAC_APP)
-    install(DIRECTORY Graphics Script Music Sound DESTINATION "ivan")
+    install(DIRECTORY Graphics Script Music Sound DESTINATION "vale")
     install(FILES COPYING INSTALL LICENSING NEWS MANUAL README.md DESTINATION "docs")
     add_definitions(-DMAC_APP)
   else()
-    install(DIRECTORY Graphics Script Music Sound DESTINATION "${CMAKE_INSTALL_DATADIR}/ivan")
+    install(DIRECTORY Graphics Script Music Sound DESTINATION "${CMAKE_INSTALL_DATADIR}/vale")
     add_definitions(-DDATADIR="${CMAKE_INSTALL_FULL_DATADIR}")
 
     message("\n*NOTICE*\n"
-            "    Highscore files and Bone files are now stored at \"\$HOME/.ivan\".\n"
+            "    Highscore files and Bone files are now stored at \"\$HOME/.vale\".\n"
             "    Your HOME directory is \"$ENV{HOME}\".\n")
-    if(IS_DIRECTORY "${CMAKE_INSTALL_FULL_LOCALSTATEDIR}/ivan")
+    if(IS_DIRECTORY "${CMAKE_INSTALL_FULL_LOCALSTATEDIR}/vale")
       message(WARNING
-              "If you have game data in \"${CMAKE_INSTALL_FULL_LOCALSTATEDIR}/ivan\","
-              " please move them to \"$ENV{HOME}/.ivan\".")
+              "If you have game data in \"${CMAKE_INSTALL_FULL_LOCALSTATEDIR}/vale\","
+              " please move them to \"$ENV{HOME}/.vale\".")
     endif()
   endif()
 
 elseif(WIN32)
-  install(DIRECTORY Graphics Script Music Sound DESTINATION "ivan")
-  install(FILES COPYING INSTALL LICENSING NEWS MANUAL README.md DESTINATION "ivan")
+  install(DIRECTORY Graphics Script Music Sound DESTINATION "vale")
+  install(FILES COPYING INSTALL LICENSING NEWS MANUAL README.md DESTINATION "vale")
   add_definitions(-DWIN32)
 
   if(MINGW)

@@ -19,7 +19,7 @@
 #include "festring.h"
 
 #ifdef UNIX
-#define HIGH_SCORE_FILENAME "ivan-highscore.scores"
+#define HIGH_SCORE_FILENAME "vale-highscore.scores"
 #endif
 
 #if defined(WIN32) || defined(__DJGPP__)

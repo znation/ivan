@@ -13,11 +13,11 @@ if [ -z "${IVAN_PLATFORM}" ]; then
 fi
 
 BUILD_DIR="${IVAN_BUILD_DIR}/${IVAN_PLATFORM}"
-FILENAME="IVAN-v${IVAN_FILE_VERSION:-000}-${IVAN_PLATFORM}"
+FILENAME="VALE-v${IVAN_FILE_VERSION:-000}-${IVAN_PLATFORM}"
 GAME_DIR="${BUILD_DIR}/${FILENAME}"
 ZIP_FILE="${BUILD_DIR}/${FILENAME}.zip"
 
-mv "${BUILD_DIR}/ivan" "${GAME_DIR}"
+mv "${BUILD_DIR}/vale" "${GAME_DIR}"
 
 # for a good-looking zipball
 cd "${GAME_DIR}/.."

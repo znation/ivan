@@ -7,13 +7,13 @@
 	<key>CFBundleExecutable</key>
 	<string>play</string>
 	<key>CFBundleIconFile</key>
-	<string>ivan.icns</string>
+	<string>vale.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.attnam.ivan</string>
+	<string>com.attnam.vale</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>IVAN</string>
+	<string>VALE</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>

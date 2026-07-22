@@ -35,7 +35,7 @@ if(NOT PNG_FOUND)
 endif()
 
 if(MINGW)
-  # Not very pretty solution. This finds SDL2.dll from SDL2.lib path, so that it can be installed where ivan.exe will end up.
+  # Not very pretty solution. This finds SDL2.dll from SDL2.lib path, so that it can be installed where vale.exe will end up.
   message("SDL2_LIBRARY ${SDL2_LIBRARY}")
   list(GET SDL2_LIBRARY 2 sdl_lib_dir)
   message("sdl_lib_dir ${sdl_lib_dir}")
@@ -66,7 +66,7 @@ if(MINGW)
     install(CODE [[
       file(GET_RUNTIME_DEPENDENCIES
         LIBRARIES ${PNG_LIBRARIES} ${SDL2_LIBRARY} ${PCRE_LIBRARIES} ${SDL2_mixer_LIBRARY}
-        EXECUTABLES $<TARGET_FILE:ivan>
+        EXECUTABLES $<TARGET_FILE:vale>
         RESOLVED_DEPENDENCIES_VAR _r_deps
         UNRESOLVED_DEPENDENCIES_VAR _u_deps
         DIRECTORIES ${IVAN_DEPENDENCY_PATHS}
@@ -75,7 +75,7 @@ if(MINGW)
       )
       foreach(_file ${_r_deps})
         file(INSTALL
-          DESTINATION "${CMAKE_INSTALL_PREFIX}/ivan"
+          DESTINATION "${CMAKE_INSTALL_PREFIX}/vale"
           TYPE SHARED_LIBRARY
           FOLLOW_SYMLINK_CHAIN
           FILES "${_file}"
@@ -92,10 +92,10 @@ endif() # if MINGW
 
 if(MSVC AND _VCPKG_INSTALLED_DIR)
   # Gum solution for manually copying dynamic link libraries from the vcpkg bin directory
-  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/libpng16.dll" DESTINATION "ivan")
-  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/zlib1.dll" DESTINATION "ivan")
-  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/SDL2.dll" DESTINATION "ivan")
-  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/SDL2_mixer.dll" DESTINATION "ivan")
+  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/libpng16.dll" DESTINATION "vale")
+  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/zlib1.dll" DESTINATION "vale")
+  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/SDL2.dll" DESTINATION "vale")
+  install(FILES "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin/SDL2_mixer.dll" DESTINATION "vale")
 endif()
 
 target_include_directories(FeLib PUBLIC Include)
