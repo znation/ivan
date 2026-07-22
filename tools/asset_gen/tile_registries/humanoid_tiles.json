@@ -1,15 +1,531 @@
 {
-  "0,26": {
-    "name": "human legs / ghost legs",
+  "11,10": {
+    "name": "broken (wielded) / lantern (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / lantern (wielded), side-facing body part tile, stone."
+  },
+  "10,1": {
+    "name": "long sword (wielded) / two-handed sword (wielded) / bastard sword (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, long sword (wielded) / two-handed sword (wielded) / bastard sword (wielded), side-facing body part tile, stone."
+  },
+  "11,7": {
+    "name": "two-handed scimitar (wielded) / grand stollen knife (wielded) / katana (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, two-handed scimitar (wielded) / grand stollen knife (wielded) / katana (wielded), side-facing body part tile, stone."
+  },
+  "10,6": {
+    "name": "spear (wielded) / grand long sword (wielded) / runed spear (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, spear (wielded) / grand long sword (wielded) / runed spear (wielded), side-facing body part tile, stone."
+  },
+  "10,11": {
+    "name": "axe (wielded) / grand long sword (wielded) / dark axe (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, axe (wielded) / grand long sword (wielded) / dark axe (wielded), side-facing body part tile, stone."
+  },
+  "10,16": {
+    "name": "halberd (wielded) / grand long sword (wielded) / unholy halberd (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, halberd (wielded) / grand long sword (wielded) / unholy halberd (wielded), side-facing body part tile, stone."
+  },
+  "10,12": {
+    "name": "mace (wielded) / grand long sword (wielded) / ancient mace (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mace (wielded) / grand long sword (wielded) / ancient mace (wielded), side-facing body part tile, stone."
+  },
+  "11,20": {
+    "name": "war hammer (wielded) / broken (wielded) / grand long sword (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, war hammer (wielded) / broken (wielded) / grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "11,2": {
+    "name": "sickle (wielded) / grand long sword (wielded) / Gorovits family hammer (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, sickle (wielded) / grand long sword (wielded) / Gorovits family hammer (wielded), side-facing body part tile, stone."
+  },
+  "10,18": {
+    "name": "dagger (wielded) / grand long sword (wielded) / notched throwing knife (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dagger (wielded) / grand long sword (wielded) / notched throwing knife (wielded), side-facing body part tile, stone."
+  },
+  "10,2": {
+    "name": "short sword (wielded) / cleaver (wielded) / grand long sword (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, short sword (wielded) / cleaver (wielded) / grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "10,17": {
+    "name": "battle axe (wielded) / grand long sword (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, battle axe (wielded) / grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "11,3": {
+    "name": "scythe (wielded) / grand long sword (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, scythe (wielded) / grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "10,19": {
+    "name": "quarterstaff (wielded) / grand long sword (wielded) / staff (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, quarterstaff (wielded) / grand long sword (wielded) / staff (wielded), side-facing body part tile, stone."
+  },
+  "11,1": {
+    "name": "moose torso",
+    "pixel_x": 176,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, moose torso, side-facing body part tile, stone."
+  },
+  "10,22": {
+    "name": "rolling pin (wielded) / grand long sword (wielded) / loaf (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, rolling pin (wielded) / grand long sword (wielded) / loaf (wielded), side-facing body part tile, stone."
+  },
+  "8,3": {
+    "name": "frying pan (wielded) / broken (wielded) / grand long sword (wielded)",
+    "pixel_x": 128,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, frying pan (wielded) / broken (wielded) / grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "10,7": {
+    "name": "beast claw (wielded) / lump (wielded) / grand long sword (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, beast claw (wielded) / lump (wielded) / grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "11,4": {
+    "name": "broken (wielded) / pick-axe (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / pick-axe (wielded), side-facing body part tile, stone."
+  },
+  "2,27": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 32,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "4,29": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 64,
+    "pixel_y": 464,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "4,27": {
+    "name": "chain mail (worn on arm)",
+    "pixel_x": 64,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on arm), side-facing body part tile, stone."
+  },
+  "0,27": {
+    "name": "chain mail (worn on leg)",
     "pixel_x": 0,
-    "pixel_y": 416,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, human legs / ghost legs, side-facing body part tile, stone."
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on leg), side-facing body part tile, stone."
   },
   "2,26": {
     "name": "human torso / ghost torso",
     "pixel_x": 32,
     "pixel_y": 416,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, human torso / ghost torso, side-facing body part tile, stone."
+  },
+  "5,28": {
+    "name": "plate mail (worn on torso) / ommel bristler armor (worn on torso) / chain mail (worn on torso)",
+    "pixel_x": 80,
+    "pixel_y": 448,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, plate mail (worn on torso) / ommel bristler armor (worn on torso) / chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "5,26": {
+    "name": "plate mail (worn on arm) / ommel bristler armor (worn on arm) / chain mail (worn on arm)",
+    "pixel_x": 80,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, plate mail (worn on arm) / ommel bristler armor (worn on arm) / chain mail (worn on arm), side-facing body part tile, stone."
+  },
+  "1,26": {
+    "name": "plate mail (worn on leg) / ommel bristler armor (worn on leg) / chain mail (worn on leg)",
+    "pixel_x": 16,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, plate mail (worn on leg) / ommel bristler armor (worn on leg) / chain mail (worn on leg), side-facing body part tile, stone."
+  },
+  "2,29": {
+    "name": "armor (worn on torso) / chain mail (worn on torso)",
+    "pixel_x": 32,
+    "pixel_y": 464,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, armor (worn on torso) / chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "5,30": {
+    "name": "armor (worn on torso) / chain mail (worn on torso)",
+    "pixel_x": 80,
+    "pixel_y": 480,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, armor (worn on torso) / chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "5,29": {
+    "name": "armor (worn on arm) / chain mail (worn on arm)",
+    "pixel_x": 80,
+    "pixel_y": 464,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, armor (worn on arm) / chain mail (worn on arm), side-facing body part tile, stone."
+  },
+  "1,29": {
+    "name": "armor (worn on leg) / chain mail (worn on leg)",
+    "pixel_x": 16,
+    "pixel_y": 464,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, armor (worn on leg) / chain mail (worn on leg), side-facing body part tile, stone."
+  },
+  "3,23": {
+    "name": "female tourist torso",
+    "pixel_x": 48,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, female tourist torso, side-facing body part tile, stone."
+  },
+  "11,13": {
+    "name": "broken (wielded) / grand long sword (wielded) / runed whip (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / runed whip (wielded), side-facing body part tile, stone."
+  },
+  "3,31": {
+    "name": "broken (worn as cloak) / cloak (worn as cloak)",
+    "pixel_x": 48,
+    "pixel_y": 496,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (worn as cloak) / cloak (worn as cloak), side-facing body part tile, stone."
+  },
+  "1,32": {
+    "name": "broken (worn on foot) / boot (worn on foot)",
+    "pixel_x": 16,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (worn on foot) / boot (worn on foot), side-facing body part tile, stone."
+  },
+  "5,32": {
+    "name": "broken (worn as gauntlet) / gauntlet (worn as gauntlet)",
+    "pixel_x": 80,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (worn as gauntlet) / gauntlet (worn as gauntlet), side-facing body part tile, stone."
+  },
+  "3,32": {
+    "name": "broken (worn as belt) / thief's girdle (worn as belt)",
+    "pixel_x": 48,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (worn as belt) / thief's girdle (worn as belt), side-facing body part tile, stone."
+  },
+  "7,31": {
+    "name": "broken (worn on head) / full helmet (worn on head)",
+    "pixel_x": 112,
+    "pixel_y": 496,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (worn on head) / full helmet (worn on head), side-facing body part tile, stone."
+  },
+  "6,27": {
+    "name": "full helmet (worn on head) / helmet (worn on head) / radiant helm of enlightenment (worn on head)",
+    "pixel_x": 96,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, full helmet (worn on head) / helmet (worn on head) / radiant helm of enlightenment (worn on head), side-facing body part tile, stone."
+  },
+  "7,27": {
+    "name": "Gorovits family gas mask (worn on head) / full helmet (worn on head)",
+    "pixel_x": 112,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Gorovits family gas mask (worn on head) / full helmet (worn on head), side-facing body part tile, stone."
+  },
+  "7,8": {
+    "name": "necromancer head / Anmah head",
+    "pixel_x": 112,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, necromancer head / Anmah head, side-facing body part tile, stone."
+  },
+  "11,5": {
+    "name": "broken (wielded) / grand long sword (wielded) / flaming sword (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / flaming sword (wielded), side-facing body part tile, stone."
+  },
+  "11,16": {
+    "name": "broken (wielded) / grand long sword (wielded) / unholy halberd (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 256,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / unholy halberd (wielded), side-facing body part tile, stone."
+  },
+  "11,6": {
+    "name": "broken (wielded) / grand long sword (wielded) / runed spear (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / runed spear (wielded), side-facing body part tile, stone."
+  },
+  "11,12": {
+    "name": "broken (wielded) / grand long sword (wielded) / mace (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 192,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / mace (wielded), side-facing body part tile, stone."
+  },
+  "11,14": {
+    "name": "broken (wielded) / grand long sword (wielded) / thunder hammer (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / thunder hammer (wielded), side-facing body part tile, stone."
+  },
+  "11,19": {
+    "name": "broken (wielded) / grand long sword (wielded) / staff (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 304,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / staff (wielded), side-facing body part tile, stone."
+  },
+  "11,18": {
+    "name": "broken (wielded) / grand long sword (wielded) / dagger (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 288,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / dagger (wielded), side-facing body part tile, stone."
+  },
+  "11,11": {
+    "name": "broken (wielded) / grand long sword (wielded) / dark axe (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / dark axe (wielded), side-facing body part tile, stone."
+  },
+  "10,3": {
+    "name": "broken (wielded) / grand long sword (wielded) / scythe (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / scythe (wielded), side-facing body part tile, stone."
+  },
+  "11,15": {
+    "name": "broken (wielded) / grand long sword (wielded) / banshee sickle (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 240,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken (wielded) / grand long sword (wielded) / banshee sickle (wielded), side-facing body part tile, stone."
+  },
+  "10,10": {
+    "name": "lantern (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, lantern (wielded), side-facing body part tile, stone."
+  },
+  "11,9": {
+    "name": "can (wielded) / bottle (wielded) / scroll (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, can (wielded) / bottle (wielded) / scroll (wielded), side-facing body part tile, stone."
+  },
+  "11,21": {
+    "name": "grand long sword (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "11,17": {
+    "name": "grand long sword (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 272,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, grand long sword (wielded), side-facing body part tile, stone."
+  },
+  "10,20": {
+    "name": "mango (wielded) / holy sacredmango (wielded) / sausage (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 320,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mango (wielded) / holy sacredmango (wielded) / sausage (wielded), side-facing body part tile, stone."
+  },
+  "10,4": {
+    "name": "Master Dark Frog torso",
+    "pixel_x": 160,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Master Dark Frog torso, side-facing body part tile, stone."
+  },
+  "10,9": {
+    "name": "chain mail (wielded) / backpack (wielded) / cloak (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (wielded) / backpack (wielded) / cloak (wielded), side-facing body part tile, stone."
+  },
+  "2,32": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 32,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "2,31": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 32,
+    "pixel_y": 496,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "2,34": {
+    "name": "chain mail (worn on torso) / filthy tunic (worn on torso)",
+    "pixel_x": 32,
+    "pixel_y": 544,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso) / filthy tunic (worn on torso), side-facing body part tile, stone."
+  },
+  "4,34": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 64,
+    "pixel_y": 544,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "5,33": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 80,
+    "pixel_y": 528,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "5,35": {
+    "name": "chain mail (worn on torso)",
+    "pixel_x": 80,
+    "pixel_y": 560,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on torso), side-facing body part tile, stone."
+  },
+  "4,32": {
+    "name": "chain mail (worn on arm)",
+    "pixel_x": 64,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on arm), side-facing body part tile, stone."
+  },
+  "5,31": {
+    "name": "chain mail (worn on arm)",
+    "pixel_x": 80,
+    "pixel_y": 496,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on arm), side-facing body part tile, stone."
+  },
+  "5,34": {
+    "name": "chain mail (worn on arm)",
+    "pixel_x": 80,
+    "pixel_y": 544,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on arm), side-facing body part tile, stone."
+  },
+  "0,32": {
+    "name": "chain mail (worn on leg)",
+    "pixel_x": 0,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on leg), side-facing body part tile, stone."
+  },
+  "1,31": {
+    "name": "chain mail (worn on leg)",
+    "pixel_x": 16,
+    "pixel_y": 496,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on leg), side-facing body part tile, stone."
+  },
+  "1,34": {
+    "name": "chain mail (worn on leg)",
+    "pixel_x": 16,
+    "pixel_y": 544,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, chain mail (worn on leg), side-facing body part tile, stone."
+  },
+  "10,8": {
+    "name": "broken bottle (wielded) / Avatar (wielded) / pile (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, broken bottle (wielded) / Avatar (wielded) / pile (wielded), side-facing body part tile, stone."
+  },
+  "10,23": {
+    "name": "nut (wielded) / kiwi (wielded) / stone (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 368,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, nut (wielded) / kiwi (wielded) / stone (wielded), side-facing body part tile, stone."
+  },
+  "10,21": {
+    "name": "bone (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 336,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, bone (wielded), side-facing body part tile, stone."
+  },
+  "10,13": {
+    "name": "palm branch (wielded) / seedling (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 208,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, palm branch (wielded) / seedling (wielded), side-facing body part tile, stone."
+  },
+  "10,14": {
+    "name": "runed whip (wielded) / thief's girdle (wielded) / chameleon whip (wielded)",
+    "pixel_x": 160,
+    "pixel_y": 224,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, runed whip (wielded) / thief's girdle (wielded) / chameleon whip (wielded), side-facing body part tile, stone."
+  },
+  "5,18": {
+    "name": "backpack (worn as cloak)",
+    "pixel_x": 80,
+    "pixel_y": 290,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, backpack (worn as cloak), side-facing body part tile, stone."
+  },
+  "8,2": {
+    "name": "mushroom torso",
+    "pixel_x": 128,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mushroom torso, side-facing body part tile, stone."
+  },
+  "3,26": {
+    "name": "cloak (worn as cloak)",
+    "pixel_x": 48,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, cloak (worn as cloak), side-facing body part tile, stone."
+  },
+  "1,27": {
+    "name": "boot (worn on foot)",
+    "pixel_x": 16,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, boot (worn on foot), side-facing body part tile, stone."
+  },
+  "5,27": {
+    "name": "gauntlet (worn as gauntlet)",
+    "pixel_x": 80,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, gauntlet (worn as gauntlet), side-facing body part tile, stone."
+  },
+  "3,27": {
+    "name": "thief's girdle (worn as belt) / chastity belt (worn as belt)",
+    "pixel_x": 48,
+    "pixel_y": 432,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, thief's girdle (worn as belt) / chastity belt (worn as belt), side-facing body part tile, stone."
+  },
+  "11,24": {
+    "name": "head (worn on head) / first-born son (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 384,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, head (worn on head) / first-born son (wielded), side-facing body part tile, stone."
+  },
+  "7,26": {
+    "name": "full helmet (worn on head)",
+    "pixel_x": 112,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, full helmet (worn on head), side-facing body part tile, stone."
+  },
+  "6,32": {
+    "name": "full helmet (worn on head)",
+    "pixel_x": 96,
+    "pixel_y": 512,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, full helmet (worn on head), side-facing body part tile, stone."
+  },
+  "6,6": {
+    "name": "skeleton head",
+    "pixel_x": 96,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton head, side-facing body part tile, stone."
+  },
+  "11,22": {
+    "name": "lyre (wielded)",
+    "pixel_x": 176,
+    "pixel_y": 352,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, lyre (wielded), side-facing body part tile, stone."
+  },
+  "2,28": {
+    "name": "shirt (worn on torso)",
+    "pixel_x": 32,
+    "pixel_y": 448,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, shirt (worn on torso), side-facing body part tile, stone."
+  },
+  "0,26": {
+    "name": "human legs / ghost legs",
+    "pixel_x": 0,
+    "pixel_y": 416,
+    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, human legs / ghost legs, side-facing body part tile, stone."
   },
   "0,0": {
     "name": "high priest legs / farmer legs / communist legs",
@@ -268,12 +784,6 @@
     "pixel_x": 64,
     "pixel_y": 96,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton arms, side-facing body part tile, stone."
-  },
-  "6,6": {
-    "name": "skeleton head",
-    "pixel_x": 96,
-    "pixel_y": 96,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, skeleton head, side-facing body part tile, stone."
   },
   "1,4": {
     "name": "goblin legs",
@@ -863,12 +1373,6 @@
     "pixel_y": 16,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mushroom torso, side-facing body part tile, stone."
   },
-  "8,2": {
-    "name": "mushroom torso",
-    "pixel_x": 128,
-    "pixel_y": 32,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, mushroom torso, side-facing body part tile, stone."
-  },
   "3,14": {
     "name": "dark mage torso / wizard torso",
     "pixel_x": 48,
@@ -887,12 +1391,6 @@
     "pixel_y": 304,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, dark mage head / wizard head, side-facing body part tile, stone."
   },
-  "11,1": {
-    "name": "moose torso",
-    "pixel_x": 176,
-    "pixel_y": 16,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, moose torso, side-facing body part tile, stone."
-  },
   "21,1": {
     "name": "magpie torso",
     "pixel_x": 336,
@@ -910,12 +1408,6 @@
     "pixel_x": 224,
     "pixel_y": 16,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, stalker torso, side-facing body part tile, stone."
-  },
-  "10,4": {
-    "name": "Master Dark Frog torso",
-    "pixel_x": 160,
-    "pixel_y": 64,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, Master Dark Frog torso, side-facing body part tile, stone."
   },
   "8,4": {
     "name": "plant torso",
@@ -946,12 +1438,6 @@
     "pixel_x": 208,
     "pixel_y": 0,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, hattifattener torso, side-facing body part tile, stone."
-  },
-  "7,8": {
-    "name": "necromancer head / Anmah head",
-    "pixel_x": 112,
-    "pixel_y": 128,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, necromancer head / Anmah head, side-facing body part tile, stone."
   },
   "1,11": {
     "name": "sumo wrestler legs",
@@ -1000,12 +1486,6 @@
     "pixel_x": 16,
     "pixel_y": 192,
     "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, female tourist legs / law student legs, side-facing body part tile, stone."
-  },
-  "3,23": {
-    "name": "female tourist torso",
-    "pixel_x": 48,
-    "pixel_y": 368,
-    "prompt": "dark fantasy roguelike humanoid sprite, 16x16 pixel art, female tourist torso, side-facing body part tile, stone."
   },
   "7,3": {
     "name": "female tourist head",

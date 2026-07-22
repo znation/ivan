@@ -430,5 +430,69 @@
     "pixel_x": 32,
     "pixel_y": 112,
     "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, broken broken barwall, dark iron metal, ground-level top-down. stone wall surface"
+  },
+  "0,11": {
+    "config": "door",
+    "name": "very secret door",
+    "material": "FIR_WOOD",
+    "pixel_x": 0,
+    "pixel_y": 176,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, very secret door, fir wood planks, ground-level top-down."
+  },
+  "0,23": {
+    "config": "altar",
+    "name": "altar",
+    "material": "GRANITE",
+    "pixel_x": 0,
+    "pixel_y": 368,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, altar, gray granite stone, ground-level top-down."
+  },
+  "0,10": {
+    "config": "brokendoor",
+    "name": "broken door",
+    "material": "",
+    "pixel_x": 0,
+    "pixel_y": 160,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, broken door, stone, ground-level top-down."
+  },
+  "4,18": {
+    "config": "boulder",
+    "name": "large boulder",
+    "material": "GRANITE",
+    "pixel_x": 64,
+    "pixel_y": 288,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, large boulder, gray granite stone, ground-level top-down."
+  },
+  "1,21": {
+    "config": "sign",
+    "name": "sign",
+    "material": "BALSA_WOOD",
+    "pixel_x": 16,
+    "pixel_y": 336,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, sign, pale wood, ground-level top-down."
+  },
+  "6,26": {
+    "config": "earth",
+    "name": "earth",
+    "material": "MORAINE",
+    "pixel_x": 96,
+    "pixel_y": 416,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, earth, moraine, ground-level top-down."
+  },
+  "2,9": {
+    "config": "coffin",
+    "name": "coffin",
+    "material": "FIR_WOOD",
+    "pixel_x": 32,
+    "pixel_y": 144,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, coffin, fir wood planks, ground-level top-down."
+  },
+  "1,7": {
+    "config": "barwall",
+    "name": "broken bars",
+    "material": "IRON",
+    "pixel_x": 16,
+    "pixel_y": 112,
+    "prompt": "dark fantasy Tolkien roguelike, 16x16 pixel art tile sprite, centered subject, flat colors, strong black outlines, no gradients, muted palette, top-down view, outdoor level tile, broken bars, dark iron metal, ground-level top-down."
   }
 }

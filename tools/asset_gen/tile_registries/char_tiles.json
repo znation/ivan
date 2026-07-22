@@ -1,1 +1,398 @@
-{}
+{
+  "2,5": {
+    "name": "human / librarian",
+    "pixel_x": 32,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, human / librarian body part, top-down, stone skin/material."
+  },
+  "2,1": {
+    "name": "farmer / shopkeeper / priest",
+    "pixel_x": 32,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, farmer / shopkeeper / priest body part, top-down, stone skin/material."
+  },
+  "2,8": {
+    "name": "guard / shopkeeper / priest",
+    "pixel_x": 32,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, guard / shopkeeper / priest body part, top-down, stone skin/material."
+  },
+  "2,2": {
+    "name": "shopkeeper",
+    "pixel_x": 32,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, shopkeeper body part, top-down, stone skin/material."
+  },
+  "3,5": {
+    "name": "shopkeeper / darkknight / xinrochghost",
+    "pixel_x": 48,
+    "pixel_y": 80,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, shopkeeper / darkknight / xinrochghost body part, top-down, stone skin/material."
+  },
+  "3,10": {
+    "name": "oree",
+    "pixel_x": 48,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, oree body part, top-down, stone skin/material."
+  },
+  "2,3": {
+    "name": "wraithstalker / wraithstalker wraithstalkerchild",
+    "pixel_x": 32,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, wraithstalker / wraithstalker wraithstalkerchild body part, top-down, stone skin/material."
+  },
+  "5,0": {
+    "name": "frog",
+    "pixel_x": 80,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, frog body part, top-down, stone skin/material."
+  },
+  "6,0": {
+    "name": "frog / mysticfrog",
+    "pixel_x": 96,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, frog / mysticfrog body part, top-down, stone skin/material."
+  },
+  "4,0": {
+    "name": "frog",
+    "pixel_x": 64,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, frog body part, top-down, stone skin/material."
+  },
+  "3,0": {
+    "name": "billswill / werewolfhuman / werewolfwolf",
+    "pixel_x": 48,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, billswill / werewolfhuman / werewolfwolf body part, top-down, stone skin/material."
+  },
+  "2,6": {
+    "name": "skeleton",
+    "pixel_x": 32,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, skeleton body part, top-down, stone skin/material."
+  },
+  "2,7": {
+    "name": "goblin",
+    "pixel_x": 32,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, goblin body part, top-down, stone skin/material."
+  },
+  "11,0": {
+    "name": "mommo / bloated mommo",
+    "pixel_x": 176,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, mommo / bloated mommo body part, top-down, stone skin/material."
+  },
+  "12,0": {
+    "name": "conical mommo / flat mommo",
+    "pixel_x": 192,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, conical mommo / flat mommo body part, top-down, stone skin/material."
+  },
+  "16,0": {
+    "name": "smouldering golem / skeleton spider",
+    "pixel_x": 256,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, smouldering golem / skeleton spider body part, top-down, stone skin/material."
+  },
+  "14,0": {
+    "name": "wolf",
+    "pixel_x": 224,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, wolf body part, top-down, stone skin/material."
+  },
+  "15,1": {
+    "name": "dire dog",
+    "pixel_x": 240,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, dire dog body part, top-down, stone skin/material."
+  },
+  "25,0": {
+    "name": "dog",
+    "pixel_x": 400,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, dog body part, top-down, stone skin/material."
+  },
+  "19,1": {
+    "name": "large spider",
+    "pixel_x": 304,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, large spider body part, top-down, stone skin/material."
+  },
+  "19,0": {
+    "name": "giant gold jackal",
+    "pixel_x": 304,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, giant gold jackal body part, top-down, stone skin/material."
+  },
+  "18,0": {
+    "name": "jackal",
+    "pixel_x": 288,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, jackal body part, top-down, stone skin/material."
+  },
+  "2,9": {
+    "name": "communist / lordregent",
+    "pixel_x": 32,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, communist / lordregent body part, top-down, stone skin/material."
+  },
+  "21,0": {
+    "name": "bear",
+    "pixel_x": 336,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, bear body part, top-down, stone skin/material."
+  },
+  "12,1": {
+    "name": "panda bear",
+    "pixel_x": 192,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, panda bear body part, top-down, stone skin/material."
+  },
+  "20,0": {
+    "name": "dolphin",
+    "pixel_x": 320,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, dolphin body part, top-down, stone skin/material."
+  },
+  "2,10": {
+    "name": "petrusswife / housewife / femaleslave",
+    "pixel_x": 32,
+    "pixel_y": 160,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, petrusswife / housewife / femaleslave body part, top-down, stone skin/material."
+  },
+  "3,7": {
+    "name": "imp",
+    "pixel_x": 48,
+    "pixel_y": 112,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, imp body part, top-down, stone skin/material."
+  },
+  "29,1": {
+    "name": "bat",
+    "pixel_x": 464,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, bat body part, top-down, stone skin/material."
+  },
+  "3,6": {
+    "name": "fruit mistress / punisher",
+    "pixel_x": 48,
+    "pixel_y": 96,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, fruit mistress / punisher body part, top-down, stone skin/material."
+  },
+  "3,11": {
+    "name": "kobold",
+    "pixel_x": 48,
+    "pixel_y": 176,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, kobold body part, top-down, stone skin/material."
+  },
+  "3,9": {
+    "name": "gibberling",
+    "pixel_x": 48,
+    "pixel_y": 144,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, gibberling body part, top-down, stone skin/material."
+  },
+  "31,0": {
+    "name": "largecat",
+    "pixel_x": 496,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, largecat body part, top-down, stone skin/material."
+  },
+  "32,0": {
+    "name": "large cat",
+    "pixel_x": 512,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, large cat body part, top-down, stone skin/material."
+  },
+  "27,0": {
+    "name": "angel",
+    "pixel_x": 432,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, angel body part, top-down, stone skin/material."
+  },
+  "3,1": {
+    "name": "kamikazedwarf",
+    "pixel_x": 48,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, kamikazedwarf body part, top-down, stone skin/material."
+  },
+  "33,0": {
+    "name": "mammoth",
+    "pixel_x": 528,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, mammoth body part, top-down, stone skin/material."
+  },
+  "34,0": {
+    "name": "unicorn",
+    "pixel_x": 544,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, unicorn body part, top-down, stone skin/material."
+  },
+  "36,0": {
+    "name": "lion",
+    "pixel_x": 576,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, lion body part, top-down, stone skin/material."
+  },
+  "0,1": {
+    "name": "lion",
+    "pixel_x": 0,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, lion body part, top-down, stone skin/material."
+  },
+  "6,1": {
+    "name": "carnivorousplant",
+    "pixel_x": 96,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, carnivorousplant body part, top-down, stone skin/material."
+  },
+  "5,1": {
+    "name": "greater carnivorous carnivorousplant",
+    "pixel_x": 80,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, greater carnivorous carnivorousplant body part, top-down, stone skin/material."
+  },
+  "1,1": {
+    "name": "giant carnivorous buffalo",
+    "pixel_x": 16,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, giant carnivorous buffalo body part, top-down, stone skin/material."
+  },
+  "23,0": {
+    "name": "snake",
+    "pixel_x": 368,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, snake body part, top-down, stone skin/material."
+  },
+  "3,3": {
+    "name": "orc / orc slaughterer / imperialist",
+    "pixel_x": 48,
+    "pixel_y": 48,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, orc / orc slaughterer / imperialist body part, top-down, stone skin/material."
+  },
+  "3,2": {
+    "name": "orc squad leader / orc officer / orc general",
+    "pixel_x": 48,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, orc squad leader / orc officer / orc general body part, top-down, stone skin/material."
+  },
+  "2,0": {
+    "name": "crop tender / village elder / encourager",
+    "pixel_x": 32,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, crop tender / village elder / encourager body part, top-down, stone skin/material."
+  },
+  "4,1": {
+    "name": "ostrich",
+    "pixel_x": 64,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, ostrich body part, top-down, stone skin/material."
+  },
+  "1,0": {
+    "name": "chameleon",
+    "pixel_x": 16,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, chameleon body part, top-down, stone skin/material."
+  },
+  "4,2": {
+    "name": "eddy",
+    "pixel_x": 64,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, eddy body part, top-down, stone skin/material."
+  },
+  "13,1": {
+    "name": "mushroom",
+    "pixel_x": 208,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, mushroom body part, top-down, stone skin/material."
+  },
+  "8,2": {
+    "name": "magicmushroom",
+    "pixel_x": 128,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, magicmushroom body part, top-down, stone skin/material."
+  },
+  "11,1": {
+    "name": "twoheadedmoose",
+    "pixel_x": 176,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, twoheadedmoose body part, top-down, stone skin/material."
+  },
+  "21,1": {
+    "name": "magpie",
+    "pixel_x": 336,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, magpie body part, top-down, stone skin/material."
+  },
+  "8,0": {
+    "name": "giant magpie",
+    "pixel_x": 128,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, giant magpie body part, top-down, stone skin/material."
+  },
+  "14,1": {
+    "name": "invisiblestalker",
+    "pixel_x": 224,
+    "pixel_y": 16,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, invisiblestalker body part, top-down, stone skin/material."
+  },
+  "10,4": {
+    "name": "slayer",
+    "pixel_x": 160,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, slayer body part, top-down, stone skin/material."
+  },
+  "8,4": {
+    "name": "genetrixvesana",
+    "pixel_x": 128,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, genetrixvesana body part, top-down, stone skin/material."
+  },
+  "7,0": {
+    "name": "hedgehog",
+    "pixel_x": 112,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, hedgehog body part, top-down, stone skin/material."
+  },
+  "10,0": {
+    "name": "large hedgehog / young male carnivorous mutant bunny / young female carnivorous mutant bunny",
+    "pixel_x": 160,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, large hedgehog / young male carnivorous mutant bunny / young female carnivorous mutant bunny body part, top-down, stone skin/material."
+  },
+  "9,0": {
+    "name": "young male carnivorous mutant bunny",
+    "pixel_x": 144,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, young male carnivorous mutant bunny body part, top-down, stone skin/material."
+  },
+  "18,2": {
+    "name": "adult female carnivorous mutant shadowpaw",
+    "pixel_x": 288,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, adult female carnivorous mutant shadowpaw body part, top-down, stone skin/material."
+  },
+  "13,0": {
+    "name": "hattifattener",
+    "pixel_x": 208,
+    "pixel_y": 0,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, hattifattener body part, top-down, stone skin/material."
+  },
+  "12,4": {
+    "name": "lobhse",
+    "pixel_x": 192,
+    "pixel_y": 64,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, lobhse body part, top-down, stone skin/material."
+  },
+  "13,2": {
+    "name": "mindworm",
+    "pixel_x": 208,
+    "pixel_y": 32,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, mindworm body part, top-down, stone skin/material."
+  },
+  "8,8": {
+    "name": "massive magical mushroom",
+    "pixel_x": 128,
+    "pixel_y": 128,
+    "prompt": "dark fantasy roguelike creature sprite, 16x16 pixel art, massive magical mushroom body part, top-down, stone skin/material."
+  }
+}
