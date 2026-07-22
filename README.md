@@ -32,7 +32,7 @@ See INSTALL for instructions on compiling the game.
 
 See LICENSING for copyright notice.
 
-See Doc/Lore for fiction and short stories from the world of IVAN.
+See Doc/Lore for fiction and short stories from the world of VALE.
 
 --------------------------
 

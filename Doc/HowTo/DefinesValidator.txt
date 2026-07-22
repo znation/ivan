@@ -8,7 +8,7 @@ or when someone changes a value only at `define.dat` or at some c++ .h file, so 
 
 3) run any game, go to the console ctrl+` and run the generator
 
-4) the file `definesvalidator.h` will be created at the same path where the `ivan.conf` is located.
+4) the file `definesvalidator.h` will be created at the same path where the `vale.conf` is located.
 
 5) move `definesvalidator.h` to the project development path at `Main/Include/definesvalidator.h` overwriting it
 

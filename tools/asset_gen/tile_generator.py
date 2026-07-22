@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-tile_generator.py — AI per-tile sprite sheet regeneration for IVAN.
+tile_generator.py — AI per-tile sprite sheet regeneration for VALE.
 
 Loads a tile registry (built by tile_registry_builder.py), generates each
 registered tile with SDXL-turbo at 1024x1024, downscales to 16x16, and
@@ -280,7 +280,7 @@ def _regenerate_outlined(sheet):
     if result.returncode != 0:
         print(f"  outline_util.py error: {result.stderr[:200]}")
         return
-    # outline_util.py outputs RGBA; convert to indexed P mode to match IVAN's requirement
+    # outline_util.py outputs RGBA; convert to indexed P mode to match VALE's requirement
     rgba = Image.open(output_file).convert("RGBA")
     orig = Image.open(input_file)
     orig_palette = get_original_palette(orig)

@@ -23,7 +23,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 The GNU General Public License can be found in the file `COPYING' in
 this release.
 
-The thirdparty components bundled with the IVAN.app are:
+The thirdparty components bundled with the VALE.app are:
 
 * libpcre.dylib: uses the BSD-3-clause license
 * libpng.dylib: uses the zlib license

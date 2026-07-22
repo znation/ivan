@@ -2,7 +2,7 @@
 """
 outline_util.py — Add a white border outline to sprite sheets for the *-outlined.png variants.
 
-IVAN uses outlined versions of Char.png, Humanoid.png, and Item.png for display.
+VALE uses outlined versions of Char.png, Humanoid.png, and Item.png for display.
 The outlined version adds a 1-pixel white border around every non-transparent pixel,
 creating a glow/outline effect that makes sprites readable on dark dungeon backgrounds.
 
@@ -53,7 +53,7 @@ def add_outline(input_path: Path, output_path: Path, color=(255, 255, 255, 255))
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Add white outline to IVAN sprite sheets.")
+    parser = argparse.ArgumentParser(description="Add white outline to VALE sprite sheets.")
     parser.add_argument("--input", help="Input PNG path")
     parser.add_argument("--output", help="Output PNG path")
     parser.add_argument("--batch", action="store_true",

@@ -144,7 +144,7 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(os.path.dirname(script_dir))
     graphics_dir = os.path.join(repo_root, 'Graphics')
-    share_dir = os.path.join(repo_root, 'share', 'ivan', 'Graphics')
+    share_dir = os.path.join(repo_root, 'share', 'vale', 'Graphics')
 
     for filename, color, glyph_idx in VARIANTS:
         print(f"\nGenerating {filename} ...")
@@ -154,7 +154,7 @@ def main():
             dest = os.path.join(share_dir, filename)
             if not os.path.samefile(out, dest):
                 shutil.copy2(out, dest)
-                print(f"  -> share/ivan/Graphics/{filename}")
+                print(f"  -> share/vale/Graphics/{filename}")
 
 
 if __name__ == '__main__':

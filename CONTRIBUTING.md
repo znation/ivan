@@ -2,7 +2,7 @@
 
 __Things to do__
 
-0) Adhere to the [Code of Conduct](https://github.com/Attnam/ivan/blob/master/CODE_OF_CONDUCT.md).
+0) Adhere to the [Code of Conduct](https://github.com/znation/vale/blob/main/CODE_OF_CONDUCT.md).
 1) Join the [Attnam.com](https://attnam.com) forums, say hello. Figure out the changes the community wants to see, [check here as a starting point](https://attnam.com/wiki/Development_plans).
 2) Fix bugs before coding more bugs.
 3) Code new stuff while avoiding to code bugs.
@@ -22,7 +22,7 @@ __Forbidden jobs__
  - Intentionally creating bugs.
  - Upsetting game balance.
  - Adding/modding weapons without knowing how the weapon system is balanced.
- - Adding content that breaches the [Code of Conduct](https://github.com/Attnam/ivan/blob/master/CODE_OF_CONDUCT.md).
+ - Adding content that breaches the [Code of Conduct](https://github.com/znation/vale/blob/main/CODE_OF_CONDUCT.md).
  - Telepathically communicating with Malgorath.
 
 

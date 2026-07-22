@@ -1,4 +1,4 @@
-(defconst ivan-style
+(defconst vale-style
  '((c-offsets-alist . ((substatement-open . 0)
 			(label . /)
 			(access-label . /)
@@ -13,11 +13,11 @@
 			(defun-block-intro . 2)
 			(statement-block-intro . 2)
 			(statement-case-open . *))))
- "The Standard IVAN Programming Style")
+ "The Standard VALE Programming Style")
 
-(add-hook 'c-mode-common-hook 'ivan-mode-common-hook)
+(add-hook 'c-mode-common-hook 'vale-mode-common-hook)
 (autoload 'c++-mode "cc-mode" "Major mode for editing C++ code." t)
 
-(defun ivan-mode-common-hook ()
+(defun vale-mode-common-hook ()
  ;; add style and set it for the current buffer
- (c-add-style "IVAN" ivan-style t))
+ (c-add-style "VALE" vale-style t))

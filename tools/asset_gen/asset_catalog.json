@@ -97,7 +97,7 @@
     "new_filename": "Graphics/OLTerra.png",
     "prompt": "roguelike outdoor level terrain tile sheet, dark fantasy wilderness, stone ruins cobblestones grass mud water trees shadows, 16x16 pixel art tiles, muted earthy tones, 312x464",
     "priority": "style-change",
-    "notes": "Used for outdoor IVAN levels — forest, city streets, etc."
+    "notes": "Used for outdoor VALE levels — forest, city streets, etc."
   },
   {
     "filename": "Graphics/GLTerra.png",

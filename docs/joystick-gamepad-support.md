@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the work items needed to add joystick/gamepad support to IVAN. The game currently uses SDL2 for input handling, which provides built-in joystick and gamepad APIs. This implementation would allow players to use gamepads (Xbox, PlayStation, Switch Pro, generic USB controllers) in addition to keyboard/mouse controls.
+This document outlines the work items needed to add joystick/gamepad support to VALE. The game currently uses SDL2 for input handling, which provides built-in joystick and gamepad APIs. This implementation would allow players to use gamepads (Xbox, PlayStation, Switch Pro, generic USB controllers) in addition to keyboard/mouse controls.
 
 ---
 

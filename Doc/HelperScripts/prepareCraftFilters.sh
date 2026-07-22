@@ -11,7 +11,7 @@ echo "HELP: update the array astrValidToCraft with allowed to craft classes"
 declare -p astrValidToCraft |tr '[' '\n'
 
 if ! ls Main/Source/game.cpp;then
-  echo "PROBLEM!!! cd to the root ivan dev path" >&2
+  echo "PROBLEM!!! cd to the root vale dev path" >&2
   exit 1
 fi
 

@@ -141,7 +141,7 @@ def find_repo_root(start: Path) -> Path | None:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate balance-critical numeric values in IVAN .dat files.")
+    parser = argparse.ArgumentParser(description="Validate balance-critical numeric values in VALE .dat files.")
     parser.add_argument("--git-ref", default="pre-rewrite-checkpoint",
                         help="Git ref for the baseline (default: pre-rewrite-checkpoint)")
     parser.add_argument("--files", nargs="*",

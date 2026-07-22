@@ -1,7 +1,7 @@
-Compiling IVAN under different systems
+Compiling VALE under different systems
 --------------------------------------
 
-To build IVAN from source, you need to have the following dependencies
+To build VALE from source, you need to have the following dependencies
 installed on your system:
 
 - compiler with C++11 support (e.g. Clang 3.3 or newer, GCC 4.8 or newer)
@@ -14,7 +14,7 @@ installed on your system:
 
 Under Linux and OS X, type:
 
-mkdir build  # IVAN can be built in a custom folder
+mkdir build  # VALE can be built in a custom folder
 cd build
 cmake ..  # ".." refers to the parent directory of "build"
 make
@@ -29,10 +29,10 @@ cmake -DWIZARD=ON ..
 make
 make install
 
-To install IVAN to a custom prefix, pass the additional flag
+To install VALE to a custom prefix, pass the additional flag
 -DCMAKE_INSTALL_PREFIX=/your/prefix/path to the cmake invocation.
 (In particular, simply doing `make DESTDIR=/your/prefix/path install`
-doesn't work because IVAN needs the prefix information at build-time.)
+doesn't work because VALE needs the prefix information at build-time.)
 
 If config options toggle is too fast, you can add this flag '-DFELIST_WAITKEYUP',
 like this: CMAKE_CXX_FLAGS="-DFELIST_WAITKEYUP"
@@ -53,7 +53,7 @@ You will need to install the C++ tools with CMake support, along with Git integr
 We will not be using Visual Studio in the traditional way with everything squished into a solution file.
 Instead we will use Visual Studio to open a repo folder with a top-level CMakeLists.txt, in conjunction with
 a CMakeSettings.json file to create the cmake build files.
-Then we will use msvc to compile ivan.exe, with the help of libraries we install from vcpkg using Powershell (PS).
+Then we will use msvc to compile vale.exe, with the help of libraries we install from vcpkg using Powershell (PS).
 
 Install vcpkg and install the needed libraries using Powershell:
 Here is a condensed summary of applicable instructions from https://github.com/microsoft/vcpkg
@@ -75,25 +75,25 @@ sdl2:x86-windows                                   2.0.9-3          Simple Direc
 zlib:x86-windows                                   1.2.11-5         A compression library
 
 
-Clone attnam/ivan into a directory (for example C:\Users\yourname\source\repos\ivan)
+Clone znation/vale into a directory (for example C:\Users\yourname\source\repos\vale)
 
 Open Microsoft Visual Studio 2022
 
 Go File->Open Folder
 
-Select C:\Users\yourname\source\repos\ivan
+Select C:\Users\yourname\source\repos\vale
 
 Some stuff will happen automatically. The CMakeSettings.json file will be found, and the CMake cache will be generated.
 
 Next to the green "play" button is some text (Select Startup Item...) in a gray dropdown menu.
-Select "ivan.exe (Install) (ivan\ivan.exe)".
+Select "vale.exe (Install) (vale\vale.exe)".
 
-"Build" will appear in the menu next to "CMake". Click Build->ivan.exe (Install) (ivan\ivan.exe) F7
+"Build" will appear in the menu next to "CMake". Click Build->vale.exe (Install) (vale\vale.exe) F7
 
-This will build ivan.exe and install all the components, automatically copying the required dlls as well.
+This will build vale.exe and install all the components, automatically copying the required dlls as well.
 
-The build folder is located in C:\Users\yourname\CMakeBuilds\some-long-code-here-abcdef123456\install\x86-Release\ivan
-Go there and hit ivan.exe, and you're playing IVAN built using Microsoft Visual Studio!!!
+The build folder is located in C:\Users\yourname\CMakeBuilds\some-long-code-here-abcdef123456\install\x86-Release\vale
+Go there and hit vale.exe, and you're playing VALE built using Microsoft Visual Studio!!!
 
 --------------------------------------
 
@@ -121,20 +121,20 @@ Alternatively set it just in current command prompt:
 
 set SDL2DIR=D:\Apps\SDL2-devel-2.0.4-mingw\SDL2-2.0.4\i686-w64-mingw32\
 
-Use command line to generate MinGW makefiles in IVAN source directory:
+Use command line to generate MinGW makefiles in VALE source directory:
 
-D:\buildy\ivan>mkdir mingw
-D:\buildy\ivan>cd mingw
-D:\buildy\ivan\mingw2>cmake .. -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=D:/buildy/ivan/inst_mingw
+D:\buildy\vale>mkdir mingw
+D:\buildy\vale>cd mingw
+D:\buildy\vale\mingw2>cmake .. -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=D:/buildy/vale/inst_mingw
 
 Now you can compile from command line:
 
-D:\buildy\ivan\mingw2>mingw32-make -j4 install
+D:\buildy\vale\mingw2>mingw32-make -j4 install
 
 If you get a lot of weird compilation errors, try invoking cmake again with
 -DCMAKE_CXX_FLAGS='-std=gnu++11' as a workaround.
 
-Now you can run ivan from D:/buildy/ivan/inst_mingw/ivan/ directory.
+Now you can run vale from D:/buildy/vale/inst_mingw/vale/ directory.
 
 --------------------------------------
 
@@ -171,19 +171,19 @@ $ pacman -S mingw-w64-i686-SDL2_mixer
 
 $ pacman -S mingw-w64-i686-pkg-config
 
-Now the MSYS2 build system is installed, you only need to follow the instructions below to keep IVAN up to date.
+Now the MSYS2 build system is installed, you only need to follow the instructions below to keep VALE up to date.
 
-Create an empty folder in \ivan\ called msys2
+Create an empty folder in \vale\ called msys2
 Run MinGW32.exe (from your "-msys64" or "-msys32" folder, whichever is applicable) and change directory to your
-newly created \ivan\msys2\ folder.
+newly created \vale\msys2\ folder.
 
 In MinGW32.exe type the following commands, respecting the direction of the slashes:
-$ cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=C:/ivan/inst_msys2
+$ cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=C:/vale/inst_msys2
 $ make -j4 install
 
-Navigate to \ivan\inst_msys2\ivan and you will find the ivan.exe executable!
+Navigate to \vale\inst_msys2\vale and you will find the vale.exe executable!
 
-You will probably need to copy a bunch of DLLs into the directory where ivan.exe is located. These may include
+You will probably need to copy a bunch of DLLs into the directory where vale.exe is located. These may include
 the following, likely not an exhaustive list, but they can be found under for example C:\-msys64\mingw32\bin:
 libpng16-16.dll
 libstdc++-6.dll
@@ -214,4 +214,4 @@ $ make install
 $ ../ci/osx/package.sh
 $ ls ./osx
 
-The user data will be stored at "$HOME/Library/Application Support/IVAN".
+The user data will be stored at "$HOME/Library/Application Support/VALE".

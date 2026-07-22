@@ -1,10 +1,10 @@
-Iter Vehemens ad Necem graphics documentation
+VALE graphics documentation
 ---------------------------------------------
 
 The material color system
 -------------------------
 
-Most IVAN graphics use special palette indices to mark areas whose
+Most VALE graphics use special palette indices to mark areas whose
 color may vary depending eg. on material, on skin color or on special
 magical effects. These are called material colors or m-colors. Up to
 four m-colors may be used in one picture and each may exist in 16
@@ -16,7 +16,7 @@ m-color 2:	208-223
 m-color 3:	224-239
 m-color 4:	240-255
 
-When objects and beings are created, IVAN first determines which
+When objects and beings are created, VALE first determines which
 actual colors are to appear in place of m-colors. It breaks these
 colors into RGB components and analyzes the tile pixel by pixel.
 If it encounters an m-color, the components of the color appearing

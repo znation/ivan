@@ -1,4 +1,4 @@
-version: 0.90.{build} # Has no bearing on actual IVAN version - haha!
+version: 0.90.{build} # Has no bearing on actual VALE version - haha!
 
 branches:
   only:

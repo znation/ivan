@@ -239,7 +239,7 @@ A: Write a small description on how the bug occurred and if possible even
    how we could replicate it, and report this bug on our GitHub page or the
    forum:
 
-     https://github.com/Attnam/ivan
+     https://github.com/znation/vale
      http://attnam.com
 
    You should mention your full name so we can credit you , if you are the first
@@ -256,7 +256,7 @@ A: Join us on GitHub!
    made and tested your changes, submit a pull request. It will be reviewed
    by one of the admins as soon as possible.
 
-   See .customs.emacs file for the official Ivan C++ Programming Style.
+   See .customs.emacs file for the official VALE C++ Programming Style.
 
 Q: Will there be a Russian/Chinese/Esperato/etc. version?
 A: No, unless you make it.
@@ -364,7 +364,7 @@ NewDev
 
 See on GitHub:
 
-  https://github.com/Attnam/ivan/graphs/contributors
+  https://github.com/znation/vale/graphs/contributors
 
 
 Other

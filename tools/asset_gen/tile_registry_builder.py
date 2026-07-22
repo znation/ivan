@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-tile_registry_builder.py — Parse IVAN .dat files and build per-sheet tile registries.
+tile_registry_builder.py — Parse VALE .dat files and build per-sheet tile registries.
 
 Outputs one JSON file per sprite sheet to tools/asset_gen/tile_registries/.
 Each JSON maps "col,row" grid coordinates to tile description dicts with
@@ -653,7 +653,7 @@ def build_all(sheets=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Build IVAN tile registries from .dat files.")
+    parser = argparse.ArgumentParser(description="Build VALE tile registries from .dat files.")
     parser.add_argument("--sheet", help="Build only this sheet (e.g. GLTerra). Default: all.")
     args = parser.parse_args()
     build_all([args.sheet] if args.sheet else None)

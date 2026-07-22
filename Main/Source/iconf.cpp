@@ -1339,9 +1339,9 @@ void ivanconfig::Initialize()
    * LOAD AND APPLY some SETTINGS *
    ********************************/
 #if defined(WIN32) || defined(__DJGPP__)
-  configsystem::SetConfigFileName(GetUserDataDir() + "ivan.cfg");
+  configsystem::SetConfigFileName(GetUserDataDir() + "vale.cfg");
 #else
-  configsystem::SetConfigFileName(GetUserDataDir() + "ivan.conf");
+  configsystem::SetConfigFileName(GetUserDataDir() + "vale.conf");
 #endif
 
   configsystem::Load();
